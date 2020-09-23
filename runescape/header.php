@@ -20,8 +20,8 @@ if (defined('PAGE_DESCRIPTION')) {
 
 
 $q = dbquery("SELECT * FROM users WHERE UID = '" . USER_ID . "' LIMIT 1");
-if(mysql_num_rows($q) > 0) {
-    $row = mysql_fetch_assoc($q);
+if($q->num_rows > 0) {
+    $row = $q->fetch_assoc();
     $username = $row['username'];
     $displayname = $row['displayname'];
 }
@@ -108,8 +108,8 @@ $online =  dbevaluate("SELECT COUNT(UID) FROM users WHERE online = '1';");
 					 <div id="lang">
                             <a href="http://www.runescape.com/title.ws"><img alt="English" title="English" src="<?php echo WWW; ?>/img/main/layout/en.gif" /></a>
                             <a href="http://www.runescape.com/l=1/title.ws"><img alt="Deutsch" title="Deutsch" src="<?php echo WWW; ?>/img/main/layout/de.gif" /></a>
-                            <a href="http://www.runescape.com/l=2/title.ws"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="<?php echo WWW; ?>/img/main/layout/fr.gif" /></a>
-                            <a href="http://www.runescape.com/l=3/title.ws"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="<?php echo WWW; ?>/img/main/layout/br.gif" /></a>
+                            <a href="http://www.runescape.com/l=2/title.ws"><img alt="Français" title="Français" src="<?php echo WWW; ?>/img/main/layout/fr.gif" /></a>
+                            <a href="http://www.runescape.com/l=3/title.ws"><img alt="Português (BR)" title="Português (BR)" src="<?php echo WWW; ?>/img/main/layout/br.gif" /></a>
                         </div>
 					 -->
 					
@@ -191,7 +191,7 @@ $online =  dbevaluate("SELECT COUNT(UID) FROM users WHERE online = '1';");
                                     <li><a href="<?php echo WWW; ?>/adventurers-log" class="fly"><span>Adventurer's Log</span></a></li>
 
                                     <li><a href="<?php echo WWW; ?>/poll" class="fly"><span>Polls</span></a></li>
-                                    <li><a href="<?php echo WWW; ?>/kbase/guid/Downloads_and_Wallpapers" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+                                    <li><a href="<?php echo WWW; ?>/kbase/guid/Downloads_and_Wallpapers" class="fly"><span>Downloads & Wallpapers</span></a></li>
                                 </ul>
                                 <!--[if lte IE 6]></td></tr></table></a><![endif]-->
                             </li>
@@ -201,9 +201,9 @@ $online =  dbevaluate("SELECT COUNT(UID) FROM users WHERE online = '1';");
                             <!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
                                 <ul>
                                     <li><a href="<?php echo WWW; ?>/kbase/guid/Customer_Support" class="fly"><span>Customer Support</span></a></li>
-                                    <li><a href="<?php echo WWW; ?>/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
-                                    <li><a href="<?php echo WWW; ?>/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
-                                    <li><a href="<?php echo WWW; ?>/account/account_history" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+                                    <li><a href="<?php echo WWW; ?>/loginapplet/loginappletb4b5.html?mod=www&dest=loginapplet/loginapplet.ws?mod=accountappeal&dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+                                    <li><a href="<?php echo WWW; ?>/loginapplet/loginappletef7e.html?mod=www&dest=loginapplet/loginapplet.ws?mod=accountappeal&dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+                                    <li><a href="<?php echo WWW; ?>/account/account_history" class="fly"><span>Appeal Bans & Mutes</span></a></li>
                                     <li><a href="<?php echo WWW; ?>/bugtracker/m=bugtracker_v4.php" class="fly"><span>Submit a Bug Report</span></a></li>
                                     <li><a href="<?php echo WWW; ?>/parents" class="fly"><span>Parents' Guide</span></a></li>
                                 </ul>

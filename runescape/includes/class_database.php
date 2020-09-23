@@ -41,8 +41,8 @@ class database {
      */
     public function connect($database) {
         $this->database = $database;
-        $this->connection = @mysql_pconnect($this->host, $this->username, $this->password) or $this->error(mysql_error());
-        @mysql_select_db($this->database, $this->connection) or $this->error(mysql_error());
+        $this->connection = new mysqli($this->host, $this->username, $this->password) or $this->error($this->connection->error);
+        @$this->connection->select_db($this->database) or $this->error($this->connection->error);
 
         /*
          * If the connection was successful, we can now
@@ -58,7 +58,7 @@ class database {
      */
     public function disconnect() {
         if ($this->connected) {
-            @mysql_pclose($this->connection);
+            @mysqli_close($this->connection);
             $this->connected = false;
         }
     }
@@ -69,7 +69,7 @@ class database {
      * @return resource The data recieved from the database.
      */
     public function execute_query($query) {
-        $resultset = mysql_query($query, $this->connection) or $this->error('While executing ["' . $query . '"]: ' . mysql_error());
+        $resultset = $this->connection->query($query) or $this->error('While executing ["' . $query . '"]: ' . $this->connection->error);
         return $resultset;
     }
 
@@ -82,11 +82,11 @@ class database {
         if(!$result = @$this->execute_query($query)) {
             return 0;
         }
-        if(@mysql_num_rows($result) == 0) {
+        if(@$result->num_rows == 0) {
             return $default_value;
         }
         else {
-            return @mysql_result($result, 0);
+            return @$result->data_seek( 0); $result->fetch_array()[0];
         }
     }
 

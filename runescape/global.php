@@ -4,7 +4,7 @@
 // System definitions.
 define('JWEB', true);
 define('DEBUG_MODE', false);
-define('USER_IP', $_SERVER['REMOTE_ADDR']);
+define('USER_IP', isset($_SERVER['REMOTE_ADDR']) ? $_SERVER['REMOTE_ADDR'] : '127.0.0.1');
 
 // Site configurations.
 define('SITE_NAME', 'RuneScape - MMORPG');

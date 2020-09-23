@@ -37,7 +37,7 @@ require_once("header.php");
                 <img src="<?php echo WWW; ?>/img/main/home/feature_poll_icon.jpg" alt="" />
                 <div class="featureTitle">Latest Poll - 17-Oct-2013 </div>
                 <div class="featureDesc">Authentication Server Maintenance - (Free/Member)<A 
-                href="<?php echo WWW; ?>/poll">Vote&nbsp;Here...</A></div>
+                href="<?php echo WWW; ?>/poll">Vote Here...</A></div>
             </div>
 
             <div class="feature">
@@ -120,8 +120,8 @@ href="<?php echo WWW; ?>/kbase/guid/herblore_the_potions">More...</A></P>
             <?php
             $news_qry = dbquery("SELECT * FROM web_news WHERE main_news='1' ORDER BY date DESC LIMIT 1");
 			
-            if (mysql_num_rows($news_qry) > 0) {
-                while ($news = mysql_fetch_assoc($news_qry)) {
+            if ($news_qry->num_rows > 0) {
+                while ($news = $news_qry->fetch_assoc()) {
                     echo "
                         
                             <div class='recentNews'>
@@ -142,8 +142,8 @@ href="<?php echo WWW; ?>/kbase/guid/herblore_the_potions">More...</A></P>
 			<?php
             $news_qry = dbquery("SELECT * FROM web_news WHERE main_news='0' ORDER BY date DESC LIMIT 0,3");
 
-            if (mysql_num_rows($news_qry) > 0) {
-                while ($news = mysql_fetch_assoc($news_qry)) {
+            if ($news_qry->num_rows > 0) {
+                while ($news = $news_qry->fetch_assoc()) {
                     echo '
                         <div class="sectionBody">
                             <div class="recentNews">
