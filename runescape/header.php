@@ -55,7 +55,7 @@ $skin1 = dbevaluate("SELECT theme FROM versioning;");
 switch ($skin1) {
         case 0: $skin = "default";
             break;
-        case 1: $skin = "halloween";
+        case 1: $skin = "default";
             break;
 		case 2: $skin = "christmas";
             break;
