@@ -1,0 +1,247 @@
+
+
+
+
+.BgHead { background-image: url("../../img/jgs/careers/layout/BgHead_bg.jpg"); }
+
+.BgBody { background-image: url("../../img/jgs/careers/layout/BgBody_bg.png"); }
+
+.ImgBorder { border: 1px solid #868686; }
+
+.BgFoot { background-image: url("../../img/jgs/careers/layout/BgFoot_split_bg.png"); }
+
+.BgContent { background-image: none; }
+
+#Intro {
+ height: 229px;
+ margin: 0 auto 10px;
+ position: relative;
+ width: 960px;
+ color: white;
+}
+
+#IntroFloat {
+ width: 350px;
+ float: right;
+}
+
+#Intro h1,
+#Intro h2,
+#Selector h4,
+#Intro span,
+#SocialLinks { text-transform: uppercase; }
+
+#Intro h1 {
+ font-size: 24px;
+ line-height: 22px;
+ letter-spacing: 3px;
+ margin: 6px 0 0 0;
+}
+
+#Intro h2 {
+ letter-spacing: 2px;
+ line-height: 17px;
+ margin: 0 0 15px 0;
+}
+
+#Intro h2,
+#Selector h4,
+#Intro span,
+#Intro ul li a,
+.SubNav li a {
+ font-weight: bold;
+ font-size: 12px;
+}
+
+#Intro ul li a,
+#WelcomeFloat a,
+.SubNav li a { text-decoration: none; }
+
+#Intro span img { width: 12px; }
+
+#Intro ul,
+.SubNav ul {
+ list-style-type: none;
+ padding: 0;
+ margin: 0;
+}
+
+#NewJobList li { padding: 4px 0; }
+
+#NewJobList li a {
+ color: white;
+ border-bottom: 1px solid white;
+}
+
+#NewJobList li.alt a {
+ border-bottom: 1px solid #a7a7a7;
+ color: #a7a7a7;
+}
+
+#SocialLinks {
+ position: absolute;
+ bottom: 15px;
+ right: 0;
+ font-weight: bold;
+ font-size: 10px;
+}
+
+#SocialLinks li { float: left; }
+
+#SocialLinks ul { margin-top: 5px; }
+
+#LinkedIn { margin: 0 7px; }
+
+a.TabBold { font-weight: bold; }
+
+#Selector {
+ float: left;
+ width: 360px;
+}
+
+#Selector img {
+ float: left;
+ margin: 10px 10px 0 0;
+ border: none;
+}
+
+#Viewer {
+ float: right;
+ width: 568px;
+ height: 378px;
+ margin: 10px 0 0 0;
+ overflow: hidden;
+ position: relative;
+}
+
+#ViewerInfo {
+ position: absolute;
+ background-image: url(../../img/jgs/careers/layout/ViewerInfo_bgcfcd.png?0) !important;
+background-image: url(../../img/jgs/careers/layout/ViewerInfo_bg_ie6cfcd.png?0);
+
+ width: 548px;
+ height: 17px;
+ bottom: 0;
+ left: 0;
+ padding: 5px 10px;
+}
+
+#Selector h4 {
+ line-height: 10px;
+ margin-top: 10px;
+}
+
+#WelcomeBox {
+ background: url("../../img/jgs/careers/layout/WelcomeBox_bg.jpg") no-repeat;
+ color: #282828;
+ position: relative;
+ top: 0;
+ height: 187px;
+ width: 100%;
+}
+
+#WelcomeFloat {
+ width: 645px;
+ float: right;
+ padding: 14px 10px 0 0;
+}
+
+#WelcomeFloat p {
+ clear: both;
+ display: inline-block;
+ margin: 0 0 10px 0;
+}
+
+#WelcomeFloat p.short { width: 450px; }
+
+#WelcomeFloat h3,
+#ContentDisplay h1,
+.SubNav li { border-bottom: 1px solid #c9c9c9; }
+
+h3,
+#ContentDisplay h1 {
+ font-size: 20px;
+ margin: 0 0 10px 0;
+ padding: 0 0 15px 0;
+}
+
+#ContentDisplay h3,
+#MainDisplay h3 {
+ padding: 0;
+}
+
+h3,
+#ContentDisplay h1,
+#ContentDisplay .location {
+ color: #414141;
+}
+
+#TalentScout {
+ position: absolute;
+ bottom: 10px;
+ right: 10px;
+ display: block;
+ width: 128px;
+ height: 48px;
+ color: white;
+ font-weight: bold;
+ padding: 10px 0 0 40px;
+ background-image: url(../../img/jgs/careers/layout/TalentScout_bgcfcd.png?0) !important;
+background-image: url(../../img/jgs/careers/layout/TalentScout_bg_ie6cfcd.png?0);
+
+}
+
+#TalentScout .SubLine {
+ font-size: 12px;
+ display: block;
+}
+
+#TalentScout .MainLine { font-size: 20px; }
+
+.SubNav {
+ float: left;
+ width: 215px;
+}
+
+#ContentDisplay {
+ float: right;
+ width: 608px;
+}
+
+.SubNav li a {
+ display: block;
+ color: black;
+ padding: 6px;
+}
+
+.SubNav li a:hover, .SubNav li a.NavSelected { background-color: #C9C9C9; }
+
+#ContentDisplay h1 {
+ line-height: 17px;
+ overflow: hidden;
+}
+
+#ContentDisplay .location {
+ float: right;
+ margin: -28px 0 0 0;
+ font-weight: bold;
+}
+
+#ContentDisplay li { margin: 10px 0; }
+
+#ContentDisplay h4 { font-size: 13px; }
+
+#ContentDisplay h5 { margin: 10px 0 0 0; }
+
+#VideoViewer,
+#PictureSecondary { display: none; }
+
+#PictureViewer img {
+ position: absolute;
+ top: 0;
+ left: 0;
+}
+
+.BoxBody {
+ overflow: hidden;
+}

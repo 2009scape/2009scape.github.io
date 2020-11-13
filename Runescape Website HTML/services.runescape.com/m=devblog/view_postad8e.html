@@ -1,0 +1,249 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=4&project_id=1&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:51:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../www.runescape.com/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../www.runescape.com/favicon.ico">
+<link rel="apple-touch-icon" href="../../www.runescape.com/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="RuneScape Developers' Blogs">
+<meta name="description" content="RuneScape Developers' Blogs - The briefing stages of the new dwarf quest are complete. It’s time for development to begin.">
+<meta name="title" content="New Dwarf Quest - Implementation Begins">
+<title>New Dwarf Quest - Implementation Begins</title>
+<style type="text/css">/*\*/@import url(../../www.runescape.com/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_3_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/kbase-6.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/devblog-2.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/sifr-0.css" media="all">
+<script type="text/javascript" src="../../www.runescape.com/css/sifr_core-0.js"></script>
+<script type="text/javascript">
+  var Trajan_Pro_Bold = { src: 'http://www.runescape.com/img/sifr/Trajan_Pro_Bold.swf' };
+
+  sIFR.activate(Trajan_Pro_Bold);
+
+  sIFR.replace(Trajan_Pro_Bold, {
+    selector: 'h2',
+    css: '.sIFR-root { font-weight: bold; font-size: 23px; text-align: center; opacity: 0.95; leading: -1; color: #411f13; }'
+    + ', .sIFR-root a { color: #411f13; }'
+    + ', .sIFR-root a:hover { color: #411f13; }',
+    wmode: 'transparent'
+  });
+ </script>
+</head>
+<body id="nav" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../www.runescape.com/title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../www.runescape.com/game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../www.runescape.com/game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../www.runescape.com/options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../www.runescape.com/account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../www.runescape.com/account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../www.runescape.com/kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../www.runescape.com/splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../www.runescape.com/kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../www.runescape.com/parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../www.runescape.com/game.html" class="HoverImg" id="playBannerNoad"><img src="../../www.runescape.com/img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../www.runescape.com/title.html"><img alt="English" title="English" src="../../www.runescape.com/img/main/layout/en.gif" /></a>
+<a href="../../www.runescape.com/l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../www.runescape.com/img/main/layout/de.gif" /></a>
+<a href="../../www.runescape.com/l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../www.runescape.com/img/main/layout/fr.gif" /></a>
+<a href="../../www.runescape.com/l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../www.runescape.com/img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+</div></div>
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../www.runescape.com/title.html">Home</a> &gt;
+<a href="index8523.html?project_id=1&amp;page=1"><span>Developer Blogs</span></a> <span class="divider">&gt;</span>
+<span><span>New Dwarf Quest: Implementation Begins</span></span>
+</div>
+</div>
+<div id="content"> <div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+New Dwarf Quest: Implementation Begins
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article">
+<div class="topshadow">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div id="post">
+<div class="devblog">
+<div class="devblogHead">
+<div class="devblogFoot">
+<div id="archives"><a href="index8523.html?project_id=1&amp;page=1">&lt; Back to archive</a></div>
+<h2>
+Implementation Begins
+<br/>
+by <a href="index590c.html?author_id=2">Mod John A</a> 30-Apr-2009
+</h2>
+<h3>Progress!</h3><div class="content"><p>Good news, everyone! The design brief for the new dwarf quest is complete. This is the core design document of the project that defines all the important details of the new quest. The initial concept document said things like "there's a puzzle here involving such-and-such a thing"; the design brief defines exactly how the puzzles will work.</p><p>Creating the design brief involved a lot of back and forth between me, <span class="strong">Mod Mark</span> (RuneScape's lead designer) and our balancing expert. We agreed on the bulk of the document pretty quickly, but a few of the details took a bit of haggling to get worked out. This took a while, but it's important to get things right at the design brief stage, rather than trying to balance the project at the last minute.</p><p>With the design done, the project now moves into the implementation phase. This means I'll be writing the actual dialogue and code that'll make up the final quest. I'll also be working with the <span class="strong">Graphics</span> and <span class="strong">Audio</span> teams to begin work on the look and sound of the new quest.</p><p>The only major thing to still be decided is the quest's title, because I'm terrible at coming up with titles for things. Hopefully, something will come to me while I'm writing the quest dialogue. I'll keep on calling it 'new dwarf quest' for now.</p><p></p></div><div class="hr"></div><h3>Level requirements</h3><div class="content"><p>Among the things decided at this stage of the project are the exact level requirements of the quest. In the last diary I said that they would probably be in the same range as those of <span class="em">Forgettable Tale...</span>, but <span class="strong">Mod Mark</span> has decided that they should be higher than that. I can now exclusively reveal the new quest's level requirements:<br /><ul><li>Level 41 Hunter.</li><li>Level 54 Firemaking.</li><li>Level 54 Strength.</li><li>Ability to defeat a level 100 enemy.</li></ul></p><p>What could you have to do in a dwarf quest that involves Hunter, Firemaking and Strength? You may begin your wild speculations now.</p><p>We're planning three new dwarf quests in total (this one plus two more), and their level requirements will get progressively harder so that the last one will be Grandmaster level, with requirements of around 70-75. I can't say anything specific about when we will release any of the quests, but we're not planning to leave as long a gap between installments as there was before this one.</p><p>Please note that these level requirements are the ones we're planning now, but it's just possible that we'll need to change them for some reason while the quest is being developed. If we do change them, I'll let you know. Basically, everything I write here should be taken as a prediction rather than a promise.</p><p></p></div><div class="hr"></div><h3>Dwarf graphical rework</h3><div class="imgright"><div class="topbord"><div class="bottombord"><div class="leftbord"><div class="rightbord"><div class="toplcorn"><div class="toprcorn"><div class="bottomlcorn"><div class="bottomrcorn"><a href="images/ra3/veldaban_concept.jpg"><img src="images/ra3/veldaban_concept_thumb.jpg" alt="Concept art of Commander Veldaban" /></a></div></div></div></div></div></div></div></div><a href="images/ra3/veldaban_concept.jpg">Concept art of Commander Veldaban</a></div><div class="content"><p></p><p>Some people on the forums have asked whether dwarves are going to get a graphical rework. We've discussed this and decided that we will be updating the dwarf NPCs with new graphics. However, this graphical update will be a separate project from the quest; I don't yet know whether it will be released along with the quest or at another time.</p><p>To the right is our first piece of concept art - a new look for Commander Veldaban - by <span class="strong">Mod GG</span>. Please bear in mind that this is only the initial concept and might change as we all discuss exactly how we want the dwarves to look.</p></div>
+<br class="clear" />
+<div id="meta">
+Project: <a href="index024d.html?project_id=1">New Dwarf Quest</a><br />
+Tags:
+<a href="index629a.html?tag_id=3">development</a>, <a href="index1782.html?tag_id=2">dwarf</a>, <a href="index230c.html?tag_id=1">quest</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../www.runescape.com/terms/terms.html">Terms &amp; Conditions</a> and <a href="../../www.runescape.com/privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../www.jagex.com/index.html" target="_blank">
+<img src="../../www.runescape.com/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+ document.write(unescape("%3Cscript src='"+(("https:"==document.location.protocol)?"https://ssl":"http://www")+".google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=4&project_id=1&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:51:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

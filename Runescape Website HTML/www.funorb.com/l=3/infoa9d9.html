@@ -1,0 +1,537 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt" xmlns:IE>
+
+<!-- Mirrored from www.funorb.com/l=3/info.ws?game=armiesofgielinor by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:54:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="pt">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta name="keywords" content="Jogos on-line gratuitos, jogos de enigma, plataforma, arcade, de tiro, de ação, em java, jogos casuais, de corrida, de palavras, de lógica, retro, clássicos, direto no navegador, de estratégia, jogos multijogador, arcanistas, Jagex, Play Free Online Games, puzzle games, platform games, arcade games, shooter games, action games, java games, casual games, racing games, word games, retro games, classic games, browser games, strategy games, multiplayer games, arcanists, kickabout, steel sentinels">
+<meta name="description" content="FunOrb, jogos on-line gratuitos via navegador da Jagex Games Studio, os mesmos criadores do RuneScape. Vibre com jogos de raciocínio, ação, estratégia, tiro, palavras, corridas e muito mais!">
+<meta name="title" content="FunOrb - Jogos gratuitos on-line da Jagex Games Studio">
+<meta name="Author" content="www.jagex.com">
+<meta name="Copyright" content="Copyright 1999 - 2010 Jagex Ltd, www.jagex.com">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="classification" content="GENERAL">
+<meta name="rating" content="General">
+<meta name="Distribution" content="global">
+<meta name="Identifier-URL" content="../index.html">
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<title>FunOrb - Jogos gratuitos on-line da Jagex Games Studio</title>
+<style type="text/css" media="screen">
+  /*\*/@import url(css/global-40.css);/**/
+ </style>
+<script type="text/javascript" src="../../www.jagex.com/l%3d3/js/jquery/jquery_1_4_2.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">@import url(http://www.funorb.com/l=3/css/ieFix-2.css);</style>
+<![endif]-->
+
+<!--[if IE]>
+<style type="text/css">
+ @media all {
+  IE\:clientCaps {behavior:url(#default#clientcaps)}
+ }
+</style>
+<IE:clientCaps ID="oClientCaps" />
+<![endif]-->
+<script type="text/javascript">
+ var suffix="?js=1";
+ if (navigator.appName=="Microsoft Internet Explorer") {
+  if (!oClientCaps.getComponentVersion("{08B0E5C0-4FCB-11CF-AAA5-00401C608500}","ComponentID")) {
+   suffix+="&applet=2";
+  }
+ }
+ function suffixize(obj){
+  if(!obj.suffixed){
+   obj.href += suffix;
+   obj.suffixed = true;
+  }
+ }
+</script> <style type="text/css" media="screen">
+ /*\*/@import url("css/info-7.css");/**/
+ .intro {
+  background-image: url(img/images/game/armiesofgielinor/intro.jpg);
+ }
+ .buttonSubscribe {
+  background-image: url(img/images/info/button_subscribe.gif);
+ }
+</style>
+<script type="text/javascript">
+//
+var time = 4;
+var timer;
+var timer2;
+var loading = 0;
+var image = 0;
+var images = Array();
+//
+images[0] = 'img/images/game/armiesofgielinor/screen1c4ca.jpg?1';
+images[1] = 'img/images/game/armiesofgielinor/screen2c4ca.jpg?1';
+images[2] = 'img/images/game/armiesofgielinor/screen3c4ca.jpg?1';
+images[3] = 'img/images/game/armiesofgielinor/screen5c4ca.jpg?1';
+//
+function clearLoading(){
+ try{
+  if(images[0]){
+   document.getElementById('screenshotsLoading0').style.backgroundPosition = '-83px -62px';
+   if(images[1]){
+    document.getElementById('screenshotsLoading1').style.backgroundPosition = '-83px -62px';
+    if(images[2]){
+     document.getElementById('screenshotsLoading2').style.backgroundPosition = '-83px -62px';
+     if(images[3]){
+      document.getElementById('screenshotsLoading3').style.backgroundPosition = '-83px -62px';
+     }
+    }
+   }
+  }
+  loading = 0;
+ }catch(e){}
+}
+//
+function imageTimer(self){
+ clearTimeout(timer2);
+ clearTimeout(timer);
+ clearLoading();
+ timer = setTimeout("imageNext('" + self + "')", time * 1000);
+}
+//
+function imageNext(self){
+ if(loading == 1){return;}
+ image++;
+ if(image >= images.length){
+  image = 0;
+ }
+ document.getElementById(self).src = images[image];
+}
+//
+function imageGoto(self, img){
+ image = img;
+ // Don't bother re-loading the same image as it screws up Opera
+ if(document.getElementById(self).src != images[image]){
+  var timeDefault = time;
+  time = time * 2;
+  window.setTimeout('time = ' + timeDefault, timeDefault);
+  timer2 = window.setTimeout("document.getElementById('screenshotsLoading' + image).style.backgroundPosition = '25px 12px';", 100);
+  loading = 1;
+  document.getElementById(self).src = images[image];
+ }
+ return false;
+}
+</script>
+
+</head>
+<body id="navGames">
+<a name="top"></a>
+<table id="wrapper">
+<tbody>
+<tr>
+<td class="center bodyTheme">
+<div id="container">
+
+<div id="header">
+<div id="navigation">
+<div class="lft"></div>
+<div class="rght"></div>
+<div class="container">
+<a id="logo" href="index.html" ><b>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="203" height="80">
+<param name="movie" value="http://www.funorb.com/l=3/img/images/layout/logo_funorb_tombracer.swf" />
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=3/" />
+<param name="AllowScriptAccess" value="always" />
+<!--[if !IE]>-->
+<object type="application/x-shockwave-flash" data="img/images/layout/logo_funorb_tombracer.swf" width="203" height="80">
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=3/" />
+<param name="AllowScriptAccess" value="always" />
+<!--<![endif]-->
+<!-- Non Flash alternative -->
+<img src="img/images/layout/logo_funorb_tombracer.jpg" alt="FunOrb" />
+<!--[if !IE]>-->
+</object>
+<!--<![endif]-->
+<!--<![endif]-->
+</object>
+</b></a>
+
+<div id="shell">
+<div class="lft"></div>
+<div class="rght"></div>
+<div id="teleText">
+<h1 id="welcomeText">Bem-vindo ao FunOrb - O melhor em jogos on-line gratuitos</h1>
+<span id="teletext_inner">
+Para obter acesso a qualquer um de nossos jogos multijogadores, tabelas das melhores pontuações e ações, crie uma conta. É rápido, fácil e completamente GRATUITO!</span>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d3/messengercommon0.js"></script>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d3/messenger.js"></script>
+
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<ul class="menu">
+<li class="top p1"><a href="index.html" id="home" class="top_link"><span>Principal</span></a></li>
+<li class="top p2"><a id="games" class="top_link" href="gamelist.html"><span>Jogos</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="gamelist.html" class="fly">Todos os jogos</a></li>
+<li><a href="gamelistea68.html?playerBox=1" class="fly">Jogos para um jogador</a></li>
+<li><a href="gamelist6ff6.html?playerBox=2" class="fly">Jogos multijogadores</a></li>
+<li><a href="options.html" class="fly last">Opções Java</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p3"><a id="account" class="top_link" href="https://secure.funorb.com/m=create/l=3/"><span>Participar</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="https://secure.funorb.com/m=create/l=3/" class="fly">Criar conta gratuita</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=3/paymentoptions.ws" class="fly">Assinar o FunOrb</a></li>
+<li><a href="members.html" class="fly">Benefícios dos membros</a></li>
+<li><a href="account_management.html" class="fly last">Gerenciamento de conta</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p4"><a id="forums" class="top_link" href="http://services.funorb.com/m=focommunity/l=3/"><span>Comunidade</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="http://services.funorb.com/m=focommunity/l=3/" class="fly">Comunidade - Principal</a></li>
+<li><a href="http://services.funorb.com/m=forum_fo_pt/l=3/forums.ws" class="fly">Fóruns</a></li>
+<li><a href="kbase/guid/dev_diary.html" class="fly">Diários de desenvolvimento</a></li>
+<li><a href="http://services.funorb.com/m=achievements/l=3/" class="fly">Conquistas</a></li>
+<li><a href="http://services.funorb.com/m=hiscore_fo/l=3/" class="fly">Recordes e Pontuações</a></li>
+<li><a href="http://services.funorb.com/m=orbcoins/l=3/" class="fly last">Orb Downloads</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p5"><a id="help" class="top_link" href="kbase/guid/help.html"><span>Ajuda</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="kbase/guid/customer_support.html" class="fly">Suporte ao Cliente</a></li>
+<li><a href="parents.html" class="fly">Guia para Pais</a></li>
+<li><a href="kbase/guid/rules_of_conduct.html" class="fly">Regras</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=3/unsubscribe.ws" class="fly">Cancelar recebimento</a></li>
+<li><a href="loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly">Recuperação de conta</a></li>
+<li><a href="https://secure.funorb.com/m=weblogin/l=3/loginform.ws?mod=www&amp;ssl=0&amp;expired=0&amp;dest=bugtracker.ws" class="fly last">Enviar um relatório de erro</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p11"><a id="empty" class="top_link"><span>&nbsp;</span></a></li>
+<li class="top p7"><a href="https://secure.funorb.com/m=create/l=3/" id="register" class="top_link"><span>Criar conta</span></a></li>
+<li class="top p8"><a href="https://secure.funorb.com/m=weblogin/l=3/loginform.ws?mod=www&amp;ssl=0&amp;dest=info.ws?game=armiesofgielinor" id="signIn" class="top_link"><span>Login</span></a></li>
+<li class="top p10">
+<div class="top_link" id="lang_div">
+<a id="countrydrop" href="index.html">
+<span>
+<img alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif">
+<span id="dropArrow"></span>
+</span>
+<!--[if gt IE 6]><!--></a></div><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul id="lang" class="sub">
+<li><a class="fly" href="../index-2.html"><img title="
+English" alt="
+English" src="img/images/layout/en.gif"></a></li>
+<li><a class="fly" href="../l%3d1/index.html"><img title="
+Deutsch" alt="
+Deutsch" src="img/images/layout/de.gif"></a></li>
+<li><a class="fly" href="../l%3d2/index.html"><img title="
+Fran&ccedil;ais" alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif"></a></li>
+<li><a class="fly last" href="index.html"><img title="
+Portugu&ecirc;s (BR)" alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif"></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a></div><![endif]-->
+</li>
+</ul>
+</div>
+<br class="clear" />
+</div>
+<div id="page_content">
+<a name="info"></a>
+<div class="section" id="info" >
+<div class="sectionHeader">
+<div class="sectionHeaderRight">
+<div class="sectionTitle">
+<span class="sectionTrail">
+<a href="gamelist.html">Jogos</a> &gt;
+<a href="gamelist94fa.html?genreBox=strategy">Estratégia</a> &gt;
+<a onclick="suffixize(this)" href="http://aog1.funorb.com/l=3/g=armiesofgielinor/game.ws">Hordas de Guilenor</a> &gt;
+Mais informações </span>
+<span class="sectionServerlist">
+<a style="text-decoration: underline; font-weight: normal;" href="armiesofgielinor/serverlist.html">Lista de servidores</a>
+</span>
+
+</div>
+</div>
+</div>
+<div class="sectionBorder">
+<div class="sectionBackground">
+<div class="sectionContent" >
+<div class="sectionContentContainer">
+<div class="intro">
+<div class="introDescription">
+<div>
+<a href="gamelist94fa.html?genreBox=strategy"><span class="genre">Estratégia</span></a><br> Empunhe a bandeira do grupo escolhido bem alto e trave batalhas em Hordas de Guilenor. </div>
+</div>
+<a class="buttonWide" href="#description"><div>Descrição</div></a><br />
+<a class="buttonWide" href="#faqs"><div>Perguntas freqüentes</div></a><br />
+<a class="buttonWide" href="https://secure.funorb.com/m=create/l=3/"><div>Criar conta gratuita</div></a><br />
+<a onclick="suffixize(this)" class="buttonPlayBig" href="http://aog1.funorb.com/l=3/g=armiesofgielinor/game.ws"></a>
+</div>
+<a name="screenshots"></a>
+<div class="subsection" id="screenshots" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Capturas de tela
+</div>
+</div>
+<div class="subsectionContent">
+<script type="text/javascript">
+  document.write('<img id="screenshotsImage" class="screenshotsImage" src="http://www.funorb.com/l=3/img/images/game/armiesofgielinor/screen1.jpg" alt="In-game screenshot" onLoad="imageTimer(this.id)" />');
+ </script>
+<noscript>
+<iframe name="screenshotsFrame" class="screenshotsFrame" id="screenshotsFrame" scrolling="no" frameBorder="0" src="display_screenshot252d.html?game=armiesofgielinor&amp;screenshot=screen1">
+</iframe>
+</noscript>
+<div id="screenshotsThumbs">
+<a href="display_screenshot252d.html?game=armiesofgielinor&amp;screenshot=screen1" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 0);" class="screenshotsThumb" style="background-image: url(img/images/game/armiesofgielinor/screen1_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading0"></div>
+</a>
+<a href="display_screenshotb554.html?game=armiesofgielinor&amp;screenshot=screen2" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 1);" class="screenshotsThumb" style="background-image: url(img/images/game/armiesofgielinor/screen2_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading1"></div>
+</a>
+<a href="display_screenshotd1bd.html?game=armiesofgielinor&amp;screenshot=screen3" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 2);" class="screenshotsThumb" style="background-image: url(img/images/game/armiesofgielinor/screen3_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading2"></div>
+</a>
+<a href="display_screenshot635e.html?game=armiesofgielinor&amp;screenshot=screen5" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 3);" class="screenshotsThumb" style="background-image: url(img/images/game/armiesofgielinor/screen5_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading3"></div>
+</a>
+</div>
+</div>
+</div>
+<a name="benefits"></a>
+<div class="subsection" id="benefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Hordas de Guilenor - Recursos
+</div>
+</div>
+<div class="subsectionContent">
+<div class="benefitsPadding"></div>
+<div class="benefitsContent">
+<div class="benefitsList">
+<ul>
+
+<li>Baseado no universo de RuneScape.</li>
+<li>27 unidades para comandar.</li>
+<li>Multijogador até 8 jogadores.</li>
+<li>Jogos coletivos (2x2, 3x3, 4x4) e Cada um por si.</li>
+<li>Dispute jogos não qualificatórios.</li>
+<li>Jogue a campanha para um jogador Zamorak Retorna.</li>
+<li>Jogue GRÁTIS!</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<br class="clear" />
+<a name="description"></a>
+<div class="subsection" id="description" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Descrição
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>Hordas de Guilenor (HdG) é um jogo de estratégia disputado em rodadas para até 8 jogadores, e é o primeiro jogo do FunOrb baseado em nosso jogo de aventura multijogadores, o RuneScape (nesse caso, Guilenor seria um nome alternativo para o mundo de RuneScape). Todos os jogadores começam com um modesto líder bárbaro e precisam capturar estruturas, teleportar novas unidades e lutar contra os inimigos para controlar a mais poderosa horda de Guilenor.</p>
+<p>O jogo também conta com três campanhas para um jogador baseadas no mapa, permitindo que você recrie a conquista zamorakiana das terras de Moritânia, a dominação de Saradomin sobre Asgarnia e Misthalin e o despertar do todo poderoso Guthix. Isso lhe dá acesso a um total de 60 missões para testar seu pensamento estratégico, com várias maneiras de completar cada campanha.</p>
+<p>Você vai encontrar muitas unidades diferentes, cada qual alinhada a um dos vários deuses de Guilenor. Algumas delas são muito poderosas, enquanto outras têm habilidades especiais que podem afetar a paisagem ou introduzir diversas estratégias diferentes para você usar. Será que você consegue equilibrar a força de sua horda para enfrentar os oponentes e conquistar a vitória?</p>
+</div>
+</div>
+</div>
+<a name="top_of_page"></a>
+<a name="faqs"></a>
+<div class="subsection" id="faqs" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Perguntas frequentes
+</div>
+</div>
+<div class="subsectionContent">
+<div class="faqsList">
+<ol>
+<li><a href="#faqs_q1">O que é um jogo de estratégia disputado em rodadas?</a></li>
+<li><a href="#faqs_q2">Quantas unidades o jogo possui?</a></li>
+<li><a href="#faqs_q3">Há alguma tática ou dica interessante?</a></li>
+<li><a href="#faqs_q4">Onde fica Guilenor? O que é RuneScape?</a></li>
+<li><a href="#faqs_q5">Se eu jogar Hordas de Guilenor, isso vai afetar meu personagem do RuneScape?</a></li>
+<li><a href="#faqs_q6">Em que momento da história de RuneScape é ambientado Hordas de Guilenor?</a></li>
+<li><a href="#faqs_q7">Por que unidades específicas foram escolhidas? Por que vocês não usaram...?</a></li>
+<li><a href="#faqs_q8">Há algumas unidades em HdG que não existem no RuneScape ainda. Seria isto uma indicação de que elas vão existir?</a></li>
+<li><a href="#faqs_q9">Hordas de Guilenor é a mesma coisa que a atividade Mobilização de Exércitos (RuneScape)?</a></li>
+<li><a href="#faqs_spec">Quais são as especificações mínimas para este jogo?</a></li>
+</ol>
+</div>
+<div class="faqsAnswer">
+<a name="faqs_q1"></a>
+<h3>1. O que é um jogo de estratégia disputado em rodadas?</h3>
+<p>Você e seu oponente se alternam para jogar, a cada rodada, movendo e atacando com suas hordas. O principal objetivo é alcançar as condições que lhe garantam a vitória antes de seu oponente.</p>
+<div class="hr"></div>
+<a name="faqs_q2"></a>
+<h3>2. Quantas unidades o jogo possui?</h3>
+<p>O jogo possui 76 unidades. Cada um dos seis deuses oferece 11 unidades; há 9 unidades neutras e todos os jogadores começam o jogo com um líder bárbaro. Para sua informação, a 9° unidade neutra é o Dragão vermelho, que só fica disponível se outro jogador já tiver evocado o Dragão negro rei (DNR). Jogadores gratuitos têm acesso a 27 unidades, incluindo o líder bárbaro e DNR.</p>
+<div class="hr"></div>
+<a name="faqs_q3"></a>
+<h3>3. Há alguma tática ou dica interessante?</h3>
+<p>Aqui vão algumas dicas para jogar HdG:</p>
+<ul>
+<li>Tente capturar um portal primeiro...</li>
+<li>... e não o deixe desprotegido!</li>
+<li>Ao capturar estruturas, você ganha pontos de vitória e de mana, e este é o segredo para vencer o jogo. Posicionando as unidades em estruturas ajuda a recuperá-las e fornece bônus de defesa. Então, capture o máximo que puder, o mais rápido que conseguir.</li>
+<li>Só os bárbaros podem capturar estruturas, então tente ter muitos deles no começo de cada jogo.</li>
+<li>Use seu líder bárbaro com sabedoria, já que ele pode capturar estruturas mais rapidamente que os outros bárbaros.</li>
+<li>Quando as unidades morrem, elas se tornam uma pilha de ossos - é bastante útil ter um necromante...</li>
+<li>Use o terreno a seu favor. Procure pontos de bloqueio e tente se lembrar quais unidades podem avançar por qual terreno.</li>
+<li>As unidades ajudantes e aquelas com habilidades especiais podem afetar drasticamente a batalha.</li>
+<li>Faça sua jogada rápido, já que ao terminar a sua rodada antes você ganha pontos de mana.</li>
+<li>Ocupar uma estrutura controlada pelo inimigo reduz a quantidade de mana que ele pode ganhar. Claro que isso funciona da mesma forma para você.</li>
+<li>Algumas unidades são melhores contra um tipo específico de inimigo do que outras.</li>
+<li>Jogue limpo e, acima de tudo, divirta-se!</li>
+</ul>
+<div class="hr"></div>
+<a name="faqs_q4"></a>
+<h3>4. Onde fica Guilenor? O que é RuneScape?</h3>
+<p>RuneScape é um outro nome para Guilenor, o mundo onde este jogo se passa. É também o nome do gigantesco jogo de fantasia da <a href="../../www.jagex.com/index.html" target="_blank">Jagex</a>, um jogo de aventura para multijogadores. Se você nunca ouviu falar ou ainda não deu uma olhada, vá para o <a href="../../www.runescape.com/index.html" target="_blank">site do RuneScape</a>.</p>
+<p>Seu login e senha do FunOrb também podem ser usados para acessar o RuneScape, e você pode jogar grande parte da aventura de forma gratuita. Nós oferecemos um pacote conjunto de assinatura do RuneScape e FunOrb, caso queira se tornar membro dos dois.</p>
+<div class="hr"></div>
+<a name="faqs_q5"></a>
+<h3>5. Se eu jogar Hordas de Guilenor, isso vai afetar meu personagem do RuneScape?</h3>
+<p>Apesar de HdG ter sido inspirado em RuneScape, não há nenhuma outra conexão entre os dois jogos. Jogar Hordas de Guilenor não causa absolutamente nenhum impacto no seu personagem em RuneScape e vice-versa.</p>
+<div class="hr"></div>
+<a name="faqs_q6"></a>
+<h3>6. Em que momento da história de RuneScape é ambientado Hordas de Guilenor?</h3>
+<p>Tecnicamente, HdG não se passa em um período específico da história de RuneScape, mas podemos considerar que tenha se passado durante algum momento da Guerra dos Deuses. Pode parecer estranho ver forças saradoministas e zamorakianas lutando do mesmo lado, mas este era um período de caos na história do RuneScape. Por isso, é possível que grupos inimigos tenham formado alianças temporárias a fim de alcançar um propósito maior.</p>
+<div class="hr"></div>
+<a name="faqs_q7"></a>
+<h3>7. Por que unidades específicas foram escolhidas? Por que vocês não usaram...?</h3>
+<p>As unidades escolhidas para HdG foram pensadas com cuidado, com base em vários fatores. Seria impossível incluir todas as criaturas de RuneScape <b>e</b> ainda ter um jogo equilibrado e divertido. Se há criaturas que você preferiria ver neste jogo, por favor sinta-se à vontade para nos dizer que outras unidades você gostaria que incluíssemos. Se elas se encaixarem, podem ser incluídas um dia.</p>
+<div class="hr"></div>
+<a name="faqs_q8"></a>
+<h3>8. Algumas unidades em HdG não existem no RuneScape ainda. Seria isto uma indicação de que elas vão existir?</h3>
+<p>A resposta é não. Nosso principal objetivo era fazer HdG de forma equilibrada e divertida, então em vez de uma "farofa" - um misto entre as habilidades especiais de HdG e de uma criatura existente em RuneScape -, decidimos criar algumas criaturas totalmente novas, que se enquadram no universo de RuneScape. Há uma chance dessas criaturas um dia darem um jeito de entrar no RuneScape, mas isso só acontecerá se e quando houver uma boa oportunidade.</p>
+<div class="hr"></div>
+<a name="faqs_q9"></a>
+<h3>9. Hordas de Guilenor é a mesma coisa que a atividade Mobilização de Exércitos (RuneScape)?</h3>
+<p>Não. Hordas de Guilenor e Mobilização de Exércitos são e, sempre serão, dois jogos completamente separados.</p>
+<div class="hr"></div>
+<a name="faqs_spec"></a>
+<h3>10. Quais são as especificações mínimas para este jogo?</h3>
+<p>As especificações mínimas recomendadas para este jogo são:</p>
+<ul>
+<li>1.0 GHz <li>128 MB de RAM </ul>
+<p>As especificações <b>recomendadas</b> para aproveitar ao máximo este jogo são:</p>
+<ul>
+<li>1.5 GHz <li>256 MB de RAM </ul>
+<p>Abaixo você encontrará uma explicação dos termos das nossas especificações técnicas.</p>
+<p><b>Megahertz (MHz) / Gigahertz (GHz)</b> é uma medida que define a velocidade do processador do computador. Isso afeta a rapidez com que você pode executar jogos e aplicativos, por exemplo.</p>
+<p>Os <b>Megabytes (MB)</b> são usados para medir a quantidade de memória do computador. Isso afeta a rapidez com que o computador é executado ao usar programas grandes, como jogos, ou quando você executa vários programas ao mesmo tempo.</p>
+<p>Clique <a href="http://www.java.com/getjava" target="_blank">aqui</a> para obter a última versão do Sun Java.</p>
+</div>
+</div>
+</div>
+<a name="furtherBenefits"></a>
+<div class="subsection" id="furtherBenefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Benefícios do membro do FunOrb
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p style="padding-bottom: 5px;">Os membros ganham:</p>
+<ul style="line-height: 22px;">
+<li>Mais de 40 novas unidades, inclusive unidades de sucesso do RuneScape.</li>
+<li>Três novos grupos: Seren, Bandos e o panteão Menaphita.</li>
+<li>Equipamentos - use runas para adquirir itens para ajudar sua horda a vencer.</li>
+<li>A série completa das três campanhas para um jogador: Zamorak Retorna, Saradomin Ataca e Guthix Desperta.</li>
+<li>Mais modelos de brasão.</li>
+<li>Brasão de prestígio.</li>
+<li>Todos os quatro ambientes do mapa, incluindo os exclusivos para membros Brejos Gelados e Pântanos do Vale Sagrado.</li>
+<li>Jogos qualificatórios.</li>
+<li>Acesso a todas as Conquistas.</li>
+<li>Modos de tela cheia e janela ajustável.</li>
+<li>Sem anúncios durante o jogo.</li>
+<li>Acesso total a todo conteúdo exclusivo para membros do FunOrb.</li>
+</ul>
+<p>
+<a href="https://secure.funorb.com/m=billing_core/l=3/paymentoptions.ws" class="buttonSubscribe"></a>
+</p>
+</div>
+</div>
+</div>
+<a name="credits"></a>
+<div class="subsection" id="credits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Equipe de Desenvolvimento
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>
+<b>Desenvolvimento:</b> Brian C,&nbsp;Stacy S,&nbsp;Mark T,&nbsp;Thomas D,&nbsp;Pedro R,&nbsp;Tom P,&nbsp;Sally R,&nbsp;Joe C,&nbsp;Ken W L,&nbsp;Michael T,&nbsp;Gabriel M<br>
+<b>Design gráfico:</b> Adam S,&nbsp;Anthony A,&nbsp;David H,&nbsp;Kristian F,&nbsp;Peter S,&nbsp;Laura W<br>
+<b>Áudio:</b> Adam B,&nbsp;Ian T,&nbsp;Grace D<br>
+<b>Controle de Qualidade:</b> Joe C,&nbsp;Ken W L,&nbsp;Michael T,&nbsp;Sally R,&nbsp;Alex P<br>
+<b>Tradução:</b> Giulyanna S,&nbsp;Betina U,&nbsp;Claudio D C,&nbsp;Marsel de S
+</p>
+<p class="articleBacktotop">
+<a href="#top"><img src="img/images/layout/backtotop.gif" alt="Voltar ao topo" title="Voltar ao topo" /></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sectionFooter"><div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="copyRight">
+<div id="languagefooter"> Selecione o idioma:&nbsp; <a href="../index-2.html"><img alt="
+English" src="img/images/layout/en.gif">
+English</a>
+<a href="../l%3d1/index.html"><img alt="
+Deutsch" src="img/images/layout/de.gif">
+Deutsch</a>
+<a href="../l%3d2/index.html"><img alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif">
+Fran&ccedil;ais</a>
+<a href="index.html"><img alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif">
+Portugu&ecirc;s (BR)</a>
+</div>
+<div class="cr">
+<p> Copyright © 2008 - 2010 Jagex Ltd. Jagex e FunOrb são marcas registradas da Jagex Ltd no Reino Unido e em outros países do mundo. </p>
+<p> Ao utilizar nossos serviços, você concorda com nossos <a href="terms/terms.html" name="terms">Termos e Condições</a> e <a href="privacy/privacy.html" name="privacy">Política de Privacidade</a>. </p>
+</div>
+<div id="jagex">
+<a href="../../www.jagex.com/l%3d3/index.html" target="_blank"><img src="img/images/layout/jagex_footerc4ca.gif?1" alt="Logotipo Jagex" /></a>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>

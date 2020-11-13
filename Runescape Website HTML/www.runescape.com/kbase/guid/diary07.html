@@ -1,0 +1,458 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary07 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico">
+<link rel="SHORTCUT ICON" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="dev,development,diary,qa,quality,assurance,testing,play,bug">
+<meta name="description" content="A look into the QA team here at Jagex">
+<meta name="title" content="RuneScape - MMORPG - Quality Assurance">
+<title>RuneScape - MMORPG - Quality Assurance</title>
+<style type="text/css">/*\*/@import url(../../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../css/kbase-6.css);/**/</style>
+<script type="text/javascript" src="../../css/kbsearchfill-0.js"></script>
+<script type="text/javascript">
+new_subcat=add_subcat(4, 5, "Postbag from the Hedge", -1 == 5);new_subcat=add_subcat(4, 6, "Players' Gallery", -1 == 6);new_subcat=add_subcat(4, 19, "God letters", -1 == 19);new_subcat=add_subcat(775, 892, "How do I get started?", -1 == 892);new_subcat=add_subcat(775, 798, "Controls", -1 == 798);new_subcat=add_subcat(775, 795, "Combat", -1 == 795);new_subcat=add_subcat(775, 776, "Skills", -1 == 776);new_subcat=add_subcat(775, 7, "Quests", -1 == 7);new_subcat=add_subcat(775, 1, "Achievement Diary", -1 == 1);new_subcat=add_subcat(775, 10, "Activities", -1 == 10);new_subcat=add_subcat(775, 38, "Distractions and Diversions", -1 == 38);new_subcat=add_subcat(775, 831, "Miscellaneous Guides", -1 == 831);new_subcat=add_subcat(775, 881, "Area Guides", -1 == 881);new_subcat=add_subcat(20, 32, "A New Look RuneScape: Part 1", -1 == 32);new_subcat=add_subcat(20, 21, "Graphics Team - NPC Improvement Project", -1 == 21);new_subcat=add_subcat(9, 127, "Billing", -1 == 127);new_subcat=add_subcat(9, 126, "Technical", -1 == 126);new_subcat=add_subcat(9, 827, "Safety & Security Guidelines", -1 == 827);new_subcat=add_subcat(9, 872, "Other", -1 == 872);
+</script>
+<meta name="language" content="en, de">
+<meta name="description" content="A look into the QA team here at Jagex">
+<style type="text/css">
+ 
+   
+  
+  .bigquote { font-size:medium; font-weight:bold; font-style:italic; text-align:left; } 
+  .mod { font-weight:bold; } 
+  .team { font-weight:bold; } 
+  .quote { font-style:italic; } 
+  .caption { font-size:85%; font-weight:bold; } 
+  .bigup { font-size:14px; } 
+  
+ </style>
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHeadAdvert">
+<div id="headAdvert">
+<iframe name="Advert" src="../../../services.runescape.com/m%3dadvert/banner5052.html?size=730" allowtransparency="true" width="766" height="96" scrolling="no" frameborder="0"></iframe>
+<script type="text/javascript">
+  setTimeout(function() {
+  var url = "http" +
+  (/https:/.test(document.location.href) ? "s" : "") +
+  "://beacon.scorecardresearch.com/scripts/beacon.dll" +
+  "?c1=8&c2=6035824&c3=1271511541440201100" +
+  escape(document.location.href) +
+  "&c8=" + escape(document.title) +
+  "&c9=" + escape(document.referrer) +
+  "&c10=" + escape(screen.width+'x'+screen.height) +
+  "&rn=" + (new Date()).getTime();
+  var i = new Image();
+  i.src = url;
+  }, 1);
+  </script>
+<noscript>
+<img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=8&amp;c2=6035824&amp;c3=1271511541440201100&amp;x=NOJAVASCRIPT" alt="" />
+</noscript>
+</div>
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../../../services.runescape.com/m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../services.runescape.com/m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../title.html"><img alt="English" title="English" src="../../img/main/layout/en.gif" /></a>
+<a href="../../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../img/main/layout/de.gif" /></a>
+<a href="../../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../img/main/layout/fr.gif" /></a>
+<a href="../../l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../title.html">Home</a> &gt;
+
+<a href="dev_diary-2.html">Development Diaries</a> &gt; Quality Assurance<br />
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+Quality Assurance
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_1">
+<div class="article">
+<div class="topshadow">
+<div class="bottomborder">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleft">
+<div class="bottomright">
+<div class="links"></div>
+<div style="text-align: center">
+<div style="text-align: justify;color: #402706; margin: auto;">
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/comic/comic07.gif" style="display: block; margin: auto;" alt="comic strip">
+</p>
+<br>
+<h3 style="text-align: center;"><b>Quality Assurance</b></h3>
+<p>In this month's <a href="dev_diary-2.html">Development Diary</a> we're taking a look at the <span class="team">Quality Assurance</span> (<span class="team">QA</span>) team, who test the game/website to iron out the kinks and uncover any bugs. The role of <span class="team">QA</span> in RuneScape's development is a little bit different from the norm of the videogame industry. This is due to how regularly RuneScape is updated, which proves to be an ongoing challenge for everyone involved.</p>
+<br>
+<p style="text-align: center;"><b>Input, input</b></p>
+<div style="width: 30%; float:left; margin:15px 15px 35px 15px; text-align: left;">
+<p class="bigquote">
+"At Jagex, the QA team has more of an opportunity to influence the product. One of the luxuries we have is that QA and developers can work so closely together."
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod LewisG</span><br><span class="team">QA</span>
+</p>
+</div>
+<p>To maintain the frequency of our releases, the development of new content needs to be as efficient as possible. One of the ways in which this is achieved is by involving all of the development teams at a project's briefing stage, before any coding begins. <span class="team">QA</span> give feedback at this stage to help identify anything that could cause problems later in the project's development.</p>
+<p><span class="mod">Mod LewisG</span>, Head of <span class="team">QA</span>, says, <span class="quote">"At Jagex, the <span class="team">QA</span> team has more of an opportunity to influence the product. One of the luxuries we have is that <span class="team">QA</span> and developers can work so closely together."</span> This sort of <span class="team">QA</span>/<span class="team">Content</span> relationship is certainly not typical for the games industry – the majority of testers working in the games industry only get involved with a product when it's nearing the latter stages of development.</p>
+<p>It just so happens that this feedback stage is enjoyable and it gives the tester an opportunity to put their own creative stamp on a project. This is very rare for such a position in the rest of the games industry, but as you'll see later, there's a very specific reason why it makes perfect sense for RuneScape.</p>
+<br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary07/qalogo2.gif" style="display: inline; margin: auto;" alt=""><br>
+<span class="caption">All of the teams at Jagex have their own logo - this being QA's current one.</span> </p>
+<br>
+<p style="text-align: center;"><b>Work, rest and play</b></p>
+<p>After everyone's feedback has been given, the project brief is tweaked accordingly and is then developed. After development is complete, the second stage begins - that is, the actual testing of the content, which is where the bulk of work lies. <span class="quote">People tend to have the perception that games-testing is just playing around..."</span>, says <span class="mod">Mod Martin</span>, to which <span class="mod">Mod Ben L</span> follows up with, <span class="quote">"...and that it's easy!"</span> This is summed up by <span class="mod">Mod LewisG</span>: <span class="quote">"Imagine: if you're testing a racing game, you're not just completing laps all day. You're trying to drive the car outside of the track or crash it into things to see if the game breaks."</span></p>
+<p>There is an element of playing for fun, though, as <span class="mod">Mod Martin</span> continues, <span class="quote">"During initial testing, you have to assume the mindset of a normal player, playing through as they would."</span> Doing this helps us to make sure the content is, first and foremost, actually fun to play, but it's just the first step of the testing phase. For the rest of testing, <span class="team">QA</span> take a very systematic approach, using checklists for specific aspects of each piece of content.</p>
+<p>Particularly for larger content, testing can also be disjointed, as you might only be assigned to test a portion of it, not the whole thing. Taking a quest boss NPC as an example: you'd have to check that it animates properly; its sound effects are correct; that it doesn't get stuck on walls; that it fights as intended; and so on. These things would need to be checked in various circumstances, over and over. If another member of <span class="team">QA</span> was testing the rest of the quest, the boss might be all you see of it.</p>
+<br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary07/mapdiff.gif" style="display: inline; margin: auto;" alt=""><br><img src="../../img/varrock/devdiary/diary07/mapdiffkey.gif" style="display: inline; margin: auto;" alt=""><br>
+<span class="caption">This colourful image is of the Map Differential tool, which highlights the differences between a map square in the live game and whatever new content we're working on.</span> </p>
+<br>
+<p>If we've dispelled the myth that QA is all fun and games, we also have to do the same for those who say games-testing is a laborious and mindless task. <span class="mod">Mod LewisG</span> says, <span class="quote">"For someone to work as a games-tester, they can't just be robots that follow a checklist, they have to challenge our testing techniques so we can continually improve upon them."</span> <span class="mod">Mod Martin</span> adds: <span class="quote">"When things have been systematically tested, they also have to be tested randomly. It's important for testers to be creative and imaginative, to think outside the box, always thinking 'I wonder what would happen if I did this...'"</span></p>
+<p>Even with such a thorough testing process, when you put some content out to millions of players, then at least one of them will do something with it that you couldn't ever predict – perhaps fighting the <a href="kalphite_lair_members.html">Kalphite Queen</a>, using a <a href="holiday_items_guide.html">rubber chicken</a>, while spam-clicking the Dance emote button. There are also certain things that we can't fully know before release - e.g. server load problems.</p>
+<p>Our past experiences help us to fix the vast majority of such problems before our players see the content, but feedback from players is an important part of the process, especially when you consider there are roughly 250,000 players to every 1 member of <span class="team">QA</span>. Even though you all play the game for fun, you're effectively also games-testers as well!</p>
+<p style="text-align: center;"><b>It's a bug hunt</b></p>
+<p>After content has been thoroughly tested and signed off by <span class="team">QA</span>, <span class="team">Web Content</span> and <span class="team">Translation</span>, the content is deemed complete. This can occur anywhere between one and eight weeks before the scheduled release date. Then, in the week leading up to the release of a piece of new content, we copy all its assets (code, graphics, audio) into a kind of staging area.</p>
+<p>This staging area is a version of RuneScape exactly the same as the live game everyone plays, but with the new content added to it – this then allows for the next step of testing: double-checking the release in an environment that mimics what will happen on release day. As we release new content almost every week, we typically only have one week to do this final testing, which explains why some of our larger releases come out on a Tuesday or Wednesday, as they take that little bit longer to check again before they are released.</p>
+<p>This all leads us to the third and final QA stage: live maintenance. Once content has been released, there is no need to test it in full again - it already has been at least twice and players will inform us if anything has slipped through the net. From here on, <span class="team">QA</span>'s job is more to do with tracking how players receive the content – reading the forums, checking any bugs that players send in through the bug tracker and generally just making sure everything has gone smoothly. This means that if anything does go wrong, we can work on fixing it right away, to get the bug removed as quickly as possible.</p> <br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary07/bugtracker.gif" style="display: inline; margin: auto;" alt=""><br>
+<span class="caption">This is an image of the bug tracker in use, with player-reported bugs broken down by category (quests, etc.) and Class (A-D).<br>Class A bugs are game-breaking; Class B bugs are serious, but not game-breaking; Class C bugs are typically typos; Class D bugs are confusing games aspects.</span> </p>
+<br>
+<p><span class="mod">Mod Martin</span> finishes off with the rewards of game-testing: <span class="quote">"It's always good feeding back ideas and seeing a piece of content come to fruition. Also, during testing, when you try a really obscure set of steps to discover a bug and it pays off, there's a great deal of satisfaction. Seeing a piece of content shape up is good, but seeing millions of our players enjoying it as well...that's even better."</span></p>
+<br>
+<p style="text-align: center;"><b>Years of gaming experience</b></p>
+<p>Aside from having common sense, a methodical approach and a creative streak, one of the most important traits a tester can have is a good knowledge of games. <span class="mod">Mod Ben L</span> says, <span class="quote">"People who play games a lot generally know what works well in a game, what is fun to play, etc. You know what you like."</span> This is doubly true when you end up testing a game that you also play. It's no secret that some Jagex staff play RuneScape in their spare time, on regular, non-moderator accounts – some of them were playing RuneScape long before they even thought of applying for a job at Jagex.</p>
+<div style="float:right; width:30%; margin:15px; text-align: left;">
+<p class="bigquote">
+"Some might think that playing through content before it's finished, before it comes out, would spoil your enjoyment. For me, this isn't the case."
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Chris L</span><br><span class="team">QA</span>
+</p>
+</div>
+<p><span class="team">QA</span> team member <span class="mod">Mod Chris L</span> is the highest ranked player who works at Jagex, placed in the top 500 on the <a href="../../../services.runescape.com/m%3dhiscore/hiscores.html">Hiscores</a>, and he says, <span class="quote">"I created my account back in the days of RuneScape Classic. Having played through most of the game since then, the experience I've gained helps me to give useful feedback from a player's perspective and support other <span class="team">QA</span> members with my knowledge of the game."</span></p>
+<p>There are plenty of others like <span class="mod">Mod Chris L</span> - working in <span class="team">Customer Support</span>, <span class="team">RuneScape Content</span>, balancing, etc. - but those of the <span class="team">QA</span> team have the added benefit of being among the first to play new content, aside from the actual developer. <span class="quote">"Some might think that playing through content before it's finished, before it comes out, would spoil your enjoyment. For me, this isn't the case. As my regular character has no special advantages, it's still a challenge playing through new content with it,"</span> <span class="mod">Mod Chris L</span> continues.</p>
+<p><span class="mod">Mod Chris L</span> didn't join Jagex as a member of <span class="team">QA</span>; he spent his university placement year here, first working in <span class="team">Customer Support</span>, then on the fledgling <span class="team">Web Content</span> team. <span class="mod">Mod Ben L</span> says,<span class="quote">"We take on a lot of industrial placements each year, who generally start off in <span class="team">Customer Support</span>, and we're earning a name for ourselves as a good company to work for."</span></p>
+<p>Indeed, <span class="team">QA</span> and <span class="team">Customer Support</span> teams are great places for many to start a career within the games industry, both at Jagex and the videogames industry as a whole. Perhaps, one day, some of you might end up working on Jagex's <span class="team">QA</span> team...</p>
+</div>
+</div>
+<div class="backtotop"><a href="#top">Back to the top</a></div>
+<br/>
+<center><img src="../../img/main/kbase/hr.png" alt=""/></center>
+<table class="bottomlinks">
+<tr>
+</tr>
+<tr>
+<td class="bot"><p><div class="bold">More articles in
+<a href="dev_diary-2.html">Development Diaries</a>
+</div></p>
+<ul class="bold">
+<li>
+<a href="diary_dwarf01.html">New Dwarf Quest: Part 1 - Reviving an Old Quest Series</a>
+</li>
+<li>
+<a href="diary08b.html">A New Look RuneScape: Part 2</a>
+</li>
+<li>
+<b>Quality Assurance</b>
+</li>
+<li>
+<a href="diary06.html">RuneScape vs. Real-world Trading</a>
+</li>
+<li>
+<a href="diary05d.html">Summoning: Part 4 - Release</a>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="searchtop">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="topleft">
+<div class="topright">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div class="searchtext">
+<form method="get" action="http://www.runescape.com/kbase/search.ws">
+<table class="bottomsearch">
+<tr>
+<td class="searchtitles" width="60" style="text-align: right">
+Search for:
+</td>
+<td>
+<input class="textinput" name="search_query" id="search_query" size="29" maxlength="300" value="">
+</td>
+<td rowspan="3">
+<table>
+<tr>
+<td>
+<label class="bold">Criteria:</label>
+</td>
+<td></td>
+<td><label class="bold">Find:</label></td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="title_chk" value="1" checked="checked">
+Title
+</td>
+<td>
+<input class="widget" type="checkbox" name="keywords_chk" value="1" checked="checked">
+Keywords
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="1" checked="checked">
+All
+</td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="description_chk" value="1" checked="checked">
+Description
+</td>
+<td>
+<input class="widget" type="checkbox" name="body_chk" value="1" checked="checked">
+Body
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="0">
+Any
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="searchtitles">
+Category:
+</td>
+<td>
+<select name="category" id="search_cat_select_footer" onchange="update_cats('_footer')">
+<option value="null"> - ALL - </option>
+<option value="4">Player Submissions</option>
+<option value="775">Game Guide</option>
+<option value="20">Development Diaries</option>
+<option value="9">Customer Support</option>
+<option value="3">Lores and Histories</option>
+</select></td>
+<td></td>
+</tr>
+<tr>
+<td class="searchtitles">
+Subcategory:
+</td>
+<td>
+<div id="search_subcat_footer" style="display: none;">
+<select name="subcat" id="search_subcat_select_footer">
+<option value="null"> - ALL - </option>
+</select>
+</div>
+<script type="text/javascript">
+ document.getElementById("search_subcat_footer").style.display="inline";
+ update_cats('_footer');
+</script>
+</td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;font-size:11px;font-weight:bold; margin-bottom: 0px;">For help on searching, see our <a href="../searchtips.html">Search Tips</a> page.
+<input type="submit" name="submit" class="searchbutton" value="" alt="Search"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../terms/terms.html">Terms &amp; Conditions</a> and <a href="../../privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary07 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:19 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

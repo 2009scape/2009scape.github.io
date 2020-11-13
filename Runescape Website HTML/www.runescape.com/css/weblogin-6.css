@@ -1,0 +1,449 @@
+
+
+
+
+
+
+
+
+
+
+ *{
+  margin: 0px;
+  padding: 0px;
+ }
+
+
+
+ #login_background{
+  background: url('../img/weblogin/loginarea_bg_nowarn.jpg') center top;
+  width: 740px;
+  /* No recaptcha, no warning */
+  height: 308px;
+  padding: 0px;
+  position: relative;
+  padding-top: 54px;
+ }
+
+
+
+
+
+
+ #login_panel{
+  background: url('../img/weblogin/login_box_top.png') no-repeat 0 0;
+  width: 418px;
+  /* No recptcha, no warning */
+  margin: 0px auto 0px;
+  position: relative;
+  border: none;
+  padding: 7px 0px 0px 0px;
+  height: 205px;
+ }
+ #login_panel .bottom{
+  background: url('../img/weblogin/login_box_bottom.png') no-repeat 0 bottom;
+  padding-bottom: 7px;
+ }
+ #login_panel .repeat{
+  background: url('../img/weblogin/login_box_repeat.png') repeat-y 0 32px;
+  height: 1%; /* IE6 fix */
+ }
+
+ #login_form{
+  padding: 0px;
+  margin: 0px;
+  width: 418px;
+  overflow: hidden;
+ }
+ #login_panel label{
+  
+  font-size: 18px;
+  
+  font-weight:  bold;
+  color: white;
+  padding: 0px;
+ }
+
+
+
+
+ #login_panel .top_section{
+  height: 142px;
+  position: relative;
+  overflow: hidden;
+ }
+ #message{
+  background: none;
+  color: white;
+  font-weight: bold;
+  
+  font-size: 1em;
+  
+  line-height:14px;
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+  height: 12px;
+ }
+ #login_panel div.section_form{
+  background: url('../img/weblogin/input_bg.png') center top;
+  height: 49px;
+  line-height: 49px;
+  margin: 0px auto 7px;
+  
+  width: 378px;
+  padding-left: 6px;
+  
+  left: 17px;
+  text-align: left;
+ }
+ #login_panel div.section_form input{
+  position: absolute;
+  left: 120px;
+  top: 12px;
+ }
+ #login_panel #recaptcha_nojs_group textarea,
+ #login_panel div.section_form input{
+  background-color: transparent;
+  border: 0px;
+  width: 238px;
+  height: 21px;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 6px;
+ }
+ #login_panel #usernameSection{
+  position: absolute;
+  top: 30px;
+ }
+ #passwordSection{
+  position: absolute;
+  top: 86px;
+ }
+ #usernameSection input,
+ #passwordSection input{
+  float: right;
+ }
+
+ #recaptcha_response_field {
+  width:135px;
+ }
+
+ #recaptcha_error {
+  text-align: center;
+  font-size: 0px;
+ }
+
+ #login_panel #recaptcha{
+  background: url('../img/weblogin/captchaback_top.png') no-repeat top left;
+  width: 384px;
+  padding: 0px;
+  height: auto;
+ }
+
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper{
+  margin: 0 4px 2px;
+  background: transparent;
+  height: 57px;
+  padding: 3px 0px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #recaptcha_image{
+  float: left;
+  margin-left: 10px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #recaptcha_image{
+  line-height: 12px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #recaptcha_image a{
+  color: black;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #icon_container{
+  float: right;
+  width: 40px;
+  height: 60px;
+  overflow: visible;
+  margin: 2px 6px 0px 0px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #icon_container a{
+  margin-bottom: 0px;
+  position: relative;
+  cursor: pointer;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #icon_container a img{
+  top: 0px;
+  position: absolute;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower{
+  position: relative;
+  text-align: left;
+  margin: 0px;
+  padding: 2px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower label{
+  position: relative;
+  float: left;
+  margin: 0px 0px 0px 2px;
+  line-height: 28px;
+  font-size: 12px;
+
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower input {
+  background: url('../img/weblogin/reCaptcha_input_back.png') transparent top left;
+  float:left;
+  height:20px;
+  margin:5px 2px;
+  width:175px;
+  position: relative;
+  top: auto;
+  left: auto;
+  padding: 0px;
+  font-size: 14px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower img {
+  float:left;
+  margin: 1px 0px 3px 0px;
+ }
+ #recaptcha_nonjs{
+  border: none;
+  margin: 3px;
+  width: 378px;
+  height: 300px;
+  background-color: white;
+  font-family: arial,helvetica,freesans,sans-serif;
+  color: black;
+ }
+ #login_panel #recaptcha_nojs_group{
+  margin: 12px;
+ }
+ #login_panel #recaptcha_nojs_group label{
+  line-height: 20px;
+   font-size: 12px;
+ }
+
+ #recaptcha_box_nojs,
+ #recaptcha_box {
+  width: 384px;
+  padding: 0 4px 0 0;
+  background: url('../img/weblogin/captchaback_bottom.png') no-repeat bottom left;
+  margin: 0px;
+ }
+ #recaptcha_box {
+  margin: 3px 0px 0px 0px;
+  display: none; /* Made visible if js is ON */
+ }
+ #recaptcha_box_top {
+  background: url(../img/weblogin/recaptcha_box_top.png) right top no-repeat;
+  height: 2px;
+  width: 384px;
+  padding: 0 4px 0 0;
+  font-size: 0px;
+ }
+ #recaptcha_box_bottom {
+  background: url(../img/weblogin/recaptcha_box_bottom.png) right top no-repeat;
+  height: 2px;
+  width: 384px;
+  padding: 0 4px 5px 0;
+  margin-top: 6px;
+  font-size: 0px;
+ }
+ #recaptcha_box_upper {
+  background: white;
+  padding: 2px;
+  min-height: 57px;
+  margin: 0 2px 6px 6px;
+ }
+ #recaptcha_box_lower {
+  padding: 2px;
+  margin: 0 2px 6px 6px;
+  text-align: right;
+ }
+ #recaptcha_image {
+  float:left;
+  height:auto !important;
+  min-height: 57px;
+ }
+ #refresh_recaptcha {
+  background: url(../img/weblogin/new_recaptcha_highlight.png);
+  height: 27px;
+  width: 31px;
+  float: right;
+  overflow: hidden;
+ }
+ #audio_recaptcha {
+  background: url(../img/weblogin/audio_recaptcha_highlight.png);
+  height: 31px;
+  width: 31px;
+  float: right;
+  overflow: hidden;
+ }
+ #image_recaptcha {
+  background: url(../img/weblogin/image_recaptcha_highlight.png);
+  height: 31px;
+  width: 31px;
+  float: right;
+  overflow: hidden;
+ }
+ #refresh_recaptcha:hover img,
+ #audio_recaptcha:hover img,
+ #image_recaptcha:hover img {
+  visibility: hidden;
+ }
+ #recaptcha_box_logo {
+  vertical-align: middle;
+ }
+ #login_panel #recaptcha_nojs_group #recaptcha_challenge_field{
+  background: url('../img/weblogin/input_bg.png') 264px 36px; /* re-use */
+  display: block;
+  height: 20px;
+  position: relative;
+  left: 0px;
+  margin: 0px auto 6px;
+ }
+
+
+
+ #login_panel .bottom_section{
+  height: 56px;
+  position: relative;
+  overflow: hidden;
+ }
+
+ #submit_button {
+  width: 264px;
+  height: 49px;
+  position: absolute;
+  left: 136px;
+  top: 0px;
+ }
+
+ #submit_button a{
+  cursor: pointer;
+  background: transparent url('../img/weblogin/loginc4ca.png?1') no-repeat top left;
+  width: 264px;
+  height: 49px;
+  display: block;
+  text-indent: -9999px;
+ }
+ #submit_button button{
+  width: 264px;
+  height: 49px;
+  display: block;
+  padding: 0px;
+  border: none;
+  font-size: 0px;
+  text-indent: -9999px;
+  cursor: pointer;
+  background: transparent url('../img/weblogin/loginc4ca.png?1') no-repeat top left;
+ }
+ #submit_button button:hover{
+  background: transparent url('../img/weblogin/loginc4ca.png?1') no-repeat bottom left;
+  visibility: visible;
+  z-index: 10;
+ }
+ #remember{
+  width: 116px;
+  position: absolute;
+  top: 10px;
+  left: 20px;
+  text-align: left;
+ }
+ #remember input{
+  margin: 0px 4px 0px 0px;
+  cursor: pointer;
+ }
+ #remember label{
+  font-size: 0.8em;
+  color: white;
+  line-height: 1.2em;
+  padding: 0px;
+  cursor: pointer;
+ }
+
+
+
+ .createaccount, .recoveraccount {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+ }
+
+ .buttbg, .butt1bg{
+  background: transparent url('../img/weblogin/create.png') no-repeat 0 0;
+  width: 205px;
+  height: 32px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+ }
+ .butt1bg{
+  background: transparent url('../img/weblogin/recover.png') no-repeat 0 0;
+  right: 0px;
+ }
+ .buttons{
+  width: 418px;
+  height: 32px;
+  margin: 10px auto;
+ }
+ .buttons a{
+  width: 205px;
+  height: 32px;
+  cursor: pointer;
+  position: relative;
+ }
+ .buttons a:hover{
+  background: transparent none;
+  border: none;
+ }
+ a:hover .buttbg, a:hover .butt1bg {
+  background-position:left bottom;
+ }
+ .createaccount {
+  float:left;
+ }
+
+ .recoveraccount {
+  float:right;
+ }
+
+
+
+
+#warning{
+ display: none;
+ background: url('../img/weblogin/warning_border.png') no-repeat bottom left;
+ width: 418px;
+ height: 86px;
+ margin: 0px auto 20px;
+ position: relative;
+}
+#warning_image{
+ background: url('../img/weblogin/ie8.png') no-repeat bottom left;
+ top: 7px;
+ left: 7px;
+ position: absolute;
+ width: 404px;
+ height: 72px;
+ font-size: 14px;
+ font-weight: bold;
+ color: black;
+ text-align: center;
+}
+#warning p{
+ margin: 6px 8px 0px;
+}
+
+
+
+#manualRedir{
+ text-align: center;
+ display: none;
+}
+#manualRedir span{
+ width: 400px;
+}
+
+
+

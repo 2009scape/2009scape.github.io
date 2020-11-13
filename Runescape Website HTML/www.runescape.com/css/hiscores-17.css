@@ -1,0 +1,774 @@
+
+
+
+
+
+
+
+
+ .Overall {
+  background: url(../img/hiscores/skill_icon_overall1eccb.gif?3) no-repeat;
+ }
+
+ .Attack {
+  background: url(../img/hiscores/skill_icon_attack1eccb.gif?3) no-repeat;
+ }
+
+ .Defence {
+  background: url(../img/hiscores/skill_icon_defence1eccb.gif?3) no-repeat;
+ }
+
+ .Strength {
+  background: url(../img/hiscores/skill_icon_strength1eccb.gif?3) no-repeat;
+ }
+
+ .Constitution {
+  background: url(../img/hiscores/skill_icon_constitution1eccb.gif?3) no-repeat;
+ }
+
+ .Hitpoints {
+  background: url(../img/hiscores/skill_icon_hitpoints1eccb.gif?3) no-repeat;
+ }
+
+ .Ranged {
+  background: url(../img/hiscores/skill_icon_ranged1eccb.gif?3) no-repeat;
+ }
+
+ .Prayer {
+  background: url(../img/hiscores/skill_icon_prayer1eccb.gif?3) no-repeat;
+ }
+
+ .Magic {
+  background: url(../img/hiscores/skill_icon_magic1eccb.gif?3) no-repeat;
+ }
+
+ .Cooking {
+  background: url(../img/hiscores/skill_icon_cooking1eccb.gif?3) no-repeat;
+ }
+
+ .Woodcutting {
+  background: url(../img/hiscores/skill_icon_woodcutting1eccb.gif?3) no-repeat;
+ }
+
+ .Fletching {
+  background: url(../img/hiscores/skill_icon_fletching1eccb.gif?3) no-repeat;
+ }
+
+ .Fishing {
+  background: url(../img/hiscores/skill_icon_fishing1eccb.gif?3) no-repeat;
+ }
+
+ .Firemaking {
+  background: url(../img/hiscores/skill_icon_firemaking1eccb.gif?3) no-repeat;
+ }
+
+ .Crafting {
+  background: url(../img/hiscores/skill_icon_crafting1eccb.gif?3) no-repeat;
+ }
+
+ .Smithing {
+  background: url(../img/hiscores/skill_icon_smithing1eccb.gif?3) no-repeat;
+ }
+
+ .Mining {
+  background: url(../img/hiscores/skill_icon_mining1eccb.gif?3) no-repeat;
+ }
+
+ .Herblore {
+  background: url(../img/hiscores/skill_icon_herblore1eccb.gif?3) no-repeat;
+ }
+
+ .Agility {
+  background: url(../img/hiscores/skill_icon_agility1eccb.gif?3) no-repeat;
+ }
+
+ .Thieving {
+  background: url(../img/hiscores/skill_icon_thieving1eccb.gif?3) no-repeat;
+ }
+
+ .Slayer {
+  background: url(../img/hiscores/skill_icon_slayer1eccb.gif?3) no-repeat;
+ }
+
+ .Farming {
+  background: url(../img/hiscores/skill_icon_farming1eccb.gif?3) no-repeat;
+ }
+
+ .Runecraft,
+ .Runecrafting {
+  background: url(../img/hiscores/skill_icon_runecraft1eccb.gif?3) no-repeat;
+ }
+
+ .Hunter {
+  background: url(../img/hiscores/skill_icon_hunter1eccb.gif?3) no-repeat;
+ }
+
+ .Construction {
+  background: url(../img/hiscores/skill_icon_construction1eccb.gif?3) no-repeat;
+ }
+
+ .Summoning {
+   background: url(../img/hiscores/skill_icon_summoning1eccb.gif?3) no-repeat;
+ }
+
+ .Dungeoneering {
+   background: url(../img/hiscores/skill_icon_dungeoneering1eccb.gif?3) no-repeat;
+ }
+
+ .Dueltournament {
+   background: url(../img/hiscores/game_icon_dueltournament1eccb.gif?3) no-repeat;
+ }
+
+ .Bountyhunters {
+   background: url(../img/hiscores/game_icon_bountyhunters1eccb.gif?3) no-repeat;
+ }
+
+ .Bountyhunterrogues {
+   background: url(../img/hiscores/game_icon_bountyhunterrogues1eccb.gif?3) no-repeat;
+ }
+
+ .Fistofguthix {
+   background: url(../img/hiscores/game_icon_fistofguthix1eccb.gif?3) no-repeat;
+ }
+
+ .Mobilisingarmies {
+   background: url(../img/hiscores/game_icon_mobilisingarmies1eccb.gif?3) no-repeat;
+ }
+
+ .Baattackers {
+   background: url(../img/hiscores/game_icon_baattackers1eccb.gif?3) no-repeat;
+ }
+
+ .Badefenders {
+   background: url(../img/hiscores/game_icon_badefenders1eccb.gif?3) no-repeat;
+ }
+
+ .Bacollectors {
+   background: url(../img/hiscores/game_icon_bacollectors1eccb.gif?3) no-repeat;
+ }
+
+ .Bahealers {
+   background: url(../img/hiscores/game_icon_bahealers1eccb.gif?3) no-repeat;
+ }
+ 
+ .Castlewarsgames {
+  background: url(../img/hiscores/game_icon_castlewarsgames1eccb.gif?3) no-repeat;
+ }
+
+
+
+ .row1 {
+  background-color: #6e5931;
+ }
+ .row2 {
+  background-color: #5e4c2b;
+ }
+ .row3 {
+  background-color: #6d5730;
+ }
+ .row4 {
+  background-color: #5c4a29;
+ }
+ .row5 {
+  background-color: #6a552f;
+ }
+ .row6 {
+  background-color: #594828;
+ }
+ .row7 {
+  background-color: #67532d;
+ }
+ .row8 {
+  background-color: #564526;
+ }
+ .row9 {
+  background-color: #64502b;
+ }
+ .row10 {
+  background-color: #534224;
+ }
+ .row11 {
+  background-color: #614d29;
+ }
+ .row12 {
+  background-color: #503f21;
+ }
+ .row13 {
+  background-color: #5d4a27;
+ }
+ .row14 {
+  background-color: #4c3d20;
+ }
+ .row15 {
+  background-color: #5a4725;
+ }
+ .row16 {
+  background-color: #4a3b1e;
+ }
+ .row17 {
+  background-color: #584524;
+ }
+ .row18 {
+  background-color: #47381d;
+ }
+ .row19 {
+  background-color: #554322;
+ }
+ .row20 {
+  background-color: #45361b;
+ }
+ .row21 {
+  background-color: #534221;
+ }
+ .row22 {
+  background-color: #423419;
+ }
+
+
+
+ .rowp1 {
+  background-color: #705a32;
+ }
+ .rowp2 {
+  background-color: #5e4c2b;
+ }
+ .rowp3 {
+  background-color: #6e5931;
+ }
+ .rowp4 {
+  background-color: #5d4b29;
+ }
+ .rowp5 {
+  background-color: #6d5730;
+ }
+ .rowp6 {
+  background-color: #5b4929;
+ }
+ .rowp7 {
+  background-color: #6a552f;
+ }
+ .rowp8 {
+  background-color: #594827;
+ }
+ .rowp9 {
+  background-color: #68532d;
+ }
+ .rowp10 {
+  background-color: #564525;
+ }
+ .rowp11 {
+  background-color: #66512c;
+ }
+ .rowp12 {
+  background-color: #544324;
+ }
+ .rowp13 {
+  background-color: #634f2a;
+ }
+ .rowp14 {
+  background-color: #514123;
+ }
+ .rowp15 {
+  background-color: #604d28;
+ }
+ .rowp16 {
+  background-color: #4e3e21;
+ }
+ .rowp17 {
+  background-color: #5e4b27;
+ }
+ .rowp18 {
+  background-color: #4c3c1f;
+ }
+ .rowp19 {
+  background-color: #5b4825;
+ }
+ .rowp20 {
+  background-color: #493a1e;
+ }
+ .rowp21 {
+  background-color: #5a4724;
+ }
+ .rowp22 {
+  background-color: #47391d;
+ }
+ .rowp23 {
+  background-color: #584523;
+ }
+ .rowp24 {
+  background-color: #46371c;
+ }
+ .rowp25 {
+  background-color: #564422;
+ }
+ .rowp26 {
+  background-color: #45351B;
+ }
+ .rowp27 {
+  background-color: #564422;
+ }
+ .rowp28 {
+  background-color: #44331A;
+ }
+
+
+
+ 
+  #hiscores_background {
+   height: 1%;
+  }
+  .no_margin {
+   margin: 0px;
+  }
+  .table_back td {
+   padding: 0px;
+   color:#E2CCA3;
+  }
+  .table_back th {
+   padding: 0px;
+  }
+  .subsectionHeader {
+   width: 100%;
+  }
+ 
+ .table_back .not_ranked {
+  color: #F9DEB3;
+  font-style: italic;
+  text-align: right;
+  padding-right: 5px;
+ }
+
+
+
+ 
+  #skillsList_back {
+   float: left;
+   width: 163px;
+   height: 100%;
+   margin-right: 5px;
+   padding-bottom: 3px;
+  }
+  #skillsList ul {
+   margin: 0px;
+   padding: 0px;
+   list-style: none;
+  }
+  #skillsList ul li {
+   background-color: #413624;
+   margin: 1px 0px;
+   font-weight: bold;
+  }
+  #skillsList ul li a {
+   text-decoration: none;
+   padding: 2px 0 2px 27px;
+   display: block;
+  }
+  #skillsList ul li a:hover {
+   background-color: #59441d;
+  }
+  .ico {
+   background-position: 4px 51%;
+  }
+ 
+
+ 
+  .buttons_arrows {
+   width: 25px;
+   height: 130px;
+  }
+  
+   .buttons_arrows a {
+    display: block;
+    width: 25px;
+    height: 27px;
+    background: #808080;
+    position: relative;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+   }
+   span.lev1_arrow {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    width: 25px;
+    left: 0px;
+    height: 27px;
+   }
+   #button-up {
+    top: 165px;
+   }
+   #button-down {
+    top: 170px;
+   }
+   #button-up span.lev1_arrow {
+    background-image: url('../img/hiscores/arrow_upeccb.gif?3');
+   }
+   #button-down span.lev1_arrow {
+    background-image: url('../img/hiscores/arrow_downeccb.gif?3');
+   }
+  
+ 
+
+ 
+  #modeSelect_back {
+   float: left;
+   width: 542px;
+   height: 65px;
+   margin-bottom: 5px;
+  }
+  #skills_button {
+   margin-right: 4px;
+  }
+  .button {
+   width: 260px;
+   height: 65px;
+   float: left;
+  }
+  
+   .buttons {
+    width: 542px;
+    height: 65px;
+    margin: 0;
+   }
+   .buttons a {
+    display: block;
+    width: 250px;
+    height: 45px;
+    float: left;
+    background: #808080;
+    position: relative;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+   }
+   span.lev1, span.lev1a {
+    display: block;
+    cursor: pointer;
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: 270px;
+    height: 65px;
+   }
+   #button-left {
+    left: 10px;
+    top: 10px;
+   }
+   #button-left span.lev1 {
+    background-image: url('../img/hiscores/skillseccb.gif?3');
+   }
+   #button-left span.lev1a {
+    background-image: url('../img/hiscores/skillsaeccb.gif?3');
+   }
+   #button-right {
+    left: 32px;
+    top: 10px;
+   }
+   #button-right span.lev1 {
+    background-image: url('../img/hiscores/minigameseccb.png?3');
+   }
+   #button-right span.lev1a {
+    background-image: url('../img/hiscores/minigamesaeccb.png?3');
+   }
+   a:hover span.lev1, a:hover span.lev1a, a:hover span.lev1_arrow {
+    background-position: left bottom;
+   }
+  
+ 
+
+ 
+  
+   .table_back tr th {
+    line-height: 10px;
+   }
+  
+  #playerList_back {
+   float: left;
+   width: 371px;
+   height: 466px;
+   margin-right: 5px;
+  }
+  #table_friend {
+   width: 100%;
+  }
+  #scores_head {
+   height: 24px;
+   padding: 0px;
+  }
+  .miniimg_list {
+   height: 17px;
+   vertical-align: text-bottom;
+  }
+  .miniimg {
+   height: 15px;
+   width: 16px;
+   vertical-align: text-bottom;
+  }
+  .table_back {
+   border-collapse: collapse;
+   float: left;
+   line-height: 19px;
+   font-size: 12px;
+   table-layout: fixed;
+   font-weight: bold;
+  }
+  .row {
+  height: 19px;
+  }
+  .row#lastRow {
+   height: 20px;
+  }
+  .table_header, .arrow_header {
+   background: transparent url(../img/main/layout/subsection_subheader_bgeccb.png?3) repeat-x;
+  }
+  .table_header {
+   height: 23px;
+   line-height: 0px;
+   color: white;
+   font-weight: bold;
+  }
+  .arrow_header {
+   height: 23px;
+   width: 25px;
+   float: right;
+  }
+  .arrow_back {
+   width: 25px;
+   background-color: #3B2B0F;
+   height: 419px;
+   float: right;
+  }
+  #arrow_up {
+   margin-top: 175px
+  }
+  .row td a {
+   text-decoration: none;
+   color: #e2cca3;
+  }
+  .row td a:hover {
+   text-decoration: underline;
+  }
+  .table_back .rankCol {
+   color: #f3c334;
+   text-align:center;
+  }
+  .ARow {
+   color: #F3C334;
+  }
+  
+   .rankHead {
+    width:60px;
+    text-align:center;
+   }
+   .nameHead, .levelHead, .xpHead, .scoreHead {
+    text-align:left;
+   }
+   .nameHead {
+    width:136px;
+   }
+   .levelHead {
+    width:65px;
+   }
+   .xpHead {
+    width:85px;
+   }
+   .scoreHead {
+    width:150px;
+   }
+  
+ 
+
+ 
+  #search_back {
+   float: left;
+   width: 156px;
+   height: 466px;
+  }
+  .search_small, .search_large {
+   margin-bottom: 2px;
+   width: 156px;
+   text-align: center;
+  }
+  .search_small {
+   height: 82px;
+   background: transparent url(../img/hiscores/search_smalleccb.png?3) repeat-x;
+  }
+  .search_large {
+   height: 98px;
+   background: transparent url(../img/hiscores/search_largeeccb.png?3) repeat-x;
+  }
+  #friends_search {
+   margin-bottom: 0px;
+   padding: 0px;
+  }
+  .friendsContent {
+   margin: auto;
+   padding-top: 5px;
+  }
+  #search_back, #search_back .subsectionHeader {
+   color: white;
+  }
+  .text {
+   width: 134px;
+  }
+  #search_name, #search_rank {
+   margin: 16px 0px 5px 0px;
+  }
+  #search_compare1 {
+   margin-top: 7px;
+  }
+  #search_compare2 {
+   margin: 5px 0px 5px 0px;
+  }
+  #search_friends {
+   margin-top: 5px;
+  }
+  .search_title {
+   height: 25px;
+  }
+ 
+
+
+
+ .center_container {
+  margin: auto;
+  overflow: hidden;
+  width: 534px;
+ }
+ #player_header {
+  margin-bottom: 5px;
+ }
+ #player_sub {
+  height: 24px;
+ }
+ .header_back {
+  height: 24px;
+  background: transparent url(../img/hiscores/header_backeccb.png?3) repeat-x;
+  width: 100%;
+  margin-bottom: 2px;
+ }
+ #PlayerSkill_back {
+  float: left;
+  margin-right: 5px;
+  width: 353px;
+ }
+ 
+  .nameHead_P, .levelHead_P, .xpHead_P, .scoreHead_P, .rankHead_P, .skillsHead_P {
+   text-align:left;
+  }
+  .imageHead_P {
+   width: 32px;
+  }
+  .skillsHead_P {
+   width: 106px;
+  }
+  .rankHead_P {
+   width: 65px;
+  }
+  .levelHead_P {
+   width: 65px;
+  }
+  .xpHead_P {
+   width: 85px;
+  }
+  .gameHead_P {
+   width: 171px;
+   text-align: left;
+  }
+ 
+
+
+
+
+ #compare_text {
+  width: 110px;
+ }
+ .compare_desc {
+  width:355px;
+  float:left;
+  color:white;
+  font-weight:bold;
+ }
+ #compareButton {
+  background-position: center -3px;
+  padding-bottom: 2px;
+  width: 106px;
+  height: 19px;
+ }
+ .player_name {
+  color:#f3c334;
+  display:inline;
+ }
+ #compare_entry {
+  float:left;
+  margin-left:3px;
+  width:372px;
+ }
+ #compare_header {
+  margin-bottom: 4px;
+  margin-top: 1px;
+  font-weight: bold;
+  position: relative;
+ }
+ .name_right, .name_left {
+  color:#F3C334;
+  top:4px;
+  position: absolute;
+ }
+ .name_left {
+  left: 160px;
+ }
+ .name_right {
+  right: 160px;
+ }
+ .section_name {
+  margin: auto;
+  padding-top: 5px;
+  display:block;
+ }
+ .fullSpan {
+  width: 100%;
+ }
+ 
+  .nameHead_C, .xpHead_C, .scoreHead_C, .skillsHead_C {
+   text-align:left;
+  }
+  .imageHead_C {
+   width: 26px;
+  }
+  .skillsHead_C {
+   width: 97px;
+  }
+  .rankHead_C {
+   width: 65px;
+   text-align: center;
+  }
+  .levelHead_C {
+   width: 65px;
+   text-align: center;
+  }
+  .xpHead_C {
+   width: 85px;
+  }
+  .gameHead_C {
+   width: 162px;
+   text-align: left;
+  }
+  .arrows_C {
+   width: 25px;
+  }
+  .spacer_C {
+   background-color:#2c210d;
+   width:4px;
+  }
+ 
+ .alL {
+  text-align: left;
+ }
+ .alC {
+  text-align: center;
+ }
+ .alR {
+  text-align: right;
+ }

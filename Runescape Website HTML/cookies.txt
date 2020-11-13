@@ -1,0 +1,23 @@
+# HTTrack Website Copier Cookie File
+# This file format is compatible with Netscape cookies
+.runescape.com	TRUE	/	FALSE	1999999999	settings	wwGlrZHF5gKN6D3mDdihco3oPeYN2KFybL9hUUFqOvk
+.runescape.com	TRUE	/	FALSE	1999999999	JXFLOWCONTROL	4
+.funorb.com	TRUE	/	FALSE	1999999999	settings	vMY2S5tgLBP0xa-t7zCjUPTFr*3vMKNQUsW9ecnpMVQ
+.runescape.com	TRUE	/	FALSE	1999999999	jagextimeout3662	1279443737124
+www.jagexstore.com	TRUE	/	FALSE	1999999999	ASPSESSIONIDSSRBSBCA	MGNHIBLAIKCAGDCFPDGCKDEJ
+.runescape.com	TRUE	/	FALSE	1999999999	jagextimeout3661	1279443764364
+.runescape.com	TRUE	/	FALSE	1999999999	rs_splash_count	3
+.runescape.com	TRUE	/	FALSE	1999999999	jagextimeout3663	1279444332159
+.runescape.com	TRUE	/	FALSE	1999999999	jagextimeout3664	1279444434985
+.runescape.com	TRUE	/	FALSE	1999999999	jagextimeout3432	1279444536573
+checkout.google.com	TRUE	/	FALSE	1999999999	settings	<lang|en_US|0><country|US|0>
+.google.com	TRUE	/	FALSE	1999999999	S	static_files=37AsVL4FiKg
+.jagex.com	TRUE	/	FALSE	1999999999	settings	bcu9g*DbBJDB7H6LqG1ya8HsfouobXJredaFO4jciSg
+.runescape.com	TRUE	/	FALSE	1999999999	jagextimeout3656	1279449593280
+.runescape.com	TRUE	/	FALSE	1999999999	jagextimeout3568	1279450009485
+.jagexstore.com	TRUE	/	FALSE	1999999999	SelectedCountry	EU
+www.jagexstore.com	TRUE	/	FALSE	1999999999	pcfront%5FvisitedPrds	%2A1%2A51%2A42%2A52%2A28%2A2%2A8%2A22%2A15%2A59%2A36%2A38%2A39%2A73%2A74%2A76%2A75%2A37%2A
+www.jagexstore.com	TRUE	/	FALSE	1999999999	http-cookie-default	R2956282538
+.imageshack.us	TRUE	/	FALSE	1999999999	is_uuid	96b79166e8a349bfbc2fe56038555024
+.runescape.com	TRUE	/	FALSE	1999999999	slangpref	6
+

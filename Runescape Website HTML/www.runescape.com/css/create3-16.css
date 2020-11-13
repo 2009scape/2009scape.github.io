@@ -1,0 +1,558 @@
+
+
+
+
+#createForm {
+ margin: 0;
+ padding: 0;
+}
+
+#cIntro {
+ font-weight: bold;
+}
+
+.brown_box_padded {
+ position: relative;
+ padding-top: 2em;
+ padding-bottom: 1em;
+}
+
+#formBoxes {
+ padding-bottom: 2em;
+}
+
+.formGroup {
+ float: left;
+ clear: left;
+ width: 425px;
+}
+
+
+.formDesc {
+ display: none;
+ clear: both;
+}
+
+.formDesc p {
+ margin: 0;
+ padding: 1em 0 0;
+ font-weight: bold;
+}
+
+.formSection {
+ float: left;
+ padding: 5px 0;
+ width: 425px;
+}
+
+.formSection label {
+ float: left;
+ width: 180px;
+ height: 22px;
+ line-height: 22px;
+ text-align: right;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+.formError {
+ clear: left;
+ float: left;
+ width: 425px;
+ text-align: right;
+}
+
+
+#check {
+ position: relative;
+ width: 229px;
+ height: 24px;
+ float: right;
+ margin: 0 auto;
+ padding: 0;
+ border: none;
+ cursor: pointer;
+ background: none;
+}
+
+#alts span {
+ cursor: pointer;
+ text-decoration: underline;
+}
+
+#check_submit {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 229px;
+ height: 24px;
+ background: transparent url(../img/create/check_highlight.png) no-repeat -999px -999px;
+}
+
+#check:hover #check_submit {
+ background-position: top left;
+}
+
+.brown_box input, .brown_box select {
+ border: 2px solid #2c2210;
+ background: #F8F1E7;
+}
+
+
+.brown_box input.fail {
+ border: 2px solid #b40a0a;
+ background: #F8F1E7 url(../img/create/cross.png) no-repeat right 50%;
+}
+
+.brown_box input.loading {
+ border: 2px solid #C0C0C0;
+ background: #F8F1E7 url(../img/create/loading.gif) no-repeat right 50%;
+}
+
+.brown_box input.success {
+ border: 2px solid #629428;
+ background: #F8F1E7 url(../img/create/tick.png) no-repeat right 50%;
+}
+
+.formSection div, #country {
+ float: right;
+ width: 229px;
+}
+/*
+.formSection input {
+ line-height: 16px;
+ float: right;
+ width: 225px;
+ height: 18px;
+}
+*/
+.formSection select, #country, #day, #month {
+ height: 24px;
+}
+#username, #password1, #password2, #year, #address1, #address2,
+.formSection select {
+ line-height: 16px; /* Non IE is handled in input_select (18px last time I looked) */
+ float: right;
+ width: 225px;
+ height: 18px;
+}
+
+#year{
+ height: 16px;
+}
+
+#day, #month {
+ float: left;
+}
+
+#month, #year {
+ margin-left: 2px;
+}
+
+#day {
+ width: 57px;
+}
+
+#month {
+ width: 108px;
+}
+
+#year {
+ width: 55px;
+ float: right;
+ margin: 0;
+ height: 18px;
+}
+
+.formMessage {
+ float: right;
+ width: 275px;
+}
+
+.error {
+ color: red;
+}
+
+
+/* Right box */
+
+#jmesgBg {
+ position: absolute;
+ right: 4px;
+ top: 19px;
+ width: 276px;
+ overflow: hidden;
+ background: transparent url(../img/create/bubble_bg.png) no-repeat 13px top;
+ z-index: 2;
+}
+#jmesgBg.u13 {
+ background: transparent url(../img/create/bubble_short_bg.png) no-repeat 13px top;
+}
+
+#jmesg {
+ height: 241px;
+ padding: 5px 8px 8px 20px;
+ line-height: 14px;
+ background: transparent url(../img/create/arrow.png) no-repeat left 14px; /* guestimate where the arrow starts */
+}
+#jmesg.u13 {
+ height: 144px;
+ color:    #D4CEC3;
+ font-weight: normal;
+}
+#jmesg p {
+ margin: 0 0 0.8em 0;
+}
+
+/* Bottom box */
+
+.half {
+ float: left;
+ width: 50%;
+ text-align: center;
+}
+
+.half label {
+ cursor: pointer;
+}
+
+#agree_privacy, #agree_terms, #email_thirdparties,#email_jagexgeneral,#email_thisservice{
+ background-color: #392C14;
+ border: 0;
+ vertical-align: middle;
+}
+
+
+#errorTerms {
+ line-height: 20px;
+ clear: both;
+ text-align: center;
+}
+
+#submitbutton {
+ position: relative;
+ display: block;
+ margin: 0 auto 1em;
+ padding: 0;
+ border: none;
+ cursor: pointer;
+ background: none;
+ color: white;
+ background-image: url(../img/create/continue.jpg);
+ background-repeat:   no-repeat;
+ background-position: center top;
+ width: 116px;
+ height: 31px;
+}
+#submitbutton.createaccount{
+ background-image: url(../img/create/create_account.jpg);
+ width:           205px;
+ height:          31px;
+}
+
+#submitbutton.createaccount{
+ background-image:     none;
+ width:          205px;
+ height:          31px;
+}
+#submitbutton.createaccount div{
+ background-image: url(../img/create/create_account_mo.jpg);
+ width:          205px;
+ height:          31px;
+}
+#submitbutton.createaccount:hover img{
+ display: none;
+}
+
+
+
+
+#submitbutton:hover{
+ background-position: center bottom;
+}
+
+#create_submit {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 323px;
+ height: 32px;
+ background: transparent url(../img/create/create_highlight.png) no-repeat -999px -999px;
+}
+
+#submitbutton:hover #create_submit {
+ background-position: right top;
+}
+
+/* Account Created Page */
+
+.u13, .usernamecreate {
+ color: #FFBB22;
+ font-weight:bold;
+}
+
+.buttons {
+ width: 235px;
+ height: 40px;
+ position: relative;
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+
+}
+
+
+.buttons a{
+ /*background:#808080 none repeat scroll 0%;
+ border:5px outset #909090;*/
+ color:white;
+ display:block;
+ font-weight:bold;
+ height:24px;
+ left:0pt;
+ margin:5px;
+ position:absolute;
+ text-align:center;
+ width:215px;
+ line-height: 22px;
+}
+
+.buttons a:hover {
+ /*background: #A0A0A0;
+ border-color: #ffffff;*/
+}
+
+#button-right span.lev1 {
+ background-image: url('../img/create/play.png');
+}
+
+span.lev1 {
+ display: block;
+ cursor: pointer;
+ position: absolute;
+ height:40px;
+ 
+ 
+  width:234px;
+ 
+}
+
+a:hover span.lev1 {
+ background-position: left bottom;
+}
+
+
+div#logos {
+  margin: 0px auto;
+  text-align: center;
+  font-weight: bold;
+  width: 650px;
+}
+
+div#logos div {
+  padding: 0px;
+  margin: 15px 0px;
+ display: block;
+ width: 315px;
+}
+
+img.logo {
+ border: 1px solid gray;
+ background: black;
+}
+
+img#RS_logo {
+ padding: 5px 1em;
+}
+
+img#FO_logo {
+ padding: 6px 1em;
+}
+
+div#logos div#logo1 {
+ float: left;
+}
+
+div#logos div#logo2 {
+ float: right;
+}
+
+.underage {
+ color: #FFBB22;
+ font-weight: bold;
+}
+
+
+.hr {
+ height: 1px;
+ font-size: 1px;
+ line-height: 1px;
+ border-bottom: 2px solid #5c5240;
+ background: none;
+ margin: 12px auto;
+}
+
+/* xAccount Created Page */
+
+
+
+/* Status Bar */
+
+ #statusbar{
+ }
+ .statusbarwrap{
+  margin-left:      auto;
+  margin-right:      auto;
+  margin-bottom:     6px;
+  margin-top:       4px;
+ }
+ #statusbar .statusbutton{
+  height:         29px;
+  background-repeat:   no-repeat;
+  float:          left;
+  text-align:       left;
+  margin-left:      0px;
+  margin-right:      0px;
+  color:         #666666;
+  padding:         0px;
+  width:         233px;
+ }
+
+
+ #statusbar .statusbutton.firstoffspring{
+  padding-left:      10px;
+  background-image:    url('../img/create/status_left.jpg');
+  background-repeat:   no-repeat;
+  background-position:  top left;
+ }
+ #statusbar .statusbutton.middleoffspring{
+ }
+ #statusbar .statusbutton.lastoffspring{
+  padding-right:      10px;
+  background-image:    url('../img/create/status_right.jpg');
+  background-repeat:   no-repeat;
+  background-position:  top right;
+ }
+
+
+ #statusbar .firstActive,
+ #statusbar .middleActive,
+ #statusbar .lastActive {
+  color:          white;
+  font-weight:      bold;
+ }
+
+ #statusbar .statusbutton div.left,
+ #statusbar .statusbutton div.right,
+ #statusbar .statusbutton div.middle{
+  padding-top:       7px;
+  padding-left:      10px;
+  height:         21px;
+ }
+
+
+ .subButton .left, /* For IE6 */
+ #statusbar .statusbutton div.left,
+ #statusbar .statusbutton.firstoffspring div{
+  background-image:    url(../img/create/status_back.jpg);
+  background-position:  top center; /* Should be no divider visible since background width is gt button width */
+  background-repeat:   no-repeat;
+  padding-left:      5px;
+  padding-right:     15px;
+ }
+ .subButton .middle, /* For IE6 */
+ #statusbar .statusbutton div.middle,
+ #statusbar .statusbutton.middleoffspring div{
+  background-image:    url(../img/create/status_back.jpg); /* Divider to left */
+  background-position:  top left;
+  background-repeat:   no-repeat;
+  padding-left:      15px;
+  padding-right:     15px;
+ }
+ .subButton .right, /* For IE6 */
+ #statusbar .statusbutton div.right,
+ #statusbar .statusbutton.lastoffspring div{
+  background-image:    url(../img/create/status_back.jpg); /* Divider to left */
+  background-position:  top left;
+  background-repeat:   no-repeat;
+  padding-left:      15px;
+  padding-right:     5px;
+ }
+
+
+
+
+
+ label.cb{
+  float:          none;
+  width:          300px;
+  text-align:        left;
+ }
+
+.formSection input.cb{
+  float:          left;
+  margin-left:       18px;
+  margin-right:       8px;
+/*  width:          10px;
+  border-width:       0px;*/
+  cursor:          pointer;
+  margin-bottom:      25px;
+ }
+ #email_thirdparties{
+  
+  margin-bottom:      29px;
+ }
+ #t_and_c .formSection .cb{
+  /*margin-bottom:      0px;*/
+ }
+
+ .formSuperGroup.triple_line .formSection{
+  margin-top:         6px;
+ }
+ .formSuperGroup.triple_line .formSection:first-child{
+  margin-top:         13px;
+ }
+
+
+
+ #t_and_c{
+  width:          auto;
+ }
+ #t_and_c .formSection{
+  width:          350px;
+  /*padding-left:       15px;*/
+ }
+
+ #t_and_c label.cb{
+
+ }
+ #t_and_c_box{
+ }
+ #t_and_c.u13{
+  background-color:     transparent;
+  width:     400px;
+ }
+ /*#formBoxes .inner_brown_box:first-child{
+  padding-bottom:      2em;
+ }*/
+
+ #playnow{
+  
+   width: 234px;
+  
+  height:          40px;
+ }
+ #playnow a{
+  
+   width: 234px;
+  
+  height: 40px;
+  border: none;
+  background: transparent url(../img/create/playnow_highlight.png) no-repeat;
+ }
+ #playnow a img{}
+ #playnow a:hover img{
+  visibility: hidden;
+ }
+
+ 

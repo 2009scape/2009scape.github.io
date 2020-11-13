@@ -1,0 +1,297 @@
+
+
+/* press */
+.assets span {
+    display:inline;
+    float:left;
+    padding:2px;
+    border:solid 1px #bfbfbf;
+    margin:5px;
+}
+
+
+/*--------------------------------------------------
+REQUIRED to hide the non-active tab content.
+But do not hide them in the print stylesheet!
+--------------------------------------------------*/
+.tabberlive .tabbertabhide {
+ display:none;
+}
+
+/*--------------------------------------------------
+.tabber = before the tabber interface is set up
+.tabberlive = after the tabber interface is set up
+--------------------------------------------------*/
+.tabber {
+
+}
+.tabberlive {
+ margin-top:1em;
+}
+
+/*--------------------------------------------------
+ul.tabbernav = the tab navigation list
+li.tabberactive = the active tab
+--------------------------------------------------*/
+
+
+/* Form tabs */
+.tabberlive .tabbertabhide {
+ display:none;
+}
+
+/*--------------------------------------------------
+.tabber = before the tabber interface is set up
+.tabberlive = after the tabber interface is set up
+--------------------------------------------------*/
+.tabber {
+
+}
+.tabberlive {
+ margin-bottom: 1em;
+ width:528px;
+}
+
+
+
+/*--------------------------------------------------
+.tabbertab = the tab content
+Add style only after the tabber interface is set up (.tabberlive)
+--------------------------------------------------*/
+.tabberlive .tabbertab {
+ padding-top:20px;
+ border:1px solid #c1c1c1 ;
+
+ /* If you don't want the tab size changing whenever a tab is changed
+  you can set a fixed height */
+
+ /* height:200px; */
+
+ /* If you set a fix height set overflow to auto and you will get a
+  scrollbar when necessary */
+
+ /* overflow:auto; */
+}
+
+/* If desired, hide the heading since a heading is provided by the tab */
+.tabberlive .tabbertab h2  {
+ display:none;
+}
+
+/* End form tabs */
+
+
+* html .tabbertab {height: 1%} /* IE fix */
+.tabbertab {
+ text-align:center;
+ position:relative;
+}
+#contentRight .tabbertab .assets {
+ margin:0px;
+ padding:0px;
+ text-align:center !important;
+}
+#contentRight .assets img {
+ display:inline;
+ border:solid 1px #ccc;
+ padding:5px;
+}
+
+#contentRight #tabbernav {
+ height:23px;
+ width:528px;
+ background: url(../img/corporate/images/assetsbg_bar.jpg) no-repeat;
+ margin:0px;
+ padding-left: 10px;
+}
+#contentRight #tabbernav li {
+ float:left;
+ height:23px;
+ list-style-image:none;
+ list-style-position:outside;
+ list-style-type:none;
+ text-align:center;
+ padding:0px;
+}
+
+#contentRight #tabbernav li a,
+#contentRight #tabbernav li span {
+ color:#000000;
+ display:block;
+ font-size:11px;
+ height:23px;
+ line-height:25px;
+ text-decoration:none;
+}
+#contentRight #tabbernav li a:hover {
+ background: url(../img/corporate/images/assets_bar.jpg) no-repeat left 0px;
+}
+#contentRight #tabbernav li a:hover span {
+ background: url(../img/corporate/images/assets_bar.jpg) no-repeat right -24px;
+ cursor:pointer;
+}
+#contentRight #tabbernav li:hover {
+ background:#FFFFFF url(../img/corporate/images/assets_bar.jpg) repeat-x 0px -48px;
+}
+
+#contentRight #tabbernav li span {
+ background: url(../img/corporate/images/assets_divide.gif) no-repeat;
+}
+
+#tabbernav li a:hover {
+ font-weight:bold;
+}
+
+#undefinednav1 {
+ width:101px;
+}
+#undefinednav2 {
+ width:101px;
+}
+#undefinednav3 {
+ width:101px;
+}
+#undefinednav4 {
+ width:102px;
+}
+#undefinednav5 {
+ width:102px;
+}
+
+#tabbernav .tabberactive {
+ background: url(../img/corporate/images/assets_bar.jpg) repeat-x 0px -48px;
+}
+
+#tabbernav  .tabberactive a span {
+ background: url(../img/corporate/images/assets_bar.jpg) no-repeat right -24px;
+}
+#tabbernav .tabberactive a {
+ background: url(../img/corporate/images/assets_bar.jpg) no-repeat left 0px;
+}
+
+#tabbernav .tabberactive a {
+ font-weight:bold;
+}
+/* xpress*/
+
+#loading img {
+ display:inline;
+}
+
+#lightbox{
+ position: absolute;
+ left: 0;
+ width: 100%;
+ z-index: 100;
+ text-align: center;
+ line-height: 0;
+ }
+
+#lightbox a img{ border: none; }
+
+#outerImageContainer{
+ background-color: #fff;
+ width: 250px;
+ height: 250px;
+ margin: 0 auto;
+ position:relative;
+ }
+
+#imageContainer{
+ padding: 10px;
+ }
+
+#loading{
+ position: absolute;
+ top: 40%;
+ left: 0%;
+ height: 25%;
+ width: 100%;
+ text-align: center;
+ line-height: 0;
+ }
+
+#imageContainer>#hoverNav{ left: 0;}
+
+
+
+
+#imageDataContainer{
+ font: 10px Verdana, Helvetica, sans-serif;
+ background-color: #fff;
+ margin: 0 auto;
+ line-height: 1.4em;
+ overflow: auto;
+ width: 100%
+ }
+
+#imageData{ padding:0 10px 5px 10px; color: #666; }
+#imageData #imageDetails{ text-align: center; margin-bottom:5px;}
+#imageData #caption{ font-weight: bold; display:block; text-align:center; margin-bottom:7px; }
+
+#caption a {
+ text-decoration:underline;
+}
+
+#bottomNav a {position:absolute; top:10px; right:10px; }
+
+#overlay{
+ position: absolute;
+ top: 0;
+ left: 0;
+ z-index: 90;
+ width: 100%;
+ height: 500px;
+ background-color: #000;
+ }
+
+#prevLink {
+ background:url(../img/corporate/images/lightbox/arrow_prev.gif) no-repeat left;
+ padding-left:15px;
+ text-decoration:none;
+}
+
+#imageDetails a {
+ font-weight:bold;
+}
+
+#nextLink {
+ background:url(../img/corporate/images/lightbox/arrow_next.gif) no-repeat right;
+ padding-right:15px;
+ text-decoration:none;
+}
+
+#toolTip {
+ position:absolute;
+ background:#fff;
+ z-index:100;
+ border:solid 1px #000;
+ color:#000;
+ font-size:11px;
+ font-weight:bold;
+ padding: 2px 5px;
+}
+
+.leftCnr, .rightCnr {
+ position:absolute;
+ display:block;
+ width:8px;
+ height:8px;
+ bottom:-1px;
+ margin:0px;
+ padding:0px;
+ font-size:0px;
+}
+
+.leftCnr {
+ background:url(../img/corporate/images/asset_cnrs.gif) no-repeat right;
+ left:-1px;
+}
+.rightCnr {
+ background:url(../img/corporate/images/asset_cnrs.gif) no-repeat left;
+ right:-1px;
+}
+.assetBottom {
+ position:relative;
+ height:8px;
+}
