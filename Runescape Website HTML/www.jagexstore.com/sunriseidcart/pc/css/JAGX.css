@@ -1,0 +1,872 @@
+﻿html, body
+{
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+body
+{
+    background: #000000 none repeat scroll 0 0;
+    color: #ffffff;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 100%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+    position: fixed;
+}
+p
+{
+    padding: 5px;
+}
+img.bg
+{
+    left: 0;
+    top: 0;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    min-width: 866px;
+    min-height: 563px;
+    z-index: 1;
+}
+#scrollable
+{
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: 2;
+    min-width: 865px;
+    overflow: auto;
+}
+#header
+{
+    background: transparent url(../images/jagx_header_bg.png) repeat scroll left top;
+    border: 0 none;
+    height: 107px;
+    margin: 0 auto;
+    padding: 0;
+    width: 865px;
+}
+.headerimg
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    float: left;
+    background-color: transparent;
+}
+#nav
+{
+    background: transparent url(../images/jagx_nav_bg.gif) repeat-x scroll right top;
+    color: #ffffff;
+    font-size: 10pt;
+    height: 31px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    width: 865px;
+}
+#nav div#navItems
+{
+    float: left;
+    margin: 0;
+    padding: 7px 0px 5px 18px;
+    width: 250px;
+
+}
+
+
+
+#ddlCountry
+{
+    border: solid 1px #ffffff;
+}
+
+#nav div#accountItems
+{
+    float: right;
+    margin: 0;
+    padding: 0;
+    width: 264px;
+
+}
+#nav #accountLinks
+{
+    vertical-align: middle;
+    float: right;
+    padding: 7px 10px 5px 10px;
+}
+#nav div#accountItems div.loginBtn
+{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+#nav div a
+{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+#nav div a:hover
+{
+    text-decoration: underline;
+}
+#nav img.loginOff
+{
+    border: 0;
+}
+#nav img.loginOver
+{
+    border: 0;
+}
+#content
+{
+    margin: 0 auto;
+    width: 865px;
+    min-height:200px;
+    padding: 0;
+   
+}
+#contentChoose
+{
+    margin: 0 auto;
+    width: 865px;
+    min-height:200px;
+    padding: 0;
+
+}
+#nav #accountItems a.logButton
+{
+    padding: 0;
+    margin: 0;
+    float: right;
+    width: 90px;
+    height: 28px;
+    border: none;
+    position: relative;
+    top: 1px;
+    right: 2px;
+    z-index: 600;
+}
+#nav #accountItems #login a
+{
+    background: transparent url(../images/jagx_logButton_sprite.gif) no-repeat scroll center top;
+}
+#nav #accountItems #login a:hover
+{
+    background: transparent url(../images/jagx_logButton_sprite.gif) no-repeat scroll center -29px;
+}
+#nav #accountItems #logout a
+{
+    background: transparent url(../images/jagx_logButton_sprite.gif) no-repeat scroll center -58px;
+}
+#nav #accountItems #logout a:hover
+{
+    background: transparent url(../images/jagx_logButton_sprite.gif) no-repeat scroll center -87px;
+}
+#top
+{
+    background: transparent url(../images/jagx_topbot_frame_sprite.gif) repeat-x scroll right top;
+    height: 9px;
+    width:865px;
+    padding: 0;
+    margin: 0;
+}
+
+#bottom
+{
+    background: transparent url(../images/jagx_topbot_frame_sprite.gif) repeat-x scroll right top;
+    height: 9px;
+    width:865px;
+    padding: 0;
+    margin: 0;
+}
+
+#bottomLeft
+{
+    background: transparent url(../images/jagx_topbot_frame_sprite.gif) repeat-x scroll right top;
+    height: 9px;
+    width:226px;
+    padding: 0;
+    margin: 0;
+}
+
+#bottomRight
+{
+    background: transparent url(../images/jagx_topbot_frame_sprite.gif) repeat-x scroll right top;
+    height: 9px;
+    width:629px;
+    padding: 0;
+    margin: 0;
+}
+
+.divLeft 
+{
+    width: 226px;
+    padding-left:10px;
+    
+    float:left;
+    background: transparent url(../images/jagex_frame_236.png) repeat-y scroll left top;
+}
+
+.divLeftMain 
+{
+    min-height:454px;
+}
+
+
+
+.divRight
+{
+   width: 629px;
+   float:left;
+   background: transparent url(../images/jagex_frame_629.png) repeat-y scroll left top;
+}
+
+.leftImgHeader
+{
+    
+}
+
+
+
+#leftNavBottom
+{
+    background: transparent url(../images/jagx_topbot_frame_sprite.gif) repeat-x scroll left -10px;
+    height: 8px;
+    left: 3px;
+    width: 236px;
+}
+
+#leftNavFiller
+{
+    background: transparent url(../images/jagx_navleft_bg.gif) repeat-y scroll left top;
+    height: 68px;
+    margin: 0 0 0 4px;
+}
+.imgFeatureProduct
+{
+    width: 224px;
+}
+
+#main
+{
+    padding: 0 8px;
+    min-height: 454px;
+}
+#mainContent
+{
+
+}
+
+
+
+#nav div#navCountrySelect
+{
+	float: left;
+	margin: 0;
+	padding: 7px 0px 5px 50px;
+	font-weight: bold;
+	width: 263px;
+}
+
+#lstCountrySelect
+{	margin: 0;
+	padding: 0;
+	position:relative;
+	z-index: 1000;
+}
+
+#lstCountrySelect li
+{	margin: 0;
+	padding: 0;
+	list-style: none;
+	float: left;}
+
+.countryHeader
+{	display: block;
+	margin: 0 1px 0px 0;
+	padding: 0px 0px 0px 0px;
+	width: 200px;
+	text-align: center;
+	text-decoration: none;
+}
+	
+.countryItem 
+{
+    display: block;
+    margin: 0 1px 0 0;
+    padding: 4px 10px;
+    width: 150px;
+    text-align: center;
+    text-decoration: none;
+}
+	
+
+
+
+
+.smallHeaderText
+{
+    font: 11px arial;
+    font-weight:normal;
+}
+
+#lstCountrySelect li a:hover
+{   text-decoration: none;  }
+
+#lstCountrySelect div
+{	position: absolute;
+	visibility: hidden;
+	margin: 0;
+	padding: 17px 0px 0px 0px;
+	}
+
+#lstCountrySelect div a
+{	position: relative;
+	display: block;
+	margin: 0;
+	padding: 5px 10px;
+	width: 200px;
+	white-space: nowrap;
+	text-align: left;
+	text-decoration: none;
+	background: transparent url(../images/ddlButton.png) no-repeat scroll center top;
+	font: 11px arial}
+
+#lstCountrySelect div a:hover
+{	background: transparent url(../images/ddlButton.png) no-repeat scroll center -28px;   }
+
+.divCategoryMenu 
+{
+    background: transparent url(../images/jagx_navleft_bg.gif) repeat-y scroll left top;
+    width:226px;
+    min-height:186px; 
+}
+
+.divCategoryMenuItem
+{
+    background-color:Red;
+    width:226px;
+    font-size: 10pt;
+    text-align: left;
+    background: transparent url(../images/jagx_left_nav_sprite.png) no-repeat scroll center top;
+    height: 30px;
+    margin-top:0px;
+}
+
+.divCategoryMenuItem:hover
+{
+    background: transparent url(../images/jagx_left_nav_sprite.png) no-repeat scroll center -32px;
+}
+
+.divCategoryMenuItem a
+{
+    color: #ffffff;
+    display: block;
+    height: 30px;
+    margin: 0;
+    padding: 5px 0px 0px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 209px;
+}
+
+#categoryNav
+{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+}
+#categoryNav li
+{
+    background: transparent url(../images/jagx_left_nav_sprite.png) no-repeat scroll center top;
+    height: 30px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    width: 231px;
+}
+#categoryNav li a
+{
+    color: #ffffff;
+    display: block;
+    height: 22px;
+    margin: 0;
+    padding: 5px 0 0 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 209px;
+}
+#categoryNav li:hover
+{
+    background: transparent url(../images/jagx_left_nav_sprite.png) no-repeat scroll center -32px;
+}
+
+#pcMain
+{
+     overflow:hidden;
+     background-color:White;
+     min-height:454px;
+}
+table.pcMainTable
+{
+    border-collapse: collapse;
+    border-spacing: 0;
+    overflow:hidden;
+   
+}
+table.pcMainTable td
+{
+    padding: 0;
+    margin: 0;
+}
+.pcMainTable h1
+{
+    background: #e5e5e5 url(../images/jagx_header_bg.gif) repeat scroll left top;
+    color: #ffcc33;
+    font-family: Trajan Pro, Times New Roman, Serif;
+    font-size: 18px;
+    margin: 0px 0px 10px 0px;
+    padding: 4px 4px 4px 15px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+    text-shadow: 0.1em 0.1em #000000;
+}
+.pcMainTable p
+{
+    margin: 0 10px;
+}
+
+#footer
+{
+    font-size: 11px;
+    clear: both;
+    font-size: 11px;
+}
+#footer a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+#footer a
+{
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+#pcMain a:link
+{
+    color: #cc9900;
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+#pcMain a:hover
+{
+    color: #000;
+}
+#pcMain a:visited
+{
+    color: #cc9900;
+}
+#pcMain .submit
+{
+    padding: 0px 3px 0px 3px;
+}
+div.pcErrorMessage
+{
+    margin: 0 10px 10px;
+    position: relative;
+    top: 5px;
+    width: 580px;
+    background-color: #fff;
+    border: 1px solid #ff9900;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+table.pcMainTable td.pcSectionTitle
+{
+    padding: 10px;
+}
+table.pcShowProducts tr
+{
+    padding: 0;
+}
+table.pcShowProducts p
+{
+    padding: 0;
+}
+.pcShowProducts
+{
+    padding: 0;
+}
+#pcMain img
+{
+    padding: 0px;
+}
+#pcMain img#mainImg
+{
+
+}
+#pcMain a:link, #pcMain a:visited
+{
+    text-transform: none;
+    color: #330000;
+    text-decoration: underline;
+    font-size: 11px;
+}
+#pcMain a:hover
+{
+    text-transform: none;
+    color: #330000;
+    text-decoration: none;
+    font-size: 11px;
+}
+#submit
+{
+    padding: 0px 3px 0px 3px;
+}
+.pcErrorMessage
+{
+    background-color: #fff;
+    border: 1px solid #ff9900;
+    color: #ff9900;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 15px;
+    padding: 4px;
+    text-align: center;
+    width: 90%;
+}
+.productOption
+{
+    color: #000000;
+    padding-top: 5px;
+}
+table#productDescription td
+{
+    padding-left: 15px;
+}
+#pcMain .iform, #pcMain .AddToCartImg, #pcMain .AddToWishListImg
+{
+    vertical-align: bottom;
+    padding: 0;
+    margin: 0 5px 0 0;
+}
+.pcShowProducts
+{
+    border: none;
+}
+
+table.pcMainTable tr.pcSectionTitle td
+{
+    background-color: transparent;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+
+#pcMain hr
+{
+    display: none;
+}
+#breadCrumbs
+{
+    display: inline;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+#sortProducts
+{
+    float: right;
+    display: inline;
+    clear: left;
+    padding: 0 10px 0 0;
+    margin: 0;
+}
+#viewCartTotal
+{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+table#viewCartTable
+{
+    width: 590px;
+    margin: 0 auto;
+}
+
+table#viewCartTable th, table#viewCartTopTable th, table#viewOrderAddress th, table#shipOptions th, table#orderCompleteTable th, table#cvpDAddressTable th, table#cvpDorderTable th
+{
+    background-color: #ffcc33;
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    white-space: nowrap;
+}
+table#cvpDAddressTable th
+{
+    text-align: left;
+    padding-left: 0;
+}
+table#shipOptions td
+{
+    padding: 2px 5px;
+}
+table#orderCompleteTable th
+{
+    padding: 3px 5px;
+}
+table#viewOrderAddress th
+{
+    padding: 3px 5px 3px 10px;
+}
+table#viewCartTopTable td, table#viewCartTable td
+{
+    padding: 2px 10px;
+    vertical-align: middle;
+}
+.totalsLine
+{
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+}
+table#viewOrderAddress
+{
+    width: 590px;
+    margin: 0 auto;
+}
+
+table#viewOrderAddress td hr
+{
+    display: block;
+}
+div#shipAgreeTitle
+{
+    padding: 0 0 0 5px;
+}
+div#shipAgreement
+{
+    padding: 10px;
+}
+div#shipAgreement div
+{
+    float: right;
+    width: 565px;
+    padding-bottom: 13px;
+}
+div#shipAgreement .boxes
+{
+    width: inherit;
+}
+table.pcMainTable table tr td.overrideCell
+{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+div.addressOverride
+{
+    background-color: #ffffff;
+    border: 1px solid #ff9900;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+    padding: 3px 5px;
+
+    text-align: center;
+    top: 5px;
+    width: 580px;
+}
+table#longinTable, table#paymentTable
+{
+    width: 590px;
+    margin: 0 auto;
+}
+table#orderCompleteTable, table#pfpPaymentTable, table#cvpDAddressTable, table#cvpDorderTable, table#cvpDorderStatusTable
+{
+    margin: 0 auto;
+    width: 590px;
+}
+table#cvpDAddressTable td, table#cvpDorderTable td, table#orderCompleteTable td, table#pfpPaymentTable td,table#viewOrderAddress td,
+table#ovAddress td
+{
+    padding: 3px 3px 3px 5px;
+    vertical-align: middle;
+}
+
+.pcSectionTitle
+{
+    background-color: Transparent;
+    color: #333;
+    font-size: 12px;
+    padding-top: 10px;
+}
+
+table#viewOrderAddress tr td.orderPriceCol
+{
+    padding: 5px;
+}
+table#coLoginTable
+{
+    margin-top: 0;
+}
+table#coLoginTable tr td P
+{
+    padding-left: 15px;
+}
+
+table#coLoginTable tr.pcSectionTitle td p
+{
+    padding-left: 0;
+}
+div#orderContinueButton
+{
+    float: right;
+}
+table#viewCartTable hr,
+table#orderCompleteTable hr,
+table#cvpDorderTable hr,
+table#cvpDAddressTable hr
+{
+    display: block;
+}
+
+#pcMain ul.custprefcols
+{
+    padding: 0 10px;
+}
+
+#pcMain ul li.custprefcols a
+{
+    text-decoration: none;
+}
+fieldset
+{
+    border: 0;   
+}
+
+#signin
+{
+    clear:both;
+    float:left; 
+}
+
+#signin fieldset label {
+    display:block;
+    margin:0 0;
+}
+
+#signin input {
+    width: 200px;
+}
+
+#signin p.button input {
+    padding:0;
+    border: 0;
+    width: inherit;
+    vertical-align: middle;  
+}
+
+#signin p 
+{
+    margin: 0 5px;  
+    padding: 5px 0; 
+}
+
+div.create_account 
+{
+    float:left;
+    margin: 10px;
+    width:283px;
+    background:transparent url(../images/create_bottom.png) no-repeat scroll 0 100%;
+    height: 175px;
+}
+
+div.create_account h3
+{
+    color:#242424;
+    font-weight:bold;
+    background:transparent url(../images/create_top.png) no-repeat scroll 0 0;
+    margin: 0;
+}
+
+div.sign_in {
+    float:left;
+    margin: 10px;
+    width:283px;
+    background:transparent url(../images/signin_bottom.png) no-repeat scroll 0 100%;
+    height: 175px;
+}
+
+div.sign_in h3
+{
+    color:#242424;
+    font-weight:bold;
+    background:transparent url(../images/signin_top.png) no-repeat scroll 0 0;
+    margin: 0;
+}
+
+span.forgotpass
+{
+    vertical-align: middle;    
+}
+
+div.pcPageNav 
+{
+    padding: 10px;
+    margin: 0;    
+}
+
+.divAddToCart 
+{
+  
+}
+.divAddToCartQuantity 
+{  
+    width:53px;
+    padding:0 0 0 0;
+    margin:3px 0 0 0;
+    position:absolute;    
+}
+.divAddToCartQuantity input
+{
+    width:53px; 
+}
+.divAddToCartButton 
+{
+    width:95px;
+    padding:0 0 0 0;
+    margin:0 0 0 58px;
+    position:absolute;              
+}
+.divWishListButton 
+{
+    width:87px;
+    padding:0 0 0 0; 
+    margin:0 0 0 158px;
+    position:absolute;             
+}
+.divTellAFriendButton 
+{
+    width:87px;
+    padding:0 0 0 0;
+    margin:22px 0 0 158px; 
+    position:absolute;             
+}
+

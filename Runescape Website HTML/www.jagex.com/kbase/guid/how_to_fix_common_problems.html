@@ -1,0 +1,421 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from www.jagex.com/kbase/guid/how_to_fix_common_problems by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:54:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+
+ <title>Jagex Games Studio - Free Online Browser Games</title>
+ <meta name="keywords" content="RuneScape, Arcanists, Kickabout League, Armies of Gielinor, Zombie Dawn, Miner Disturbance, Orb Defence, Steel Sentinels, MMORPG, free online games, free browser games, java games, multiplayer, flash games, play free online browser games, world's most popular game, uk developer of the year 2009" />
+ <meta name="description" content="Play free online games at Jagex.com. A host of genres including RPG, tower defence, action, sports, strategy and many more, all playable through your browser." />
+ 
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="../../img/favicon.ico" />
+ <link rel="SHORTCUT ICON" href="../../img/favicon.ico" />
+ <link rel="stylesheet" type="text/css" href="../../css/jgs/global-8.css" />
+ 
+ 
+ 
+ <link rel="image_src" href="../../img/jgs/global/SB_Logo.jpg"/>
+ <script type="text/javascript" src="../../js/jquery/jquery_1_4_2.js"></script>
+ <script type="text/javascript" src="../../js/jquery/jquery_fanTabulous_0_1.js"></script>
+ <link rel="stylesheet" type="text/css" href="../../css/sifr/sifr_3_436-0.css" media="all" />
+ <script type="text/javascript" src="../../js/sifr/sifr_core_3_436.js"></script>
+ 
+  <script type="text/javascript" src="../../js/jgs/sifrcfcd.js?0"></script>
+ 
+ 
+
+
+
+ 
+
+
+<link rel="stylesheet" type="text/css" href="../../css/jgs/article-0.html" media="all" />
+<link rel="stylesheet" type="text/css" href="../../css/jgs/kbase-3.css" media="all" />
+<script type="text/javascript" src="../../js/jquery/jquery_ui_1_8_2_core_accordion_tabs_effects.js"></script>
+
+<script type="text/javascript">
+$(function(){
+
+
+// Ellipses
+function elide(what){
+$(what).each(
+function(i){
+var a = $(this);
+var p = a.innerWidth() - a.width();
+var c = $(this).parent().width() - p;
+if(c <= 0 || a.children().length > 0){return;}
+if(!a.attr("title")){a.attr("title",a.html());}
+a.html("<"+"span>"+a.html()+"<"+"/span>");
+a = a.children();
+while(a.width() > c){
+a.html(a.html().substring(0,a.html().length-4)+'...');
+}
+}
+)
+}
+elide(".SideNavFoot ul li a");
+//
+// Sidenav
+$('.SideNavFoot').accordion({header: "h3", alwaysOpen: false, autoHeight: false, active: ".selected"});
+
+})
+</script>
+
+<meta name="language" content="en">
+<meta name="description" content="How to fix common problems">
+
+ 
+  </head>
+<body class="BgBody" >
+<a name="Top"></a>
+<div class="BgContent"><div class="BgHead"><div class="BgFoot">
+
+ 
+
+
+
+<div id="Header">
+<div id="Nav">
+<h1><a id="NavLogo" href="../../index.html"><img src="../../img/jgs/global/Nav_logo.png" alt="  Jagex Games Studio " /></a></h1>
+<ul id="Menu">
+<li id="Home"><a class="tl" href="../../index.html"><img src="../../img/jgs/global/Home.png" alt="home" /></a></li>
+<li id="Account"><a class="tl" href="../../account_management.html"><img src="../../img/jgs/global/Account.png" alt="account" /><!--[if gt IE 6]><!--></a><!--<![endif]--><div>
+<table>
+<tr class="First"><td><a href="../../account_management.html">Manage Account</a></td></tr>
+<tr class="Last"><td><a href="https://secure.jagex.com/m=create/index.ws">Create Free Account</a></td></tr>
+</table>
+</div>
+<!--[if lte IE 6]></a><![endif]-->
+</li>
+<li id="Community"><a class="tl" href="javascript:"><img src="../../img/jgs/global/Community.png" alt="community" /><!--[if gt IE 6]><!--></a><!--<![endif]--><div>
+<table>
+<tr class="First"><td><a href="http://services.funorb.com/m=forum_fo/forums.ws">FunOrb Forums</a></td></tr>
+<tr><td><a href="../../../services.runescape.com/m%3dforum/forums.html">RuneScape Forums</a></td></tr>
+<tr><td><a href="http://services.jagex.com/m=hiscore_fo/">Hiscores</a></td></tr>
+<tr class="Last"><td><a href="http://services.jagex.com/m=achievements/">Achievements</a></td></tr>
+</table>
+</div>
+<!--[if lte IE 6]></a><![endif]-->
+</li>
+<li id="Help"><a class="tl" href="javascript:"><img src="../../img/jgs/global/Help.png" alt="help" /><!--[if gt IE 6]><!--></a><!--<![endif]--><div>
+<table>
+<tr class="First"><td><a href="Customer_Support.html">Customer Support</a></td></tr>
+<tr><td><a href="../../loginapplet/loginappletb4b5.html?mod=accountappeal&amp;dest=passwordchoice.ws">Password Recovery</a></td></tr>
+<tr><td><a href="../../loginapplet/loginappletef7e.html?mod=accountappeal&amp;dest=lockchoice.ws">Locked Account Recovery</a></td></tr>
+<tr><td><a href="https://secure.jagex.com/m=weblogin/loginform.ws?mod=www&amp;ssl=0&amp;expired=0&amp;dest=bugtracker.ws">Submit a Bug Report</a></td></tr>
+<tr class="Last"><td><a href="https://secure.jagex.com/m=offence-appeal/index.ws">Appeal Bans and Mutes</a></td></tr>
+</table>
+</div>
+<!--[if lte IE 6]></a><![endif]-->
+</li>
+</ul>
+</div>
+
+<div id="Login">
+<h3>Golden Joystick Award Winner</h3>
+<p>
+Jagex Games Studio
+<br/>
+<b>UK Developer of the Year 2009</b>
+</p>
+<p>
+<i>Thanks to all of our players for voting!</i>
+</p>
+</div>
+</div>
+
+
+
+<div id="Banner">
+
+
+<h2>Customer Support</h2>
+</div>
+
+
+
+<div id="Content">
+
+
+<div id="Crumbtrail">
+<div id="Trail">Location: <a href="../../index.html" class="first"><span>Home</span></a> >
+<a href="customer_support-2.html"><span>Customer Support</span></a>
+<span class="divider">&gt;</span>
+<a href="get_help_with_technical_problems.html"><span>Get help with technical problems</span></a>
+<span class="divider">&gt;</span>
+<span>How to fix common problems</span>
+</div>
+
+</div>
+
+
+
+<div id="Section">
+<div id="SectionHead"></div>
+<div id="SectionBody">
+
+
+<div class="Box AutoFull " style="margin: auto;">
+<div class="BoxHead"></div>
+<div class="BoxBody">
+<div class="Box White928 " style="margin: 0px auto auto;">
+<div class="BoxHead"></div>
+<div class="BoxBody">
+<div id="ColLeft">
+<div class="SideNav">
+<div class="SideNavHead">
+<div class="SideNavFoot">
+<h2 class="SideNavTitle">
+<a href="customer_support-2.html">Customer Support</a>
+</h2>
+<h3 >
+<a href="learn_about_jagex.html">Learn about Jagex</a>
+</h3>
+<ul >
+<li class="first">
+<a href="about_jagex_and_our_games.html">About Jagex and our games</a>
+</li>
+<li >
+<a href="health_and_safety_information.html">Health and safety information</a>
+</li>
+<li >
+<a href="chatting_and_staying_safe_online.html">Chatting and staying safe online</a>
+</li>
+<li >
+<a href="about_adverts_in_jagex_games.html">About adverts in Jagex games</a>
+</li>
+<li >
+<a href="come_and_work_for_jagex.html">Come and work for Jagex!</a>
+</li>
+<li class="last">
+<a href="full_credits_list.html">The full Jagex credits list</a>
+</li>
+</ul>
+<h3 >
+<a href="get_help_with_your_jagex_account.html">Get help with your Jagex account</a>
+</h3>
+<ul >
+<li class="first">
+<a href="get_help_with_your_password.html">Get help with your password</a>
+</li>
+<li >
+<a href="how_to_read_messages_from_us.html">How to read messages from us</a>
+</li>
+<li class="last">
+<a href="get_help_with_a_locked_account.html">Get help with a locked account</a>
+</li>
+</ul>
+<h3 >
+<a href="get_help_subscribing_to_funorb.html">Get help subscribing to FunOrb</a>
+</h3>
+<ul >
+<li class="first">
+<a href="about_subscribing_to_funorb.html">About subscribing to FunOrb</a>
+</li>
+<li >
+<a href="compare_our_subscription_methods.html">Compare our subscription methods</a>
+</li>
+<li >
+<a href="paying_by_credit_card.html">Paying by credit card</a>
+</li>
+<li >
+<a href="paying_by_phone.html">Paying by phone</a>
+</li>
+<li >
+<a href="paying_by_cash.html">Paying by cash</a>
+</li>
+<li >
+<a href="paying_by_text_message.html">Paying by text message</a>
+</li>
+<li >
+<a href="paying_by_paypal.html">Paying by PayPal</a>
+</li>
+<li >
+<a href="paying_by_bank_transfer.html">Paying by bank transfer</a>
+</li>
+<li class="last">
+<a href="paying_by_wallie_card.html">Paying by Wallie Card</a>
+</li>
+</ul>
+<h3 >
+<a href="learn_about_jagex_game_rules.html">Learn about Jagex game rules</a>
+</h3>
+<ul >
+<li class="first">
+<a href="about_our_rules.html">About our rules</a>
+</li>
+<li >
+<a href="how_we_enforce_our_rules.html">How we enforce our rules</a>
+</li>
+<li >
+<a href="how_we_moderate_in_game_chat.html">How we moderate in-game chat</a>
+</li>
+<li >
+<a href="how_we_moderate_our_forums.html">How we moderate our forums</a>
+</li>
+<li class="last">
+<a href="how_to_report_abuse.html">How to report abuse</a>
+</li>
+</ul>
+<h3 class="selected">
+<a href="get_help_with_technical_problems.html">Get help with technical problems</a>
+</h3>
+<ul class="selected">
+<li class="first_selected">
+<a href="how_to_fix_common_problems.html">How to fix common problems</a>
+</li>
+<li >
+<a href="learn_about_system_requirements.html">Learn about system requirements</a>
+</li>
+<li class="last">
+<a href="how_to_report_a_bug.html">How to report a bug</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div id="ColRightWide" class="ArticleBody">
+<h2>How to fix common problems</h2>
+<div class="hr"></div>
+<h4>If you cannot load a Jagex game at all - and even the title screen does not load...</h4>
+<ul>
+<li>Make sure you have the latest version of Sun Java, available from <a href="http://www.java.com/getjava">www.java.com/getjava</a>.</li>
+<li>Try connecting to a different game server. If one of our servers is experiencing technical issues then this will solve the problem for you until we get it fixed.</li>
+<li>Your browser may be caching an old version of the game - try clearing your web cache. To do this in Internet-Explorer, from the options bar select Tools &gt; Internet Options &gt; Delete your temporary Internet files</li>
+<li>Make sure you are using the signed game applet using SUN Java.</li>
+<li>Ensure that you have accepted the pop-up security warning that appears a few seconds after choosing your game server. If this pop-up does not appear try rebooting your machine and make sure you click 'Yes' when asked if you want to trust the Jagex applet.</li>
+<li>Try using the unsigned game applet. This will often fix the problem if you are playing from a school machine or Internet-cafe where you have limited access to the computer.</li>
+<li>Try using a different web browser, such as <a href="http://www.getfirefox.com/">Mozilla Firefox</a>.</li>
+<li>Our servers may be temporarily offline for maintenance or an update. Try waiting an hour and then trying again.</li>
+<li>Make sure your computer meets our <a href="learn_about_system_requirements.html">minimum system requirements</a>.</li>
+</ul>
+<h4>If you can't see anyone talking in-game...</h4>
+<p>Check you haven't accidentally changed the in-game configuration options so that nothing anyone says is displayed in the chat window - for instance, you have both your public and private chat set to 'Off'. These can be toggled from the bottom of the game window.</p>
+<h4>If you're trying to log in but receive a message stating that your username is already in use...</h4>
+<p>There are two things that can cause this:</p>
+<ul>
+<li>If you were playing a few minutes ago and didn't log out properly then your user may still be connected to the server. After a short while you will be logged out automatically, so wait a few minutes and then try again. Always remember to log out using the log-out button, as closing a Jagex game down by another method means that you may lose your current position in the game you're playing.</li>
+<li>If the servers seem to be working normally for everyone else and you still cannot log in after waiting a while, then someone may have your password and is using your account. <a href="get_help_with_your_password.html">Learn about recovering a lost account.</a></li>
+</ul>
+<h4>If you're trying to log in but receive a message stating 'Unable to connect to server'...</h4>
+<p>Try connecting to a different server. You can find a link to each game's servers on the game's 'More Info' page, just above the 'Description' button. If one of our servers is experiencing technical issues then this will solve the problem for you until we get it fixed.</p>
+<p>If this doesn't fix your problem then a firewall on your network may be blocking your connection. Please ask your network administrator or ISP to open ports 43594 and 43595 (for TCP traffic, both Inbound and Outbound) which are used by our games. I'm afraid that there is nothing that we can do to help you with this, as it is a problem with the settings on your connection and not something wrong with our games. If this doesn't fix your problem then our servers may be temporarily offline for maintenance or an update; try waiting an hour and then try again.</p>
+<h4>If you can see the main game screen, but the 'Loading...please wait' message doesn't go away...</h4>
+<p>If you are running a Windows PC with over 1GB of RAM, a memory conflict can occur. This problem is caused by Java not giving the Jagex game enough memory to work with and can be solved using the following steps (Jagex takes no responsibility for any data lost as a consequence of using this fix):</p>
+<ul>
+<li>Open your Windows Control Panel</li>
+<li>Open the Java Control Panel</li>
+<li>Select the Java tab</li>
+<li>In the "Java <b>applet</b> runtime settings" section choose "View..." (not the <b>application</b> settings but <b>applet</b>)</li>
+<li>Your JRE version should be listed there. In the box marked run-time parameters, you can add something like <code>-Xmx256M</code> (include the minus sign). This should increase the maximum available memory to Java to 256MB. Do not set this number to anything more than half of your maximum RAM otherwise Windows could have problems running.</li>
+</ul> <h4>If the game crashes before it loads...</h4>
+<p>If you are attempting to play Jagex games on a computer running Windows Vista and Internet Explorer, it may be that Windows is set to run in 'Protected Mode'. This mode does not allow Jagex games to cache locally, therefore they crash. To solve this issue, take the following steps:</p>
+<ul>
+<li>In Internet Explorer, go to Tools &gt; Internet Options &gt; Security &gt; Trusted Sites &gt; Sites</li>
+<li>Uncheck the box titled 'Require server verification for all sites (https:) for all sites in this zone'</li>
+<li>Type '*.jagex.com' (without the quotes) into the 'Add this website to the zone' input pane, then click 'Add'.</li>
+</ul>
+<p>Alternatively, use the <a href="http://www.getfirefox.com/">Mozilla Firefox</a> browser to play our games.</p>
+<h4>If the game crashes whenever you visit certain maps or game areas...</h4>
+<p>If your computer has more than 2 GB of memory (RAM) and you use Sun Java, you may be experiencing a fault in Sun Java which causes it to incorrectly detect how much memory your computer has. To fix this problem:</p>
+<ul>
+<li>From the Start menu click Settings &gt; Control Panel.</li>
+<li>In the Control Panel, choose the Java option. This should open a window entitled Java Control Panel.</li>
+<li>Under Java Applet Runtime Settings click the view button.</li>
+<li>In the box entitled Java Runtime Parameters enter -Xmx256M.</li>
+<li>Press OK to close the windows you opened.</li>
+<li>Restart your computer to let the changes take effect.</li>
+</ul>
+<p>If this doesn't apply, please try playing in low detail mode and see if this fixes your problem while in that area. If there is one particular area that always causes a problem, please send in a <a href ="how_to_report_a_bug.html">bug report</a> to let us know.
+<h4>If the game is loading or running slowly...</h4>
+<p>If this is the first time you've played the game (or just the first time for a while) then we may need to update the game files in your computer's cache. This will cause a short delay when loading the game. If you notice any slow-down while playing, this may be caused by a poor Internet connection or low system specifications - make sure your computer meets our <a href="learn_about_system_requirements.html">minimum specifications</a>. Try playing on a different server, at a different time of day, from a different computer or using a different internet provider. Also, make sure that no other programs are using your internet connection while playing our games. Make sure you are using the signed game applet. Lastly, if you are using an older version of Windows, make sure your Java JIT (Just In Time) compiler is enabled. In Internet Explorer, select Tools &gt; Internet-Options &gt; Advanced &gt; Microsoft VM.</p>
+<h4>If you're having problems with the sound in Jagex games...</h4>
+<p>If you are having problems with the sound in any Jagex games, please ensure that your soundcard has the latest drivers installed. You can do this by checking your soundcard manufacturer's website. </p>
+<h4>If you still have problems...</h4>
+<p>First, make sure your computer is updated with the latest system software updates, using Windows Update (for Windows), System Update (for Mac OS X) or the equivalent program or procedure for your operating system. Consult your operating system documentation for further.</p>
+<p>Second, make sure you have the most recent version of your web browser, as well as <a href="http://www.java.com/getjava">the latest version of Sun Java</a>.</p>
+<p>If problems persist, please <a href ="https://secure.jagex.com/m=ticketing/tech_support.ws">contact our technical support team</a>.
+<p>You will need to provide us with your system information. If you use Windows, you can find this information by selecting Start &gt; Settings &gt; Control Panel &gt; System. Your system information appears on the 'General' tab. If you use Mac OS X, you can find this information by selecting Apple Menu &gt; About this Mac.</p>
+<p>If you use an operating system other than Mac OS X, you will also need to provide us with your Java version. In Windows, you can find this information by selecting Start &gt; Settings &gt; Control Panel &gt; Java. Click the 'About' button to see the information we need.</p>
+<p>We will also need to know what browser version you use. To find this, select Help &gt; About in your browser.</p>
+</div> <br class="clearBoth"/>
+</div>
+<div class="BoxFoot"></div>
+</div> <br class="clearBoth"/>
+</div>
+<div class="BoxFoot"></div>
+</div> </div>
+<div id="SectionFoot"></div>
+</div>
+
+
+
+</div>
+
+
+<div id="Footer">
+
+<div id="FooterLegal">
+<a id="Jagex" href="../../index.html"><img src="../../img/jgs/global/Jagex.png" alt="  Jagex Games Studio " /></a>
+<p id="Copy">
+Copyright &copy; 2009-2010 Jagex Ltd. Jagex is a registered trademark of Jagex Ltd. in the United Kingdom and a trademark used in other countries.
+</p>
+<p>
+By using our service you are agreeing to our <a href="../../terms/terms.html">Terms &amp; Conditions</a> and <a href="../../privacy/privacy.html">Privacy Policy</a>.
+</p>
+</div>
+<div id="FooterCorp">
+<a href="../../careers.html" id="Hiring">
+we are hiring
+</a>
+<a href="../../corporate/index.html" id="Corporate">
+corporate site
+</a>
+</div>
+</div>
+
+
+
+</div></div></div>
+
+ 
+  
+
+
+ <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-17");
+_pageTracker._setDomainName(".jagex.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-1");
+pageTracker._setDomainName(".jagex.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+ 
+ </body>
+ 
+<!-- Mirrored from www.jagex.com/kbase/guid/how_to_fix_common_problems by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:54:59 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>
+

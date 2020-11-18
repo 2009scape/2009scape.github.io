@@ -1,0 +1,146 @@
+
+
+
+
+
+
+
+/* Games */
+
+
+.game {
+ position: relative;
+ float: left;
+ display: inline;
+ margin: 10px 0 0 10px;
+ width: 282px;
+ height: 156px;
+ color: black;
+ background: #aaa url(../../img/jgs/homepage/game_bgc4ca.png?1) left top no-repeat;
+}
+
+.hide{
+ display: none;
+}
+
+.game .gameTitle {
+ height: 24px;
+}
+
+.game h4 {
+ float: left;
+ font-size: 14px;
+ font-weight: bold;
+ padding: 0 0 0 8px;
+ height: 24px;
+ line-height: 26px;
+ overflow: hidden;
+}
+
+.game .gameGenre {
+ position: relative;
+ float: right;
+ display: inline;
+ margin: 7px 7px 0 0;
+}
+
+.game img {
+ margin: 0 4px;
+ width: 274px;
+ height: 128px;
+}
+
+.game a {
+ color: white;
+ text-decoration: none;
+}
+
+.game .gamePlay,
+.game .gameInfo {
+ position: absolute;
+ height: 30px;
+ display: block;
+ text-align: center;
+ font-size: 14px;
+ line-height: 28px;
+ cursor: pointer;
+ z-index: 12;
+ background-repeat: no-repeat;
+}
+
+.game .gamePlay,
+.game .gameInfo {
+ bottom: 10px;
+}
+
+.game .gamePlay {
+ width: 231px;
+ right: 10px;
+ background-position: left top;
+ background-image: url(../../img/jgs/homepage/gamePlay_bgc4ca.png?1) !important;
+background-image: url(../../img/jgs/homepage/gamePlay_bg_ie6c4ca.png?1);
+
+}
+
+.game .gamePlay:hover {
+ background-position: left bottom;
+}
+
+.game .gameInfo:hover {
+ background-position: right bottom;
+}
+
+.game .gameInfo {
+ width: 32px;
+ left: 10px;
+ background-position: right top;
+ background-image: url(../../img/jgs/homepage/gamePlay_bgc4ca.png?1) !important;
+background-image: url(../../img/jgs/homepage/gamePlay_bg_ie6c4ca.png?1);
+
+}
+
+/* xGames */
+
+
+/* News Post */
+
+.newsPost {
+ color: black;
+ overflow: hidden;
+ height: 132px;
+ background: url(../../img/jgs/homepage/newsPost_bgc4ca.png?1) left bottom repeat-x;
+}
+
+#mmoContent .newsPost {
+ height: 198px;/* for 2 news panels *//*165px; */
+}
+
+.newsPost h4 {
+ line-height: 20px;
+ font-size: 14px;
+ font-weight: bold;
+ padding: 5px 10px 3px;
+}
+
+.newsPost img {
+ float: left;
+ display: inline;
+ margin: 2px 6px 0 2px;
+}
+
+.newsPost p {
+ margin: 0;
+ padding: 0 6px;
+ font-size: 11px;
+ line-height: 1.2em;
+}
+
+.newsPost p span {
+ color: #646464;
+}
+
+.newsPost p a {
+ color: #32647d;
+}
+
+/* xNews Post */

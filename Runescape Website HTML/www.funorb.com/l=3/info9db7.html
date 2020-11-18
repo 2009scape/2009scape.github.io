@@ -1,0 +1,493 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt" xmlns:IE>
+
+<!-- Mirrored from www.funorb.com/l=3/info.ws?game=kickabout by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:54:27 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="pt">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta name="keywords" content="Jogos on-line gratuitos, jogos de enigma, plataforma, arcade, de tiro, de ação, em java, jogos casuais, de corrida, de palavras, de lógica, retro, clássicos, direto no navegador, de estratégia, jogos multijogador, arcanistas, Jagex, Play Free Online Games, puzzle games, platform games, arcade games, shooter games, action games, java games, casual games, racing games, word games, retro games, classic games, browser games, strategy games, multiplayer games, arcanists, kickabout, steel sentinels">
+<meta name="description" content="FunOrb, jogos on-line gratuitos via navegador da Jagex Games Studio, os mesmos criadores do RuneScape. Vibre com jogos de raciocínio, ação, estratégia, tiro, palavras, corridas e muito mais!">
+<meta name="title" content="FunOrb - Jogos gratuitos on-line da Jagex Games Studio">
+<meta name="Author" content="www.jagex.com">
+<meta name="Copyright" content="Copyright 1999 - 2010 Jagex Ltd, www.jagex.com">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="classification" content="GENERAL">
+<meta name="rating" content="General">
+<meta name="Distribution" content="global">
+<meta name="Identifier-URL" content="../index.html">
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<title>FunOrb - Jogos gratuitos on-line da Jagex Games Studio</title>
+<style type="text/css" media="screen">
+  /*\*/@import url(css/global-40.css);/**/
+ </style>
+<script type="text/javascript" src="../../www.jagex.com/l%3d3/js/jquery/jquery_1_4_2.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">@import url(http://www.funorb.com/l=3/css/ieFix-2.css);</style>
+<![endif]-->
+
+<!--[if IE]>
+<style type="text/css">
+ @media all {
+  IE\:clientCaps {behavior:url(#default#clientcaps)}
+ }
+</style>
+<IE:clientCaps ID="oClientCaps" />
+<![endif]-->
+<script type="text/javascript">
+ var suffix="?js=1";
+ if (navigator.appName=="Microsoft Internet Explorer") {
+  if (!oClientCaps.getComponentVersion("{08B0E5C0-4FCB-11CF-AAA5-00401C608500}","ComponentID")) {
+   suffix+="&applet=2";
+  }
+ }
+ function suffixize(obj){
+  if(!obj.suffixed){
+   obj.href += suffix;
+   obj.suffixed = true;
+  }
+ }
+</script> <style type="text/css" media="screen">
+ /*\*/@import url("css/info-7.css");/**/
+ .intro {
+  background-image: url(img/images/game/kickabout/intro.jpg);
+ }
+ .buttonSubscribe {
+  background-image: url(img/images/info/button_subscribe.gif);
+ }
+</style>
+<script type="text/javascript">
+//
+var time = 4;
+var timer;
+var timer2;
+var loading = 0;
+var image = 0;
+var images = Array();
+//
+images[0] = 'img/images/game/kickabout/screen1c4ca.jpg?1';
+images[1] = 'img/images/game/kickabout/screen2c4ca.jpg?1';
+images[2] = 'img/images/game/kickabout/screen3c4ca.jpg?1';
+images[3] = 'img/images/game/kickabout/screen4ac4ca.jpg?1';
+//
+function clearLoading(){
+ try{
+  if(images[0]){
+   document.getElementById('screenshotsLoading0').style.backgroundPosition = '-83px -62px';
+   if(images[1]){
+    document.getElementById('screenshotsLoading1').style.backgroundPosition = '-83px -62px';
+    if(images[2]){
+     document.getElementById('screenshotsLoading2').style.backgroundPosition = '-83px -62px';
+     if(images[3]){
+      document.getElementById('screenshotsLoading3').style.backgroundPosition = '-83px -62px';
+     }
+    }
+   }
+  }
+  loading = 0;
+ }catch(e){}
+}
+//
+function imageTimer(self){
+ clearTimeout(timer2);
+ clearTimeout(timer);
+ clearLoading();
+ timer = setTimeout("imageNext('" + self + "')", time * 1000);
+}
+//
+function imageNext(self){
+ if(loading == 1){return;}
+ image++;
+ if(image >= images.length){
+  image = 0;
+ }
+ document.getElementById(self).src = images[image];
+}
+//
+function imageGoto(self, img){
+ image = img;
+ // Don't bother re-loading the same image as it screws up Opera
+ if(document.getElementById(self).src != images[image]){
+  var timeDefault = time;
+  time = time * 2;
+  window.setTimeout('time = ' + timeDefault, timeDefault);
+  timer2 = window.setTimeout("document.getElementById('screenshotsLoading' + image).style.backgroundPosition = '25px 12px';", 100);
+  loading = 1;
+  document.getElementById(self).src = images[image];
+ }
+ return false;
+}
+</script>
+
+</head>
+<body id="navGames">
+<a name="top"></a>
+<table id="wrapper">
+<tbody>
+<tr>
+<td class="center bodyTheme">
+<div id="container">
+
+<div id="header">
+<div id="navigation">
+<div class="lft"></div>
+<div class="rght"></div>
+<div class="container">
+<a id="logo" href="index.html" ><b>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="203" height="80">
+<param name="movie" value="http://www.funorb.com/l=3/img/images/layout/logo_funorb_tombracer.swf" />
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=3/" />
+<param name="AllowScriptAccess" value="always" />
+<!--[if !IE]>-->
+<object type="application/x-shockwave-flash" data="img/images/layout/logo_funorb_tombracer.swf" width="203" height="80">
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=3/" />
+<param name="AllowScriptAccess" value="always" />
+<!--<![endif]-->
+<!-- Non Flash alternative -->
+<img src="img/images/layout/logo_funorb_tombracer.jpg" alt="FunOrb" />
+<!--[if !IE]>-->
+</object>
+<!--<![endif]-->
+<!--<![endif]-->
+</object>
+</b></a>
+
+<div id="shell">
+<div class="lft"></div>
+<div class="rght"></div>
+<div id="teleText">
+<h1 id="welcomeText">Bem-vindo ao FunOrb - O melhor em jogos on-line gratuitos</h1>
+<span id="teletext_inner">
+Para obter acesso a qualquer um de nossos jogos multijogadores, tabelas das melhores pontuações e ações, crie uma conta. É rápido, fácil e completamente GRATUITO!</span>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d3/messengercommon0.js"></script>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d3/messenger.js"></script>
+
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<ul class="menu">
+<li class="top p1"><a href="index.html" id="home" class="top_link"><span>Principal</span></a></li>
+<li class="top p2"><a id="games" class="top_link" href="gamelist.html"><span>Jogos</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="gamelist.html" class="fly">Todos os jogos</a></li>
+<li><a href="gamelistea68.html?playerBox=1" class="fly">Jogos para um jogador</a></li>
+<li><a href="gamelist6ff6.html?playerBox=2" class="fly">Jogos multijogadores</a></li>
+<li><a href="options.html" class="fly last">Opções Java</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p3"><a id="account" class="top_link" href="https://secure.funorb.com/m=create/l=3/"><span>Participar</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="https://secure.funorb.com/m=create/l=3/" class="fly">Criar conta gratuita</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=3/paymentoptions.ws" class="fly">Assinar o FunOrb</a></li>
+<li><a href="members.html" class="fly">Benefícios dos membros</a></li>
+<li><a href="account_management.html" class="fly last">Gerenciamento de conta</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p4"><a id="forums" class="top_link" href="http://services.funorb.com/m=focommunity/l=3/"><span>Comunidade</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="http://services.funorb.com/m=focommunity/l=3/" class="fly">Comunidade - Principal</a></li>
+<li><a href="http://services.funorb.com/m=forum_fo_pt/l=3/forums.ws" class="fly">Fóruns</a></li>
+<li><a href="kbase/guid/dev_diary.html" class="fly">Diários de desenvolvimento</a></li>
+<li><a href="http://services.funorb.com/m=achievements/l=3/" class="fly">Conquistas</a></li>
+<li><a href="http://services.funorb.com/m=hiscore_fo/l=3/" class="fly">Recordes e Pontuações</a></li>
+<li><a href="http://services.funorb.com/m=orbcoins/l=3/" class="fly last">Orb Downloads</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p5"><a id="help" class="top_link" href="kbase/guid/help.html"><span>Ajuda</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="kbase/guid/customer_support.html" class="fly">Suporte ao Cliente</a></li>
+<li><a href="parents.html" class="fly">Guia para Pais</a></li>
+<li><a href="kbase/guid/rules_of_conduct.html" class="fly">Regras</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=3/unsubscribe.ws" class="fly">Cancelar recebimento</a></li>
+<li><a href="loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly">Recuperação de conta</a></li>
+<li><a href="https://secure.funorb.com/m=weblogin/l=3/loginform.ws?mod=www&amp;ssl=0&amp;expired=0&amp;dest=bugtracker.ws" class="fly last">Enviar um relatório de erro</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p11"><a id="empty" class="top_link"><span>&nbsp;</span></a></li>
+<li class="top p7"><a href="https://secure.funorb.com/m=create/l=3/" id="register" class="top_link"><span>Criar conta</span></a></li>
+<li class="top p8"><a href="https://secure.funorb.com/m=weblogin/l=3/loginform.ws?mod=www&amp;ssl=0&amp;dest=info.ws?game=kickabout" id="signIn" class="top_link"><span>Login</span></a></li>
+<li class="top p10">
+<div class="top_link" id="lang_div">
+<a id="countrydrop" href="index.html">
+<span>
+<img alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif">
+<span id="dropArrow"></span>
+</span>
+<!--[if gt IE 6]><!--></a></div><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul id="lang" class="sub">
+<li><a class="fly" href="../index-2.html"><img title="
+English" alt="
+English" src="img/images/layout/en.gif"></a></li>
+<li><a class="fly" href="../l%3d1/index.html"><img title="
+Deutsch" alt="
+Deutsch" src="img/images/layout/de.gif"></a></li>
+<li><a class="fly" href="../l%3d2/index.html"><img title="
+Fran&ccedil;ais" alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif"></a></li>
+<li><a class="fly last" href="index.html"><img title="
+Portugu&ecirc;s (BR)" alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif"></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a></div><![endif]-->
+</li>
+</ul>
+</div>
+<br class="clear" />
+</div>
+<div id="page_content">
+<a name="info"></a>
+<div class="section" id="info" >
+<div class="sectionHeader">
+<div class="sectionHeaderRight">
+<div class="sectionTitle">
+<span class="sectionTrail">
+<a href="gamelist.html">Jogos</a> &gt;
+<a href="gamelist7d22.html?genreBox=sport">Esporte</a> &gt;
+<a onclick="suffixize(this)" href="http://kickabout2.funorb.com/l=3/g=kickabout/game.ws">Kickabout League</a> &gt;
+Mais informações </span>
+<span class="sectionServerlist">
+<a style="text-decoration: underline; font-weight: normal;" href="kickabout/serverlist.html">Lista de servidores</a>
+</span>
+
+</div>
+</div>
+</div>
+<div class="sectionBorder">
+<div class="sectionBackground">
+<div class="sectionContent" >
+<div class="sectionContentContainer">
+<div class="intro">
+<div class="introDescription">
+<div>
+<a href="gamelist7d22.html?genreBox=sport"><span class="genre">Esporte</span></a><br> De jogo de várzea direto para a Premier League... </div>
+</div>
+<a class="buttonWide" href="#description"><div>Descrição</div></a><br />
+<a class="buttonWide" href="#faqs"><div>Perguntas freqüentes</div></a><br />
+<a class="buttonWide" href="https://secure.funorb.com/m=create/l=3/"><div>Criar conta gratuita</div></a><br />
+<a onclick="suffixize(this)" class="buttonPlayBig" href="http://kickabout2.funorb.com/l=3/g=kickabout/game.ws"></a>
+</div>
+<a name="screenshots"></a>
+<div class="subsection" id="screenshots" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Capturas de tela
+</div>
+</div>
+<div class="subsectionContent">
+<script type="text/javascript">
+  document.write('<img id="screenshotsImage" class="screenshotsImage" src="http://www.funorb.com/l=3/img/images/game/kickabout/screen1.jpg" alt="In-game screenshot" onLoad="imageTimer(this.id)" />');
+ </script>
+<noscript>
+<iframe name="screenshotsFrame" class="screenshotsFrame" id="screenshotsFrame" scrolling="no" frameBorder="0" src="display_screenshot61d2.html?game=kickabout&amp;screenshot=screen1">
+</iframe>
+</noscript>
+<div id="screenshotsThumbs">
+<a href="display_screenshot61d2.html?game=kickabout&amp;screenshot=screen1" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 0);" class="screenshotsThumb" style="background-image: url(img/images/game/kickabout/screen1_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading0"></div>
+</a>
+<a href="display_screenshot35fa.html?game=kickabout&amp;screenshot=screen2" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 1);" class="screenshotsThumb" style="background-image: url(img/images/game/kickabout/screen2_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading1"></div>
+</a>
+<a href="display_screenshota95c.html?game=kickabout&amp;screenshot=screen3" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 2);" class="screenshotsThumb" style="background-image: url(img/images/game/kickabout/screen3_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading2"></div>
+</a>
+<a href="display_screenshot7211.html?game=kickabout&amp;screenshot=screen4a" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 3);" class="screenshotsThumb" style="background-image: url(img/images/game/kickabout/screen4a_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading3"></div>
+</a>
+</div>
+</div>
+</div>
+<a name="benefits"></a>
+<div class="subsection" id="benefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Recursos de Kickabout League
+</div>
+</div>
+<div class="subsectionContent">
+<div class="benefitsPadding"></div>
+<div class="benefitsContent">
+<div class="benefitsList">
+<ul>
+ <li>Multijogador para até 8 jogadores.</li>
+<li>Experiência melhora o jogador.</li>
+<li>Compre e venda jogadores em<br>leilões on-line.</li>
+<li>Conquiste posições cada vez melhores até chegar à Liga de Diamante.</li>
+<li>Dispute jogos qualificatórios.</li>
+<li>Alcance Conquistas.</li>
+<li>Jogue GRÁTIS!</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<br class="clear" />
+<a name="description"></a>
+<div class="subsection" id="description" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Descrição
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>Kickabout League é um jogo de futebol estilo arcade para cinco jogadores em cada time. Ele pode ser jogado por até oito pessoas em partidas on-line para multijogadores (os goleiros são controlados por IA). Mas Kickabout não é um jogo onde o único objetivo é jogar (e vencer) - a cada partida seus jogadores ganham experiência e se tornam melhores. Você pode vendê-los no mercado e comprar um exímio jogador Elite para substituí-los em seu time.</p>
+<p>Conforme você for vencendo jogos (qualificatórios), você conquistará posições cada vez melhores nas várias ligas, até se tornar bom o bastante para fazer parte da Liga de Diamante, e lutar a cada semana na pelo Troféu de Diamante. Se não estiver com espírito competitivo, você terá a opção de jogar amistosos (não qualificatórios) com amigos...</p>
+</div>
+</div>
+</div>
+<a name="top_of_page"></a>
+<a name="faqs"></a>
+<div class="subsection" id="faqs" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Perguntas frequentes
+</div>
+</div>
+<div class="subsectionContent">
+<div class="faqsList">
+<ol>
+<li><a href="#faqs_q1">Por que os jogadores estão saltando/pulando de lugar para o outro em minha tela?</a></li>
+<li><a href="#faqs_q2">Quais são as regras do jogo?</a></li>
+<li><a href="#faqs_q3">Como funciona o sistema das ligas?</a></li>
+<li><a href="#faqs_q4">Qual é o melhor tipo de jogador?</a></li>
+<li><a href="#faqs_spec">Quais são as especificações mínimas para este jogo?</a></li>
+</ol>
+</div>
+<div class="faqsAnswer">
+<a name="faqs_q1"></a>
+<h3>1. Por que os jogadores estão saltando/pulando de um lugar para o outro em minha tela?</h3>
+<p>Ah, o tão temido monstro "lag". Como Kickabout é o primeiro jogo inteiramente em tempo real do FunOrb, ele é também mais suscetível a lag em certas condições. Por causa disso, existem barras "lag-o-meter" em um canto da tela durante o jogo. Elas exibirão os tempos de PING de vários outros jogadores. Para obter os melhores resultados, recomendamos que esse número esteja abaixo de 200ms durante o jogo.</p>
+<p>Existem muitos fatores que podem aumentar o tempo PING da conexão com a internet em seu computador. Um deles é a distância física entre seu computador e o servidor. Desse modo, também recomendamos que você jogue Kickabout no servidor mais próximo, contra jogadores que estiverem fazendo o mesmo. A conexão da internet de algumas pessoas será tão rápida que isso não será um problema para elas, não importa onde ou com quem estiverem jogando. Porém, nem todos têm a mesma sorte.</p>
+<p>Não seja muito intolerante com jogadores que tiverem problema com "lag" durante o jogo - eles não tem culpa! Tente ajudá-los sugerindo medidas que eles podem tomar para melhorar a performance deles - e a sua - em Kickabout.</p>
+<div class="hr"></div>
+<a name="faqs_q2"></a>
+<h3>2. Quais são as regras do jogo?</h3>
+<p>A primeira regra de Kickabout League é FALAR sobre Kickabout League. Fale dele para seus amigos amantes do futebol e/ou jogos e traga-os para o FunOrb para dar um show de bola. Quanto mais pessoas estiverem jogando Kickabout League, mais partidas ficarão disponíveis!</p>
+<p>A segunda regra de Kickabout é... bem, não há nenhuma outra regra. Esse é um jogo de futebol vale tudo: não há faltas, laterais ou escanteios. Só há um tempo e você joga até ele terminar. O time com mais gols vence!</p>
+<div class="hr"></div>
+<a name="faqs_q3"></a>
+<h3>3. Como funciona o sistema das ligas?</h3>
+<p>Ao final de cada jogo, o vencedor recebe 30 (em jogos qualificatórios) ou 3 (não qualificatórios) pontos. A pontuação do perdedor é reduzida em 10 (em jogos qualificatórios) ou 1 (em jogos não qualificatórios) ponto (s). Em caso de empate, ninguém recebe ou perde pontos, e sua pontuação nunca fica abaixo de zero.</p>
+<p>Você passará para melhores ligas conforme sua pontuação for aumentando. As ligas são as seguintes: 3ª Divisão (10 pontos); 2ª Divisão (180 pontos); Primeirona (560 pontos); Liga de Prata (1700 pontos); Liga de Ouro (7000 pontos); e Liga de Diamante (14000 pontos). Quando você passar para uma liga mais avançada, sua pontuação nunca será menor do que a pontuação necessária para entrar naquela liga. Isso significa que quando entrar na Liga de Diamante, você não sairá mais dela.</p>
+<p>A Liga de Diamante é um pouco diferente. Quando você chega à ela, sua pontuação é substituída por pontos da Liga de Diamante. Esses pontos serão redefinidos toda Terça-feira, às 22:00 horas GMT. A cada semana, o jogador com maior pontuação vencerá o campeonato daquela semana e receberá o Troféu de Diamante como recompensa (e a conquista "É campeão!"). Você acha que está preparado para conquistar este prêmio?</p>
+<div class="hr"></div>
+<a name="faqs_q4"></a>
+<h3>4. Qual é o melhor tipo de jogador?</h3>
+<p>Todas a classes de jogadores têm suas vantagens e desvantagens. O volante é rápido como um relâmpago, até quando está conduzindo a bola, mas sua disputa de bola não é muito boa. O Zaga pode ser vagaroso, mas é sua dividida é brutal quando se aproxima o suficiente. Ele também pode girar quando está com o controle de bola. O Atacante é um exímio goleador, capaz de chutar a bola com muita força e fazer com que ela passe pelo goleiro sem que ele consiga agarrá-la. Porém, não é muito útil na defesa.</p>
+<p>Em contraste, o Elite não tem nenhuma habilidade especial, mas, fazendo uso de power-ups, pode herdar um ou mais bônus das outras classes de jogadores. Você pode, por exemplo, criar um híbrido de Volante e Atacante, que pode correr rápido com a bola E dar chutes poderosos no fundo da rede.</p>
+<div class="hr"></div>
+<a name="faqs_spec"></a>
+<h3>5. Quais são as especificações mínimas para este jogo?</h3>
+<p>As especificações mínimas recomendadas para este jogo são:</p>
+<ul>
+<li>1.0 GHz <li>128 MB de RAM </ul>
+<p>As especificações <b>recomendadas</b> para aproveitar ao máximo este jogo são:</p>
+<ul>
+<li>1.5 GHz <li>256 MB de RAM </ul>
+<p>Abaixo você encontrará uma explicação dos termos das nossas especificações técnicas.</p>
+<p><b>Megahertz (MHz) / Gigahertz (GHz)</b> é uma medida que define a velocidade do processador do computador. Isso afeta a rapidez com que você pode executar jogos e aplicativos, por exemplo.</p>
+<p>Os <b>Megabytes (MB)</b> são usados para medir a quantidade de memória do computador. Isso afeta a rapidez com que o computador é executado ao usar programas grandes, como jogos, ou quando você executa vários programas ao mesmo tempo.</p>
+<p>Clique <a href="http://www.java.com/getjava" target="_blank">aqui</a> para obter a última versão do Sun Java.</p>
+</div>
+</div>
+</div>
+<a name="furtherBenefits"></a>
+<div class="subsection" id="furtherBenefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Benefícios do membro do FunOrb
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p style="padding-bottom: 5px;">Os membros ganham:</p>
+<ul style="line-height: 22px;">
+<li>Pacote de expansão de power-up - compre habilidades especiais para os seus jogadores.</li>
+<li>Acesso a todas as Conquistas.</li>
+<li>Modo tela cheia.</li>
+<li>Sem anúncios durante o jogo.</li> <li>Acesso total a todo conteúdo exclusivo para membros do FunOrb.</li>
+</ul>
+<p>
+<a href="https://secure.funorb.com/m=billing_core/l=3/paymentoptions.ws" class="buttonSubscribe"></a>
+</p>
+</div>
+</div>
+</div>
+<a name="credits"></a>
+<div class="subsection" id="credits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Equipe de Desenvolvimento
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>
+<b>Desenvolvimento:</b> Tom R,&nbsp;Iain S<br>
+<b>Design gráfico:</b> Adam S,&nbsp;David H,&nbsp;Peter S<br>
+<b>Áudio:</b> Adam R,&nbsp;Chris J<br>
+<b>Controle de Qualidade:</b> Joe C,&nbsp;Ken W L,&nbsp;Michael T,&nbsp;Sally R,&nbsp;Alex P,&nbsp;Mirza J<br>
+<b>Tradução:</b> Giulyanna S,&nbsp;Betina U,&nbsp;Claudio D C
+</p>
+<p class="articleBacktotop">
+<a href="#top"><img src="img/images/layout/backtotop.gif" alt="Voltar ao topo" title="Voltar ao topo" /></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sectionFooter"><div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="copyRight">
+<div id="languagefooter"> Selecione o idioma:&nbsp; <a href="../index-2.html"><img alt="
+English" src="img/images/layout/en.gif">
+English</a>
+<a href="../l%3d1/index.html"><img alt="
+Deutsch" src="img/images/layout/de.gif">
+Deutsch</a>
+<a href="../l%3d2/index.html"><img alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif">
+Fran&ccedil;ais</a>
+<a href="index.html"><img alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif">
+Portugu&ecirc;s (BR)</a>
+</div>
+<div class="cr">
+<p> Copyright © 2008 - 2010 Jagex Ltd. Jagex e FunOrb são marcas registradas da Jagex Ltd no Reino Unido e em outros países do mundo. </p>
+<p> Ao utilizar nossos serviços, você concorda com nossos <a href="terms/terms.html" name="terms">Termos e Condições</a> e <a href="privacy/privacy.html" name="privacy">Política de Privacidade</a>. </p>
+</div>
+<div id="jagex">
+<a href="../../www.jagex.com/l%3d3/index.html" target="_blank"><img src="img/images/layout/jagex_footerc4ca.gif?1" alt="Logotipo Jagex" /></a>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>

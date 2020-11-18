@@ -1,0 +1,249 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=83&tag_id=1&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:51:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../www.runescape.com/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../www.runescape.com/favicon.ico">
+<link rel="apple-touch-icon" href="../../www.runescape.com/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="RuneScape Developers' Blogs">
+<meta name="description" content="RuneScape Developers' Blogs - In the first of a semi-regular blog series, RuneScape’s Lead Designer, Mod Mark, explains some of what goes into deciding quest difficulty levels.">
+<meta name="title" content="Design Notes - What’s a Grandmaster Quest?">
+<title>Design Notes - What’s a Grandmaster Quest?</title>
+<style type="text/css">/*\*/@import url(../../www.runescape.com/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_3_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/kbase-6.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/devblog-2.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/sifr-0.css" media="all">
+<script type="text/javascript" src="../../www.runescape.com/css/sifr_core-0.js"></script>
+<script type="text/javascript">
+  var Trajan_Pro_Bold = { src: 'http://www.runescape.com/img/sifr/Trajan_Pro_Bold.swf' };
+
+  sIFR.activate(Trajan_Pro_Bold);
+
+  sIFR.replace(Trajan_Pro_Bold, {
+    selector: 'h2',
+    css: '.sIFR-root { font-weight: bold; font-size: 23px; text-align: center; opacity: 0.95; leading: -1; color: #411f13; }'
+    + ', .sIFR-root a { color: #411f13; }'
+    + ', .sIFR-root a:hover { color: #411f13; }',
+    wmode: 'transparent'
+  });
+ </script>
+</head>
+<body id="nav" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../www.runescape.com/title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../www.runescape.com/game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../www.runescape.com/game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../www.runescape.com/options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../www.runescape.com/account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../www.runescape.com/account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../www.runescape.com/kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../www.runescape.com/splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../www.runescape.com/kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../www.runescape.com/parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../www.runescape.com/game.html" class="HoverImg" id="playBannerNoad"><img src="../../www.runescape.com/img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../www.runescape.com/title.html"><img alt="English" title="English" src="../../www.runescape.com/img/main/layout/en.gif" /></a>
+<a href="../../www.runescape.com/l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../www.runescape.com/img/main/layout/de.gif" /></a>
+<a href="../../www.runescape.com/l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../www.runescape.com/img/main/layout/fr.gif" /></a>
+<a href="../../www.runescape.com/l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../www.runescape.com/img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+</div></div>
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../www.runescape.com/title.html">Home</a> &gt;
+<a href="index75d4.html?tag_id=1&amp;page=1"><span>Developer Blogs</span></a> <span class="divider">&gt;</span>
+<span><span>Design Notes: What's a Grandmaster Quest?</span></span>
+</div>
+</div>
+<div id="content"> <div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+Design Notes: What's a Grandmaster Quest?
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article">
+<div class="topshadow">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div id="post">
+<div class="devblog">
+<div class="devblogHead">
+<div class="devblogFoot">
+<div id="archives"><a href="index75d4.html?tag_id=1&amp;page=1">&lt; Back to archive</a></div>
+<h2>
+What's a Grandmaster Quest?
+<br/>
+by <a href="indexf035.html?author_id=12">Mod Mark</a> 26-Feb-2010
+</h2>
+<div class="content"><p>Hi! I’m <span class="strong">Mod Mark</span>. Hopefully, you recognise my name from the forums or from my Clan Chat in-game (everybody’s welcome), but if you don’t, I’m the Lead Designer and have worked with RuneScape for seven years. I wanted to take this opportunity to chat about something I’ve often seen being discussed in game, especially recently: quest difficulty levels. </p><p>One of the most challenging parts of designing content is deciding how ‘difficult’ something should be. We try to ensure that we have a real mix of content on our release schedule, some of which we want to make hard to complete. </p><p>Doing this isn’t easy. If you want a quest to be challenging for a player with the minimum stats required for it, then it isn’t going to be as big a challenge for players whose stats are much higher. But then, if the player has a higher level account than the quest was intended for, why shouldn’t they breeze through it? They earned the stats, so they should be allowed to one-hit a boss if they really want.</p><p>One option is to make puzzles that have nothing to do with an account’s stats. We do add those quite often, but in many different formats. Some might be more ‘traditional’, like a sliding tile puzzle, whereas others might be more complex like the one in <span class="em">Mourning’s Ends Part 2</span>, where you’re interpreting a 3D light puzzle across several floors. Of course, some people find these sorts of puzzles very easy, whereas others will quickly dive for the QuestHelp and spend their points on being given a solution. </p><p>With our Grandmaster quests (GMQ), we want to challenge the avatar (the character you control on the screen) AND the player. This means using lots of the techniques described above, often combining them and removing the ability to ‘brute force’ content. By that I mean making sure the challenge can’t be bypassed with prayers or lots of cash. We’re trying to give the player a different kind of experience than they are used to, and hope that the player has a real sense of achievement when they have completed it.</p><p>The things that difficulty does NOT incorporate are length, storyline and game knowledge. I simply do not believe that a difficult quest has to be long or story heavy - far from it. Our first GMQ (<span class="em">While Guthix Sleeps</span>) was quite long and plot heavy, whereas our more recent GMQ (<span class="em">Nomad’s Requiem</span>) was quite short and plot light. Future GMQs will also vary wildly, with some being giant, behemoth-like, plot-waving extravaganzas and others being considerably smaller.</p><p>Regarding game knowledge, both of these GMQ contained very different sorts of puzzles and challenges: one required lots of Quest Points, whereas the other required that you knew how to play a minigame and to plan well for a tough fight. These are very, very different prerequisites indeed, and we intend to continue to release a range of GMQs appealing to different types of players. </p><p>They do share many traits too. For example, both quests feature monsters that modify attacks based on player combat strategy. Both quests offer access to new top-end gear, both cosmetic and practical. Both quests hugely penalise the player for not paying close attention to what’s going on around them. </p><p>As far as skill levels are concerned, we generally feel that all GMQs should contain multiple skills over level 70, with slight tweaks on that depending on if it’s what we consider a hard skill (like Slayer) or an easy skill (like Woodcutting). It also depends on what the top quest requirements are at the time of launch - for example, right now, we have some skills with a top quest requirement of 75 (like Ranged, Magic, etc), whereas others are only as high as 45 (Summoning). Therefore, if a quest needed a Summoning requirement, it’s more likely to be a 45+ Summoning requirement than a 75+ Summoning requirement. This means that, right now, GMQ level requirements are quite low, but they will continue to rise as we release higher and higher-levelled quests. One day, I would love to see a quest with multiple level 90+ skills, but we have to fill the gaps up to 90 first.</p><p>If you'd like to discuss this blog on the forums, please visit <a href="../m%3dforum/forums720a.html?74,75,202,60456756">this forum thread</a>.</p></div>
+<br class="clear" />
+<div id="meta">
+Project: <a href="index6498.html?project_id=26">Design Notes</a><br />
+Tags:
+<a href="indexf618.html?tag_id=40">design</a>, <a href="index230c.html?tag_id=1">quest</a>, <a href="index5916.html?tag_id=15">skill</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../www.runescape.com/terms/terms.html">Terms &amp; Conditions</a> and <a href="../../www.runescape.com/privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../www.jagex.com/index.html" target="_blank">
+<img src="../../www.runescape.com/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+ document.write(unescape("%3Cscript src='"+(("https:"==document.location.protocol)?"https://ssl":"http://www")+".google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=83&tag_id=1&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:51:16 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

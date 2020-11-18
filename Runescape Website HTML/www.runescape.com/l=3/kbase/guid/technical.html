@@ -1,0 +1,391 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/l=3/kbase/guid/technical by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:46:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico">
+<link rel="SHORTCUT ICON" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+pt, 
+Português (BR)
+">
+<meta name="keywords" content="MMORPG, jogos de RPG on-line gratuitos, multijogadores on-line, interpretação, jogos para multijogadores em massa, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Jogue RuneScape grátis e junte-se à comunidade global, cumprindo missões e ganhando tesouros enormes num mundo 3D cheio de magia e monstros.">
+<meta name="title" content="RuneScape - MMORPG - Questões técnicas">
+<title>RuneScape - MMORPG - Questões técnicas</title>
+<style type="text/css">/*\*/@import url(../../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../../www.jagex.com/l%3d3/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+ $("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; }) })
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../css/kbase-6.css);/**/</style>
+<script type="text/javascript">
+var link_no=0;
+function open_window(url, width, height) {
+ var settings="toolbar=0,scrollbars=0";
+ if(width && width!=0) settings+=",width=" + width;
+ if(height && height!=0) settings+=",height=" + height;
+ window.open(url, "popuplink" + link_no++, settings);
+}
+var subcats=new Array();
+function add_subcat(parent, id, name, selected) {
+ if(!subcats[parent]) subcats[parent]=new Array();
+ var new_option=document.createElement("OPTION");
+ new_option.name=name;
+ new_option.innerHTML=name;
+ new_option.value=id;
+ if(selected) { new_option.selected='selected'; }
+ subcats[parent][subcats[parent].length]=new_option;
+ return new_option;
+}
+function update_cats(suffix) {
+ if(!suffix) suffix="";
+ var top_level_select=document.getElementById("search_cat_select" + suffix);
+ var subcat_select=document.getElementById("search_subcat_select" + suffix);
+ if(!top_level_select || !subcat_select) return;
+ if(subcat_select.options)
+  for(old in subcat_select.options) subcat_select.options[1]=null;
+  
+ to_show=top_level_select.value;
+ if(to_show>-1 && subcats[to_show]) {
+  for(new_opt=0; new_opt<subcats[to_show].length; new_opt++) {
+   var oldopt=subcats[to_show][new_opt];
+   var newopt=document.createElement("OPTION");
+   newopt.name=oldopt.name;
+   newopt.innerHTML=oldopt.innerHTML;
+   newopt.value=oldopt.value;
+   subcat_select.appendChild(newopt);
+  }
+ }
+}
+window.onload=function() {
+ update_cats();
+ update_cats('_footer');
+}
+</script>
+<script type="text/javascript">
+new_subcat=add_subcat(4, 6, "Galeria Rúnica", -1 == 6);new_subcat=add_subcat(775, 892, "Como começo?", -1 == 892);new_subcat=add_subcat(775, 798, "Controles", -1 == 798);new_subcat=add_subcat(775, 795, "Combate", -1 == 795);new_subcat=add_subcat(775, 776, "Habilidades", -1 == 776);new_subcat=add_subcat(775, 7, "Missões", -1 == 7);new_subcat=add_subcat(775, 831, "Diversos", -1 == 831);new_subcat=add_subcat(9, 127, "Cobrança", -1 == 127);new_subcat=add_subcat(9, 126, "Questões técnicas", -1 == 126);new_subcat=add_subcat(9, 827, "Diretrizes de segurança", -1 == 827);new_subcat=add_subcat(9, 872, "Outro", -1 == 872);
+</script>
+
+</head>
+<body id="navhelp" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHeadAdvert">
+<div id="headAdvert">
+<iframe name="Advert" src="../../../../services.runescape.com/m%3dadvert/l%3d3/banner5052.html?size=730" allowtransparency="true" width="766" height="96" scrolling="no" frameborder="0"></iframe>
+<script type="text/javascript">
+  setTimeout(function() {
+  var url = "http" +
+  (/https:/.test(document.location.href) ? "s" : "") +
+  "://beacon.scorecardresearch.com/scripts/beacon.dll" +
+  "?c1=8&c2=6035824&c3=1271511541440201100" +
+  escape(document.location.href) +
+  "&c8=" + escape(document.title) +
+  "&c9=" + escape(document.referrer) +
+  "&c10=" + escape(screen.width+'x'+screen.height) +
+  "&rn=" + (new Date()).getTime();
+  var i = new Image();
+  i.src = url;
+  }, 1);
+  </script>
+<noscript>
+<img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=8&amp;c2=6035824&amp;c3=1271511541440201100&amp;x=NOJAVASCRIPT" alt="" />
+</noscript>
+</div>
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../title.html" id="home" class="tl"><span class="ts">Principal</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Jogar Agora</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../../secure.runescape.com/m%3dcreate/l%3d3/index.html" class="fly"><span>Novo Usuário</span></a></li>
+<li><a href="../../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Usuário Existente</span></a></li>
+<li><a href="../../options.html" class="fly"><span>Opções Java</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../account_management.html"><span class="ts">Conta</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="https://ecommweb3.levelupgames.com.br/multivendas/frmLogin.aspx" class="fly" target="_blank" 
+onclick="try{pageTracker._trackPageview('/outgoing/levelup/buycredit')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/levelup/buycredit')}catch(x){}"
+><span>Comprar créditos da Level Up!</span></a></li>
+<li><a href="https://secure.runescape.com/m=billing_core/l=3/voucher.ws" class="fly" 
+onclick="try{pageTracker._trackPageview('/billing_core/levelup/redeempin')}catch(x){}; try{_pageTracker._trackPageview('/billing_core/levelup/redeempin')}catch(x){}"
+><span>Resgatar o PIN da Level Up!</span></a></li>
+<li><a href="../../../../secure.runescape.com/m%3dweblogin/l%3d3/members/members.html" class="fly"><span>Benefícios dos membros</span></a></li>
+<li><a href="../../../../secure.runescape.com/m%3dcreate/l%3d3/index-2.html" class="fly"><span>Criar uma nova conta</span></a></li>
+<li><a href="../../account_management.html" class="fly"><span>Gerenciamento de conta</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="manual.html"><span class="ts">Guia do Jogo</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../../services.runescape.com/m%3ditemdb_rs/l%3d3/frontpage.html" class="fly"><span>Mercado Geral</span></a></li>
+<li><a href="rules_of_conduct.html" class="fly"><span>Regras</span></a></li>
+
+<li><a href="../../splash.html" class="fly"><span>O que é RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="http://services.runescape.com/m=forum_pt/l=3/forums.ws"><span class="ts">Comunidade</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="http://services.runescape.com/m=forum_pt/l=3/forums.ws" class="fly"><span>Fóruns</span></a></li>
+<li><a href="../../../../services.runescape.com/m%3dhiscore/l%3d3/hiscores.html" class="fly"><span>Recordes</span></a></li>
+<li><a href="Player_Submissions.html" class="fly"><span>Seção dos Jogadores</span></a></li>
+<li><a href="../../../../services.runescape.com/m%3dadventurers-log/l%3d3/index.html" class="fly"><span>Diário de aventuras</span></a></li>
+
+<li><a href="../../../../services.runescape.com/m%3dpoll/l%3d3/index.html" class="fly"><span>Enquetes</span></a></li>
+<li><a href="Downloads_and_Wallpapers.html" class="fly"><span>Download/Papel de parede</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="Customer_Support.html"><span class="ts">Ajuda</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="Customer_Support.html" class="fly"><span>Suporte ao Cliente</span></a></li>
+<li><a href="../../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Recuperação de senha</span></a></li>
+<li><a href="../../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Desbloquear conta</span></a></li>
+<li><a href="../../../../secure.runescape.com/m%3dweblogin/l%3d3/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Apelar Suspensão/Restrição</span></a></li>
+<li><a href="../../../../services.runescape.com/m%3dbugtracker_v4/l%3d3/index.html" class="fly"><span>Enviar um relatório de erro</span></a></li>
+<li><a href="../../parents.html" class="fly"><span>Guia para Pais</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../../secure.runescape.com/m%3dweblogin/l%3d3/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Login</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../../title.html"><img alt="English" title="English" src="../../img/main/layout/en.gif" /></a>
+<a href="../../../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../img/main/layout/de.gif" /></a>
+<a href="../../../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../img/main/layout/fr.gif" /></a>
+<a href="../../title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Localização: </b> <a href="../../title.html">Principal</a> &gt;
+
+<a href="customer_support-2.html">Suporte ao cliente</a> &gt; Questões técnicas<br />
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+Questões técnicas
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_2">
+<div class="firstborder">
+<div class="brown_box">
+<div class="brown_box" style="margin-bottom: 5px; padding-bottom:1px; padding-right: 0px;">
+<div class="subcatborder" style="margin-right: 2px;">
+<div class="subheading"><a href="the_game_won_t_load-2.html"><img src="../../img/main/kbase/category_pages/img_med/billing_realtime.jpg"/></a></div>
+<div class="subcattext"><div class="subtext"><div class="title1"><a href="the_game_won_t_load-2.html">O jogo não inicia</a></div>
+Ajuda caso não consiga carregar o jogo.
+</div>
+</div>
+</div>
+<div class="subcatborder" style="margin-right: 2px;">
+<div class="subheading"><a href="in_game_problems.html"><img src="../../img/main/kbase/category_pages/img_med/technical_ingame.jpg"/></a></div>
+<div class="subcattext"><div class="subtext"><div class="title1"><a href="in_game_problems.html">O jogo está rodando devagar.</a></div>
+Dicas para aumentar a velocidade do RuneScape:
+</div>
+</div>
+</div>
+<div class="subcatborder">
+<div class="subheading"><a href="hd_fullscreen_help.html"><img src="../../img/main/kbase/category_pages/img_med/technical_fullscreen.jpg"/></a></div>
+<div class="subcattext"><div class="subtext"><div class="title1"><a href="hd_fullscreen_help.html">O HD não quer iniciar</a></div>
+Ajuda para resolver problemas ao usar alta resolução
+</div>
+</div>
+</div>
+<div class="subcatborder" style="margin-right: 2px;">
+<div class="subheading"><a href="technical_system_info.html"><img src="../../img/main/kbase/category_pages/img_med/technical_other.jpg"/></a></div>
+<div class="subcattext"><div class="subtext"><div class="title1"><a href="technical_system_info.html">Como encontro as informações do meu sistema?</a></div>
+Informações úteis:
+</div>
+</div>
+</div>
+<div class="subcatborder" style="margin-right: 2px;">
+<div class="subheading"><a href="other_technical.html"><img src="../../img/main/kbase/category_pages/img_med/faq.jpg"/></a></div>
+<div class="subcattext"><div class="subtext"><div class="title1"><a href="other_technical.html">Outro</a></div>
+Soluções para outros problemas.
+</div>
+</div>
+</div>
+<div class="container" style="clear:both;"></div>
+</div>
+<div class="container" style="clear:both;"></div>
+<div class="brown_box" style="margin-bottom: 5px;"><div class="inner_brown_box">
+<div class="helptext">
+<div class="helptitle">Mais ajuda</div> As seguintes seções do site RuneScape podem ajudar você: <ul class="further">
+<li><a href="http://services.runescape.com/m=forum_pt/l=3/l=3/index.html">Visite os fóruns de suporte técnico</a></li>
+</ul>
+</div>
+</div></div>
+<div class="brown_box"><div class="inner_brown_box">
+<div class="searchtextcategory">
+<form method="get" action="http://www.runescape.com/l=3/kbase/search.ws">
+<table class="bottomsearch">
+<tr>
+<td class="searchtitles" width="60" style="text-align: right"> Pesquisar: </td>
+<td>
+<input class="textinput" name="search_query" id="search_query" size="29" maxlength="300" value="">
+</td>
+<td rowspan="3">
+<table>
+<tr>
+<td>
+<label class="bold">Critérios:</label>
+</td>
+<td></td>
+<td><label class="bold">Encontrar:</label></td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="title_chk" value="1" checked="checked">
+Título </td>
+<td>
+<input class="widget" type="checkbox" name="keywords_chk" value="1" checked="checked">
+Palavras-chave </td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="1" checked="checked">
+Todas </td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="description_chk" value="1" checked="checked">
+Descrição </td>
+<td>
+<input class="widget" type="checkbox" name="body_chk" value="1" checked="checked">
+Corpo </td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="0">
+Qualquer </td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="searchtitles"> Categoria: </td>
+<td>
+<select name="category" id="search_cat_select_footer" onchange="update_cats('_footer')">
+<option value="null"> - TODAS - </option>
+<option value="4">Seção dos Jogadores</option>
+<option value="775">Guia do Jogo</option>
+<option value="9">Suporte ao cliente</option>
+</select></td>
+<td></td>
+</tr>
+<tr>
+<td class="searchtitles"> Subcategoria: </td>
+<td>
+<div id="search_subcat_footer" style="display: none;">
+<select name="subcat" id="search_subcat_select_footer">
+<option value="null"> - TODAS - </option>
+</select>
+</div>
+<script type="text/javascript">
+ document.getElementById("search_subcat_footer").style.display="inline";
+ update_cats('_footer');
+</script>
+</td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;font-size:11px;font-weight:bold; margin-bottom: 0px;">Para ajuda para pesquisar, consulte a nossa página <a href="../searchtips.html">Dicas de pesquisa</a> . <input type="submit" name="submit" class="searchbutton" value="" alt="Search"></p>
+</form>
+</div>
+</div></div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc"> Todos os direitos reservados © 1999 - 2010 Jagex Ltd.<br /> O uso deste site está sujeito aos nossos <a href="../../terms/terms.html">Termos e Condições</a> e <a href="../../privacy/privacy.html">Política de Privacidade</a>. </div>
+<a class="jagexlink" href="../../../../www.jagex.com/index.html" target="_blank">
+<img src="../../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<div style="color:white; margin: 5px auto; width: 766px;">
+<img alt="NÃO RECOMENDADO PARA MENORES DE 12 ANOS - Tema: Estratégia - Contém: Agressão Física" style="float: right;" src="../../img/affil/levelup/age_rating.jpg"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/l=3/kbase/guid/technical by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:46:12 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

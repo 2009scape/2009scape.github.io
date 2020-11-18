@@ -1,0 +1,618 @@
+
+
+
+/* Trail */
+
+.lbold {
+ display: inline;
+ font-weight: bold;
+}
+
+/* xTrail */
+
+/* Article */
+
+.bottomborder {
+ background: transparent url(../img/main/kbase/artbottom.png) repeat-x scroll left bottom;
+}
+
+.bottomright{
+ height: 1%;
+ overflow: visible; 
+ background: transparent url(../img/main/kbase/artroundbr.png) no-repeat scroll right bottom;
+ padding: 0pt 40px 10px 40px;
+ text-align: left;
+}
+
+.bottomleft{
+ background: transparent url(../img/main/kbase/artroundbl.png) no-repeat scroll left bottom;
+}
+
+.listtext{
+ font-weight: normal;
+ padding-bottom: 10px;
+}
+
+.article table {
+ border-collapse: collapse;
+}
+
+#withlinks {
+ margin-top: 20px;
+}
+
+#withoutlinks {
+ margin-top: 35px;
+}
+
+/* xArticle */
+
+/* Search Bar */
+
+.search {
+ background: #e9dfc5;
+ position: relative;
+ width: 100%;
+}
+
+
+
+.article_theme_2 .searchbutton{
+ background:transparent url(../img/main/kbase/search_button_brown.png) no-repeat scroll left top;
+ border:medium none;
+ cursor:pointer;
+ height:31px;
+ margin-left:80px;
+ width:144px;
+}
+
+.article_theme_1 .searchbutton{
+ background:transparent url(../img/main/kbase/search_button_sun.png) no-repeat scroll left top;
+ border:medium none;
+ cursor:pointer;
+ height:31px;
+ margin-left:80px;
+ width:144px;
+}
+
+
+.article_theme_2 .searchbutton:hover, .article_theme_1 .searchbutton:hover{
+ background-position: left bottom;
+}
+
+.searchtop {
+ height: 1%;
+ background: url(../img/main/kbase/searchtop.png) repeat-x scroll left top;
+}
+
+.ctbot {
+ background: transparent url(../img/main/kbase/artroundbottom.png) repeat-x scroll left bottom;
+ height: 5px;
+}
+
+.searchtext{
+ padding-top: 35px;
+ padding-bottom: 35px;
+ color: black;
+ text-align: left;
+}
+
+table.bottomsearch {
+ margin-left:auto;
+ margin-right:auto;
+ width: 590px;
+ text-align: left;
+ font-size: 11px;
+}
+
+#search_cat_select_footer, #search_subcat_select_footer {
+ width: 170px;
+}
+
+.topleft{
+ background: transparent url(../img/main/kbase/searchtopleft.png) no-repeat scroll left top;
+}
+
+.topright{
+ background: transparent url(../img/main/kbase/searchtopright.png) no-repeat scroll right top;
+}
+
+/* xSearch Bar */
+
+
+/* Headers (inc article links) */
+
+.links_empty {
+ padding: 50px 40px;
+}
+
+.links {
+ padding: 35px 20px 0;
+ font-weight: bold;
+ font-size: 8pt;
+ text-align: center;
+}
+
+.brown_links {
+ padding-top: 4px;
+ padding-bottom: 9px;
+ font-weight: bold;
+ font-size: 8pt;
+ text-align: center;
+ color: #a07f3b;
+}
+
+.headingsbrown {
+ font-weight: bold;
+ text-align: center;
+ padding-top: 8px;
+ padding-bottom: 14px;
+}
+
+/* xHeaders (inc article links) */
+
+/* Images */
+
+.imgleft, .imgright {
+ text-align: left;
+ font-style: italic;
+ float: left;
+ margin-right: 10px;
+ margin-bottom: 10px;
+ display: inline;
+ height: 1%;
+}
+
+.imgright {
+ text-align: right;
+ float: right;
+ margin-left: 10px;
+ padding-right: 1px;
+ margin-right:0px;
+ overflow: hidden; /* IE fix */
+}
+
+.imgcentre {
+ text-align:center;
+ font-style: italic;
+ margin:0 auto;
+}
+
+.centrecontainer {
+ position: relative;
+}
+
+.topbord {
+ background: url(../img/main/kbase/imgtopbord.png) repeat-x scroll left top;
+ height: auto;
+ font-size: 0;
+}
+
+.bottombord {
+ background: transparent url(../img/main/kbase/imgbottombord.png) repeat-x scroll left bottom;
+ height: auto;
+}
+
+.leftbord {
+ background: url(../img/main/kbase/imgleftbord.png) repeat-y scroll left center;
+ height: auto;
+}
+
+.rightbord {
+ background: url(../img/main/kbase/imgrightbord.png) repeat-y scroll right center;
+ height: auto;
+}
+
+.toplcorn {
+ background: transparent url(../img/main/kbase/imgtoplcorn.png) no-repeat scroll left top;
+ height: auto;
+}
+
+.toprcorn {
+ background: transparent url(../img/main/kbase/imgtoprcorn.png) no-repeat scroll right top;
+ height: auto;
+}
+
+.bottomlcorn{
+ background: transparent url(../img/main/kbase/imgbottomlcorn.png) no-repeat scroll left bottom;
+ height: auto;
+}
+
+.bottomrcorn{
+ background: transparent url(../img/main/kbase/imgbottomrcorn.png) no-repeat scroll right bottom;
+ padding: 0px;
+}
+
+.bottomrcorn img{
+ display: inline;
+ padding: 5px;
+}
+
+/* xImages */
+
+/* More articles and back to top */
+
+.articlebottom {
+ font-weight: bold;
+ position: relative;
+}
+
+table.bottomlinks {
+ margin-left:auto;
+ margin-right:auto;
+ width: 610px;
+ color: black;
+ padding-top: 4px;
+ text-align: left;
+ margin-bottom: 15px;
+}
+
+.bot {
+ width:50%;
+ vertical-align:top;
+}
+
+/* xMore articles and back to top */
+
+
+/* Category Page */
+
+.itemborder {
+ padding: 4px;
+ background-color: #433824;
+ float:left;
+ margin-bottom:3px;
+}
+
+.cattext {
+ background-image: url(../img/main/kbase/categorybackground.png);
+ height: 70px;
+ width: 277px;
+ vertical-align:top;
+ display:block;
+ float:left;
+ text-align: left;
+ font-size: 12px;
+ margin-left: 4px;
+}
+
+.text {
+ margin: 6px;
+ color: #f9deb3;
+ line-height: 1.2;
+}
+
+.title1{
+ font-weight:bold;
+ color: #d7af6e;
+ padding-bottom: 2px;
+}
+
+.title1 a{
+ text-decoration: none;
+}
+
+.headingpic {
+ float:left;
+}
+
+.help {
+ border: 1px solid #3f3320;
+ background: #2c210d;
+ clear:both;
+ margin-bottom: 4px;
+}
+
+.helptext{
+ margin: 6px;
+ color: white;
+ line-height: 1.6;
+ text-align:left;
+ font-size: 12px;
+}
+
+.helptitle{
+ font-size: 14px;
+ font-weight: bold;
+ color: #d7af6e;
+}
+
+.further {
+ font-weight: bold;
+ color: #897955;
+}
+
+.searchcategory {
+ border: 1px solid #3f3320;
+ background: #2c210d;
+ margin-top: 4px;
+ font-weight: normal;
+ color: white;
+ padding-top: 10px;
+}
+
+.searchtextcategory{
+ font-weight: normal;
+ color: white;
+}
+
+.article_theme_2 .searchtitles {
+ font-size: 11px;
+ text-align: right;
+ padding-right: 10px;
+ font-weight: bold;
+ color: #d7af6e;
+ width: 90px;
+}
+
+.article_theme_1 .searchtitles {
+ font-size: 11px;
+ text-align: right;
+ padding-right: 10px;
+ font-weight: bold;
+ color: black;
+ width: 90px;
+}
+
+.subcatborder {
+ padding: 2px;
+ background-color: #433824;
+ height:57px;
+ float:left;
+ margin-bottom:3px;
+}
+
+.subcatborder img {
+ width: 41px;
+ height: 57px;
+}
+
+.subcattext {
+ background-image: url(../img/main/kbase/subcatbackground.png);
+ height: 57px;
+ width: 192px;;
+ vertical-align:top;
+ display:block;
+ float:left;
+ text-align: left;
+ font-size: 12px;
+ margin-left: 2px;
+}
+
+.subtext {
+ margin: 4px;
+ color: #f9deb3;
+}
+
+.subheading {
+ background: #271C07;
+ float:left;
+}
+
+/* xCategory Page */
+
+/* Quest Page */
+
+.introduction {
+ text-align:left;
+ padding-top: 6px;
+ margin-top: 12px;
+ padding-bottom: 6px;
+}
+
+.questimage {
+ margin-top: 12px;
+ font-style: italic;
+ float:right;
+ text-align: right;
+ line-height: 2em;
+ width: 322px;
+}
+
+.questimage img{
+ border: 6px solid #6B5317;
+}
+
+.htitle {
+ font-weight: bold;
+ padding-bottom: 6px;
+}
+
+.developers {
+ text-align:left;
+ padding: 22px 6px 6px;
+}
+
+.information {
+ text-align:left;
+ margin-top: 12px;
+ float:left;
+ width: 333px;
+ border: 1px solid #B3AA90;
+ color: #443e22;
+ min-height: 212px;
+}
+
+.members {
+ padding: 6px;
+ border-bottom: 1px solid #DED4BA;
+}
+
+.start, .start1 {
+ padding: 6px;
+ border-bottom: 1px solid #DED4BA;
+}
+
+.minreqs {
+ padding: 6px;
+}
+
+.spoilers {
+ margin-top: 10px;
+ text-align: left;
+}
+
+/* xQuest Page */
+
+/* Jagex Rules */
+
+#jagexRule {
+ padding-top: 35px;
+}
+
+.effectivedate {
+ text-align: center;
+}
+
+.backtotop {
+ text-align: center;
+ margin-bottom: 5px;
+ font-size: 11px;
+ font-weight:bold;
+}
+
+.faqsList {
+ background: #e0d6bc;
+ margin: 0pt -3px;
+ position: relative;
+ top: -3px;
+ padding-bottom: 5px;
+}
+
+.article .faqsList ol {
+ color: #675f39;
+ line-height: 2em;
+ margin: 0px;
+ padding: 8px 8px 8px 34px;
+}
+
+.title {
+ font-weight: bold;
+ color: #A07F3B;
+}
+
+.faqsList a{
+ color: #675F39;
+}
+
+/* xJagex Rules */
+
+/* Spoilers */
+
+span.spoiler_top {
+ color: black;
+}
+
+div.spoiler, div.spoiler_show {
+ background: white;
+ color: white;
+ border: 1px solid #b3aa90;
+ padding: 4px;
+}
+
+div.spoiler_show {
+ color: black;
+}
+
+a.spoiler_link {
+ display: none;
+}
+
+/* xSpoilers */
+
+/* Search Page */
+
+#topright {
+ border: 1px solid #b3aa90;
+ font-size: 11px;
+ margin-bottom: 10px;
+}
+
+#topright label {
+ padding-top: 2px;
+ float:left;
+ width: 6em;
+}
+
+#topright input, #topright select {
+ margin: 1px 6px 1px 0px;
+}
+
+.resultssearchtext{
+ padding: 2px 3px;
+}
+
+.searchresultbutton {
+ width: 100px;
+ margin-top: 6px;
+ margin-right:2px;
+ margin-bottom: 2px;
+ font-size: 11px;
+}
+
+.searchresulttext {
+ float: left;
+ padding-left: 6px;
+ padding-top: 2px;
+ width: 50%;
+}
+
+/* xSearch Page */
+
+/* Area Guide */
+
+.headings {
+ padding-bottom: 10px;
+}
+.info_content {
+ padding: 6px;
+ float: right;
+ width: 200px;
+}
+.info_spacer {
+ width: 8px;
+}
+.info_location {
+ border-top:1px solid #DED4BA;
+ border-right: 1px solid #B3AA90;
+ border-bottom: 1px solid #B3AA90;
+ border-left: 1px solid #B3AA90;
+ text-align: center;
+ clear: both;
+ padding: 4px;
+ width: 325px;
+ margin: auto;
+}
+.info_location_none {
+ border-right: 1px solid #B3AA90;
+ border-bottom: 1px solid #B3AA90;
+ border-left: 1px solid #B3AA90;
+ clear: both;
+}
+.info_picture {
+ width: 105px;
+ float: left;
+ margin-left: 5px;
+}
+.info_container_none {
+ border: 1px solid #B3AA90;
+ width:333px;
+}
+.info_table tr {
+ vertical-align: top;
+}
+.info_table {
+ border-collapse: collapse;
+ margin-bottom: 8px;
+}
+
+/* xArea Guide */
+
+.loreimage {
+ background: #cbb17c;
+ border: 1px solid black;
+}
+
+.spoilers table a {
+ color: white;
+}

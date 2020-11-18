@@ -1,0 +1,307 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from secure.runescape.com/m=weblogin/l=3/loginform.ws?mod=offence-appeal&ssl=1&expired=0&dest=account_history.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:39:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../../www.runescape.com/l%3d3/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../../www.runescape.com/l%3d3/favicon.ico">
+<link rel="apple-touch-icon" href="../../../www.runescape.com/l%3d3/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+pt, 
+Português (BR)
+">
+<meta name="keywords" content="MMORPG, jogos de RPG on-line gratuitos, multijogadores on-line, interpretação, jogos para multijogadores em massa, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Jogue RuneScape grátis e junte-se à comunidade global, cumprindo missões e ganhando tesouros enormes num mundo 3D cheio de magia e monstros.">
+<meta name="title" content="RuneScape - MMORPG - O Jogo Gratuito Número 1 para Multijogadores">
+<title>RuneScape - MMORPG - O Jogo Gratuito Número 1 para Multijogadores</title>
+<style type="text/css">/*\*/@import url(../../../www.runescape.com/l%3d3/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/l%3d3/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+ $("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; }) })
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../../www.runescape.com/l%3d3/css/weblogin-6.css);/**/</style>
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">
+     #recaptcha_box {
+      background-position-x: center;
+     }
+    </style>
+<![endif]-->
+
+<script type="text/javascript">
+ 
+ function ShowWarning(strImg,bRecaptcha){
+  document.getElementById('warning_image').style.backgroundImage='url(https://www.runescape.com/l=3/img/weblogin/'+strImg+')';
+  var lb = document.getElementById('login_background');
+  var lp = document.getElementById('login_panel');
+  if ( bRecaptcha ){
+   /* Height sorted out by margins etc. Set heights auto and brown background */
+   
+   
+   lb.style.backgroundImage='none';
+   lb.style.backgroundColor='#2c210d';
+   
+  }else{
+   /* Fixed height, adjust for warning (no warning for non-java or IE6) */
+   
+   
+    lb.style.backgroundImage='url(https://www.runescape.com/l=3/img/weblogin/loginarea_bg.jpg)';
+    lb.style.height="404px";
+   
+  }
+  
+  document.getElementById('warning').style.display="block";
+ }
+ 
+ function SetFocus(){
+  /* If the username field is empty, it gets focus. If the password field is empty but username is filled,
+  it gets focus. Returns false to prevent submit if a field is empty. */
+  var Username = document.getElementById('username');
+  var Password = document.getElementById('password');
+  if ( Username.value == ''){
+   Username.focus();
+   return false;
+  }
+  if ( Password.value == ''){
+   Password.focus();
+   return false;
+  }
+  return true;
+ }
+</script>
+</head>
+<body id="navlogin" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../../www.runescape.com/l%3d3/title.html" id="home" class="tl"><span class="ts">Principal</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../../www.runescape.com/l%3d3/game.html" onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Jogar Agora</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../m%3dcreate/l%3d3/index.html" class="fly"><span>Novo Usuário</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/game.html" id="playExisting" onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Usuário Existente</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/options.html" class="fly"><span>Opções Java</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../../www.runescape.com/l%3d3/account_management.html"><span class="ts">Conta</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="https://ecommweb3.levelupgames.com.br/multivendas/frmLogin.aspx" class="fly" target="_blank" onclick="try{pageTracker._trackPageview('/outgoing/levelup/buycredit')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/levelup/buycredit')}catch(x){}"
+><span>Comprar créditos da Level Up!</span></a></li>
+<li><a href="loginform11c8.html" class="fly" onclick="try{pageTracker._trackPageview('/billing_core/levelup/redeempin')}catch(x){}; try{_pageTracker._trackPageview('/billing_core/levelup/redeempin')}catch(x){}"
+><span>Resgatar o PIN da Level Up!</span></a></li>
+<li><a href="members/members.html" class="fly"><span>Benefícios dos membros</span></a></li>
+<li><a href="../../m%3dcreate/l%3d3/index-2.html" class="fly"><span>Criar uma nova conta</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/account_management.html" class="fly"><span>Gerenciamento de conta</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../../www.runescape.com/l%3d3/kbase/guid/manual.html"><span class="ts">Guia do Jogo</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/l%3d3/frontpage.html" class="fly"><span>Mercado Geral</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/rules_of_conduct.html" class="fly"><span>Regras</span></a></li>
+
+<li><a href="../../../www.runescape.com/l%3d3/splash.html" class="fly"><span>O que é RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="http://services.runescape.com/m=forum_pt/l=3/forums.ws"><span class="ts">Comunidade</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul>
+<li><a href="http://services.runescape.com/m=forum_pt/l=3/forums.ws" class="fly"><span>Fóruns</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/l%3d3/hiscores.html" class="fly"><span>Recordes</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/Player_Submissions.html" class="fly"><span>Seção dos Jogadores</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/l%3d3/index.html" class="fly"><span>Diário de aventuras</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/l%3d3/index.html" class="fly"><span>Enquetes</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Download/Papel de parede</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../../www.runescape.com/l%3d3/kbase/guid/Customer_Support.html"><span class="ts">Ajuda</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/Customer_Support.html" class="fly"><span>Suporte ao Cliente</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Recuperação de senha</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Desbloquear conta</span></a></li>
+<li><a href="loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Apelar Suspensão/Restrição</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/l%3d3/index.html" class="fly"><span>Enviar um relatório de erro</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/parents.html" class="fly"><span>Guia para Pais</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Login</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../../www.runescape.com/l%3d3/game.html" class="HoverImg" id="playBannerNoad"><img src="../../../www.runescape.com/l%3d3/img/main/skins/default/playnowc20a.png?12" alt="Jogar Agora" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../../www.runescape.com/title.html"><img alt="English" title="English" src="../../../www.runescape.com/l%3d3/img/main/layout/en.gif" /></a>
+<a href="../../../www.runescape.com/l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../../www.runescape.com/l%3d3/img/main/layout/de.gif" /></a>
+<a href="../../../www.runescape.com/l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../../www.runescape.com/l%3d3/img/main/layout/fr.gif" /></a>
+<a href="../../../www.runescape.com/l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../../www.runescape.com/l%3d3/img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Localização: </b> <a href="../../../www.runescape.com/l%3d3/title.html">Principal</a> &gt; Login seguro </div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+Login seguro
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="brown_background">
+<div id="login_background" class="inner_brown_background" >
+<div id="login_panel" class="brown_box" >
+<form id="login_form" action="https://secure.runescape.com/m=weblogin/l=3/login.ws" method="post" autocomplete="off">
+<div class="bottom">
+<div class="repeat">
+<div class="top_section">
+<div id="message">
+Inserir o nome de usuário e sua senha para continuar. </div> <div class="section_form" id="usernameSection">
+<label for="username">Nome de usuário:</label>
+<input size="20" type="text" name="username" id="username" maxlength="12"/>
+</div>
+<div class="section_form" id="passwordSection">
+<label for="password">Senha:</label>
+<input size="20" type="password" id="password" name="password" maxlength="20"/>
+</div>
+</div>
+<div class="bottom_section">
+<div id="remember">
+<label for="rem">
+<input type="checkbox" name="rem" id="rem" value="1" class="checkbox"/>
+Marque este campo para lembrar seu nome de usuário</label>
+</div>
+<div id="submit_button">
+<button type="submit" value="Entrar" onmouseover="this.style.backgroundPosition='bottom';" onmouseout="this.style.backgroundPosition='top';" onclick="return SetFocus();">Entrar</button>
+</div>
+<input type="hidden" name="mod" value="offence-appeal"/>
+<input type="hidden" name="ssl" value="1"/>
+<input type="hidden" name="dest" value="account_history.ws"/>
+</div>
+</div>
+</div>
+</form>
+</div>
+<div class="buttons">
+<a href="../../m%3dcreate/l%3d3/index-2.html" class="createaccount"><span class="buttbg"></span>Criar uma Nova Conta<br/>Clique aqui!</a>
+<a href="../../../www.runescape.com/l%3d3/loginapplet/loginappletb4b5.html?mod=accountappeal&amp;dest=passwordchoice.ws" class="recoveraccount"><span class="butt1bg"></span>Perdeu sua senha?<br/> Clique aqui!</a>
+</div>
+<div id="warning">
+<div id="warning_image">
+<p>Insira sua senha apenas onde você pode ver a cor verde e "Jagex Limited" na janela do seu navegador.</p>
+</div>
+</div>
+<script type="text/javascript">
+     if(jQuery.browser.msie && parseFloat(jQuery.browser.version) == 7.0){
+      /* IE7 */
+      ShowWarning('ie7.html',false);
+     }
+     if(jQuery.browser.msie && parseFloat(jQuery.browser.version) == 8.0){
+      /* IE8 */
+      ShowWarning('ie8.html',false);
+     }
+     else if(jQuery.browser.safari && parseFloat(jQuery.browser.version.substr(0,3)) >= 530.0){
+      /* Safari4 */
+      ShowWarning('safaric4ca.html?1',false);
+     }
+     else if(jQuery.browser.mozilla && parseFloat(jQuery.browser.version.substr(0,3)) >= 1.9){
+      /* FF3 */
+      ShowWarning('ff.html',false);
+     }
+     SetFocus();
+    </script>
+<br class="clear" />
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc"> Todos os direitos reservados © 1999 - 2010 Jagex Ltd.<br /> O uso deste site está sujeito aos nossos <a href="../../../www.runescape.com/l%3d3/terms/terms.html">Termos e Condições</a> e <a href="../../../www.runescape.com/l%3d3/privacy/privacy.html">Política de Privacidade</a>. </div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../../www.runescape.com/l%3d3/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<div style="color:white; margin: 5px auto; width: 766px;">
+<img alt="NÃO RECOMENDADO PARA MENORES DE 12 ANOS - Tema: Estratégia - Contém: Agressão Física" style="float: right;" src="../../../www.runescape.com/l%3d3/img/affil/levelup/age_rating.jpg"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from secure.runescape.com/m=weblogin/l=3/loginform.ws?mod=offence-appeal&ssl=1&expired=0&dest=account_history.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:39:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

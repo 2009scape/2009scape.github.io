@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.rssboard.org/~d/styles/itemcontent.css"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1" version="2.0">
+	<channel>
+		<language>de</language>
+		<title>Neuigkeiten von RuneScape</title>
+		<description>Die neuesten Nachrichten aus RuneScape, dem gro&#223;en MMORPG von Jagex.</description>
+		<link>http://www.runescape.com/l=1</link>
+		<docs>http://www.rssboard.org/rss-specification</docs>
+		<generator>JagexRssFeedGenerator</generator>
+		<ttl>30</ttl>
+		<lastBuildDate>Fri, 16 Jul 2010 16:26:27 GMT</lastBuildDate>
+		<image>
+				<url>http://www.runescape.com/l=1/img/news/RSS/rss_logo.png</url>
+		</image>
+
+		<item>
+			<title>Liebesgeschichte</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=1/img/Large/love_story.jpg&quot; /&gt;&#10;				Ein Schatten aus der dunklen Vergangenheit des weisen, alten Manns wirft sich &#252;ber seine Gegenwart. Es erwarten euch neue Baukunst- und Magie-Erweiterungen, wenn ihr mit K&#228;mpfen, R&#228;tseln, Sarkasmus, einem liebeskranken, alten Mann und einer Heulsuse in Not fertigwerdet.
+			</description>
+			<category>Spielupdates</category>
+			<link>http://services.runescape.com/m=news/l=1/liebesgeschichte</link>
+			<pubDate>Mon, 05 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/liebesgeschichte</guid>
+		</item>
+
+		<item>
+			<title>Gewinner des Doppelg&#228;nger-Wettbewerbs</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				Das Wochenende ist vorbei und somit auch der Doppelg&#228;nger-Wettbewerb - nach langer Diskussion haben wir jetzt auch die Gewinner ermittelt!
+			</description>
+			<category>Neues von der Kundenbetreuung</category>
+			<link>http://services.runescape.com/m=news/l=1/gewinner-des-doppelgnger-wettbewerbs</link>
+			<pubDate>Wed, 07 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/gewinner-des-doppelgnger-wettbewerbs</guid>
+		</item>
+
+		<item>
+			<title>Spielergalerie</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/gallery.jpg&quot; /&gt;&#10;				Es ist erst einen Monat her, dass wir die Spielergalerie wiederbelebt haben, aber eure Reaktion war so positiv und so umfangreich, dass sie uns umgehauen hat. Wie versprochen gibt es diesen Monat weitere von RuneScape inspirierte Meisterwerke, an denen ihr euch erg&#246;tzen k&#246;nnt.
+			</description>
+			<category>Neues zur Webseite</category>
+			<link>http://services.runescape.com/m=news/l=1/spielergalerie-1</link>
+			<pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/spielergalerie-1</guid>
+		</item>
+
+		<item>
+			<title>RuneScapes Sommerfestival</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				An diesem Wochenende wird in den USA der Unabh&#228;ngigkeitstag gefeiert. Unser Community-Management-Team m&#246;chte euch dazu ein paar tolle Live-Events pr&#228;sentieren. Lest weiter, um mehr zu erfahren.
+			</description>
+			<category>Neues von der Kundenbetreuung</category>
+			<link>http://services.runescape.com/m=news/l=1/runescapes-sommerfestival</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/runescapes-sommerfestival</guid>
+		</item>
+
+		<item>
+			<title>Hinter den Kulissen im Juli</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=1/img/Large/behind-the-scenes-July_DE.jpg&quot; /&gt;&#10;				Liebesgeschichten, gro&#223;z&#252;gige Kerkerkunde-Belohnungen, Klassen-Ringe und Elite-Schatzsuchen erwarten euch diesen Monat in den Updates! Klingt gut, oder?
+			</description>
+			<category>Der neueste Blick hinter die Kulissen</category>
+			<link>http://services.runescape.com/m=news/l=1/hinter-den-kulissen-im-juli</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/hinter-den-kulissen-im-juli</guid>
+		</item>
+
+		<item>
+			<title>Das gro&#223;e Los im Juni: Sieger</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=1/img/Large/big_ticket_de.jpg&quot; /&gt;&#10;				Der n&#228;chste Gewinner des gro&#223;en Loses wurde ermittelt und n&#228;chsten Monat steht die letzte Ziehung des gro&#223;en Loses an...
+			</description>
+			<category>Neues von der Kundenbetreuung</category>
+			<link>http://services.runescape.com/m=news/l=1/das-groe-los-im-juni-sieger</link>
+			<pubDate>Wed, 30 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/das-groe-los-im-juni-sieger</guid>
+		</item>
+
+		<item>
+			<title>Umfrage zu garantierten Inhalten: Halloween 2010</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/statistics.jpg&quot; /&gt;&#10;				Vor zwei Wochen haben wir eine Umfrage zu garantierten Inhalten durchgef&#252;hrt, um herauszufinden, was ihr euch dieses Jahr an Halloween als Belohnung w&#252;nscht. Die Umfrage ist jetzt beendet, die Ergebnisse wurden ausgez&#228;hlt und wir k&#246;nnen den Sieger verk&#252;nden...
+			</description>
+			<category>Neues zur Webseite</category>
+			<link>http://services.runescape.com/m=news/l=1/umfrage-zu-garantierten-inhalten-halloween-2010</link>
+			<pubDate>Tue, 29 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/umfrage-zu-garantierten-inhalten-halloween-2010</guid>
+		</item>
+
+		<item>
+			<title>Gro&#223;es Los - Juni (Erinnerung)</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=1/img/Large/big_ticket_de.jpg&quot; /&gt;&#10;				Es ist so weit: In ein paar Tagen verlosen wir wieder eine Reise nach England! Wenn ihr also auch die Chance haben wollt, das gro&#223;e Los zu ziehen, lest weiter...
+			</description>
+			<category>Neues von der Kundenbetreuung</category>
+			<link>http://services.runescape.com/m=news/l=1/groes-los---juni-erinnerung</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/groes-los---juni-erinnerung</guid>
+		</item>
+
+		<item>
+			<title>Miner Disturbance f&#252;r iPhone, iPod, iPad</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=1/img/Large/miner_disturbance.png&quot; /&gt;&#10;				Wir haben unseren alten Klassiker &apos;Miner Disturbance&apos; (in Deutschland auch bekannt unter dem Namen &apos;Kalle der Kumpel&apos;) f&#252;r das Apple iPhone &#252;berarbeitet, es war schon auf Platz 5 in den britischen Verkaufscharts!
+			</description>
+			<category>Spielupdates</category>
+			<link>http://services.runescape.com/m=news/l=1/miner-disturbance-fr-iphone-ipod-ipad</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/miner-disturbance-fr-iphone-ipod-ipad</guid>
+		</item>
+
+		<item>
+			<title>Die Ruhe vor dem Schwarm</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=1/img/Large/vkq1.jpg&quot; /&gt;&#10;				K&#246;nnte eins der Monster aus &apos;Der Kammerj&#228;ger&apos; den Kluftrittern entwischt und zum Festland gelangt sein? Testet euren Sp&#252;rsinn, l&#246;st R&#228;tsel und jagt Ungeziefer, um der Wahrheit in diesem niedrigstufigen Abenteuer auf die Spur zu kommen. Klickt auf mehr, um das Video zu sehen!
+			</description>
+			<category>Spielupdates</category>
+			<link>http://services.runescape.com/m=news/l=1/die-ruhe-vor-dem-schwarm</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/die-ruhe-vor-dem-schwarm</guid>
+		</item>
+
+		<item>
+			<title>&#196;nderungen an Gratis-Abenteuern</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/novice_quests.jpg&quot; /&gt;&#10;				Die Abenteuer &apos;Neue Besen r&#252;hren gut&apos; und &apos;Schatzsuche im Schnee&apos; stehen jetzt allen Spielern der kostenlosen Version zur Verf&#252;gung. Wenn ihr sie damals verpasst habt, nutzt die Chance und verbringt ein paar tolle Stunden mit diesen niedrigstufigen, aber dennoch kniffligen Abenteuern!
+			</description>
+			<category>Spielupdates</category>
+			<link>http://services.runescape.com/m=news/l=1/nderungen-an-gratis-abenteuern</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/nderungen-an-gratis-abenteuern</guid>
+		</item>
+
+		<item>
+			<title>Registrierung f&#252;r den Jagex Clan-Cup</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/chalice.jpg&quot; /&gt;&#10;				Der Sommer lockt nicht nur mit Urlaub und Sonnenschein, sondern auch mit dem lang erwarteten Jagex Clan-Cup. Die Registrierung daf&#252;r beginnt dieses Wochenende!
+			</description>
+			<category>Neues von der Kundenbetreuung</category>
+			<link>http://services.runescape.com/m=news/l=1/registrierung-fr-den-jagex-clan-cup</link>
+			<pubDate>Fri, 18 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/registrierung-fr-den-jagex-clan-cup</guid>
+		</item>
+
+		<item>
+			<title>Fight-Knights-Bildschirmhintergrund</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/clanwars.jpg&quot; /&gt;&#10;				&#220;ber 7.000 Spieler aus 12 Communitys hatten sich an unserem ersten internationalen Fight-Knights-Turnier beteiligt. Das polnische Team schlug sie alle! Zur Erinnerung an dieses monumentale Ereignis haben wir einen Bildschirmhintergrund kreiert.
+			</description>
+			<category>Neues zur Webseite</category>
+			<link>http://services.runescape.com/m=news/l=1/fight-knights-bildschirmhintergrund</link>
+			<pubDate>Wed, 16 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/fight-knights-bildschirmhintergrund</guid>
+		</item>
+
+		<item>
+			<title>Uralte Skulpturen</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=1/img/Large/ancient_effigy.jpg&quot; /&gt;&#10;				Viele Monster auf RuneScape lassen jetzt Skulpturen fallen. Wenn ihr in bestimmten Fertigkeiten sehr hohe Stufen habt, k&#246;nnt ihr euch mit diesen Reliquien eine saftige Portion EP verdienen und vielleicht ihre Geheimnisse entschl&#252;sseln&#8230;
+			</description>
+			<category>Spielupdates</category>
+			<link>http://services.runescape.com/m=news/l=1/uralte-skulpturen</link>
+			<pubDate>Tue, 15 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/uralte-skulpturen</guid>
+		</item>
+
+		<item>
+			<title>Burgenkampf - der Sieger der Attacke!</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=1/img/news/icons/minigame.jpg&quot; /&gt;&#10;				Das letzte Wochenende stand ganz im Zeichen des Burgenkampfs. Wer den Krieg um die Flagge gewonnen hat, erfahrt ihr hier.
+			</description>
+			<category>Neues von der Kundenbetreuung</category>
+			<link>http://services.runescape.com/m=news/l=1/burgenkampf---der-sieger-der-attacke</link>
+			<pubDate>Mon, 14 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=1/burgenkampf---der-sieger-der-attacke</guid>
+		</item>
+	</channel>
+</rss>

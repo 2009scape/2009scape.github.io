@@ -1,0 +1,414 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services.runescape.com/m=forum/sl=2/forums.ws?203,204,rules by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 16:22:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../../www.runescape.com/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../../www.runescape.com/favicon.ico">
+<link rel="apple-touch-icon" href="../../../www.runescape.com/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="MMORPG, free RPG games online, online multiplayer, role-playing, massively multiplayer games, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Play RuneScape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
+<meta name="title" content="RuneScape - MMORPG - The No.1 Free Online Multiplayer Game">
+<title>RuneScape - MMORPG - The No.1 Free Online Multiplayer Game</title>
+<style type="text/css">/*\*/@import url(../../../www.runescape.com/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link href="../../../www.runescape.com/css/forum3-7.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript">//<![CDATA[
+ 
+
+
+
+
+
+function save_state_change(group,hidden) {
+ 
+ var groups = get_groups();
+ 
+ var gstring = "";
+ 
+ if (groups!=null) {
+  for (var i=0;i<groups.length;i++) {
+   if (group!=groups[i] && groups[i]!=-1) {
+    if (gstring.length>0) gstring += ",";
+    gstring += groups[i];
+   }
+  }
+ }
+ if (hidden) {
+  if (gstring.length>0) gstring += ",";
+  gstring += group;
+ }
+ 
+ if (gstring=="") gstring = "-1";
+ var expires=new Date();
+ expires.setDate(expires.getDate()+5000);
+ document.cookie = "g="+gstring+";expires="+expires.toGMTString();
+}
+
+
+function get_groups() {
+ var cookie=document.cookie;
+ if (document.cookie!=null) {
+  
+  var crumbs=cookie.split(";");
+  if (crumbs!=null) {
+   for (var i=0;i<crumbs.length;i++) {
+    pair = crumbs[i].split("=");
+    if (pair!=null && pair.length==2 && (pair[0]=="g" || pair[0]==" g")) {
+     
+     var gstring = pair[1];
+     return gstring.split(",");
+    }
+   }
+  }
+ }
+ return null;
+}
+
+var groups_to_hide = get_groups();
+
+function describe(what) {
+ a="";
+ for(part in what) a+=part + "=" + what[part] + "\n";
+ return a;
+}
+
+function replace_classname(node,oldclass,replacement) {
+ $(node).removeClass(oldclass).addClass(replacement);
+}
+
+var show_group = function() {}
+var hide_group = function() {}
+
+
+
+function showhide(show,group) {
+ var $table = $("#group"+group+" tr:not(:first), #group"+group+" tr:first td:not(:first)");
+ var $controls = $("#showhide"+group).unbind("click");
+ if(show){
+  $table.show();
+  $controls
+  .html("<span class='hidefgroup' title='Click to hide this forum group'></span>")
+  .click(function(){ return hide_group(group); });
+ }
+ else{
+  $table.hide();
+  $controls
+  .html("<span class='showfgroup' title='Click to show this forum group'></span>")
+  .click(function(){ return show_group(group); });
+ }
+ if($table.length + $controls.length > 3) return true; 
+ return false;
+}
+show_group = function(group) {
+ var success = showhide(true,group);
+ if (success) {
+  save_state_change(group,false);
+ }
+ return false;
+}
+hide_group = function(group) {
+ var success = showhide(false,group);
+ if (success) {
+  save_state_change(group,true);
+ }
+ return false;
+}
+function is_group_hidden(group) {
+ if (groups_to_hide!=null) {
+  for (var i=0;i<groups_to_hide.length;i++) {
+   if (groups_to_hide[i]==group) {
+    return true;
+   }
+  }
+ }
+ return false;
+}
+
+//]]></script>
+
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../../www.runescape.com/title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../../www.runescape.com/game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../../www.runescape.com/game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../../www.runescape.com/options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../../www.runescape.com/account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../../www.runescape.com/account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../../www.runescape.com/kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../www.runescape.com/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../../www.runescape.com/splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../../www.runescape.com/kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../www.runescape.com/kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../../www.runescape.com/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../../www.runescape.com/parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginformc089.html?mod=forum&amp;ssl=0&amp;dest=login.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../../www.runescape.com/game.html" class="HoverImg" id="playBannerNoad"><img src="../../../www.runescape.com/img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../sl%3d0/forums.html"><img alt="English" title="English" src="../../../www.runescape.com/img/main/layout/en.gif" /></a>
+<a href="http://services.runescape.com/m=forum_de/l=1/forums.ws"><img alt="Deutsch" title="Deutsch" src="../../../www.runescape.com/img/main/layout/de.gif" /></a>
+<a href="http://services.runescape.com/m=forum_fr/l=2/forums.ws"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../../www.runescape.com/img/main/layout/fr.gif" /></a>
+<a href="http://services.runescape.com/m=forum_pt/l=3/forums.ws"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../../www.runescape.com/img/main/layout/br.gif" /></a>
+<a href="../sl%3d4/forums.html"><img alt="Finnish" title="Finnish" src="../../../www.runescape.com/img/forum/flags/finnish.gif" /></a>
+<a href="../sl%3d1/forums.html"><img alt="Dutch" title="Dutch" src="../../../www.runescape.com/img/forum/flags/dutch.gif" /></a>
+<a href="../sl%3d3/forums.html"><img alt="Spanish" title="Spanish" src="../../../www.runescape.com/img/forum/flags/spanish.gif" /></a>
+<a href="../sl%3d7/forums.html"><img alt="Polish" title="Polish" src="../../../www.runescape.com/img/forum/flags/polish.gif" /></a>
+<a href="../sl%3d5/forums.html"><img alt="Swedish" title="Swedish" src="../../../www.runescape.com/img/forum/flags/swedish.gif" /></a>
+<a href="forums.html"><img alt="Danish" title="Danish" src="../../../www.runescape.com/img/forum/flags/danish.gif" /></a>
+<a href="../sl%3d6/forums.html"><img alt="Norwegian" title="Norwegian" src="../../../www.runescape.com/img/forum/flags/norwegian.gif" /></a>
+</div>
+
+
+</div>
+
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../../www.runescape.com/title.html">Home</a> &gt;
+<a href="forums.html"><span>RuneScape Forums</span></a>
+
+<span class="divider">&gt;</span>
+<span><span>Hjælp Rules</span></span>
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+RuneScape Forums
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="brown_background">
+<div id="contrast_panel">
+<div id="infopane">
+<span class="title">Hjælp</span>
+<div class="about">
+<ul class="flat">
+<li><img src="../../../www.runescape.com/img/forum/cmdicons/code_of_conduct.gif" alt=""/>&nbsp;<a href="codeofconduct.html">Code of Conduct</a></li>
+</ul>
+</div>
+</div>
+<div id="nocontrols" class="phold"></div>
+<div class="plhold" id="top">
+</div>
+<div id="info">
+<div class="bk"></div>
+<div class="cont"><b><u>Hjælp</u></b><br>
+<br>
+<br>
+<b>Account  problemer</b><br>
+<br>
+For at holde vores spiller samfund sikkert og holde bedragere ude af spillet, har vi et registrerings system som registrerer lovovertrædelser. Normalt tilføjes disse lovovertrædelser til vedkommendes account når en spiller rapporteres i spillet og en Jagex medarbejder ser på beviserne og beslutter, at en regel er blevet brudt.<br>
+<br>
+Vi plejer at give spiller lov til at appellere lovovertrædelser på deres konto, i tilfælde af at vi har lavet en fejl, eller at der er en forklaring på den regel som blev brudt som vi bør tage i betragtning.<br>
+<br>
+For at administrere lovovertrædelser på din konto, herunder at appellere lovovertrædelser, når denne mulighed er tilgængelig, bedes du benytte linket nedenfor:<br>
+<br>
+<a href="https://offence-appeal.runescape.com/account_history.ws">Appeler en lovovetrædelse</a><br>
+<br>
+Hvis du kender din nuværende adgangskode, og du ønsker at ændre det, skal du klikke på linket nedenfor: <br>
+<br>
+<a href="https://password-history.runescape.com/password.ws">Skift adgangskode</a><br>
+ <br>
+Hvis du har glemt dit password, eller du tror, en anden også ved det, kan du indstille en helt ny adgangskode fra følgende link:<br>
+<br>
+<a href="../../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=accountappeal&amp;dest=passwordchoice.ws">Glemt eller stjålet adgangskode?</a><br>
+<br>
+Hvis vi skal sende dig vigtige oplysninger, vil vi sende det til din konto indbakke. Brug linket nedenfor for at komme til Message Centre:<br>
+<br>
+<a href="https://ticketing.runescape.com/inbox.ws">Konto – Læs beskeder</a><br>
+<br>
+Hvis din konto er blevet låst, kan du starte frigøre processen ved hjælp af linket nedenfor:<br>
+<br>
+<a href="../../../www.runescape.com/loginapplet/loginappletef7e.html?mod=accountappeal&amp;dest=lockchoice.ws">Genvind en låst konto</a><br>
+<br>
+Hvis din konto permanent er lukket eller muted tilbyder vi også mulighed for at konto’en kan undersøges af et af vores specialist teams. De vil kontrollere alle lovovertrædelser, og se om de kan gøre noget for at få unbanned konto eller unmuted. <br>
+<br>
+For at få adgang til denne facilitet skal du sende navnet på den konto på 'Account Review Tråd "- som er en ulåst sticky i toppen af INAM-Forumet.<br>
+<br>
+Du kan også få adgang til denne tråd ved at indtaste QFC (Quick Find Code): 103-104-3-58567982 og gå til det øverste felt øverst på fora. <br>
+<br>
+Fra tid til anden, låser vi revisionen tråd mens vi indhente en anmeldelser af kontoer. Hvis tråd er låst, når du besøger det, kan du tjekke det igen om et par dage. <br>
+<br>
+<br>
+<b>BETALINGS-SPØRGSMÅL</b><br>
+<br>
+Hvis du ønsker at abonnere på din konto for at blive medlem, kan du bruge dette <a href="https://billing-core.runescape.com/paymentoptions.ws">link</a> for at få tingene i gang.<br>
+<br>
+Hvis du allerede er medlem, eller ønsker at rejse spørgsmål til os om din konto om betaling bedes du benytte dig af vores <a href="https://ticketing.runescape.com/billingsupport.html">betalningsspørgsmål</a>-service.<br> 
+<br>
+Vi ved, at spørgsmål vedrørende din konto abonnement er virkelig vigtige. Af denne grund, giver vi en masse information om vores side, og vi har også en tråd for betalings-spørgsmål, som indeholder svar på langt de fleste spørgsmål om betaling.<br>
+<br>
+Hvis du har været på tråden for betalings-spørgsmål og har benyttet dig af valgmulighed ovenfor, og du stadig ikke kan finde svar på dit spørgsmål - så kan du også kontakte vores betalings team direkte via e-mail. Vi vil sætte pris på, hvis du kun bruger denne e-mail mulighed som en ”sidste udvej”, og kun benytter denne for spørgsmål vedrørende betaling. <br>
+<br>
+For at kontakte vores betalings/regnings team kan du send en mail til billingsupport@jagex.com eller klikke på dette <a href="mailto:billingsupport@jagex.com">direkte link</a>.<br>
+<br>
+<br>
+<b>TEKNISK – FEJL/BUGS</b><br>
+<br>
+Hvis du støder på en fejl i vores spil, anbefaler vi, at du ikke udnytter det, eller fortælle andre om det. <br>
+<br>
+I stedet vil vi virkelig sætte pris på, hvis du kan indsende en (bug report) fejlrapport til os. Når du gør dette, vil vores specialiserede team, arbejde på at udbedre dette hurtigst muligt.<br>
+<br>
+Lad os venligst vide om eventuelle bugs/fejl via <a href="http://bugtracker-v4.runescape.com/index.html">Submit a bug report</a>-systemet på vores hjemmeside.<br>
+<br>
+Hvis du har et teknisk problem, som ikke er en bug, kan du kontakte os med detaljerne. Hvis vi kan hjælpe med at løse problemet så gør vi dette!<br>
+<br>
+<a href="https://ticketing.runescape.com/tech_support.html">Send et teknisk spørgsmål</a></div>
+</div>
+<div id="menu">
+<a href="forums5750.html?203,204">Back to thread list</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../../www.runescape.com/title.html">Home</a> &gt;
+<a href="forums.html"><span>RuneScape Forums</span></a>
+
+<span class="divider">&gt;</span>
+<span><span>Hjælp Rules</span></span>
+</div>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../../www.runescape.com/terms/terms.html">Terms &amp; Conditions</a> and <a href="../../../www.runescape.com/privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../../www.runescape.com/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services.runescape.com/m=forum/sl=2/forums.ws?203,204,rules by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 16:22:53 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

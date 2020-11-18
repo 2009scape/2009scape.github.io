@@ -1,0 +1,189 @@
+
+
+
+p{
+ margin:7px 0;
+}
+
+.progressbar{
+ background-image: url(../img/main/progressbar.png);
+ background-repeat: none;
+ height: 28px;
+}
+
+.progressbar td{
+ width: 144px;
+ height:28px;
+ font-weight:bold;
+ font-size:11px;
+ text-align:center;
+}
+
+.mybutton {
+ background: #D2BB86;
+ border: medium solid #382418;
+ font-weight: bold;
+ height: 25px;
+}
+
+.progtext {
+ background: transparent url(../img/main/bordersplit.png) no-repeat;
+ padding-left: 1px;
+}
+
+.choosecategory {
+ color:#F8AF3B;
+ font-weight:bold;
+}
+
+#tableboxstyle {
+ background: #2C210D;
+ border: 1px solid #3F3320;
+ margin: 20px;
+ margin-top: 10px;
+ padding: 6px;
+}
+
+#whiteheader {
+ color:white;
+ height: 24px;
+}
+
+#bugfloatleft {
+ float:left;
+ height:1%;
+}
+
+#bugfloatright {
+ float:right;
+ height:1%;
+}
+
+#lightboxstyle {
+ background: #392c14;
+ padding: 4px;
+}
+
+.red_box {
+ color: #f8af3b;
+ font-weight: bold;
+}
+
+.reviewtable {
+ width: 660px;
+ text-align: center;
+ font-size: 12px;
+} 
+
+.header {
+ background: #392C14;
+ padding: 5px;
+ font-weight: bold;
+ color: #B29353;
+}
+
+.bord {
+ border-right:1px solid #68594A;
+}
+
+.wordbuster {
+ text-align: left;
+ overflow: hidden;
+}
+
+.input {
+ padding: 5px;
+}
+
+.brownpadding {
+ margin-bottom: 0px;
+ padding: 20px;
+}
+
+.padding5pix {
+ margin-bottom: 5px;
+}
+
+.tickorcross {
+ display:block;
+ margin:0;
+ padding:0;
+ background-repeat: no-repeat;
+}
+
+.paddingnomargin {
+ padding: 20px;
+}
+
+.formtext {
+ padding:20px;
+ /* color: #d4cec3; */
+}
+
+.block {
+ display:block;
+}
+
+formcolor {
+ color: #d4cec3;
+}
+
+#reproduce {
+ float:left;
+ padding-left: 120px;
+}
+
+.firstnoticed {
+ float:left;
+ left: 15%;
+}
+
+.witnessed {
+ padding-left: 100px;
+ float:left; 
+}
+
+.section form {
+ margin: 0px;
+}
+
+.lightbox {
+ background: #392c14;
+ padding: 4px;
+ height: 1%;
+ margin-top:4px;
+}
+
+.darkbox {
+ background: #4E3D21;
+ padding: 4px;
+ height: 1%;
+ margin-top:4px;
+}
+
+.bigtext {
+ height: 100px;
+ width: 664px;
+} 
+
+.biggertext {
+ height:130px;
+ width: 664px;
+}
+
+.smalltext {
+ height: 100px;
+ width: 300px;
+}
+
+.progresspast {
+ color: #514e49;
+}
+
+.progressnow {
+ color: #f8af3b;
+}
+
+.centre {
+ text-align: center;
+}

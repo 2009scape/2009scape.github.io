@@ -1,0 +1,718 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services.runescape.com/m=forum/sl=7/forums.ws?223,224,goto,0 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 16:06:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../../www.runescape.com/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../../www.runescape.com/favicon.ico">
+<link rel="apple-touch-icon" href="../../../www.runescape.com/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="MMORPG, free RPG games online, online multiplayer, role-playing, massively multiplayer games, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Play RuneScape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
+<meta name="title" content="RuneScape - MMORPG - The No.1 Free Online Multiplayer Game">
+<title>RuneScape - MMORPG - The No.1 Free Online Multiplayer Game</title>
+<style type="text/css">/*\*/@import url(../../../www.runescape.com/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link href="../../../www.runescape.com/css/forum3-7.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript">//<![CDATA[
+ 
+
+
+
+
+
+function save_state_change(group,hidden) {
+ 
+ var groups = get_groups();
+ 
+ var gstring = "";
+ 
+ if (groups!=null) {
+  for (var i=0;i<groups.length;i++) {
+   if (group!=groups[i] && groups[i]!=-1) {
+    if (gstring.length>0) gstring += ",";
+    gstring += groups[i];
+   }
+  }
+ }
+ if (hidden) {
+  if (gstring.length>0) gstring += ",";
+  gstring += group;
+ }
+ 
+ if (gstring=="") gstring = "-1";
+ var expires=new Date();
+ expires.setDate(expires.getDate()+5000);
+ document.cookie = "g="+gstring+";expires="+expires.toGMTString();
+}
+
+
+function get_groups() {
+ var cookie=document.cookie;
+ if (document.cookie!=null) {
+  
+  var crumbs=cookie.split(";");
+  if (crumbs!=null) {
+   for (var i=0;i<crumbs.length;i++) {
+    pair = crumbs[i].split("=");
+    if (pair!=null && pair.length==2 && (pair[0]=="g" || pair[0]==" g")) {
+     
+     var gstring = pair[1];
+     return gstring.split(",");
+    }
+   }
+  }
+ }
+ return null;
+}
+
+var groups_to_hide = get_groups();
+
+function describe(what) {
+ a="";
+ for(part in what) a+=part + "=" + what[part] + "\n";
+ return a;
+}
+
+function replace_classname(node,oldclass,replacement) {
+ $(node).removeClass(oldclass).addClass(replacement);
+}
+
+var show_group = function() {}
+var hide_group = function() {}
+
+
+
+function showhide(show,group) {
+ var $table = $("#group"+group+" tr:not(:first), #group"+group+" tr:first td:not(:first)");
+ var $controls = $("#showhide"+group).unbind("click");
+ if(show){
+  $table.show();
+  $controls
+  .html("<span class='hidefgroup' title='Click to hide this forum group'></span>")
+  .click(function(){ return hide_group(group); });
+ }
+ else{
+  $table.hide();
+  $controls
+  .html("<span class='showfgroup' title='Click to show this forum group'></span>")
+  .click(function(){ return show_group(group); });
+ }
+ if($table.length + $controls.length > 3) return true; 
+ return false;
+}
+show_group = function(group) {
+ var success = showhide(true,group);
+ if (success) {
+  save_state_change(group,false);
+ }
+ return false;
+}
+hide_group = function(group) {
+ var success = showhide(false,group);
+ if (success) {
+  save_state_change(group,true);
+ }
+ return false;
+}
+function is_group_hidden(group) {
+ if (groups_to_hide!=null) {
+  for (var i=0;i<groups_to_hide.length;i++) {
+   if (groups_to_hide[i]==group) {
+    return true;
+   }
+  }
+ }
+ return false;
+}
+
+//]]></script>
+
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../../www.runescape.com/title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../../www.runescape.com/game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../../www.runescape.com/game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../../www.runescape.com/options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../../www.runescape.com/account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../../www.runescape.com/account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../../www.runescape.com/kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../www.runescape.com/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../../www.runescape.com/splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../../../www.runescape.com/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../../www.runescape.com/kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../www.runescape.com/kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../../www.runescape.com/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../../www.runescape.com/parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginformc089.html?mod=forum&amp;ssl=0&amp;dest=login.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../../www.runescape.com/game.html" class="HoverImg" id="playBannerNoad"><img src="../../../www.runescape.com/img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../sl%3d0/forums.html"><img alt="English" title="English" src="../../../www.runescape.com/img/main/layout/en.gif" /></a>
+<a href="http://services.runescape.com/m=forum_de/l=1/forums.ws"><img alt="Deutsch" title="Deutsch" src="../../../www.runescape.com/img/main/layout/de.gif" /></a>
+<a href="http://services.runescape.com/m=forum_fr/l=2/forums.ws"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../../www.runescape.com/img/main/layout/fr.gif" /></a>
+<a href="http://services.runescape.com/m=forum_pt/l=3/forums.ws"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../../www.runescape.com/img/main/layout/br.gif" /></a>
+<a href="../sl%3d4/forums.html"><img alt="Finnish" title="Finnish" src="../../../www.runescape.com/img/forum/flags/finnish.gif" /></a>
+<a href="../sl%3d1/forums.html"><img alt="Dutch" title="Dutch" src="../../../www.runescape.com/img/forum/flags/dutch.gif" /></a>
+<a href="../sl%3d3/forums.html"><img alt="Spanish" title="Spanish" src="../../../www.runescape.com/img/forum/flags/spanish.gif" /></a>
+<a href="forums.html"><img alt="Polish" title="Polish" src="../../../www.runescape.com/img/forum/flags/polish.gif" /></a>
+<a href="../sl%3d5/forums.html"><img alt="Swedish" title="Swedish" src="../../../www.runescape.com/img/forum/flags/swedish.gif" /></a>
+<a href="../sl%3d2/forums.html"><img alt="Danish" title="Danish" src="../../../www.runescape.com/img/forum/flags/danish.gif" /></a>
+<a href="../sl%3d6/forums.html"><img alt="Norwegian" title="Norwegian" src="../../../www.runescape.com/img/forum/flags/norwegian.gif" /></a>
+</div>
+
+
+</div>
+
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../../www.runescape.com/title.html">Home</a> &gt;
+<a href="forums.html"><span>RuneScape Forums</span></a>
+
+<span class="divider">&gt;</span>
+<span><span>Klany</span></span>
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+RuneScape Forums
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="brown_background">
+<div id="picker">
+<form method="post" action="http://services.runescape.com/m=forum/sl=7/forums.ws">
+<ul class="flat" style="margin:1px;">
+<li class="rightpad search"><img src="../../../www.runescape.com/img/forum/cmdicons/search_threads.gif" alt=""/> <a href="searchthreads.html">Search Threads</a></li>
+<li class="jump_to_thread">Jump to Thread: <input class="textinput" size="6" name="uid"/>
+</li>
+<li class="jump_to_forum">
+<select class="a" name="forumpicker" style="width: 224px;">
+<option value="-1" selected="selected">Jump to forum...</option>
+<option value="217">Informacje, ogloszenia, na imprezy zaproszenia</option>
+<option value="139">Ogólnie</option>
+<option value="221">Pomoc</option>
+<option value="223">Klany</option>
+<option value="225">English-Polish Friendship forum</option>
+<option value="228">Off Topic</option>
+</select>
+</li>
+<li><input class="buttonsmall" type="submit" name="jump" value="Go" style="margin-right:6px;"></li>
+</ul>
+</form>
+</div>
+<div id="contrast_panel">
+<div id="infopane">
+<span class="title"><img src="../../../www.runescape.com/img/forum/icons/clan_homes.jpg" alt=""/> &nbsp; Klany &nbsp; <img src="../../../www.runescape.com/img/forum/icons/clan_homes.jpg" alt=""/></span>
+<div class="about">
+<ul class="flat">
+<li><img src="../../../www.runescape.com/img/forum/cmdicons/code_of_conduct.gif" alt=""/> <a href="codeofconduct.html">Code of Conduct</a></li>
+<li><img src="../../../www.runescape.com/img/forum/cmdicons/forum_rules.gif" alt=""/> <a href="forumse0bc.html?223,224,rules">Forum-specific Rules</a></li>
+
+<li><br/>
+<span class="count">
+
+0 active users in this Forum
+
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div id="nocontrols" class="phold"></div>
+
+
+<div class="actions" id="top">
+<table>
+<tr>
+<td class="commands center">
+<ul class="flat first-child">
+<li class="first-child">
+<a href="forums.html"><img src="../../../www.runescape.com/img/forum/cmdicons/backtoforum.gif" alt=""/> Up to RuneScape Forums</a>
+</li>
+<li><a href="forums2189.html?223,224,goto,1"><img src="../../../www.runescape.com/img/forum/cmdicons/refresh.gif" alt=""/> Refresh</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="nav center">
+<form method="post" style="display: inline;" action="http://services.runescape.com/m=forum/sl=7/forums.ws?223,224">
+<ul class="flat last-child">
+<li class="first-child"><a href="forums2189.html?223,224,goto,1">&lt;&lt; first</a></li>
+<li><a href="forumsaa70.html?223,224,goto,0">&lt; prev</a></li>
+<li>Page <input type="text" class="textinput" name="start" size="2" value="1" /> of 3</li>
+<li><a href="forums1e04.html?223,224,goto,2">next &gt;</a></li>
+<li><a href="forums9231.html?223,224,goto,3">last &gt;&gt;</a></li>
+</ul>
+<input type="submit" name="grrclient" value="grr" style="width:0px;height:0px;padding:0px;margin:0px;font-size:0px;border:0px;float: left;"/>
+</form>
+</td>
+</tr>
+</table>
+</div>
+<div id="content_forum" class="border">
+<div class="bk"></div>
+<div class="cont">
+<table >
+<tr>
+<td class="title1 first-child">&nbsp;</td>
+<td id="header_posts" class="center title">Posts</td>
+<td id="header_lastpost" class="title1">
+Last Post
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forumsb729.html?223,224,37,61251263">[FOP]Forces of Poland</a><br/>
+<span class="nt">created by <span class="username">Gl Im Falcon</span></span>
+</td>
+<td class="n posts">
+4
+</td>
+<td class="updated">
+16-Jul-2010 22:05:56
+<br/>by Lvcaz
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forumse58a.html?223,224,0,60844879">DRAGON HUNTERS 2010/2011</a><br/>
+<span class="nt">created by <span class="username">Bartus Saint</span></span>
+</td>
+<td class="n posts">
+20
+</td>
+<td class="updated">
+16-Jul-2010 16:06:33
+<br/>by I am Matzz
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forums0a0a.html?223,224,39,61290606">[UDG] Underground.</a><br/>
+<span class="nt">created by <span class="username">Rnj</span></span>
+</td>
+<td class="n posts">
+5
+</td>
+<td class="updated">
+13-Jul-2010 18:18:42
+<br/>by Hunril1
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forumse66d.html?223,224,40,61307917">Leviatan Polski Klan RS</a><br/>
+<span class="nt">created by <span class="username">MJ moonwalk</span></span>
+</td>
+<td class="n posts">
+2
+</td>
+<td class="updated">
+14-Jul-2010 20:28:37
+<br/>by Rnj
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forums2062.html?223,224,35,61240567">Order of Truth</a><br/>
+<span class="nt">created by <span class="username">Hugos1993</span></span>
+</td>
+<td class="n posts">
+14
+</td>
+<td class="updated">
+11-Jul-2010 11:28:04
+<br/>by Kragg3802
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forumsb26a.html?223,224,2,60852816">Armia Polska of RS [AP]</a><br/>
+<span class="nt">created by <span class="username">aeaogoraeao</span></span>
+</td>
+<td class="n posts">
+9
+</td>
+<td class="updated">
+10-Jul-2010 15:59:12
+<br/>by Danielo7241
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forumsfe5f.html?223,224,30,61004008">[TPE] The Polish Elite</a><br/>
+<span class="nt">created by <span class="username">Radzi0wnik</span></span>
+</td>
+<td class="n posts">
+3
+</td>
+<td class="updated">
+05-Jul-2010 12:40:14
+<br/>by Mioduszkowy
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forums5003.html?223,224,25,60886079">Husaria Polska</a><br/>
+<span class="nt">created by <span class="username">Kosciej13</span></span>
+</td>
+<td class="n posts">
+29
+</td>
+<td class="updated">
+31-May-2010 17:03:06
+<br/>by sgt_badyl
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forums98eb.html?223,224,16,60885671">Strong Green Dragons</a><br/>
+<span class="nt">created by <span class="username">Michal Paw</span></span>
+</td>
+<td class="n posts">
+11
+</td>
+<td class="updated">
+28-May-2010 22:01:37
+<br/>by Don Auror
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forums80fa.html?223,224,27,60951199">Army of Dragons</a><br/>
+<span class="nt">created by <span class="username">Fc Maciek</span></span>
+</td>
+<td class="n posts">
+7
+</td>
+<td class="updated">
+16-May-2010 11:58:50
+<br/>by Fc Maciek
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forumseff2.html?223,224,13,60885520">Skilling Sprinters [SS]</a><br/>
+<span class="nt">created by <span class="username">Mala Jeny</span></span>
+</td>
+<td class="n posts">
+11
+</td>
+<td class="updated">
+11-May-2010 14:15:17
+<br/>by Perkaman
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<img alt="Thread is sticky" title="Thread is sticky" src="../../../www.runescape.com/img/forum/buttons/sticky.gif"/>
+<a class="sticky1" href="forums4789.html?223,224,4,60885359">Polish Legends [PL]</a><br/>
+<span class="nt">created by <span class="username">Ajr Taxi</span></span>
+</td>
+<td class="n posts">
+7
+</td>
+<td class="updated">
+08-Nov-2009 09:48:37
+<br/>by LimfeK AP
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forums8193.html?223,224,41,61320766">Banana Noobs</a><br/>
+<span class="nt">created by <span class="username">Avest</span></span>
+</td>
+<td class="n posts">
+1
+</td>
+<td class="updated">
+16-Jul-2010 20:57:47
+<br/>by Avest
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forums6941.html?223,224,29,60998574">Akademie</a><br/>
+<span class="nt">created by <span class="username">Mod Karolina</span></span>
+</td>
+<td class="n posts">
+5
+</td>
+<td class="updated">
+11-Jul-2010 12:04:00
+<br/>by Motywator
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forums5738.html?223,224,26,60886231">Klany</a><br/>
+<span class="nt">created by <span class="username">Mod Karolina</span></span>
+</td>
+<td class="n posts">
+33
+</td>
+<td class="updated">
+11-Jul-2010 09:49:15
+<br/>by Rnj
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forums274a.html?223,224,38,61258287">Akademia klanu SLAYER DEATH'S</a><br/>
+<span class="nt">created by <span class="username">Ratatuj3</span></span>
+</td>
+<td class="n posts">
+1
+</td>
+<td class="updated">
+05-Jul-2010 18:51:40
+<br/>by Ratatuj3
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forumsa8d2.html?223,224,28,60976493">szukam klanu szczegó&amp;#322;y w </a><br/>
+<span class="nt">created by <span class="username">Zabojca120</span></span>
+</td>
+<td class="n posts">
+2
+</td>
+<td class="updated">
+05-Jul-2010 18:26:28
+<br/>by Ratatuj3
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forumsc91c.html?223,224,36,61243520">The Knights of Order [KO]</a><br/>
+<span class="nt">created by <span class="username">Axe Attack</span></span>
+</td>
+<td class="n posts">
+2
+</td>
+<td class="updated">
+03-Jul-2010 00:24:00
+<br/>by Axe Attack
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forumsed71.html?223,224,34,61170149">SLAYER DEATH'S</a><br/>
+<span class="nt">created by <span class="username">Ratatuj3</span></span>
+</td>
+<td class="n posts">
+1
+</td>
+<td class="updated">
+21-Jun-2010 18:01:43
+<br/>by Ratatuj3
+</td>
+</tr>
+<tr class="thdnrml">
+<td class="threadtitle">
+<a class="sticky2" href="forums5715.html?223,224,33,61157885">Pure clan</a><br/>
+<span class="nt">created by <span class="username">Ma780g Ud3h</span></span>
+</td>
+<td class="n posts">
+1
+</td>
+<td class="updated">
+19-Jun-2010 08:21:20
+<br/>by Ma780g Ud3h
+</td>
+</tr>
+</table>
+</div>
+</div>
+<div class="actions" id="bottom">
+<table>
+<tr>
+<td class="commands center">
+<ul class="flat first-child">
+<li class="first-child">
+<a href="forums.html"><img src="../../../www.runescape.com/img/forum/cmdicons/backtoforum.gif" alt=""/> Up to RuneScape Forums</a>
+</li>
+<li><a href="forums2189.html?223,224,goto,1"><img src="../../../www.runescape.com/img/forum/cmdicons/refresh.gif" alt=""/> Refresh</a></li>
+</ul>
+</td>
+</tr>
+<tr>
+<td class="nav center">
+<form method="post" style="display: inline;" action="http://services.runescape.com/m=forum/sl=7/forums.ws?223,224">
+<ul class="flat last-child">
+<li class="first-child"><a href="forums2189.html?223,224,goto,1">&lt;&lt; first</a></li>
+<li><a href="forumsaa70.html?223,224,goto,0">&lt; prev</a></li>
+<li>Page <input type="text" class="textinput" name="start" size="2" value="1" /> of 3</li>
+<li><a href="forums1e04.html?223,224,goto,2">next &gt;</a></li>
+<li><a href="forums9231.html?223,224,goto,3">last &gt;&gt;</a></li>
+</ul>
+<input type="submit" name="grrclient" value="grr" style="width:0px;height:0px;padding:0px;margin:0px;font-size:0px;border:0px;float: left;"/>
+</form>
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../../www.runescape.com/title.html">Home</a> &gt;
+<a href="forums.html"><span>RuneScape Forums</span></a>
+
+<span class="divider">&gt;</span>
+<span><span>Klany</span></span>
+</div>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../../www.runescape.com/terms/terms.html">Terms &amp; Conditions</a> and <a href="../../../www.runescape.com/privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../../www.runescape.com/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services.runescape.com/m=forum/sl=7/forums.ws?223,224,goto,0 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 16:06:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

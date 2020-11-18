@@ -1,0 +1,571 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services.runescape.com/m=forum/forums.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 08:59:07 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../www.runescape.com/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../www.runescape.com/favicon.ico">
+<link rel="apple-touch-icon" href="../../www.runescape.com/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="MMORPG, free RPG games online, online multiplayer, role-playing, massively multiplayer games, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Play RuneScape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
+<meta name="title" content="RuneScape - MMORPG - The No.1 Free Online Multiplayer Game">
+<title>RuneScape - MMORPG - The No.1 Free Online Multiplayer Game</title>
+<style type="text/css">/*\*/@import url(../../www.runescape.com/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link href="../../www.runescape.com/css/forum3-7.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript">//<![CDATA[
+ 
+
+
+
+
+
+function save_state_change(group,hidden) {
+ 
+ var groups = get_groups();
+ 
+ var gstring = "";
+ 
+ if (groups!=null) {
+  for (var i=0;i<groups.length;i++) {
+   if (group!=groups[i] && groups[i]!=-1) {
+    if (gstring.length>0) gstring += ",";
+    gstring += groups[i];
+   }
+  }
+ }
+ if (hidden) {
+  if (gstring.length>0) gstring += ",";
+  gstring += group;
+ }
+ 
+ if (gstring=="") gstring = "-1";
+ var expires=new Date();
+ expires.setDate(expires.getDate()+5000);
+ document.cookie = "g="+gstring+";expires="+expires.toGMTString();
+}
+
+
+function get_groups() {
+ var cookie=document.cookie;
+ if (document.cookie!=null) {
+  
+  var crumbs=cookie.split(";");
+  if (crumbs!=null) {
+   for (var i=0;i<crumbs.length;i++) {
+    pair = crumbs[i].split("=");
+    if (pair!=null && pair.length==2 && (pair[0]=="g" || pair[0]==" g")) {
+     
+     var gstring = pair[1];
+     return gstring.split(",");
+    }
+   }
+  }
+ }
+ return null;
+}
+
+var groups_to_hide = get_groups();
+
+function describe(what) {
+ a="";
+ for(part in what) a+=part + "=" + what[part] + "\n";
+ return a;
+}
+
+function replace_classname(node,oldclass,replacement) {
+ $(node).removeClass(oldclass).addClass(replacement);
+}
+
+var show_group = function() {}
+var hide_group = function() {}
+
+
+
+function showhide(show,group) {
+ var $table = $("#group"+group+" tr:not(:first), #group"+group+" tr:first td:not(:first)");
+ var $controls = $("#showhide"+group).unbind("click");
+ if(show){
+  $table.show();
+  $controls
+  .html("<span class='hidefgroup' title='Click to hide this forum group'></span>")
+  .click(function(){ return hide_group(group); });
+ }
+ else{
+  $table.hide();
+  $controls
+  .html("<span class='showfgroup' title='Click to show this forum group'></span>")
+  .click(function(){ return show_group(group); });
+ }
+ if($table.length + $controls.length > 3) return true; 
+ return false;
+}
+show_group = function(group) {
+ var success = showhide(true,group);
+ if (success) {
+  save_state_change(group,false);
+ }
+ return false;
+}
+hide_group = function(group) {
+ var success = showhide(false,group);
+ if (success) {
+  save_state_change(group,true);
+ }
+ return false;
+}
+function is_group_hidden(group) {
+ if (groups_to_hide!=null) {
+  for (var i=0;i<groups_to_hide.length;i++) {
+   if (groups_to_hide[i]==group) {
+    return true;
+   }
+  }
+ }
+ return false;
+}
+
+//]]></script>
+
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../www.runescape.com/title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../www.runescape.com/game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../www.runescape.com/game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../www.runescape.com/options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../www.runescape.com/account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../www.runescape.com/account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../www.runescape.com/kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../www.runescape.com/splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="sl%3d0/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="sl%3d0/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../www.runescape.com/kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../www.runescape.com/parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../secure.runescape.com/m%3dweblogin/loginformc089.html?mod=forum&amp;ssl=0&amp;dest=login.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../www.runescape.com/game.html" class="HoverImg" id="playBannerNoad"><img src="../../www.runescape.com/img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="sl%3d0/forums.html"><img alt="English" title="English" src="../../www.runescape.com/img/main/layout/en.gif" /></a>
+<a href="http://services.runescape.com/m=forum_de/l=1/forums.ws"><img alt="Deutsch" title="Deutsch" src="../../www.runescape.com/img/main/layout/de.gif" /></a>
+<a href="http://services.runescape.com/m=forum_fr/l=2/forums.ws"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../www.runescape.com/img/main/layout/fr.gif" /></a>
+<a href="http://services.runescape.com/m=forum_pt/l=3/forums.ws"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../www.runescape.com/img/main/layout/br.gif" /></a>
+<a href="sl%3d4/forums.html"><img alt="Finnish" title="Finnish" src="../../www.runescape.com/img/forum/flags/finnish.gif" /></a>
+<a href="sl%3d1/forums.html"><img alt="Dutch" title="Dutch" src="../../www.runescape.com/img/forum/flags/dutch.gif" /></a>
+<a href="sl%3d3/forums.html"><img alt="Spanish" title="Spanish" src="../../www.runescape.com/img/forum/flags/spanish.gif" /></a>
+<a href="sl%3d7/forums.html"><img alt="Polish" title="Polish" src="../../www.runescape.com/img/forum/flags/polish.gif" /></a>
+<a href="sl%3d5/forums.html"><img alt="Swedish" title="Swedish" src="../../www.runescape.com/img/forum/flags/swedish.gif" /></a>
+<a href="sl%3d2/forums.html"><img alt="Danish" title="Danish" src="../../www.runescape.com/img/forum/flags/danish.gif" /></a>
+<a href="sl%3d6/forums.html"><img alt="Norwegian" title="Norwegian" src="../../www.runescape.com/img/forum/flags/norwegian.gif" /></a>
+</div>
+
+
+</div>
+
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../www.runescape.com/title.html">Home</a> &gt;
+<span><span>RuneScape Forums</span></span>
+
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+RuneScape Forums
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="brown_background">
+<div id="picker">
+<form method="post" action="http://services.runescape.com/m=forum/forums.ws">
+<ul class="flat" style="margin:1px;">
+<li class="rightpad search"><img src="../../www.runescape.com/img/forum/cmdicons/search_threads.gif" alt=""/> <a href="sl%3d6/forums.html">Search Threads</a></li>
+<li class="jump_to_thread">Jump to Thread: <input class="textinput" size="6" name="uid"/>
+</li>
+<li><input class="buttonsmall" type="submit" name="jump" value="Go" style="margin-right:6px;"></li>
+</ul>
+</form>
+</div>
+<div id="contrast_panel" class="noborder">
+<div id="infopane" class="non_sd_only">
+<span class="title">RuneScape Forums</span>
+<div class="about">
+<ul class="flat">
+<li><img src="../../www.runescape.com/img/forum/cmdicons/code_of_conduct.gif" alt=""/> <a href="sl%3d6/forums.html">Code of Conduct</a></li>
+
+<li><br/>
+<span class="count">
+
+372 active users
+</span>
+</li>
+</ul>
+</div>
+</div>
+<div id="nocontrols" class="phold"></div>
+
+
+<div id="contentfrm">
+
+
+<div class="brown_box_forum brown_box_stack"><table id="group3" class="group "><tr><td class="groupname" colspan="2"><div id="showhide3" class="showhide">&nbsp;</div><div class="groupname">Official - Official announcements from Jagex </div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?13,14"><img src="../../www.runescape.com/img/forum/icons/news_announcements_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?13,14">News &amp; Announcements</a></span><br/>Read the latest news &amp; announcements.</td><td class="n">818</td><td class="n">225,060</td><td class="r u">17-Jul-2010 18:49:41</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?198,199"><img src="../../www.runescape.com/img/forum/icons/Jl_icon.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?198,199">Developer Blogs</a></span><br/>The place for all our Developer blogs</td><td class="n">7</td><td class="n">3,302</td><td class="r u">18-Jul-2010 09:18:38</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(3),3);
+  </script>
+<div class="brown_box_forum brown_box_stack"><table id="group19" class="group "><tr><td class="groupname" colspan="2"><div id="showhide19" class="showhide">&nbsp;</div><div class="groupname">Help from Jagex or your fellow players</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?103,104"><img src="../../www.runescape.com/img/forum/icons/contact_us.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?103,104">Contact Us</a></span><br/>How to contact Jagex or get help with a problem</td><td class="n">21</td><td class="n">58,882</td><td class="r u">18-Jul-2010 09:56:51</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?25,26"><img src="../../www.runescape.com/img/forum/icons/tech_support_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?25,26">Tech Support</a></span><br/>Ask other players for technical help</td><td class="n">200,256</td><td class="n">1,320,408</td><td class="r u">18-Jul-2010 09:57:00</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?250,251"><img src="../../www.runescape.com/img/forum/icons/green_cross.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?250,251">Account Help</a></span><br/>Get account advice from other players</td><td class="n">2,955</td><td class="n">21,560</td><td class="r u">18-Jul-2010 09:28:05</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?20,21"><img src="../../www.runescape.com/img/forum/icons/quest.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?20,21">Quests</a></span><br/>Discuss quests and swap hints here - No spoilers though!</td><td class="n">927,208</td><td class="n">5,499,563</td><td class="r u">18-Jul-2010 09:45:57</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?21,22"><img src="../../www.runescape.com/img/forum/icons/clue_scrolls_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?21,22">Clue Scrolls</a></span><br/>Get help with your clue scroll here</td><td class="n">451,534</td><td class="n">2,430,976</td><td class="r u">18-Jul-2010 09:16:59</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?154,155"><img src="../../www.runescape.com/img/forum/icons/skills_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?154,155">Skills</a></span><br/>For help with particular skills</td><td class="n">13,903</td><td class="n">110,446</td><td class="r u">18-Jul-2010 09:53:32</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?17,18"><img src="../../www.runescape.com/img/forum/icons/item_discussion_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?17,18">Items</a></span><br/>Discuss items and prices - No trading here!</td><td class="n">1,148,498</td><td class="n">6,738,388</td><td class="r u">18-Jul-2010 09:56:08</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?19,20"><img src="../../www.runescape.com/img/forum/icons/monsters_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?19,20">Monsters</a></span><br/>Talk about Monsters, NPCs and Random Events</td><td class="n">330,093</td><td class="n">3,236,503</td><td class="r u">18-Jul-2010 09:54:31</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?71,72"><img src="../../www.runescape.com/img/forum/icons/ach_diary.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?71,72">Achievement Diaries</a></span><br/>Discuss diary tasks here!</td><td class="n">5,891</td><td class="n">30,546</td><td class="r u">18-Jul-2010 01:39:14</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?75,76"><img src="../../www.runescape.com/img/forum/icons/diversions.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?75,76">Distractions and Diversions</a></span><br/>Discuss these rewarding regular events here</td><td class="n">8,869</td><td class="n">233,013</td><td class="r u">18-Jul-2010 09:54:33</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?98,99"><img src="../../www.runescape.com/img/forum/icons/Guides.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?98,99">Guides</a></span><br/>The place for all player written game related guides </td><td class="n">8,399</td><td class="n">241,394</td><td class="r u">18-Jul-2010 09:31:05</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(19),19);
+  </script>
+
+<!--[if IE]>
+<style type="text/css">#communitySelectionBar select{border:none !important;background:#F8F1E7 !important;padding:0;margin-top:3px;color:black;}.threeColumnLayout #column1{width:210px;}.threeColumnLayout #communitySelectDropDown{width:292px;}.threeColumnLayout #activeCommunityMessage{width:200px;}</style>
+<![endif]-->
+<script type="text/javascript">
+
+function commSelect(){var opt = $("#communitySelectionDropDown").val();var $selected = $("#community"+opt);var c = [2,3,5];if ($selected.length > 0) {for(var i in c){$("#community"+c[i]).addClass("invisibleCmSection");$("#cmMessage"+c[i]).addClass("cmMessage hideCommunityMessage");}$selected.attr({className:"visibleCmSection"});$("#cmMessage"+opt).attr({className:"cmMessage showCommunityMessage"});}}
+
+
+</script>
+<div id="communitiesSection">
+<div id="communityTitle">Community Forums</div>
+<div>
+
+<div id="communitySelectionBar" class="threeColumnLayout">
+<div id="column1" class="commBarPart">&nbsp;</div>
+<div id="communitySelectDropDown" class="commBarPart">
+<form id="selectCommunityForm" action="http://services.runescape.com/m=forum/select_community.ws" method="get">
+<input type="hidden" name="pos" value="-1">
+<input type="hidden" name="fid" value="-1">
+<select id="communitySelectionDropDown" name="cid" autocomplete="off"  onchange="commSelect()" onkeyup="commSelect()">
+<option value="2" selected="selected">Everyone</option>
+<option value="3" >Members Only</option>
+<option value="5" >Members 1800+</option>
+</select>
+<noscript> <input class="buttonsmall" type="submit" value="Go">
+</noscript>
+</form>
+</div>
+<div id="activeCommunityMessage" class="commBarPart">
+</div>
+</div>
+<div style="float:clear;"></div>
+
+<div id="cmContainer">
+<div id="cmMessage2" class="cmMessage showCommunityMessage">
+
+</div>
+<div id="cmMessage3" class="cmMessage hideCommunityMessage">
+
+</div>
+<div id="cmMessage5" class="cmMessage hideCommunityMessage">
+
+</div>
+
+<div class="visibleCmSection" name="" id="community2">
+<h3 class="cmName" style="text-align: center;">Everyone</h3>
+
+<div class="brown_box_forum brown_box_stack"><table id="group24" class="group "><tr><td class="groupname" colspan="2"><div id="showhide24" class="showhide">&nbsp;</div><div class="groupname">Everyone</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?14,15"><img src="../../www.runescape.com/img/forum/icons/general_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?14,15">General</a></span><br/>For any RuneScape topic not covered by the other forums</td><td class="n">2,454,509</td><td class="n">22,585,100</td><td class="r u">18-Jul-2010 09:58:00</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?15,16"><img src="../../www.runescape.com/img/forum/icons/recent_updates_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?15,16">Recent Updates</a></span><br/>Discuss the latest additions and changes to the game</td><td class="n">286,375</td><td class="n">3,552,920</td><td class="r u">18-Jul-2010 09:44:07</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?16,17"><img src="../../www.runescape.com/img/forum/icons/future_updates_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?16,17">Future Updates</a></span><br/>Discuss suspected and known future RS content</td><td class="n">178,082</td><td class="n">2,369,745</td><td class="r u">18-Jul-2010 09:57:15</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?185,186"><img src="../../www.runescape.com/img/forum/icons/suggestions_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?185,186">Suggestions</a></span><br/>The place for all your suggestions</td><td class="n">10,195</td><td class="n">225,152</td><td class="r u">18-Jul-2010 09:57:54</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?189,190"><img src="../../www.runescape.com/img/forum/icons/tactics.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?189,190">Tactics</a></span><br/>For all tactic discussion</td><td class="n">1,321</td><td class="n">32,565</td><td class="r u">18-Jul-2010 09:35:55</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?45,46"><img src="../../www.runescape.com/img/forum/icons/duelling_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?45,46">PvP</a></span><br/>Organise and discuss Player versus Player activities here </td><td class="n">85,016</td><td class="n">639,970</td><td class="r u">18-Jul-2010 09:48:51</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?194,195"><img src="../../www.runescape.com/img/forum/icons/teamwork.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?194,195">Teamwork</a></span><br/>Team up with other players for activities</td><td class="n">11,256</td><td class="n">18,859</td><td class="r u">18-Jul-2010 09:54:20</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?48,49"><img src="../../www.runescape.com/img/forum/icons/goalsandachievements_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?48,49">In Game</a></span><br/>Let others know about your goals and accomplishments</td><td class="n">157,134</td><td class="n">3,578,133</td><td class="r u">18-Jul-2010 09:54:21</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?181,182"><img src="../../www.runescape.com/img/forum/icons/compliments_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?181,182">Compliments</a></span><br/>Chat with Jagex staff and tell us what you like</td><td class="n">2,301</td><td class="n">109,676</td><td class="r u">18-Jul-2010 09:19:41</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?74,75"><img src="../../www.runescape.com/img/forum/icons/feedback1.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?74,75">Constructive Criticism</a></span><br/>For feedback and discussion </td><td class="n">67,207</td><td class="n">1,132,552</td><td class="r u">18-Jul-2010 09:28:45</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?129,130"><img src="../../www.runescape.com/img/forum/icons/rants_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?129,130">Rants</a></span><br/>Tell us what you don't like</td><td class="n">153,852</td><td class="n">2,154,482</td><td class="r u">18-Jul-2010 09:57:23</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?23,24"><img src="../../www.runescape.com/img/forum/icons/off_topic_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?23,24">Off Topic</a></span><br/>Non-RuneScape related discussion</td><td class="n">755,279</td><td class="n">19,214,416</td><td class="r u">18-Jul-2010 09:57:42</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(24),24);
+  </script>
+
+</div>
+<div class="invisibleCmSection" name="" id="community3">
+<h3 class="cmName" style="text-align: center;">Members Only</h3>
+
+<div class="brown_box_forum brown_box_stack"><table id="group25" class="group "><tr><td class="groupname" colspan="2"><div id="showhide25" class="showhide">&nbsp;</div><div class="groupname">Members Only</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?238,239"><img src="../../www.runescape.com/img/forum/icons/general_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?238,239">General</a></span><br/>For any RuneScape topic not covered by the other forums</td><td class="n">4,311</td><td class="n">24,984</td><td class="r u">18-Jul-2010 09:41:36</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?239,240"><img src="../../www.runescape.com/img/forum/icons/recent_updates_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?239,240">Recent Updates</a></span><br/>Discuss the latest additions and changes to the game</td><td class="n">2,587</td><td class="n">41,532</td><td class="r u">18-Jul-2010 09:28:43</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?240,241"><img src="../../www.runescape.com/img/forum/icons/future_updates_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?240,241">Future Updates</a></span><br/>Discuss suspected and known future RS content</td><td class="n">1,857</td><td class="n">80,634</td><td class="r u">18-Jul-2010 09:48:48</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?241,242"><img src="../../www.runescape.com/img/forum/icons/suggestions_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?241,242">Suggestions</a></span><br/>The place for all your suggestions</td><td class="n">7,251</td><td class="n">79,979</td><td class="r u">18-Jul-2010 09:53:39</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?242,243"><img src="../../www.runescape.com/img/forum/icons/tactics.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?242,243">Tactics</a></span><br/>For all tactic discussion</td><td class="n">1,318</td><td class="n">27,858</td><td class="r u">18-Jul-2010 09:41:59</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?243,244"><img src="../../www.runescape.com/img/forum/icons/duelling_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?243,244">PvP</a></span><br/>Organise and discuss Player versus Player activities here</td><td class="n">2,077</td><td class="n">32,112</td><td class="r u">18-Jul-2010 09:56:16</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?244,245"><img src="../../www.runescape.com/img/forum/icons/teamwork.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?244,245">Teamwork</a></span><br/>Team up with other players for activities</td><td class="n">25,738</td><td class="n">94,211</td><td class="r u">18-Jul-2010 09:57:50</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?245,246"><img src="../../www.runescape.com/img/forum/icons/goalsandachievements_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?245,246">In Game</a></span><br/>Let others know about your goals and accomplishments</td><td class="n">1,551</td><td class="n">83,422</td><td class="r u">18-Jul-2010 09:45:07</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?246,247"><img src="../../www.runescape.com/img/forum/icons/compliments_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?246,247">Compliments</a></span><br/>Chat with Jagex staff and tell us what you like</td><td class="n">1,536</td><td class="n">66,839</td><td class="r u">18-Jul-2010 09:07:05</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?247,248"><img src="../../www.runescape.com/img/forum/icons/feedback1.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?247,248">Constructive Criticism</a></span><br/>For feedback and discussion</td><td class="n">1,791</td><td class="n">103,339</td><td class="r u">18-Jul-2010 09:12:28</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?248,249"><img src="../../www.runescape.com/img/forum/icons/rants_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?248,249">Rants</a></span><br/>Tell us what you don't like</td><td class="n">6,172</td><td class="n">61,335</td><td class="r u">18-Jul-2010 09:56:53</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?249,250"><img src="../../www.runescape.com/img/forum/icons/off_topic_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?249,250">Off Topic</a></span><br/>Non-RuneScape related discussion</td><td class="n">1,882</td><td class="n">94,337</td><td class="r u">18-Jul-2010 09:47:15</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(25),25);
+  </script>
+
+</div>
+<div class="invisibleCmSection" name="" id="community5">
+<h3 class="cmName" style="text-align: center;">Members 1800+</h3>
+
+<div class="brown_box_forum brown_box_stack"><table id="group27" class="group "><tr><td class="groupname" colspan="2"><div id="showhide27" class="showhide">&nbsp;</div><div class="groupname">Members 1800+</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?160,161"><img src="../../www.runescape.com/img/forum/icons/general_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?160,161">General</a></span><br/>For any RuneScape topic not covered by the other forums</td><td class="n">2,448,124</td><td class="n">22,487,623</td><td class="r u">18-Jul-2010 09:57:50</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?164,165"><img src="../../www.runescape.com/img/forum/icons/recent_updates_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?164,165">Recent Updates</a></span><br/>Discuss the latest additions and changes to the game</td><td class="n">282,218</td><td class="n">3,482,144</td><td class="r u">18-Jul-2010 09:47:05</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?234,235"><img src="../../www.runescape.com/img/forum/icons/future_updates_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?234,235">Future Updates</a></span><br/>Discuss suspected and known future RS content</td><td class="n">176,210</td><td class="n">2,313,297</td><td class="r u">18-Jul-2010 09:50:05</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?188,189"><img src="../../www.runescape.com/img/forum/icons/suggestions_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?188,189">Suggestions</a></span><br/>The place for all your suggestions</td><td class="n">4,275</td><td class="n">137,456</td><td class="r u">18-Jul-2010 09:01:37</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?192,193"><img src="../../www.runescape.com/img/forum/icons/tactics.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?192,193">Tactics</a></span><br/>For all tactic discussion</td><td class="n">1,545</td><td class="n">32,493</td><td class="r u">18-Jul-2010 04:35:10</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?172,173"><img src="../../www.runescape.com/img/forum/icons/duelling_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?172,173">PvP</a></span><br/>Organise and discuss Player versus Player activities here </td><td class="n">84,172</td><td class="n">630,812</td><td class="r u">18-Jul-2010 06:59:26</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?197,198"><img src="../../www.runescape.com/img/forum/icons/teamwork.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?197,198">Teamwork</a></span><br/>Team up with other players for activities</td><td class="n">46,069</td><td class="n">280,479</td><td class="r u">18-Jul-2010 09:57:30</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?176,177"><img src="../../www.runescape.com/img/forum/icons/goalsandachievements_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?176,177">In Game</a></span><br/>Let others know about your goals and accomplishments</td><td class="n">156,521</td><td class="n">3,568,595</td><td class="r u">18-Jul-2010 09:45:51</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?184,185"><img src="../../www.runescape.com/img/forum/icons/compliments_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?184,185">Compliments</a></span><br/>Chat with Jagex staff and tell us what you like</td><td class="n">1,422</td><td class="n">97,239</td><td class="r u">18-Jul-2010 03:52:35</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?230,231"><img src="../../www.runescape.com/img/forum/icons/feedback1.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?230,231">Constructive Criticism</a></span><br/>For feedback and discussion </td><td class="n">65,969</td><td class="n">1,090,497</td><td class="r u">18-Jul-2010 08:26:25</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?180,181"><img src="../../www.runescape.com/img/forum/icons/rants_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?180,181">Rants</a></span><br/>Tell us what you don't like</td><td class="n">135,529</td><td class="n">1,870,550</td><td class="r u">18-Jul-2010 09:09:57</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?168,169"><img src="../../www.runescape.com/img/forum/icons/off_topic_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?168,169">Off Topic</a></span><br/>Non-RuneScape related discussion</td><td class="n">749,326</td><td class="n">19,020,158</td><td class="r u">18-Jul-2010 09:53:23</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(27),27);
+  </script>
+
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="brown_box_forum brown_box_stack"><table id="group23" class="group "><tr><td class="groupname" colspan="2"><div id="showhide23" class="showhide">&nbsp;</div><div class="groupname">Dungeons of Daemonheim</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?148,149"><img src="../../www.runescape.com/img/forum/icons/skill_dungeoneering.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?148,149">Adventuring Parties</a></span><br/>Find fellow Daemonheim adventurers here</td><td class="n">27,050</td><td class="n">63,667</td><td class="r u">18-Jul-2010 09:25:22</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?149,150"><img src="../../www.runescape.com/img/forum/icons/forum_feedback_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?149,150">Dungeoneering Feedback</a></span><br/>The place for constructive feedback about Dungeoneering</td><td class="n">5,680</td><td class="n">56,804</td><td class="r u">18-Jul-2010 09:45:08</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?150,151"><img src="../../www.runescape.com/img/forum/icons/web_feedback_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?150,151">Dungeoneering Help</a></span><br/>Need advice about Dungeoneering? Get help here!</td><td class="n">4,256</td><td class="n">23,147</td><td class="r u">18-Jul-2010 09:21:35</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(23),23);
+  </script>
+<div class="brown_box_forum brown_box_stack"><table id="group30" class="group "><tr><td class="groupname" colspan="2"><div id="showhide30" class="showhide">&nbsp;</div><div class="groupname">Events and Services</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?235,236"><img src="../../www.runescape.com/img/forum/icons/runefest_forum_icon.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?235,236">RuneFest</a></span><br/>For all discussion about the RuneFest event</td><td class="n">419</td><td class="n">10,000</td><td class="r u">18-Jul-2010 09:40:12</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?236,237"><img src="../../www.runescape.com/img/forum/icons/triumvirate.png" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?236,237">Triumvirate</a></span><br/>For discussion and involvement with the Triumvirate System</td><td class="n">1,040</td><td class="n">83,483</td><td class="r u">18-Jul-2010 09:56:09</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?42,43"><img src="../../www.runescape.com/img/forum/icons/events2.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?42,43">Events</a></span><br/>Organise and attend in-game events</td><td class="n">608,802</td><td class="n">9,043,786</td><td class="r u">18-Jul-2010 09:55:22</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?199,200"><img src="../../www.runescape.com/img/forum/icons/Character.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?199,200">Tournaments</a></span><br/>Arrange and discuss in-game tournaments</td><td class="n">258</td><td class="n">19,634</td><td class="r u">18-Jul-2010 09:41:35</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?201,202"><img src="../../www.runescape.com/img/forum/icons/Shop-icon.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?201,202">Businesses &amp; Services</a></span><br/>Running an in-game business or service? Post about it here</td><td class="n">1,221</td><td class="n">62,401</td><td class="r u">18-Jul-2010 09:41:39</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(30),30);
+  </script>
+<div class="brown_box_forum brown_box_stack"><table id="group31" class="group "><tr><td class="groupname" colspan="2"><div id="showhide31" class="showhide">&nbsp;</div><div class="groupname">Forum Games</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?46,47"><img src="../../www.runescape.com/img/forum/icons/roleplaying_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?46,47">Roleplaying - Forums</a></span><br/>Join in with forum based roleplaying here</td><td class="n">42,883</td><td class="n">10,885,335</td><td class="r u">18-Jul-2010 09:57:55</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?237,238"><img src="../../www.runescape.com/img/forum/icons/roleplaying_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?237,238">Roleplaying - In-Game</a></span><br/>Join in with in-game based roleplaying here</td><td class="n">308</td><td class="n">13,585</td><td class="r u">18-Jul-2010 09:43:57</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?49,50"><img src="../../www.runescape.com/img/forum/icons/stories_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?49,50">Stories</a></span><br/>Post your fictional stories about RuneScape here </td><td class="n">120,539</td><td class="n">2,926,195</td><td class="r u">18-Jul-2010 08:18:58</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?55,56"><img src="../../www.runescape.com/img/forum/icons/forum_games_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?55,56">Forum Games</a></span><br/>Start your own or play an existing forum game </td><td class="n">75,918</td><td class="n">6,256,657</td><td class="r u">18-Jul-2010 09:51:33</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(31),31);
+  </script>
+<div class="brown_box_forum brown_box_stack"><table id="group17" class="group "><tr><td class="groupname" colspan="2"><div id="showhide17" class="showhide">&nbsp;</div><div class="groupname">Clans</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?94,95"><img src="../../www.runescape.com/img/forum/icons/Recruitment_looking.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?94,95">Recruitment – Looking for a clan</a></span><br/>Post here to find a clan</td><td class="n">69,395</td><td class="n">484,738</td><td class="r u">18-Jul-2010 09:57:32</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?87,88"><img src="../../www.runescape.com/img/forum/icons/recruitment_100_1.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?87,88">Recruitment – Under 100 Combat</a></span><br/>Entry requirements, less than level 100 Combat</td><td class="n">33,980</td><td class="n">3,155,638</td><td class="r u">18-Jul-2010 09:58:03</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?92,93"><img src="../../www.runescape.com/img/forum/icons/recruitment_100_2.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?92,93">Recruitment – 100 Combat and over</a></span><br/>Entry requirements, level 100 Combat or more</td><td class="n">28,866</td><td class="n">2,751,466</td><td class="r u">18-Jul-2010 09:57:21</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?93,94"><img src="../../www.runescape.com/img/forum/icons/Recruitment_Specialist.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?93,94">Recruitment – Specialist Clans</a></span><br/>Entry requirements, no specific combat level</td><td class="n">27,116</td><td class="n">1,697,948</td><td class="r u">18-Jul-2010 09:57:09</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?90,91"><img src="../../www.runescape.com/img/forum/icons/clan_homes.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?90,91">Clan Home</a></span><br/>Here you will find your clan’s discussion thread</td><td class="n">11,128</td><td class="n">1,047,322</td><td class="r u">18-Jul-2010 09:57:22</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?135,136"><img src="../../www.runescape.com/img/forum/icons/clan_discussions.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?135,136">Clan Discussion</a></span><br/>An area for the clan community to talk, war and get advice.</td><td class="n">4,096</td><td class="n">235,511</td><td class="r u">18-Jul-2010 09:57:29</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?251,252"><img src="../../www.runescape.com/img/forum/icons/jc.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?251,252">The Jagex Cup</a></span><br/>The Jagex Clan Cup 2010 - Get involved!</td><td class="n">747</td><td class="n">7,393</td><td class="r u">18-Jul-2010 09:24:00</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(17),17);
+  </script>
+<div class="brown_box_forum brown_box_stack"><table id="group6" class="group "><tr><td class="groupname" colspan="2"><div id="showhide6" class="showhide">&nbsp;</div><div class="groupname">Marketplace</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?39,40"><img src="../../www.runescape.com/img/forum/icons/armour_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?39,40">Armour</a></span><br/>Buy and sell all armour here </td><td class="n">9,718,540</td><td class="n">49,596,451</td><td class="r u">18-Jul-2010 09:52:11</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?38,39"><img src="../../www.runescape.com/img/forum/icons/weapons_forum_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?38,39">Weapons</a></span><br/>Buy and sell weaponry here</td><td class="n">6,949,568</td><td class="n">36,380,850</td><td class="r u">18-Jul-2010 09:52:42</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?56,57"><img src="../../www.runescape.com/img/forum/icons/construction_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?56,57">Construction</a></span><br/>Buy and sell planks, packaged furniture and so forth </td><td class="n">610,618</td><td class="n">2,955,332</td><td class="r u">18-Jul-2010 09:52:40</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?30,31"><img src="../../www.runescape.com/img/forum/icons/crafting_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?30,31">Crafting</a></span><br/>Trade gems, flax, leather, crafted jewellery and so forth</td><td class="n">2,374,184</td><td class="n">11,330,948</td><td class="r u">18-Jul-2010 09:43:42</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?36,37"><img src="../../www.runescape.com/img/forum/icons/discontinued_items_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?36,37">Discontinued Items</a></span><br/>Buy and sell discontinued items here only! </td><td class="n">2,041,770</td><td class="n">15,398,701</td><td class="r u">18-Jul-2010 09:57:51</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?32,33"><img src="../../www.runescape.com/img/forum/icons/farming_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?32,33">Farming</a></span><br/>Trade seeds, compost, farming tools etc.</td><td class="n">820,108</td><td class="n">4,889,030</td><td class="r u">18-Jul-2010 09:46:31</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?31,32"><img src="../../www.runescape.com/img/forum/icons/fletching_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?31,32">Fletching</a></span><br/>Trade arrows, logs, bowstrings, bolts etc.</td><td class="n">5,946,430</td><td class="n">29,765,830</td><td class="r u">18-Jul-2010 09:54:23</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?33,34"><img src="../../www.runescape.com/img/forum/icons/food_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?33,34">Food</a></span><br/>Buy and sell food here </td><td class="n">2,167,834</td><td class="n">10,835,089</td><td class="r u">18-Jul-2010 09:55:32</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?34,35"><img src="../../www.runescape.com/img/forum/icons/herblore_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?34,35">Herblore</a></span><br/>Buy and sell potions and ingredients here </td><td class="n">3,428,593</td><td class="n">18,259,632</td><td class="r u">18-Jul-2010 09:55:34</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?35,36"><img src="../../www.runescape.com/img/forum/icons/ores_bars_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?35,36">Ores and Bars</a></span><br/>Buy and sell ores and bars only! </td><td class="n">1,649,230</td><td class="n">8,317,288</td><td class="r u">18-Jul-2010 09:40:14</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?37,38"><img src="../../www.runescape.com/img/forum/icons/runes_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?37,38">Runes</a></span><br/>Buy and sell runes, talismans, spell tablets and so forth </td><td class="n">4,732,964</td><td class="n">26,660,059</td><td class="r u">18-Jul-2010 09:56:39</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?59,60"><img src="../../www.runescape.com/img/forum/icons/summoning.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?59,60">Summoning</a></span><br/>Buy and sell animal welfare goods here </td><td class="n">102,174</td><td class="n">274,298</td><td class="r u">18-Jul-2010 09:56:15</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?40,41"><img src="../../www.runescape.com/img/forum/icons/treasure_trails_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?40,41">Treasure Trail Items</a></span><br/>Buy and sell Treasure Trail Items here </td><td class="n">5,802,684</td><td class="n">31,599,921</td><td class="r u">18-Jul-2010 09:53:08</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?41,42"><img src="../../www.runescape.com/img/forum/icons/misc_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?41,42">Miscellaneous</a></span><br/>Buy and sell items that don't fit into the other Marketplace categories here</td><td class="n">2,830,948</td><td class="n">14,344,844</td><td class="r u">18-Jul-2010 09:47:29</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(6),6);
+  </script>
+<div class="brown_box_forum brown_box_stack"><table id="group8" class="group "><tr><td class="groupname" colspan="2"><div id="showhide8" class="showhide">&nbsp;</div><div class="groupname">RS Classic</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?50,51"><img src="../../www.runescape.com/img/forum/icons/rsc_general_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?50,51">RSC Discussion</a></span><br/>For any RSC topic not covered by the other forums</td><td class="n">23,231</td><td class="n">243,244</td><td class="r u">18-Jul-2010 09:48:01</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?51,52"><img src="../../www.runescape.com/img/forum/icons/rsc_marketplace_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?51,52">RSC Community</a></span><br/>For RSC related trades, duels, events &amp; clans</td><td class="n">80,907</td><td class="n">366,766</td><td class="r u">18-Jul-2010 08:07:01</td></tr>
+<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?54,55"><img src="../../www.runescape.com/img/forum/icons/classic_feedback.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?54,55">RSC Feedback</a></span><br/>For feedback and discussion about RSC &amp; the RSC forum section</td><td class="n">9,930</td><td class="n">90,742</td><td class="r u">18-Jul-2010 09:32:39</td></tr></table></div>
+<script type="text/javascript">
+   showhide(!is_group_hidden(8),8);
+  </script>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../www.runescape.com/title.html">Home</a> &gt;
+<span><span>RuneScape Forums</span></span>
+
+</div>
+</div>
+<script type="text/javascript">
+
+
+
+ 
+ 
+var m=(document.cookie+"").match(/cid=([0-9+])/);if(m&&m.length==2){$("#communitySelectionDropDown option[value="+m[1]+"]").attr("selected",true);commSelect();}
+
+commSelect=(function(){var f=commSelect;return function(){f();
+var id = $("#communitySelectionDropDown").val();var d=new Date();d.setTime(d.getTime()+4838400000);document.cookie="cid="+id+";expires="+d.toUTCString()+";path=/";
+}})();
+
+</script>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../www.runescape.com/terms/terms.html">Terms &amp; Conditions</a> and <a href="../../www.runescape.com/privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../www.jagex.com/index.html" target="_blank">
+<img src="../../www.runescape.com/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services.runescape.com/m=forum/forums.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 08:59:40 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

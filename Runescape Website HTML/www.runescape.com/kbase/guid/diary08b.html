@@ -1,0 +1,449 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary08b by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:17 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico">
+<link rel="SHORTCUT ICON" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="dev,development,diary,new,look,runescape,hardware,graphics,open,gl">
+<meta name="description" content="A second look at the new graphics detail mode">
+<meta name="title" content="RuneScape - MMORPG - A New Look RuneScape: Part 2">
+<title>RuneScape - MMORPG - A New Look RuneScape: Part 2</title>
+<style type="text/css">/*\*/@import url(../../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../css/kbase-6.css);/**/</style>
+<script type="text/javascript" src="../../css/kbsearchfill-0.js"></script>
+<script type="text/javascript">
+new_subcat=add_subcat(4, 5, "Postbag from the Hedge", -1 == 5);new_subcat=add_subcat(4, 6, "Players' Gallery", -1 == 6);new_subcat=add_subcat(4, 19, "God letters", -1 == 19);new_subcat=add_subcat(775, 892, "How do I get started?", -1 == 892);new_subcat=add_subcat(775, 798, "Controls", -1 == 798);new_subcat=add_subcat(775, 795, "Combat", -1 == 795);new_subcat=add_subcat(775, 776, "Skills", -1 == 776);new_subcat=add_subcat(775, 7, "Quests", -1 == 7);new_subcat=add_subcat(775, 1, "Achievement Diary", -1 == 1);new_subcat=add_subcat(775, 10, "Activities", -1 == 10);new_subcat=add_subcat(775, 38, "Distractions and Diversions", -1 == 38);new_subcat=add_subcat(775, 831, "Miscellaneous Guides", -1 == 831);new_subcat=add_subcat(775, 881, "Area Guides", -1 == 881);new_subcat=add_subcat(20, 32, "A New Look RuneScape: Part 1", -1 == 32);new_subcat=add_subcat(20, 21, "Graphics Team - NPC Improvement Project", -1 == 21);new_subcat=add_subcat(9, 127, "Billing", -1 == 127);new_subcat=add_subcat(9, 126, "Technical", -1 == 126);new_subcat=add_subcat(9, 827, "Safety & Security Guidelines", -1 == 827);new_subcat=add_subcat(9, 872, "Other", -1 == 872);
+</script>
+<meta name="language" content="en, de">
+<meta name="description" content="A second look at the new graphics detail mode">
+<style type="text/css">
+ 
+   
+  
+  .bigquote { font-size:medium; font-weight:bold; font-style:italic; text-align:left; } 
+  .mod { font-weight:bold; } 
+  .team { font-weight:bold; } 
+  .quote { font-style:italic; } 
+  .caption { font-size:85%; font-weight:bold; } 
+  
+ </style>
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHeadAdvert">
+<div id="headAdvert">
+<iframe name="Advert" src="../../../services.runescape.com/m%3dadvert/banner5052.html?size=730" allowtransparency="true" width="766" height="96" scrolling="no" frameborder="0"></iframe>
+<script type="text/javascript">
+  setTimeout(function() {
+  var url = "http" +
+  (/https:/.test(document.location.href) ? "s" : "") +
+  "://beacon.scorecardresearch.com/scripts/beacon.dll" +
+  "?c1=8&c2=6035824&c3=1271511541440201100" +
+  escape(document.location.href) +
+  "&c8=" + escape(document.title) +
+  "&c9=" + escape(document.referrer) +
+  "&c10=" + escape(screen.width+'x'+screen.height) +
+  "&rn=" + (new Date()).getTime();
+  var i = new Image();
+  i.src = url;
+  }, 1);
+  </script>
+<noscript>
+<img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=8&amp;c2=6035824&amp;c3=1271511541440201100&amp;x=NOJAVASCRIPT" alt="" />
+</noscript>
+</div>
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../../../services.runescape.com/m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../services.runescape.com/m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../title.html"><img alt="English" title="English" src="../../img/main/layout/en.gif" /></a>
+<a href="../../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../img/main/layout/de.gif" /></a>
+<a href="../../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../img/main/layout/fr.gif" /></a>
+<a href="../../l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../title.html">Home</a> &gt;
+
+<a href="dev_diary-2.html">Development Diaries</a> &gt; A New Look RuneScape: Part 2<br />
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+A New Look RuneScape: Part 2
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_1">
+<div class="article">
+<div class="topshadow">
+<div class="bottomborder">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleft">
+<div class="bottomright">
+<div class="links"></div>
+<br><br>
+<div style="text-align: center">
+<div style="text-align: justify;color: #402706; margin: auto;">
+<p style="text-align: center;">
+<p style="text-align: center;"><img src="../../img/varrock/devdiary/comic/comic08.gif" alt="comic strip"></p>
+</p>
+<br>
+<h3 style="text-align: center;"><b>A New Look RuneScape: Part 2</b></h3>
+<p><a href="dev_diary08a.html">The first part of this Development Diary</a> covered a brief history of the new detail mode project and a few of the features it brings – namely, textures, shadows, texture blending and fog. This concluding part will cover the remaining graphical effects: lighting, water, fullscreen and some other, related projects.</p>
+<br>
+<p style="text-align: center;"><b>Lighting the way</b></p>
+<p>Currently, the lights in the game – torches, lanterns, fires, etc – are just animations that don't affect the surrounding area's light levels. <span class="quote">“In the current detail modes, no matter where you are, the lighting is always the same and, as an artist, that's a real limitation,”</span> says <span class="mod">Mod Farley</span> of <span class="team">Graphics</span>. We wanted lights that actually illuminate their surroundings.</p>
+<p><span class="mod">Mod Nick</span>, Head of <span class="team">Tools</span>, says, <span class="quote">“A hardware card will typically allow for eight lights. A very basic sunlight takes up two of those, leaving only another six, but we've managed to code a system that allows us to have up to 255 lights in a map square.”</span> <span class="mod">Mod Farley</span> adds, <span class="quote">“We've not needed to use anywhere near that many yet!”</span> but it does provide the <span class="team">Graphics</span> team with another atmospheric tool.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary08/lighting_thumb.jpg" style="display:block; margin: auto;" alt="lighting"><br><span class="caption">A small example of lighting in action, in the area beneath Paterdomus. Spooky.<br>Click <a href="../../img/varrock/devdiary/diary08/lighting.jpg" target="_blank">here</a> to see a larger version of this image.</span></p>
+<br>
+<p>To make sure the lights were working as intended, we had to check all 18,000 of them individually to make sure they had the appropriate position, colour, style of light, intensity and flicker rate. We also had to make sure that they cast their light properly. As <span class="mod">Mod Nick</span> says, <span class="quote">“Graphics cards will cast light through other objects unless they are told to stop. We had to devise a method of turning off the effect of a light beyond a certain point – say, when it hit a wall – so objects the other side of the wall weren't incorrectly lit.”</span> That may sound like a lot of effort, but it had to be done, and it required less effort than it did to get the water right...</p>
+<br>
+<p style="text-align: center;"><b>Waterworld</b></p>
+<p>We planned to improve RuneScape's water from the start, but researching the best way to do so took a long time. <span class="mod">Mod Nick</span> says, <span class="quote">“We had to reject a number of methods of how to do it, either because they didn't look good or didn't fit with RuneScape's style.”</span> In the other detail modes, water is just a texture, but with this update we wanted it to be more realistic and have transparency. This meant that there had to be something underneath the surface. <span class="mod">Mod JackH</span> of <span class="team">Tools</span> says, <span class="quote">“I had to create an entirely new area below ground level that didn't previously exist. We nicknamed it</span> 'The Underworld'<span class="quote">.”</span></p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary08/water_thumb.jpg" style="display:block; margin: auto;" alt="water"><br><span class="caption">Whoever grounded this boat on Harmony Island was clearly too busy looking at the water.<br>Click <a href="../../img/varrock/devdiary/diary08/water.jpg" target="_blank">here</a> to see a larger version of this image.</span></p>
+<br>
+<p>RuneScape map squares currently only have four levels (numbered 0-3). Level 0 is ground level, level 3 is typically the roofs of the tallest buildings and the other two levels are different storeys. <span class="quote">“We started by making level 0</span> 'The Underworld' <span class="quote">and shifting the other levels up by one, so we had levels 0-4,”</span> says <span class="mod">Mod JackH</span>, but this caused too many issues with existing code: for example, teleport spells typically send your character to somewhere on level 0, and since level 0 was 'The Underworld', you'd teleport below ground level. <span class="quote">“We could have used this method, but issues like teleport code would have required too many fixes for it to be practical,”</span> says <span class="mod">Mod JackH</span>. <span class="quote">“After a rethink, we settled on hanging</span> 'The Underworld' <span class="quote">below ground level – effectively making it level -1”</span>, <span class="mod">Mod JackH</span> continues. This method still caused its own problems, most notable of which were 'cracks': places where 'The Underworld' and the ground level didn't properly line up.</p>
+<p>Deciding to create a whole new level is one thing, but creating all of the objects on that level is something else entirely. We had to find a way to model the bottom parts of everything in water – shorelines, rocks, reeds, boats – as only the top portions of those objects exist in the other detail modes. <span class="mod">Mod Nick</span> says, <span class="quote">“The <span class="team">Tools</span> team built a system into our map editing software to automatically generate any ground underwater, which <span class="team">Graphics</span> could then then tweak if they needed to."</span></p>
+<br>
+<p style="text-align: center;"><b>All the 'small' things</b></p>
+<p>As we'd updated so many elements of the game already, it became apparent that other things also needed to be improved to keep up, so we decided to work on some area and <a href="dev_diary02.html">NPC improvement projects</a> in parallel with the graphics overhaul. As a result, alongside the new detail mode, we'll be releasing improved versions of <a href="lumbridge.html">Lumbridge</a>, <a href="al_kharid.html">Al Kharid</a>, <a href="east_ardougne_members.html">East</a> and <a href="west_ardougne_members.html">West</a> Ardougne and <a href="castle_wars.html">Castle Wars</a>; interfaces have been reworked; and some animations, cutscenes and emotes have been tweaked. We've also reworked human NPCs and chat heads, and the player kit. All of these area and NPC improvements will be available in the existing detail modes, too, so even if you don't play RuneScape in its updated graphical form, there's still something for you.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary08/lumbridge_thumb.jpg" style="display:block; margin: auto;" alt="lumbridge castle"><br><span class="caption">Lumbridge Castle and the rest of the town is getting a new lick of paint.<br>Click <a href="../../img/varrock/devdiary/diary08/lumbridge.jpg" target="_blank">here</a> to see a larger version of this image.</span></p>
+<br>
+<p>The human NPC improvement alone is the single largest project of its type to date, with humans accounting for approximately 15% of all NPCs (1,500 out of 10,000 unique models), and the player kit consisting of over 4,000 body parts and clothing. <span class="mod">Mod Kavi</span> of <span class="team">Graphics</span> says, <span class="quote">"The main focus has been on improving human character proportions and facial detail, which has given us the ability to create a greater range of (and better) animations for them."</span> Among other things, this has also fixed an issue we used to have with hair rendering <i>through</i> headgear. <span class="quote">"We achieved this by creating a character with those features most prone to causing rendering issues – long beard, glasses, pipe, pigtails – and re-modelling them to work with all worn items,"</span> says <span class="mod">Mod Kavi</span>. We then used that character as a template to re-model all other facial features.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary08/head_old.gif" style="display:inline; margin: auto;" alt="human character"><img src="../../img/varrock/devdiary/diary08/head_new.gif" style="display:inline; margin: auto;" alt="human chat head"><br><span class="caption">A side-by-side comparison of an old and new human chat head.</span></p>
+<br>
+<br>
+<p style="text-align: center;"><b>The big picture</b></p>
+<p><span class="mod">Mod Nick</span> says, <span class="quote">“All of the new engine features are just pieces of the puzzle; they all need putting together for the full effect, preferably in fullscreen mode.”</span> Indeed, fullscreen mode might end up being the most popular aspect of this update, if not the most surprising, as players correctly guessed RuneScape would be going fullscreen after seeing we'd done that with <a href="../../../www.funorb.com/index.html" target="_blank">FunOrb</a> games.
+<div style="float:right; width:30%; margin:15px; text-align: left;">
+<p class="bigquote">
+"It feels more like you're in the world now, instead of looking at it through a window."
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Farley</span><br><span class="team">Graphics</span>
+</p>
+</div>
+<p>The (optional) fullscreen mode will scale the game up to your monitor's native (32-bit colour) resolution and the field of view adjusts for widescreen resolutions – it also supports 2x and 4x anti-aliasing to help smooth off edges. Playing the game in fullscreen mode allows you to more fully immerse yourself within the game, as <span class="mod">Mod Farley</span> says, <span class="quote">“It feels more like you're in the world now, instead of looking at it through a window.”</span></p>
+<p>Speaking of looking at the game from a new perspective, <span class="mod">Mod Farley</span> says, <span class="quote">“This project has meant artists and developers looking at areas of the game that haven't been looked at for a long time. We have an ever-growing list of other things we now can and want to do!”</span> He finishes with, <span class="quote">“The whole project has created a great atmosphere at Jagex, a great positive feeling. It's been a rejuvenating experience for Jagex as well as RuneScape.”</span></p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary08/screenshot_thumb.jpg" style="display:block; margin: auto;" alt="the first, proper screenshot of the new detail mode"><br><span class="caption">Here it is: the first, proper, in-game screenshot!<br>Click <a href="../../img/varrock/devdiary/diary08/screenshot.jpg" target="_blank">here</a> to see a larger version of this image.</span></p>
+<br>
+<p style="text-align: center;"><b>New horizons</b></p>
+<p>As one horizon is reached, there will always be another one to aim for, and we've already started working towards the next one (and several others after that). For a start, the work on this graphical update has, to date, focused on improving what was already there. We can now take texturing, shadows and the like into account for any new content we work on, developing areas and characters with these things in mind.</p>
+<p>As we said in <a href="../../../services.runescape.com/m%3dnews/newsitem648d.html?id=1247">Behind the Scenes – June</a>, we're not currently planning any more game updates to RuneScape this month, but that doesn't mean we're taking time off ourselves or relaxing just yet. The whole company is working hard on the new detail mode's finishing touches, July's other updates and content beyond that. As the saying goes, 'There's no rest for the wicked'. <span class="mod">Andrew</span> concludes with, <span class="quote">“Altogether, I am massively pleased with this update, but there's always more we can do. RuneScape needs to constantly evolve to remain a state-of-the-art online game, so we're already planning future graphical improvements...”</span></p>
+</div>
+</div>
+<div class="backtotop"><a href="#top">Back to the top</a></div>
+<br/>
+<center><img src="../../img/main/kbase/hr.png" alt=""/></center>
+<table class="bottomlinks">
+<tr>
+</tr>
+<tr>
+<td class="bot"><p><div class="bold">More articles in
+<a href="dev_diary-2.html">Development Diaries</a>
+</div></p>
+<ul class="bold">
+<li>
+<a href="diary_dwarf02.html">New Dwarf Quest: Part 2 - A Concept is Approved</a>
+</li>
+<li>
+<a href="diary_dwarf01.html">New Dwarf Quest: Part 1 - Reviving an Old Quest Series</a>
+</li>
+<li>
+<b>A New Look RuneScape: Part 2</b>
+</li>
+<li>
+<a href="diary07.html">Quality Assurance</a>
+</li>
+<li>
+<a href="diary06.html">RuneScape vs. Real-world Trading</a>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="searchtop">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="topleft">
+<div class="topright">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div class="searchtext">
+<form method="get" action="http://www.runescape.com/kbase/search.ws">
+<table class="bottomsearch">
+<tr>
+<td class="searchtitles" width="60" style="text-align: right">
+Search for:
+</td>
+<td>
+<input class="textinput" name="search_query" id="search_query" size="29" maxlength="300" value="">
+</td>
+<td rowspan="3">
+<table>
+<tr>
+<td>
+<label class="bold">Criteria:</label>
+</td>
+<td></td>
+<td><label class="bold">Find:</label></td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="title_chk" value="1" checked="checked">
+Title
+</td>
+<td>
+<input class="widget" type="checkbox" name="keywords_chk" value="1" checked="checked">
+Keywords
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="1" checked="checked">
+All
+</td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="description_chk" value="1" checked="checked">
+Description
+</td>
+<td>
+<input class="widget" type="checkbox" name="body_chk" value="1" checked="checked">
+Body
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="0">
+Any
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="searchtitles">
+Category:
+</td>
+<td>
+<select name="category" id="search_cat_select_footer" onchange="update_cats('_footer')">
+<option value="null"> - ALL - </option>
+<option value="4">Player Submissions</option>
+<option value="775">Game Guide</option>
+<option value="20">Development Diaries</option>
+<option value="9">Customer Support</option>
+<option value="3">Lores and Histories</option>
+</select></td>
+<td></td>
+</tr>
+<tr>
+<td class="searchtitles">
+Subcategory:
+</td>
+<td>
+<div id="search_subcat_footer" style="display: none;">
+<select name="subcat" id="search_subcat_select_footer">
+<option value="null"> - ALL - </option>
+</select>
+</div>
+<script type="text/javascript">
+ document.getElementById("search_subcat_footer").style.display="inline";
+ update_cats('_footer');
+</script>
+</td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;font-size:11px;font-weight:bold; margin-bottom: 0px;">For help on searching, see our <a href="../searchtips.html">Search Tips</a> page.
+<input type="submit" name="submit" class="searchbutton" value="" alt="Search"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../terms/terms.html">Terms &amp; Conditions</a> and <a href="../../privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary08b by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:18 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

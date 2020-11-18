@@ -1,0 +1,447 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary05c by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:21 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico">
+<link rel="SHORTCUT ICON" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="dev,development,diary,summoning,skill,testing,balancing,QA,editing,translation">
+<meta name="description" content="Read about the testing stage of the Summoning skill.">
+<meta name="title" content="RuneScape - MMORPG - Summoning: Part 3 - Testing">
+<title>RuneScape - MMORPG - Summoning: Part 3 - Testing</title>
+<style type="text/css">/*\*/@import url(../../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../css/kbase-6.css);/**/</style>
+<script type="text/javascript" src="../../css/kbsearchfill-0.js"></script>
+<script type="text/javascript">
+new_subcat=add_subcat(4, 5, "Postbag from the Hedge", -1 == 5);new_subcat=add_subcat(4, 6, "Players' Gallery", -1 == 6);new_subcat=add_subcat(4, 19, "God letters", -1 == 19);new_subcat=add_subcat(775, 892, "How do I get started?", -1 == 892);new_subcat=add_subcat(775, 798, "Controls", -1 == 798);new_subcat=add_subcat(775, 795, "Combat", -1 == 795);new_subcat=add_subcat(775, 776, "Skills", -1 == 776);new_subcat=add_subcat(775, 7, "Quests", -1 == 7);new_subcat=add_subcat(775, 1, "Achievement Diary", -1 == 1);new_subcat=add_subcat(775, 10, "Activities", -1 == 10);new_subcat=add_subcat(775, 38, "Distractions and Diversions", -1 == 38);new_subcat=add_subcat(775, 831, "Miscellaneous Guides", -1 == 831);new_subcat=add_subcat(775, 881, "Area Guides", -1 == 881);new_subcat=add_subcat(20, 32, "A New Look RuneScape: Part 1", -1 == 32);new_subcat=add_subcat(20, 21, "Graphics Team - NPC Improvement Project", -1 == 21);new_subcat=add_subcat(9, 127, "Billing", -1 == 127);new_subcat=add_subcat(9, 126, "Technical", -1 == 126);new_subcat=add_subcat(9, 827, "Safety & Security Guidelines", -1 == 827);new_subcat=add_subcat(9, 872, "Other", -1 == 872);
+</script>
+<meta name="language" content="en, de">
+<meta name="description" content="Read about the testing stage of the Summoning skill.">
+<style type="text/css">
+ 
+   
+  
+  .bigquote { font-size:medium; font-weight:bold; font-style:italic; text-align:left; } 
+  .mod { font-weight:bold; } 
+  .team { font-weight:bold; } 
+  .quote { font-style:italic; } 
+  .caption { font-size:85%; font-weight:bold; } 
+  .caption b { font-size:11px } 
+  
+ </style>
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHeadAdvert">
+<div id="headAdvert">
+<iframe name="Advert" src="../../../services.runescape.com/m%3dadvert/banner5052.html?size=730" allowtransparency="true" width="766" height="96" scrolling="no" frameborder="0"></iframe>
+<script type="text/javascript">
+  setTimeout(function() {
+  var url = "http" +
+  (/https:/.test(document.location.href) ? "s" : "") +
+  "://beacon.scorecardresearch.com/scripts/beacon.dll" +
+  "?c1=8&c2=6035824&c3=1271511541440201100" +
+  escape(document.location.href) +
+  "&c8=" + escape(document.title) +
+  "&c9=" + escape(document.referrer) +
+  "&c10=" + escape(screen.width+'x'+screen.height) +
+  "&rn=" + (new Date()).getTime();
+  var i = new Image();
+  i.src = url;
+  }, 1);
+  </script>
+<noscript>
+<img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=8&amp;c2=6035824&amp;c3=1271511541440201100&amp;x=NOJAVASCRIPT" alt="" />
+</noscript>
+</div>
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../../../services.runescape.com/m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../services.runescape.com/m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../title.html"><img alt="English" title="English" src="../../img/main/layout/en.gif" /></a>
+<a href="../../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../img/main/layout/de.gif" /></a>
+<a href="../../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../img/main/layout/fr.gif" /></a>
+<a href="../../l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../title.html">Home</a> &gt;
+
+<a href="dev_diary-2.html">Development Diaries</a> &gt; Summoning: Part 3 - Testing<br />
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+Summoning: Part 3 - Testing
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_1">
+<div class="article">
+<div class="topshadow">
+<div class="bottomborder">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleft">
+<div class="bottomright">
+<div class="links"></div>
+<div style="text-align: center">
+<div style="text-align: justify;color: #402706; margin: auto;">
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/comic/comic05c.gif" style="display: block; margin: auto;" alt="comic strip">
+</p>
+<br>
+<h3 style="text-align: center;"><b>Summoning: Part 3 - Testing</b></h3>
+<p>It's time for the third part of the Summoning <a href="dev_diary-2.html">Development Diary</a>, where we'll be looking at how Summoning was polished up to as high a standard as possible before its release. This task falls to the <span class="team">Quality Assurance (QA)</span> team to test it for bugs and the <span class="team">RuneScape Content</span> team to balance it.</p>
+<br>
+<p style="text-align: center;"><b>A familiar feeling</b></p>
+<p>Typically, the role of a games tester is to repeatedly play through one piece of content to find any bugs, then to communicate these to the developer so they can be fixed. It can get repetitive but it's a rewarding job, especially if it's for a game you were playing long before becoming a tester of it, which is true of a lot of the members of <span class="team">QA</span> (one is ranked within the top 500 players). With an update as large as Summoning, however, things were a little different for RuneScape's <span class="team">QA</span> team. <span class="quote">"For small updates, it makes sense to only test them after they've been developed, but skills are large and have a huge impact on the game. We were involved from the very beginning, giving feedback on the skill's concept, how it would work with the current game and with future planned content,"</span> says <span class="team">QA</span>'s <span class="mod">Mod Kevin</span>.</p>
+<div style="float:left; width:30%; margin:15px; text-align: left;">
+<p class="bigquote">
+"One of the guys discovered a bug where you could obtain multiple familiars at the same time. He had an army of about thirty of them following him around, attacking everything his character attacked."
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Ben L</span><br><span class="team">Quality Assurance</span>
+</p>
+</div>
+<p>The first obvious concern was that, with such a wide variety of pets and familiars, more players were going to have a follower out at the same time, which could have lead to technical problems like slowdown. This was addressed during the concept stage, by designing the skill to minimise the number of players who will have followers out at the same time. For instance, there is a time limit on how long a familiar will stay summoned (which increases as you train the skill), Summoning energy runs out and needs to be recharged at an obelisk and certain pets can only be tamed at higher Summoning levels.</p>
+<p>One of the ways something like this is tested is by using multi-tests. This is where a few members of the <span class="team">QA</span> team log in and play the same content at the same time. It all worked quite smoothly, but one of the multi-tests did throw up an amusing bug. <span class="mod">Mod Ben L</span>, Head of RuneScape <span class="team">QA</span>, says, <span class="quote">"One of the guys discovered a bug where you could obtain multiple familiars at the same time. He had an army of about thirty of them following him around, attacking everything his character attacked."</span> Good job we caught it!</p>
+<br>
+<p style="text-align: center;"><b>Level up</b></p>
+<p>Another way in which Summoning is going to affect RuneScape is how it interacts with other <a href="skills.html">skills</a> and <a href="combat.html">combat</a>. It was up to RuneScape Content to balance Summoning to make sure it does not make gaining XP in other skills too easy or disrupt the combat triangle. <span class="quote">"Summoning gives you the potential to be more powerful in combat, so it's only right that it contributes to your Combat level, which is a guide to your character's overall combat ability,"</span> says <span class="team">RuneScape Content</span>'s <span class="mod">Paul</span>.</p>
+<p>Summoning familiars are there to support you, whichever combat class your character is using, so we decided it made sense for them to add to your Combat level in a similar way to how Prayer does. Adding Summoning to the Combat level calculation means that the maximum will increase from 126 up to 138. It's a new goal for anyone who already has a level 126 character, or just for anyone who enjoys training skills.</p>
+<br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary05/cblvl.gif" style="display: block; margin: auto;" alt=""><br>
+<span class="caption">Will you master Summoning and get your Combat level up to 138?</span> </p>
+<br>
+<p>Deciding that Summoning would add to a character's Combat level was quite easy, but there were repercussions for the rest of the game. Does this new Combat level affect <a href="slayer_masters.html">Slayer</a> assignments? What will this mean for Bounty Hunter, <a href="clan_wars.html">Clan Wars</a> and the <a href="combat_duelling.html">Duel Arena</a>? How will future player-vs-player content be affected? How is Summoning balanced with combat? As you can imagine, balancing Summoning against all these factors is difficult. Some of the things it has led to include are 'No Summoning' duels, a Protect from Summoning prayer and the relative cost of the skill.</p>
+<br>
+<p style="text-align: center;"><b>The hard sell</b></p>
+<div style="float:right; width:30%; margin:15px; text-align: left;">
+<p class="bigquote">
+"If, by the end of the Wolf Whistle quest, you understand how Summoning functions, then we've succeeded. The fact that it was developed by an excellent quest writer helps."
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Mark</span><br><span class="team">RuneScape Content</span>
+</p>
+</div>
+<p>While the skill is neither cheap or expensive to train, high-level familiars will obviously cost more to summon than low-level ones, so players will have to weigh the benefits of each familiar against the cost of summoning them. Also, the skill will not initially be a fast skill to train. <span class="mod">Paul</span> says, <span class="quote">"You need some skills to be easy to train and some that are hard."</span> Summoning leans more towards the hard end of the scale, but it's well worth the effort. Everyone will be able to get something out of it – whether that's the <a href="capes_of_accomplishment_members.html">skillcape</a> at level 99, cockatrices at level 43 or just pet dogs at level 1.</p>
+<p>Compared to some of RuneScape's other skills, Summoning is one of the more complex. <span class="mod">Mod Mark</span>, Senior Creative Designer, says, <span class="quote">"If players don't understand something straight away, they may just dismiss it. If that happens it's our fault, not the players. That's why Summoning had to have a quest."</span> This quest, titled Wolf Whistle, will act as both an introduction and a tutorial.</p>
+<p><span class="quote">"If, by the end of the Wolf Whistle quest, you understand how Summoning functions, then we've succeeded. The fact that it was developed by an excellent quest writer helps."</span> Indeed, it's not just a tutorial, it's an amusing quest in its own right, as you'd expect from <span class="mod">Mod Wilson</span> (whose previous quests include <a href="rag_and_bone_man_members.html">Rag and Bone Man</a>, <a href="cabin_fever_members.html">Cabin Fever</a>, <a href="rum_deal_members.html">Rum Deal</a> and <a href="the_great_brain_robbery_members.html">Great Brain Robbery</a>).</p>
+<br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary05/pets.gif" style="display: block; margin: auto;" alt=""><br>
+<span class="caption">Inventory images for the five pets we've mentioned or hinted at so far.</span> </p>
+<br>
+<p>There's a lot of overlap between the different development stages of something as large as a skill. Parts of it were being coded while the graphics were still being worked on; some of it went into testing while the rest was being developed; the Game Guide articles were being written while the skill was being balanced; and we began dropping hints about the skill before it was even finished. </p>
+<p style="text-align: left;"><b>Concluded in: </b><a href="diary05d.html">Summoning: Part 4 - Release</a></p>
+</div>
+</div>
+<div class="backtotop"><a href="#top">Back to the top</a></div>
+<br/>
+<center><img src="../../img/main/kbase/hr.png" alt=""/></center>
+<table class="bottomlinks">
+<tr>
+</tr>
+<tr>
+<td class="bot"><p><div class="bold">More articles in
+<a href="dev_diary-2.html">Development Diaries</a>
+</div></p>
+<ul class="bold">
+<li>
+<a href="diary06.html">RuneScape vs. Real-world Trading</a>
+</li>
+<li>
+<a href="diary05d.html">Summoning: Part 4 - Release</a>
+</li>
+<li>
+<b>Summoning: Part 3 - Testing</b>
+</li>
+<li>
+<a href="diary05b.html">Summoning: Part 2 - Development</a>
+</li>
+<li>
+<a href="diary05a.html">Summoning: Part 1 - Concept</a>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="searchtop">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="topleft">
+<div class="topright">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div class="searchtext">
+<form method="get" action="http://www.runescape.com/kbase/search.ws">
+<table class="bottomsearch">
+<tr>
+<td class="searchtitles" width="60" style="text-align: right">
+Search for:
+</td>
+<td>
+<input class="textinput" name="search_query" id="search_query" size="29" maxlength="300" value="">
+</td>
+<td rowspan="3">
+<table>
+<tr>
+<td>
+<label class="bold">Criteria:</label>
+</td>
+<td></td>
+<td><label class="bold">Find:</label></td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="title_chk" value="1" checked="checked">
+Title
+</td>
+<td>
+<input class="widget" type="checkbox" name="keywords_chk" value="1" checked="checked">
+Keywords
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="1" checked="checked">
+All
+</td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="description_chk" value="1" checked="checked">
+Description
+</td>
+<td>
+<input class="widget" type="checkbox" name="body_chk" value="1" checked="checked">
+Body
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="0">
+Any
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="searchtitles">
+Category:
+</td>
+<td>
+<select name="category" id="search_cat_select_footer" onchange="update_cats('_footer')">
+<option value="null"> - ALL - </option>
+<option value="4">Player Submissions</option>
+<option value="775">Game Guide</option>
+<option value="20">Development Diaries</option>
+<option value="9">Customer Support</option>
+<option value="3">Lores and Histories</option>
+</select></td>
+<td></td>
+</tr>
+<tr>
+<td class="searchtitles">
+Subcategory:
+</td>
+<td>
+<div id="search_subcat_footer" style="display: none;">
+<select name="subcat" id="search_subcat_select_footer">
+<option value="null"> - ALL - </option>
+</select>
+</div>
+<script type="text/javascript">
+ document.getElementById("search_subcat_footer").style.display="inline";
+ update_cats('_footer');
+</script>
+</td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;font-size:11px;font-weight:bold; margin-bottom: 0px;">For help on searching, see our <a href="../searchtips.html">Search Tips</a> page.
+<input type="submit" name="submit" class="searchbutton" value="" alt="Search"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../terms/terms.html">Terms &amp; Conditions</a> and <a href="../../privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary05c by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

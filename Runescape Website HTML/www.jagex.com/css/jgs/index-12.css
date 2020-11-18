@@ -1,0 +1,243 @@
+
+
+
+
+.BgBody {
+ background-image: url(../../img/jgs/index/BgBody_bgc81e.png?2);
+}
+
+.BgContent {
+ background-image: none;
+}
+
+.BgHead {
+ background-image: none;
+}
+
+.BgFoot {
+ background-image: none;
+}
+
+/* Banner */
+
+#Banner {
+ display: block;
+ margin-bottom: -201px;
+ height: 440px;
+ padding-top: 0;
+}
+
+#Banner h2 {
+ text-indent: -999em;
+}
+
+#Banner ul,
+#Banner li {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+}
+
+
+
+
+div#Banner {
+ background: url(../../img/jgs/index/banner/tombracer/bg.jpg) left top no-repeat;
+}
+#bannerPlay {
+ position: absolute;
+ left: 700px;
+ top: 233px;
+ width: 216px;
+ height: 92px;
+}
+
+
+/* xBanner */
+
+
+/* Advert */
+
+#advert {
+ position: relative;
+ float: right;
+ margin: 0 0 11px 0;
+ width: 344px;
+ height: 252px;
+ background: url(../../img/jgs/advert/containerc81e.png?2) left top no-repeat;
+}
+
+/* xAdvert */
+
+
+/* gameList */
+
+#games {
+ float: left;
+ position: relative;
+}
+
+.gameList {
+ float: left;
+ clear: left;
+}
+
+#games .BoxBody {
+ padding: 0;
+ width: auto;
+ height: 715px;
+}
+/* xgameList */
+
+
+/* News */
+
+#news {
+ position: relative;
+ float: right;
+ clear: right;
+ margin: 0;
+ width: 344px;
+}
+
+.newsContent {
+ width: auto;
+ background-image: url(../../img/jgs/index/news_bgc81e.png?2);
+}
+
+.newsContentHead {
+ background-image: url(../../img/jgs/index/news_bgc81e.png?2);
+}
+
+.newsContentFoot {
+ background-image: url(../../img/jgs/index/news_bgc81e.png?2);
+}
+
+.rss,
+.rss:visited {
+ float: right;
+ display: inline;
+ height: 23px;
+ line-height: 16px;
+ color: #d7d7d7;
+ text-align: right;
+ text-decoration: none;
+}
+
+.rss:hover {
+ font-weight: bold; /* ie trigger */
+}
+
+.rss span {
+ color: #d7d7d7;
+ font-weight: normal;
+ text-decoration: underline;
+}
+
+.rss:hover span {
+ text-decoration: none;
+}
+
+.rss img {
+ vertical-align: middle;
+}
+
+.newsItems {
+ clear: both;
+ margin: 0 auto;
+ width: 324px;
+ height: 395px;
+ overflow: hidden;
+ color: black;
+ background: url(../../img/jgs/index/newsItems_small_bgc81e.png?2) left top no-repeat;
+}
+
+.newsNone {
+ margin: 1em;
+ text-align: center;
+}
+
+.archive,
+.archive:visited {
+ float: right;
+ display: inline;
+ margin: 8px 10px 0 0;
+ height: 18px;
+ color: #d7d7d7;
+}
+
+/* xNews */
+
+
+/* iphoneintro */
+#iphoneintro{
+ margin: 4px 10px 0 10px;
+ background:url(../../img/jgs/homepage/iphoneintroback/minerdisturbancec81e.jpg?2) no-repeat left top;
+ color:black;
+ display:inline;
+ float:left;
+ position:relative;
+ width: 547px;
+ height: 317px;
+ padding: 14px 13px;
+
+}
+#iphoneintro h2{
+ font-size: 23px;
+ margin-bottom: 15px;
+}
+#iphoneintro p{
+ font-size: 11px;
+ margin-top: 42px;
+}
+#iphoneintro .p1{
+ width: auto;
+}
+#iphoneintro .p1 p{
+ font-size: 12px;
+}
+#iphoneintro .p2{
+ width: 220px;
+}
+#iphoneintro .p2 p{
+ margin-top: 25px;
+}
+#iphoneintro a{
+ /*background-color:red;
+ opacity:0.6;*/
+ bottom:13px;
+ color:white;
+ display:block;
+ font-size:16px;
+ line-height:16px;
+ height:42px;
+ left:13px;
+ background:url(../../img/jgs/homepage/iphoneintroback/availableIphonec81e.png?2) no-repeat left top;
+ padding-bottom:7px;
+ padding-left:4px;
+ padding-right:12px;
+ padding-top:9px;
+ position:absolute;
+ text-align:right;
+ text-decoration:none;
+ width:151px;
+}
+#iphoneintro a:hover{
+ background-position: left bottom;
+}
+#iphoneintro a span{
+ font-size: 25px;
+ line-height: 25px;
+}
+/* xiphoneintro */
+
+#genreFilter{
+ margin:0 10px;
+ cursor: default;
+}
+
+div.PageControl{
+ bottom: 2px;
+ position: absolute;
+ right: 6px;
+}

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.rssboard.org/~d/styles/itemcontent.css"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1" version="2.0">
+	<channel>
+		<language>fr</language>
+		<title>Infos r&#233;centes sur RuneScape</title>
+		<description>Informations les plus r&#233;centes sur RuneScape, le jeu en ligne massivement multijoueur d&#233;velopp&#233; et publi&#233; par Jagex.</description>
+		<link>http://www.runescape.com/l=2</link>
+		<docs>http://www.rssboard.org/rss-specification</docs>
+		<generator>JagexRssFeedGenerator</generator>
+		<ttl>30</ttl>
+		<lastBuildDate>Fri, 16 Jul 2010 16:26:36 GMT</lastBuildDate>
+		<image>
+				<url>http://www.runescape.com/l=2/img/news/RSS/rss_logo.png</url>
+		</image>
+
+		<item>
+			<title>Love Story</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=2/img/Large/love_story.jpg&quot; /&gt;&#10;				Une ombre &#233;merge du trouble pass&#233; du vieux sage. Des r&#233;compenses en Construction et en Magie vous attendent au bout de cette aventure qui vous fera endurer des combats, des puzzles, des sarcasmes, un vieillard amoureux et une demoiselle en d&#233;tresse et en pleurs.
+			</description>
+			<category>Infos sur les mises &#224; jour du jeu</category>
+			<link>http://services.runescape.com/m=news/l=2/love-story</link>
+			<pubDate>Mon, 05 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/love-story</guid>
+		</item>
+
+		<item>
+			<title>Gagnants du concours de sosies</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				Maintenant que le week-end est termin&#233;, voici aussi la fin de notre comp&#233;tition &#171; Sosies dans RuneScape &#187; du mois de juillet 2010 ! Apr&#232;s de longues d&#233;lib&#233;rations, nous avons choisi nos vainqueurs...
+			</description>
+			<category>Infos du service client&#232;le</category>
+			<link>http://services.runescape.com/m=news/l=2/gagnants-du-concours-de-sosies</link>
+			<pubDate>Wed, 07 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/gagnants-du-concours-de-sosies</guid>
+		</item>
+
+		<item>
+			<title>&#201;v&#233;nement tactique PvP</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/clanwars.jpg&quot; /&gt;&#10;				Avis &#224; tous les joueurs et clans francophones ! Venez d&#233;fendre les couleurs de votre &#233;quipe dans un grand &#233;v&#233;nement PvP tactique inter-communautaire. L&#8217;heure est &#224; l&#8217;affrontement dans une bataille m&#233;morable entre 3 &#233;quipes. Soyez au rendez-vous !
+			</description>
+			<category>Infos du service client&#232;le</category>
+			<link>http://services.runescape.com/m=news/l=2/vnement-tactique-pvp</link>
+			<pubDate>Wed, 07 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/vnement-tactique-pvp</guid>
+		</item>
+
+		<item>
+			<title>Galerie des joueurs</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/gallery.jpg&quot; /&gt;&#10;				Il y a tout juste un mois, la galerie des joueurs a fait son retour et nous avons &#233;t&#233; impressionn&#233;s par le volume et l&apos;enthousiasme de vos commentaires. Donc, comme promis, voici la s&#233;lection du mois des dessins inspir&#233;s du th&#232;me de RuneScape. &#13;&#10;
+			</description>
+			<category>Infos sur le site Web</category>
+			<link>http://services.runescape.com/m=news/l=2/galerie-des-joueurs</link>
+			<pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/galerie-des-joueurs</guid>
+		</item>
+
+		<item>
+			<title>Festival de l&apos;&#233;t&#233; de RuneScape</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				Ce week-end est un week-end de f&#234;te nationale pour nos amis d&apos;outre-Atlantique. Pour l&apos;&#233;quipe de gestion des communaut&#233;s, c&apos;est une excuse comme une autre pour organiser des &#233;v&#233;nements ! Lisez vite la suite pour tout savoir sur la comp&#233;tition, la parade, le d&#233;fi PVP...
+			</description>
+			<category>Infos du service client&#232;le</category>
+			<link>http://services.runescape.com/m=news/l=2/festival-de-lt-de-runescape</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/festival-de-lt-de-runescape</guid>
+		</item>
+
+		<item>
+			<title>Les coulisses de RuneScape &#8211; Juillet</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=2/img/Large/behind-the-scenes-July_FR.jpg&quot; /&gt;&#10;				Histoires d&#8217;amour, r&#233;compenses &#233;tendues en Assaut de donjon, anneaux sp&#233;cialis&#233;s et r&#233;compenses d&#8217;&#233;lite pour les jeux de piste d&#8217;&#233;lite sont au programme des mises &#224; jour du mois ! Pas mal, non ?
+			</description>
+			<category>Infos sur les coulisses</category>
+			<link>http://services.runescape.com/m=news/l=2/les-coulisses-de-runescape--juillet</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/les-coulisses-de-runescape--juillet</guid>
+		</item>
+
+		<item>
+			<title>Gagnant du Super ticket - tirage de juin</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=2/img/Large/big_ticket_fr.jpg&quot; /&gt;&#10;				Nous venons de tirer au sort le gagnant du Super ticket de juin. Le tout dernier tirage au sort aura lieu le mois prochain...
+			</description>
+			<category>Infos du service client&#232;le</category>
+			<link>http://services.runescape.com/m=news/l=2/gagnant-du-super-ticket---tirage-de-juin</link>
+			<pubDate>Wed, 30 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/gagnant-du-super-ticket---tirage-de-juin</guid>
+		</item>
+
+		<item>
+			<title>R&#233;sultat du sondage Halloween 2010</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/statistics.jpg&quot; /&gt;&#10;				Il y a deux semaines, nous vous avons propos&#233; un sondage concernant les r&#233;compenses de l&apos;&#233;v&#233;nement Halloween de cette ann&#233;e. Les votes ont &#233;t&#233; compt&#233;s et la r&#233;compense qui l&apos;emporte est...
+			</description>
+			<category>Infos sur le site Web</category>
+			<link>http://services.runescape.com/m=news/l=2/rsultat-du-sondage-halloween-2010</link>
+			<pubDate>Tue, 29 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/rsultat-du-sondage-halloween-2010</guid>
+		</item>
+
+		<item>
+			<title>Journal des forums 6e &#233;dition</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/bookopen.jpg&quot; /&gt;&#10;				Le dernier num&#233;ro du journal des forums avant les vacances est l&#224; ! Ne manquez pas ce grand rendez-vous de l&apos;info francophone de RuneScape.
+			</description>
+			<category>Infos du service client&#232;le</category>
+			<link>http://services.runescape.com/m=news/l=2/journal-des-forums-6e-dition</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/journal-des-forums-6e-dition</guid>
+		</item>
+
+		<item>
+			<title>Tirage au sort supert ticket : rappel</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=2/img/Large/big_ticket_fr.jpg&quot; /&gt;&#10;				Le tirage au sort Super ticket de ce mois approche. N&#8217;oubliez pas de vous inscrire pour gagner un voyage tous frais pay&#233;s dans nos studios au Royaume-Uni !
+			</description>
+			<category>Infos du service client&#232;le</category>
+			<link>http://services.runescape.com/m=news/l=2/tirage-au-sort-supert-ticket--rappel</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/tirage-au-sort-supert-ticket--rappel</guid>
+		</item>
+
+		<item>
+			<title>Miner Disturbance sur iPhone, iPod et iPad</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=2/img/Large/miner_disturbance.png&quot; /&gt;&#10;				Nous avons mis &#224; jour l&#8217;un de nos grands classiques : Miner Disturbance (Mineur en p&#233;ril) pour l&apos;iPhone - qui fait partie des 5 premi&#232;res applications payantes au Royaume-Uni. 
+			</description>
+			<category>Infos sur les mises &#224; jour du jeu</category>
+			<link>http://services.runescape.com/m=news/l=2/miner-disturbance-sur-iphone-ipod-et-ipad</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/miner-disturbance-sur-iphone-ipod-et-ipad</guid>
+		</item>
+
+		<item>
+			<title>Le calme avant l&#8217;alerte</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=2/img/Large/vkq1.jpg&quot; /&gt;&#10;				Une cr&#233;ature d&#8217;Assainissement a-t-elle &#233;chapp&#233; &#224; la vigilance des Chevaliers du n&#233;ant ? Enqu&#234;tez, r&#233;solvez des &#233;nigmes et luttez contre les monstres pour d&#233;couvrir la v&#233;rit&#233; dans cette qu&#234;te pour novices, la premi&#232;re de la s&#233;rie des Chevaliers du n&#233;ant. Utilisez le lien suivant pour une vid&#233;o :
+			</description>
+			<category>Infos sur les mises &#224; jour du jeu</category>
+			<link>http://services.runescape.com/m=news/l=2/le-calme-avant-lalerte</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/le-calme-avant-lalerte</guid>
+		</item>
+
+		<item>
+			<title>Changement des qu&#234;tes gratuites</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/novice_quests.jpg&quot; /&gt;&#10;				Les qu&#234;tes Du balai et Mythes des Terres blanches sont d&#233;sormais gratuites. C&#8217;est l&#8217;occasion pour les non-abonn&#233;s qui n&#8217;ont pas eu cette chance de profiter de ces qu&#234;tes relativement faciles, mais amusantes et d&#233;concertantes.
+			</description>
+			<category>Infos sur les mises &#224; jour du jeu</category>
+			<link>http://services.runescape.com/m=news/l=2/changement-des-qutes-gratuites</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/changement-des-qutes-gratuites</guid>
+		</item>
+
+		<item>
+			<title>Jagex Clan Cup 2010</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/chalice.jpg&quot; /&gt;&#10;				&#192; l&apos;approche des vacances, vous r&#234;vez sans doute de soleil et de plage. R&#233;veillez-vous ! La Jagex Clan Cup 2010 est l&#224; ! L&apos;attente a &#233;t&#233; longue, mais l&apos;&#233;v&#233;nement tant attendu est enfin arriv&#233;.
+			</description>
+			<category>Infos du service client&#232;le</category>
+			<link>http://services.runescape.com/m=news/l=2/jagex-clan-cup-2010</link>
+			<pubDate>Fri, 18 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/jagex-clan-cup-2010</guid>
+		</item>
+
+		<item>
+			<title>Fond d&apos;&#233;cran Tournoi de chevaliers</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=2/img/news/icons/clanwars.jpg&quot; /&gt;&#10;				Plus de 7 000 joueurs des 12 communaut&#233;s internationales ont pris part au premier tournoi de chevaliers (ou Fight Knights) qui s&apos;est termin&#233; par la victoire de l&apos;&#233;quipe polonaise. Pour f&#234;ter cet &#233;v&#233;nement, nous avons cr&#233;&#233; un fond d&apos;&#233;cran.
+			</description>
+			<category>Infos sur le site Web</category>
+			<link>http://services.runescape.com/m=news/l=2/fond-dcran-tournoi-de-chevaliers</link>
+			<pubDate>Thu, 17 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=2/fond-dcran-tournoi-de-chevaliers</guid>
+		</item>
+	</channel>
+</rss>

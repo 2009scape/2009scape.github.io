@@ -1,0 +1,249 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=16&project_id=1&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:51:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../www.runescape.com/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../www.runescape.com/favicon.ico">
+<link rel="apple-touch-icon" href="../../www.runescape.com/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="RuneScape Developers' Blogs">
+<meta name="description" content="RuneScape Developers' Blogs - Mod Mark talks about some of the challenges of giving feedback on the design of the next Red Axe quest.">
+<meta name="title" content="New Dwarf Quest - Feedback and Blue Blocks">
+<title>New Dwarf Quest - Feedback and Blue Blocks</title>
+<style type="text/css">/*\*/@import url(../../www.runescape.com/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_3_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/kbase-6.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/devblog-2.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/sifr-0.css" media="all">
+<script type="text/javascript" src="../../www.runescape.com/css/sifr_core-0.js"></script>
+<script type="text/javascript">
+  var Trajan_Pro_Bold = { src: 'http://www.runescape.com/img/sifr/Trajan_Pro_Bold.swf' };
+
+  sIFR.activate(Trajan_Pro_Bold);
+
+  sIFR.replace(Trajan_Pro_Bold, {
+    selector: 'h2',
+    css: '.sIFR-root { font-weight: bold; font-size: 23px; text-align: center; opacity: 0.95; leading: -1; color: #411f13; }'
+    + ', .sIFR-root a { color: #411f13; }'
+    + ', .sIFR-root a:hover { color: #411f13; }',
+    wmode: 'transparent'
+  });
+ </script>
+</head>
+<body id="nav" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../www.runescape.com/title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../www.runescape.com/game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../www.runescape.com/game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../www.runescape.com/options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../www.runescape.com/account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../www.runescape.com/account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../www.runescape.com/kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../www.runescape.com/splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../www.runescape.com/kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../www.runescape.com/parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../www.runescape.com/game.html" class="HoverImg" id="playBannerNoad"><img src="../../www.runescape.com/img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../www.runescape.com/title.html"><img alt="English" title="English" src="../../www.runescape.com/img/main/layout/en.gif" /></a>
+<a href="../../www.runescape.com/l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../www.runescape.com/img/main/layout/de.gif" /></a>
+<a href="../../www.runescape.com/l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../www.runescape.com/img/main/layout/fr.gif" /></a>
+<a href="../../www.runescape.com/l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../www.runescape.com/img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+</div></div>
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../www.runescape.com/title.html">Home</a> &gt;
+<a href="index8523.html?project_id=1&amp;page=1"><span>Developer Blogs</span></a> <span class="divider">&gt;</span>
+<span><span>New Dwarf Quest: Feedback and Blue Blocks</span></span>
+</div>
+</div>
+<div id="content"> <div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+New Dwarf Quest: Feedback and Blue Blocks
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article">
+<div class="topshadow">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div id="post">
+<div class="devblog">
+<div class="devblogHead">
+<div class="devblogFoot">
+<div id="archives"><a href="index8523.html?project_id=1&amp;page=1">&lt; Back to archive</a></div>
+<h2>
+Feedback and Blue Blocks
+<br/>
+by <a href="indexf035.html?author_id=12">Mod Mark</a> 23-Jun-2009
+</h2>
+<h3>The Unforgettable Tale of a Lead Designer</h3><div class="content"><p><span class="strong">Mod Mark</span> here, Lead Designer of RuneScape. I’m the Mark who has been here at Jagex for six years - not to be confused with <span class="strong">Mod MMG</span>: he is the Mark who is now our CEO. As lead designer, I am ultimately responsible for the new content we add to the game. This includes deciding what quests we develop, which new skills we work on, where we put new minigames, what levels they are, how difficult we want them to be, how much XP they give, which areas get new achievement diaries, and what new aspects of the game we should introduce, like the distractions and diversions, etc, etc. I don’t actually come up with the majority of new ideas, nor do I write the content, I just decide what direction we want to take the game and create objectives for the developers, helping them to decide which concepts we want to take into full development. Then, after they design how these things should work and create the code that makes their ideas real, I get to play it through and advise how we can improve it to make it the best it can be, before it is launched into the main game.</p><p>I am fortunate to be surrounded by talented, creative individuals who make my job very, very easy! Our relationship is similar to that of a sports coach and a team - the coach isn’t actually out on the field playing with the team but, ultimately, he is responsible for its performance. My job is just like that, except my team this time is Captain <span class="strong">Mod John A</span> and his Dwarven Raiders.</p><p>Playing through content for the first time is always one of the most exciting parts of my job. When you help someone to sculpt their ideas in the design brief stage of development, you always have a visual idea of what the final product will look like, or you imagine how difficult a puzzle should be. No matter how much you discuss things with the writer or an artist, people often have a slightly different opinion from you, which can have interesting effects on the final product.</p><p>Anyway, it had been a few years since the last dwarf quest, so I played through a few of the crucial elements of <span class="em">Giant Dwarf</span>, <span class="em">Forgettable Tale of a Drunken Dwarf</span> and <span class="em">Between a Rock...</span> and thought back on the first conversations I had with <span class="strong">Mod Vincent</span>, the original developer of the Red Axe storyline. <span class="strong">Mod John A</span>’s style is very different from his, but there were a few things we were keen to keep consistent, like the camera flyover of the city at the beginning (we have had those in all the dwarf quests - <span class="strong">Mod Vincent</span> was big on cut scenes but <span class="strong">Mod John A</span> less so) and the whole Red Axe/mining conglomerates/drunk dwarf-baiting plotline.</p><p>So, I found Captain Veldaban in the north-east of the city. I’d had the new concept art for Veldaban on my desktop for ages, so I’d been looking forward to his updated look...</p><p>But things were a little...blue. In fact, most of the new areas and quest-specific characters were just blue boxes, as the Graphics team were still working on the new graphics. Sometimes, with content we write, we ask the developer to create the majority of it using old graphics, and ask the <span class="strong">Graphics</span> team to work on the new assets after they have seen the puzzles, gameplay and level design. This is always quite an odd experience, dodging level 70 blue boxes or trying to find the blue box-shaped key amongst your inventory of blue woodblock objects. </p><p></p></div><div class="hr"></div><h3>Offering Feedback</h3><div class="imgright"><div class="topbord"><div class="bottombord"><div class="leftbord"><div class="rightbord"><div class="toplcorn"><div class="toprcorn"><div class="bottomlcorn"><div class="bottomrcorn"><a href="images/ra3/playthrough.jpg"><img src="images/ra3/playthrough_thumb.jpg" alt="Mod Mark vs the blue, err, orange and black things." /></a></div></div></div></div></div></div></div></div><a href="images/ra3/playthrough.jpg">Mod Mark vs the blue, err, orange and black things.</a></div><div class="content"><p> </p><p>Playing through a piece of content to give feedback to a developer is quite a challenge. Not only are you playing through it for your own fun and amusement (we never release content we don’t find fun ourselves), but you have to think about the core aims of the project - who the content is for, what sort of audience we want it to appeal to, the rewards, target levels, etc. We also had two reward areas planned for this quest and some brand new Ranged NPCs, which we have very few of in the game. These were of particular interest to me, since we had increased the skill requirements for the quest, taking the Strength requirement up to 69, and the NPC combat levels had to be increased to reflect this. However, with the area just using placeholder ’blue box‘ graphics and temporary stats, I decided to leave looking at the reward areas until they were properly finished.</p><p>Playthroughs last for about half a day, as I like to play through the content once, then specific sections again with a more critical eye. I look for all sorts of important factors like: Is it clear to the user what’s going on? Do the different sections of the quest flow into one another? Do they keep the player interested during the more tricky sections, like the mine cart puzzles (which <span class="strong">Mod John A</span> has approached in an original way)? Is the dialogue too wordy? Is the quest self-contained? Are the main characters compelling and believable? Is it rewarding enough? All sorts of issues like this can and will come up in those initial playthroughs and trigger conversation between myself and the developer.</p><p>One of the most interesting parts of the quest was the point in which <span class="strong">Mod John A</span> chose to reveal the plot twist. I was surprised that he chose to reveal it in that way, and it was very different from how I had expected it from the original design briefs. We’re due to have a feedback meeting after he has come back from holiday, and I am really interested to hear why he did it that way. I’m keen to change it, but I always like to discuss these things with the developer and find out what they wanted to achieve. Sometimes it’s just a case of changing a few words, other times we rethink and try a totally different approach. It’s always a very creative time in the product’s life-cycle.<br /> <br />I’m looking forward to chatting to <span class="strong">Mod John A</span> about his content and how we can improve it. From what I have seen of the new models and animations coming from the <span class="strong">Graphics</span> team, it’s going to look great!</p><p><span class="strong">New requirements in full</span></p><p>We've decided to make the quest's skill requirements higher than the ones that we previously released. Here are the new requirements in full:</p><p><ul><li>Level 61 Hunter</li><li>Level 61 Firemaking</li><li>Level 69 Strength</li><li>Must have completed <span class="em">Forgettable Tale of a Drunken Dwarf</span> and <span class="em">Between a Rock...</span></li><li>There will be an enemy to fight, but we haven't quite decided its level yet.</li></ul></p><p></p></div>
+<br class="clear" />
+<div id="meta">
+Project: <a href="index024d.html?project_id=1">New Dwarf Quest</a><br />
+Tags:
+<a href="index629a.html?tag_id=3">development</a>, <a href="index1782.html?tag_id=2">dwarf</a>, <a href="index230c.html?tag_id=1">quest</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../www.runescape.com/terms/terms.html">Terms &amp; Conditions</a> and <a href="../../www.runescape.com/privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../www.jagex.com/index.html" target="_blank">
+<img src="../../www.runescape.com/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+ document.write(unescape("%3Cscript src='"+(("https:"==document.location.protocol)?"https://ssl":"http://www")+".google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=16&project_id=1&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:51:14 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,229 @@
+
+
+
+.bottomrightshad{
+ padding: 25px 38px;
+ color: #443e22;
+}
+
+.pollborder {
+ text-align:center;
+ margin-left: 10px;
+ margin-right: 10px;
+ border: 1px solid #B3AA90;
+ color: #443e22;
+ margin-bottom: 15px;
+ padding-bottom: 12px;
+ height: 1%;
+}
+
+.subarticleHeadercenter, .subarticleHeaderleft {
+ height: 26px;
+ line-height: 25px;
+ text-align: center;
+ color: #675f39;
+ margin: 2px;
+ font-weight: bold;
+ background: url(../img/main/layout/subarticle_header_bg.png) repeat-x;
+}
+
+.subarticleHeaderleft {
+ text-align: left;
+ margin: 0px;
+ padding-left: 10px;
+ border-bottom: 0px;
+}
+
+.subarticleHeaderresults {
+ min-height: 15px;
+ text-align: left;
+ color: #675f39;
+ background: url(../img/main/layout/subarticle_header_bg.png) repeat-x;
+ padding: 6px 10px;
+ font-weight: normal;
+}
+
+.article a {
+ text-decoration: none;
+ font-weight: bold;
+}
+
+.pollstext {
+ text-align: left;
+ padding: 0px 10px;
+}
+
+.years {
+ padding-top: 15px;
+ font-weight: bold;
+ color: #a07f3b;
+ text-align: center;
+}
+
+.years a{
+ text-decoration: underline;
+}
+
+.archive_polls {
+ border: 1px solid #B3AA90;
+ margin: 0px 10px 40px 10px;
+}
+
+.archive_polls_results {
+ border: 1px solid #B3AA90;
+ margin: 0px 10px 20px;
+}
+
+.archive_polls td{
+ border-bottom: 1px solid #ded4ba;
+ padding: 0px 10px;
+}
+
+td.shield {
+ background: url('../img/poll/shield.gif') no-repeat;
+ padding: 4px 4px 4px 30px;
+ width: 48%;
+}
+
+td.sword {
+ width: 230px;
+}
+
+* html .floatLeft{
+ float: left;
+ margin: 0 -3px; ma\rgin: 0; /* ie5 3px margin hack */
+}
+
+.questionno {
+ float:left;
+ height: 31px;
+}
+
+.questionsborder{
+ border: 1px solid #b3aa90;
+ width:50%;
+ padding: 2px;
+ vertical-align: top;
+}
+
+.polltext {
+ padding: 6px;
+}
+
+label {
+ clear:both;
+ display:block;
+ margin: 5px 0px;
+}
+
+label select {
+ width: 312px;
+}
+
+select {
+ background-color: #d2ba8c;
+ border: 2px solid #a7894b;
+}
+
+.pollemail {
+ vertical-align: bottom;
+}
+
+.centre {
+ text-align: center;
+}
+
+#errorimage {
+ margin: 10px;
+}
+
+.resulttext {
+ text-align: center;
+ padding: 15px;
+}
+
+.floatright {
+ float:right;
+}
+
+button img {
+ background: #898989;
+}
+
+button {
+ color: black;
+ font-weight: bold;
+ font-size: 16px;
+}
+
+#submitbutton {
+ border: 0pt none;
+ background: none;
+ text-decoration: bold;
+ cursor: pointer;
+ width:180px;
+ height: 33px;
+ margin-right: 15px;
+ position: relative;
+ padding: 0;
+}
+
+button:hover #poll_submit, button:hover #poll_reset {
+ background-position: 0px 0px;
+}
+
+#poll_submit {
+ background: transparent url('../img/poll/pollsubmit_highlight.png') no-repeat -999px -999px;
+ position: relative;
+ height: 33px;
+ width: 180px;
+ top: 0px;
+ left: 0px;
+}
+
+#resetbutton {
+ border: 0pt none;
+ background: none;
+ text-decoration: bold;
+ cursor: pointer;
+ height: 33px;
+ width: 180px;
+ position: relative;
+ padding: 0;
+}
+
+#poll_reset {
+ background: transparent url('../img/poll/pollreset_highlight.png') no-repeat -999px -999px;
+ position: relative;
+ height: 33px;
+ width: 180px;
+ top: 0px;
+ left: 0px;
+}
+
+.redhighlight {
+ border: 1px solid red;
+}
+
+.centre {
+ text-align: center;
+}
+
+.polltext input {
+ vertical-align: bottom;
+}
+
+.bottommargin {
+ margin-bottom: 20px;
+}
+
+#pollemail {
+ vertical-align: bottom;
+}
+
+.question {
+ width: 100%;
+ vertical-align: top;
+ border-collapse: separate;
+ border-spacing: 6px;
+}
