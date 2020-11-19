@@ -1,0 +1,906 @@
+
+
+
+
+
+html {
+ overflow-y: scroll;
+}
+
+a:active {
+ outline: none;
+}
+
+a img {
+ border: none;
+}
+
+.clear {
+ clear: both;
+ font-size: 0px;
+ height: 0px;
+ line-height: 0px;
+}
+
+input, textarea, select {
+ vertical-align: middle;
+}
+
+
+
+
+
+
+body {
+ padding: 0;
+ margin: 0;
+ text-align: center;
+ font-family: Arial, Helvetica, FreeSans, sans-serif;
+}
+
+.bodyBackground {
+ background: #000 url(../../img/2009img/main/skins/default/bg.jpg) repeat-y scroll center top;
+}
+
+
+
+
+
+
+#scroll {
+ height: 1%;
+ 
+ background: transparent url(../../img/2009img/main/layout/bg_scroll.jpg) repeat-y center 83px;
+}
+
+#head {
+ font-size: 0;
+ 
+ background: transparent url(../../img/2009img/main/layout/bg_header.png) no-repeat center top;
+}
+
+#headBg {
+ padding-top: 12px;
+ 
+ background: transparent url(../../img/2009img/main/layout/bg_header.jpg) no-repeat center top;
+}
+
+#headBoard,#headOrangeTop,#headOrangeBottom,#headImage,#headAdvert,#menubox,.navigation,.navigation2,.navigation3, #headShort {
+ margin: auto;
+ width: 766px;
+}
+
+#headOrangeTop,
+#headOrangeBottom {
+ height: 3px;
+}
+
+#headOrangeTop {
+ background: url(../../img/2009img/main/layout/head_orange_top.png);
+}
+
+#headImage {
+ position: relative;
+ background: #c69e56;
+}
+
+#headShort {
+ background: #c69e56 url(../../img/2009img/main/layout/header_short.jpg);
+ height: 19px;
+ position: relative;
+}
+
+#headOrangeBottom {
+ background: url(../../img/2009img/main/layout/head_orange_bottom.png);
+}
+
+#headAdvert {
+ background: url(../../img/2009img/advert/advert.png) top left no-repeat;
+}
+
+#sessionText {
+ bottom: 2px;
+ color: white;
+ font-size: 12px;
+ font-weight: bold;
+ position: absolute;
+ right: 5px;
+}
+
+#player_no {
+ bottom: 2px;
+ color: white;
+ font-size: 12px;
+ font-weight: bold;
+ position: absolute;
+ width: 100%;
+ left: 0px;
+}
+
+#logo_select {
+ display: block;
+ position: absolute;
+ width: 365px;
+ height: 121px;
+ bottom: 20px;
+ left: 12px;
+ background: url(#); 
+}
+
+#gameone_link {
+ display: block;
+ position: absolute;
+ width: 128px;
+ height: 47px;
+ right: 3px;
+ bottom: 21px;
+ background: url(#); 
+}
+
+#accountName {
+ color: #ffd800;
+}
+
+#lang {
+ bottom: 3px;
+ left: 4px;
+ position: absolute;
+}
+
+#lang a {
+ float: left;
+ margin-right: 6px;
+ font-size: 12px;
+ color: white;
+}
+
+#headShort #lang {
+ bottom: 3px;
+ left: 3px;
+ position: absolute;
+}
+
+
+.HoverImg {
+ position: relative;
+ display: block;
+  overflow: hidden;
+}
+
+.HoverImg:hover {
+  font-weight: bold;
+}
+
+.HoverImg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 200%;
+}
+
+.HoverImg:hover img {
+  top: -100%;
+}
+
+#langAndLogin {
+ margin: 0 auto;
+ width: 764px;
+ height: 13px;
+}
+
+#langAndLogin #sessionText {
+ color: #4E3721;
+ position: static;
+ float: right;
+}
+
+#langAndLogin #sessionText #accountName {
+ color: #2C1F12;
+}
+
+#langAndLogin #lang {
+ position: static;
+ float: left;
+}
+
+#menubox {
+ background: #898989 url(../../img/2009img/main/layout/menu_bg.png) no-repeat left top;
+ font-size: 12px;
+ font-weight: bold;
+ height: 27px;
+ margin-top: 4px;
+}
+
+/* ================================================================
+This copyright notice must be untouched at all times.
+
+The original version of this stylesheet and the associated (x)html
+is available at http://www.cssplay.co.uk/menus/basic_dd.html
+Copyright (c) 2005-2007 Stu Nicholls. All rights reserved.
+This stylesheet and the assocaited (x)html may be modified in any
+way to fit your requirements.
+=================================================================== */
+
+
+#menubox ul{
+ list-style-type: none;
+ margin: 0;
+}
+
+
+#menus {
+ margin: 0;
+ padding: 0 0 0 5px;
+}
+
+
+#menus li.top{
+ float: left;
+ position: relative;
+ z-index: 100;
+ margin: 0 1px;
+ padding: 4px 0 0;
+}
+
+
+#menus table{
+ position: absolute;
+ border-collapse: collapse;
+ z-index: -1;
+ left: 0px;
+ top: 4px;
+ width: 106px;
+ text-align: left;
+}
+
+#menus table td {
+ position: relative;
+ top: -4px;
+ line-height: 1px;
+ font-size: 1px;
+ height: 23px;
+}
+
+
+#menus a.tl, #menus a.tl:visited {
+ display: block;
+ width: 106px;
+ height: 19px;
+ line-height: 19px;
+ color: #e8d800;
+ text-decoration: none;
+ text-align: center;
+ font-weight: bold;
+ margin-bottom: 4px;
+ background: url(../../img/2009img/main/layout/menu_buttons_bg.png) left top;
+}
+
+#menus a.tl#login, #menu a.tl#login:visited {
+ color: #4fbf0c;
+}
+
+#menus a.tl#logout, #menu a.tl#logout:visited {
+ color: #be1616;
+}
+
+
+#menus li.top:hover a.tl,
+#menus a.tl:hover,
+#menus li.top:hover a.tl#login,
+#menus li.top:hover a.tl#logout,
+#menus a.tl#login:hover,
+#menus a.tl#logout:hover {
+ color: black;
+ background-position: left -24px;
+}
+
+
+#navhome #menus #home .ts,
+#navplay #menus #play .ts,
+#navaccount #menus #account .ts,
+#navguide #menus #guide .ts,
+#navcommunity #menus #community .ts,
+#navhelp #menus #help .ts,
+#navlogin #menus #login .ts,
+#navlogout #menus #logout .ts {
+ display: block;
+ color: black;
+ background: url(../../img/2009img/main/layout/menu_buttons_bg.png) left -24px;
+}
+
+
+#menus li.top ul {
+ visibility: hidden;
+ position: absolute;
+ left: -1px;
+ top: 27px;
+ padding: 0 0 1px 0;
+ font-size: 12px;
+ background: url(../../img/2009img/main/layout/menu_buttons_bg.png) left bottom;
+}
+
+#menus li:hover ul,
+#menus a:hover ul{
+ visibility: visible;
+}
+
+
+#menus li.top li {
+ float: left;
+}
+
+#menus a.fly {
+ display: block;
+ width: 184px;
+ height: 22px;
+ overflow: hidden;
+ line-height: 15px;
+ color: white;
+ text-decoration: none;
+ text-align: left;
+ background: transparent url(../../img/2009img/main/layout/menu_buttons_bg.png) no-repeat 999px top;
+}
+
+#menus a.fly span {
+ display: block;
+ padding: 3px 4px 0;
+}
+
+
+#menus a.fly:hover {
+ color: black;
+ background-color: white;
+ background-position: 1px -48px;
+}
+
+
+#menus iframe { position: absolute; left: -9999px; top: -9999px; margin-left: 0; }
+
+#menus a:hover iframe {left: -1px; top: 28px; width: 184px; }
+
+
+
+ #menus a#guide:hover iframe { height: 110px; }
+
+
+
+
+ #menus a#community:hover iframe { height: 132px; }
+
+
+#menus a#help:hover iframe { height: 132px; }
+
+
+
+
+
+
+#content {
+ margin: 6px auto 0;
+ width: 754px;
+ height: 1%;
+ font-size: 12px;
+}
+
+
+
+
+
+.sectionHeader {
+ background: #bd9c5a url(../../img/2009img/main/skins/default/section_header_bg.png) top repeat-x;
+}
+
+.sectionHeader .left {
+ background: url(../../img/2009img/main/skins/default/section_header_left.png) left no-repeat;
+}
+
+.sectionHeader .right {
+ background: url(../../img/2009img/main/skins/default/section_header_right.png) right no-repeat;
+}
+
+.sectionHeader .plaque, .sectionHeader .plaque_medium, .sectionHeader .plaque_large {
+ height: 26px;
+ overflow: hidden;
+ margin: 0;
+ line-height: 25px;
+ font-size: 14px;
+ font-family: Palatino Linotype, Book Antiqua, Palatino, Times New Roman, Times, serif;
+ font-weight: bold;
+ font-variant: small-caps;
+ color: #30291f;
+}
+
+.sectionHeader .plaque_medium {
+ background: url(../../img/2009img/main/skins/default/section_header_plaque_medium.png) center top no-repeat;
+}
+
+.sectionHeader .plaque_large {
+ background: url(../../img/2009img/main/skins/default/section_header_plaque_large.png) center top no-repeat;
+}
+
+.sectionHeader .plaque {
+ background: url(../../img/2009img/main/skins/default/section_header_plaque.png) center top no-repeat;
+}
+
+.sectionHeader img {
+ margin-top: 8px;
+}
+
+.section {
+ text-align: left;
+}
+
+input {
+ outline-style: none;
+}
+
+a {
+ outline-style: none;
+}
+
+.section a {
+ color: #a07f3b;
+ outline-style: none;
+ text-decoration: underline;
+}
+
+.section a:hover {
+ text-decoration: none;
+}
+
+.firstborder {
+ padding: 6px;
+ background-color: #715e3e;
+ height: 1%;
+}
+
+.subsectionHeader {
+ height: 26px;
+ line-height: 24px;
+ text-align: center;
+ font-weight: bold;
+ color: #f3c334;
+ background: url(../../img/2009img/main/layout/subsection_header_bg.png) repeat-x;
+}
+
+.subheader {
+ height: 24px;
+ line-height: 24px;
+ text-align: center;
+ font-weight: bold;
+ color: #ffffff;
+ background: url(../../img/2009img/main/layout/subsection_subheader_bg.png) repeat-x;
+}
+
+
+
+
+
+#footer {
+ clear: both;
+ margin: 0 auto;
+ padding-top: 5px;
+ text-align: center;
+ background: transparent url(../../img/2009img/main/layout/bg_footer.png) center bottom no-repeat;
+ position: relative;
+ height: 73px;
+}
+
+.contain {
+ width: 766px;
+ height: 71px;
+ margin-left: auto;
+ margin-right: auto;
+ position: relative;
+ background: transparent url(../../img/2009img/main/layout/bg_footer.png) center bottom no-repeat;
+ top: 2px;
+ left: 0;
+}
+
+#footer a {
+ color: #392c14;
+}
+
+#footer a:hover {
+ text-decoration: none;
+}
+
+.footerdesc {
+ font-size:11px;
+ margin: auto;
+ 
+  
+   padding-top: 21px;
+  
+ 
+}
+
+.jagexlink {
+ position: absolute;
+ right: 11px;
+ top: 22px;
+ height: 31px;
+ width: 110px;
+}
+
+
+
+
+
+.location a:link {
+ color: #c1a05d;
+ text-decoration: none;
+}
+
+.location a {
+ color: #c1a05d;
+ text-decoration: none;
+}
+
+.location a:visited {
+ color: #c1a05d;
+ text-decoration: none;
+}
+
+.bold {
+ font-weight: bold;
+}
+
+.italic {
+ font-style: italic;
+}
+
+.navigation, .navigation2, .navigation3 {
+ margin-top: 4px;
+ font-size: 11px;
+ padding-top: 1px;
+}
+
+.navigation {
+ background: transparent url('../../img/2009img/main/kbase/trail1.png') no-repeat left top;
+ height: 24px;
+}
+
+.navigation2 {
+ background: transparent url('../../img/2009img/main/kbase/trail2.png') no-repeat left top;
+ height: 36px;
+}
+
+.navigation3 {
+ background: transparent url('../../img/2009img/main/kbase/trail3.png') no-repeat left top;
+ height: 50px;
+}
+
+.location {
+ margin: 5px;
+ color: white;
+ text-align: left;
+}
+
+
+
+
+
+.row_a {
+ background: #d3caa7;
+}
+
+.row_b {
+ background: #c2b892;
+}
+
+
+
+
+
+.brown_background {
+ background-color: #4d3f29;
+ padding: 6px;
+ text-align: center;
+ font-size: 12px;
+ color: #d4cec3;
+}
+
+.inner_brown_background {
+ background-color: #2c210d;
+ border: 1px solid #3f3320;
+ padding: 5px;
+}
+
+.brown_box {
+ background-color: #261c09;
+ border: 1px solid #3f3320;
+ height: 1%;
+ padding: 4px;
+ text-align: left;
+}
+
+.inner_brown_box {
+ background-color: #392c14;
+ height: 1%;
+ padding: 8px;
+ text-align: left;
+}
+
+.brown_background .row_a {
+ background: #44351A;
+}
+
+.brown_background .row_b {
+ background: #574422;
+}
+
+.brown_box_stack {
+ margin-bottom: 5px;
+}
+
+
+
+
+
+
+.article {
+ background: #e9dfc5;
+ height: 1%;
+}
+
+.topshadow {
+ background: url(../../img/2009img/main/kbase/sidebart.png) repeat-x scroll left top;
+}
+
+.bottombordershad {
+ background: transparent url(../../img/2009img/main/kbase/articlebottom.png) repeat-x scroll left bottom;
+}
+
+.leftshadow {
+ background: url(../../img/2009img/main/kbase/sidebarl.png) repeat-y scroll left center;
+}
+
+.rightshadow {
+ background: url(../../img/2009img/main/kbase/sidebar.png) repeat-y scroll right center;
+}
+
+.leftcorner {
+ background: transparent url(../../img/2009img/main/kbase/artroundtl.png) no-repeat scroll left top;
+}
+
+.rightcorner {
+ background: transparent url(../../img/2009img/main/kbase/artroundtr.png) no-repeat scroll right top;
+}
+
+.bottomleftshad{
+ background: transparent url(../../img/2009img/main/kbase/articlebottomshad.png) no-repeat scroll left bottom;
+}
+
+.bottomrightshad{
+ background: transparent url(../../img/2009img/main/kbase/artbottomshadr.png) no-repeat scroll right bottom;
+ height: 1%;
+}
+
+.sectioncontainer{
+	padding: 55px 40px 65px;
+}
+
+.article_theme_1 ul {
+ list-style: none;
+ margin-left: 0;
+ padding-left: 0;
+}
+
+.article_theme_1 ul li {
+ padding: 0 0 1px 38px;
+ background: transparent url(../../img/2009img/main/kbase/sunburst_bullet.png) no-repeat 12px 3px;
+}
+
+.article_theme_1 ol li {
+ background: transparent;
+}
+
+
+
+.info_container {
+ border-right: 1px solid #B3AA90;
+ border-top: 1px solid #B3AA90;
+ border-left: 1px solid #B3AA90;
+ width: 333px;
+}
+
+.headertitleleft{
+ background: transparent url(../../img/2009img/main/kbase/headertitleleft.png) no-repeat scroll left center;
+ padding-left: 43px;
+}
+
+.subarticleHeader {
+ height: 22px;
+ background: url(../../img/2009img/main/layout/subarticle_header_bg.png) repeat-x;
+ line-height: 18px;
+ text-align: left;
+ padding: 4px 4px 0px;
+ color: #443e22;
+ margin: 2px;
+}
+
+.headertitleright{
+ background: transparent url(../../img/2009img/main/kbase/headertitleright.png) no-repeat scroll right center;
+ padding-right: 42px;
+}
+
+.headings {
+ font-weight: bold;
+ text-align: center;
+ padding-top: 18px;
+ padding-bottom: 10px;
+}
+
+.hr {
+ background: transparent url(../../img/2009img/main/kbase/hr.png) repeat-x scroll center;
+ border: medium none;
+ font-size: 1px;
+ height: 36px;
+ margin: 20px 34px 25px;
+}
+
+
+
+.brown_background .textinput, .brown_background select, .brown_background textarea, .firstborder .textinput, .firstborder select, .firstborder textarea {
+ background-color: #e9dfc5;
+ border: 1px solid black;
+ color: black;
+}
+
+.leftshadow .textinput, .leftshadow select, .leftshadow textarea {
+ background-color: white;
+ border: 1px solid #382418;
+ color: black;
+}
+
+.buttonmedium, .buttonlong, .buttonsmall, .buttonverylong, .buttonextreme {
+ border: medium none;
+ cursor: pointer;
+ font-weight: bold;
+ color: #382F1F;
+}
+
+.brown_background .buttonmedium {
+ background: transparent url(../../img/2009img/main/layout/text_button_med.png) no-repeat scroll left top;
+ height: 25px;
+ width: 112px;
+}
+
+.brown_background .buttonsmall {
+ background: transparent url(../../img/2009img/main/layout/text_button_short.png) no-repeat scroll left top;
+ height: 25px;
+ width: 35px;
+ font-size: 10px;
+}
+
+.brown_background .buttonlong {
+ background: transparent url(../../img/2009img/main/layout/text_button_long.png) no-repeat scroll left top;
+ height: 25px;
+ width: 140px;
+}
+
+.brown_background .buttonverylong {
+ background: transparent url(../../img/2009img/main/layout/text_button_verylong.png) no-repeat scroll left top;
+ height: 25px;
+ width: 170px;
+}
+
+.brown_background .buttonextreme {
+ background: transparent url(../../img/2009img/main/layout/text_button_extreme.png) no-repeat scroll left top;
+ height: 25px;
+ width: 310px;
+}
+
+.leftshadow .buttonlong {
+ background: transparent url(../../img/2009img/main/layout/text_button_long_sun.png) no-repeat scroll left top;
+ height: 25px;
+ width: 140px;
+}
+
+.leftshadow .buttonmedium {
+ background: transparent url(../../img/2009img/main/layout/text_button_med_sun.png) no-repeat scroll left top;
+ height: 25px;
+ width: 112px;
+}
+
+.leftshadow .buttonsmall {
+ background: transparent url(../../img/2009img/main/layout/text_button_short_sun.png) no-repeat scroll left top;
+ height: 25px;
+ width: 37px;
+ font-size: 10px;
+}
+
+.leftshadow .buttonverylong {
+ background: transparent url(../../img/2009img/main/layout/text_button_verylong_sun.png) no-repeat scroll left top;
+ height: 25px;
+ width: 170px;
+}
+
+.leftshadow .buttonextreme {
+ background: transparent url(../../img/2009img/main/layout/text_button_extreme_sun.png) no-repeat scroll left top;
+ height: 25px;
+ width: 310px;
+}
+
+.brown_background .buttonmedium:hover, .brown_background .buttonsmall:hover, .brown_background .buttonlong:hover, .leftshadow .buttonmedium:hover, .leftshadow .buttonsmall:hover, .leftshadow .buttonlong:hover, .leftshadow .buttonverylong:hover,
+.leftshadow .buttonextreme:hover {
+ background-position: left bottom;
+ color: #898989;
+}
+
+
+
+
+
+.loadtest{
+ visibility: hidden;
+ border: none;
+ width: 0px;
+ height: 0px;
+}
+
+
+
+
+ #bookmark {
+  text-align: center;
+  margin-top: -1px;
+ }
+ #bookmark img {
+  margin: 0 1px 0 0;
+  vertical-align: middle;
+ }
+ #bookmark a {
+ 
+  
+  margin-left: 16px;
+  
+ 
+  text-decoration: none;
+ }
+ #bookmark a span {
+  text-decoration: underline;
+ }
+ #bookmark a:hover span {
+  text-decoration: none;
+ }
+
+
+
+
+
+#feed {
+ margin-left: 1px;
+ float: left;
+ height: 24px;
+ line-height: 26px;
+}
+
+#feed a,
+#feed a:hover span {
+ text-decoration: none;
+ vertical-align: top;
+}
+
+#feed a span {
+ text-decoration: underline;
+}
+
+#feed img {
+ vertical-align: middle;
+}
+
+#feed sup {
+ font-size: smaller;
+}
+
+
+
+
+
+.sitetakeover_panel {
+ display: none;
+}
+
