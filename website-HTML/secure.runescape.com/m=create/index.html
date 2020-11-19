@@ -278,32 +278,8 @@ en, English
     }
 
 
-    function validate_all() {
-      var returncode = true;
-      if (!validate_date(true) || !validate_country(true)) {
-        returncode = false;
-        _('errorData').innerHTML = "Please make sure you have provided a valid date of birth and country.";
-        display(_('data'));
-      } else {
-        _('errorData').innerHTML = '&nbsp;';
-      }
-      if (!validate_password(true, true)) {
-        returncode = false;
-        _('errorPassword').innerHTML = "Please supply a valid password.";
-        display(_('pass'));
-      } else {
-        _('errorPassword').innerHTML = '&nbsp;';
-      }
-      if (!validate_username(false)) {
-        returncode = false;
-        _('errorUsername').innerHTML = "Please supply a valid username.";
-        _('username').focus();
-        _('username').select();
-        display(_('usr'));
-      } else {
-        _('errorUsername').innerHTML = '&nbsp;';
-      }
-      return returncode;
+    function validate_all(e) {
+      e.preventDefault();
     }
 
     var input_order = ["username", "password1", "password2", "day", "month", "year", "country", "submitbutton"];
@@ -444,30 +420,30 @@ en, English
           <div id="headOrangeTop"></div>
           <img src="../../www.runescape.com/img/2009img/main/skins/default/head_image.jpg" alt="RuneScape" />
           <div id="headImage"><a href="" id="logo_select"></a>
-          <div id="player_no">There are currently 1 people playing!</div>
+            <div id="player_no">Want to play with others? Join our <a href="https://discord.gg/43YPGND" style="color: #bf8aba">Discord</a>!</div>
           </div>
           <div id="headOrangeBottom"></div>
           <div id="headAdvert">
-              <script type="text/javascript"><!--
-                  google_ad_client = "pub";
-                  google_ad_slot = "0";
-                  google_ad_width = 728;
-                  google_ad_height = 90;
-              </script>
-              <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
+            <script type="text/javascript">< !--
+                google_ad_client = "pub";
+              google_ad_slot = "0";
+              google_ad_width = 728;
+              google_ad_height = 90;
+            </script>
+            <script type="text/javascript" src="http://pagead2.googlesyndication.com/pagead/show_ads.js"></script>
           </div>
 
         </div>
       </div>
       <div id="menubox">
         <ul id="menus">
-          <li class="top"><a href="" id="home" class="tl"><span class="ts">Home</span></a></li>
+          <li class="top"><a href="../../www.runescape.com/index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
 
           <li class="top"><a id="play" class="tl"
               href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar"
               onclick="if(!this.j){this.href+='?j=1';this.j=true;}"><span class="ts">Play Now</span></a>
             <ul>
-              <li><a href="create" class="fly"><span>New Users</span></a></li>
+              <li><a href="" class="fly"><span>New Users</span></a></li>
               <li><a href="game" onclick="if(!this.j){this.href+='?j=1';this.j=true;}" class="fly"><span>Existing
                     Users</span></a></li>
             </ul>
@@ -476,7 +452,7 @@ en, English
           <li class="top"><a id="account" class="tl" href="account"><span class="ts">Account</span></a>
             <ul>
               <li><a href="members" class="fly"><span>Upgrade Your Account</span></a></li>
-              <li><a href="create" class="fly"><span>Create New Account</span></a></li>
+              <li><a href="" class="fly"><span>Create New Account</span></a></li>
               <li><a href="account" class="fly"><span>Account Management</span></a></li>
             </ul>
           </li>
@@ -546,10 +522,10 @@ en, English
                       <div class="left">
                         <div class="right">
                           <div class="statusbutton firstoffspring firstActive">
-                            <div class="subButton left">1. Enter Your Details</div>
+                            <div class="subButton left">1. Download The Game</div>
                           </div>
                           <div class="statusbutton middleoffspring ">
-                            <div class="subButton middle">2. Enter Your Email (optional)</div>
+                            <div class="subButton middle">2. Click Create Account</div>
                           </div>
                           <div class="statusbutton lastoffspring ">
                             <div class="subButton right">3. Account Creation Complete</div>
@@ -568,400 +544,19 @@ en, English
                     <form id="createForm" action="https://secure.runescape.com/m=create/input_details.ws" method="post"
                       onsubmit="return checkit()">
                       <div class="inner_brown_box brown_box_stack" id="cIntro">
-                        Creating an account is simple and free, and you will have access to the free worlds on Runescape
-                        and FunOrb for as long as you like. Just complete the form below, click on �Continue�, and get
-                        ready to play!
+                        Create an account through <a
+                          href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar">Downloading</a>
+                        the game.
                       </div>
                       <div id="formBoxes" class="inner_brown_box brown_box_stack brown_box_padded">
-
-                        <div class="formDesc" id="usr_desc">
-                          <p class="error" id="alts" style="display:none;">Sorry, that username is not available.
-                          </p>
-                          <p id="username_constraints_characters">Usernames can be a maximum of 12 characters long and
-                            may contain letters, numbers, spaces and underscores.</p>
-                          <p>They should not contain your real name, birth date, or other personally identifiable
-                            information, to better protect your identity.</p>
-                          <p>They should not be offensive or break our <a
-                              href="../../www.runescape.com/terms/terms.html"
-                              onclick="window.open(this.href+'#create','_blank','width=800,height=600,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=no,resizable=yes'); return false;"
-                              target="_blank">Terms &amp; Conditions</a>.</p>
-                        </div>
-                        <div class="formSuperGroup single_line">
-                          <div class="formSection" id="usr">
-                            <input style="display:none;" type="hidden" id="origusername" name="origusername" value="">
-                            <label for="username">Your Username:</label>
-                            <input id="username" name="username" autocomplete="off" maxlength="12"
-                              onfocus="display(this.parentNode);" onkeypress="display(this.parentNode);uncross(this);"
-                              onblur="validate_username(true);" value="">
-                            <br class="clear" />
-                          </div>
-                          <div class="error formError" id="errorUsername">&nbsp;</div>
-                          <br class="clear" />
-                        </div>
-                        <div class="formSuperGroup double_line">
-                          <div class="formDesc" id="pass_desc">
-                            <p>NEVER give anyone your password, not even to Jagex staff. Jagex staff will never ask you
-                              for your password.</p>
-                            <p id="pass_constraints">Passwords must be between 5 and 20 characters long and may contain
-                              letters and numbers.</p>
-                            <p>We recommend you use a mixture of numbers and letters in your password to make it harder
-                              for someone to guess.</p>
-                          </div>
-                          <div id="pass" class="formGroup">
-                            <div class="formSection">
-                              <label for="password1">Your Password:</label>
-                              <input id="password1" name="password1" type="password" autocomplete="off" value=""
-                                maxlength="20" onfocus="display(this.parentNode.parentNode);uncross(this)"
-                                onblur="validate_password(true);">
-                            </div>
-                            <div class="formSection">
-                              <label for="password2">Re-enter Password:</label>
-                              <input id="password2" name="password2" type="password" autocomplete="off" value=""
-                                maxlength="20" onfocus="display(this.parentNode.parentNode);uncross(this)"
-                                onblur="validate_password(true);">
-                            </div>
-                            <br class="clear" />
-                          </div>
-                          <div class="error formError" id="errorPassword">&nbsp;</div>
-                          <br class="clear" />
-                        </div>
-                        <div class="formDesc" id="data_desc">
-                          <p>Your date of birth is required for account creation, but we will not share it with any
-                            third parties.</p>
-                          <p>Your country of residence is required for the purposes of identifying your account.</p>
-                          <p>For more details see the <a href="../../www.runescape.com/privacy/privacy.html"
-                              onclick="window.open(this.href+'#create','_blank','width=800,height=600,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=no,resizable=yes'); return false;"
-                              target="_blank">Privacy Policy</a>.</p>
-                        </div>
-                        <div class="formSuperGroup double_line">
-                          <div id="data" class="formGroup">
-                            <div class="formSection">
-                              <label for="day">Your Date of Birth:</label>
-                              <div>
-                                <select id="day" name="day" onfocus="display(this.parentNode.parentNode.parentNode);"
-                                  onchange="validate_date(true)">
-                                  <option value="-1" selected="selected" disabled="disabled">Day</option>
-                                  <option value="1">1</option>
-                                  <option value="2">2</option>
-                                  <option value="3">3</option>
-                                  <option value="4">4</option>
-                                  <option value="5">5</option>
-                                  <option value="6">6</option>
-                                  <option value="7">7</option>
-                                  <option value="8">8</option>
-                                  <option value="9">9</option>
-                                  <option value="10">10</option>
-                                  <option value="11">11</option>
-                                  <option value="12">12</option>
-                                  <option value="13">13</option>
-                                  <option value="14">14</option>
-                                  <option value="15">15</option>
-                                  <option value="16">16</option>
-                                  <option value="17">17</option>
-                                  <option value="18">18</option>
-                                  <option value="19">19</option>
-                                  <option value="20">20</option>
-                                  <option value="21">21</option>
-                                  <option value="22">22</option>
-                                  <option value="23">23</option>
-                                  <option value="24">24</option>
-                                  <option value="25">25</option>
-                                  <option value="26">26</option>
-                                  <option value="27">27</option>
-                                  <option value="28">28</option>
-                                  <option value="29">29</option>
-                                  <option value="30">30</option>
-                                  <option value="31">31</option>
-                                </select>
-                                <select id="month" name="month"
-                                  onfocus="display(this.parentNode.parentNode.parentNode);"
-                                  onchange="validate_date(true)">
-                                  <option value="-1" selected="selected" disabled="disabled">Month</option>
-                                  <option value="0">January</option>
-                                  <option value="1">February</option>
-                                  <option value="2">March</option>
-                                  <option value="3">April</option>
-                                  <option value="4">May</option>
-                                  <option value="5">June</option>
-                                  <option value="6">July</option>
-                                  <option value="7">August</option>
-                                  <option value="8">September</option>
-                                  <option value="9">October</option>
-                                  <option value="10">November</option>
-                                  <option value="11">December</option>
-                                </select>
-                                <input id="year" name="year" maxlength="4" value="Year"
-                                  onfocus="display(this.parentNode.parentNode.parentNode); if(this.value=='Year'){this.value='';}"
-                                  onblur="if(this.value==''){this.value='Year';}" onchange="validate_date(true)">
-                              </div>
-                            </div>
-                            <div class="formSection country">
-                              <label for="country">Your Country of Residence:</label>
-                              <select id="country" name="country" onfocus="display(this.parentNode.parentNode);">
-                                <option value="-1">Select one</option>
-                                <optgroup label="---">
-                                  <option value="225">United States</option>
-                                  <option value="77">United Kingdom</option>
-                                </optgroup>
-                                <optgroup label="---">
-                                  <option value="5">Afghanistan</option>
-                                  <option value="8">Albania</option>
-                                  <option value="61">Algeria</option>
-                                  <option value="14">American Samoa</option>
-                                  <option value="3">Andorra</option>
-                                  <option value="11">Angola</option>
-                                  <option value="7">Anguilla</option>
-                                  <option value="12">Antarctica</option>
-                                  <option value="6">Antigua and Barbuda</option>
-                                  <option value="13">Argentina</option>
-                                  <option value="9">Armenia</option>
-                                  <option value="17">Aruba</option>
-                                  <option value="16">Australia</option>
-                                  <option value="15">Austria</option>
-                                  <option value="18">Azerbaijan</option>
-                                  <option value="32">Bahamas</option>
-                                  <option value="25">Bahrain</option>
-                                  <option value="21">Bangladesh</option>
-                                  <option value="20">Barbados</option>
-                                  <option value="36">Belarus</option>
-                                  <option value="22">Belgium</option>
-                                  <option value="37">Belize</option>
-                                  <option value="27">Benin</option>
-                                  <option value="28">Bermuda</option>
-                                  <option value="33">Bhutan</option>
-                                  <option value="30">Bolivia</option>
-                                  <option value="19">Bosnia and Herzegovina</option>
-                                  <option value="35">Botswana</option>
-                                  <option value="34">Bouvet Island</option>
-                                  <option value="31">Brazil</option>
-                                  <option value="104">British Indian Ocean Territory</option>
-                                  <option value="29">Brunei Darussalam</option>
-                                  <option value="24">Bulgaria</option>
-                                  <option value="23">Burkina Faso</option>
-                                  <option value="26">Burundi</option>
-                                  <option value="114">Cambodia</option>
-                                  <option value="47">Cameroon</option>
-                                  <option value="38">Canada</option>
-                                  <option value="52">Cape Verde</option>
-                                  <option value="121">Cayman Islands</option>
-                                  <option value="41">Central African Republic</option>
-                                  <option value="207">Chad</option>
-                                  <option value="46">Chile</option>
-                                  <option value="48">China</option>
-                                  <option value="53">Christmas Island</option>
-                                  <option value="39">Cocos (Keeling) Islands</option>
-                                  <option value="49">Colombia</option>
-                                  <option value="116">Comoros</option>
-                                  <option value="42">Congo</option>
-                                  <option value="40">Congo, The Democratic Republic of the</option>
-                                  <option value="45">Cook Islands</option>
-                                  <option value="50">Costa Rica</option>
-                                  <option value="44">Cote D'Ivoire</option>
-                                  <option value="97">Croatia</option>
-                                  <option value="51">Cuba</option>
-                                  <option value="54">Cyprus</option>
-                                  <option value="55">Czech Republic</option>
-                                  <option value="58">Denmark</option>
-                                  <option value="57">Djibouti</option>
-                                  <option value="59">Dominica</option>
-                                  <option value="60">Dominican Republic</option>
-                                  <option value="216">East Timor</option>
-                                  <option value="62">Ecuador</option>
-                                  <option value="64">Egypt</option>
-                                  <option value="203">El Salvador</option>
-                                  <option value="87">Equatorial Guinea</option>
-                                  <option value="66">Eritrea</option>
-                                  <option value="63">Estonia</option>
-                                  <option value="68">Ethiopia</option>
-                                  <option value="71">Falkland Islands (Malvinas)</option>
-                                  <option value="73">Faroe Islands</option>
-                                  <option value="70">Fiji</option>
-                                  <option value="69">Finland</option>
-                                  <option value="74">France</option>
-                                  <option value="75">France, Metropolitan</option>
-                                  <option value="80">French Guiana</option>
-                                  <option value="170">French Polynesia</option>
-                                  <option value="208">French Southern Territories</option>
-                                  <option value="76">Gabon</option>
-                                  <option value="84">Gambia</option>
-                                  <option value="79">Georgia</option>
-                                  <option value="56">Germany</option>
-                                  <option value="81">Ghana</option>
-                                  <option value="82">Gibraltar</option>
-                                  <option value="88">Greece</option>
-                                  <option value="83">Greenland</option>
-                                  <option value="78">Grenada</option>
-                                  <option value="86">Guadeloupe</option>
-                                  <option value="91">Guam</option>
-                                  <option value="90">Guatemala</option>
-                                  <option value="85">Guinea</option>
-                                  <option value="92">Guinea-Bissau</option>
-                                  <option value="93">Guyana</option>
-                                  <option value="98">Haiti</option>
-                                  <option value="95">Heard Island and McDonald Islands</option>
-                                  <option value="228">Holy See (Vatican City State)</option>
-                                  <option value="96">Honduras</option>
-                                  <option value="94">Hong Kong</option>
-                                  <option value="99">Hungary</option>
-                                  <option value="107">Iceland</option>
-                                  <option value="103">India</option>
-                                  <option value="100">Indonesia</option>
-                                  <option value="106">Iran, Islamic Republic of</option>
-                                  <option value="105">Iraq</option>
-                                  <option value="101">Ireland</option>
-                                  <option value="102">Israel</option>
-                                  <option value="108">Italy</option>
-                                  <option value="109">Jamaica</option>
-                                  <option value="111">Japan</option>
-                                  <option value="110">Jordan</option>
-                                  <option value="122">Kazakstan</option>
-                                  <option value="112">Kenya</option>
-                                  <option value="115">Kiribati</option>
-                                  <option value="118">Korea, Democratic People's Republic of</option>
-                                  <option value="119">Korea, Republic of</option>
-                                  <option value="120">Kuwait</option>
-                                  <option value="113">Kyrgyzstan</option>
-                                  <option value="123">Lao People's Democratic Republic</option>
-                                  <option value="132">Latvia</option>
-                                  <option value="124">Lebanon</option>
-                                  <option value="129">Lesotho</option>
-                                  <option value="128">Liberia</option>
-                                  <option value="133">Libyan Arab Jamahiriya</option>
-                                  <option value="126">Liechtenstein</option>
-                                  <option value="130">Lithuania</option>
-                                  <option value="131">Luxembourg</option>
-                                  <option value="143">Macau</option>
-                                  <option value="139">Macedonia, the Former Yugoslav Republic of</option>
-                                  <option value="137">Madagascar</option>
-                                  <option value="151">Malawi</option>
-                                  <option value="153">Malaysia</option>
-                                  <option value="150">Maldives</option>
-                                  <option value="140">Mali</option>
-                                  <option value="148">Malta</option>
-                                  <option value="138">Marshall Islands</option>
-                                  <option value="145">Martinique</option>
-                                  <option value="146">Mauritania</option>
-                                  <option value="149">Mauritius</option>
-                                  <option value="238">Mayotte</option>
-                                  <option value="152">Mexico</option>
-                                  <option value="72">Micronesia, Federated States of</option>
-                                  <option value="136">Moldova, Republic of</option>
-                                  <option value="135">Monaco</option>
-                                  <option value="142">Mongolia</option>
-                                  <option value="242">Montenegro</option>
-                                  <option value="147">Montserrat</option>
-                                  <option value="134">Morocco</option>
-                                  <option value="154">Mozambique</option>
-                                  <option value="141">Myanmar</option>
-                                  <option value="155">Namibia</option>
-                                  <option value="164">Nauru</option>
-                                  <option value="163">Nepal</option>
-                                  <option value="161">Netherlands</option>
-                                  <option value="10">Netherlands Antilles</option>
-                                  <option value="156">New Caledonia</option>
-                                  <option value="166">New Zealand</option>
-                                  <option value="160">Nicaragua</option>
-                                  <option value="157">Niger</option>
-                                  <option value="159">Nigeria</option>
-                                  <option value="165">Niue</option>
-                                  <option value="158">Norfolk Island</option>
-                                  <option value="144">Northern Mariana Islands</option>
-                                  <option value="162">Norway</option>
-                                  <option value="167">Oman</option>
-                                  <option value="173">Pakistan</option>
-                                  <option value="180">Palau</option>
-                                  <option value="178">Palestinian Territory, Occupied</option>
-                                  <option value="168">Panama</option>
-                                  <option value="171">Papua New Guinea</option>
-                                  <option value="181">Paraguay</option>
-                                  <option value="169">Peru</option>
-                                  <option value="172">Philippines</option>
-                                  <option value="176">Pitcairn</option>
-                                  <option value="174">Poland</option>
-                                  <option value="179">Portugal</option>
-                                  <option value="177">Puerto Rico</option>
-                                  <option value="182">Qatar</option>
-                                  <option value="183">Reunion</option>
-                                  <option value="184">Romania</option>
-                                  <option value="185">Russian Federation</option>
-                                  <option value="186">Rwanda</option>
-                                  <option value="193">Saint Helena</option>
-                                  <option value="117">Saint Kitts and Nevis</option>
-                                  <option value="125">Saint Lucia</option>
-                                  <option value="175">Saint Pierre and Miquelon</option>
-                                  <option value="229">Saint Vincent and the Grenadines</option>
-                                  <option value="236">Samoa</option>
-                                  <option value="198">San Marino</option>
-                                  <option value="202">Sao Tome and Principe</option>
-                                  <option value="187">Saudi Arabia</option>
-                                  <option value="199">Senegal</option>
-                                  <option value="239">Serbia</option>
-                                  <option value="189">Seychelles</option>
-                                  <option value="197">Sierra Leone</option>
-                                  <option value="192">Singapore</option>
-                                  <option value="196">Slovakia</option>
-                                  <option value="194">Slovenia</option>
-                                  <option value="188">Solomon Islands</option>
-                                  <option value="200">Somalia</option>
-                                  <option value="240">South Africa</option>
-                                  <option value="89">South Georgia and the South Sandwich Islands</option>
-                                  <option value="67">Spain</option>
-                                  <option value="127">Sri Lanka</option>
-                                  <option value="190">Sudan</option>
-                                  <option value="201">Suriname</option>
-                                  <option value="195">Svalbard and Jan Mayen</option>
-                                  <option value="205">Swaziland</option>
-                                  <option value="191">Sweden</option>
-                                  <option value="43">Switzerland</option>
-                                  <option value="204">Syrian Arab Republic</option>
-                                  <option value="220">Taiwan</option>
-                                  <option value="211">Tajikistan</option>
-                                  <option value="221">Tanzania, United Republic of</option>
-                                  <option value="210">Thailand</option>
-                                  <option value="209">Togo</option>
-                                  <option value="212">Tokelau</option>
-                                  <option value="215">Tonga</option>
-                                  <option value="218">Trinidad and Tobago</option>
-                                  <option value="214">Tunisia</option>
-                                  <option value="217">Turkey</option>
-                                  <option value="213">Turkmenistan</option>
-                                  <option value="206">Turks and Caicos Islands</option>
-                                  <option value="219">Tuvalu</option>
-                                  <option value="223">Uganda</option>
-                                  <option value="222">Ukraine</option>
-                                  <option value="4">United Arab Emirates</option>
-                                  <option value="77">United Kingdom</option>
-                                  <option value="225" selected="selected">United States</option>
-                                  <option value="224">United States Minor Outlying Islands</option>
-                                  <option value="226">Uruguay</option>
-                                  <option value="227">Uzbekistan</option>
-                                  <option value="234">Vanuatu</option>
-                                  <option value="230">Venezuela</option>
-                                  <option value="233">Vietnam</option>
-                                  <option value="231">Virgin Islands, British</option>
-                                  <option value="232">Virgin Islands, U.S.</option>
-                                  <option value="235">Wallis and Futuna</option>
-                                  <option value="65">Western Sahara</option>
-                                  <option value="237">Yemen</option>
-                                  <option value="241">Zambia</option>
-                                  <option value="243">Zimbabwe</option>
-                                </optgroup>
-                              </select>
-                            </div>
-                            <br class="clear" />
-                          </div>
-                          <div class="error formError" id="errorData">&nbsp;</div>
-                          <br class="clear" />
-                        </div>
-                        <br class="clear" />
-                        <div id="jmesgBg" class="input_details">
-                          <div id="jmesg" class="input_details"></div>
-                        </div>
+                        <img src="https://i.imgur.com/qFyQLa4.png">
                       </div>
-                      <div class="inner_brown_box brown_box_padded">
-                        <button type="submit" value="" id="submitbutton" onclick="return validate_all();">
-                        </button>
-                      </div>
+                      <a href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar">
+                        <div class="inner_brown_box brown_box_padded">
+                          <button type="submit" value="" id="submitbutton" onclick="validate_all(event);">
+                          </button>
+                        </div>
+                      </a>
                     </form>
                   </div>
 
