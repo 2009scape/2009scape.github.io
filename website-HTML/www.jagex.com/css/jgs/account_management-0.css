@@ -1,0 +1,86 @@
+
+
+
+
+span.Description{
+ display:          none;
+}
+
+.bottom .Button{
+ margin-top:         1px;
+}
+table.TwoPanels,
+table.ThreePanels{
+ width:           936px;
+ border-collapse:       collapse;
+ margin:           0px 6px;
+ float:            none;
+ color:           black;
+}
+table.TwoPanels{
+ width:           628px;
+ margin:           0px auto 0px auto;
+}
+table.TwoPanels td,
+table.ThreePanels td{
+ float:            none;
+}
+table.TwoPanels td.top,
+table.ThreePanels td.top{
+ text-align:         left;
+  vertical-align:       top;
+}
+table.TwoPanels td.top img,
+table.ThreePanels td.top img{
+ float:            left;
+ margin:           8px 7px 8px 10px;
+  vertical-align:       top;
+}
+table.TwoPanels td.top h4,
+table.ThreePanels td.top h4{
+ margin:           4px auto 0px;
+ height:           18px;
+ line-height:         22px;
+ font-weight:        bold;
+ font-size:         12px;
+ font-family:         arial,helvetica,freesans,sans-serif;
+ text-align:         left;
+}
+table.TwoPanels td p,
+table.ThreePanels td p{
+ margin:           4px 8px;
+}
+table.TwoPanels td p a,
+table.ThreePanels td p a{
+}
+table.TwoPanels td,
+table.ThreePanels td{
+ background-image: url(../../img/account_management/panelcfcd.png?0) !important;
+background-image: url(../../img/account_management/panel_ie6cfcd.png?0);
+
+ background-repeat:     no-repeat;
+ background-position:    top center;
+  width:           307px;
+}
+table.TwoPanels td.bottom,
+table.ThreePanels td.bottom{
+  background-position:      bottom;
+  /*padding:          7px 0px;*/
+  height:           34px;
+  text-align:         center;
+  vertical-align:       middle;
+}
+.TextContent{
+ color: #adacac;
+}
+.TextContent h3{
+ color: white;
+ text-align: center;
+}
+.PanelContent{
+ padding:  6px;
+}
+
+.BoxBody{
+ padding: 0px;
+}

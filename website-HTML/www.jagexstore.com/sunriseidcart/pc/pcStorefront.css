@@ -1,0 +1,849 @@
+/*
+ProductCart Shopping Cart Software, Copyright Early Impact LLC 2006, All Rights Reserved
+Use this stylesheet to change the look of the default header and footer that ship with ProductCart.
+
+If styles modified using this page do not appear in your storefront, please check the following
+two items before anything else:
+
+(1) Make sure that header.asp links to this stylesheet. The code goes before the closing </head> tag:
+
+<link type="text/css" rel="stylesheet" href="pcStorefront.css" />
+
+(2) Make sure that header.asp contains the following code at the very top of the page, before anything else.
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+
+(3) The styles included under "MAIN Styles" are the ones that used to be controlled by the Display Settings
+area of the ProductCart Control Panel in previous versions of the software. Unless you want to, you DO NOT need
+to change any of the other styles.
+
+*/
+
+/*-----------------------------------------------------------------------------------------
+	MAIN Styles - They apply to the entire storefront, unless otherwise defined below
+	----------------------------------------------------------------------------------------*/
+
+/* pcMain is the container for all information displayed by ProductCart on the page
+	   This is where you can change the font used storewide, for example.  */
+#pcMain
+{
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 11px;
+	color: #333333;
+	text-align: left;
+	background-color: #FFFFFF;
+	width: 100%;
+}
+
+/* The following two statements assign a style to links storewide. They are sometimes
+	   overwritten by other styles that target specific links. */
+#pcMain a:link
+{
+	color: #7ec532;
+	font-size: 9pt;
+	text-transform: uppercase;
+	font-family: Arial, Sans-Serif;
+}
+
+#pcMain a:visited
+{
+	color: #7ec532;
+	font-size: 9pt;
+	text-transform: uppercase;
+	font-family: Arial, Sans-Serif;
+}
+
+#pcMain a:hover
+{
+	color: #0000FF;
+	font-size: 9pt;
+	text-transform: uppercase;
+	font-family: Arial, Sans-Serif;
+}
+
+/*-----------------------------------------------------------------------------------------
+	 Storefront Tables - Styles within the table are defined later 
+	----------------------------------------------------------------------------------------*/
+
+/* pcMainTable is the container for all information displayed on the
+     by ProductCart on the page */
+.pcMainTable
+{
+	width: 100%;
+	border: 0;
+	border-collapse: collapse;
+}
+
+/* pcShowProducts is the table that organizes the display of products
+	   (e.g. in a category or when viewing best sellers or new arrivals.
+		 By default it's set to 100% width and to align in the center of the page. */
+.pcShowProducts
+{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+	width: 100%;
+	border: 1px dotted #E1E1E1;
+	margin-top: 10px;
+	padding: 5px;
+}
+
+.pcShowProducts td
+{
+	padding: 3px;
+}
+
+/* pcShowContent is the table that organizes the display of information other than
+	   products. It does not have a dotted border around it. 
+		 By default it's set to 100% width and to left of the page. */
+.pcShowContent
+{
+	text-align: left;
+	margin-left: 0;
+	width: 100%;
+	border: 0;
+	border-collapse: collapse;
+	margin-top: 5px;
+	padding: 5px;
+}
+
+.pcShowContent td
+{
+	padding: 3px;
+	vertical-align: top;
+}
+
+/* pcShowCart is the table that organizes the display of information on
+		 the shopping cart page */
+.pcShowCart
+{
+	text-align: left;
+	margin-left: 0;
+	width: 100%;
+	border: 0;
+	border-collapse: collapse;
+}
+
+.pcShowCart td
+{
+	padding: 1px;
+	vertical-align: top;
+}
+
+/* pcShowList is used when showing a list of items such as quantity discounts */
+.pcShowList
+{
+	text-align: left;
+	width: 80%;
+	border: 1px solid #e1e1e1;
+	border-collapse: collapse;
+}
+
+/* pcPageNav handles the page navigation at the bottom of the page, when present. */
+.pcPageNav
+{
+	text-align: left;
+	width: 100%;
+	border: 0;
+	border-collapse: collapse;
+	margin: 5px 0 0 0;
+}
+
+/* Styles within MAIN TABLE */
+
+/* Style the page title */
+.pcMainTable h1
+{
+	background-color: #E5E5E5;
+	font-size: 18px;
+	font-weight: bold;
+	margin: 0 0 5px 0;
+	padding: 5px;
+}
+
+/* Style the table title (e.g. table showing quantity discounts) */
+.pcMainTable h2
+{
+	background-color: #F5F5F5;
+	font-size: 15px;
+	margin: 0 0 5px 0;
+	padding: 5px;
+}
+
+.pcMainTable h3
+{
+	font-size: 12px;
+	margin-top: 10px;
+	margin: 5px 0 5px 0;
+	padding: 5px;
+}
+
+/* Style the table headings */
+.pcMainTable th
+{
+	background-color: #FFFFCC;
+	font-size: 12px;
+	font-weight: bold;
+	padding: 4px;
+	border-bottom: 1px solid #E1E1E1;
+}
+
+/* Remove the default marging from paragraphs */
+.pcMainTable p
+{
+	margin: 0 0 0 5px;
+}
+
+/* Style within SHOW PRODUCTS table */
+
+/* Style the product name */
+.pcShowProductName
+{
+	font-size: 12px;
+	color: #CC6600;
+}
+
+/* Style the product sku */
+#pcMain .pcShowProductSku
+{
+	color: #666666;
+}
+
+/* Style the product weight */
+#pcMain .pcShowProductWeight
+{
+	color: #666666;
+}
+
+/* Style the product brand */
+#pcMain .pcShowProductBrand
+{
+	color: #666666;
+}
+
+/* Style the product stock */
+#pcMain .pcShowProductStock
+{
+	color: #666666;
+}
+
+/* Style the Product BTO Default Config */
+#pcMain .pcShowProductBTOConfig
+{
+	color: #666666;
+}
+
+/* Style the Product Custom Search */
+#pcMain .pcShowProductCustSearch
+{
+	color: #666666;
+}
+
+#pcMain .pcShowProductCustSearch a
+{
+	text-decoration: none;
+}
+
+
+/* Style the Product Free Shipping Text */
+#pcMain .pcShowProductShipping
+{
+	color: #666666;
+}
+
+/* Change font color for "Show Product's Price" feature */
+#pcMain .pcShowProductPrice
+{
+	color: #000000;
+}
+
+/* Strikethrough for List Price */
+#pcMain .pcShowProductListPrice
+{
+	text-decoration: line-through;
+}
+
+/* Change font color for "Show Savings" feature */
+#pcMain .pcShowProductSavings
+{
+	color: #FF6600;
+}
+
+/* Style the short product description */
+#pcMain .pcShowProductSDesc
+{
+	color: #000;
+	padding-right: 30px;
+}
+
+/* Style the "Not for Sale" text */
+#pcMain .pcShowProductNFS
+{
+	color: #0066FF;
+	font-weight: bold;
+	margin: 5px;
+}
+
+/* Style the paragraph that includes the "More Details" button */
+.pcShowProductLink
+{
+	padding-top: 3px;
+}
+
+/* Style the paragraph that includes the "Sort by" drop-down */
+.pcSortProducts
+{
+	text-align: right;
+}
+
+/* pcShowProductsH handles the table that shows product info
+	   when products are displayed horizontally */
+
+.pcShowProductsH
+{
+	width: 125px;
+	height: 225px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pcShowProductImageH
+{
+	height: 125px;
+	vertical-align: bottom;
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+#pcMain .pcShowProductImageH img
+{
+	border: 1px solid #E1E1E1;
+	padding: 5px;
+}
+
+.pcShowProductInfoH
+{
+	height: 100px;
+	margin-top: 5px;
+	vertical-align: top;
+}
+
+.pcShowProductInfoH p
+{
+	text-align: center;
+}
+
+/* pcShowProductsHCS handles the table that shows product info
+	   when cross selling products are shown with images */
+
+.pcShowProductsHCS
+{
+	width: 125px;
+	height: 225px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+/* pcShowProductsP handles the table that shows product info
+	   when products are displayed vertically */
+
+.pcShowProductsP
+{
+	margin: 5px;
+	padding: 5px;
+	width: 100%;
+}
+
+.pcShowProductImageP
+{
+	height: 125px;
+	width: 125px;
+	text-align: center;
+}
+
+#pcMain .pcShowProductImageP img
+{
+	border: 1px solid #E5E5E5;
+	padding: 5px;
+}
+
+.pcShowProductInfoP
+{
+	text-align: left;
+	width: 95%;
+	padding-left: 10px;
+}
+
+/* pcShowProductsL handles the table that shows product info
+	   when products are displayed in a list */
+
+.pcShowProductsL
+{
+	width: 100%;
+	text-align: left;
+}
+
+.pcShowProductsLheader
+{
+	text-align: left;
+	background-color: #F7F7F7;
+}
+
+.pcShowProductsLCell
+{
+	vertical-align: top;
+	text-align: left;
+}
+
+.pcShowProductImageL
+{
+	height: 25px;
+	width: 25px;
+	text-align: left;
+	padding: 5px 5px 0 5px;
+}
+
+/* pcShowProductsM handles the table that shows product info
+	   when products are displayed in a list with the quantity field */
+
+.pcShowProductsMheader
+{
+	text-align: left;
+	background-color: #F7F7F7;
+}
+
+.pcShowProductsM
+{
+	width: 100%;
+	text-align: left;
+	vertical-align: top;
+}
+
+.pcShowProductImageM
+{
+	height: 25px;
+	width: 25px;
+	text-align: left;
+	padding: 0 5px 0 5px;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------
+	 ProductCart Build To Order
+	----------------------------------------------------------------------------------------*/
+
+/* Style the product configuration pages */
+.pcBTOmainTable
+{
+	width: 100%;
+	background-color: #FFFFFF;
+	border: 0;
+	border-collapse: collapse;
+}
+
+.pcBTOfirstRow
+{
+	background-color: #F5F5F5;
+}
+
+.pcBTOsecondRow
+{
+	background-color: #E1E1E1;
+}
+
+/* Style the pop-up window used by ProductCart Build To Order to show additional
+			 item information on the configuration pages */
+.pcBTOpopup
+{
+	width: 98%;
+	background-color: #FFFFFF;
+	border: 0;
+	border-collapse: collapse;
+	margin: 5px;
+	font-size: 10px;
+}
+
+.pcBTOpopup img
+{
+	margin: 5px;
+	vertical-align: bottom;
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+/* Style the detailed product configuration when shown on the shopping cart page
+			 order details page, etc. */
+.pcShowBTOconfiguration
+{
+	text-align: left;
+	background-color: #F7F7F7;
+}
+
+.pcShowBTOconfiguration p
+{
+	size: 10px;
+	color: #666666;
+}
+
+/*-----------------------------------------------------------------------------------------
+	 Browse by Category or Brand
+	----------------------------------------------------------------------------------------*/
+
+.pcShowCategory
+{
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.pcShowCategory td
+{
+	vertical-align: bottom;
+}
+
+.pcShowCategoryP
+{
+	width: 100%;
+	text-align: left;
+}
+
+.pcShowCategoryImage
+{
+	height: 125px;
+	vertical-align: bottom;
+	text-align: center;
+	padding-bottom: 3px;
+}
+
+.pcShowCategoryImage img
+{
+	border: 1px solid #E5E5E5;
+	padding: 5px;
+}
+
+.pcShowCategoryInfo
+{
+	margin-top: 5px;
+	vertical-align: top;
+}
+
+.pcShowCategoryInfo p
+{
+	text-align: center;
+}
+
+.pcShowCategoryInfoP
+{
+	width: 100%;
+	margin-top: 5px;
+	text-align: left;
+	vertical-align: top;
+}
+
+/*-----------------------------------------------------------------------------------------
+	 Product details page
+	----------------------------------------------------------------------------------------*/
+
+/* Visually separate prices from the rest of the information */
+.pcShowPrices
+{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	font-weight: bold;
+}
+
+
+/*-----------------------------------------------------------------------------------------
+	 Page Navigation
+	----------------------------------------------------------------------------------------*/
+
+.pcPageNav
+{
+	text-align: left;
+	margin: 10px 0 10px 5px;
+	color: #666666;
+	font-family: Arial, Sans-Serif;
+}
+
+.pcPageName a:link, #pcCatNav a:visited
+{
+	color: #999999;
+}
+
+.pcPageNav a:hover
+{
+	color: #000000;
+	text-decoration: none;
+}
+
+
+
+/*-----------------------------------------------------------------------------------------
+	 Forms
+	----------------------------------------------------------------------------------------*/
+
+/* Clear the margins for all forms used by ProductCart */
+#pcMain form
+{
+	margin: 0;
+}
+
+.pcForms input
+{
+	border: 1px solid #CCCCCC;
+	background-color: #F7F7F7;
+	font-size: 11px;
+	color: #666666;
+	padding: 2px 3px 2px 3px;
+}
+
+.pcForms input:focus
+{
+	border: 1px solid #999999;
+	background-color: #FFFFCC;
+}
+
+.pcForms textarea
+{
+	border: 1px solid #CCCCCC;
+	background-color: #F7F7F7;
+	font-size: 11px;
+	color: #666666;
+	padding: 2px 3px 2px 3px;
+}
+
+.pcForms textarea:focus
+{
+	border: 1px solid #999999;
+	background-color: #FFFFCC;
+}
+
+/* Style drop-down menus */
+.pcForms select
+{
+	font-size: 10px;
+	color: #333333;
+	background-color: #F5F5F5;
+	border: 1px solid #CCCCCC;
+}
+
+/* Style submit image button */
+#submit
+{
+	border: 0;
+	background-color: transparent;
+	padding: 0px;
+}
+/* Style submit image button */
+#pcMain .submit
+{
+	border: 0;
+	background-color: transparent;
+	padding: 0px;
+}
+
+/* Style submit button (when an image is NOT used) */
+#pcMain .submit2
+{
+	border: 1px solid #CCCCCC;
+	background-color: #FFFFCC;
+	font-size: 11px;
+	color: #666666;
+	padding: 2px 3px 2px 3px;
+}
+
+/* Style the transparent fields used by ProductCart Build To Order and Apparel Add-on */
+#pcMain .transparentField
+{
+	border: 0;
+	background-color: transparent;
+	padding: 0;
+	margin: 0;
+	font-weight: bold;
+	font-family:Arial,Verdana,'Trebuchet MS',sans-serif;
+    font-size:11px;
+    color: #000;
+    vertical-align: bottom;
+}
+
+/* Clear border on checkboxes to fix IE bug */
+#pcMain .clearBorder
+{
+	border: 0;
+	background-color: transparent;
+}
+
+/*-----------------------------------------------------------------------------------------
+	 Search results page
+	----------------------------------------------------------------------------------------*/
+
+/* Style list of categories in the category search results */
+.pcCatSearchResults ul
+{
+	list-style-type: none;
+	margin: 0 0 20px 15px;
+	padding: 0;
+}
+
+.pcCatSearchResults ul li
+{
+	margin: 2px 0 0 0;
+}
+
+
+/*-----------------------------------------------------------------------------------------
+	 Other styles
+	----------------------------------------------------------------------------------------*/
+
+/* Remove the default border from images */
+#pcMain img
+{
+	border: 0;
+}
+
+/* Style the page description at the top of the page, when available */
+.pcPageDesc
+{
+	margin-bottom: 5px;
+	padding: 5px;
+	background-color: #FFFFCC;
+}
+
+/* Styles section titles on pages with different sections (e.g. search results) */
+.pcSectionTitle
+{
+	background-color: #F7F7F7;
+	text-align: left;
+	padding: 5px;
+	font-size: 12px;
+	font-weight: bold;
+	color: #666666;
+}
+
+/* Example of usage: preview search results text on advanced search page */
+.pcTextMessage
+{
+	color: #0066FF;
+	font-weight: bold;
+}
+
+/* Styles alert and friendly error messages shown to the customer in the storefront */
+.pcErrorMessage
+{
+	width: 90%;
+	background-color: #F7F7F7;
+	border: 1px solid #0099FF;
+	margin: 15px;
+	padding: 4px;
+	color: #0066FF;
+	font-size: 12px;
+	font-weight: bold;
+	text-align: center;
+}
+
+/* Styles small text shown in various pages (e.g. "(mm/yy)" on the credit card page */
+.pcSmallText
+{
+	font-size: 10px;
+	color: #999999;
+}
+
+/* Sets the height of an empty table row */
+.pcSpacer
+{
+	height: 10px;
+}
+
+/* Horizontal line */
+#pcMain hr
+{
+	color: #e5e5e5;
+	background: #e5e5e5;
+	border: 0;
+	height: 1px;
+}
+
+/* Add spacing to list items */
+#pcMain li
+{
+	padding-bottom: 3px;
+}
+
+/*-----------------------------------------------------------------------------------------
+ ProductCart Product ViewPrd.asp Images
+----------------------------------------------------------------------------------------*/
+
+#pcMain .pcShowMainImage
+{
+	width: auto;
+	height: auto;
+	text-align: center;
+	vertical-align: bottom;
+	margin-left: 5px;
+	margin-right: 5px;
+	margin-bottom: 5px;
+}
+
+#pcMain .pcShowMainImage img
+{
+	padding: 5px;
+	border: 1px solid #cccccc;
+}
+
+#pcMain .pcShowAdditional
+{
+	width: 240px;
+	text-align: center;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#pcMain .pcShowAdditionalImage
+{
+	vertical-align: top;
+	text-align: center;
+	padding: 0 0 0 0;
+}
+
+#pcMain .pcShowAdditional img
+{
+	width: 50px;
+	border: 1px solid #cccccc;
+}
+
+/*-----------------------------------------------------------------------------------------
+	 ProductCart v2.7x styles
+	----------------------------------------------------------------------------------------*/
+
+/* Printer-friendly version of order details page */
+table.invoice
+{
+	border-collapse: collapse;
+	border: 1px solid #333333;
+}
+table.invoiceBto
+{
+	border-collapse: collapse;
+	border: 1px solid #999999;
+}
+td.invoice
+{
+	border: 1px solid #666666;
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 11px;
+	vertical-align: top;
+	text-align: left;
+}
+td.invoiceNob
+{
+	font-family: Arial, Helvetica, Verdana, sans-serif;
+	font-size: 11px;
+	vertical-align: top;
+	text-align: left;
+}
+
+/* END */

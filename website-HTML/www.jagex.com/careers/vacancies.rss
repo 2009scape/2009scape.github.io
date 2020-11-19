@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.rssboard.org/~d/styles/itemcontent.css"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+<channel>
+<language>en</language>
+<title>Careers at Jagex Games Studio</title>
+<description>Careers at Jagex Games Studio</description>
+<link>http://www.jagex.com/careers</link>
+<atom:link href="http://www.jagex.com/corporate/Jobs/vacancies.rss" rel="self" type="application/rss+xml" />
+<docs>http://www.rssboard.org/rss-specification</docs>
+<generator>JagexRssFeedGenerator</generator>
+<image>
+<title>Jagex Games Studio Vacancies</title>
+<link>http://www.jagex.com/careers</link>
+<url>http://www.jagex.com/img/jgs/global/Nav_logo.png</url>
+</image>
+<item>
+<title>Assembler Programmer</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent Online Games Studio, is looking for experienced assembler programmers, who want to work with cutting-edge technology, to join our Core Technologies department. You would be working with our code libraries, game engine and bespoke tool chain.</p>
+<p>This is an exciting opportunity for a candidate to join a fast-paced, rapidly expanding games company based in Cambridge, and help us to achieve our ambitious goals for 2010 and beyond.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=assembler-programmer</link>
+<guid isPermaLink="true">assembler-programmer</guid>
+</item>
+<item>
+<title>Concept Artist</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent online games studio, is looking for an exceptional and passionate Concept Artist to join our large graphics department and take a lead role in the design of characters and environments for our increasing games portfolio.</p>
+<p>Working within our growing Art Team, you will be responsible for liaising with the Art Director and Modelling Team on creating new assets for the game. You will be expected to produce a variety of concepts, to a high standard and in a timely fashion. You will be expected to be comfortable producing work in a variety of different art styles, from realistic, high-definition illustrative work to simpler, cartoon-style work when needed.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=concept-artist</link>
+<guid isPermaLink="true">concept-artist</guid>
+</item>
+<item>
+<title>Game Designer</title>
+<description><![CDATA[<p>Jagex Ltd, the UK’s largest developer and publisher of online games, is looking for an exceptional individual to design and support highly playable, and highly reliable games for launch through our browser based gaming service.</p>
+<p>Reporting to the Executive Producer and working closely with the key project stakeholders, the successful candidate will provide creative direction and be responsible for the games overall concept and design. They shall therefore oversee each games development into a full commercial product.</p>
+<p>This highly rewarding role requires the highest levels of passion, experience, energy and commitment as we look to push forward our ambitious growth plans and shape an exciting future filled with yet more success, by adding to our exciting product portfolio.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=game-designer</link>
+<guid isPermaLink="true">game-designer</guid>
+</item>
+<item>
+<title>Game Producer</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent online games studio, is looking for an exceptional and experienced producer.</p>
+<p>The company is going through an exciting phase in this challenging, changing market and now requires an inspirational, astute and confident individual to oversee one of our games development functions.</p>
+<p>Reporting into the COO and working closely with the key project stakeholders, the successful candidate will provide leadership and oversee game development into full commercial products. They will also be responsible for helping to shape the overall concept, design and commercial performance of the game.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=game-producer</link>
+<guid isPermaLink="true">game-producer</guid>
+</item>
+<item>
+<title>Player Support Team Leader</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent online games studio, is looking for motivated and passionate team leaders, with proven experience at managing and coaching a small team, to head up teams of around 15 people.</p>
+<p>The successful applicants will join our Player Support Team (on night shifts) and will provide direction and support to their team, ensuring delivery of the best possible service to our players from solving account problems to fostering good in-game behaviour.</p>
+<p>Our Player Support Team makes up nearly half of our employees. While we do work in traditional areas of customer support, we work within a unique environment to safeguard our players' gaming experience 24 hours a day, 7 days a week across a wide range of activities.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=player-support-leader</link>
+<guid isPermaLink="true">player-support-leader</guid>
+</item>
+<item>
+<title>Senior Software Tester</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent Online Games Studio, is looking for an outstanding tester to take a lead role in assuring the quality of company websites.</p>
+<p>Working within our Software Testing Department, you will be responsible for planning and executing test schedules and supporting our internal software development teams. With a good working knowledge of internet technologies and software development processes, you will be expected to support the company's aspirations to excellence with a focus on ensuring the quality and timely delivery of projects.</p>
+<p>You will be expected to provide constructive feedback throughout the development lifecycle, so technical knowledge, confidence and excellent communication skills are essential.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=senior-software-tester</link>
+<guid isPermaLink="true">senior-software-tester</guid>
+</item>
+<item>
+<title>Software Tester</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent online games studio, is looking for a passionate Software QA Tester to join our Web Systems team and assure the quality of company websites.</p>
+<p>Working within our growing Software Testing Department, you will be responsible for assisting our internal web developers with the creation of applications used by staff and our players. The focus of the testing team is to ensure the highest quality and timely delivery of projects. You will also be expected to provide constructive feedback throughout the development lifecycle.</p>
+<p>We are looking for highly motivated team players with strong communication and high attention to detail, who have a professional and methodical approach to work.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=software-tester</link>
+<guid isPermaLink="true">software-tester</guid>
+</item>
+<item>
+<title>Software Testing Team Leader</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent online games studio, is looking for an outstanding individual to lead a team of software testers assuring the quality of company websites and software.</p>
+<p>Working within our Software Testing Department, you will be responsible for managing a team of software and senior software testers supporting our internal software development teams. With a good working knowledge of Internet technologies and software development processes, you will be expected to support the company's aspirations to excellence with a focus on ensuring the quality and timely delivery of projects.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=software-testing-team-leader</link>
+<guid isPermaLink="true">software-testing-team-leader</guid>
+</item>
+<item>
+<title>Tools/Compiler Developer</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent online games studio, is looking for experienced tools programmers, who want to work with cutting-edge technology, to join our Core Technologies department. You would be working with our code libraries, game engine and bespoke tool chain.</p>
+<p>This is an exciting opportunity for a candidate to join a fast-paced, rapidly-expanding games company based in Cambridge, and help us to achieve our ambitious goals for 2010 and beyond.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=tools-compiler-developer</link>
+<guid isPermaLink="true">tools-compiler-developer</guid>
+</item>
+<item>
+<title>Online Product Manager</title>
+<description><![CDATA[<p>Jagex Ltd, the UK's leading independent online games studio, is looking for an experienced Online Product Manager to join its marketing team.</p>
+<p>Working on a portfolio of products, you will be responsible for analysing and reporting on product performance, driving recommendations in the design of the product to increase market exposure and drive growth and profitability.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=online-product-manager</link>
+<guid isPermaLink="true">online-product-manager</guid>
+</item>
+<item>
+<title>Website Designer</title>
+<description><![CDATA[<p>Jagex Ltd, the UK’s leading independent Online Games Studio, is looking for a talented and passionate website designer to join its online Publishing team.</p>
+<p>Working with our in-house technology and front-end websites, you will be responsible for the design of our public facing websites.</p>
+]]></description>
+<link>http://www.jagex.com/careers/vacancies.ws?j=website-designer</link>
+<guid isPermaLink="true">website-designer</guid>
+</item>
+</channel>
+</rss>

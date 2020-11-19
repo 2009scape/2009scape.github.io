@@ -1,0 +1,520 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="pt" xmlns:IE>
+
+<!-- Mirrored from www.funorb.com/l=3/info.ws?game=bachelorfridge by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:54:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="pt">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta name="keywords" content="Jogos on-line gratuitos, jogos de enigma, plataforma, arcade, de tiro, de ação, em java, jogos casuais, de corrida, de palavras, de lógica, retro, clássicos, direto no navegador, de estratégia, jogos multijogador, arcanistas, Jagex, Play Free Online Games, puzzle games, platform games, arcade games, shooter games, action games, java games, casual games, racing games, word games, retro games, classic games, browser games, strategy games, multiplayer games, arcanists, kickabout, steel sentinels">
+<meta name="description" content="FunOrb, jogos on-line gratuitos via navegador da Jagex Games Studio, os mesmos criadores do RuneScape. Vibre com jogos de raciocínio, ação, estratégia, tiro, palavras, corridas e muito mais!">
+<meta name="title" content="FunOrb - Jogos gratuitos on-line da Jagex Games Studio">
+<meta name="Author" content="www.jagex.com">
+<meta name="Copyright" content="Copyright 1999 - 2010 Jagex Ltd, www.jagex.com">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="classification" content="GENERAL">
+<meta name="rating" content="General">
+<meta name="Distribution" content="global">
+<meta name="Identifier-URL" content="../index.html">
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<title>FunOrb - Jogos gratuitos on-line da Jagex Games Studio</title>
+<style type="text/css" media="screen">
+  /*\*/@import url(css/global-40.css);/**/
+ </style>
+<script type="text/javascript" src="../../www.jagex.com/l%3d3/js/jquery/jquery_1_4_2.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">@import url(http://www.funorb.com/l=3/css/ieFix-2.css);</style>
+<![endif]-->
+
+<!--[if IE]>
+<style type="text/css">
+ @media all {
+  IE\:clientCaps {behavior:url(#default#clientcaps)}
+ }
+</style>
+<IE:clientCaps ID="oClientCaps" />
+<![endif]-->
+<script type="text/javascript">
+ var suffix="?js=1";
+ if (navigator.appName=="Microsoft Internet Explorer") {
+  if (!oClientCaps.getComponentVersion("{08B0E5C0-4FCB-11CF-AAA5-00401C608500}","ComponentID")) {
+   suffix+="&applet=2";
+  }
+ }
+ function suffixize(obj){
+  if(!obj.suffixed){
+   obj.href += suffix;
+   obj.suffixed = true;
+  }
+ }
+</script> <style type="text/css" media="screen">
+ /*\*/@import url("css/info-7.css");/**/
+ .intro {
+  background-image: url(img/images/game/bachelorfridge/intro.jpg);
+ }
+ .buttonSubscribe {
+  background-image: url(img/images/info/button_subscribe.gif);
+ }
+</style>
+<script type="text/javascript">
+//
+var time = 4;
+var timer;
+var timer2;
+var loading = 0;
+var image = 0;
+var images = Array();
+//
+images[0] = 'img/images/game/bachelorfridge/screen1c4ca.jpg?1';
+images[1] = 'img/images/game/bachelorfridge/screen2c4ca.jpg?1';
+images[2] = 'img/images/game/bachelorfridge/screen3c4ca.jpg?1';
+images[3] = 'img/images/game/bachelorfridge/screen4c4ca.jpg?1';
+//
+function clearLoading(){
+ try{
+  if(images[0]){
+   document.getElementById('screenshotsLoading0').style.backgroundPosition = '-83px -62px';
+   if(images[1]){
+    document.getElementById('screenshotsLoading1').style.backgroundPosition = '-83px -62px';
+    if(images[2]){
+     document.getElementById('screenshotsLoading2').style.backgroundPosition = '-83px -62px';
+     if(images[3]){
+      document.getElementById('screenshotsLoading3').style.backgroundPosition = '-83px -62px';
+     }
+    }
+   }
+  }
+  loading = 0;
+ }catch(e){}
+}
+//
+function imageTimer(self){
+ clearTimeout(timer2);
+ clearTimeout(timer);
+ clearLoading();
+ timer = setTimeout("imageNext('" + self + "')", time * 1000);
+}
+//
+function imageNext(self){
+ if(loading == 1){return;}
+ image++;
+ if(image >= images.length){
+  image = 0;
+ }
+ document.getElementById(self).src = images[image];
+}
+//
+function imageGoto(self, img){
+ image = img;
+ // Don't bother re-loading the same image as it screws up Opera
+ if(document.getElementById(self).src != images[image]){
+  var timeDefault = time;
+  time = time * 2;
+  window.setTimeout('time = ' + timeDefault, timeDefault);
+  timer2 = window.setTimeout("document.getElementById('screenshotsLoading' + image).style.backgroundPosition = '25px 12px';", 100);
+  loading = 1;
+  document.getElementById(self).src = images[image];
+ }
+ return false;
+}
+</script>
+
+</head>
+<body id="navGames">
+<a name="top"></a>
+<table id="wrapper">
+<tbody>
+<tr>
+<td class="center bodyTheme">
+<div id="container">
+
+<div id="header">
+<div id="navigation">
+<div class="lft"></div>
+<div class="rght"></div>
+<div class="container">
+<a id="logo" href="index.html" ><b>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="203" height="80">
+<param name="movie" value="http://www.funorb.com/l=3/img/images/layout/logo_funorb_tombracer.swf" />
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=3/" />
+<param name="AllowScriptAccess" value="always" />
+<!--[if !IE]>-->
+<object type="application/x-shockwave-flash" data="img/images/layout/logo_funorb_tombracer.swf" width="203" height="80">
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=3/" />
+<param name="AllowScriptAccess" value="always" />
+<!--<![endif]-->
+<!-- Non Flash alternative -->
+<img src="img/images/layout/logo_funorb_tombracer.jpg" alt="FunOrb" />
+<!--[if !IE]>-->
+</object>
+<!--<![endif]-->
+<!--<![endif]-->
+</object>
+</b></a>
+
+<div id="shell">
+<div class="lft"></div>
+<div class="rght"></div>
+<div id="teleText">
+<h1 id="welcomeText">Bem-vindo ao FunOrb - O melhor em jogos on-line gratuitos</h1>
+<span id="teletext_inner">
+Para obter acesso a qualquer um de nossos jogos multijogadores, tabelas das melhores pontuações e ações, crie uma conta. É rápido, fácil e completamente GRATUITO!</span>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d3/messengercommon0.js"></script>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d3/messenger.js"></script>
+
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<ul class="menu">
+<li class="top p1"><a href="index.html" id="home" class="top_link"><span>Principal</span></a></li>
+<li class="top p2"><a id="games" class="top_link" href="gamelist.html"><span>Jogos</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="gamelist.html" class="fly">Todos os jogos</a></li>
+<li><a href="gamelistea68.html?playerBox=1" class="fly">Jogos para um jogador</a></li>
+<li><a href="gamelist6ff6.html?playerBox=2" class="fly">Jogos multijogadores</a></li>
+<li><a href="options.html" class="fly last">Opções Java</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p3"><a id="account" class="top_link" href="https://secure.funorb.com/m=create/l=3/"><span>Participar</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="https://secure.funorb.com/m=create/l=3/" class="fly">Criar conta gratuita</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=3/paymentoptions.ws" class="fly">Assinar o FunOrb</a></li>
+<li><a href="members.html" class="fly">Benefícios dos membros</a></li>
+<li><a href="account_management.html" class="fly last">Gerenciamento de conta</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p4"><a id="forums" class="top_link" href="http://services.funorb.com/m=focommunity/l=3/"><span>Comunidade</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="http://services.funorb.com/m=focommunity/l=3/" class="fly">Comunidade - Principal</a></li>
+<li><a href="http://services.funorb.com/m=forum_fo_pt/l=3/forums.ws" class="fly">Fóruns</a></li>
+<li><a href="kbase/guid/dev_diary.html" class="fly">Diários de desenvolvimento</a></li>
+<li><a href="http://services.funorb.com/m=achievements/l=3/" class="fly">Conquistas</a></li>
+<li><a href="http://services.funorb.com/m=hiscore_fo/l=3/" class="fly">Recordes e Pontuações</a></li>
+<li><a href="http://services.funorb.com/m=orbcoins/l=3/" class="fly last">Orb Downloads</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p5"><a id="help" class="top_link" href="kbase/guid/help.html"><span>Ajuda</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="kbase/guid/customer_support.html" class="fly">Suporte ao Cliente</a></li>
+<li><a href="parents.html" class="fly">Guia para Pais</a></li>
+<li><a href="kbase/guid/rules_of_conduct.html" class="fly">Regras</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=3/unsubscribe.ws" class="fly">Cancelar recebimento</a></li>
+<li><a href="loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly">Recuperação de conta</a></li>
+<li><a href="https://secure.funorb.com/m=weblogin/l=3/loginform.ws?mod=www&amp;ssl=0&amp;expired=0&amp;dest=bugtracker.ws" class="fly last">Enviar um relatório de erro</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p11"><a id="empty" class="top_link"><span>&nbsp;</span></a></li>
+<li class="top p7"><a href="https://secure.funorb.com/m=create/l=3/" id="register" class="top_link"><span>Criar conta</span></a></li>
+<li class="top p8"><a href="https://secure.funorb.com/m=weblogin/l=3/loginform.ws?mod=www&amp;ssl=0&amp;dest=info.ws?game=bachelorfridge" id="signIn" class="top_link"><span>Login</span></a></li>
+<li class="top p10">
+<div class="top_link" id="lang_div">
+<a id="countrydrop" href="index.html">
+<span>
+<img alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif">
+<span id="dropArrow"></span>
+</span>
+<!--[if gt IE 6]><!--></a></div><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul id="lang" class="sub">
+<li><a class="fly" href="../index-2.html"><img title="
+English" alt="
+English" src="img/images/layout/en.gif"></a></li>
+<li><a class="fly" href="../l%3d1/index.html"><img title="
+Deutsch" alt="
+Deutsch" src="img/images/layout/de.gif"></a></li>
+<li><a class="fly" href="../l%3d2/index.html"><img title="
+Fran&ccedil;ais" alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif"></a></li>
+<li><a class="fly last" href="index.html"><img title="
+Portugu&ecirc;s (BR)" alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif"></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a></div><![endif]-->
+</li>
+</ul>
+</div>
+<br class="clear" />
+</div>
+<div id="page_content">
+<a name="info"></a>
+<div class="section" id="info" >
+<div class="sectionHeader">
+<div class="sectionHeaderRight">
+<div class="sectionTitle">
+<span class="sectionTrail">
+<a href="gamelist.html">Jogos</a> &gt;
+<a href="gamelist94fa.html?genreBox=strategy">Estratégia</a> &gt;
+<a onclick="suffixize(this)" href="http://fridge1.funorb.com/l=3/g=bachelorfridge/game.ws">Bachelor Fridge</a> &gt;
+Mais informações </span>
+<span class="sectionServerlist">
+<a style="text-decoration: underline; font-weight: normal;" href="bachelorfridge/serverlist.html">Lista de servidores</a>
+</span>
+
+</div>
+</div>
+</div>
+<div class="sectionBorder">
+<div class="sectionBackground">
+<div class="sectionContent" >
+<div class="sectionContentContainer">
+<div class="intro">
+<div class="introDescription">
+<div>
+<a href="gamelist94fa.html?genreBox=strategy"><span class="genre">Estratégia</span></a><br> Gere criaturas asquerosas nesta geladeira nojenta<br/>para reinar na arena de combate! </div>
+</div>
+<a class="buttonWide" href="#description"><div>Descrição</div></a><br />
+<a class="buttonWide" href="#faqs"><div>Perguntas freqüentes</div></a><br />
+<a class="buttonWide" href="https://secure.funorb.com/m=create/l=3/"><div>Criar conta gratuita</div></a><br />
+<a onclick="suffixize(this)" class="buttonPlayBig" href="http://fridge1.funorb.com/l=3/g=bachelorfridge/game.ws"></a>
+</div>
+<a name="screenshots"></a>
+<div class="subsection" id="screenshots" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Capturas de tela
+</div>
+</div>
+<div class="subsectionContent">
+<script type="text/javascript">
+  document.write('<img id="screenshotsImage" class="screenshotsImage" src="http://www.funorb.com/l=3/img/images/game/bachelorfridge/screen1.jpg" alt="In-game screenshot" onLoad="imageTimer(this.id)" />');
+ </script>
+<noscript>
+<iframe name="screenshotsFrame" class="screenshotsFrame" id="screenshotsFrame" scrolling="no" frameBorder="0" src="display_screenshot52b0.html?game=bachelorfridge&amp;screenshot=screen1">
+</iframe>
+</noscript>
+<div id="screenshotsThumbs">
+<a href="display_screenshot52b0.html?game=bachelorfridge&amp;screenshot=screen1" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 0);" class="screenshotsThumb" style="background-image: url(img/images/game/bachelorfridge/screen1_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading0"></div>
+</a>
+<a href="display_screenshot09bc.html?game=bachelorfridge&amp;screenshot=screen2" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 1);" class="screenshotsThumb" style="background-image: url(img/images/game/bachelorfridge/screen2_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading1"></div>
+</a>
+<a href="display_screenshot3b8d.html?game=bachelorfridge&amp;screenshot=screen3" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 2);" class="screenshotsThumb" style="background-image: url(img/images/game/bachelorfridge/screen3_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading2"></div>
+</a>
+<a href="display_screenshot92ca.html?game=bachelorfridge&amp;screenshot=screen4" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 3);" class="screenshotsThumb" style="background-image: url(img/images/game/bachelorfridge/screen4_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading3"></div>
+</a>
+</div>
+</div>
+</div>
+<a name="benefits"></a>
+<div class="subsection" id="benefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Recusos de Bachelor Fridge
+</div>
+</div>
+<div class="subsectionContent">
+<div class="benefitsPadding"></div>
+<div class="benefitsContent">
+<div class="benefitsList">
+<ul>
+
+<li>Crie e faça mutações em criaturas guerreiras com até 14 tipos de comida.</li>
+<li>Multijogador para até 4 jogadores.</li>
+<li>3 temas gastronômicos de tabuleiros.</li>
+<li>3 modos de batalha a escolher.</li>
+<li>Jogos qualificatórios.</li>
+<li>Conquistas.</li>
+<li>Jogue GRÁTIS!</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<br class="clear" />
+<a name="description"></a>
+<div class="subsection" id="description" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Descrição
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>Como todo bom estudante que mora sozinho, você nunca limpou sua geladeira: o podrão comprado às três da manhã ainda está na prateleira e o queijo deve estar na porta da geladeira desde que o Titanic afundou. Contudo, ultimamente, você notou que a comida está se comportando de uma forma estranha. O bacon das antigas anda encarando a minhoca da alface, o cachorro-quente do primeiro aniversário do seu primo de 18 anos anda querendo encrencar com a almôndega do macarrão do domingo passado e algo não cheira bem nos potes de iogurte. Sua geladeira está gerando novas formas de vida que são agressivas e muito nojentas.</p>
+<p>Bachelor Fridge é um jogo de combate estratégico onde você, o proprietário de uma geladeira de estado inaceitável, gera criaturas a partir de comidas estragadas. Depois de alimentadas, as criaturas sofrem mutações e ficam prontas para entrar em combate com multijogadores em partidas on-line.</p>
+<p>Ao alimentá-las com o tipo certo de comida, suas belas bactérias se tornam criaturas mutantes valentes e podem atacar as criaturas de jogadores ao redor do mundo. Três arenas de combate e três modos de jogo aguardam por você. Então, prepare seu estômago para se divertir com estes seres repugnantes!</p>
+</div>
+</div>
+</div>
+<a name="top_of_page"></a>
+<a name="faqs"></a>
+<div class="subsection" id="faqs" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Perguntas frequentes
+</div>
+</div>
+<div class="subsectionContent">
+<div class="faqsList">
+<ol>
+<li><a href="#faqs_q1">Qual é a estrutura das rodadas na arena de combate do jogo?</a></li>
+<li><a href="#faqs_q2">Como faço para adicionar mais ataques e movimento às minhas criaturas?</a></li>
+<li><a href="#faqs_q3">Como ganho mais dinheiro para comprar comida para minhas criaturas?</a></li>
+<li><a href="#faqs_q4">Tenho um total de oito criaturas em minha geladeira, mas quero mais. O que posso fazer?</a></li>
+<li><a href="#faqs_q5">Fiz minha criatura do mesmo jeito que meu amigo fez a dele, mas elas têm aparência diferente. Por quê?</a></li>
+<li><a href="#faqs_q6">Tenho apenas uma criatura, mas ela é super legal. Posso jogar partidas para multijogadores?</a></li>
+<li><a href="#faqs_q7">O que o número à esquerda da criatura (na arena de combate) significa?</a></li>
+<li><a href="#faqs_q8">Soco, Lançador, Força e Velocidade... qual deles é o melhor?</a></li>
+<li><a href="#faqs_q9">Qual a função dos diferentes power-ups do jogo?</a></li>
+<li><a href="#faqs_q10">O que devo fazer em cada modo de jogo?</a></li>
+<li><a href="#faqs_spec">Quais são as especificações mínimas para este jogo?</a></li>
+</ol>
+</div>
+<div class="faqsAnswer">
+<a name="faqs_q1"></a>
+<h3>1. Qual é a estrutura das rodadas na arena de combate do jogo?</h3>
+<p>A arena do jogo usa um sistema de rodadas planejadas, onde todos os jogadores armam as jogadas ao mesmo tempo e depois as criaturas se movem de acordo com a velocidade. Esse processo se repete para as ações de ataque. O macete desse jogo é saber quando a sua criatura vai se mover e antecipar os movimentos dos seus oponentes.</p>
+<div class="hr"></div>
+<a name="faqs_q2"></a>
+<h3>2. Como faço para adicionar mais ataques e movimento às minhas criaturas?</h3>
+<p>Você pode incrementar sua criatura alimentando-a com comidas diferentes. As dicas para o tipo de comida que sua criatura gosta podem ser vistas nos balões de pensamento acima delas. Depois de alimentá-la, você pode ver os novos recursos que ela adquiriu, clicando com o botão direito ou clicando com a lupa em cima dela. Para poder usar novos movimentos e ataques, basta equipá-los às criaturas. Clique com o botão direito nos recursos que deseja remover, para retirá-los da lista de ações planejadas.</p>
+<div class="hr"></div>
+<a name="faqs_q3"></a>
+<h3>3. Como ganho mais dinheiro para comprar comida para minhas criaturas?</h3>
+<p>Você ganha dinheiro ao lutar com as criaturas dos outros jogadores na arena para multijogadores. Você pode ganhar uma recompensa de &pound;5, se vencer, ou &pound;1, se perder. Este valor pode aumentar se algum jogador também conseguir vencer várias lutas, que correspondem a 20 centavos cada. Estas recompensas são dadas tanto em jogos qualificatórios quanto em jogos não qualificatórios.</p>
+<div class="hr"></div>
+<a name="faqs_q4"></a>
+<h3>4. Tenho um total de oito criaturas em minha geladeira, mas quero mais. O que posso fazer?</h3>
+<p>O congelador pode abrigar até cinco criaturas, mas os membros do FunOrb podem guardar cinquenta criaturas. Quando o congelador estiver cheio, você pode enviar as criaturas indesejáveis para o lixo e criar novas.</p>
+<div class="hr"></div>
+<a name="faqs_q5"></a>
+<h3>5. Fiz minha criatura do mesmo jeito que meu amigo fez a dele, mas elas têm aparência diferente. Por quê?</h3>
+<p>A aparência das criaturas é determinada tanto pela comida que são alimentadas quanto pela ordem que isso acontece. O primeiro alimento selecionado dita o personagem da criatura e os alimentos seguintes desbloqueiam recursos e mudam a aparência dela. Alimentar criaturas com a mesma comida, mas numa ordem diferente, fará com que as elas tenham aparência distintas. Experimente fazer isso para ver o que pode ser criado.</p>
+<div class="hr"></div>
+<a name="faqs_q6"></a>
+<h3>6. Tenho apenas uma criatura, mas ela é super legal. Posso jogar partidas para multijogadores?</h3>
+<p>Você pode participar de batalhas para multijogador utilizando de três a seis criaturas. Usar a sua criatura mais poderosa para jogar "Gororoba" ou "Pega Mosca" pode ser a sua melhor estratégia.</p>
+<div class="hr"></div>
+<a name="faqs_q7"></a>
+<h3>7. O que o número à esquerda da criatura (na arena de combate) significa?</h3>
+<p>Os números representam a ordem que as criaturas vão se mover ou atacar. A criatura mais rápida recebe o número mais baixo e ela vai se mover e atacar primeiro em combates de multijogadores. A estatística "velocidade" pode ser visualizada na geladeira com a lupa ou quando se clica com o botão direito na criatura. Quando a velocidade for igual, o nível será distribuído aleatoriamente.</p>
+<div class="hr"></div>
+<a name="faqs_q8"></a>
+<h3>8. Soco, Lançador, Força e Velocidade... qual deles é o melhor?</h3>
+<p>As estatísticas das criaturas podem ser visualizadas clicando com o botão direito do mouse nelas ou usando a lupa. A quantidade de Soco mostra quão habilidoso em combates corpo a corpo a criatura é. Estes ataques são exibidos em vermelho à esquerda das estatísticas. O Lançador representa a habilidade de fazer ataques à distância (exibidos em azul). A Força representa os pontos vitais, ou seja, a saúde da sua criatura. A Velocidade decide a rapidez e a distância que a sua criatura pode se mover em uma vez. Todos esses recursos são úteis em combate. Você pode tentar distribui-las igualmente ou criar monstros especializados em uma dessas estatísticas. Experimente grupos de criaturas diferentes para ver qual é a melhor solução para você. </p>
+<div class="hr"></div>
+<a name="faqs_q9"></a>
+<h3>9. Qual a função dos diferentes power-ups do jogo?</h3>
+<p>Os power-ups Soco, Lançador e Velocidade aumentam suas estatísticas para o próximo nível por cinco rodadas, a não ser que já tenha o nível mais alto. Força aumenta a saúde da criatura em dois, o que equivale a 40 pontos vitais. Este aumento não tem um limite de rodadas. Se você escolher um power-up mesmo tenho o nível máximo dele, isso não aumentará o seu nível, mas também não vai causar mal algum. Porém, isso vai impedir que outro jogador possa adquiri-lo. Escolha os seus power-ups com cautela, já que só poderá usar um de cada vez.</p>
+<div class="hr"></div>
+<a name="faqs_q10"></a>
+<h3>10. O que devo fazer em cada modo de jogo?</h3>
+<p>Destruição é o modo de jogo de vida ou morte para uma das criaturas (tomara que seja morte para o seu oponente!). No jogo Gororoba ganha quem conquistar o máximo de pontos-chave do mapa, as bases de gororoba, por três rodadas seguidas. Você conquistas estas bases ao pisar nelas. O jogo Pega Mosca equilibra ataque e defesa - pegue a mosca do seu oponente e volte até a sua mosca para capturá-la. Sua mosca precisa estar esperando por você, para que possa ganhar créditos por seus esforços. Proteja-a bem! As moscas voltam à posição original ao matar a criatura que a possui. Vence o jogador que conseguir capturar mais moscas (5 no total).</p>
+<div class="hr"></div>
+<a name="faqs_spec"></a>
+<h3>11. Quais são as especificações mínimas para este jogo?</h3>
+<p>As especificações mínimas recomendadas para este jogo são:</p>
+<ul>
+<li>1.0 GHz <li>128 MB de RAM </ul>
+<p>As especificações <b>recomendadas</b> para aproveitar ao máximo este jogo são:</p>
+<ul>
+<li>1.5 GHz <li>256 MB de RAM </ul>
+<p>Abaixo você encontrará uma explicação dos termos das nossas especificações técnicas.</p>
+<p><b>Megahertz (MHz) / Gigahertz (GHz)</b> é uma medida que define a velocidade do processador do computador. Isso afeta a rapidez com que você pode executar jogos e aplicativos, por exemplo.</p>
+<p>Os <b>Megabytes (MB)</b> são usados para medir a quantidade de memória do computador. Isso afeta a rapidez com que o computador é executado ao usar programas grandes, como jogos, ou quando você executa vários programas ao mesmo tempo.</p>
+<p>Clique <a href="http://www.java.com/getjava" target="_blank">aqui</a> para obter a última versão do Sun Java.</p>
+</div>
+</div>
+</div>
+<a name="furtherBenefits"></a>
+<div class="subsection" id="furtherBenefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Benefícios do membro do FunOrb
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p style="padding-bottom: 5px;">Os membros ganham:</p>
+<ul style="line-height: 22px;">
+<li>Mais 50 opções de comida para comprar e fazer mutações.</li>
+<li>50 espaços no congelador para guardar seu exército de bactéria.</li>
+<li>Acesso a todas as Conquistas.</li>
+<li>Modo de tela cheia.</li>
+<li>Sem anúncios durante o jogo.</li> <li>Acesso total a todo conteúdo exclusivo para membros do FunOrb.</li>
+</ul>
+<p>
+<a href="https://secure.funorb.com/m=billing_core/l=3/paymentoptions.ws" class="buttonSubscribe"></a>
+</p>
+</div>
+</div>
+</div>
+<a name="credits"></a>
+<div class="subsection" id="credits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Equipe de Desenvolvimento
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>
+<b>Desenvolvimento:</b> Mel H,&nbsp;Mark T<br>
+<b>Design gráfico:</b>  Jamie S,&nbsp;Laura W,&nbsp;David H,&nbsp;Kristian F,&nbsp;Adam S,&nbsp;Jess H,&nbsp;Anthony A<br>
+<b>Áudio:</b> Grace D<br>
+<b>Controle de Qualidade:</b> Joe C,&nbsp;Ken W L,&nbsp;Faye G,&nbsp;Scott M,&nbsp;Sally R,&nbsp;Michael T<br>
+<b>Tradução:</b> Claudio D C,&nbsp;Florian P,&nbsp;Matthias P,&nbsp;Marsel De S
+</p>
+<p class="articleBacktotop">
+<a href="#top"><img src="img/images/layout/backtotop.gif" alt="Voltar ao topo" title="Voltar ao topo" /></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sectionFooter"><div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="copyRight">
+<div id="languagefooter"> Selecione o idioma:&nbsp; <a href="../index-2.html"><img alt="
+English" src="img/images/layout/en.gif">
+English</a>
+<a href="../l%3d1/index.html"><img alt="
+Deutsch" src="img/images/layout/de.gif">
+Deutsch</a>
+<a href="../l%3d2/index.html"><img alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif">
+Fran&ccedil;ais</a>
+<a href="index.html"><img alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif">
+Portugu&ecirc;s (BR)</a>
+</div>
+<div class="cr">
+<p> Copyright © 2008 - 2010 Jagex Ltd. Jagex e FunOrb são marcas registradas da Jagex Ltd no Reino Unido e em outros países do mundo. </p>
+<p> Ao utilizar nossos serviços, você concorda com nossos <a href="terms/terms.html" name="terms">Termos e Condições</a> e <a href="privacy/privacy.html" name="privacy">Política de Privacidade</a>. </p>
+</div>
+<div id="jagex">
+<a href="../../www.jagex.com/l%3d3/index.html" target="_blank"><img src="img/images/layout/jagex_footerc4ca.gif?1" alt="Logotipo Jagex" /></a>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>

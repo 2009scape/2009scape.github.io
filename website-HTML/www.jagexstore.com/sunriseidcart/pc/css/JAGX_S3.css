@@ -1,0 +1,505 @@
+﻿html, body
+{
+    background-color: #ffffff;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    font-size: 12px;
+}
+body
+{
+    background: #000000 none repeat scroll 0 0;
+    color: #ffffff;
+    font-family: Helvetica, Arial, Sans-Serif;
+    font-size: 100%;
+    font-style: normal;
+    font-variant: normal;
+    font-weight: normal;
+    line-height: normal;
+    text-align: center;
+}
+p
+{
+    padding: 5px;
+}
+img.bg
+{
+    width: 100%;
+    height: 100%;
+}
+#scrollable
+{
+    height: 100%;
+    width: 100%;
+}
+#header
+{
+    background: transparent url(../images/jagx_header_bg.png) repeat scroll left top;
+    border: 0 none;
+    height: 108px;
+    margin: 0 auto;
+    padding: 0;
+    width: 865px;
+}
+#headerContent
+{
+    width: 1000px;
+    margin: 0 auto;
+}
+.headerimg
+{
+    margin: 0;
+    padding: 0;
+    border: none;
+    float: left;
+    background-color: transparent;
+}
+#nav
+{
+    background: transparent url(../images/jagx_nav_bg.gif) repeat-x scroll right top;
+    color: #ffffff;
+    font-size: 10pt;
+    height: 31px;
+    letter-spacing: 1px;
+    margin: 0 auto;
+    width: 865px;
+}
+#nav div#navItems
+{
+    float: left;
+    margin: 0;
+    padding: 7px 10px 5px 22px;
+}
+#nav div#accountItems
+{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+#nav #accountLinks
+{
+    vertical-align: middle;
+    float: right;
+    padding: 7px 10px 5px 10px;
+}
+#nav div#accountItems div.loginBtn
+{
+    float: right;
+    margin: 0;
+    padding: 0;
+}
+#nav div a
+{
+    color: #ffffff;
+    font-weight: bold;
+    text-decoration: none;
+}
+#nav img.loginOff
+{
+    border: 0;
+}
+#nav img.loginOver
+{
+    border: 0;
+}
+#content
+{
+    margin: 0 auto;
+    width: 865px;
+    padding: 0;
+}
+#nav #accountItems a.logButton
+{
+    padding: 0;
+    margin: 0;
+    float: right;
+    width: 90px;
+    height: 28px;
+    border: none;
+}
+#nav #accountItems #login a
+{
+    background: transparent url(../images/jagx_logButton_sprite.gif) no-repeat scroll center top;
+}
+#left
+{
+    width: 242px;
+    height: 100%;
+    float: left;
+    padding: 0;
+    margin: 0;
+    background: transparent url(../images/jagx_left_frame.png) repeat-y scroll left top;
+}
+#leftContent
+{
+    margin: 0 0 0 5px;
+    width: 235px;
+    text-align: left;
+    height: 100%;
+}
+#leftNavBottom
+{
+    height: 8px;
+    width: 100%;
+}
+#left img
+{
+    padding: 0;
+    margin: 0 0 0 2px;
+}
+#leftNavFiller
+{
+    background: transparent url(../images/jagx_navleft_bg.gif) repeat-y scroll left top;
+    height: 68px;
+    margin: 0 0 0 4px;
+}
+#featureProduct img
+{
+    width: 100%;
+}
+#leftBorder
+{
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+#right
+{
+    background: transparent url(../images/jagx_right_frame.gif) repeat-y scroll right top;
+    clear: right;
+    height: 100%;
+    margin: 0 0 0 236px;
+    padding: 0;
+    width: 629px;
+}
+#main
+{
+    background: transparent url(../images/jagx_middle_frame.gif) repeat-y scroll left top;
+    margin: 0;
+    padding: 0 7px;
+}
+#mainContent
+{
+    height: 100%;
+    width: 612px;
+}
+#bottom
+{
+    height: 10px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+#categoryNav
+{
+    font-size: 10pt;
+    margin: 0;
+    padding: 0;
+    text-align: left;
+    width: 100%;
+}
+#categoryNav li
+{
+    background: transparent url(../images/jagx_left_nav_sprite.png) no-repeat scroll center top;
+    height: 30px;
+    list-style-image: none;
+    list-style-position: outside;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 231px;
+}
+#categoryNav li a
+{
+    color: #ffffff;
+    display: block;
+    height: 22px;
+    margin: 0;
+    padding: 5px 0 0 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    width: 209px;
+}
+table.pcMainTable td
+{
+    padding: 0;
+    margin: 0;
+}
+.pcMainTable h1
+{
+    background: #e5e5e5 url(../images/jagx_header_bg.gif) repeat scroll left top;
+    color: #ffcc33;
+    font-family: Trajan Pro, Times New Roman, Serif;
+    font-size: 18px;
+    margin: 0;
+    padding: 4px;
+    text-transform: capitalize;
+    font-variant: small-caps;
+}
+.pcMainTable p
+{
+    margin: 0 10px;
+}
+#footer
+{
+    font-size: 11px;
+    clear: both;
+    font-size: 11px;
+}
+#footer a
+{
+    color: #ffffff;
+    text-decoration: none;
+}
+#footer a
+{
+    color: #ffffff;
+    text-decoration: underline;
+}
+#pcMain a:link
+{
+    color: #cc9900;
+    font-family: Helvetica, Arial, Sans-Serif;
+}
+#pcMain a:visited
+{
+    color: #cc9900;
+}
+#pcMain .submit
+{
+    padding: 3px;
+}
+div.pcErrorMessage
+{
+    margin: 0 10px 10px;
+    width: 580px;
+    background-color: #fff;
+    border: 1px solid #ff9900;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+}
+table.pcMainTable td.pcSectionTitle
+{
+    padding: 10px;
+}
+table.pcShowProducts tr
+{
+    padding: 0;
+}
+table.pcShowProducts p
+{
+    padding: 0;
+}
+.pcShowProducts
+{
+    padding: 0;
+}
+#pcMain img
+{
+    padding: 0px;
+}
+
+#pcMain a:link, #pcMain a:visited
+{
+    text-transform: none;
+    color: #330000;
+    text-decoration: underline;
+    font-size: 11px;
+}
+#submit
+{
+    padding: 3px;
+}
+.pcErrorMessage
+{
+    background-color: #fff;
+    border: 1px solid #ff9900;
+    color: #ff9900;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 15px;
+    padding: 4px;
+    text-align: center;
+    width: 90%;
+}
+.productOption
+{
+    color: #000000;
+    padding-top: 5px;
+}
+table#productDescription td
+{
+    padding-left: 15px;
+}
+#pcMain .iform, #pcMain .AddToCartImg, #pcMain .AddToWishListImg
+{
+    vertical-align: bottom;
+    padding: 0;
+    margin: 0 5px 0 0;
+}
+.pcShowProducts
+{
+    border: none;
+}
+table.pcMainTable tr.pcSectionTitle td
+{
+    background-color: transparent;
+    padding: 10px 0 0 0;
+    margin: 0;
+}
+#pcMain hr
+{
+    display: none;
+}
+#breadCrumbs
+{
+    display: inline;
+    padding: 0 0 0 10px;
+    margin: 0;
+}
+#sortProducts
+{
+    float: right;
+    display: inline;
+    clear: left;
+    padding: 0 10px 0 0;
+    margin: 0;
+}
+#viewCartTotal
+{
+    padding: 0;
+    margin: 0;
+    font-weight: bold;
+}
+table#viewCartTable
+{
+    width: 590px;
+    margin: 0 auto;
+}
+table#viewCartTable th, table#viewCartTopTable th, table#viewOrderAddress th, table#shipOptions th, table#orderCompleteTable th, table#cvpDAddressTable th, table#cvpDorderTable th
+{
+    background-color: #ffcc33;
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 3px 10px;
+    white-space: nowrap;
+}
+table#cvpDAddressTable th
+{
+    text-align: left;
+    padding-left: 0;
+}
+table#shipOptions td
+{
+    padding: 2px 5px;
+}
+table#orderCompleteTable th
+{
+    padding: 3px 5px;
+}
+table#viewOrderAddress th
+{
+    padding: 3px 5px 3px 10px;
+}
+table#viewCartTopTable td, table#viewCartTable td
+{
+    padding: 2px 10px;
+    vertical-align: middle;
+}
+.totalsLine
+{
+    border-bottom: 1px solid #e1e1e1;
+    border-top: 1px solid #e1e1e1;
+}
+table#viewOrderAddress
+{
+    width: 590px;
+    margin: 0 auto;
+}
+table#viewOrderAddress td hr
+{
+    display: block;
+}
+div#shipAgreeTitle
+{
+    padding: 0 0 0 5px;
+}
+div#shipAgreement
+{
+    padding: 10px;
+}
+div#shipAgreement div
+{
+    float: right;
+    width: 565px;
+    padding-bottom: 13px;
+}
+table.pcMainTable table tr td.overrideCell
+{
+    padding: 0;
+    margin: 0;
+    text-align: center;
+}
+div.addressOverride
+{
+    background-color: #ffffff;
+    border: 1px solid #ff9900;
+    color: #333333;
+    font-size: 12px;
+    font-weight: bold;
+    margin: 0 auto 10px;
+    padding: 3px 5px;
+    text-align: center;
+    width: 580px;
+}
+table#longinTable, table#paymentTable
+{
+    width: 590px;
+    margin: 0 auto;
+}
+table#orderCompleteTable, table#pfpPaymentTable, table#cvpDAddressTable, table#cvpDorderTable, table#cvpDorderStatusTable
+{
+    margin: 0 auto;
+    width: 590px;
+}
+table#cvpDAddressTable td, table#cvpDorderTable td, table#orderCompleteTable td, table#pfpPaymentTable td, table#viewOrderAddress td, table#ovAddress td
+{
+    padding: 3px 3px 3px 5px;
+    vertical-align: middle;
+}
+.pcSectionTitle
+{
+    background-color: transparent;
+    color: #333;
+    font-size: 12px;
+    padding-top: 10px;
+}
+table#viewOrderAddress tr td.orderPriceCol
+{
+    padding: 5px;
+}
+table#coLoginTable
+{
+    margin-top: 0;
+}
+table#coLoginTable tr td P
+{
+    padding-left: 15px;
+}
+table#coLoginTable tr.pcSectionTitle td p
+{
+    padding-left: 0;
+}
+div#orderContinueButton
+{
+    float: right;
+}
+table#viewCartTable hr, table#orderCompleteTable hr, table#cvpDorderTable hr, table#cvpDAddressTable hr
+{
+    display: block;
+}

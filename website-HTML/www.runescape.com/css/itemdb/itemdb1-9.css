@@ -1,0 +1,361 @@
+
+
+
+/* ----------------Generic styles---------------- */
+.main_ge_page {
+ float: right;
+ width: 634px;
+ position: relative;
+}
+.vertically_spaced {
+ margin: 0 0 4px 0;
+}
+/* ----------------Ticker styles---------------- */
+#ticker {
+ background: #261C09;
+ width: 100%;
+ height: 20px;
+ color: white;
+ border: none;
+ font-family: monospace;
+ font-size: 12px;
+ white-space:nowrap;
+ overflow:hidden;
+ line-height: 20px;
+}
+/* ----------------Search box styles---------------- */
+#searchbox {
+ height: 28px;
+ line-height: 28px;
+ vertical-align:middle;
+}
+#searchbox_text {
+ margin: 6px 6px 2px 6px;
+}
+#searchbox label, #searchbox select, #searchbox input {
+ margin: 0 5px 2px;
+ vertical-align:middle;
+}
+/* ----------------Browse box styles---------------- */
+#browsebox {
+ float: left;
+ width: 72px;
+ text-align: center;
+}
+#browse_list {
+ line-height: 21px;
+ font-weight: bold;
+}
+#browse_list a {
+ text-decoration: none;
+}
+#browse_list a:hover{
+ text-decoration: underline;
+}
+/* ----------------Front page - Movers and Shakers styles---------------- */
+a.more {
+ display: block;
+ float: right;
+ top: 0;
+ line-height: 16pt;
+ margin-right: 3px;
+ text-decoration: underline;
+}
+.top5_table {
+ text-align: center;
+ border-spacing: 0px;
+ border-collapse: collapse;
+ width: 100%;
+}
+.top5_table tr {
+ height: 3em;
+}
+.top5_table td {
+ border-left: 1px solid #261c09;
+ border-right: 1px solid #261c09;
+}
+.top5_table a {
+ font-weight: bold;
+ text-decoration: none;
+}
+.top5_table a:hover {
+ text-decoration: underline;
+}
+.top5_left {
+ float: left;
+ width: 315px;
+}
+.top5_right {
+ float: right;
+ width: 315px;
+}
+.top5_top {
+ margin: 0 0 2px 0;
+}
+.divider {
+ width: 1px;
+ background: #261c09;
+ padding: 0;
+}
+td.t5 {
+ border-right: 0;
+}
+/* ----------------Front page - Item of the Week styles---------------- */
+#iotw_image {
+ float:left;
+ border: 1px solid #3e321f;
+ background: #2c210d;
+}
+#iotw_title {
+ font-weight: bold;
+ text-decoration: none;
+}
+#iotw_title:hover{
+ text-decoration: underline;
+}
+#iotw_view {
+ float: right;
+ text-align: center;
+}
+#iotw_text {
+ padding: 0 0 0 106px;
+}
+/* ----------------Highlighting colours for price changes---------------- */
+.red {
+ color: #c02020;
+}
+.green {
+ color: #319631;
+}
+span.drop {
+ color:#c02020;
+}
+span.stay {
+ color:#6060FF;
+}
+span.rise {
+color:#319631;
+}
+/* ----------------Item page styles---------------- */
+#item_image {
+ float:right;
+ border: 1px solid #3e321f;
+ background: #2c210d;
+ margin-top: 8px;
+}
+#item_desc {
+ width: 146px;
+ float: left;
+ padding: 6px;
+}
+#item_additional {
+ height: 112px;
+}
+#graph_warning {
+ padding: 6px;
+}
+#item_graph_image {
+ border-collapse: collapse;
+ float: left;
+ background: #392c14;
+}
+#item_graph_image td {
+ padding: 0;
+ vertical-align: bottom;
+}
+#legend {
+ float: right;
+ width: 133px;
+}
+.legend_bar {
+ line-height: 21px;
+ padding: 4px;
+ margin: 2px 0 0 0;
+}
+.legend_box {
+ float: left;
+ width: 15px;
+ height: 15px;
+ border: 1px solid black;
+ margin: 2px 4px 0 0;
+}
+
+#item_graph_nav {
+ margin-top: 220px;
+ width: 133px;
+ position: relative;
+ height: 62px;
+ line-height: 1.5em;
+ float: right;
+}
+
+.spaced_span {
+ margin: 0 30px;
+}
+/* ----------------Navigation button styles---------------- */
+.nav {
+ text-align: center;
+ line-height: 1.5em;
+}
+.nav_button {
+ background: #3e321f;
+ text-align: center;
+}
+/* ----------------Top 100 page Styles---------------- */
+#top100_nav {
+ margin: 0 auto;
+ width: 532px;
+}
+.top100_nav_button {
+ width: 133px;
+ float: left;
+ margin: 0px 0px 2px 0px;
+}
+#top100_table {
+ width: 100%;
+ text-align: center;
+ border-spacing: 0px;
+ border-collapse: collapse;
+}
+#top100_table a {
+ font-weight: bold;
+ text-decoration: none;
+}
+#top100_table a:hover {
+ text-decoration: underline;
+}
+#top100_table tr {
+ height: 3em;
+}
+#top100_table td {
+ border-right: 2px solid #261c09;
+}
+/* ----------------Results page styles---------------- */
+#search_results_page {
+ font-weight: bold;
+}
+#search_results_text {
+ margin: 6px;
+}
+#search_results_table {
+ width: 100%;
+ text-align: center;
+ border-spacing: 0px;
+ border-collapse: collapse;
+ font-weight: normal;
+}
+#search_results_table a {
+ font-weight: bold;
+ text-decoration: none;
+}
+#search_results_table a:hover {
+ text-decoration: underline;
+}
+#search_results_table tr {
+ height: 3em;
+}
+#search_results_table td {
+ border-left: 1px solid #261c09;
+ border-right: 1px solid #261c09;
+}
+.results_nav {
+ margin: 4px auto;
+ text-align: center;
+ font-weight: bold;
+}
+.navleft {
+ text-align: right;
+ width: 80px;
+}
+.navmid {
+ text-align: center;
+ padding: 0 10px;
+}
+.navright {
+ text-align: left;
+ width: 80px;
+}
+#search_results_page a {
+ text-decoration: none;
+}
+#search_results_page a:hover {
+ text-decoration: underline;
+}
+#search_results_tips {
+ text-align: center;
+ margin-bottom: 4px;
+}
+#search_results_tips a:hover {
+ text-decoration: underline;
+}
+/* ----------------Search tips page---------------- */
+/* ----------------Error page---------------- */
+/* Button style------------------------------------ */
+#button_1 {
+ position: absolute;
+ background: url(../../img/itemdb/button_1_highlight.png) -999px -999px no-repeat;
+ height: 31px;
+ width: 133px;
+ display: block;
+ top: 0px;
+ left: 0px;
+}
+#button_7 {
+ position: absolute;
+ background: url(../../img/itemdb/button_7_highlight.png) -999px -999px no-repeat;
+ height: 31px;
+ width: 133px;
+ display: block;
+ top: 0px;
+ left: 0px;
+}
+#button_30 {
+ position: absolute;
+ background: url(../../img/itemdb/button_30_highlight.png) -999px -999px no-repeat;
+ height: 31px;
+ width: 133px;
+ display: block;
+ top: 0px;
+ left: 0px;
+}
+#button_90 {
+ position: absolute;
+ background: url(../../img/itemdb/button_90_highlight.png) -999px -999px no-repeat;
+ height: 31px;
+ width: 133px;
+ display: block;
+ top: 0px;
+ left: 0px;
+}
+#button_180 {
+ position: absolute;
+ background: url(../../img/itemdb/button_180_highlight.png) -999px -999px no-repeat;
+ height: 31px;
+ width: 133px;
+ display: block;
+ top: 0px;
+ left: 0px;
+}
+#button_365 {
+ position: absolute;
+ background: url(../../img/itemdb/button_365_highlight.png) -999px -999px no-repeat;
+ height: 31px;
+ width: 133px;
+ display: block;
+ top: 0px;
+ left: 0px;
+}
+a:hover #button_1, a:hover #button_7, a:hover #button_30, a:hover #button_90, a:hover #button_180, a:hover #button_365 {
+ background-position: 0px 0px;
+}
+.itemdb_button {
+ border:medium none;
+ cursor:pointer;
+ height:31px;
+ width:133px;
+ background: none;
+ position: relative;
+ margin: 0;
+ padding: 0;
+ display: block;
+}

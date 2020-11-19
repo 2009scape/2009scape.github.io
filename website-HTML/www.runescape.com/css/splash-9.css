@@ -1,0 +1,318 @@
+
+
+
+
+
+html,
+body {
+ margin: 0;
+ padding: 0;
+ min-width: 1000px;
+}
+
+html {
+ overflow-y: scroll;
+}
+
+body {
+ text-align: left;
+ font-family: Arial, Helvetica, FreeSans, sans-serif;
+ font-size: 11px;
+ color: white;
+ background: black url(../img/main/splash/bg.jpg) center 30px no-repeat;
+}
+
+
+#aff_border {
+ background: black url(../img/main/splash/bg.jpg) center 30px no-repeat;
+ height: 721px;
+}
+
+a {
+ color: white;
+}
+
+a:hover {
+ text-decoration: none;
+}
+
+a:focus,
+a:active {
+ outline: white;
+}
+
+a img {
+ border: 0;
+}
+
+object {
+ outline: 0;
+}
+
+.HoverImg {
+ position: relative;
+ overflow: hidden;
+ font-weight: normal;
+}
+
+.HoverImg:hover {
+ font-weight: bold;
+}
+
+.HoverImg img {
+ position: absolute;
+ left: 0;
+ top: 0;
+ height: 200%;
+ width: 100%;
+}
+
+.HoverImg:hover img,
+.HoverImgActive img {
+ top: -100%;
+}
+
+#wrapper {
+ position: relative;
+ margin: auto;
+ width: 1000px;
+ height: 721px;
+}
+
+
+
+
+
+#bar {
+ margin: auto;
+ height: 30px;
+ line-height: 30px;
+ background: black;
+}
+
+#barLeft {
+ float: left;
+}
+
+#bar img {
+ vertical-align: middle;
+ border: 1px solid #666;
+}
+
+#bar a {
+ display: inline-block;
+ color: #fefefe;
+ font-weight: bold;
+}
+
+#continue {
+ margin-left: 20px;
+}
+
+#noSplash {
+ float: right;
+}
+
+
+
+
+
+#logo {
+ margin: 0;
+ position: absolute;
+ left: -11px;
+ top: 37px;
+ width: 411px;
+ height: 200px;
+}
+
+.tablet {
+ position: absolute;
+ left: 50px;
+ width: 287px;
+ height: 242px;
+ font-size: 12px;
+ font-weight: bold;
+ overflow: hidden;
+}
+
+#tablet1 {
+ top: 237px;
+ background: url(../img/main/splash/tablet1_bg.jpg);
+}
+
+#welcome {
+ display: block;
+ position: relative;
+ left: 5px;
+ margin: 11px auto 0;
+ /*height: 17px;*/
+}
+
+#bullets {
+ margin: 3px 0 0;
+ padding: 0;
+}
+
+#bullets li {
+ line-height: 22px;
+ width: 220px;
+ margin: 0 0 0 43px;
+}
+
+#download ,
+#play {
+ position: absolute;
+ left: 30px;
+ top: 164px;
+ width: 231px;
+ height: 52px;
+}
+#download {
+ display: none;
+}
+#tablet2 {
+ top: 479px;
+ background: url(../img/main/splash/tablet2_bg.jpg);
+}
+
+#trailerTitle {
+ position: absolute;
+ left: 26px;
+ top: 19px;
+ /*width: 84px;
+ height: 18px;*/
+}
+
+.mediaButton {
+ position: absolute;
+ left: 30px;
+ width: 231px;
+ height: 76px;
+}
+
+#trailer {
+ top: 37px;
+}
+
+#screenTitle {
+ position: absolute;
+ left: 26px;
+ 
+ 
+ top: 126px;
+ 
+ /*width: 127px;
+ height: 18px;*/
+}
+
+#screen {
+ top: 144px;
+}
+
+
+
+
+
+#media {
+ display: none;
+ position: absolute;
+ left: 355px;
+ top: 225px;
+ width: 605px;
+ height: 413px;
+ background: url(../img/main/splash/media_bg.jpg) no-repeat;
+}
+
+#trailerMedia,
+#screenMedia {
+ display: none;
+}
+
+#close {
+ position: absolute;
+ right: 37px;
+ top: 25px;
+ width: 17px;
+ height: 16px;
+}
+
+.mediaHolder {
+ position: absolute;
+ width: 544px;
+ height: 336px;
+ left: 29px;
+ top: 50px;
+}
+
+.videoTitle {
+ position: absolute;
+ top: 16px;
+ height: 32px;
+}
+
+#dungeon {
+ left: 179px;
+ width: 157px;
+}
+
+#runescape {
+ left: 336px;
+ width: 112px;
+}
+
+#videoFlash {
+ text-align: center;
+}
+
+#screenNav {
+ position: absolute;
+ left: 167px;
+ top: 15px;
+}
+
+#screenNav a {
+ float: left;
+ width: 27px;
+ height: 32px;
+}
+
+#screenNav #previous,
+#screenNav #next {
+ width: 29px;
+}
+
+
+
+
+
+#jagex {
+ position: absolute;
+ right: 34px;
+ top: 666px;
+}
+
+#jagex img {
+ width: 142px;
+ height: 43px;
+}
+
+#footer {
+ position: absolute;
+ right: 191px;
+ top: 664px;
+ width: 480px;
+ font-size: 9px;
+ text-align: right;
+ color: #5c5d5e;
+}
+
+#footer p {
+ margin: 0 0 1em;
+}
+
+#footer a {
+ color: #654c08;
+}
+
+

@@ -1,0 +1,191 @@
+
+
+
+
+
+#newsitemmenu {
+ padding-top: 30px;
+}
+
+#newsitemmenu a {
+ text-decoration: none;
+ font-weight:bold;
+}
+
+#newsitemmenu a:hover {
+ text-decoration: underline;
+}
+
+.article hr {
+ color: #ded4ba;
+ background-color: #ded4ba;
+ height: 1px;
+ border: none;
+}
+
+.topnav {
+ text-align: right;
+ margin-bottom: 5px;
+}
+
+.bottomnav {
+ text-align: right;
+ margin-top: 5px;
+}
+
+.bottomnav img {
+ vertical-align: text-top;
+}
+
+.topnav img {
+ vertical-align: text-top;
+}
+
+.row_a {
+ background: url(../img/main/layout/subarticle_header_bg.png) repeat-x;
+ color: #645c43;
+}
+
+#newslist {
+ cellspacing: 0px;
+}
+
+.newsBorder {
+ padding: 4px;
+ border: 1px solid #b3aa90;
+}
+
+.pad td img {
+ vertical-align: bottom;
+}
+
+.pad td {
+ padding: 4px;
+}
+
+.pagepad {
+ padding: 32px 40px 60px;
+ color: #675F39;
+}
+
+#newslist td {
+ padding: 4px;
+ vertical-align: middle;
+}
+
+.newsNavCat {
+ margin: auto 5px;
+}
+
+.row_a td {
+ padding: 6px;
+}
+
+.newsNavcat{
+ padding-right: 10px;
+}
+
+.newsNavcat img {
+ vertical-align: text-top;
+}
+
+.pagepad a {
+ font-weight: bold;
+ text-decoration: none;
+}
+
+.pagepad a:hover {
+ text-decoration: underline;
+}
+
+#newsitemMenu {
+ font-size: 11px;
+ line-height: 1.8em;
+}
+
+.imiddle {
+ vertical-align: text-top;
+}
+
+.adframe {
+ background-image:url(../img/advert/advert_news.png);
+ background-position:center;
+ background-repeat:no-repeat;
+ float:right;
+ height:281px;
+ margin-left:10px;
+ position:relative;
+ width:312px;
+ margin-top: 2px;
+}
+
+.extraimgdiv {
+ float:right;
+ width:308px;
+ height:281px;
+ position:relative;
+ margin: 2px 2px 0 10px;
+}
+
+.extraimgcap {
+ margin:0 3px 3px;
+ background:#dad2af;
+ text-align:center;
+ color:#4f4f4f;
+ font-weight:bold;
+ font-variant:small-caps;
+ font-family:Palatino Linotype,Book Antiqua,Palatino,Times New Roman,Times,serif;
+}
+
+.imgborderdiv {
+ border:1px solid #b3aa90;
+}
+
+.extraimg {
+ width:300px;
+ height:250px;
+ margin:3px;
+}
+
+.ad {
+ left:6px;
+ position:absolute;
+ top:5px;
+}
+
+#newsTitle {
+ padding: 10px 0px;
+ text-align: center;
+ margin-bottom: 1em;
+}
+
+.newsJustify {
+ text-align: justify;
+}
+
+.centre {
+ text-align: center;
+}
+
+.width100 {
+ width: 100%;
+}
+
+.dispinline {
+ display: inline;
+}
+
+.changepage {
+ color:#FFFFFF;
+ font-size:
+ 10px; background-color:black;
+ text-align:center;
+ border: 2px inset #D4D0C8;
+}
+
+.newsAdvert {
+ width: 308px;
+ height: 279px;
+ overflow: hidden;
+ border: none;
+}

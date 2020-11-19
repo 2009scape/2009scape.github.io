@@ -1,0 +1,498 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="de" xmlns:IE>
+
+<!-- Mirrored from www.funorb.com/l=1/info.ws?game=arcanistsmulti by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:53:43 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="de">
+<meta http-equiv="imagetoolbar" content="no">
+<meta http-equiv="PRAGMA" content="NO-CACHE">
+<meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
+<meta name="keywords" content="Kostenlose Online-Spiele, Puzzlespiele, Plattformspiele, Arcadespiele, Ballerspiele, Actionspiele, Javaspiele, Rennspiele, Wortspiele, Retrospiele, Browserspiele, Strategiespiele, Mehrspieler, Arkanisten, Jagex">
+<meta name="description" content="FunOrb, kostenlose Browserspiele von Jagex Games Studio, den Machern von RuneScape. Spielt Puzzle-, Action-, Strategie-, Baller-, Wort-, Rennspiele und viele mehr!">
+<meta name="title" content="FunOrb - Kostenlose Online-Spiele von Jagex Games Studio">
+<meta name="Author" content="www.jagex.com">
+<meta name="Copyright" content="Copyright 1999 - 2010 Jagex Ltd, www.jagex.com">
+<meta name="ROBOTS" content="INDEX, FOLLOW">
+<meta name="classification" content="GENERAL">
+<meta name="rating" content="General">
+<meta name="Distribution" content="global">
+<meta name="Identifier-URL" content="../index.html">
+<link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
+<link rel="SHORTCUT ICON" href="favicon.ico">
+<title>FunOrb - Kostenlose Online-Spiele von Jagex Games Studio</title>
+<style type="text/css" media="screen">
+  /*\*/@import url(css/global-40.css);/**/
+ </style>
+<script type="text/javascript" src="../../www.jagex.com/l%3d1/js/jquery/jquery_1_4_2.js"></script>
+<!--[if lt IE 7]>
+<style type="text/css" media="screen">@import url(http://www.funorb.com/l=1/css/ieFix-2.css);</style>
+<![endif]-->
+
+<!--[if IE]>
+<style type="text/css">
+ @media all {
+  IE\:clientCaps {behavior:url(#default#clientcaps)}
+ }
+</style>
+<IE:clientCaps ID="oClientCaps" />
+<![endif]-->
+<script type="text/javascript">
+ var suffix="?js=1";
+ if (navigator.appName=="Microsoft Internet Explorer") {
+  if (!oClientCaps.getComponentVersion("{08B0E5C0-4FCB-11CF-AAA5-00401C608500}","ComponentID")) {
+   suffix+="&applet=2";
+  }
+ }
+ function suffixize(obj){
+  if(!obj.suffixed){
+   obj.href += suffix;
+   obj.suffixed = true;
+  }
+ }
+</script> <style type="text/css" media="screen">
+ /*\*/@import url("css/info-7.css");/**/
+ .intro {
+  background-image: url(img/images/game/arcanistsmulti/intro.jpg);
+ }
+ .buttonSubscribe {
+  background-image: url(img/images/info/button_subscribe.gif);
+ }
+</style>
+<script type="text/javascript">
+//
+var time = 4;
+var timer;
+var timer2;
+var loading = 0;
+var image = 0;
+var images = Array();
+//
+images[0] = 'img/images/game/arcanistsmulti/screen1c4ca.jpg?1';
+images[1] = 'img/images/game/arcanistsmulti/screen2c4ca.jpg?1';
+images[2] = 'img/images/game/arcanistsmulti/screen3c4ca.jpg?1';
+images[3] = 'img/images/game/arcanistsmulti/screen4ac4ca.jpg?1';
+//
+function clearLoading(){
+ try{
+  if(images[0]){
+   document.getElementById('screenshotsLoading0').style.backgroundPosition = '-83px -62px';
+   if(images[1]){
+    document.getElementById('screenshotsLoading1').style.backgroundPosition = '-83px -62px';
+    if(images[2]){
+     document.getElementById('screenshotsLoading2').style.backgroundPosition = '-83px -62px';
+     if(images[3]){
+      document.getElementById('screenshotsLoading3').style.backgroundPosition = '-83px -62px';
+     }
+    }
+   }
+  }
+  loading = 0;
+ }catch(e){}
+}
+//
+function imageTimer(self){
+ clearTimeout(timer2);
+ clearTimeout(timer);
+ clearLoading();
+ timer = setTimeout("imageNext('" + self + "')", time * 1000);
+}
+//
+function imageNext(self){
+ if(loading == 1){return;}
+ image++;
+ if(image >= images.length){
+  image = 0;
+ }
+ document.getElementById(self).src = images[image];
+}
+//
+function imageGoto(self, img){
+ image = img;
+ // Don't bother re-loading the same image as it screws up Opera
+ if(document.getElementById(self).src != images[image]){
+  var timeDefault = time;
+  time = time * 2;
+  window.setTimeout('time = ' + timeDefault, timeDefault);
+  timer2 = window.setTimeout("document.getElementById('screenshotsLoading' + image).style.backgroundPosition = '25px 12px';", 100);
+  loading = 1;
+  document.getElementById(self).src = images[image];
+ }
+ return false;
+}
+</script>
+
+</head>
+<body id="navGames">
+<a name="top"></a>
+<table id="wrapper">
+<tbody>
+<tr>
+<td class="center bodyTheme">
+<div id="container">
+
+<div id="header">
+<div id="navigation">
+<div class="lft"></div>
+<div class="rght"></div>
+<div class="container">
+<a id="logo" href="index.html" ><b>
+<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" width="203" height="80">
+<param name="movie" value="http://www.funorb.com/l=1/img/images/layout/logo_funorb_tombracer.swf" />
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=1/" />
+<param name="AllowScriptAccess" value="always" />
+<!--[if !IE]>-->
+<object type="application/x-shockwave-flash" data="img/images/layout/logo_funorb_tombracer.swf" width="203" height="80">
+<param name="FlashVars" value="homePath=http://www.funorb.com/l=1/" />
+<param name="AllowScriptAccess" value="always" />
+<!--<![endif]-->
+<!-- Non Flash alternative -->
+<img src="img/images/layout/logo_funorb_tombracer.jpg" alt="FunOrb" />
+<!--[if !IE]>-->
+</object>
+<!--<![endif]-->
+<!--<![endif]-->
+</object>
+</b></a>
+
+<div id="shell">
+<div class="lft"></div>
+<div class="rght"></div>
+<div id="teleText">
+<h1 id="welcomeText">Willkommen bei FunOrb - Der Spezialist für kostenlose Online-Spiele</h1>
+<span id="teletext_inner">
+Um Zugriff auf Mehrspieler-Spiele, Highscores und Erfolge zu erhalten, muss man nur ein Spielkonto erstellen. Das geht schnell, einfach und ist vollkommen KOSTENLOS!</span>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d1/messengercommon0.js"></script>
+<script type="text/javascript" src="../../services.funorb.com/m%3dfomessenger/l%3d1/messenger.js"></script>
+
+</div>
+</div>
+</div>
+<div class="clear"></div>
+<ul class="menu">
+<li class="top p1"><a href="index.html" id="home" class="top_link"><span>Startseite</span></a></li>
+<li class="top p2"><a id="games" class="top_link" href="gamelist.html"><span>Spiele</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="gamelist.html" class="fly">Alle Spiele</a></li>
+<li><a href="gamelistea68.html?playerBox=1" class="fly">Einzelspieler-Spiele</a></li>
+<li><a href="gamelist6ff6.html?playerBox=2" class="fly">Mehrspieler-Spiele</a></li>
+<li><a href="options.html" class="fly last">Java-Optionen</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p3"><a id="account" class="top_link" href="https://secure.funorb.com/m=create/l=1/"><span>Anmelden</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="https://secure.funorb.com/m=create/l=1/" class="fly">Kontoerstellung</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=1/paymentoptions.ws" class="fly">Mitgliedschaft einrichten</a></li>
+<li><a href="members.html" class="fly">Mitglieder-Vorteile</a></li>
+<li><a href="account_management.html" class="fly last">Kontoverwaltung</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p4"><a id="forums" class="top_link" href="http://services.funorb.com/m=focommunity/l=1/"><span>Community</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="http://services.funorb.com/m=focommunity/l=1/" class="fly">Community-Startseite</a></li>
+<li><a href="http://services.funorb.com/m=forum_fo_de/l=1/forums.ws" class="fly">Forum</a></li>
+<li><a href="kbase/guid/dev_diary.html" class="fly">Projekttagebücher</a></li>
+<li><a href="http://services.funorb.com/m=achievements/l=1/" class="fly">Erfolge</a></li>
+<li><a href="http://services.funorb.com/m=hiscore_fo/l=1/" class="fly">Highscores &amp; Wertungen</a></li>
+<li><a href="http://services.funorb.com/m=orbcoins/l=1/" class="fly last">Orb-Downloads</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p5"><a id="help" class="top_link" href="kbase/guid/help.html"><span>Hilfe</span><!--[if IE 7]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul class="sub">
+<li><a href="kbase/guid/customer_support.html" class="fly">Kundenbetreuung</a></li>
+<li><a href="parents.html" class="fly">Ratgeber für Eltern</a></li>
+<li><a href="kbase/guid/rules_of_conduct.html" class="fly">Regeln</a></li>
+<li><a href="https://secure.funorb.com/m=billing_core/l=1/unsubscribe.ws" class="fly">Kündigen</a></li>
+<li><a href="loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly">Konto-Wiederherstellung</a></li>
+<li><a href="https://secure.funorb.com/m=weblogin/l=1/loginform.ws?mod=www&amp;ssl=0&amp;expired=0&amp;dest=bugtracker.ws" class="fly last">Fehlerhinweis</a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top p11"><a id="empty" class="top_link"><span>&nbsp;</span></a></li>
+<li class="top p7"><a href="https://secure.funorb.com/m=create/l=1/" id="register" class="top_link"><span>Kontoerstellung</span></a></li>
+<li class="top p8"><a href="https://secure.funorb.com/m=weblogin/l=1/loginform.ws?mod=www&amp;ssl=0&amp;dest=info.ws?game=arcanistsmulti" id="signIn" class="top_link"><span>Einloggen</span></a></li>
+<li class="top p10">
+<div class="top_link" id="lang_div">
+<a id="countrydrop" href="index.html">
+<span>
+<img alt="
+Deutsch" src="img/images/layout/de.gif">
+<span id="dropArrow"></span>
+</span>
+<!--[if gt IE 6]><!--></a></div><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul id="lang" class="sub">
+<li><a class="fly" href="../index-2.html"><img title="
+English" alt="
+English" src="img/images/layout/en.gif"></a></li>
+<li><a class="fly" href="index.html"><img title="
+Deutsch" alt="
+Deutsch" src="img/images/layout/de.gif"></a></li>
+<li><a class="fly" href="../l%3d2/index.html"><img title="
+Fran&ccedil;ais" alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif"></a></li>
+<li><a class="fly last" href="../l%3d3/index.html"><img title="
+Portugu&ecirc;s (BR)" alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif"></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a></div><![endif]-->
+</li>
+</ul>
+</div>
+<br class="clear" />
+</div>
+<div id="page_content">
+<a name="info"></a>
+<div class="section" id="info" >
+<div class="sectionHeader">
+<div class="sectionHeaderRight">
+<div class="sectionTitle">
+<span class="sectionTrail">
+<a href="gamelist.html">Spiele</a> &gt;
+<a href="gamelist94fa.html?genreBox=strategy">Strategie</a> &gt;
+<a onclick="suffixize(this)" href="http://arcanists14.funorb.com/l=1/g=arcanistsmulti/game.ws">Arkanisten</a> &gt;
+Mehr Infos </span>
+<span class="sectionServerlist">
+<a style="text-decoration: underline; font-weight: normal;" href="arcanistsmulti/serverlist.html">Serverliste</a>
+</span>
+
+</div>
+</div>
+</div>
+<div class="sectionBorder">
+<div class="sectionBackground">
+<div class="sectionContent" >
+<div class="sectionContentContainer">
+<div class="intro">
+<div class="introDescription">
+<div>
+<a href="gamelist94fa.html?genreBox=strategy"><span class="genre">Strategie</span></a><br> Sprecht mächtige Zauber in diesem Online-Turnier. </div>
+</div>
+<a class="buttonWide" href="#description"><div>Beschreibung</div></a><br />
+<a class="buttonWide" href="#faqs"><div>Fragen und Antworten</div></a><br />
+<a class="buttonWide" href="https://secure.funorb.com/m=create/l=1/"><div>Kontoerstellung</div></a><br />
+<a onclick="suffixize(this)" class="buttonPlayBig" href="http://arcanists14.funorb.com/l=1/g=arcanistsmulti/game.ws"></a>
+</div>
+<a name="screenshots"></a>
+<div class="subsection" id="screenshots" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Screenshots
+</div>
+</div>
+<div class="subsectionContent">
+<script type="text/javascript">
+  document.write('<img id="screenshotsImage" class="screenshotsImage" src="http://www.funorb.com/l=1/img/images/game/arcanistsmulti/screen1.jpg" alt="In-game screenshot" onLoad="imageTimer(this.id)" />');
+ </script>
+<noscript>
+<iframe name="screenshotsFrame" class="screenshotsFrame" id="screenshotsFrame" scrolling="no" frameBorder="0" src="display_screenshotff7f.html?game=arcanistsmulti&amp;screenshot=screen1">
+</iframe>
+</noscript>
+<div id="screenshotsThumbs">
+<a href="display_screenshotff7f.html?game=arcanistsmulti&amp;screenshot=screen1" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 0);" class="screenshotsThumb" style="background-image: url(img/images/game/arcanistsmulti/screen1_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading0"></div>
+</a>
+<a href="display_screenshotdcfe.html?game=arcanistsmulti&amp;screenshot=screen2" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 1);" class="screenshotsThumb" style="background-image: url(img/images/game/arcanistsmulti/screen2_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading1"></div>
+</a>
+<a href="display_screenshote5ea.html?game=arcanistsmulti&amp;screenshot=screen3" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 2);" class="screenshotsThumb" style="background-image: url(img/images/game/arcanistsmulti/screen3_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading2"></div>
+</a>
+<a href="display_screenshota69d.html?game=arcanistsmulti&amp;screenshot=screen4a" target="screenshotsFrame" onClick="return imageGoto('screenshotsImage', 3);" class="screenshotsThumb" style="background-image: url(img/images/game/arcanistsmulti/screen4a_thumbc4ca.jpg?1);">
+<div id="screenshotsLoading3"></div>
+</a>
+</div>
+</div>
+</div>
+<a name="benefits"></a>
+<div class="subsection" id="benefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Features - Arkanisten
+</div>
+</div>
+<div class="subsectionContent">
+<div class="benefitsPadding"></div>
+<div class="benefitsContent">
+<div class="benefitsList">
+<ul>
+
+<li>22 Arkanisten-sprengende Zauber</li>
+<li>Teamspiele (2 gegen 2 und 3 gegen 3) und 'Jeder gegen Jeden'</li>
+<li>Online-Mehrspieler für bis zu 6 Personen</li>
+<li>Unbewertete Partien</li>
+<li>Abwechslungsreiche Erfolge</li>
+<li>KOSTENLOS spielen!</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<br class="clear" />
+<a name="description"></a>
+<div class="subsection" id="description" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Beschreibung
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>Arkanisten ist ein Mehrspieler-Strategiespiel, bei dem ihr euren eigenen Arkanisten gestaltet und trainiert, um dann dieses geheimnisvolle Turnier zu bestreiten. Bei jedem bewerteten Spiel, das ihr gewinnt, erhaltet ihr mehr Stäbe, die ihr benutzen könnt, um euer Zauberbuch zu erweitern und somit eure Flexibilität und Kraft auszubauen. </p>
+<p> Kämpft mit Spielern auf der ganzen Welt in sechs verschiedenen Arenen, die alle ihre eigenen Gefahren haben und unterschiedliche Strategien erfordern. Personalisiert euren Charakter durch Spielerfolge und wählt aus über einer Million möglichen Kombinationen. </p>
+</div>
+</div>
+</div>
+<a name="top_of_page"></a>
+<a name="faqs"></a>
+<div class="subsection" id="faqs" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Fragen und Antworten
+</div>
+</div>
+<div class="subsectionContent">
+<div class="faqsList">
+<ol>
+<li><a href="#faqs_q1">Wie kann ich meine Kleidung ändern?</a></li>
+<li><a href="#faqs_q2">Wie kann ich mein Zauberbuch ändern?</a></li>
+<li><a href="#faqs_q3">Wie kann ich mehr Stäbe bekommen?</a></li>
+<li><a href="#faqs_q4">Kann ich meine Stäbe irgendwo ausprobieren, bevor ich sie benutze?</a></li>
+<li><a href="#faqs_q5">Ich verliere die ganze Zeit Spiele. Was soll ich tun?</a></li>
+<li><a href="#faqs_spec">Welche Mindestvoraussetzungen setzt dieses Spiel?</a></li>
+</ol>
+</div>
+<div class="faqsAnswer">
+<a name="faqs_q1"></a>
+<h3>1. Wie kann ich meine Kleidung ändern?</h3>
+<p>Geht auf "Charakter" im Hauptmenü und wählt aus, was ihr tragen wollt. Mehr Kleidungsstücke werden freigeschaltet, wenn ihr Erfolge erringt. </p>
+<div class="hr"></div>
+<a name="faqs_q2"></a>
+<h3>2. Wie kann ich mein Zauberbuch ändern?</h3>
+<p>Wenn ihr in bewerteten Spielen gegen andere Spieler Stäbe gewinnt, könnt ihr im Fenster "Zauber auswählen" mehr Zauber kaufen. Ein neues Buch kostet 5 Stäbe, ein Zauber kostet zwischen 2 und 3 Stäben pro Stück.</p>
+<div class="hr"></div>
+<a name="faqs_q3"></a>
+<h3>3. Wie kann ich mehr Stäbe bekommen?</h3>
+<p>Viele Stäbe erhält man in bewerteten Spielen gegen viele andere Spieler. Je größer das Risiko, desto größer ist die Belohnung. Wenn ihr ein Spiel verlasst, bevor es vorbei ist, erhaltet ihr keine Stäbe, also spielt immer bis zum Ende der Partie.</p>
+<div class="hr"></div>
+<a name="faqs_q4"></a>
+<h3>4. Kann ich meine Stäbe irgendwo ausprobieren, bevor ich sie benutze?</h3>
+<p>Am Ende der Einführung gibt es ein Testlevel, in dem ihr Zugang zum aktuellen Zauberbuch bekommt. Probiert eure Zauber aus, bevor ihr in den Kampf zieht.</p>
+<div class="hr"></div>
+<a name="faqs_q5"></a>
+<h3>5. Ich verliere die ganze Zeit Spiele. Was soll ich tun?</h3>
+<p>Übt eure Zauber im Testlevel oder spielt Freundschaftsspiele mit euren Freunden, um Erfahrung zu gewinnen, bevor ihr die Arena betretet. </p>
+<div class="hr"></div>
+<a name="faqs_spec"></a>
+<h3>6. Welche Mindestvoraussetzungen setzt dieses Spiel?</h3>
+<p>Mindestvoraussetzungen:</p>
+<ul>
+<li>500 MHz <li>128MB Arbeitsspeicher </ul>
+<p>Die <b>empfohlenen</b> Voraussetzungen für die meisten Spiele sind:</p>
+<ul>
+<li>1,5 GHz <li>256MB Arbeitsspeicher </ul>
+<p>Unten finden Sie eine Erklärung der Begriffe für die technischen Spezifikationen.</p>
+<p><b>Megahertz (MHz) / Gigahertz (GHz)</b> sagen aus, wie schnell der Prozessor eines Computers arbeitet. Sie beeinflussen, wie schnell Spiele und Anwendungen ausgeführt werden.</p>
+<p><b>Megabytes (MB)</b> sagen aus, wie viel Arbeitsspeicher einem Computer zur Verfügung steht. Er beeinflusst, wie schnell und wie viele große Programme gleichzeitig ausgeführt werden können.</p>
+<p>Klick <a href="http://www.java.com/getjava" target="_blank">hier</a>, um die neueste Version von Suns Java zu erhalten.</p>
+</div>
+</div>
+</div>
+<a name="furtherBenefits"></a>
+<div class="subsection" id="furtherBenefits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Vorteile einer Mitgliedschaft
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p style="padding-bottom: 5px;">Mitglieder-Features:</p>
+<ul style="line-height: 22px;">
+<li>Zauberstäbe zum Kauf neuer Zauber und Zauberbücher</li>
+<li>8 neue Zauberbücher - Stein, Sturm, Frost, Dunkelheit, Licht, Natur, Ozean und Zahnräder</li>
+<li>Weltbewegende Zauber</li>
+<li>Mehr Optionen zur Charaktergestaltung</li>
+<li>Vertraute für jedes Zauberbuch</li>
+<li>Spielt bewertete Partien</li>
+<li>Zugang zu allen Erfolgen</li>
+<li>Vollbildmodus mit verschiedenen Auflösungen.</li>
+<li>Verändert die Größe des Spielfensters.</li>
+<li>Keine Werbung</li> <li>Zugang zu allen Mitglieder-Erweiterungen auf FunOrb</li>
+</ul>
+<p>
+<a href="https://secure.funorb.com/m=billing_core/l=1/paymentoptions.ws" class="buttonSubscribe"></a>
+</p>
+</div>
+</div>
+</div>
+<a name="credits"></a>
+<div class="subsection" id="credits" style="">
+<div class="subsectionHeader">
+<div class="subsectionTitle">
+Entwicklung
+</div>
+</div>
+<div class="subsectionContent">
+<div>
+<p>
+<b>Entwicklung:</b> Thomas D<br>
+<b>Grafik:</b> Anthony A,&nbsp;Kristian F,&nbsp;Laura W<br>
+<b>Audio:</b> Ian T,&nbsp;Adam B,&nbsp;Chris J<br>
+<b>Qualitätssicherung:</b> Joe C,&nbsp;Michael T,&nbsp;Craig S,&nbsp;Karl R,&nbsp;Thomas H,&nbsp;Kevin D<br>
+<b>Deutsche Übersetzung :</b> Florian P,&nbsp;Veronika H,&nbsp;Matthias P
+</p>
+<p class="articleBacktotop">
+<a href="#top"><img src="img/images/layout/backtotop.gif" alt="Zurück zum Anfang" title="Zurück zum Anfang" /></a>
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="sectionFooter"><div></div></div>
+</div>
+</div>
+</div>
+</div>
+<div id="copyRight">
+<div id="languagefooter"> Sprache auswählen:&nbsp; <a href="../index-2.html"><img alt="
+English" src="img/images/layout/en.gif">
+English</a>
+<a href="index.html"><img alt="
+Deutsch" src="img/images/layout/de.gif">
+Deutsch</a>
+<a href="../l%3d2/index.html"><img alt="
+Fran&ccedil;ais" src="img/images/layout/fr.gif">
+Fran&ccedil;ais</a>
+<a href="../l%3d3/index.html"><img alt="
+Portugu&ecirc;s (BR)" src="img/images/layout/br.gif">
+Portugu&ecirc;s (BR)</a>
+</div>
+<div class="cr">
+<p> Copyright © 2008 - 2010 Jagex Ltd. Jagex und FunOrb sind eingetragene Markenzeichen der Jagex Limited in Großbritannien und anderen Ländern. </p>
+<p> Indem Sie unsere Dienste nutzen, stimmen Sie unseren <a href="terms/terms.html" name="terms">allgemeinen Geschäftsbedingungen</a> und <a href="privacy/privacy.html" name="privacy">Datenschutzrichtlinien</a> zu. </p>
+</div>
+<div id="jagex">
+<a href="../../www.jagex.com/l%3d1/index.html" target="_blank"><img src="img/images/layout/jagex_footerc4ca.gif?1" alt="Jagex-Logo" /></a>
+</div>
+</div>
+</div>
+</td>
+</tr>
+</tbody>
+</table>

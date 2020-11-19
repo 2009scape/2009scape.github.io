@@ -1,0 +1,557 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+
+<!-- Mirrored from www.jagex.com/?news=1&page=1&genre=puzzle&list=0 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:55:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<script type="text/javascript">__utmStart = new Date().getTime()</script>
+ <title>Jagex Games Studio - Free Online Browser Games</title>
+ <meta name="keywords" content="RuneScape, Arcanists, Kickabout League, Armies of Gielinor, Zombie Dawn, Miner Disturbance, Orb Defence, Steel Sentinels, MMORPG, free online games, free browser games, java games, multiplayer, flash games, play free online browser games, world's most popular game, uk developer of the year 2009" />
+ <meta name="description" content="Play free online games at Jagex.com. A host of genres including RPG, tower defence, action, sports, strategy and many more, all playable through your browser." />
+ 
+ 
+ <link rel="icon" type="image/vnd.microsoft.icon" href="img/favicon.ico" />
+ <link rel="SHORTCUT ICON" href="img/favicon.ico" />
+ <link rel="stylesheet" type="text/css" href="css/jgs/global-8.css" />
+ 
+ 
+ 
+ <link rel="image_src" href="img/jgs/global/SB_Logo.jpg"/>
+ <script type="text/javascript" src="js/jquery/jquery_1_4_2.js"></script>
+ <script type="text/javascript" src="js/jquery/jquery_fanTabulous_0_1.js"></script>
+ <link rel="stylesheet" type="text/css" href="css/sifr/sifr_3_436-0.css" media="all" />
+ <script type="text/javascript" src="js/sifr/sifr_core_3_436.js"></script>
+ 
+  <script type="text/javascript" src="js/jgs/sifrcfcd.js?0"></script>
+ 
+ 
+
+
+
+ 
+<script type="text/javascript" src="js/analytics-1.js"></script>
+<script type="text/javascript">$(function(){__utm({label: "Homepage"});});</script>
+
+<link rel="stylesheet" type="text/css" href="css/jgs/index-12.css" />
+<link rel="stylesheet" type="text/css" href="css/jgs/homepage-6.css" />
+<link rel="alternate" type="application/rss+xml" title="Jagex Games Studio - Game News" href="http://services.funorb.com/m=news/latest_news.rss" />
+<link rel="alternate" type="application/rss+xml" title="Jagex Games Studio - MMO News" href="../services.runescape.com/m%3dnews/latest_news.rss" />
+<script type="text/javascript" src="js/swfobject/swfobject_2_1.js"></script>
+<script type="text/javascript" src="js/jgs/index-4.js"></script>
+<script type="text/javascript">//<![CDATA[
+
+ 
+$(function(){
+
+
+  swfobject.embedSWF(
+   "img/jgs/index/banner/rotator/rotator.swf",
+   "bannerFlash",
+   "1000",
+   "440",
+   "8.0.0",
+   null,
+   {
+    bannersPath: "http://www.jagex.com/",
+    bannersVersion: 0
+   },
+   {
+    wmode: "opaque",
+    allowScriptAccess: "always"
+   }
+  );
+  $("#news").fanTabulous();
+  $("#gameslistBody a.play").css({textDecoration: 'none'});/* Chrome fix */
+ })
+
+
+ function bannerClick(ev){
+  try{pageTracker._trackPageview('/banner/'+ev+'/')}catch(x){}; try{_pageTracker._trackPageview('/banner/'+ev+'/')}catch(x){}
+
+
+ };
+
+ 
+ var tab=0;
+ var filter=2;
+ var page=1;
+  var nPages=0;
+
+  
+  
+  var iAllGames=0;
+  
+  var iTopGames=1;
+
+  
+  var iGenreId=0;
+  var iGenreName=1;
+
+ 
+ var iGenreIndex=6;
+ var iNameIndex=2;
+ var iDirIndex=1;
+ var iPlayURLIndex=3;
+ var iIphoneIndex=4;
+ var iJavaIndex=5;
+
+ 
+ 
+ var iTopGamesTab=0;
+ 
+ var iAllGamesTab=1;
+ 
+ var iIphoneGamesTab=2;
+
+ 
+ var game_per_page_list = [8,8,4];
+
+ 
+ 
+
+function genreColour(strGenre){
+ switch (strGenre){
+  case 'arcade':
+   return 'orange';
+  case 'platform':
+   return 'yellow';
+  case 'action':
+   return 'yellow';
+  case 'puzzle':
+   return 'blue';
+  case 'racer':
+   return 'cyan';
+  case 'shooter':
+   return 'magenta';
+  case 'sport':
+   return 'green';
+  case 'strategy':
+   return 'cyan';
+  case 'word':
+   return 'yellow';
+  case 'mmo':
+   return 'red';
+  case 'other':
+   return 'orange';
+  default:
+   return 'black';
+ }
+}
+
+
+
+ 
+ var genres = [[0,'all'],[1,'action'],[2,'puzzle'],[3,'shooter'],[4,'sport'],[5,'strategy'],[6,'mmo']];
+
+
+
+ 
+ var top_games=[[0,'runescape','RuneScape','../www.runescape.com/index.html',false,true,[6]],[1,'waroflegends','War Of Legends','http://www.waroflegends.com/',false,true,[6]],[2,'tombracer','Tomb Racer','http://games.jagex.com/g=tombracer/',false,true,[1]],[3,'arcanistsmulti','Arcanists','http://www.arcanists.com/',false,true,[5]],[4,'armiesofgielinor','Armies of Gielinor','http://games.jagex.com/g=armiesofgielinor/',false,true,[5]],[5,'kickabout','Kickabout League','http://kickaboutleague.jagex.com/',false,true,[4]],[6,'steelsentinels','Steel Sentinels','http://games.jagex.com/g=steelsentinels/',false,true,[5]],[7,'hostilespawn_vengeance','Hostile Spawn','http://games.jagex.com/g=hostilespawn_vengeance/',false,true,[3]]]
+
+
+
+
+ 
+ var games=[[0,'aceofskies','Ace of Skies','http://games.jagex.com/g=aceofskies/',false,true,[1]],[1,'arcanistsmulti','Arcanists','http://www.arcanists.com/',false,true,[5]],[2,'armiesofgielinor','Armies of Gielinor','http://games.jagex.com/g=armiesofgielinor/',false,true,[5]],[3,'bachelorfridge','Bachelor Fridge','http://games.jagex.com/g=bachelorfridge/',false,true,[5]],[4,'bouncedown','Bouncedown','http://games.jagex.com/g=bouncedown/',true,true,[1]],[5,'brickabrac','Brick-À-Brac','http://games.jagex.com/g=brickabrac/',false,true,[1]],[6,'chess','Chess','http://games.jagex.com/g=chess/',false,true,[5]],[7,'crazycrystals','Crazy Crystals','http://games.jagex.com/g=crazycrystals/',false,true,[2]],[8,'dekobloko','Deko Bloko','http://games.jagex.com/g=dekobloko/',false,true,[2]],[9,'drphlogistonsavestheearth','Dr P. Saves the Earth','http://games.jagex.com/g=drphlogistonsavestheearth/',false,true,[3]],[10,'dungeonassault','Dungeon Assault','http://games.jagex.com/g=dungeonassault/',false,true,[5]],[11,'escapevector','Escape Vector','http://games.jagex.com/g=escapevector/',false,true,[1]],[12,'fleacircus','Flea Circus','http://games.jagex.com/g=fleacircus/',false,true,[2]],[13,'geoblox','Geoblox','http://games.jagex.com/g=geoblox/',false,true,[2]],[14,'holdtheline','Hold the Line','http://games.jagex.com/g=holdtheline/',false,true,[4]],[15,'hostilespawn_vengeance','Hostile Spawn','http://games.jagex.com/g=hostilespawn_vengeance/',false,true,[3]],[16,'kickabout','Kickabout League','http://kickaboutleague.jagex.com/',false,true,[4]],[17,'lexicominos','Lexicominos','http://games.jagex.com/g=lexicominos/',false,true,[2]],[18,'minerdisturbance','Miner Disturbance','http://games.jagex.com/g=minerdisturbance/',true,true,[1]],[19,'monkeypuzzle2','Monkey Puzzle 2','http://games.jagex.com/g=monkeypuzzle2/',false,true,[2]],[20,'orbdefence','Orb Defence','http://games.jagex.com/g=orbdefence/',false,true,[5]],[21,'pixelate','Pixelate','http://games.jagex.com/g=pixelate/',false,true,[2]],[22,'pool','Pool','http://games.jagex.com/g=pool/',false,true,[4]],[23,'runescape','RuneScape','../www.runescape.com/index.html',false,true,[6]],[24,'shatteredplans','Shattered Plans','http://games.jagex.com/g=shatteredplans/',false,true,[5]],[25,'solknight','Sol-Knight','http://games.jagex.com/g=solknight/',false,true,[3]],[26,'starcannon','StarCannon','http://games.jagex.com/g=starcannon/',true,true,[3]],[27,'steelsentinels','Steel Sentinels','http://games.jagex.com/g=steelsentinels/',false,true,[5]],[28,'stellarshard','Stellar Shard','http://games.jagex.com/g=stellarshard/',false,true,[3]],[29,'terraphoenix','TerraPhoenix','http://games.jagex.com/g=terraphoenix/',false,true,[5]],[30,'tetralink','TetraLink','http://games.jagex.com/g=tetralink/',false,true,[5]],[31,'trackcontroller','The Track Controller','http://games.jagex.com/g=trackcontroller/',false,true,[2]],[32,'36cardtrick','Thirty-Six Card Trick','http://games.jagex.com/g=36cardtrick/',false,true,[2]],[33,'tombracer','Tomb Racer','http://games.jagex.com/g=tombracer/',false,true,[1]],[34,'torchallenge','Tor Challenge','http://games.jagex.com/g=torchallenge/',false,true,[1]],[35,'torquing','Torquing!','http://games.jagex.com/g=torquing/',false,true,[1]],[36,'transmogrify','Transmogrify','http://games.jagex.com/g=transmogrify/',false,true,[2]],[37,'vertigo2','Vertigo 2','http://games.jagex.com/g=vertigo2/',false,true,[1]],[38,'virogrid','Virogrid','http://games.jagex.com/g=virogrid/',false,true,[5]],[39,'waroflegends','War Of Legends','http://www.waroflegends.com/',false,true,[6]],[40,'wizardrun','Wizard Run','http://games.jagex.com/g=wizardrun/',false,true,[1]],[41,'zombiedawn','Zombie Dawn','http://games.jagex.com/g=zombiedawn/',false,true,[5]],[42,'zombiedawnmulti','Zombie Dawn Multi','http://games.jagex.com/g=zombiedawnmulti/',false,true,[5]]]
+
+
+//]]></script>
+</head>
+<body class="BgBody" >
+<a name="Top"></a>
+<div class="BgContent"><div class="BgHead"><div class="BgFoot">
+
+<div id="Header">
+<div id="Nav">
+<h1><a id="NavLogo" href="index.html"><img src="img/jgs/global/Nav_logo.png" alt="  Jagex Games Studio " /></a></h1>
+<ul id="Menu">
+<li id="Home"><a class="tl" href="index.html"><img src="img/jgs/global/Home.png" alt="home" /></a></li>
+<li id="Account"><a class="tl" href="account_management.html"><img src="img/jgs/global/Account.png" alt="account" /><!--[if gt IE 6]><!--></a><!--<![endif]--><div>
+<table>
+<tr class="First"><td><a href="account_management.html">Manage Account</a></td></tr>
+<tr class="Last"><td><a href="https://secure.jagex.com/m=create/index.ws">Create Free Account</a></td></tr>
+</table>
+</div>
+<!--[if lte IE 6]></a><![endif]-->
+</li>
+<li id="Community"><a class="tl" href="javascript:"><img src="img/jgs/global/Community.png" alt="community" /><!--[if gt IE 6]><!--></a><!--<![endif]--><div>
+<table>
+<tr class="First"><td><a href="http://services.funorb.com/m=forum_fo/forums.ws">FunOrb Forums</a></td></tr>
+<tr><td><a href="../services.runescape.com/m%3dforum/forums.html">RuneScape Forums</a></td></tr>
+<tr><td><a href="http://services.jagex.com/m=hiscore_fo/">Hiscores</a></td></tr>
+<tr class="Last"><td><a href="http://services.jagex.com/m=achievements/">Achievements</a></td></tr>
+</table>
+</div>
+<!--[if lte IE 6]></a><![endif]-->
+</li>
+<li id="Help"><a class="tl" href="javascript:"><img src="img/jgs/global/Help.png" alt="help" /><!--[if gt IE 6]><!--></a><!--<![endif]--><div>
+<table>
+<tr class="First"><td><a href="kbase/guid/Customer_Support.html">Customer Support</a></td></tr>
+<tr><td><a href="loginapplet/loginappletb4b5.html?mod=accountappeal&amp;dest=passwordchoice.ws">Password Recovery</a></td></tr>
+<tr><td><a href="loginapplet/loginappletef7e.html?mod=accountappeal&amp;dest=lockchoice.ws">Locked Account Recovery</a></td></tr>
+<tr><td><a href="https://secure.jagex.com/m=weblogin/loginform.ws?mod=www&amp;ssl=0&amp;expired=0&amp;dest=bugtracker.ws">Submit a Bug Report</a></td></tr>
+<tr class="Last"><td><a href="https://secure.jagex.com/m=offence-appeal/index.ws">Appeal Bans and Mutes</a></td></tr>
+</table>
+</div>
+<!--[if lte IE 6]></a><![endif]-->
+</li>
+</ul>
+</div>
+
+<div id="Login">
+<h3>Golden Joystick Award Winner</h3>
+<p>
+Jagex Games Studio
+<br/>
+<b>UK Developer of the Year 2009</b>
+</p>
+<p>
+<i>Thanks to all of our players for voting!</i>
+</p>
+</div>
+</div>
+
+
+<div id="Banner">
+<div id="bannerFlash">
+<h2>Tomb Racer</h2>
+<a id="bannerPlay" class="HoverImg" href="http://games.jagex.com/g=tombracer/play.ws"><img src="img/jgs/index/banner/tombracer/play.jpg" alt="Play Tomb Racer Now!" /></a>
+</div></div>
+
+
+<div id="Content">
+
+
+
+<div id="Section">
+<div id="SectionHead"></div>
+<div id="SectionBody">
+
+
+<div id="games">
+<a id="gameslistTab" class="Tab TabLeft  TabSelected" href="index2e65.html?list=0&amp;page=1&amp;news=1"><span>top games</span></a>
+<a id="allgamesTab" class="Tab " href="index7cdc.html?list=1&amp;page=1&amp;news=1"><span>all games</span></a>
+<a id="iphonegamesTab" class="Tab " href="index501b.html?list=2&amp;page=1&amp;news=1"><span>iPhone games</span></a>
+<div id="gamesContent" class="Box DarkGreyTwoThirds gameList" style="">
+<div class="BoxHead"></div>
+<div class="BoxBody">
+<div id="genreFilter" style="display: none;">filter by genre:
+
+<a href="index027e.html?list=1&amp;page=1&amp;news=1&amp;genre=" class="Button Button14  blackback DarkGrey" style="vertical-align: middle;" id="genreall" title="all"><span><span><span><b>all</b></span></span></span></a>
+
+
+<a href="indexa1f8.html?list=0&amp;page=1&amp;news=1&amp;genre=action" class="Button Button14  yellowback DarkGrey" style="vertical-align: middle;" id="genreaction" title="action"><span><span><span><b>action</b></span></span></span></a>
+
+
+<a href="index6ba9.html?list=0&amp;page=1&amp;news=1&amp;genre=puzzle" class="Button Button14Selected  blueback DarkGrey" style="vertical-align: middle;" id="genrepuzzle" title="puzzle"><span><span><span><b>puzzle</b></span></span></span></a>
+
+
+<a href="indexc0a6.html?list=0&amp;page=1&amp;news=1&amp;genre=shooter" class="Button Button14  magentaback DarkGrey" style="vertical-align: middle;" id="genreshooter" title="shooter"><span><span><span><b>shooter</b></span></span></span></a>
+
+
+<a href="index1c32.html?list=0&amp;page=1&amp;news=1&amp;genre=sport" class="Button Button14  greenback DarkGrey" style="vertical-align: middle;" id="genresport" title="sport"><span><span><span><b>sport</b></span></span></span></a>
+
+
+<a href="index5b9d.html?list=0&amp;page=1&amp;news=1&amp;genre=strategy" class="Button Button14  cyanback DarkGrey" style="vertical-align: middle;" id="genrestrategy" title="strategy"><span><span><span><b>strategy</b></span></span></span></a>
+
+
+<a href="index9904.html?list=0&amp;page=1&amp;news=1&amp;genre=mmo" class="Button Button14  redback DarkGrey" style="vertical-align: middle;" id="genremmo" title="mmo"><span><span><span><b>mmo</b></span></span></span></a>
+
+</div>
+<div id="iphoneintro" style="display: none;">
+<h2>Miner Disturbance: now out on iPhone</h2>
+<div class="p1">
+<p><strong>Dodge spikes, spiders and other sinister critters in Miner Disturbance, our puzzle platformer with 25 single-player levels and a competitive Volcano mode.</strong></p>
+</div>
+<div class="p2">
+<p>As you explore the dingy depths of 25 mines, you'll have to find your way around traps, beasties, lava, poisonous gas and other hazards. But the rewards are great: with hidden artefacts to excavate and varied Achievements to earn, Miner Disturbance is major fun that will keep you coming back for your place in the global highscores.</p>
+</div>
+<a href="http://itunes.apple.com/us/app/miner-disturbance/id374275550?mt=8">Available on the<br/><span>App Store</span></a>
+</div>
+<div class="game " id="game1">
+<div class="gameTitle">
+<h4>1. RuneScape</h4>
+
+<a href="indexcd3b.html?list=1&amp;genre=mmo&amp;page=1" class="Button Button14  redback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="mmo"><span><span><span><b>mmo</b></span></span></span></a>
+
+</div>
+<a class="play" href="../www.runescape.com/index.html">
+<img src="img/jgs/index/games/runescapec81e.jpg?2" alt="1. RuneScape" title="1. RuneScape" />
+<span class="gameInfo">?</span>
+</a>
+<a href="../www.runescape.com/index.html" class="gamePlay">play now</a>
+</div>
+
+<div class="game " id="game2">
+<div class="gameTitle">
+<h4>2. War Of Legends</h4>
+
+<a href="indexcd3b.html?list=1&amp;genre=mmo&amp;page=1" class="Button Button14  redback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="mmo"><span><span><span><b>mmo</b></span></span></span></a>
+
+</div>
+<a class="play" href="http://www.waroflegends.com/">
+<img src="img/jgs/index/games/waroflegendsc81e.jpg?2" alt="2. War Of Legends" title="2. War Of Legends" />
+<span class="gameInfo">?</span>
+</a>
+<a href="http://www.waroflegends.com/" class="gamePlay">play now</a>
+</div>
+
+<div class="game " id="game3">
+<div class="gameTitle">
+<h4>3. Tomb Racer</h4>
+
+<a href="index46e7.html?list=1&amp;genre=action&amp;page=1" class="Button Button14  yellowback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="action"><span><span><span><b>action</b></span></span></span></a>
+
+</div>
+<a class="play" href="http://games.jagex.com/g=tombracer/info.ws">
+<img src="img/jgs/index/games/tombracerc81e.jpg?2" alt="3. Tomb Racer" title="3. Tomb Racer" />
+<span class="gameInfo">?</span>
+</a>
+<a href="http://games.jagex.com/g=tombracer/play.ws" class="gamePlay">play now</a>
+</div>
+
+<div class="game " id="game4">
+<div class="gameTitle">
+<h4>4. Arcanists</h4>
+
+<a href="indexff53.html?list=1&amp;genre=strategy&amp;page=1" class="Button Button14  cyanback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="strategy"><span><span><span><b>strategy</b></span></span></span></a>
+
+</div>
+<a class="play" href="http://www.arcanists.com/">
+<img src="img/jgs/index/games/arcanistsmultic81e.jpg?2" alt="4. Arcanists" title="4. Arcanists" />
+<span class="gameInfo">?</span>
+</a>
+<a href="http://www.arcanists.com/play.ws" class="gamePlay">play now</a>
+</div>
+
+<div class="game " id="game5">
+<div class="gameTitle">
+<h4>5. Armies of Gielinor</h4>
+
+<a href="indexff53.html?list=1&amp;genre=strategy&amp;page=1" class="Button Button14  cyanback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="strategy"><span><span><span><b>strategy</b></span></span></span></a>
+
+</div>
+<a class="play" href="http://games.jagex.com/g=armiesofgielinor/info.ws">
+<img src="img/jgs/index/games/armiesofgielinorc81e.jpg?2" alt="5. Armies of Gielinor" title="5. Armies of Gielinor" />
+<span class="gameInfo">?</span>
+</a>
+<a href="http://games.jagex.com/g=armiesofgielinor/play.ws" class="gamePlay">play now</a>
+</div>
+
+<div class="game " id="game6">
+<div class="gameTitle">
+<h4>6. Kickabout League</h4>
+
+<a href="index8459.html?list=1&amp;genre=sport&amp;page=1" class="Button Button14  greenback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="sport"><span><span><span><b>sport</b></span></span></span></a>
+
+</div>
+<a class="play" href="http://kickaboutleague.jagex.com/">
+<img src="img/jgs/index/games/kickaboutc81e.jpg?2" alt="6. Kickabout League" title="6. Kickabout League" />
+<span class="gameInfo">?</span>
+</a>
+<a href="http://kickaboutleague.jagex.com/play.ws" class="gamePlay">play now</a>
+</div>
+
+<div class="game " id="game7">
+<div class="gameTitle">
+<h4>7. Steel Sentinels</h4>
+
+<a href="indexff53.html?list=1&amp;genre=strategy&amp;page=1" class="Button Button14  cyanback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="strategy"><span><span><span><b>strategy</b></span></span></span></a>
+
+</div>
+<a class="play" href="http://games.jagex.com/g=steelsentinels/info.ws">
+<img src="img/jgs/index/games/steelsentinelsc81e.jpg?2" alt="7. Steel Sentinels" title="7. Steel Sentinels" />
+<span class="gameInfo">?</span>
+</a>
+<a href="http://games.jagex.com/g=steelsentinels/play.ws" class="gamePlay">play now</a>
+</div>
+
+<div class="game " id="game8">
+<div class="gameTitle">
+<h4>8. Hostile Spawn</h4>
+
+<a href="index7839.html?list=1&amp;genre=shooter&amp;page=1" class="Button Button14  magentaback LightGrey" style="vertical-align: middle;float: right;	position: relative;	display: inline;	margin: 7px 7px 0 0;" title="shooter"><span><span><span><b>shooter</b></span></span></span></a>
+
+</div>
+<a class="play" href="http://games.jagex.com/g=hostilespawn_vengeance/info.ws">
+<img src="img/jgs/index/games/hostilespawn_vengeancec81e.jpg?2" alt="8. Hostile Spawn" title="8. Hostile Spawn" />
+<span class="gameInfo">?</span>
+</a>
+<a href="http://games.jagex.com/g=hostilespawn_vengeance/play.ws" class="gamePlay">play now</a>
+</div>
+
+<div id='PageControl' class="PageControl" style="display: none;">
+<div class="leftButtons">
+<a class="PageControl first" title="first"  style="display: none;" href="index6ba9.html?list=0&amp;news=1&amp;genre=puzzle&amp;page=1"><img class="first" src="img/jgs/global/buttons/PageControlButtons.png" alt="first"/></a>
+<a class="PageControl previous" title="previous"  style="display: none;" href="index2f5b.html?list=0&amp;news=1&amp;genre=puzzle&amp;page=0"><img class="previous" src="img/jgs/global/buttons/PageControlButtons.png" alt="prev"/></a>
+</div>
+<div class="rightButtons">
+<a class="PageControl next" title="next"  style="display: none;" href="indexd3bf.html?list=0&amp;news=1&amp;genre=puzzle&amp;page=2"><img class="next" src="img/jgs/global/buttons/PageControlButtons.png" alt="next"/></a>
+<a class="PageControl last" title="last"  style="display: none;" href="index6ba9.html?list=0&amp;news=1&amp;genre=puzzle&amp;page=1"><img class="last" src="img/jgs/global/buttons/PageControlButtons.png" alt="last"/></a>
+</div>
+<form name="pageform" id="pageform" action="http://www.jagex.com/?list=0&amp;news=1&amp;genre=puzzle" method="post" class="dispinline" onsubmit="return validatePageNum();">
+<input type="hidden" id="numpages" class="numpages" value="1"/><input type="hidden" class="currentpage" id="currentpage" value="1"/>
+Page <input type="text" class="textinput changepage" id="page" name="page" size="2" maxlength="4" value="1"/>&nbsp;of <span class="numpages">1</span>
+<input type="submit" class="submit" value="Submit"/>
+</form>
+</div>
+<br class="clear" />
+</div>
+<div class="BoxFoot"></div>
+</div>
+</div>
+<div id="advert">
+<iframe src="http://services.jagex.com/m=advert/banner.ws?size=304" allowtransparency="true" width="344" height="252" scrolling="no" frameborder="0"></iframe>
+</div>
+<div id="news">
+<a id="gameTab" class="Tab TabLeft" href="index0f79.html?news=0&amp;page=1&amp;genre=puzzle&amp;list=0"><span>Jagex News</span></a>
+<a id="mmoTab" class="Tab TabSelected" href="index6ba9.html?news=1&amp;page=1&amp;genre=puzzle&amp;list=0"><span>RuneScape News</span></a>
+<div id="gameContent" class="Box DarkGreyThird TabContent" style="">
+<div class="BoxHead"></div>
+<div class="BoxBody">
+<a class="rss" href="http://services.funorb.com/m=news/latest_news.rss"><span>Subscribe to RSS</span> <img src="img/jgs/index/rss.png" alt="RSS logo" /></a>
+<div class="newsItems">
+
+<div class="newsPost">
+<h4>The Summer Games have arrived!</h4>
+<p>
+<a href="http://services.funorb.com/m=news/newsitem.ws?id=3232&amp;allcat=true"><img src="img/jgs/index/news_icons/game_website.png" alt="" /></a>
+<span>15-Jul-2010</span><br/>
+After keeping you in suspense for so long, we decided that it was about time we told you more about our Summer Games event!
+<a href="http://services.funorb.com/m=news/newsitem.ws?id=3232&amp;allcat=true">Read&nbsp;more...</a>
+</p>
+</div>
+
+
+<div class="newsPost">
+<h4>Tom Bracer's Secret Diary</h4>
+<p>
+<a href="http://services.funorb.com/m=news/newsitem.ws?id=3226&amp;allcat=true"><img src="img/jgs/index/news_icons/game_website.png" alt="" /></a>
+<span>15-Jul-2010</span><br/>
+(Okay, not altogether secret - it's a Tomb Racer dev diary!)
+<a href="http://services.funorb.com/m=news/newsitem.ws?id=3226&amp;allcat=true">Read&nbsp;more...</a>
+</p>
+</div>
+
+
+<div class="newsPost">
+<h4>Stellar Dawn: Coming Soon</h4>
+<p>
+<a href="http://services.jagex.com/m=news/newsitem.ws?id=3225&amp;amp;allcat=true"><img src="img/jgs/index/news_icons/game_game_update.png" alt="" /></a>
+<span>14-Jul-2010</span><br/>
+Today is an exciting day here at Jagex Games Studio: we are proud to announce the impending release of Stellar Dawn, our latest MMORPG.
+<a href="http://services.jagex.com/m=news/newsitem.ws?id=3225&amp;amp;allcat=true">Read&nbsp;more...</a>
+</p>
+</div>
+
+</div>
+<a class="archive" href="http://services.funorb.com/m=news/list.ws">Full News Archive</a>
+<br class="clear"/>
+</div>
+<div class="BoxFoot"></div>
+</div>
+<div id="mmoContent" class="Box DarkGreyThird TabContent TabContentSelected" style="">
+<div class="BoxHead"></div>
+<div class="BoxBody">
+<a class="rss" href="../services.runescape.com/m%3dnews/latest_news.rss"><span>Subscribe to RSS</span> <img src="img/jgs/index/rss.png" alt="RSS logo" /></a>
+<div class="newsItems">
+
+<div class="newsPost">
+<h4>Love Story</h4>
+<p>
+<a href="../services.runescape.com/m%3dnews/newsitemc007.html?id=3178"><img src="img/jgs/index/news_icons/mmo_game_update.png" alt="" /></a>
+<span>05-Jul-2010</span><br/>
+A shadow is emerging from the Wise Old Man’s murky past. New Construction and Magic abilities could be yours if you can handle combat, puzzles, sarcasm, a love-sick old man and a damsel in distress who just won’t stop crying.
+<a href="../services.runescape.com/m%3dnews/newsitemc007.html?id=3178">Read&nbsp;more...</a>
+</p>
+</div>
+
+
+<div class="newsPost">
+<h4>Lookey-Likey Costume Competition Winners</h4>
+<p>
+<a href="../services.runescape.com/m%3dnews/newsitembc1f.html?id=3203"><img src="img/jgs/index/news_icons/mmo_customer_support.png" alt="" /></a>
+<span>07-Jul-2010</span><br/>
+The weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we’ve decided on our winners... 
+<a href="../services.runescape.com/m%3dnews/newsitembc1f.html?id=3203">Read&nbsp;more...</a>
+</p>
+</div>
+
+</div>
+<a class="archive" href="../services.runescape.com/m%3dnews/list.html">Full News Archive</a>
+<br class="clear"/>
+</div>
+<div class="BoxFoot"></div>
+</div>
+</div>
+<br class="clear" />
+</div>
+<div id="SectionFoot"></div>
+</div>
+
+
+
+</div>
+
+
+<div id="Footer">
+
+<div id="FooterLegal">
+<a id="Jagex" href="index.html"><img src="img/jgs/global/Jagex.png" alt="  Jagex Games Studio " /></a>
+<p id="Copy">
+Copyright &copy; 2009-2010 Jagex Ltd. Jagex is a registered trademark of Jagex Ltd. in the United Kingdom and a trademark used in other countries.
+</p>
+<p>
+By using our service you are agreeing to our <a href="terms/terms.html">Terms &amp; Conditions</a> and <a href="privacy/privacy.html">Privacy Policy</a>.
+</p>
+</div>
+<div id="FooterCorp">
+<a href="careers.html" id="Hiring">
+we are hiring
+</a>
+<a href="corporate/index.html" id="Corporate">
+corporate site
+</a>
+</div>
+</div>
+
+
+</div></div></div>
+
+ 
+  
+
+
+ <script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-17");
+_pageTracker._setDomainName(".jagex.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-1");
+pageTracker._setDomainName(".jagex.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+ 
+ </body>
+ 
+<!-- Mirrored from www.jagex.com/?news=1&page=1&genre=puzzle&list=0 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:55:08 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>
+

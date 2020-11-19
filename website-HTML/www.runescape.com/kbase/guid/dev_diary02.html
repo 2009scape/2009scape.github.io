@@ -1,0 +1,471 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/dev_diary02 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:23 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico">
+<link rel="SHORTCUT ICON" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="MMORPG, free RPG games online, online multiplayer, role-playing, massively multiplayer games, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Play RuneScape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
+<meta name="title" content="RuneScape - MMORPG - The No.1 Free Online Multiplayer Game">
+<title>RuneScape - MMORPG - The No.1 Free Online Multiplayer Game</title>
+<style type="text/css">/*\*/@import url(../../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../css/kbase-6.css);/**/</style>
+<script type="text/javascript">
+var link_no=0;
+function open_window(url, width, height) {
+ var settings="toolbar=0,scrollbars=0";
+ if(width && width!=0) settings+=",width=" + width;
+ if(height && height!=0) settings+=",height=" + height;
+ window.open(url, "popuplink" + link_no++, settings);
+}
+var subcats=new Array();
+function add_subcat(parent, id, name, selected) {
+ if(!subcats[parent]) subcats[parent]=new Array();
+ var new_option=document.createElement("OPTION");
+ new_option.name=name;
+ new_option.innerHTML=name;
+ new_option.value=id;
+ if(selected) { new_option.selected='selected'; }
+ subcats[parent][subcats[parent].length]=new_option;
+ return new_option;
+}
+function update_cats(suffix) {
+ if(!suffix) suffix="";
+ var top_level_select=document.getElementById("search_cat_select" + suffix);
+ var subcat_select=document.getElementById("search_subcat_select" + suffix);
+ if(!top_level_select || !subcat_select) return;
+ if(subcat_select.options)
+  for(old in subcat_select.options) subcat_select.options[1]=null;
+  
+ to_show=top_level_select.value;
+ if(to_show>-1 && subcats[to_show]) {
+  for(new_opt=0; new_opt<subcats[to_show].length; new_opt++) {
+   var oldopt=subcats[to_show][new_opt];
+   var newopt=document.createElement("OPTION");
+   newopt.name=oldopt.name;
+   newopt.innerHTML=oldopt.innerHTML;
+   newopt.value=oldopt.value;
+   subcat_select.appendChild(newopt);
+  }
+ }
+}
+window.onload=function() {
+ update_cats();
+ update_cats('_footer');
+}
+</script>
+<script type="text/javascript">
+new_subcat=add_subcat(4, 5, "Postbag from the Hedge", -1 == 5);new_subcat=add_subcat(4, 6, "Players' Gallery", -1 == 6);new_subcat=add_subcat(4, 19, "God letters", -1 == 19);new_subcat=add_subcat(775, 892, "How do I get started?", -1 == 892);new_subcat=add_subcat(775, 798, "Controls", -1 == 798);new_subcat=add_subcat(775, 795, "Combat", -1 == 795);new_subcat=add_subcat(775, 776, "Skills", -1 == 776);new_subcat=add_subcat(775, 7, "Quests", -1 == 7);new_subcat=add_subcat(775, 1, "Achievement Diary", -1 == 1);new_subcat=add_subcat(775, 10, "Activities", -1 == 10);new_subcat=add_subcat(775, 38, "Distractions and Diversions", -1 == 38);new_subcat=add_subcat(775, 831, "Miscellaneous Guides", -1 == 831);new_subcat=add_subcat(775, 881, "Area Guides", -1 == 881);new_subcat=add_subcat(20, 32, "A New Look RuneScape: Part 1", -1 == 32);new_subcat=add_subcat(20, 21, "Graphics Team - NPC Improvement Project", -1 == 21);new_subcat=add_subcat(9, 127, "Billing", -1 == 127);new_subcat=add_subcat(9, 126, "Technical", -1 == 126);new_subcat=add_subcat(9, 827, "Safety & Security Guidelines", -1 == 827);new_subcat=add_subcat(9, 872, "Other", -1 == 872);
+</script>
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHeadAdvert">
+<div id="headAdvert">
+<iframe name="Advert" src="../../../services.runescape.com/m%3dadvert/banner5052.html?size=730" allowtransparency="true" width="766" height="96" scrolling="no" frameborder="0"></iframe>
+<script type="text/javascript">
+  setTimeout(function() {
+  var url = "http" +
+  (/https:/.test(document.location.href) ? "s" : "") +
+  "://beacon.scorecardresearch.com/scripts/beacon.dll" +
+  "?c1=8&c2=6035824&c3=1271511541440201100" +
+  escape(document.location.href) +
+  "&c8=" + escape(document.title) +
+  "&c9=" + escape(document.referrer) +
+  "&c10=" + escape(screen.width+'x'+screen.height) +
+  "&rn=" + (new Date()).getTime();
+  var i = new Image();
+  i.src = url;
+  }, 1);
+  </script>
+<noscript>
+<img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=8&amp;c2=6035824&amp;c3=1271511541440201100&amp;x=NOJAVASCRIPT" alt="" />
+</noscript>
+</div>
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../../../services.runescape.com/m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../services.runescape.com/m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../title.html"><img alt="English" title="English" src="../../img/main/layout/en.gif" /></a>
+<a href="../../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../img/main/layout/de.gif" /></a>
+<a href="../../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../img/main/layout/fr.gif" /></a>
+<a href="../../l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../title.html">Home</a> &gt;
+<a href="dev_diary-2.html">Development Diaries</a> > Graphics Team - NPC Improvement Project
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+Graphics Team - NPC Improvement Project
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_1">
+<div class="article">
+<div class="topshadow">
+<div class="bottomborder">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleft">
+<div class="bottomright">
+<style type="text/css">
+
+  
+
+  .bigquote { font-size:medium; font-weight:bold; font-style:italic; text-align:left; } 
+  .mod { font-weight:bold; } 
+  .team { font-weight:bold; } 
+  .quote { font-style:italic; } 
+  .caption { font-size:85%; font-weight:bold; } 
+
+ </style>
+<div class="links"></div>
+<br><br>
+<div style="text-align: center">
+<div style="text-align: justify;color: #402706; margin: auto;">
+<p style="text-align: center;"><img src="../../img/varrock/devdiary/comic/comic02.gif" alt="comic strip"></p>
+<br>
+<p><h3 align="center"><b>Graphics Team - NPC Improvement Project</b></h3></p>
+<p>After the <a href="diary01.html">previous article</a> following the development of a single piece of content from conception to release, we're now delving deeper into each development team and what they do, based on some of the projects they're working on. Each team's diary will be built around them - for instance, this diary about the <span class="team">Graphics</span> team has a <i>lot</i> of images. This diary will be looking at the Non-Player Character (NPC) Improvement Project - the graphical updates that have been made to dragons, werewolves, spiders, etc. and are continuing to be made to other NPCs.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/comparisons.gif" style="display:block; margin: auto;" alt="old and new comparison"><br><span class="caption">Top row: the original models, before the improvements<br>Bottom row: the new and improved NPCs.</span></p>
+<br>
+<p align="center"><b>NPC improvements</b></p>
+<p>The project began when it was realised that we could push the RuneScape engine farther than we had first thought. <span class="quote">"Previously, we set a cap of five hundred polygons per model. Now, your basic human NPC still has that many, but we can use up to around 2,000-2,500 for the larger models"</span>, says <span class="mod">Mod Damian</span>, one of the modellers working on the project. <span class="quote">"We were also limited a little by the animation tools, though now the <span class="team">Tools</span> team have produced more feature-filled tools, we've been able to increase polygon counts and create smoother animations."</span></p>
+<div style="float:left; width:30%; margin:15px; text-align: left;">
+<p class="bigquote">
+"Previously, we set a cap of 500 polygons per model. Now, we can use up to around 2,000-2,500 for the larger models."
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Damian</span><br><span class="team">Graphics</span>
+</p>
+</div>
+<p>Being a web-based Java game, there are limits to how far we could go with the graphics yet still keep the game running smoothly, but with these new tools and the ability to create models with higher polygon counts, how could we resist updating them? So, the next thing to be determined was just which NPCs would receive the treatment.</p>
+<p><span class="team">Graphics</span>, <span class="team">RuneScape Content</span> and <span class="team">QA</span> sat down and noted those NPCs that were the oldest, the most fought and the most prevalent throughout the game. Once the NPCs were decided upon, they were split up into themed batches, breaking the project into more manageable chunks, and also allowing us to release them on a regular basis. The batches so far have taken anywhere between two weeks and two months to complete, so for the sake of the progress bars, we shall show the duration of the skeleton NPC improvements only.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/skeletons.gif" style="display:block; margin: auto;" alt="skeleton types"><br><span class="caption">Left to right: skeletal miner from Haunted Mine; skeleton; Skeleton Champion; skeleton; and a skeletal gorilla from Ape Atoll.</span></p>
+<br>
+<p align="center"><b>Creature concepts</b><br>(Duration: 1.5 weeks)</p>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/timeline01.gif" style="display:block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>Before any graphical work is started, the NPCs in question are talked over by <span class="team">RuneScape Content</span> and <span class="team">Graphics</span> to see what scope there is for improvement. For example, with the update to the skeletons, there were lots of different-levelled NPCs, so we wanted them to have strong visual variation. There were also some skeleton personalities: <span class="mod">Mod Mark</span> says, <span class="quote">"The interesting part was when it came to the <a href="legends_quest_members.html">Legends' Quest</a> NPCs (San Tojalon, Irvig Senay and Ranalph Devere) who, when they were originally designed, we didn't have the ability to make them unique. We do now."</span> He continues, <span class="quote">"So after chatting with <span class="mod">Mod Tytn</span> (Legends' Quest developer), <span class="mod">Mod Damian</span> decided to go to town with them...and they look amazing. Although we could have waited until the quest rework, it's easier to do all the NPCs in one go because of the way we design them."</span></p>
+<p>Once any potential issues and opportunities have been considered, the makeover treatment begins with concept artwork drawn by <span class="mod">Mod GG</span>. The concepts come from his own ideas, taking into account any requests from <span class="team">RuneScape Content</span>, and from researching various other mediums (art, film, etc.). <span class="quote">"I've really enjoyed the project, especially when given complete freedom"</span>, he says.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/werewolf_progression.gif" style="display:block; margin: auto;" alt="Werewolf Agility Course instructor"><br><span class="caption">The new and improved Werewolf Agility Course instructor: initial sketch; coloured concept art; wireframe model; shaded model.</span></p>
+<br>
+<a name="skeleton"></a><p align="center"><b>We can rebuild them</b><br>(Duration: 2.5 weeks)</p>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/timeline02.gif" style="display:block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>Once the concept art has been sketched, coloured and approved, it moves onto the 3D artists for modelling. The concept art provides a vision for the 3D modellers – presently <span class="mod">Mod Damian</span> and <span class="mod">Mod Wayne</span> – to work towards. To create the 3D models, we exclusively use our own proprietary in-house 3D software, developed by our <span class="team">Tools</span> team, as opposed to off-the-shelf packages like Maya or 3ds Max, as it's tailor-made to create models and animations that work with the RuneScape engine.</p>
+<p>Models are created using a technique known as 'box modelling', where the model is built up by pulling out the edges or faces of primitive shapes (e.g. cubes, spheres and cylinders), which are then moved around and moulded to create the desired result. This modelling method can be done in a number of different ways depending on the modeller's preference. Generally, only half the model is constructed in this way - this half is mirrored to produce the whole model, which then has finer details added and is colour-shaded. Shading more-detailed models, as opposed to applying textures to less-detailed models, tends to produce a better-looking result.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/spinningskeletona.gif" style="display:block; margin: auto;" alt="spinning skeleton"><br><span class="caption">Click <a href="diary02a.html">here</a> to see an animated version of this image.</span></p>
+<br>
+<a name="goblins"></a><p align="center"><b>They live!</b><br>(Duration: 1.5 weeks)</p>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/timeline03.gif" style="display:block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>Once a model is ready to be animated, the first step is to choose the parts of it that will turn, twist or pivot (e.g. the joints - like shoulders, elbows and wrists) and where they should articulate from. Once these parts are chosen you end up with the 'skeleton structure', which can be manipulated to create poses for animations such as walking, attacking, defending and dying. Each animation is assigned, on average, 40-50 frames, and each of these frames has to be posed individually. Although this is not the fastest way of animating, it allows us greater control over the whole animation. Some special animations are allocated more frames - for instance, the Kalphite Queen's stage one death animation contains 300 frames.</p>
+<p>Our software is just one tool; we sometimes use lower tech methods for getting the right result. <span class="quote">"I sometimes act out the animations myself, to get a feel for them, and I have a mirror on my desk for facial expressions"</span>, says <span class="mod">Mod Judge</span>. <span class="quote">"I had to animate a character carrying some heavy planks, so walked around the office carrying one of the water cooler refills. The other animators laughed at me (laughs)."</span></p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/animolda.gif" style="display:inline; align:center; clear:both;" alt="animated gif of old goblin"><img src="../../img/varrock/devdiary/diary02/animnewa.gif" style="display:inline; align:center; clear:both;" alt="animated gif of new goblin"><br><span class="caption">Click <a href="diary02b.html">here</a> to see an animated version of this image.</span></p>
+<br>
+<p align="center"><b>Code 'em up</b><br>(Duration: 0.5 week)</p>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/timeline04.gif" style="display:block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>This project is very much a graphical one, but there is still some work to be done once the new NPCs are modelled and animated. <span class="mod">Mod Nancy</span> of <span class="team">RuneScape Content</span> has the job of replacing the old NPCs with the new ones. <span class="quote">"Most of the code for simple model updates already exists...my job is simply to check that the new models work with the old code"</span>, she says. More complex models sometimes require a code rewrite: <span class="quote">"The <a href="kalphite_lair_members.html">Kalphite Queen</a> jumps to mind as I had to rewrite her entire death/transformation code..."</span>, she continues, <span class="quote">"Seeing the old animations on the new model with her legs freaking out all over the place was quite amusing."</span> As with all content, it then gets thoroughly tested by <span class="team">QA</span>.</p>
+<br>
+<p align="center"><b>Zombies FTW</b></p>
+<div style="float:right; width:30%; margin:15px; text-align: left;">
+<p class="bigquote">
+"There are near to one hundred different variations of zombies in the game now!"
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Damian</span><br><span class="team">Graphics</span>
+</p>
+</div>
+<p><span class="mod">Mod Damian</span> sums up the project well: one of the main reasons why it's such a great project is that <span class="quote">"the improvements add a little bit more variety and flair to the game...especially the more individual monsters such as the <a href="agility_werewolf_agility_course.html">Werewolf Agility Course</a> instructor"</span>, not least because the team has been given generous deadlines in which to make things look as good as possible.</p>
+<p>Asked what their favourite group of NPCs has been to work on, <span class="team">Graphics</span> are almost unanimous on choosing the undead update. <span class="mod">Mod Damian</span> says, <span class="quote">"The zombies are my favourite. I love the genre, though, so I might be biased... There are near to one hundred different variations of zombies in the game now"</span>.</p>
+<br>
+<p align="center"><img src="../../img/varrock/devdiary/diary02/zombie_variation.gif" style="display:block; margin: auto;" alt="zombie types"><br><span class="caption">A shamble of zombies, including the Zombie Champion on the left.</span></p>
+<br>
+<p>In the end, we felt that such a good job had been done with the undead, what with there being so many varieties of them, that we decided they were worth showing off. <span class="mod">Mod Hobagoly</span> (Head of RuneScape Content) suggested that we should make a dungeon just for the undead, which is when <span class="mod">Mod Greg</span> was given the task to develop what became the <a href="tarn_s_lair_members.html">Lair of Tarn Razorlor</a>.</p>
+<p>We're sure you all have your favourites but, overall, we're very happy with the NPC updates. Making RuneScape look better is an ongoing process and we shall continue to update the older areas of the game. Also, as the updated <a href="varrock.html">Varrock</a> proves, it won't just be limited to NPCs... As <span class="mod">Mod Judge</span> says, <span class="quote">"It's an exciting time to be working on the <span class="team">Graphics</span> team, and being a part of making things look and act more realistically."</span></p>
+<p>(You can download some of the NPC concept artwork as wallpapers in the <a href="Downloads_and_Wallpapers.html">Downloads and Wallpapers</a> section of the website.)</p>
+</div>
+</div>
+<div class="backtotop"><a href="#top">Back to the top</a></div>
+<div class="clear"></div>
+<div class="clear"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="searchtop">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="topleft">
+<div class="topright">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div class="searchtext">
+<form method="get" action="http://www.runescape.com/kbase/search.ws">
+<table class="bottomsearch">
+<tr>
+<td class="searchtitles" width="60" style="text-align: right">
+Search for:
+</td>
+<td>
+<input class="textinput" name="search_query" id="search_query" size="29" maxlength="300" value="">
+</td>
+<td rowspan="3">
+<table>
+<tr>
+<td>
+<label class="bold">Criteria:</label>
+</td>
+<td></td>
+<td><label class="bold">Find:</label></td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="title_chk" value="1" checked="checked">
+Title
+</td>
+<td>
+<input class="widget" type="checkbox" name="keywords_chk" value="1" checked="checked">
+Keywords
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="1" checked="checked">
+All
+</td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="description_chk" value="1" checked="checked">
+Description
+</td>
+<td>
+<input class="widget" type="checkbox" name="body_chk" value="1" checked="checked">
+Body
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="0">
+Any
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="searchtitles">
+Category:
+</td>
+<td>
+<select name="category" id="search_cat_select_footer" onchange="update_cats('_footer')">
+<option value="null"> - ALL - </option>
+<option value="4">Player Submissions</option>
+<option value="775">Game Guide</option>
+<option value="20">Development Diaries</option>
+<option value="9">Customer Support</option>
+<option value="3">Lores and Histories</option>
+</select></td>
+<td></td>
+</tr>
+<tr>
+<td class="searchtitles">
+Subcategory:
+</td>
+<td>
+<div id="search_subcat_footer" style="display: none;">
+<select name="subcat" id="search_subcat_select_footer">
+<option value="null"> - ALL - </option>
+</select>
+</div>
+<script type="text/javascript">
+ document.getElementById("search_subcat_footer").style.display="inline";
+ update_cats('_footer');
+</script>
+</td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;font-size:11px;font-weight:bold; margin-bottom: 0px;">For help on searching, see our <a href="../searchtips.html">Search Tips</a> page.
+<input type="submit" name="submit" class="searchbutton" value="" alt="Search"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../terms/terms.html">Terms &amp; Conditions</a> and <a href="../../privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/dev_diary02 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

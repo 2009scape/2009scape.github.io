@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.rssboard.org/~d/styles/itemcontent.css"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1" version="2.0">
+	<channel>
+		<language>pt</language>
+		<title>Not&#237;cias Recentes - RuneScape</title>
+		<description>As not&#237;cias mais recentes sobre RuneScape, o MMORPG on-line para m&#250;ltiplos jogadores desenvolvido e publicado pela Jagex.</description>
+		<link>http://www.runescape.com/l=3</link>
+		<docs>http://www.rssboard.org/rss-specification</docs>
+		<generator>JagexRssFeedGenerator</generator>
+		<ttl>30</ttl>
+		<lastBuildDate>Fri, 16 Jul 2010 16:27:00 GMT</lastBuildDate>
+		<image>
+				<url>http://www.runescape.com/l=3/img/news/RSS/rss_logo.png</url>
+		</image>
+
+		<item>
+			<title>Hist&#243;ria de Amor</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=3/img/Large/love_story.jpg&quot; /&gt;&#10;				Uma sombra est&#225; surgindo do obscuro passado do S&#225;bio Anci&#227;o. Novas habilidades de Constru&#231;&#227;o e Magia podem ser suas se voc&#234; der conta de combates, enigmas, sarcasmo, um anci&#227;o de cora&#231;&#227;o partido e uma donzela em apuros que s&#243; faz chorar.
+			</description>
+			<category>Not&#237;cias sobre atualiza&#231;&#245;es de jogos</category>
+			<link>http://services.runescape.com/m=news/l=3/histria-de-amor</link>
+			<pubDate>Mon, 05 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/histria-de-amor</guid>
+		</item>
+
+		<item>
+			<title>Eventos deste Fim de Semana</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/clanwars.jpg&quot; /&gt;&#10;				Aten&#231;&#227;o, aten&#231;&#227;o! Este fim de semana promete! Teremos lutas incessantes entre comunidades e a nossa n&#227;o poderia ficar fora dessa.
+			</description>
+			<category>Not&#237;cias do Suporte ao Cliente</category>
+			<link>http://services.runescape.com/m=news/l=3/eventos-deste-fim-de-semana</link>
+			<pubDate>Fri, 16 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/eventos-deste-fim-de-semana</guid>
+		</item>
+
+		<item>
+			<title>Vencedores da Competi&#231;&#227;o S&#243;sias de RuneScape </title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				O fim de semana acabou, assim como a competi&#231;&#227;o &#8220;s&#243;sias&#8221; de RuneScape de julho de 2010! Depois de muita conversa, escolhemos nossos vencedores...
+			</description>
+			<category>Not&#237;cias do Suporte ao Cliente</category>
+			<link>http://services.runescape.com/m=news/l=3/vencedores-da-competio-ssias-de-runescape-</link>
+			<pubDate>Wed, 07 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/vencedores-da-competio-ssias-de-runescape-</guid>
+		</item>
+
+		<item>
+			<title>Evento PvP de Estrat&#233;gia </title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/clanwars.jpg&quot; /&gt;&#10;				Aviso aos nossos guerreiros: fomos convidados pelas comunidades francesa e hisp&#226;nica para mais um evento emocionante. Venha defender as cores da sua equipe em um grande evento PvP de estrat&#233;gia. 
+			</description>
+			<category>Not&#237;cias do Suporte ao Cliente</category>
+			<link>http://services.runescape.com/m=news/l=3/evento-pvp-de-estratgia-</link>
+			<pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/evento-pvp-de-estratgia-</guid>
+		</item>
+
+		<item>
+			<title>Galeria R&#250;nica</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/gallery.jpg&quot; /&gt;&#10;				Sim, foi s&#243; h&#225; um m&#234;s que colocamos a Galeria R&#250;nica de volta com for&#231;a total, e fomos inundados com a grande quantidade de respostas positivas de voc&#234;s. Ent&#227;o, como prometido, estamos de volta esse m&#234;s com outra sele&#231;&#227;o de obras primas inspiradas em RuneScape.
+			</description>
+			<category>Not&#237;cias do Site</category>
+			<link>http://services.runescape.com/m=news/l=3/galeria-rnica</link>
+			<pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/galeria-rnica</guid>
+		</item>
+
+		<item>
+			<title>Festival de F&#233;rias RuneScape</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				Neste final de semana haver&#225; um grande feriado nos Estados Unidos, o 4 de Julho (Dia da Independ&#234;ncia). Para a Gest&#227;o da Comunidade, isso soa como mais uma &#243;tima raz&#227;o para um fim de semana de eventos da comunidade! Leia abaixo sobre a competi&#231;&#227;o, desafio PvP e mais.
+			</description>
+			<category>Not&#237;cias do Suporte ao Cliente</category>
+			<link>http://services.runescape.com/m=news/l=3/festival-de-frias-runescape</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/festival-de-frias-runescape</guid>
+		</item>
+
+		<item>
+			<title>Bastidores - Julho</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=3/img/Large/behind-the-scenes-July_PT.jpg&quot; /&gt;&#10;				Hist&#243;rias de amor, muitas recompensas de Dungeon, an&#233;is de classes variadas e recompensas de elite de Trilha do Tesouro lhe aguardam nas atualiza&#231;&#245;es deste m&#234;s. Que tal?
+			</description>
+			<category>Not&#237;cias dos Bastidores</category>
+			<link>http://services.runescape.com/m=news/l=3/bastidores---julho</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/bastidores---julho</guid>
+		</item>
+
+		<item>
+			<title>Vencedor do Passaporte R&#250;nico (Junho)</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=3/img/Large/big_ticket_pt.jpg&quot; /&gt;&#10;				O Passaporte R&#250;nico de junho j&#225; tem dono. No pr&#243;ximo m&#234;s, ser&#225; o momento do &#250;ltimo Passaporte R&#250;nico... 
+			</description>
+			<category>Not&#237;cias do Suporte ao Cliente</category>
+			<link>http://services.runescape.com/m=news/l=3/vencedor-do-passaporte-rnico-junho</link>
+			<pubDate>Wed, 30 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/vencedor-do-passaporte-rnico-junho</guid>
+		</item>
+
+		<item>
+			<title>Enquete de Conte&#250;do Garantido: Halloween 2010</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/statistics.jpg&quot; /&gt;&#10;				H&#225; duas semanas, lan&#231;amos uma enquete de conte&#250;do garantido sobre a recompensa do evento de Halloween desse ano. Agora que o prazo para respond&#234;-la terminou e apuramos os resultados, temos o prazer de anunciar que a op&#231;&#227;o vencedora foi...
+			</description>
+			<category>Not&#237;cias do Site</category>
+			<link>http://services.runescape.com/m=news/l=3/enquete-de-contedo-garantido-halloween-2010</link>
+			<pubDate>Tue, 29 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/enquete-de-contedo-garantido-halloween-2010</guid>
+		</item>
+
+		<item>
+			<title>Pr&#234;mio Passaporte R&#250;nico &#8211; Junho (Lembrete)</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=3/img/Large/big_ticket_pt.jpg&quot; /&gt;&#10;				O pr&#243;ximo sorteio do Pr&#234;mio Passaporte R&#250;nico acontecer&#225; em breve. N&#227;o se esque&#231;a de se inscrever para ter a chance de ganhar uma viagem com todas as despesas pagas para conhecer a sede da Jagex!
+			</description>
+			<category>Not&#237;cias do Suporte ao Cliente</category>
+			<link>http://services.runescape.com/m=news/l=3/prmio-passaporte-rnico--junho-lembrete</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/prmio-passaporte-rnico--junho-lembrete</guid>
+		</item>
+
+		<item>
+			<title>Miner Disturbance: iPhone, iPod e iPad</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=3/img/Large/miner_disturbance.png&quot; /&gt;&#10;				Acabamos de criar uma vers&#227;o reformulada de um cl&#225;ssico do FunOrb, Miner Disrtubance (Mina em Perigo), para o iPhone - e ele j&#225; se tornou o quinto aplicativo mais vendido no Reino Unido! 
+			</description>
+			<category>Not&#237;cias sobre atualiza&#231;&#245;es de jogos</category>
+			<link>http://services.runescape.com/m=news/l=3/miner-disturbance-iphone-ipod-e-ipad</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/miner-disturbance-iphone-ipod-e-ipad</guid>
+		</item>
+
+		<item>
+			<title>Calmaria Antes do Caos</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services.runescape.com/m=news/l=3/img/Large/vkq1.jpg&quot; /&gt;&#10;				Ser&#225; que uma das criaturas do Controle de Pragas poderia escapar? Teste suas habilidades desvendando enigmas e controlando pragas e descubra a verdade nesta miss&#227;o de n&#237;vel b&#225;sico, a 1&#170; na nova s&#233;rie dos Cavaleiros do V&#225;cuo. Leia a not&#237;cia para ver o v&#237;deo.
+			</description>
+			<category>Not&#237;cias sobre atualiza&#231;&#245;es de jogos</category>
+			<link>http://services.runescape.com/m=news/l=3/calmaria-antes-do-caos</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/calmaria-antes-do-caos</guid>
+		</item>
+
+		<item>
+			<title>Mudan&#231;as - Novas  Miss&#245;es de Acesso Gratuito </title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/novice_quests.jpg&quot; /&gt;&#10;				As miss&#245;es Vassoura Encantada e Mitos das Terras Brancas agora est&#227;o dispon&#237;veis para jogadores de acesso gratuito! Os jogadores que perderam a oportunidade de jogar essas divertidas miss&#245;es de n&#237;vel b&#225;sico ter&#227;o a chance jog&#225;-las inteiramente gr&#225;tis. 
+			</description>
+			<category>Not&#237;cias sobre atualiza&#231;&#245;es de jogos</category>
+			<link>http://services.runescape.com/m=news/l=3/mudanas---novas--misses-de-acesso-gratuito-</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/mudanas---novas--misses-de-acesso-gratuito-</guid>
+		</item>
+
+		<item>
+			<title>Chegou a Copa de Cl&#227;s da Jagex 2010! </title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/chalice.jpg&quot; /&gt;&#10;				Esta &#233;poca normalmente &#233; de viajar, relaxar e curtir, mas n&#227;o nestas f&#233;rias, n&#227;o com o lan&#231;amento da Copa de Cl&#227;s da Jagex 2010! Foi uma longa espera, mas a hora finalmente chegou e a competi&#231;&#227;o est&#225; melhor do que no ano passado.
+			</description>
+			<category>Not&#237;cias do Suporte ao Cliente</category>
+			<link>http://services.runescape.com/m=news/l=3/chegou-a-copa-de-cls-da-jagex-2010-</link>
+			<pubDate>Fri, 18 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/chegou-a-copa-de-cls-da-jagex-2010-</guid>
+		</item>
+
+		<item>
+			<title>Papel de Parede: Luta Internacional dos Cavaleiros</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://www.runescape.com/l=3/img/news/icons/clanwars.jpg&quot; /&gt;&#10;				Mais de sete mil jogadores de doze comunidades internacionais participaram do primeiro Torneio de Luta Internacional. Os poloneses sa&#237;ram vencedores. Para celebrar, criamos um papel de parede homenageando os vitoriosos.
+			</description>
+			<category>Not&#237;cias do Site</category>
+			<link>http://services.runescape.com/m=news/l=3/papel-de-parede-luta-internacional-dos-cavaleiros</link>
+			<pubDate>Thu, 17 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services.runescape.com/m=news/l=3/papel-de-parede-luta-internacional-dos-cavaleiros</guid>
+		</item>
+	</channel>
+</rss>

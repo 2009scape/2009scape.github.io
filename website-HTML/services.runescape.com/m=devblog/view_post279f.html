@@ -1,0 +1,249 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=91&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:18:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../www.runescape.com/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../www.runescape.com/favicon.ico">
+<link rel="apple-touch-icon" href="../../www.runescape.com/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="RuneScape Developers' Blogs">
+<meta name="description" content="RuneScape Developers' Blogs - From tiny acorns, mighty oaks grow... So discovered Mod Moltare with his concept for some knight-based questing.">
+<meta name="title" content="The Void Knights Series - Into the Void">
+<title>The Void Knights Series - Into the Void</title>
+<style type="text/css">/*\*/@import url(../../www.runescape.com/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_3_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/kbase-6.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/devblog-2.css" media="all">
+<link rel="stylesheet" type="text/css" href="../../www.runescape.com/css/sifr-0.css" media="all">
+<script type="text/javascript" src="../../www.runescape.com/css/sifr_core-0.js"></script>
+<script type="text/javascript">
+  var Trajan_Pro_Bold = { src: 'http://www.runescape.com/img/sifr/Trajan_Pro_Bold.swf' };
+
+  sIFR.activate(Trajan_Pro_Bold);
+
+  sIFR.replace(Trajan_Pro_Bold, {
+    selector: 'h2',
+    css: '.sIFR-root { font-weight: bold; font-size: 23px; text-align: center; opacity: 0.95; leading: -1; color: #411f13; }'
+    + ', .sIFR-root a { color: #411f13; }'
+    + ', .sIFR-root a:hover { color: #411f13; }',
+    wmode: 'transparent'
+  });
+ </script>
+</head>
+<body id="nav" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../www.runescape.com/title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../www.runescape.com/game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../www.runescape.com/game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../www.runescape.com/options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../www.runescape.com/account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../www.runescape.com/account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../www.runescape.com/kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../www.runescape.com/splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../../www.runescape.com/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../www.runescape.com/kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../www.runescape.com/kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../www.runescape.com/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../www.runescape.com/parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../www.runescape.com/game.html" class="HoverImg" id="playBannerNoad"><img src="../../www.runescape.com/img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../www.runescape.com/title.html"><img alt="English" title="English" src="../../www.runescape.com/img/main/layout/en.gif" /></a>
+<a href="../../www.runescape.com/l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../www.runescape.com/img/main/layout/de.gif" /></a>
+<a href="../../www.runescape.com/l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../www.runescape.com/img/main/layout/fr.gif" /></a>
+<a href="../../www.runescape.com/l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../www.runescape.com/img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+</div></div>
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../www.runescape.com/title.html">Home</a> &gt;
+<a href="index2679.html?page=1"><span>Developer Blogs</span></a> <span class="divider">&gt;</span>
+<span><span>The Void Knights Series: Into the Void</span></span>
+</div>
+</div>
+<div id="content"> <div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+The Void Knights Series: Into the Void
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article">
+<div class="topshadow">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div id="post">
+<div class="devblog">
+<div class="devblogHead">
+<div class="devblogFoot">
+<div id="archives"><a href="index2679.html?page=1">&lt; Back to archive</a></div>
+<h2>
+Into the Void
+<br/>
+by <a href="indexb13a.html?author_id=75">Mod Moltare</a> 22-Apr-2010
+</h2>
+<div class="imgright"><div class="topbord"><div class="bottombord"><div class="leftbord"><div class="rightbord"><div class="toplcorn"><div class="toprcorn"><div class="bottomlcorn"><div class="bottomrcorn"><a href="images/summer_knights/void_knights.jpg"><img src="images/summer_knights/void_knights_thumb.jpg" alt="Concept art of some Void Knight officers" /></a></div></div></div></div></div></div></div></div><a href="images/summer_knights/void_knights.jpg">Concept art of some Void Knight officers</a></div><div class="content"><p> </p><p>It’s always pleasing to have a big idea, and even more pleasing to have others accept it as a good one. For a relative newcomer to the games development business, like me, it’s also a proud moment.</p><p>RuneScape’s biggest draw for me as both an avid MMO gamer and a developer is the depth and flexibility of its quests (that and the puns; never forget the puns). We have everything from quarter-hour side trips to world-spanning epics; from quests as classic as slaying a dragon in single combat to quests as bizarre as gathering a smorgasbord of unique foodstuffs to break a magical binding; quests in caves, at sea, in dreams, and on planes beyond the ken of mortal man.</p><p>My first offering to the ongoing tales of RuneScape will be with you shortly - I hope you like it. Even while that was in its last stages of development, however, I and two of my fellow devs have been hard at work on a new project for you, and it’s one I have particular investment in.</p><p>Playing RuneScape in the days before I joined Jagex as a developer, see, I had felt rather sorry for the Void Knights. Poor fellows - an entire order of holy warriors, strong in their dedication to Guthix and to the protection of the world, who had nothing to do but hang around on their tiny little island waiting for the next incursion by hideous void spawn intent on laying waste the world of Gielinor with fang and claw. There was, I thought, potential there for more.</p><p>I mentioned this to <span class="strong">Mod Mark</span>, who told me that if I had a concept brief for him he’d be more than happy to look it over. As ‘luck’ would have it, I just so happened to have one handy, and so he had a shufti.</p><p>I thought in a best case scenario, <span class="strong">Mod Mark</span> would come back to me and say, <span class="em">"Yes, I quite like it; you can do it as a small quest in a year or so."</span> Instead he said, <span class="em">"Great, let’s do this right now. We’ll put three developers on it and make it a complete project."</span></p><p>My jaw hit the floor. What I had imagined to be a little side-project quest to be done ‘at some point’ had become an entire chain of three quests and an activity. Turns out I’d timed things right, since many players enjoyed the two Summer quests in 2008 (<span class="em">Spirit of Summer</span> and <span class="em">Summer’s End</span>) and last year’s Mysteries of the Mahjarrat series, and so the powers that be were receptive to the idea of another group of themed quests. My little pet project fit the bill, as a self-contained arc to be carried out and completed in a timely fashion.</p><p>Now I’m working with <span class="strong">Mod Nancy</span> and <span class="strong">Mod Rathe</span> to bring you a tale of the knightly orders, of the void pest threat, and of the return of a villain from your adventurers’ dark pasts. You’ll encounter old allies and old enemies, discover more of the nature of the pests, and train with the Void Knights in the art of military command.</p><p>So, as stated at the beginning of this blog, it’s always pleasing to have a big idea accepted. I trust we can do it justice, and I hope you will all enjoy following the story, challenges and the activity we’re preparing for you. As always, it’ll be released ‘when it’s done’ (Summer Knights is more a pun than an indication of the release date!), but I hope to be able to bring you more information about it all as development moves along. Watch this space!</p><p>If you'd like to discuss this blog on the forums, please visit <a href="../m%3dforum/sl%3d6/forums.html?198,199,0,60855606">this forum thread</a>.</p></div>
+<br class="clear" />
+<div id="meta">
+Project: <a href="index9d6b.html?project_id=31">The Void Knights Series</a><br />
+Tags:
+<a href="index26ba.html?tag_id=86">activity</a>, <a href="index629a.html?tag_id=3">development</a>, <a href="index2f11.html?tag_id=87">knights</a>, <a href="index230c.html?tag_id=1">quest</a></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../www.runescape.com/terms/terms.html">Terms &amp; Conditions</a> and <a href="../../www.runescape.com/privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../www.jagex.com/index.html" target="_blank">
+<img src="../../www.runescape.com/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+ document.write(unescape("%3Cscript src='"+(("https:"==document.location.protocol)?"https://ssl":"http://www")+".google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services.runescape.com/m=devblog/view_post.ws?post_id=91&page=1 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:18:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,480 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary01 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:24 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico">
+<link rel="SHORTCUT ICON" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="dev,development,diary,impetuous,impulses,imp">
+<meta name="description" content="Learn about how the Impetuous Impulses task was created">
+<meta name="title" content="RuneScape - MMORPG - RuneScape Development Teams - Impetuous Impulses">
+<title>RuneScape - MMORPG - RuneScape Development Teams - Impetuous Impulses</title>
+<style type="text/css">/*\*/@import url(../../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../css/kbase-6.css);/**/</style>
+<script type="text/javascript" src="../../css/kbsearchfill-0.js"></script>
+<script type="text/javascript">
+new_subcat=add_subcat(4, 5, "Postbag from the Hedge", -1 == 5);new_subcat=add_subcat(4, 6, "Players' Gallery", -1 == 6);new_subcat=add_subcat(4, 19, "God letters", -1 == 19);new_subcat=add_subcat(775, 892, "How do I get started?", -1 == 892);new_subcat=add_subcat(775, 798, "Controls", -1 == 798);new_subcat=add_subcat(775, 795, "Combat", -1 == 795);new_subcat=add_subcat(775, 776, "Skills", -1 == 776);new_subcat=add_subcat(775, 7, "Quests", -1 == 7);new_subcat=add_subcat(775, 1, "Achievement Diary", -1 == 1);new_subcat=add_subcat(775, 10, "Activities", -1 == 10);new_subcat=add_subcat(775, 38, "Distractions and Diversions", -1 == 38);new_subcat=add_subcat(775, 831, "Miscellaneous Guides", -1 == 831);new_subcat=add_subcat(775, 881, "Area Guides", -1 == 881);new_subcat=add_subcat(20, 32, "A New Look RuneScape: Part 1", -1 == 32);new_subcat=add_subcat(20, 21, "Graphics Team - NPC Improvement Project", -1 == 21);new_subcat=add_subcat(9, 127, "Billing", -1 == 127);new_subcat=add_subcat(9, 126, "Technical", -1 == 126);new_subcat=add_subcat(9, 827, "Safety & Security Guidelines", -1 == 827);new_subcat=add_subcat(9, 872, "Other", -1 == 872);
+</script>
+<meta name="language" content="en, de">
+<meta name="description" content="Learn about how the Impetuous Impulses task was created">
+<style type="text/css">
+ 
+   
+  
+  .bigquote { font-size:medium; font-weight:bold; font-style:italic; text-align:left; } 
+  .mod { font-weight:bold; } 
+  .team { font-weight:bold; } 
+  .quote { font-style:italic; } 
+  .caption { font-size:85%; font-weight:bold; } 
+  
+ </style>
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHeadAdvert">
+<div id="headAdvert">
+<iframe name="Advert" src="../../../services.runescape.com/m%3dadvert/banner5052.html?size=730" allowtransparency="true" width="766" height="96" scrolling="no" frameborder="0"></iframe>
+<script type="text/javascript">
+  setTimeout(function() {
+  var url = "http" +
+  (/https:/.test(document.location.href) ? "s" : "") +
+  "://beacon.scorecardresearch.com/scripts/beacon.dll" +
+  "?c1=8&c2=6035824&c3=1271511541440201100" +
+  escape(document.location.href) +
+  "&c8=" + escape(document.title) +
+  "&c9=" + escape(document.referrer) +
+  "&c10=" + escape(screen.width+'x'+screen.height) +
+  "&rn=" + (new Date()).getTime();
+  var i = new Image();
+  i.src = url;
+  }, 1);
+  </script>
+<noscript>
+<img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=8&amp;c2=6035824&amp;c3=1271511541440201100&amp;x=NOJAVASCRIPT" alt="" />
+</noscript>
+</div>
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../../../services.runescape.com/m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../services.runescape.com/m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../title.html"><img alt="English" title="English" src="../../img/main/layout/en.gif" /></a>
+<a href="../../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../img/main/layout/de.gif" /></a>
+<a href="../../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../img/main/layout/fr.gif" /></a>
+<a href="../../l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../title.html">Home</a> &gt;
+
+<a href="dev_diary-2.html">Development Diaries</a> &gt; RuneScape Development Teams - Impetuous Impulses<br />
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+RuneScape Development Teams - Impetuous Impulses
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_1">
+<div class="article">
+<div class="topshadow">
+<div class="bottomborder">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleft">
+<div class="bottomright">
+<div class="links"></div>
+<div style="text-align: center">
+<div style="text-align: justify;color: #402706; margin: auto;">
+<p style="text-align: center;"><img style="height: 211px;" src="../../img/varrock/devdiary/comic/comic01a.gif" style="display: block; margin: auto;" alt="comic strip"></p>
+<br>
+<p><h3 align="center"><b>RuneScape Development Teams - Impetuous Impulses</b></h3></p>
+<p>Welcome to the first of the Development Diaries. In this series of articles, we'll take you behind the scenes at Jagex HQ to see just how we go about making content for RuneScape, as well as the difficulties and triumphs we deal with along the way. This first, extra-long diary will show you the complete development of a single piece of content - <a href="impetuous_impulses.html">Impetuous Impulses</a> - from concept to release. After this, new diaries will be released on a regular basis about how our development teams have handled specific projects.</p>
+<br>
+<p style="text-align: center;"><b>Impetuous Impulses</b></p>
+<p>The concept of this <a href="hunter_members_only.html">Hunter</a>-based task is to use a butterfly net to capture a range of implings (tiny flying imps). Being related to imps, these implings are prone to taking items that don't belong to them, so capturing one will land you some lovely loot; anything from a baby impling dropping a bowstring up to a ninja impling dropping some black mystic boots, and then there are dragon implings, but we'll get to those later... These implings can mostly be found on their home plane of Puro-Puro, which can be visited by finding and entering crop circles that randomly appear in the wheat fields of RuneScape. Implings can also be found wandering all around the world, so be sure to have your butterfly nets handy at all times!</p>
+<br>
+<p style="text-align: center;"><img style="height: 143px;" src="../../img/varrock/devdiary/diary01/circles.gif" style="display:block; margin: auto;" alt="crop circle concept artwork"><br><span class="caption">Concept art of various crop circle designs that didn't make it into the game.</span></p>
+<br>
+<p style="text-align: center;"><b>A brief brief</b><br>(Duration: 2.5 weeks)</p>
+<p style="text-align: center;"><img style="height: 15px;" src="../../img/varrock/devdiary/diary01/timeline01.gif" style="display: block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p><span class="quote">"The initial brief was simply to 'make a hunter task'"</span>, says <span class="mod">Mod Chihiro</span>, developer of Impetuous Impulses. <span class="quote">"I've had the seed of an idea for a <a href="hunter_net_trapping_level_29.html">butterfly-netting</a> task since about May 2006, albeit as a weird Herblore update involving magically-mutated butterflies."</span> In the early briefing meetings, Senior Creative Designer <span class="mod">Mod Mark</span> suggested to move the focus away from <a href="herblore_members_only.html">Herblore</a> to more general item drops, as there are now plenty of ways to get hold of herbs. As imps are known for stealing, they seemed the perfect rationale upon which to base the content.</p>
+<p>The brief was fleshed out from talking through ideas with the rest of the <span class="team">RuneScape Content</span> team. Conversations with <span class="mod">Mod Greg</span> led to the use of crop circles and <a href="zanaris_members.html">Zanaris</a>, and the shifting maze concept from <span class="mod">Mod Dylan</span>. From these initial meetings, the important parts of the early design brief became that the implings could fly freely over obstacles and that the maze they're in could 'shift'. <span class="mod">Mod Chihiro</span> goes on to say, <span class="quote">"Either of these things alone would be straightforward to do, but both together was far trickier than I thought. Nobody had done this with the RuneScape engine before."</span> As such, it was important to first prototype the concept to see if it was even possible.</p>
+<br>
+<p style="text-align: center;"><b>Post-prototype problems</b><br>(Duration: 1 week)</p>
+<p style="text-align: center;"><img style="height: 15px;" src="../../img/varrock/devdiary/diary01/timeline02.gif" style="display: block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>After developing a prototype, using placeholder graphics, it was sent to the <span class="team">Quality Assurance (QA)</span> team for a focus test to make sure that the gameplay was solid and, above all, fun. With this step complete, it was now a case of turning the prototype into a proper piece of content, which meant involving the <span class="team">Graphics</span> team. <span class="quote">"When I took the prototype to Graphics...I realised I should have taken it to <span class="team">Graphics</span> sooner (laughs)"</span>, <span class="mod">Mod Chihiro</span> jokes.</p>
+<div style="float:left; width:30%; margin:15px; text-align: left;">
+<span class="bigquote"> "I never imagined anyone would want to do that!"
+</span>
+<br><br>
+<span>
+<img style="height: 11px;" src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Andrew</span><br><span class="team">Game Development</span>
+</span>
+</div>
+<p>The <span class="team">Graphics</span> team discovered an issue with the way locations were displayed in the game, and the attempts to overcome it highlighted a limitation of the RuneScape engine. The problem was that we wanted hedges that could move, that implings could fly over <i>and</i> that players could push through. <span class="quote">"There were some fairly large technical discussions at this point"</span>, <span class="mod">says Mod Chihiro</span>.</p>
+<p>It became clear that the project couldn't work as planned...at least not with the current game engine, so <span class="mod">Mod Chihiro</span> brought the problem to <span class="mod">Andrew</span>, founder of RuneScape and Lead Developer, who saw it as a bug and got about fixing it. <span class="quote">"I never imagined anyone would want to do that!"</span>, says <span class="mod">Andrew</span>. <span class="mod">Mod Chihiro</span> follows that with, <span class="quote">"The engine is changing every month, in small ways, giving developers more flexibility."</span></p>
+<br>
+<p style="text-align: center;"><b>Media frenzy</b><br>(Duration: 4.5 weeks)</p> <p style="text-align: center;"><img style="height: 15px;" src="../../img/varrock/devdiary/diary01/timeline03.gif" style="display: block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>With the engine issue now fixed, the project went into full-scale production. This meant the <span class="team">Graphics</span> team could get on with actually designing the impling NPCs and the shifting maze of Puro-Puro. The brief was for ten kinds of impling (shown below) and some crop circle designs (shown above). <span class="mod">Mod GG</span> drew the concept art and says, <span class="quote">"I started with the colours as the implings are very small creatures, and had to be recognisable from far away. The 'fashionable' implings (eclectic and magpie) were very near thematically, so to differentiate the eclectic impling it was given a stronger colour and extra features like the feather."</span> The implings were then modelled and animated by <span class="mod">Mod Damian.</span></p>
+<br>
+<p style="text-align: center;"><img style="height: 446px;" src="../../img/varrock/devdiary/diary01/implings.gif" style="display: block; margin: auto;" alt="impling concept artwork and in-game models"><br><span class="caption">Impling concept art to in-game model comparison. From top-left to bottom-right:<br>baby, young, gourmet, earth, essence, eclectic, nature, magpie, ninja and dragon implings.</span></p>
+<br>
+<p>The next piece of the puzzle was to get the <span class="team">Audio</span> team with creating all of the music content for the task – music, sound effects and jingles. <span class="mod">Mod Chihiro</span> was very keen for audio to be an important part of the task; <span class="team">Audio</span>'s <span class="mod">Mod Bond</span> agrees, saying that <span class="quote">"It's important to provide music that is dynamic and that responds to what players are doing in the game."</span> The brief given in the audio spec meeting was a simple one (mischevious, lighthearted and 'spooky') allowing him a free reign.</p>
+<br>
+<p style="text-align: center;"><b>Balance of power</b><br>(Duration: 6.5 weeks)</p>
+<p style="text-align: center;"><img style="height: 15px;" src="../../img/varrock/devdiary/diary01/timeline04.gif" style="display: block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>With the gameplay now set and the graphics and audio work finished, coding commenced to stitch it all together and then the project was sent over to the <span class="team">QA</span> team to make sure everything worked as expected and to smooth out any bugs. However, there is more to QAing a piece of work than finding bugs; the content has to be fun, worthwhile and has to fit in well with existing content as well as standing out on its own merits. As such, the balancing of content is incredibly important.</p>
+<div style="float:right; width:30%; margin:15px; text-align: left;">
+<span class="bigquote"> <span class="mod">
+"Mod Chihiro</span> had suggested something small; thinking through items made of the other standard metals, you can't get much smaller than arrowtips."
+</span>
+<br><br>
+<span>
+<img style="height: 11px;" src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Paul</span><br><span class="team">RuneScape Content</span>
+</span>
+</div>
+<p><span class="quote">"The prime concerns were the item drops"</span>, says <span class="mod">Mod Chihiro</span>. <span class="quote">"One of the things the content needed was for the rarest implings to have high-end drops, to give top-end players as much reason to play this task as the lower-levelled players."</span> Adding high-end drops is quite tricky (to put it mildly) as we can't be too stingy with the drops that you all wouldn't bother with the task, but not so generous as to unbalance the rest of the game.</p>
+<p>The items had to be desirable, to both fit in thematically and to catch everyone's interest, and also 'physically' small, such that the tiny implings could believably be carrying them. It was crucial that we got the balance right. <span class="mod">Paul</span> was brought in to help balance the item drops and says, <span class="quote">"Looking for something for a high end reward, my thought turned fairly quickly to the dragon items. Adding items to the dragon set always increases their desirability and they were of the right sort of level for this feature. <span class="mod">Mod Chihiro</span> had suggested something small; thinking through items made of the other standard metals, you can't get much smaller than arrowtips."</span> Once this had all been decided, <span class="mod">Mod Adam</span> of the <span class="team">QA</span> team created the drop tables for each impling.</p>
+<br>
+<p style="text-align: center;"><b>A shot in the dark (bow)</b></p> <p>With dragon arrows being added to the game there needed to be a new bow to fire them from, as there wasn't one already in game capable of doing so. We could have enhanced an existing bow to fire dragon arrows, but it seemed like the perfect opportunity for us to implement a new bow, something we'd been thinking on for a long time. <span class="mod">Mod Mark</span> says, <span class="quote">"We have an homogeneous approach to design, bouncing ideas off other developers, talking through briefs with each other. We have lots of thoughts at the back of our heads, but tend to wait for a good opportunity to release them, such as with the dark bows and dragon arrows."</span></p>
+However, it didn't fit that such small creatures would be stealing larger items, so <span class="quote">"having implings carrying a huge bow was not in keeping with the flavour of the content..."</span>, <span class="mod">Mod Chihiro</span> continues, <span class="quote">"...the dark bow has its own reasons for existing."</span> Another member of the <span class="team">RuneScape Content</span> team was set the task of adding such an item to complement the new dragon arrows - that other developer was <span class="mod">Mod Ingrid</span>.</p>
+<p>The brief for the dark bow was equally short: <span class="quote"><span class="mod">"Mod Mark</span> asked for a high-end bow, and a dark beast drop"</span>, says <span class="mod">Mod Ingrid</span>. <span class="quote">"The dark bow took a lot longer than it might seem",</span> she continues, <span class="quote">"what with all the layers of complexity within the combat code. Once the coding was done and the 'numbers' were right, I spent the same effort again on getting the feel of the bow right... The <span class="team">Audio</span> team put the finishing touches to the bow - the icing on the cake."</span></p>
+<br>
+<p style="text-align: center;"><img style="height: 344px;" src="../../img/varrock/devdiary/diary01/beastnbow.gif" style="display: block; margin: auto;" alt="dark beast and dark bow concept artwork"><br><span class="caption">Some concept art designs for the dark beast, dark bow and the dark bow's special attack.</span></p>
+<br>
+<p style="text-align: center;"><b>Testing, testing</b><br>(Duration: 4.5 weeks)</p>
+<p style="text-align: center;"><img style="height: 15px;" src="../../img/varrock/devdiary/diary01/timeline05.gif" style="display: block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>With all the content coded together, it then moved to <span class="team">QA</span> to make sure that it worked as intended and to have as many bugs as possible ironed out prior to release. With a game like RuneScape, it would be impossible to account for every single bug that players could find. <span class="quote">"Upon release, the code is exposed to thousands of players, doing odd combinations of things that are unforeseeable"</span>, says <span class="mod">Mod Chihiro</span>.</p>
+<p>The <span class="team">QA</span> team don't just check for bugs in the code, however. They also make sure content is logical and consistent with itself, the rest of the game and the plot. They also check the graphics and audio work properly and fit in, and other tiny things most people wouldn't even consider. It's not an easy job... <span class="mod">Mod Noldor</span> remembers, <span class="quote">"At an early stage in the project, when the rare implings were still a nightmare to find, another mod was running through a random area when, out of the blue, I just heard them yelp 'What the heck! Oooh, a ninja impling' and we promptly ran around trying to catch it."</span></p>
+<br>
+<p style="text-align: center;"><b>Fast geschafft! (Nearly done!)</b><br>(Duration: 2 weeks)</p> <p style="text-align: center;"><img style="height: 15px" src="../../img/varrock/devdiary/diary01/timeline06.gif" style="display: block; margin: auto;" alt="progress bar" title="Progress bar"></p>
+<p>With the coding done, the graphics and audio added, and the last few jobs passed through <span class="team">QA</span>, the final stages of the development cycle are for the <span class="team">Web Content</span> and <span class="team">Translation</span> teams. At this stage, the <span class="team">Web Content</span> team had to proofread the 4,000 words that were added to the game, which, considering RuneScape is a fantasy game, threw up some interesting challenges. <span class="mod">Mod Osborne</span> covers it succinctly with, <span class="quote">"How do you edit the word 'Graaagh'?"</span>. The Game Guide also needed to be updated to reflect the new content, in this case a guide for the task, the new dragon items in Fletching and Ranged, and the dark bow and its special attack.
+<p>Finally, the content needs to be translated by the <span class="team">Translation</span> team, who have their own unique language-based challenges. <span class="quote">"The name of the task alone was hard to translate, as it is an alliteration and has the word 'imp' in both words of the title. This was impossible to adapt because the German word for imp, 'kobold', isn't part of another word."</span>, says <span class="mod">Mod Heiko</span>. Impetuous Impulses was translated to 'Irrwitziger Irrgarten' (Manic Maze). Naming the implings was also a challenge: <span class="mod">Mod Heiko</span> continues, <span class="quote">"We had to hold a meeting about this translation and decided on 'feebold', a funny and nice name."</span></p>
+<p>In total, from the initial briefing at the beginning of December 2006 to it being ready for release, Impetuous Impulses took a little over five months to develop. <a href="skills.html">Skills</a> and large <a href="quests0.html">quests</a> can have longer development times, of course, but everything is coordinated so that we can release updates regularly.</p>
+<br>
+<p style="text-align: center;"><b>Release day</b><br>(28 weeks later)</p> <div style="float:left; width:30%; margin:15px; text-align: left;">
+<span class="bigquote"> "Everyone in <span class="team">RuneScape Content</span> reads the forums religiously for feedback." </span>
+<br><br>
+<span>
+<img style="height: 15px;" src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Ingrid</span><br><span class="team">RuneScape Content</span>
+</span>
+</div>
+<p><span class="quote">"Release day is always adrenalin-filled – always fun (and frantic...and stressful); we get to go in game, hype it up a bit (laughs)...and see our content live, hundreds of people playing it, asking each other questions...asking me questions"</span>, says <span class="mod">Mod Chihiro</span>, <span class="quote">"It's a nice feeling...especially if players like it – it's the buzz, the reward at the end of the hard work."</span></p>
+<p><span class="mod">Mod Ingrid</span>'s view reflects this, but although she has worked on lots of content already, this will be her first piece released into the game, so adds that she's also <span class="quote">"terrified about the release... We'll spend all day waiting for bug reports to come in and reading the forums. Everyone in <span class="team">RuneScape Content</span> reads the <a href="../../../services.runescape.com/m%3dforum/forums.html">forums</a> religiously for feedback."</span> She is confident, though, saying, <span class="quote">"It should be a success, but you can never tell."</span> <span class="mod">Mod Chihiro</span> agrees, <span class="quote">"It can sometimes take a while to get it right."</span></p>
+<br>
+<p style="text-align: center;"><b>Over to you</b></p> <p><span class="mod">Mod Chihiro</span>'s hopes for the task are firstly for everyone to enjoy it, but he'd also really like for a community to build around it. <span class="quote">"If one player spots a dragon impling, but doesn't have the Hunter level to catch it, they could contact their friend who does. Then they could follow the dragon impling until their friend arrives and catches it. If that happens just once, I'll be very happy!"</span> Who knows, maybe you can even share in the loot!</p>
+<p>Asked which of the implings he prefers, and why he chose to make them an impling type, <span class="mod">Mod Chihiro</span> plumps for, <span class="quote">"Ninja and dragon, just 'cos they're cool... It's hard to see that they look cool, as they are so small, but they do look cool. If this were <span class="mod">Mod Wilson</span>'s content, they'd have been pirate implings! Zombie ninja pirate implings! (laughs)...but I don't want to get into the whole pirate/ninja debate."</span></p>
+<br>
+<p style="text-align: center;"><b>Meet the team!</b></p> <p style="text-align: center;"><img style="height: 212px;" src="../../img/varrock/devdiary/comic/comic01b.gif" style="display: block; margin: auto;" alt="comic"></p>
+<p style="text-align: center;"><img style="height: 212px;" src="../../img/varrock/devdiary/comic/comic01c.gif" style="display: block; margin: auto;" alt="comic"></p>
+<p style="text-align: center;"><img style="height: 212px;" src="../../img/varrock/devdiary/comic/comic01d.gif" style="display: block; margin: auto;" alt="comic"></p>
+</div>
+</div>
+<div class="backtotop"><a href="#top">Back to the top</a></div>
+<br/>
+<center><img src="../../img/main/kbase/hr.png" alt=""/></center>
+<table class="bottomlinks">
+<tr>
+</tr>
+<tr>
+<td class="bot"><p><div class="bold">More articles in
+<a href="dev_diary-2.html">Development Diaries</a>
+</div></p>
+<ul class="bold">
+<li>
+<a href="diary05b.html">Summoning: Part 2 - Development</a>
+</li>
+<li>
+<a href="diary05a.html">Summoning: Part 1 - Concept</a>
+</li>
+<li>
+<a href="diary04.html">RuneScape Content Team - Game Improvements</a>
+</li>
+<li>
+<a href="diary03.html">Audio Team - Music, Sound Effects and the Sound Bank</a>
+</li>
+<li>
+<b>RuneScape Development Teams - Impetuous Impulses</b>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="searchtop">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="topleft">
+<div class="topright">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div class="searchtext">
+<form method="get" action="http://www.runescape.com/kbase/search.ws">
+<table class="bottomsearch">
+<tr>
+<td class="searchtitles" width="60" style="text-align: right">
+Search for:
+</td>
+<td>
+<input class="textinput" name="search_query" id="search_query" size="29" maxlength="300" value="">
+</td>
+<td rowspan="3">
+<table>
+<tr>
+<td>
+<label class="bold">Criteria:</label>
+</td>
+<td></td>
+<td><label class="bold">Find:</label></td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="title_chk" value="1" checked="checked">
+Title
+</td>
+<td>
+<input class="widget" type="checkbox" name="keywords_chk" value="1" checked="checked">
+Keywords
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="1" checked="checked">
+All
+</td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="description_chk" value="1" checked="checked">
+Description
+</td>
+<td>
+<input class="widget" type="checkbox" name="body_chk" value="1" checked="checked">
+Body
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="0">
+Any
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="searchtitles">
+Category:
+</td>
+<td>
+<select name="category" id="search_cat_select_footer" onchange="update_cats('_footer')">
+<option value="null"> - ALL - </option>
+<option value="4">Player Submissions</option>
+<option value="775">Game Guide</option>
+<option value="20">Development Diaries</option>
+<option value="9">Customer Support</option>
+<option value="3">Lores and Histories</option>
+</select></td>
+<td></td>
+</tr>
+<tr>
+<td class="searchtitles">
+Subcategory:
+</td>
+<td>
+<div id="search_subcat_footer" style="display: none;">
+<select name="subcat" id="search_subcat_select_footer">
+<option value="null"> - ALL - </option>
+</select>
+</div>
+<script type="text/javascript">
+ document.getElementById("search_subcat_footer").style.display="inline";
+ update_cats('_footer');
+</script>
+</td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;font-size:11px;font-weight:bold; margin-bottom: 0px;">For help on searching, see our <a href="../searchtips.html">Search Tips</a> page.
+<input type="submit" name="submit" class="searchbutton" value="" alt="Search"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../terms/terms.html">Terms &amp; Conditions</a> and <a href="../../privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary01 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:25 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

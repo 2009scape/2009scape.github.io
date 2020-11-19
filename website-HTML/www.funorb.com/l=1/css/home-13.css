@@ -1,0 +1,542 @@
+
+
+
+/* ############# */
+/* Home PAGE CSS */
+/* ############# */
+
+
+h2, h3 {
+ margin: 0;
+ padding: 0;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#header,
+#page_content .section {
+ color: white;
+}
+
+
+/* Latest Releases */
+
+#latestReleases {
+ float:left;
+}
+#latestReleases b {
+ font-size:17px;
+}
+
+#release, #release object {
+ outline: 0;
+ float: left;
+ width: 432px;
+ height: 167px;
+ background-color: black;
+}
+
+#release .releasePlayMe {
+ display: block;
+ position: absolute;
+ width: 62px;
+ height: 62px;
+ left: 11px;
+ top: 30px;
+ background: url(#); /* IE 7 & Opera fix (they refuse to render elements over flash unless they have either content or a background) */
+ cursor: pointer;
+}
+
+#release .links {
+ position:absolute;
+ left:333px;
+ top:158px;
+}
+
+#release .text {
+ position: absolute;
+ top: 160px;
+ left:10px;
+}
+
+#release .title {
+ float:left;
+ font-weight:bold;
+ font-size:14px;
+}
+
+#release .genre {
+ float:left;
+ position:relative;
+ padding: 4px 0 0 12px;
+}
+
+/* xLatest Releases */
+
+
+/* Developer's Diary */
+
+#devDiary {
+ position: relative;
+ width: 308px;
+ height: 167px;
+ float: right;
+ font-size: 12px;
+ font-weight: bold;
+ background: url(../img/images/home/developer_diary_bg.png) left top no-repeat;
+}
+
+#devTitle {
+ padding: 3px 0 0 24px;
+}
+
+#devDiary img {
+ position: absolute;
+ left: 7px;
+ top: 27px;
+ width: 295px;
+ height: 133px;
+ background: #091e34 left top no-repeat;
+}
+
+#devName {
+ position: absolute;
+ font-size: 13px;
+ left: 15px;
+ top: 140px;
+ z-index: 1;
+}
+
+#devMore {
+ position: absolute;
+ right: 15px;
+ top: 141px;
+}
+
+/* xDeveloper's Diary */
+
+
+/* page_content */
+
+#navHome #page_content {
+ margin-top: 0;
+ padding-top: 8px;
+ background: url(../img/images/home/games_list_bg.png) left 36px no-repeat;
+}
+
+#page_content .sectionHeader,
+#page_content .sectionHeaderRight {
+ height: 28px;
+}
+
+#pageContentFooter {
+ margin-left: 0;
+ margin-right: 0;
+}
+
+#page_content .sectionTitle span { /* news title */
+ float: left;
+}
+
+#page_content .sectionTitle a { /* news archive link */
+ float: right;
+ padding: 0 5px 0;
+ font-weight: normal;
+ text-decoration: underline;
+}
+
+#page_content .sectionTitle a:hover {
+ text-decoration: none;
+}
+
+/* xpage_content */
+
+
+/* Games List */
+
+#gamesHeader {
+ float: left;
+ width: 437px;
+}
+
+#gamesList {
+ margin: 0;
+ padding: 0;
+ list-style: none;
+ text-align: center;
+ font-size: 11px;
+}
+
+#gamesList li {
+ padding: 0;
+}
+
+#gamesList .first {
+ display: inline;
+ clear: left;
+ margin-left: 10px;
+}
+
+/* sub elements of the game boxes shared properties for all sizes + some shared by medium and small then overidden by big */
+
+.gamesName {
+ overflow: hidden;
+ height: 29px;
+ font-weight: bold;
+}
+
+.gamesName table {
+ width: 100%;
+ border-collapse: collapse;
+}
+
+.gamesName td {
+ height: 27px;
+ padding: 0 4px;
+ font-weight: bold;
+ line-height: 90%;
+ text-align: center;
+ vertical-align: middle;
+}
+
+.gamesName a {
+ text-decoration: none;
+ color: white;
+}
+
+.gamesIcon {
+ display: block;
+ margin: 0 auto 3px;
+}
+
+.gamesButtons {
+ position: absolute;
+ bottom: 1px;
+ left: 2px;
+ line-height: 15px;
+ font-weight: bold;
+}
+
+.gamesButtons a {
+ text-decoration: none;
+ color: white;
+}
+
+.gamesInfo {
+ float: left;
+ width: 22px;
+ height: 17px;
+ background: no-repeat left bottom;
+}
+
+.gamesInfo:hover img {
+ visibility: hidden;
+}
+
+.gamesPlay {
+ float: right;
+ height: 17px;
+ background: no-repeat right top;
+}
+
+.gamesPlay:hover {
+ color: #F6E89A;
+ background-position: right bottom;
+}
+
+/* Big games boxes */
+
+.gamesBig {
+ position: relative;
+ float: left;
+ margin: 8px 0 0 9px;
+ width: 204px;
+ height: 214px;
+ background: #021c5d url(../img/images/home/games_big_bg.png);
+}
+
+.gamesBig .gamesName {
+ height: 33px;
+}
+
+.gamesBig .gamesName td {
+ height: 32px;
+ font-size: 13px;
+}
+
+.gamesBig .gamesIcon {
+ width: 192px;
+ height: 140px;
+ margin-bottom: 2px;
+}
+
+.gamesBig .gamesButtons {
+ width: 200px;
+ line-height: 18px;
+ font-size: 12px;
+}
+
+.gamesBig .gamesInfo {
+ width: 22px;
+ height: 20px;
+ background-image: url(../img/images/home/games_buttons_big_bg.png);
+}
+
+.gamesBig .gamesPlay {
+ width: 178px;
+ height: 20px;
+ background-image: url(../img/images/home/games_buttons_big_bg.png);
+}
+
+/* Medium games boxes */
+
+.gamesMedium {
+ position: relative;
+ float: left;
+ margin: 8px 0 0 6px;
+ width: 135px;
+ height: 158px;
+ background: #021c5d url(../img/images/home/games_medium_bg.png);
+}
+
+.gamesMedium .gamesIcon {
+ width: 125px;
+ height: 92px;
+}
+
+.gamesMedium .gamesGenre {
+ font-size: 9px;
+}
+
+.gamesMedium .gamesButtons {
+ width: 131px;
+}
+
+.gamesMedium .gamesInfo {
+ background-image: url(../img/images/home/games_buttons_medium_bg.png);
+}
+
+.gamesMedium .gamesPlay {
+ width: 109px;
+ background-image: url(../img/images/home/games_buttons_medium_bg.png);
+}
+
+/* Small games boxes */
+
+.gamesSmall {
+ position: relative;
+ float: left;
+ margin: 8px 0 5px 6px;
+ width: 119px;
+ height: 145px;
+ background: #021c5d url(../img/images/home/games_small_bg.png);
+}
+
+.gamesSmall .gamesName td {
+ padding-bottom: 1px;
+}
+
+.gamesSmall .gamesIcon {
+ width: 107px;
+ height: 79px;
+}
+
+.gamesSmall .gamesGenre {
+ font-size: 9px;
+}
+
+.gamesSmall .gamesButtons {
+ width: 115px;
+}
+
+.gamesSmall .gamesInfo {
+ background-image: url(../img/images/home/games_buttons_small_bg.png);
+}
+
+.gamesSmall .gamesPlay {
+ width: 93px;
+ background-image: url(../img/images/home/games_buttons_small_bg.png);
+}
+
+/* All games link */
+
+#gamesAll {
+ width: 117px;
+ font-weight: bold;
+ text-decoration: none;
+ color: white;
+ background: #021c5d url(../img/images/home/games_all_bg.png) left top no-repeat;
+}
+
+#gamesAll .gamesName {
+ line-height: 26px;
+}
+
+#gamesAll .gamesIcon {
+ width: 105px;
+ height: 93px;
+}
+
+#gamesAll .gamesButtons {
+ position: absolute;
+ width: 113px;
+ height: 17px;
+ color: white;
+ text-decoration: none;
+ background: url(../img/images/home/games_all_button.png) left top no-repeat;
+}
+
+#gamesAll .gamesButtons:hover {
+ background-position: center bottom;
+}
+
+/* xGames List */
+
+
+/* Community Inset (News / Community Home) */
+
+#communityInset {
+ float: right;
+ margin: 0 0 4px;
+ width: 315px;
+}
+
+#communityInset .sectionBackground {
+ background-color: black;
+}
+
+/* xCommunity Inset */
+
+
+/* News */
+
+#news {
+ margin: 0 0 8px; /* bottom margin is 10-2px to comp for the -2px top margin on the sectionFooter */
+ height: 282px;
+}
+
+#news .sectionContent {
+ padding: 3px 3px 0;
+ height: 246px; /* fix the height as the accordion is less accurate in Safari and the bottom of the box wiggles if it's not fixed height */
+}
+
+#news .sectionFooter {
+ margin-top: -2px;
+}
+
+.newsHead {
+ height: 23px;
+ overflow: hidden;
+ padding: 0 8px;
+ outline: 0;
+ background-image: url(../img/images/home/news_head_bg.png);
+}
+
+.ui-accordion .newsHead { /* whole bar should appear to be a link with JS enabled */
+ cursor: pointer;
+}
+
+.newsHead a { /* title */
+ float: left;
+ padding: 3px 0 0 16px;
+ font-weight: bold;
+ background: url(../img/images/home/news_arrow.png) left 6px no-repeat;
+ text-decoration: none;
+}
+
+.ui-accordion .newsHead a { /* shouldn't look like links with JS enabled */
+ color: white;
+}
+
+#news h3.selected a { /* can't just do .newsHead.selected as IE doesn't support chaining classes like that */
+ background-image: url(../img/images/home/news_arrow_selected.png);
+}
+
+.newsHead span { /* date */
+ float: right;
+ padding: 3px 0 0;
+}
+
+.newsBody {
+ display: none;
+ height: 0px;
+ overflow: hidden;
+ background-image: url(../img/images/home/news_body_bg.png);
+}
+
+.newsBody#newsBodyFirst {
+ display: block;
+ height: 154px;
+}
+
+.newsBody img { /* header graphic */
+ display: block;
+ margin: auto;
+ width: 305px;
+ height: 78px;
+}
+
+.newsBody p { /* teaser text */
+ padding: 8px;
+ font-size: 11px;
+}
+
+/* xNews */
+
+
+/* Community Home */
+
+#community {
+ float: right;
+ position: relative;
+ width: 315px;
+ height: 114px;
+}
+
+#community img {
+ width: 315px;
+ height: 114px;
+}
+
+#community table {
+ position: absolute;
+ left: 12px;
+ bottom: 2px;
+ width: 291px;
+ height: 35px;
+ border-collapse: collapse;
+}
+
+#community td {
+ height: 35px;
+ padding: 0;
+ vertical-align: middle;
+}
+
+#communityIntro {
+ 
+  
+   width: 200px;
+  
+ 
+ font-weight: bold;
+}
+
+#communityGo {
+ text-align: right;
+}
+
+/* xCommunity Home */
+
+
+
+
+
+
+#feed {
+ height: 22px;
+}
+
+#page_content #feed a {
+ float: left;
+}

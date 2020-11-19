@@ -1,0 +1,481 @@
+
+
+
+
+#Banner {
+ background: url(../../img/jgs/global/banner.html) left top no-repeat;
+}
+
+
+
+
+
+
+ *{
+  margin: 0px;
+  padding: 0px;
+ }
+
+
+
+ #login_background{
+  /*=background: url('http://www.jagex.com/img/weblogin/loginarea_bg_nowarn.png') center top;
+  width: 740px;=*/
+  /* No recaptcha, no warning */
+  height: 290px;
+  padding: 0px;
+  position: relative;
+  padding-top: 54px;
+ }
+
+
+
+
+
+
+ #login_panel{
+  background-image: url(../../img/weblogin/login_box_topcfcd.png?0) !important;
+background-image: url(../../img/weblogin/login_box_top_ie6cfcd.png?0);
+
+  background-repeat:     no-repeat;
+  background-position:    left top;
+  width: 460px;
+  /* No recptcha, no warning */
+  margin: 0px auto 0px;
+  position: relative;
+  border: none;
+  padding: 5px 0px 0px 0px;
+  /*height: 205px;*/
+ }
+ #login_panel .bottom{
+  background-image: url(../../img/weblogin/login_box_bottomcfcd.png?0) !important;
+background-image: url(../../img/weblogin/login_box_bottom_ie6cfcd.png?0);
+
+  background-repeat:     no-repeat;
+  background-position:    left bottom;
+  padding-bottom: 5px;
+ }
+ #login_panel .bottomWarning{
+  padding-bottom: 0px;
+  border-bottom: 1px solid #828282;
+ }
+ #login_panel .repeat{
+  background: url('../../img/weblogin/login_box_repeat.png') repeat-y 0 0;
+  height: 1%; /* IE6 fix */
+ }
+
+ #login_form{
+  padding: 0px;
+  margin: 0px;
+  width: 460px;
+  overflow: hidden;
+ }
+ #login_panel label{
+  
+  font-size: 13px;
+  
+  font-weight:  bold;
+  color: black;
+  padding: 0px;
+ }
+ #login_panel #usernameSection label,
+ #login_panel #passwordSection label{
+  width: 115px;
+  text-align: right;
+  display: block;
+ }
+
+
+
+
+ #login_panel .top_section{
+  height: 117px;
+  position: relative;
+  overflow: hidden;
+ }
+ #message{
+  background: none;
+  color: black;
+  font-weight: bold;
+  
+  font-size: 1em;
+  
+  line-height:14px;
+  position: absolute;
+  top: 13px;
+  left: 0px;
+  text-align: center;
+  width: 100%;
+  height: 12px;
+ }
+ #login_panel div.section_form{
+  background: url('../../img/weblogin/input_bg.png') no-repeat right top;
+  height: 26px;
+  line-height: 26px;
+  margin: 0px auto 7px;
+  width: 401px;
+  padding-left: 6px;
+  left: 17px;
+  text-align: left;
+ }
+ #login_panel div.section_form input{
+  position: absolute;
+  left: 145px;
+  top: 0px;
+  height: 22px;
+ }
+ #login_panel #recaptcha_nojs_group textarea,
+ #login_panel div.section_form input{
+  background-color: transparent;
+  border: 0px;
+  width: 250px;
+  height: 22px;
+  line-height: 20px;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 2px 6px;
+ }
+ #login_panel #usernameSection{
+  position: absolute;
+  top: 45px;
+ }
+ #passwordSection{
+  position: absolute;
+  top: 81px;
+ }
+ #usernameSection input,
+ #passwordSection input{
+  float: right;
+ }
+
+ #recaptcha_response_field {
+  width:135px;
+ }
+
+ #recaptcha_error {
+  text-align: center;
+  font-size: 0px;
+ }
+
+ #login_panel #recaptcha{
+  background: url('../../img/weblogin/captchaback_top.png') no-repeat top left;
+  width: 384px;
+  padding: 0px;
+  height: auto;
+ }
+
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper{
+  margin: 0 4px 2px;
+  background: transparent;
+  height: 57px;
+  padding: 3px 0px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #recaptcha_image{
+  float: left;
+  margin-left: 10px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #recaptcha_image{
+  line-height: 12px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #recaptcha_image a{
+  color: black;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #icon_container{
+  float: right;
+  width: 40px;
+  height: 60px;
+  overflow: visible;
+  margin: 3px 0px 0px 0px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #icon_container a{
+  margin-bottom: 0px;
+  position: relative;
+  cursor: pointer;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_upper #icon_container a img{
+  top: 0px;
+  position: absolute;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower{
+  position: relative;
+  text-align: left;
+  margin: 0px;
+  padding: 2px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower label{
+  position: relative;
+  float: left;
+  margin: 0px 0px 0px 2px;
+  line-height: 28px;
+  font-size: 12px;
+  color: white;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower input {
+  background: url('../../img/weblogin/reCaptcha_input_back.png') transparent top left;
+  float:left;
+  height:20px;
+  margin:5px 2px;
+  width:175px;
+  position: relative;
+  top: auto;
+  left: auto;
+  padding: 0px;
+  font-size: 14px;
+ }
+ #login_panel #recaptcha #recaptcha_box #recaptcha_box_lower img {
+  float:left;
+  margin: 1px 0px 3px 0px;
+ }
+ #recaptcha_nonjs{
+  border: none;
+  margin: 2px;
+  width: 380px;
+  height: 300px;
+  background-color: white;
+  font-family: arial,helvetica,freesans,sans-serif;
+  color: black;
+ }
+ #login_panel #recaptcha_nojs_group{
+  margin: 12px;
+ }
+ #login_panel #recaptcha_nojs_group label{
+  line-height: 20px;
+  font-size: 12px;
+  color: white;
+ }
+
+ #recaptcha_box_nojs,
+ #recaptcha_box {
+  width: 384px;
+  padding: 0 4px 0 0;
+  background: url('../../img/weblogin/captchaback_bottom.png') no-repeat bottom left;
+  margin: 0px;
+ }
+ #recaptcha_box {
+  margin: 3px 0px 0px 0px;
+  display: none; /* Made visible if js is ON */
+ }
+ #recaptcha_box_top {
+  background: url(../../img/weblogin/recaptcha_box_top.png) right top no-repeat;
+  height: 2px;
+  width: 384px;
+  padding: 0 4px 0 0;
+  font-size: 0px;
+ }
+ #recaptcha_box_bottom {
+  background: url(../../img/weblogin/recaptcha_box_bottom.png) right top no-repeat;
+  height: 2px;
+  width: 384px;
+  padding: 0 4px 5px 0;
+  margin-top: 6px;
+  font-size: 0px;
+ }
+ #recaptcha_box_upper {
+  background: white;
+  padding: 2px;
+  min-height: 57px;
+  margin: 0 2px 6px 6px;
+ }
+ #recaptcha_box_lower {
+  padding: 2px;
+  margin: 0 2px 6px 6px;
+  text-align: right;
+ }
+ #recaptcha_image {
+  float:left;
+  height:auto !important;
+  min-height: 57px;
+ }
+ #refresh_recaptcha {
+  background: url(../../img/weblogin/new_recaptcha_highlight.png);
+  height: 29px;
+  width: 30px;
+  float: right;
+  overflow: hidden;
+ }
+ #audio_recaptcha {
+  background: url(../../img/weblogin/audio_recaptcha_highlight.png);
+  height: 29px;
+  width: 30px;
+  float: right;
+  overflow: hidden;
+ }
+ #image_recaptcha {
+  background: url(../../img/weblogin/image_recaptcha_highlight.png);
+  height: 29px;
+  width: 30px;
+  float: right;
+  overflow: hidden;
+ }
+ #refresh_recaptcha:hover img,
+ #audio_recaptcha:hover img,
+ #image_recaptcha:hover img {
+  visibility: hidden;
+ }
+ #recaptcha_box_logo {
+  vertical-align: middle;
+ }
+ #login_panel #recaptcha_nojs_group #recaptcha_challenge_field{
+  background: url('../../img/weblogin/reCaptcha_nj_input_back.png') no-repeat top left;
+  display: block;
+  height: 20px;
+  position: relative;
+  left: 0px;
+  margin: 0px auto 6px;
+ }
+
+
+
+ #login_panel .bottom_section{
+  height: 54px;
+  position: relative;
+  overflow: hidden;
+ }
+
+ #submit_button {
+  width: 266px;
+  height: 39px;
+  position: absolute;
+  left: 160px;
+  top: 0px;
+ }
+
+ #submit_button a{
+  cursor: pointer;
+  background: transparent url('../../img/weblogin/login.png') no-repeat top left;
+  width: 266px;
+  height: 39px;
+  display: block;
+ }
+ #submit_button button{
+  width: 267px;
+  height: 39px;
+  line-height: 39px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+  display: block;
+  padding: 0px;
+  border: none;
+  cursor: pointer;
+  background: transparent url('../../img/weblogin/login.png') no-repeat top left;
+  text-transform: lowercase;
+ }
+ #submit_button button:hover{
+  background-position: bottom left;
+  visibility: visible;
+  z-index: 10;
+ }
+ #remember{
+  width: 116px;
+  position: absolute;
+  top: 10px;
+  left: 40px;
+  text-align: left;
+ }
+ #remember input{
+  margin: 0px 4px 0px 0px;
+  cursor: pointer;
+  vertical-align: top;
+ }
+ #remember label{
+  font-size: 0.8em;
+  color: black;
+  line-height: 1.2em;
+  padding: 0px;
+  cursor: pointer;
+ }
+
+
+
+ .createaccount, .recoveraccount {
+  display: block;
+  text-align: center;
+  cursor: pointer;
+ }
+
+ /*.buttbg, */.butt1bg{
+  width: 228px;
+  height: 37px;
+  line-height: 37px;
+  position: absolute;
+  top: 0px;
+  background-image: url(../../img/weblogin/recovercfcd.png?0) !important;
+background-image: url(../../img/weblogin/recover_ie6cfcd.png?0);
+
+  right: 0px;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+ }
+ .buttons{
+  width: 464px;
+  height: 39px;
+  margin: 10px auto;
+ }
+ .buttons a{
+  width: 228px;
+  height: 37px;
+  cursor: pointer;
+  position: relative;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: bold;
+ }
+ .buttons a:hover{
+  background: transparent none;
+  border: none;
+ }
+ a:hover .buttbg, a:hover .butt1bg {
+  background-position:left bottom;
+ }
+ .createaccount {
+  float:left;
+ }
+
+ .recoveraccount {
+  float:right;
+ }
+
+
+
+
+#warning{
+ display: none;
+ background: url('../../img/weblogin/warning_border.png') no-repeat bottom left;
+ width: 460px;
+ height: 107px;
+ margin: 0px auto 12px;
+ position: relative;
+}
+#warning_image{
+ background: url('../../img/weblogin/ie8.png') no-repeat bottom left;
+ top: 18px;
+ left: 36px;
+ position: absolute;
+ width: 388px;
+ height: 70px;
+ 
+ 
+  font-size: 14px;
+ 
+ font-weight: bold;
+ color: black;
+ text-align: center;
+}
+#warning p{
+ margin: 6px 8px 0px;
+}
+
+
+
+#manualRedir{
+ text-align: center;
+ display: none;
+}
+#manualRedir span{
+ width: 400px;
+ color: black;
+}
+
+

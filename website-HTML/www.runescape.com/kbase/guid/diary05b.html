@@ -1,0 +1,463 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary05b by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../favicon.ico">
+<link rel="SHORTCUT ICON" href="../../favicon.ico">
+<link rel="apple-touch-icon" href="../../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="dev,development,diary,summoning,skill,development">
+<meta name="description" content="Read about the development stage of the Summoning skill.">
+<meta name="title" content="RuneScape - MMORPG - Summoning: Part 2 - Development">
+<title>RuneScape - MMORPG - Summoning: Part 2 - Development</title>
+<style type="text/css">/*\*/@import url(../../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../css/kbase-6.css);/**/</style>
+<script type="text/javascript" src="../../css/kbsearchfill-0.js"></script>
+<script type="text/javascript">
+new_subcat=add_subcat(4, 5, "Postbag from the Hedge", -1 == 5);new_subcat=add_subcat(4, 6, "Players' Gallery", -1 == 6);new_subcat=add_subcat(4, 19, "God letters", -1 == 19);new_subcat=add_subcat(775, 892, "How do I get started?", -1 == 892);new_subcat=add_subcat(775, 798, "Controls", -1 == 798);new_subcat=add_subcat(775, 795, "Combat", -1 == 795);new_subcat=add_subcat(775, 776, "Skills", -1 == 776);new_subcat=add_subcat(775, 7, "Quests", -1 == 7);new_subcat=add_subcat(775, 1, "Achievement Diary", -1 == 1);new_subcat=add_subcat(775, 10, "Activities", -1 == 10);new_subcat=add_subcat(775, 38, "Distractions and Diversions", -1 == 38);new_subcat=add_subcat(775, 831, "Miscellaneous Guides", -1 == 831);new_subcat=add_subcat(775, 881, "Area Guides", -1 == 881);new_subcat=add_subcat(20, 32, "A New Look RuneScape: Part 1", -1 == 32);new_subcat=add_subcat(20, 21, "Graphics Team - NPC Improvement Project", -1 == 21);new_subcat=add_subcat(9, 127, "Billing", -1 == 127);new_subcat=add_subcat(9, 126, "Technical", -1 == 126);new_subcat=add_subcat(9, 827, "Safety & Security Guidelines", -1 == 827);new_subcat=add_subcat(9, 872, "Other", -1 == 872);
+</script>
+<meta name="language" content="en, de">
+<meta name="description" content="Read about the development stage of the Summoning skill.">
+<style type="text/css">
+ 
+   
+  
+  .bigquote { font-size:medium; font-weight:bold; font-style:italic; text-align:left; } 
+  .mod { font-weight:bold; } 
+  .team { font-weight:bold; } 
+  .quote { font-style:italic; } 
+  .caption { font-size:85%; font-weight:bold; } 
+  .caption b { font-size:11px } 
+  
+ </style>
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHeadAdvert">
+<div id="headAdvert">
+<iframe name="Advert" src="../../../services.runescape.com/m%3dadvert/banner5052.html?size=730" allowtransparency="true" width="766" height="96" scrolling="no" frameborder="0"></iframe>
+<script type="text/javascript">
+  setTimeout(function() {
+  var url = "http" +
+  (/https:/.test(document.location.href) ? "s" : "") +
+  "://beacon.scorecardresearch.com/scripts/beacon.dll" +
+  "?c1=8&c2=6035824&c3=1271511541440201100" +
+  escape(document.location.href) +
+  "&c8=" + escape(document.title) +
+  "&c9=" + escape(document.referrer) +
+  "&c10=" + escape(screen.width+'x'+screen.height) +
+  "&rn=" + (new Date()).getTime();
+  var i = new Image();
+  i.src = url;
+  }, 1);
+  </script>
+<noscript>
+<img src="https://beacon.scorecardresearch.com/scripts/beacon.dll?c1=8&amp;c2=6035824&amp;c3=1271511541440201100&amp;x=NOJAVASCRIPT" alt="" />
+</noscript>
+</div>
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../../options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../../account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../../splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../../../services.runescape.com/m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../../services.runescape.com/m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../../parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../title.html"><img alt="English" title="English" src="../../img/main/layout/en.gif" /></a>
+<a href="../../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../img/main/layout/de.gif" /></a>
+<a href="../../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../img/main/layout/fr.gif" /></a>
+<a href="../../l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../title.html">Home</a> &gt;
+
+<a href="dev_diary-2.html">Development Diaries</a> &gt; Summoning: Part 2 - Development<br />
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+Summoning: Part 2 - Development
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_1">
+<div class="article">
+<div class="topshadow">
+<div class="bottomborder">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottomleft">
+<div class="bottomright">
+<div class="links"></div>
+<div style="text-align: center">
+<div style="text-align: justify;color: #402706; margin: auto;">
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/comic/comic05b.gif" style="display: block; margin: auto;" alt="comic strip">
+</p>
+<br>
+<h3 style="text-align: center;"><b>Summoning: Part 2 - Development</b></h3>
+<p>In the last <a href="diary05a.html">Summoning Development Diary</a> we focused on the new skill's concept stage – how and why it came to be and what changes it went through during its inception. In this second part we'll be taking a closer look at the content development process. We will give you an insight into how the awesome new Summoning non-player characters (NPCs) were designed and also explain how they were then implemented into the game. We'll even be tackling one of the world's most problematic evolutionary conundrums! So, without further ado...</p>
+<br>
+<p style="text-align: center;"><b>Where to begin?</b></p>
+<p>Creating an entirely new skill is no small feat. From start to finish it takes months of work, sometimes years, and every team makes a huge contribution. Summoning is unique in that a huge part of the skill involves interacting with new NPCs - Summoning familiars and pets - rather than having a new resource or equipment set. For concept artist, <span class="mod">Mod GG</span>, this meant creating dozens of sketches and designs for new NPCs: <span class="quote">"I love illustration, especially when <span class="team">RuneScape Content</span> give me a blank canvas to work from. Over a year-long period, I have created over 700 concept sketches!"</span></p>
+<table style="color: #402706; text-align:justify;">
+<tr width="100%">
+<td width="30%">
+<div style="float:left; margin:15px; text-align: left;">
+<p class="bigquote">
+"I can't draw for toffee, so I'd usually give Graphics a short description and say 'Go for it'. They really outdid themselves."</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Wilson</span><br><span class="team">RuneScape Content Team</span>
+</p>
+</div>
+</td>
+<td width="70%">
+<p>By his own admission, Summoning developer <span class="mod">Mod Wilson</span> was so confident in the <span class="team">Graphics</span> team's ability that he left much of the design work in their capable hands. <span class="quote">"For the new NPCs, <span class="team">Graphics</span> just went wild! I can't draw for toffee, so I'd usually give them a short description and say 'Go for it'. They really outdid themselves."</span> <span class="mod">Mod Woody</span> of <span class="team">Graphics</span> supports this sentiment: <span class="quote">"With something as big as a skill, you don't just want to make it look good, you want to push the boundaries."</span></p>
+<p>An update we made to RuneScape this year saw the introduction of diagonal movement to NPCs. Although this had been planned for some time, the creation of Summoning meant that the update was brought forward, as <span class="mod">Mod Woody</span> discovered: <span class="quote">"We avoided making larger familiars for Summoning at first, because they would often become stuck while trying to fit through small gaps. If we stuck with regular movement, we'd have limited what we could do with the skill, and we wouldn't have been able to create the huge NPCs we now have in production."</span></p>
+</td>
+</tr>
+</table>
+<p>The introduction of diagonal movement has allowed for some fantastic game improvements. Not only can we create bigger and more elaborate monsters, but also things like multiple followers, like in the <a href="another_slice_of_h_a_m_members.html">Another Slice of H.A.M.</a> quest. Changes like this aren't always so easy to implement, however, as <span class="mod">Mod Woody</span> explains. <span class="quote">"It's difficult when we can't tell players all the reasons we make a change, particularly if it's not well received. We always want to be open with the players, but at the same time we have to ensure we aren't spoiling our plans for future content."</span></p>
+<br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary05/largeconcept.gif" style="display: block; margin: auto;" alt=""><br>
+<span class="caption">Concept art for one of the larger Summoning familiars.</span> </p>
+<br>
+<p style="text-align: center;"><b>It's alive! Alive!</b></p>
+<p>While the <span class="team">Graphics</span> team were busy creating concept artwork, <span class="mod">Mod Wilson</span> got started on bringing the NPCs to life <span class="quote">"I started with chickens"</span>, he explains. As a first character test, code was borrowed from pet cats and the old Halloween zombies, creating a working version of an undead chicken. The code for this Fenkenstrain-like creation then became the basis for NPCs' artificial intelligence (AI). Once the AI was working (in a very rudimentary state), the first five prototype NPCs were put into production - the macaw, granite crab, gecko, dreadfowl and vampire bat. </p>
+<p>These first five prototypes represented the beginning of the <span class="team">Graphics</span> pipeline, which began with design ideas and concept art. When the first five had been conceived through <span class="mod">Mod GG's</span> concept sketches, they were then sent to modelling while he went on to concept five more. Once the modelling was complete, the NPCs were then animated – a process that involved more than a little 'method acting'. <span class="quote">"It's kind of embarrassing"</span>, <span class="mod">Mod Woody</span> admits, <span class="quote">"but we have to act things out. I had great fun doing the facial expressions of the pet monkey chat-heads. I looked at lots of videos of monkeys, and mimicked their expressions into a mirror on my desk".</span> This process made the animations much more fluid and realistic, not just for the in-game movements, but also for the NPC chat-heads.</p>
+<br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary05/monkeychat.gif" style="display: block; margin: auto;" alt=""><br>
+<span class="caption">The target animation for one of the monkey chat-heads.</span> </p>
+<br>
+<p>Amazingly, throughout the entire graphical development process, almost every single member of the <span class="team">Graphics</span> team has worked on some aspect of Summoning, whether it was animating a new NPC, or simply adding some textures to an already existing model. In total, it took 12 months of solid, hard work to concept, model, and animate all of the new Summoning NPCs. </p>
+<br>
+<p style="text-align: center;"><b>It's good to talk</b></p>
+<p>Even when new RuneScape characters are designed, animated and coded, they still lack something vitally important that really brings them to life – chat!</p>
+<div style="float:right; width:30%; margin:15px; text-align: left;">
+<p class="bigquote">
+"My favourite familiar is the karamthulhu. It's just so amusing - this evil squid, in a fishbowl, attacking your enemies."
+</p>
+<p>
+<img src="../../img/varrock/devdiary/jmod.gif"><span class="mod">Mod Wilson</span><br><span class="team">RuneScape Content Team</span>
+</p>
+</div>
+<p><span class="quote">"Creating the chat was probably the hardest part,"</span> says <span class="mod">Mod Wilson</span>, who was tasked with creating unique chat for over 70 familiars and pets. The challenge came in keeping the chat for so many NPCs interesting, and making them distinct enough from each other without relying on stereotypes. He continues: <span class="quote">"For a quest NPC there's no problem with chat because you've got the topic of the quest to talk about."</span></p>
+<p>After writing dialogue for around 50 Summoning NPCs, <span class="mod">Mod Wilson</span> passed the reins over to <span class="team">Web Content</span>, whose team of writers helped complete the chat for the remaining characters. <span class="quote">"Mod Wilson had done an incredible job coming up with so much unique dialogue,"</span> says <span class="team">Web Content</span>'s <span class="mod">Mod Kinder.</span> <span class="quote">"After being used to writing character chat for <a href="postbag.html">Postbag from the Hedge</a>, it was a great change of pace for our team to be writing in-game dialogue."</span></p>
+<p>Once all the work was complete, the word-count for the skill ended up exceeding an enormous 50,000 words! When asked about his favourite Summoning NPC, <span class="mod">Mod Wilson</span> answers immediately. <span class="quote">"That's easy; my favourite familiar is the karamthulhu. It's just so amusing – this evil squid, in a fishbowl, attacking your enemies."</span></p>
+<br>
+<p style="text-align: center;"><b>Which came first?</b></p>
+<p>And now to that evolutionary conundrum: what came first, the chicken or the egg? In the case of Summoning, it was eggs that came before chickens, as <span class="mod">Mod Mark</span> explains: <span class="quote"> "When we initially concepted the bird nests, they were designed to add some variety to Woodcutting, similar to getting gems in Mining. The main aim was to add the tree seeds, but we also wanted to add other aspects, like shiny jewellery that a magpie may have stolen, or even an egg that a bird may have laid. At that point - back in the concept phase of the Farming skill - we knew that these special eggs would need to be used as part of the Summoning skill. So, although the skill went through a variety of different designs and focuses, the decision to add eggs in the skill was actually made almost three years ago!”</span></p>
+<br>
+<p style="text-align: center;">
+<img src="../../img/varrock/devdiary/diary05/eggs.gif" style="display: block; margin: auto;" alt=""><br>
+<span class="caption">What purpose will these eggs have in Summoning? Find out soon!</span> </p>
+<br>
+<p>As we come to the final stages of development, <span class="mod">Mod Wilson</span> has some parting words. <span class="quote">"The scripting has gone smoothly, but most players are going to be more interested in how the skill looks...and the visuals are brilliant. The people that stick with the skill are going to get vast rewards."</span></p>
+<p style="text-align: left;"><b>Continued in: </b><a href="diary05c.html">Summoning: Part 3 - Testing</a></p>
+</div>
+</div>
+<div class="backtotop"><a href="#top">Back to the top</a></div>
+<br/>
+<center><img src="../../img/main/kbase/hr.png" alt=""/></center>
+<table class="bottomlinks">
+<tr>
+</tr>
+<tr>
+<td class="bot"><p><div class="bold">More articles in
+<a href="dev_diary-2.html">Development Diaries</a>
+</div></p>
+<ul class="bold">
+<li>
+<a href="diary05d.html">Summoning: Part 4 - Release</a>
+</li>
+<li>
+<a href="diary05c.html">Summoning: Part 3 - Testing</a>
+</li>
+<li>
+<b>Summoning: Part 2 - Development</b>
+</li>
+<li>
+<a href="diary05a.html">Summoning: Part 1 - Concept</a>
+</li>
+<li>
+<a href="diary04.html">RuneScape Content Team - Game Improvements</a>
+</li>
+</ul>
+</div>
+</td>
+</tr>
+<tr>
+<td colspan="2">
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="search">
+<div class="searchtop">
+<div class="bottombordershad">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="topleft">
+<div class="topright">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+<div class="searchtext">
+<form method="get" action="http://www.runescape.com/kbase/search.ws">
+<table class="bottomsearch">
+<tr>
+<td class="searchtitles" width="60" style="text-align: right">
+Search for:
+</td>
+<td>
+<input class="textinput" name="search_query" id="search_query" size="29" maxlength="300" value="">
+</td>
+<td rowspan="3">
+<table>
+<tr>
+<td>
+<label class="bold">Criteria:</label>
+</td>
+<td></td>
+<td><label class="bold">Find:</label></td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="title_chk" value="1" checked="checked">
+Title
+</td>
+<td>
+<input class="widget" type="checkbox" name="keywords_chk" value="1" checked="checked">
+Keywords
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="1" checked="checked">
+All
+</td>
+</tr>
+<tr>
+<td>
+<input class="widget" type="checkbox" name="description_chk" value="1" checked="checked">
+Description
+</td>
+<td>
+<input class="widget" type="checkbox" name="body_chk" value="1" checked="checked">
+Body
+</td>
+<td>
+<input class="widget" type="radio" name="and_rad" value="0">
+Any
+</td>
+</tr>
+</table>
+</td>
+</tr>
+<tr>
+<td class="searchtitles">
+Category:
+</td>
+<td>
+<select name="category" id="search_cat_select_footer" onchange="update_cats('_footer')">
+<option value="null"> - ALL - </option>
+<option value="4">Player Submissions</option>
+<option value="775">Game Guide</option>
+<option value="20">Development Diaries</option>
+<option value="9">Customer Support</option>
+<option value="3">Lores and Histories</option>
+</select></td>
+<td></td>
+</tr>
+<tr>
+<td class="searchtitles">
+Subcategory:
+</td>
+<td>
+<div id="search_subcat_footer" style="display: none;">
+<select name="subcat" id="search_subcat_select_footer">
+<option value="null"> - ALL - </option>
+</select>
+</div>
+<script type="text/javascript">
+ document.getElementById("search_subcat_footer").style.display="inline";
+ update_cats('_footer');
+</script>
+</td>
+<td></td>
+</tr>
+</table>
+<p style="text-align: center;font-size:11px;font-weight:bold; margin-bottom: 0px;">For help on searching, see our <a href="../searchtips.html">Search Tips</a> page.
+<input type="submit" name="submit" class="searchbutton" value="" alt="Search"></p>
+</form>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../../terms/terms.html">Terms &amp; Conditions</a> and <a href="../../privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/kbase/guid/diary05b by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:50:22 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,960 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from secure.runescape.com/m=create/l=3/index.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:14:01 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../../www.runescape.com/l%3d3/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../../www.runescape.com/l%3d3/favicon.ico">
+<link rel="apple-touch-icon" href="../../../www.runescape.com/l%3d3/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+pt, 
+Português (BR)
+">
+<meta name="keywords" content="MMORPG, jogos de RPG on-line gratuitos, multijogadores on-line, interpretação, jogos para multijogadores em massa, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Jogue RuneScape grátis e junte-se à comunidade global, cumprindo missões e ganhando tesouros enormes num mundo 3D cheio de magia e monstros.">
+<meta name="title" content="RuneScape - MMORPG - O Jogo Gratuito Número 1 para Multijogadores">
+<title>RuneScape - MMORPG - O Jogo Gratuito Número 1 para Multijogadores</title>
+<style type="text/css">/*\*/@import url(../../../www.runescape.com/l%3d3/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/l%3d3/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+ $("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; }) })
+</script>
+
+
+<style type="text/css">/*\*/@import url(../../../www.runescape.com/l%3d3/css/create3-16.css);/**/</style>
+<!--[if lte IE 7]><style type="text/css">
+ .brown_box select {margin-top: 1px;}
+ 
+</style><![endif]-->
+
+<script type="text/javascript" src="../../../www.jagex.com/l%3d3/js/create/ajax-0.js"></script>
+<script type="text/javascript">//<![CDATA[
+var last_ajax_username = "".toLowerCase();
+var last_ajax_response = '17';
+var has_valid_username = true;
+var blocked = false;
+var info_showing = '';
+var submitted = false;
+
+
+function _(objid){
+ if (typeof objid == "string") objid=document.getElementById(objid);
+ if (!objid) return;
+ return objid;
+}
+
+function findPosY(obj)
+{
+  var curtop = 0;
+  if(obj.offsetParent)
+      while(1)
+      {
+        curtop += obj.offsetTop;
+        if(!obj.offsetParent)
+          break;
+        obj = obj.offsetParent;
+      }
+  else if(obj.y)
+      curtop += obj.y;
+  return curtop;
+}
+
+function isLeapYear(year) {
+ if ( year < 0) return (year +1) % 4 == 0;//>
+ if ( year < 1582 ) return year % 4 == 0;//>
+ if ( year % 4 != 0 ) return false;
+ if ( year % 100 != 0 ) return true;
+ if ( year % 400 != 0 ) return false;
+ return true;
+}
+
+function display(obj){
+ info_showing = obj.id;
+ var jmesg = _('jmesg');
+ var srctext = _(obj.id + '_desc').innerHTML;
+ var ypos = findPosY(obj) - findPosY(_('formBoxes')) + 1;
+ jmesg.innerHTML = srctext;
+ jmesg.style.backgroundPosition =  '0px ' + (ypos - 10) + 'px';
+}
+
+function uncross(obj){
+ if(obj.className == 'fail'){
+  obj.className = '';
+ }
+ return;
+}
+
+function checkit(){
+ _('creatForm').action='';
+}
+
+function validate_username(doajax){
+ var obj = _('username');
+ var str = obj.value;
+ if(!str || str.length == 0){obj.className = ''; return false;}
+ if(str.length > 12 || !str.match(/^[a-zA-Z0-9_ ]+$/)){
+  obj.className = 'fail';
+  _('alts').style.display = 'none';
+  _('username_constraints_characters').className = 'error';
+  _('errorUsername').innerHTML = "Forneça um nome de usuário válido.";
+  obj.focus(); 
+  obj.select();
+  return false;
+ }else{
+  _('username_constraints_characters').className = '';
+  if(doajax == true && blocked == false){
+   if(str.toLowerCase() != last_ajax_username){
+    /* do ajax availability test */
+    last_ajax_username = str.toLowerCase();
+     callback_request("checkusername.ajax?username="+str, validate_username_ajax);
+     obj.className = 'loading';
+    }
+    else {
+     validate_username_ajax(last_ajax_response,true);
+    }
+  }else{
+   return true;
+  }
+ }
+}
+
+function validate_username_ajax(response,no_alts){
+ last_ajax_response = response;
+ var obj = _('username');
+ if(!response || response.length == 0){
+  obj.className = '';
+  _('alts').style.display = 'none';
+  _('username_constraints_characters').className = '';
+  _('errorUsername').innerHTML = '&nbsp;';
+  if(!no_alts && info_showing == 'usr'){
+   display(_('usr'));
+  }
+  return true;
+ }
+ var values = response.split(',');
+ if(values[0] == 17){
+  obj.className = 'success';
+  _('alts').style.display = 'none';
+  _('username_constraints_characters').className = '';
+  _('errorUsername').innerHTML = '&nbsp;';
+  if(!no_alts && info_showing == 'usr'){
+   display(_('usr'));
+  }
+  return true;
+ }
+ else if(values[0] == 36 || values[0] == 47){
+  blocked = true;
+  obj.className = '';
+  window.setTimeout('blocked = false',7000);
+  _('alts').style.display = 'none';
+  _('username_constraints_characters').className = '';
+  _('errorUsername').innerHTML = '&nbsp;';
+  if(!no_alts && info_showing == 'usr'){
+   display(_('usr'));
+  }
+  return true;
+ }
+ else{
+  obj.className = 'fail';
+  _('errorUsername').innerHTML = "Nome de usuário não disponível."; // "Forneça um nome de usuário válido.";
+  var alts = "Nome de usuário não disponível.";
+  if(values.length > 1){
+   alts += " Alternativas: ";
+   var limit = 9;
+   if(values.length < limit){limit = values.length;}//>
+   for(var i=1; i<limit; i++){//>
+    alts += values[i];
+    if(i+1 < limit){alts += ', ';}//>
+   }
+   alts += '.';
+  }
+  _('alts').innerHTML = alts;
+  _('alts').style.display = 'block';
+  _('username_constraints_characters').className = '';
+  if(!no_alts && info_showing == 'usr'){
+   display(_('usr'));
+  }
+  obj.focus(); 
+  obj.select();
+  return false;
+ }
+}
+
+function validate_password(error,startup){
+ var pass = _('password1');
+ var pass2 = _('password2');
+ var constraints = _('pass_constraints');
+ var str = pass.value;
+ var str2 = pass2.value;
+ if(!str || str.length == 0){
+  pass.className = '';
+  pass2.className = '';
+  constraints.className = '';
+  if(!startup && info_showing == 'pass'){display(_('pass'));}
+  return false;
+ }
+ else if(!str.match(/^[a-zA-Z0-9]{5,20}$/)){
+  pass.className = 'fail';
+  pass2.className = '';
+  constraints.className = 'error';
+  if(!startup && info_showing == 'pass'){display(_('pass'));}
+  _('errorPassword').innerHTML = "Forneça uma senha válida.";
+  return false;
+ }
+ else{
+  pass.className = '';
+  constraints.className = '';
+  if(!startup && info_showing == 'pass'){display(_('pass'));}
+  if(str2.length == 0){
+   pass2.className = '';
+   if(error == true){_('errorPassword').innerHTML = '&nbsp;';}
+   return false;
+  }
+  else if(str2 != str || !str2.match(/^[a-zA-Z0-9]{5,20}$/)){
+   pass2.className = 'fail';
+   _('errorPassword').innerHTML = "As duas senhas devem conferir.";
+   return false;
+  }
+  else{
+   pass2.className = '';
+   _('errorPassword').innerHTML = '&nbsp;';
+   return true;
+  }
+ }
+}
+
+function validate_date(reciprocate){
+ var day = _('day');
+ var month = _('month');
+ var year = _('year');
+ var yearint = parseInt(year.value,10);
+ // not y3k compliant! cripes!
+ if( yearint < 100 && yearint >= 0 ){//>
+  if(yearint + 2000 > 2010){
+   year.value = yearint + 1900;
+  }else{
+   year.value = yearint + 2000;
+  }
+ }
+ if(day.value < 0 || /*>*/ month.value < 0 || !year.value.match(/^[0-9]{4,4}$/)){return false;}//>
+ if(yearint > 2010 || yearint < 1890){return false;}//>
+ var monlens = new Array(31,28,31,30,31,30,31,31,30,31,30,31);
+ if(isLeapYear(year.value)){monlens[1] = 29;}
+ if(day.value > monlens[month.value]){
+  day.value = monlens[month.value];
+ }
+ if(reciprocate == true && validate_country(false) && _('errorData').innerHTML != '&nbsp;'){
+  _('errorData').innerHTML = '&nbsp;';
+ }
+ return true;
+}
+
+function validate_country(reciprocate){
+ var country = _('country');
+ if(country.value == '' || country.value <= 0){//>
+  display(_('data'));
+  return false;
+ }
+ if(reciprocate == true && validate_date(false) && _('errorData').innerHTML != '&nbsp;'){
+  _('errorData').innerHTML = '&nbsp;';
+ }
+ return true;
+}
+
+
+function validate_all(){
+ var returncode = true;
+ if(!validate_date(true) || !validate_country(true)){
+  returncode = false;
+  _('errorData').innerHTML = "Forneça uma data de nascimento e país válidos.";
+  display(_('data'));
+ }else{
+  _('errorData').innerHTML = '&nbsp;';
+ }
+ if(!validate_password(true,true)){
+  returncode = false;
+  _('errorPassword').innerHTML = "Forneça uma senha válida.";
+  display(_('pass'));
+ }else{
+  _('errorPassword').innerHTML = '&nbsp;';
+ }
+ if(!validate_username(false)){
+  returncode = false;
+  _('errorUsername').innerHTML = "Forneça um nome de usuário válido.";
+  _('username').focus(); 
+  _('username').select();
+  display(_('usr'));
+ }else{
+  _('errorUsername').innerHTML = '&nbsp;';
+ }
+ return returncode;
+}
+
+var input_order=["username","password1","password2","day","month","year","country","submitbutton"];
+
+function a_pos(val, arr) {
+ for(var i=0; i<arr.length; i++) if(val===arr[i]) return i;//>
+ return -1;
+}
+
+function handle_keypress(event) {
+ if(!event) event=window.event;
+ if(event.keyCode!=13) return true;
+ var p=a_pos(this.id, input_order);
+ if(p!=-1 && p<input_order.length-1) var next=_(input_order[p+1]);//>
+ if(next && next.focus) {
+  next.focus();
+  return false;
+ }
+ return true;
+}
+
+function install_textboxes() {
+ // Skip the last one (submit button), but it needs to be in the array so things know where to go
+ for(var i=0; i<input_order.length-1; i++) if(!_(input_order[i]).onkeypress){//>
+  _(input_order[i]).onkeypress=handle_keypress;
+ }
+}
+
+function install(){
+ validate_username(false);
+ validate_password(false,true);
+ install_textboxes();
+ if(_('jmesg').innerHTML == ''){display(_('usr'));}
+}
+
+// window.onload fix: Dean Edwards/Matthias Miller/John Resig
+function dummy() {
+};
+function init() {
+ if (arguments.callee.done) return;
+ arguments.callee.done = true;
+ if (_timer) clearInterval(_timer);
+ if (install) install();
+};
+/* for Mozilla/Opera9 */
+if (document.addEventListener) {
+ document.addEventListener("DOMContentLoaded", init, false);
+}
+/* for Internet Explorer */
+/*@cc_on @*/
+/*@if (@_win32)
+ document.write("<script id=__ie_onload defer src=dummy()><\/script>");
+ var script = _("__ie_onload");
+ script.onreadystatechange = function() {
+  if (this.readyState == "complete") {
+   init(); // call the onload handler
+  }
+ };
+/*@end @*/
+/* for Safari */
+if (/WebKit/i.test(navigator.userAgent)) { // sniff
+ var _timer = setInterval(function() {
+  if (/loaded|complete/.test(document.readyState)) {
+   init(); // call the onload handler
+  }
+ }, 10);
+}
+/* for other browsers */
+window.onload = init;//]]></script>
+<noscript>
+<style type="text/css">
+  #jmesgBg, #jmesg {
+   display: none;
+  }
+  #formBoxes {
+   padding-bottom: 1em;
+  }
+  .formDesc {
+   display: block;
+  }
+  .formDesc p {
+   display: inline;
+  }
+  .formSection {
+   padding: 1em 0 5px;
+  }
+  #pass_desc, #data_desc {
+   padding-top: 1em;
+   border-top: 2px solid black;
+  }
+  #alts {
+   display: block;
+   margin-bottom: 1em;
+   padding: 0;
+  }
+  #alts span {
+   cursor: default;
+   text-decoration: none;
+  }
+  #errorUsername, #errorPassword {
+   margin-bottom: 1em;
+  }
+ </style>
+</noscript>
+</head>
+<body id="navplay" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../../../www.runescape.com/l%3d3/title.html" id="home" class="tl"><span class="ts">Principal</span></a></li>
+<li class="top"><a id="play" class="tl" href="../../../www.runescape.com/l%3d3/game.html" onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Jogar Agora</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="index.html" class="fly"><span>Novo Usuário</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/game.html" id="playExisting" onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Usuário Existente</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/options.html" class="fly"><span>Opções Java</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../../../www.runescape.com/l%3d3/account_management.html"><span class="ts">Conta</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="https://ecommweb3.levelupgames.com.br/multivendas/frmLogin.aspx" class="fly" target="_blank" onclick="try{pageTracker._trackPageview('/outgoing/levelup/buycredit')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/levelup/buycredit')}catch(x){}"
+><span>Comprar créditos da Level Up!</span></a></li>
+<li><a href="https://secure.runescape.com/m=billing_core/l=3/voucher.ws" class="fly" onclick="try{pageTracker._trackPageview('/billing_core/levelup/redeempin')}catch(x){}; try{_pageTracker._trackPageview('/billing_core/levelup/redeempin')}catch(x){}"
+><span>Resgatar o PIN da Level Up!</span></a></li>
+<li><a href="../../m%3dweblogin/l%3d3/members/members.html" class="fly"><span>Benefícios dos membros</span></a></li>
+<li><a href="index-2.html" class="fly"><span>Criar uma nova conta</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/account_management.html" class="fly"><span>Gerenciamento de conta</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../../../www.runescape.com/l%3d3/kbase/guid/manual.html"><span class="ts">Guia do Jogo</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../../services.runescape.com/m%3ditemdb_rs/l%3d3/frontpage.html" class="fly"><span>Mercado Geral</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/rules_of_conduct.html" class="fly"><span>Regras</span></a></li>
+
+<li><a href="../../../www.runescape.com/l%3d3/splash.html" class="fly"><span>O que é RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="http://services.runescape.com/m=forum_pt/l=3/forums.ws"><span class="ts">Comunidade</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul>
+<li><a href="http://services.runescape.com/m=forum_pt/l=3/forums.ws" class="fly"><span>Fóruns</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dhiscore/l%3d3/hiscores.html" class="fly"><span>Recordes</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/Player_Submissions.html" class="fly"><span>Seção dos Jogadores</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dadventurers-log/l%3d3/index.html" class="fly"><span>Diário de aventuras</span></a></li>
+
+<li><a href="../../../services.runescape.com/m%3dpoll/l%3d3/index.html" class="fly"><span>Enquetes</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Download/Papel de parede</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../../../www.runescape.com/l%3d3/kbase/guid/Customer_Support.html"><span class="ts">Ajuda</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+
+<ul>
+<li><a href="../../../www.runescape.com/l%3d3/kbase/guid/Customer_Support.html" class="fly"><span>Suporte ao Cliente</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Recuperação de senha</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Desbloquear conta</span></a></li>
+<li><a href="../../m%3dweblogin/l%3d3/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Apelar Suspensão/Restrição</span></a></li>
+<li><a href="../../../services.runescape.com/m%3dbugtracker_v4/l%3d3/index.html" class="fly"><span>Enviar um relatório de erro</span></a></li>
+<li><a href="../../../www.runescape.com/l%3d3/parents.html" class="fly"><span>Guia para Pais</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../m%3dweblogin/l%3d3/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Login</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../../../www.runescape.com/l%3d3/game.html" class="HoverImg" id="playBannerNoad"><img src="../../../www.runescape.com/l%3d3/img/main/skins/default/playnowc20a.png?12" alt="Jogar Agora" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../../../www.runescape.com/title.html"><img alt="English" title="English" src="../../../www.runescape.com/l%3d3/img/main/layout/en.gif" /></a>
+<a href="../../../www.runescape.com/l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../../www.runescape.com/l%3d3/img/main/layout/de.gif" /></a>
+<a href="../../../www.runescape.com/l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../../www.runescape.com/l%3d3/img/main/layout/fr.gif" /></a>
+<a href="../../../www.runescape.com/l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../../www.runescape.com/l%3d3/img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Localização: </b> <a href="../../../www.runescape.com/l%3d3/title.html">Principal</a> &gt;
+Criar uma conta gratuita
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+Criar uma conta gratuita
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="brown_background sectionContentContainer">
+<div class="inner_brown_background">
+<div class="brown_box">
+<div class="statusbarwrap">
+<div id="statusbar">
+<div class="left">
+<div class="right">
+<div class="statusbutton firstoffspring firstActive"><div class="subButton left">1. Insira seus dados</div></div>
+<div class="statusbutton middleoffspring "><div class="subButton middle">2. Insira seu e-mail (opcional)</div></div>
+<div class="statusbutton lastoffspring "><div class="subButton right">3. Criação de conta concluída</div></div>
+<br style="clear: both;"/>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+
+
+<div class="width756">
+<div id="errorlog" style="position: absolute; top: 5px; right: 5px; float: right; padding: 5px;"></div>
+<form id="createForm" action="https://secure.runescape.com/m=create/l=3/input_details.ws" method="post" onsubmit="return checkit()">
+<div class="inner_brown_box brown_box_stack" id="cIntro">
+Criar uma conta é muito simples e não custa nada. Você terá acesso aos mundos gratuitos em RuneScape e FunOrb por quanto tempo desejar. Basta preencher o formulário abaixo, clicar em "Continuar" e se preparar para jogar! </div>
+<div id="formBoxes" class="inner_brown_box brown_box_stack brown_box_padded">
+
+<div class="formDesc" id="usr_desc">
+<p class="error" id="alts"  style="display:none;">Nome de usuário não disponível.
+</p>
+<p id="username_constraints_characters">Nomes de usuário podem ter até 12 caracteres e podem conter letras, números, espaços e sublinhados.</p>
+<p>Ele não deve conter seu nome verdadeiro, data de nascimento ou outras informações pessoais identificáveis, para proteger sua identidade.</p>
+<p>Ele não deve ser ofensivo nem transgredir nossos <a href="../../../www.runescape.com/l%3d3/terms/terms.html" onclick="window.open(this.href+'#create','_blank','width=800,height=600,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=no,resizable=yes'); return false;" target="_blank">Termos e Condições</a>.</p>
+</div>
+<div class="formSuperGroup single_line">
+<div class="formSection" id="usr">
+<input style="display:none;" type="hidden" id="origusername" name="origusername" value="">
+<label for="username">Nome de usuário:</label>
+<input id="username" name="username" autocomplete="off" maxlength="12" onfocus="display(this.parentNode);" onkeypress="display(this.parentNode);uncross(this);" onblur="validate_username(true);" value="">
+<br class="clear" />
+</div>
+<div class="error formError" id="errorUsername">&nbsp;</div>
+<br class="clear" />
+</div>
+<div class="formSuperGroup double_line">
+<div class="formDesc" id="pass_desc">
+<p>NUNCA dê sua senha para ninguém, nem mesmo para funcionários da Jagex. Nossos funcionários nunca vão perguntar a sua senha.</p>
+<p id="pass_constraints">As senhas podem ter de 5 a 20 caracteres e podem conter letras e números.</p>
+<p>Recomendamos que você use uma combinação de números e letras em sua senha para que outras pessoas não possam descobri-la facilmente.</p>
+</div>
+<div id="pass" class="formGroup">
+<div class="formSection">
+<label for="password1">Senha:</label>
+<input id="password1" name="password1" type="password" autocomplete="off" value="" maxlength="20" onfocus="display(this.parentNode.parentNode);uncross(this)" onblur="validate_password(true);">
+</div>
+<div class="formSection">
+<label for="password2">Confirmar senha:</label>
+<input id="password2" name="password2" type="password" autocomplete="off" value="" maxlength="20" onfocus="display(this.parentNode.parentNode);uncross(this)" onblur="validate_password(true);">
+</div>
+<br class="clear" />
+</div>
+<div class="error formError" id="errorPassword">&nbsp;</div>
+<br class="clear" />
+</div>
+<div class="formDesc" id="data_desc">
+<p>Precisamos da sua data de nascimento para criar a conta, mas não repassaremos esse dado a terceiros.</p>
+<p>Precisamos saber seu país de residência para podermos identificar sua conta.</p>
+<p>Para mais detalhes, veja nossa <a href="../../../www.runescape.com/l%3d3/privacy/privacy.html" onclick="window.open(this.href+'#create','_blank','width=800,height=600,toolbar=no,location=no,directories=no,status=no,menubar=no,scrollbars=yes,copyhistory=no,resizable=yes'); return false;" target="_blank">Política de Privacidade</a>.</p>
+</div>
+<div class="formSuperGroup double_line">
+<div id="data" class="formGroup">
+<div class="formSection">
+<label for="day">Data de nascimento:</label>
+<div>
+<select id="day" name="day" onfocus="display(this.parentNode.parentNode.parentNode);" onchange="validate_date(true)">
+<option value="-1" selected="selected" disabled="disabled">Dia</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+<option value="8">8</option>
+<option value="9">9</option>
+<option value="10">10</option>
+<option value="11">11</option>
+<option value="12">12</option>
+<option value="13">13</option>
+<option value="14">14</option>
+<option value="15">15</option>
+<option value="16">16</option>
+<option value="17">17</option>
+<option value="18">18</option>
+<option value="19">19</option>
+<option value="20">20</option>
+<option value="21">21</option>
+<option value="22">22</option>
+<option value="23">23</option>
+<option value="24">24</option>
+<option value="25">25</option>
+<option value="26">26</option>
+<option value="27">27</option>
+<option value="28">28</option>
+<option value="29">29</option>
+<option value="30">30</option>
+<option value="31">31</option>
+</select>
+<select id="month" name="month" onfocus="display(this.parentNode.parentNode.parentNode);" onchange="validate_date(true)">
+<option value="-1" selected="selected" disabled="disabled">Mês</option>
+<option value="0">janeiro</option>
+<option value="1">fevereiro</option>
+<option value="2">março</option>
+<option value="3">abril</option>
+<option value="4">maio</option>
+<option value="5">junho</option>
+<option value="6">julho</option>
+<option value="7">agosto</option>
+<option value="8">setembro</option>
+<option value="9">outubro</option>
+<option value="10">novembro</option>
+<option value="11">dezembro</option>
+</select>
+<input id="year" name="year" maxlength="4" value="Ano" onfocus="display(this.parentNode.parentNode.parentNode); if(this.value=='Ano'){this.value='';}" onblur="if(this.value==''){this.value='Ano';}" onchange="validate_date(true)">
+</div>
+</div>
+<div class="formSection country" >
+<label for="country">País de residência:</label>
+<select id="country" name="country" onfocus="display(this.parentNode.parentNode);">
+<option value="-1">Escolha um</option>
+<optgroup label="---">
+<option value="31">Brasil</option>
+<option value="179">Portugal</option>
+</optgroup>
+<optgroup label="---">
+<option value="5">Afeganistão</option>
+<option value="240">África do Sul</option>
+<option value="8">Albânia</option>
+<option value="56">Alemanha</option>
+<option value="3">Andorra</option>
+<option value="11">Angola</option>
+<option value="7">Anguilla</option>
+<option value="12">Antártida</option>
+<option value="6">Antígua e Barbuda</option>
+<option value="10">Antilhas Holandesas</option>
+<option value="187">Arábia Saudita</option>
+<option value="61">Argélia</option>
+<option value="13">Argentina</option>
+<option value="9">Armênia</option>
+<option value="17">Aruba</option>
+<option value="16">Austrália</option>
+<option value="15">Áustria</option>
+<option value="18">Azerbaijão</option>
+<option value="32">Bahamas</option>
+<option value="25">Bahrain</option>
+<option value="21">Bangladesh</option>
+<option value="20">Barbados</option>
+<option value="22">Bélgica</option>
+<option value="37">Belize</option>
+<option value="27">Benin</option>
+<option value="28">Bermuda</option>
+<option value="36">Bielorrússia</option>
+<option value="30">Bolívia</option>
+<option value="19">Bósnia e Herzegovina</option>
+<option value="35">Botsuana</option>
+<option value="31">Brasil</option>
+<option value="29">Brunei Darussalam</option>
+<option value="24">Bulgária</option>
+<option value="23">Burkina Faso</option>
+<option value="26">Burundi</option>
+<option value="33">Butão</option>
+<option value="52">Cabo Verde</option>
+<option value="47">Camarões</option>
+<option value="114">Camboja</option>
+<option value="38">Canadá</option>
+<option value="207">Chade</option>
+<option value="46">Chile</option>
+<option value="48">China</option>
+<option value="54">Chipre</option>
+<option value="192">Cingapura</option>
+<option value="49">Colômbia</option>
+<option value="116">Comores</option>
+<option value="42">Congo</option>
+<option value="40">Congo, República Democrática do</option>
+<option value="119">Coréia, República da</option>
+<option value="118">Coréia, República Popular Democrática da</option>
+<option value="44">Costa do Marfim (Cote D'Ivoire)</option>
+<option value="50">Costa Rica</option>
+<option value="97">Croácia</option>
+<option value="51">Cuba</option>
+<option value="58">Dinamarca</option>
+<option value="57">Djibuti</option>
+<option value="59">Dominica</option>
+<option value="64">Egito</option>
+<option value="203">El Salvador</option>
+<option value="4">Emirados Árabes Unidos</option>
+<option value="62">Equador</option>
+<option value="66">Eritréia</option>
+<option value="196">Eslováquia</option>
+<option value="194">Eslovênia</option>
+<option value="67">Espanha</option>
+<option value="225" selected="selected">Estados Unidos</option>
+<option value="63">Estônia</option>
+<option value="68">Etiópia</option>
+<option value="185">Federação Russa</option>
+<option value="70">Fiji</option>
+<option value="172">Filipinas</option>
+<option value="69">Finlândia</option>
+<option value="74">França</option>
+<option value="75">França Metropolitana</option>
+<option value="76">Gabão</option>
+<option value="84">Gâmbia</option>
+<option value="81">Gana</option>
+<option value="79">Geórgia</option>
+<option value="82">Gibraltar</option>
+<option value="78">Granada</option>
+<option value="88">Grécia</option>
+<option value="83">Groenlândia</option>
+<option value="86">Guadalupe</option>
+<option value="91">Guam</option>
+<option value="90">Guatemala</option>
+<option value="93">Guiana</option>
+<option value="80">Guiana Francesa</option>
+<option value="85">Guiné</option>
+<option value="87">Guiné Equatorial</option>
+<option value="92">Guiné-Bissau</option>
+<option value="98">Haiti</option>
+<option value="96">Honduras</option>
+<option value="94">Hong Kong</option>
+<option value="99">Hungria</option>
+<option value="237">Iêmen</option>
+<option value="34">Ilha Bouvet</option>
+<option value="53">Ilha Christmas</option>
+<option value="95">Ilha Heard e Ilhas McDonald</option>
+<option value="158">Ilha Norfolk</option>
+<option value="121">Ilhas Cayman</option>
+<option value="39">Ilhas Cocos (Keeling)</option>
+<option value="45">Ilhas Cook</option>
+<option value="73">Ilhas Faroé</option>
+<option value="89">Ilhas Geórgia do Sul e Sandwich do Sul</option>
+<option value="71">Ilhas Malvinas</option>
+<option value="144">Ilhas Marianas do Norte</option>
+<option value="138">Ilhas Marshall</option>
+<option value="224">Ilhas Menores Distantes dos Estados Unidos</option>
+<option value="188">Ilhas Salomão</option>
+<option value="206">Ilhas Turks e Caicos</option>
+<option value="232">Ilhas Virgens Americanas</option>
+<option value="231">Ilhas Virgens Britânicas</option>
+<option value="103">Índia</option>
+<option value="100">Indonésia</option>
+<option value="106">Irã, República Islâmica do</option>
+<option value="105">Iraque</option>
+<option value="101">Irlanda</option>
+<option value="107">Islândia</option>
+<option value="102">Israel</option>
+<option value="108">Itália</option>
+<option value="109">Jamaica</option>
+<option value="111">Japão</option>
+<option value="110">Jordânia</option>
+<option value="122">Kazaquistão</option>
+<option value="115">Kiribati</option>
+<option value="120">Kuwait</option>
+<option value="123">Laos, República Democrática Popular do</option>
+<option value="129">Lesoto</option>
+<option value="132">Letônia</option>
+<option value="124">Líbano</option>
+<option value="128">Libéria</option>
+<option value="133">Líbia, Jamahiriya Árabe da</option>
+<option value="126">Liechtenstein</option>
+<option value="130">Lituânia</option>
+<option value="131">Luxemburgo</option>
+<option value="143">Macau</option>
+<option value="139">Macedônia, Antiga República Iugoslava da</option>
+<option value="137">Madagascar</option>
+<option value="153">Malásia</option>
+<option value="151">Malawi</option>
+<option value="150">Maldivas</option>
+<option value="140">Mali</option>
+<option value="148">Malta</option>
+<option value="228">Mar Sagrado (Cidade-Estado do Vaticano)</option>
+<option value="134">Marrocos</option>
+<option value="145">Martinica</option>
+<option value="149">Maurício</option>
+<option value="146">Mauritânia</option>
+<option value="238">Mayotte</option>
+<option value="152">México </option>
+<option value="141">Mianmá</option>
+<option value="72">Micronésia, Estados Federados da</option>
+<option value="154">Moçambique </option>
+<option value="136">Moldávia, República da</option>
+<option value="135">Mônaco</option>
+<option value="142">Mongólia</option>
+<option value="242">Montenegro</option>
+<option value="147">Montserrat</option>
+<option value="155">Namíbia</option>
+<option value="164">Nauru</option>
+<option value="163">Nepal</option>
+<option value="160">Nicarágua</option>
+<option value="157">Níger</option>
+<option value="159">Nigéria</option>
+<option value="165">Niue</option>
+<option value="162">Noruega</option>
+<option value="156">Nova Caledônia</option>
+<option value="166">Nova Zelândia</option>
+<option value="167">Omã</option>
+<option value="161">Países Baixos</option>
+<option value="180">Palau</option>
+<option value="178">Palestina, Território Ocupado da</option>
+<option value="168">Panamá</option>
+<option value="171">Papua-Nova Guiné</option>
+<option value="173">Paquistão</option>
+<option value="181">Paraguai</option>
+<option value="169">Peru</option>
+<option value="176">Pitcairn</option>
+<option value="170">Polinésia Francesa</option>
+<option value="174">Polônia</option>
+<option value="177">Porto Rico</option>
+<option value="179">Portugal</option>
+<option value="182">Qatar</option>
+<option value="112">Quênia</option>
+<option value="113">Quirguistão</option>
+<option value="77">Reino Unido</option>
+<option value="41">República Centro-Africana</option>
+<option value="55">República Checa</option>
+<option value="60">República Dominicana</option>
+<option value="183">Reunião</option>
+<option value="184">Romênia</option>
+<option value="186">Ruanda</option>
+<option value="65">Saara Ocidental</option>
+<option value="175">Saint Pierre e Miquelon</option>
+<option value="236">Samoa</option>
+<option value="14">Samoa Americana</option>
+<option value="198">San Marino</option>
+<option value="193">Santa Helena</option>
+<option value="125">Santa Lúcia</option>
+<option value="117">São Cristóvão e Nevis</option>
+<option value="202">São Tome e Príncipe</option>
+<option value="229">São Vicente e Granadinas</option>
+<option value="189">Seicheles</option>
+<option value="199">Senegal</option>
+<option value="197">Serra Leoa</option>
+<option value="239">Sérvia</option>
+<option value="204">Síria, República Árabe da</option>
+<option value="200">Somália</option>
+<option value="127">Sri Lanka</option>
+<option value="205">Suazilândia</option>
+<option value="190">Sudão</option>
+<option value="191">Suécia</option>
+<option value="43">Suíça</option>
+<option value="201">Suriname</option>
+<option value="195">Svalbard e Jan Mayen</option>
+<option value="211">Tadjiquistão</option>
+<option value="210">Tailândia</option>
+<option value="220">Taiwan</option>
+<option value="221">Tanzânia, República Unida da</option>
+<option value="208">Terras Austrais e Antárticas Francesas</option>
+<option value="104">Território Britânico do Oceano Índico</option>
+<option value="216">Timor-Leste</option>
+<option value="209">Togo</option>
+<option value="212">Tokelau</option>
+<option value="215">Tonga</option>
+<option value="218">Trinidad e Tobago</option>
+<option value="214">Tunísia</option>
+<option value="213">Turcomenistão</option>
+<option value="217">Turquia</option>
+<option value="219">Tuvalu</option>
+<option value="222">Ucrânia</option>
+<option value="223">Uganda</option>
+<option value="226">Uruguai</option>
+<option value="227">Uzbequistão</option>
+<option value="234">Vanuatu</option>
+<option value="230">Venezuela</option>
+<option value="233">Vietnã</option>
+<option value="235">Wallis e Futuna</option>
+<option value="241">Zâmbia</option>
+<option value="243">Zimbábue</option>
+</optgroup>
+</select>
+</div>
+<br class="clear" />
+</div>
+<div class="error formError" id="errorData">&nbsp;</div>
+<br class="clear" />
+</div>
+<br class="clear" />
+<div id="jmesgBg" class="input_details"><div id="jmesg" class="input_details"></div></div>
+</div>
+<div class="inner_brown_box brown_box_padded">
+<button type="submit" value="" id="submitbutton" onclick="return validate_all();">
+</button>
+</div>
+</form>
+</div>
+
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc"> Todos os direitos reservados © 1999 - 2010 Jagex Ltd.<br /> O uso deste site está sujeito aos nossos <a href="../../../www.runescape.com/l%3d3/terms/terms.html">Termos e Condições</a> e <a href="../../../www.runescape.com/l%3d3/privacy/privacy.html">Política de Privacidade</a>. </div>
+<a class="jagexlink" href="../../../www.jagex.com/index.html" target="_blank">
+<img src="../../../www.runescape.com/l%3d3/img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<div style="color:white; margin: 5px auto; width: 766px;">
+<img alt="NÃO RECOMENDADO PARA MENORES DE 12 ANOS - Tema: Estratégia - Contém: Agressão Física" style="float: right;" src="../../../www.runescape.com/l%3d3/img/affil/levelup/age_rating.jpg"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from secure.runescape.com/m=create/l=3/index.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:14:04 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

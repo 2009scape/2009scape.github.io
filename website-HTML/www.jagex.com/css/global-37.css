@@ -1,0 +1,840 @@
+
+
+/*
+=============================
+=============================
+Site: JAGEX
+Theme: Default
+=============================
+Author: John Sim
+Email: theWeb@jagex.com
+Version: 1.0
+=============================
+Last Updated: 23.04.2007
+=============================
+=============================
+
+#############################
+#############################
+Notes:.
+1. Check Browsers: - ie 5,6
+    - Safari
+    - Camino
+    - Konquerer
+2. Check Browser versions.
+3. XDA.css
+4. Print.css
+5. Tidy CSS
+#############################
+#############################
+
+*/
+
+/* Tags */
+body {
+ background: #fff;
+ text-align: center;
+ font-family: Arial,Helvetica,FreeSans,Sans-Serif;
+ color:#000;
+ margin: 6px 0px;
+}
+
+img {
+ padding:0px;
+ margin:0px;
+ border:none;
+ display:block;
+}
+
+a {
+ text-decoration:none;
+ color:#000;
+ outline:none;
+}
+
+th {
+ font-size:12px;
+}
+
+th a {
+ color:#4f4f4f;
+ margin-bottom:3px;
+}
+
+td a {
+ text-decoration:underline;
+ color:#000;
+ padding: 5px 0px;
+}
+
+td a:hover {
+ font-weight:bold;
+ color:#000;
+}
+
+td {
+ font-size:11px;
+}
+
+table {
+ width:100%;
+ padding:0px;
+}
+
+form {
+ margin:0px;
+}
+
+caption {
+ display:none;
+}
+/* xTags */
+
+/* General */
+
+.email {
+ color:#d1272e;
+ font-family:trebuchet MS;
+ font-size:14px;
+}
+
+.email img {
+ margin-top:5px;
+ color:#d1272e;
+ font-family:trebuchet MS;
+ font-size:14px;
+ display:inline;
+ vertical-align:bottom;
+ padding-bottom:1px;
+}
+
+.indent {
+ padding-left:20px;
+}
+
+.clear {
+ clear:both;
+}
+
+.title {
+ display:block;
+ background: url(../img/corporate/images/title_bar.gif) repeat-x 0px -33px;
+ height:33px;
+}
+
+.title span {
+ display:block;
+ height:33px;
+ background: url(../img/corporate/images/title_bar.gif) no-repeat;
+}
+
+.title .link {
+ display:block;
+ height:33px;
+ background: url(../img/corporate/images/title_bar.gif) no-repeat right -66px;
+ padding: 0px 15px;
+ line-height:32px;
+}
+.right {
+ text-align:right;
+ margin-left:auto;
+}
+.floatRight {
+ float:right;
+}
+.floatLeft {
+ float:left;
+}
+.info {
+ font-size:10.5px !important;
+}
+
+.important {
+ color:red;
+ font-weight:bold;
+}
+
+.link {
+ font-size:11px;
+}
+
+.link a {
+ text-decoration: underline;
+}
+ div.hr {
+  height: 2px;
+  background:#cfcfcf;
+  margin: 15px 0px;
+}
+div.hr hr {
+  display: none;
+}
+.printView {
+ display:none;
+}
+
+.printHide {
+
+}
+
+/* xGeneral */
+
+/* Site Layout */
+#container {
+ position:relative;
+ text-align:left;
+ margin-left:auto;
+ margin-right:auto;
+ width: 766px;
+}
+ /* Header */
+ #header2 {
+  background: url(../img/corporate/images/header_bar.jpg) repeat-x 0px -216px;
+  height:108px;
+  margin-top:12px;
+ }
+
+ #header2 .lftCnr {
+  background: url(../img/corporate/images/header_bar.jpg) no-repeat left -108px;
+  height:108px;
+ }
+
+ #header2 .rghtCnr {
+  background: url(../img/corporate/images/header_bar.jpg) no-repeat right 0px;
+  height:108px;
+  position:relative;
+ }
+
+ #header {
+  background: url(../img/corporate/images/header_bar3.jpg) repeat-x 0px -248px;
+  height:124px;
+  margin-top:12px;
+ }
+
+ #header .lftCnr {
+  background: url(../img/corporate/images/header_bar3.jpg) no-repeat left -124px;
+  height:124px;
+ }
+
+ #header .rghtCnr {
+  background: url(../img/corporate/images/header_bar3.jpg) no-repeat right 0px;
+  height:124px;
+  position:relative;
+ }
+
+/* Replaced for new "GAMES STUDIO" logo
+ #logo {
+  height:51px;
+  width:172px;
+  margin:0px;
+  position:absolute;
+  top:16px;
+  left:20px;
+ }
+*/
+ #logo {
+  height:57px;
+  width:189px;
+  margin:0px;
+  position:absolute;
+  top:17px;
+  left:17px;
+ }
+/*  Replaced for new "GAMES STUDIO" logo
+ #logo a {
+  display:block;
+  height:48px;
+  width:168px;
+ }
+*/
+ #logo a {
+  display:block;
+  height:57px;
+  width:189px;
+ }
+
+ #navInfo {
+  position:absolute;
+  right:10px;
+ }
+
+ #navInfo, #navInfo a {
+  font-weight:bold;
+  font-size:10px;
+  color: #006CA5;
+  display:block;
+ }
+
+ #navInfo a {
+  padding:10px;
+  text-decoration:underline;
+  letter-spacing:1px;
+  padding-left:20px;
+  background: url(../img/corporate/images/ico_contact2.gif) no-repeat 0px;
+ }
+
+ #navInfo a:hover {
+  text-decoration:none;
+ }
+ /* xHeader */
+ /* Nav */
+ #navContainer {
+  /*background: url(http://www.jagex.com/img/corporate/images/menu_bars.gif) repeat-x 0px -44px;*/
+  bottom:0px;
+  height:44px;
+  margin-left:9px;
+  position:absolute;
+ }
+
+ #navContainer .rghtCnr {
+  background: url(../img/corporate/images/menu_bars.gif) no-repeat right -88px;
+  height:44px;
+ }
+
+ #navContainer .lftCnr {
+  background: url(../img/corporate/images/menu_bars.gif) no-repeat left 0px;
+  height:44px;
+  padding-left: 15px;
+ }
+
+ #nav {
+  margin:0px;
+  padding: 10px 0px 0px 0px;
+  height:33px;
+ }
+
+ #nav li {
+  float:left;
+  list-style:none;
+  text-align: center;
+  height:33px;
+ }
+
+ #nav li a, #nav li span {
+  display:block;
+  height:33px;
+  line-height:30px;
+  font-size:11px;
+  color:#000;
+ }
+
+ #nav li a:hover .borderRght {
+  background: url(../img/corporate/images/nav_divideHover.jpg) no-repeat left 0px;
+ }
+
+ #nav li a:hover .borderLft {
+  background: url(../img/corporate/images/nav_divideHover.jpg) no-repeat right -34px;
+  cursor:pointer;
+ }
+
+ #nav li:hover, #nav a:hover {
+  background: #fff url(../img/corporate/images/nav_bg.jpg) repeat-x;
+ }
+
+ /* Nav Activator */
+ body#home #navHome,
+ body#about #navAbout,
+ body#jobs #navJobs,
+ body#press #navPress,
+ body#advertisers #navAdvertisers,
+ body#parentsguide #navParentsGuide,
+ body#givingBack #navGivingBack,
+ body#contact #navContact
+ {
+  background: #fff url(../img/corporate/images/nav_bg.jpg) repeat-x;
+ }
+
+ body#home #navHome .borderLft,
+ body#about #navAbout .borderLft,
+ body#jobs #navJobs .borderLft,
+ body#press #navPress .borderLft,
+ body#advertisers #navAdvertisers .borderLft,
+ body#parentsguide #navParentsGuide .borderLft,
+ body#givingBack #navGivingBack .borderLft,
+ body#contact #navContact .borderLft
+ {
+  background: url(../img/corporate/images/nav_divideHover.jpg) no-repeat right -34px;
+ }
+
+ body#home #navHome .borderRght,
+ body#about #navAbout .borderRght,
+ body#jobs #navJobs .borderRght,
+ body#press #navPress a,
+ body#advertisers #navAdvertisers .borderRght,
+ body#parentsguide #navParentsGuide .borderRght,
+ body#givingBack #navGivingBack .borderRght,
+ body#contact #navContact .borderRght
+ {
+  font-weight: bold;
+  background: url(../img/corporate/images/nav_divideHover.jpg) no-repeat left 0px;
+ }
+ /* xNav Activator */
+
+ #nav li .borderLft {
+  background: url(../img/corporate/images/nav_divide.gif) no-repeat right;
+ }
+
+ #nav li a:hover {
+  font-weight:bold;
+ }
+
+ #navHome {
+  width:93px;
+ }
+
+ #navAbout {
+  width:93px;
+ }
+
+ #navJobs {
+  width:93px;
+ }
+
+ #navPress {
+  width:93px;
+ }
+
+ #navAdvertisers {
+  width:93px;
+ }
+
+ #navParentsGuide {
+  width:95px;
+ }
+
+ #navGivingBack {
+  width:93px;
+ }
+
+ 
+
+ #navContact {
+  width:93px;
+ }
+
+ /* xNav */
+ /* subNav */
+ #subNav {
+  float:left;
+  width:200px;
+ }
+
+ #subNav #hand {
+  background: url(../img/corporate/images/active_hand.gif) no-repeat;
+  width:46px;
+  height:31px;
+  position:absolute;
+  top:-1px;
+  right:-33px;
+ }
+
+ #subNavContainer {
+   width:196px;
+   margin:2px;
+   position:relative;
+  }
+
+  #subNavContainer a {
+    border-left:solid 1px #cfcfcf;
+    border-right:solid 1px #cfcfcf;
+    border-top:solid 1px #cfcfcf;
+    display:block;
+    position:relative;
+    padding: 5px 5px 5px 25px;
+    font-size:11px;
+  }
+
+  #subNavContainer .subNavSection {
+  padding: 5px 5px 5px 35px;
+  }
+
+  .subNavSection {
+   background: #F3F3F3 url(../img/corporate/images/ico_pointer.gif) no-repeat 15px 5px;
+  }
+
+  #subNavContainer #footContainer {
+   position:relative;
+   height:2px;
+  }
+
+  #subNavContainer #foot {
+   background: url(../img/corporate/images/subnav_foot.gif) no-repeat;
+   width:196px;
+   height:7px;
+   position:absolute;
+   bottom:1px;
+   display:block;
+   font-size:0px;
+  }
+
+  #subNavContainer a.active, #subNavContainer a.active:hover {
+   background-color:#e2e2e2;
+   font-weight:bold;
+  }
+
+  #subNavContainer a.active span {
+   background: url(../img/corporate/images/active_hand.gif) no-repeat;
+   width:46px;
+   height:31px;
+   position:absolute;
+   top:-1px;
+   right:-33px !important;
+   right:-32px;
+  }
+
+  #subNavContainer a:hover {
+   background-color:#ededed
+  }
+
+  #subNavContainer a#iwf:hover {
+   background-color:#ffffff
+  }
+
+  #subNavContainer #iwf {
+   padding: 10px 0px 10px 1px;
+   text-align:center;
+   font-weight:bold;
+   font-size:16px
+  }
+
+ #subNavContainer #iwf img {
+   margin:10px auto;
+  }
+
+ #subNav .title {
+  font-size:11px;
+ }
+ /* xsubNav */
+ /* content */
+ #content {
+  margin: 0px 25px;
+ }
+ #contentRight {
+  float:right;
+  width:548px;
+ }
+
+ #contentRight a {
+  text-decoration:underline;
+  font-weight:bold;
+ }
+
+ #contentMenu {
+  float:right;
+ }
+
+ #contentMenu a {
+  display:block;
+  width:18px;
+  height:16px;
+  float:left;
+  margin-left:5px;
+ }
+
+ #contentMenu .icoGer {
+  background: url(../img/corporate/images/icon_german.gif) no-repeat;
+  display:block;
+ }
+
+ #contentMenu .sitemap {
+  background: url(../img/corporate/images/icon_sitemap.gif) no-repeat;
+  display:block;
+ }
+
+ #contentMenu #printico {
+  background: url(../img/corporate/images/icon_print.gif) no-repeat;
+  display:block;
+  margin-right:10px;
+ }
+
+ #content h2, #contentRight h2 {
+  /*color:#4f4f4f; */
+  color:#8e8e8e;
+  margin:5px 60px 5px 0px;
+ }
+
+ #content h4, #contentRight h4 {
+  /*color:#4f4f4f;*/
+  /*color:#2894b2;*/
+  color:#5a82af;
+  margin: 10px 0px 5px 0px;
+  line-height:11px;
+ }
+
+ #content h3, #contentRight h3 {
+  /*color:#4f4f4f;*/
+  /*color:#2894b2;*/
+  color:#5a82af;
+  margin: 10px 0px 15px 0px;
+  line-height:11px;
+ }
+
+ #content h3 span, #contentRight h3 span {
+  font-size:10px;
+  color:#858585;
+  font-weight:bolder;
+  margin-top:5px;
+  line-height:20px;
+ }
+ #content h3 span a, #contentRight h3 span a {
+  color:#858585;
+ }
+
+ #content p, #contentRight p {
+  /*margin: 0px 25px 20px 15px;*/
+  margin: 0px 25px 20px 0px;
+  /* font-size:10px;
+  font-weight:bold; */
+  font-size:12px;
+  color: #312f30;
+  line-height:17px;
+  text-align:justify;
+ }
+ #content li, #contentRight ul li {
+  list-style-image: url(../img/corporate/images/bullet.gif);
+  font-size:12px;
+  padding: 3px 0px;
+ }
+ /* xcontent */
+ /* footer */
+ #footer {
+  margin-top:5px;
+  text-align:center;
+  color:#737373;
+  font-size:10px;
+  font-weight:bold;
+ }
+
+ #footer {
+  background: url(../img/corporate/images/footer_bars.jpg) repeat-x 0px -122px;
+  height:61px;
+ }
+
+ #footer .rghtCnr {
+  background: url(../img/corporate/images/footer_bars.jpg) no-repeat right -61px;
+  height:61px;
+ }
+
+ #footer .lftCnr {
+  background: url(../img/corporate/images/footer_bars.jpg) no-repeat left 0px;
+  height:61px;
+  padding-left: 15px;
+ }
+
+ #footer span {
+  display:block;
+  height:40px;
+  padding-top:5px;
+  line-height:14px;
+ }
+
+ #footer span a {
+  text-decoration:underline;
+ }
+
+ /* xfooter */
+ /* safety footer */
+
+ 
+ 
+ 
+ 
+
+ #safety {
+  background: url(../img/corporate/images/safety_bars.png) repeat-x 0px -200px;
+  height:100px;
+  margin-top:20px;
+ }
+
+ #safety .rghtCnr {
+  background: url(../img/corporate/images/safety_bars.png) no-repeat right -100px;
+  height:100px;
+ }
+
+ #safety .lftCnr {
+  background: url(../img/corporate/images/safety_bars.png) no-repeat left 0px;
+  height:100px;
+ }
+
+ #safety span {
+  display:block;
+  padding-top:3px;
+ }
+ .image_links {
+   height:94px;
+   width:100px;
+   position:absolute;
+   cursor:hand;
+ }
+ /* image is defined in file to avoid having to incrememnt css ver numbers every time we change the logos */
+ .safety_images {
+  height:94px;
+  width:745px;
+  margin: auto;
+  position: relative;
+ }
+ /* xsafety footer */
+/* xSite Layout */
+
+
+/* alert*/
+#alert {
+ background: url(../img/corporate/images/alert_bars.jpg) repeat-x 0px -184px;
+ height:92px;
+}
+
+#alert .rghtCnr {
+ background: url(../img/corporate/images/alert_bars.jpg) no-repeat right 0px;
+ height:92px;
+}
+
+#alert .lftCnr {
+ background: url(../img/corporate/images/alert_bars.jpg) no-repeat left -92px;
+ height:92px;
+ padding-left: 15px;
+}
+
+#alert span {
+ font-size:11px;
+ font-weight:bold;
+ color:#343434;
+ padding:15px;
+ line-height:16px;
+ display:block;
+}
+/* xalert*/
+
+/* Graphics */
+.monkey {
+ padding-right:200px;
+ background: url(../img/corporate/images/image_monkey_n.bmp) no-repeat right;
+ height:117px;
+}
+/* xGraphics */
+
+/* Seperate Page - example JobInfo*/
+#subNavLifeJagex, #lifeJagex:hover {
+ background: url(../img/corporate/images/ico_lifeJagex.gif) no-repeat 5px 5px;
+}
+#subNavBestCompany, #bestCompany:hover {
+ background: url(../img/corporate/images/ico_top100.gif) no-repeat 5px 5px;
+}
+#subNavReasonJoin {
+ background: url(../img/corporate/images/ico_reasonJoin.gif) no-repeat 5px 5px;
+}
+#subNavVacancies {
+ background: url(../img/corporate/images/ico_vacancies.gif) no-repeat 5px 5px;
+}
+#subNavAgencies {
+ background: url(../img/corporate/images/ico_agencies.gif) no-repeat 5px 5px;
+}
+#subNavGradSchemes {
+ background: url(../img/corporate/images/ico_graduates.gif) no-repeat 5px 5px;
+}
+#subNavIndustrial {
+ background: url(../img/corporate/images/ico_locations.gif) no-repeat 5px 5px;
+}
+#subNavSpeculative {
+ background: url(../img/corporate/images/ico_lightBulb.gif) no-repeat 5px 5px;
+}
+#subNavFAQ {
+ background: url(../img/corporate/images/ico_FAQ.gif) no-repeat 5px 5px;
+}
+/* aboutus */
+#subNavToday {
+ background: url(../img/corporate/images/ico_today.gif) no-repeat 5px 5px;
+}
+
+#subNavHistory {
+ background: url(../img/corporate/images/ico_history.gif) no-repeat 5px 5px;
+}
+#subNavGames {
+ background: url(../img/corporate/images/ico_8ball.gif) no-repeat 5px 5px;
+}
+/* xaboutus*/
+/* press */
+#subNavPressReleases{
+ background: url(../img/corporate/images/ico_pressRelease.gif) no-repeat 5px 5px;
+}
+#subNavImageAssets {
+ background: url(../img/corporate/images/ico_imageAssets.gif) no-repeat 5px 5px;
+}
+#subNavPressContacts {
+ background: url(../img/corporate/images/ico_presscontacts.gif) no-repeat 5px 5px;
+}
+/* xpress */
+
+/* advertisers */
+#subNavGeneral {
+ background: url(../img/corporate/images/ico_General.gif) no-repeat 5px 5px;
+}
+#subNavAdNetworks {
+ background: url(../img/corporate/images/ico_adNetworks.gif) no-repeat 5px 5px;
+}
+#subNavDirect {
+ background: url(../img/corporate/images/ico_adDirect.gif) no-repeat 5px 5px;
+}
+#subNavAdFormats {
+ background: url(../img/corporate/images/ico_adFormats.gif) no-repeat 5px 5px;
+}
+/* xadvertisers */
+
+/* comms */
+#subNavLicensing {
+ background: url(../img/corporate/images/ico_licensing.gif) no-repeat 5px 5px;
+}
+#subNavMarketing {
+ background: url(../img/corporate/images/ico_marketing.gif) no-repeat 5px 5px;
+}
+#subNavContact {
+ background: url(../img/corporate/images/ico_locations.gif) no-repeat 5px 5px;
+}
+/* xcomms */
+
+/* giving */
+#subNavEnvironment {
+ background: url(../img/corporate/images/ico_environment.gif) no-repeat 5px 5px;
+}
+#subNavCharities {
+ background: url(../img/corporate/images/ico_charities.gif) no-repeat 5px 5px;
+}
+#subNavAccreditation {
+ background: url(../img/corporate/images/ico_accreditation.gif) no-repeat 5px 5px;
+}
+/* xgiving */
+/* contact */
+#subNavContact {
+ background: url(../img/corporate/images/ico_contact.gif) no-repeat 5px 5px;
+}
+#subNavLocation {
+ background: url(../img/corporate/images/ico_locations.gif) no-repeat 5px 5px;
+}
+/* xcontact */
+/* xparentsguidex */
+#subNavParents {
+ background: url(../img/corporate/images/ico_bestCompany.gif) no-repeat 5px 5px;
+}
+#subNavAbout {
+ background: url(../img/corporate/images/ico_8ball.gif) no-repeat 5px 5px;
+}
+#subNavBilling {
+ background: url(../img/corporate/images/ico_marketing.gif) no-repeat 5px 5px;
+}
+#subNavSafety {
+ background: url(../img/corporate/images/ico_vacancies.gif) no-repeat 5px 5px;
+}
+#subNavSecurity {
+ background: url(../img/corporate/images/ico_licensing.gif) no-repeat 5px 5px;
+}
+#subNavPrivacy {
+ background: url(../img/corporate/images/ico_presscontacts.gif) no-repeat 5px 5px;
+}
+#subNavContact {
+ background: url(../img/corporate/images/ico_contact.gif) no-repeat 5px 5px;
+}
+/* xparentsguidex */
+
+/* xSeperate Page*/
+
+
+

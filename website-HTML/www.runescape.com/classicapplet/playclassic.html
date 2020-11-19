@@ -1,0 +1,437 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from www.runescape.com/classicapplet/playclassic.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:59:48 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../favicon.ico">
+<link rel="SHORTCUT ICON" href="../favicon.ico">
+<link rel="apple-touch-icon" href="../img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="MMORPG, free RPG games online, online multiplayer, role-playing, massively multiplayer games, mmo, RuneScape, Jagex, java">
+<meta name="description" content="Play RuneScape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
+<meta name="title" content="RuneScape - MMORPG - The No.1 Free Online Multiplayer Game">
+<title>RuneScape - MMORPG - The No.1 Free Online Multiplayer Game</title>
+<style type="text/css">/*\*/@import url(../css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<style type="text/css">
+  .buttons_play {
+   width: 500px;
+   margin: auto;
+  }
+  .drop_play {
+   width: 354px;
+   margin: auto;
+  }
+  a.buttonlong {
+   text-decoration: none;
+   text-align: center;
+   line-height: 24px;
+   display: block;
+   color: black;
+  }
+  #playnow {
+   margin: 0 auto 1em;
+   display: block;
+   position: relative;
+   width: 500px;
+   height: 33px;
+   overflow: hidden;
+  }
+  #playnow:hover {
+   font-weight: bold;
+  }
+  #playnow img {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 200%;
+  }
+  #playnow:hover img {
+   top: -100%;
+  }
+
+  /* Intro */
+
+  #intro {
+   margin: 0 0 -6px 0;
+   position: relative;
+   top: -6px;
+   left: -6px;
+   width: 754px;
+   height: 362px;
+   background: #d0b16d url(../img/main/classicapplet/intro_bg.jpg) left top no-repeat;
+  }
+
+  /* Bullets */
+
+  #intro ul {
+   position: absolute;
+   left: 41px;
+   top: 122px;
+   width: 295px;
+   margin: 0;
+   padding: 0 0 0 20px;
+   text-align: left;
+   font-size: 12px;
+   color: #492c21;
+  }
+
+  #intro ul li {
+   margin: 0 0 6px;
+  }
+
+  /* Screens */
+
+  #screens {
+   position: absolute;
+   left: 365px;
+   top: 46px;
+   width: 312px;
+   height: 257px;
+  }
+
+  #screens a {
+   position: absolute;
+   left: 0;
+   top: 196px;
+  }
+
+  #screens a img {
+   width: 101px;
+   height: 62px;
+  }
+
+  #screens #bigScreen {
+   top: 0;
+  }
+
+  #screens #bigScreen img {
+   width: 312px;
+   height: 192px;
+  }
+
+  #screens #screen1 {
+   left: 105px;
+  }
+
+  #screens #screen2 {
+   left: 211px;
+  }
+
+  #screens .selected img {
+   margin: -1px;
+   border: 1px solid #feedb8;
+  }
+
+  #members {
+   position: absolute;
+   left: 50%;
+   top: 314px;
+   width: 666px;
+   margin: 0 0 0 -333px;
+   color: #392c14;
+   font-weight: bold;
+   font-size: 11px;
+   text-align: center;
+  }
+
+  #members a {
+   color: #634310;
+  }
+
+
+  /* Play Big */
+
+  #playBig {
+   position: absolute;
+   left: 77px;
+   top: 258px;
+   width: 251px;
+   height: 50px;
+  }
+
+ </style>
+<script type="text/javascript">
+$(function(){
+
+
+  $(".play").each(function(){
+   this.href += "&j=1";
+  });
+
+  var $screens = $(".screen");
+  var $target = $("#bigScreen");
+  var img = function(i, thumb){ return "http://www.runescape.com/img/main/classicapplet/screen" + i + (thumb?"_thumb":"") + ".jpg"; }
+
+  var current = 0;
+  var numScreenShots = $screens.length;
+
+  $screens.each(function(i){
+
+   if(i != current){
+    var preload = new Image();
+    preload.src = img(i);
+   }
+
+   $screens.slice(current,current+1).addClass("selected");
+
+   $(this).click(function(){
+    if(i > numScreenShots - 1 || i < 0){
+     return false;
+    }
+    $screens.removeClass("selected").slice(i,i+1).addClass("selected");
+    $target.attr("src", img(i,false));
+    current = i;
+    return false;
+   });
+
+  });
+
+ })
+</script>
+
+</head>
+<body id="nav" class="bodyBackground">
+<a name="top"></a>
+
+
+
+<div class="bodyBackgroundHead">
+<div id="menubox">
+<ul id="menus">
+<li class="top"><a href="../title.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+<li class="top"><a id="play" class="tl" href="../game.html" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/top')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/top')}catch(x){}"
+><span class="ts">Play Now</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dcreate/index.html" class="fly"><span>New Users</span></a></li>
+<li><a href="../game.html" id="playExisting" 
+onclick="try{pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}; try{_pageTracker._trackPageview('/play_game/menu/existing')}catch(x){}"
+ class="fly"><span>Existing Users</span></a></li>
+<li><a href="../options.html" class="fly"><span>Java Options</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="account" class="tl" href="../account_management.html"><span class="ts">Account</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<ul>
+<li><a href="../../secure.runescape.com/m%3dweblogin/members/members.html" class="fly"><span>Upgrade Your Account</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dcreate/index-2.html" class="fly"><span>Create New Account</span></a></li>
+<li><a href="../account_management.html" class="fly"><span>Account Management</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="guide" class="tl" href="../kbase/guid/manual.html"><span class="ts">Game Guide</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform802b.html" class="fly"><span>QuestHelp</span></a></li>
+<li><a href="../../services.runescape.com/m%3ditemdb_rs/frontpage.html" class="fly"><span>Grand Exchange</span></a></li>
+<li><a href="../kbase/guid/rules_of_conduct.html" class="fly"><span>Rules</span></a></li>
+<li><a href="../kbase/guid/lore.html" class="fly"><span>Lores</span></a></li>
+<li><a href="../splash.html" class="fly"><span>What is RuneScape?</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="community" class="tl" href="../../services.runescape.com/m%3dforum/forums.html"><span class="ts">Community</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../../services.runescape.com/m%3dforum/forums.html" class="fly"><span>Forums</span></a></li>
+<li><a href="../../services.runescape.com/m%3dhiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+<li><a href="../kbase/guid/Player_Submissions.html" class="fly"><span>Player Submissions</span></a></li>
+<li><a href="../../services.runescape.com/m%3dadventurers-log/index.html" class="fly"><span>Adventurer's Log</span></a></li>
+
+<li><a href="../../services.runescape.com/m%3dpoll/index.html" class="fly"><span>Polls</span></a></li>
+<li><a href="../kbase/guid/Downloads_and_Wallpapers.html" class="fly"><span>Downloads &amp; Wallpapers</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a id="help" class="tl" href="../kbase/guid/Customer_Support.html"><span class="ts">Help</span><!--[if gt IE 6]><!--></a><!--<![endif]-->
+<!--[if lte IE 6]><table><tr><td><![endif]-->
+<!--[if lte IE 6]><iframe src=""></iframe><![endif]-->
+<ul>
+<li><a href="../kbase/guid/Customer_Support.html" class="fly"><span>Customer Support</span></a></li>
+<li><a href="../loginapplet/loginappletb4b5.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=passwordchoice.ws" class="fly"><span>Password Recovery</span></a></li>
+<li><a href="../loginapplet/loginappletef7e.html?mod=www&amp;dest=loginapplet/loginapplet.ws?mod=accountappeal&amp;dest=lockchoice.ws" class="fly"><span>Locked Account Recovery</span></a></li>
+<li><a href="../../secure.runescape.com/m%3dweblogin/loginform14d4.html?mod=offence-appeal&amp;dest=index.ws" class="fly"><span>Appeal Bans &amp; Mutes</span></a></li>
+<li><a href="../../services.runescape.com/m%3dbugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
+<li><a href="../parents.html" class="fly"><span>Parents' Guide</span></a></li>
+</ul>
+<!--[if lte IE 6]></td></tr></table></a><![endif]-->
+</li>
+<li class="top"><a href="../../secure.runescape.com/m%3dweblogin/loginform53bb.html?mod=www&amp;ssl=0&amp;dest=index.ws" id="login" class="tl"><span class="ts">Log In</span></a></li>
+</ul>
+<br class="clear" />
+</div>
+
+<div id="bannerNoad">
+<a href="../game.html" class="HoverImg" id="playBannerNoad"><img src="../img/main/skins/default/playnowc20a.png?12" alt="Play Now" /></a>
+</div>
+<div id="scroll">
+<div id="head"><div id="headBg">
+<div id="langAndLogin">
+
+<div id="lang">
+<a href="../title.html"><img alt="English" title="English" src="../img/main/layout/en.gif" /></a>
+<a href="../l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../img/main/layout/de.gif" /></a>
+<a href="../l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../img/main/layout/fr.gif" /></a>
+<a href="../l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../img/main/layout/br.gif" /></a>
+</div>
+
+
+</div>
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../title.html">Home</a> &gt;
+RuneScape Classic
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+RuneScape Classic
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="brown_background">
+<div id="intro">
+<ul>
+<li>Take advantage of the limited offer of access to RuneScape Classic.</li>
+<li>Ever heard your clan mates talk about the "old days" and wonder what they were really like? Find out!</li>
+<li>Be part of the nostalgia - try glorious three hit combat!</li>
+<li>See what the old "Wildy" was really like.</li>
+<li>Defeat Elvarg all over again... OLDSKOOL!</li>
+</ul>
+<div id="screens">
+<img id="bigScreen" src="../img/main/classicapplet/screen0.jpg" alt="" />
+<a href="../img/main/classicapplet/screen0.jpg" target="_blank" id="screen0" class="screen"><img src="../img/main/classicapplet/screen0_thumb.jpg" alt="" /></a>
+<a href="../img/main/classicapplet/screen1.jpg" target="_blank" id="screen1" class="screen"><img src="../img/main/classicapplet/screen1_thumb.jpg" alt="" /></a>
+<a href="../img/main/classicapplet/screen2.jpg" target="_blank" id="screen2" class="screen"><img src="../img/main/classicapplet/screen2_thumb.jpg" alt="" /></a>
+</div>
+<a href="classicgamef764.html?f=best" id="playBig" class="play HoverImg">
+<img src="../img/main/classicapplet/playBig.png" alt="Play Now" />
+</a>
+<p id="members">Please note: Only existing RuneScape classic members can play RuneScape classic,<br/>new players can only enrol during the next trial period.</p>
+</div>
+<div class="inner_brown_background">
+<div style="margin-bottom:0px;" class="brown_box">
+<div class="subsectionHeader">Play RuneScape Classic</div>
+<div style="text-align:center" class="inner_brown_box">
+<b>To Play RS Classic, click on one of the buttons below</b>
+<div class="buttons_play">
+<br>
+<table>
+<tr valign="top">
+<td align="center">
+<a href="classicgamef764.html?f=best" class="play" id="playnow"><img src="../img/main/classicapplet/play.png" alt="Play Now" /></a>
+</td>
+</tr>
+<tr valign="top">
+<td align="center" width="300">
+<table>
+<tr>
+<td valign="middle">Classic 2 (
+46 players
+)
+</td><td>
+<a href="classicgame12a3.html?f=2" class="buttonlong play">Play on this world</a>
+</td>
+</tr>
+<tr>
+<td valign="middle">Classic 3 (
+30 players
+)
+</td><td>
+<a href="classicgame4d6b.html?f=3" class="buttonlong play">Play on this world</a>
+</td>
+</tr>
+<tr>
+<td valign="middle">Classic 1 (
+14 players
+) - <b>veterans only</b>
+</td><td>
+<a href="classicgame58da.html?f=1" class="buttonlong play">Play on this world</a>
+</td>
+</tr>
+</table>
+</td>
+</tr></table><br>
+</div>
+</div> </div> </div> </div> </div>
+</div>
+<br class="clear"/>
+</div>
+<div id="footer">
+<div class="contain">
+<div class="footerdesc">
+This website and its contents are copyright © 1999 - 2010 Jagex Ltd<br />
+Use of this website is subject to our <a href="../terms/terms.html">Terms &amp; Conditions</a> and <a href="../privacy/privacy.html">Privacy Policy</a>.
+</div>
+<a class="jagexlink" href="../../www.jagex.com/index.html" target="_blank">
+<img src="../img/main/layout/jagexc20a.png?12" alt="Jagex" />
+</a>
+<br class="clear"/>
+</div>
+<br class="clear"/>
+</div>
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from www.runescape.com/classicapplet/playclassic.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:59:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>

@@ -1,0 +1,540 @@
+
+
+
+
+
+
+
+
+
+
+div.content {
+
+}
+
+
+div.sectionHeader {
+
+}
+
+
+div.image {
+
+}
+
+
+/* General markup */
+
+span.strong {
+ font-weight: bold;
+}
+
+span.em {
+ font-style: italic;
+}
+
+span.uline {
+ text-decoration: underline;
+}
+
+span.red {
+ color: red;
+}
+
+
+span.orange {
+ color: #ffa500;
+}
+
+span.yellow {
+ color: yellow;
+}
+
+span.green {
+ color: green;
+}
+
+span.blue {
+ color: blue;
+}
+
+span.purple {
+ color: purple;
+}
+
+span.black {
+ color: black;
+}
+
+span.white {
+ color: white;
+}
+
+span.small {
+ font-size: smaller;
+}
+
+span.large {
+ font-size: larger;
+}
+
+/* xGeneral Markup */
+
+
+/* KB override */
+
+.bottomrightshad {
+ /*padding: 45px 0;*/
+ padding: 10px 0px 20px 0px;
+}
+
+.imgright, .imgleft {
+ text-align: center;
+ font-weight: bold;
+ font-style: italic;
+ color: #553327;
+}
+
+.topbord {
+ margin-bottom: 2px;
+}
+
+.topbord, .bottombord {
+ background-image: url(../img/devblog/frame_horizontal.png);
+}
+
+.leftbord, .rightbord {
+ background-image: url(../img/devblog/frame_vertical.png);
+}
+
+.toplcorn {
+ background-image: url(../img/devblog/frame_topleft.png);
+}
+
+.toprcorn {
+ background-image: url(../img/devblog/frame_topright.png);
+}
+
+.bottomlcorn {
+ background-image: url(../img/devblog/frame_bottomleft.png);
+}
+
+.bottomrcorn {
+ background-image: url(../img/devblog/frame_bottomright.png);
+}
+
+/* xKB overrides */
+
+
+/* Nav arrows */
+
+.navArrows {
+ float: right;
+ margin: auto;
+ width: 150px;
+ text-align: center;
+}
+
+#post .navArrows {
+ float: none;
+}
+
+#post .navArrows#bottom {
+ margin-top: -12px;
+}
+
+.navArrows a,
+.navArrows div,
+.navArrows img {
+ float: left;
+}
+.navArrows a{
+ font-size: 0px;
+}
+.navArrows a,
+.navArrows img {
+ width: 20px;
+ height: 21px;
+}
+
+.navArrows div {
+ width: 70px;
+}
+
+.navArrows input {
+ margin-left: 2px;
+}
+
+.navArrows .navSubmit {
+ visibility: hidden;
+ position: absolute;
+}
+
+.navArrows a:hover img {
+ visibility: hidden;
+}
+
+.navArrows .first {
+ background: url(../img/devblog/first_hover.png);
+}
+
+.navArrows .previous {
+ background: url(../img/devblog/previous_hover.png);
+}
+
+.navArrows .next {
+ background: url(../img/devblog/next_hover.png);
+}
+
+.navArrows .last {
+ background: url(../img/devblog/last_hover.png);
+}
+
+#post .navArrows .first {
+ background: url(../img/devblog/post/first_hover.png);
+}
+
+#post .navArrows .previous {
+ background: url(../img/devblog/post/previous_hover.png);
+}
+
+#post .navArrows .next {
+ background: url(../img/devblog/post/next_hover.png);
+}
+
+#post .navArrows .last {
+ background: url(../img/devblog/post/last_hover.png);
+}
+
+.navArrows .previous,
+.navArrows .next{
+ width: 18px;
+}
+
+/* xNav arrows */
+
+
+/* Parchment */
+
+.devblog {
+ /*margin: 1em auto;*/
+ margin: 1em auto 0px auto;
+ width: 680px;
+ text-align: justify;
+ background: url(../img/devblog/bg.jpg) center top repeat-y;
+}
+
+.devblogHead {
+ background: url(../img/devblog/head_bg.jpg) center top no-repeat;
+}
+
+.devblogHead h2 {
+ margin: 0;
+ text-align: center;
+ text-decoration: underline;
+}
+
+.devblogFoot {
+ padding: 5px 76px 97px 78px;
+ background: url(../img/devblog/foot_bg.jpg) center bottom no-repeat;
+}
+
+/* xParchment */
+
+
+/* Post list */
+
+#list {
+ margin: 8px 0;
+ padding: 3px 3px 0;
+ color: #402706;
+ background: #8c784c;
+ overflow: hidden;
+}
+
+#list .listPost {
+ position: relative;
+ margin: 0px;/* 0 3px;*/
+ border-bottom: 3px solid #8c784c;
+ padding: 4px 5px;
+ height: 122px;
+ background: #cac29c;
+ overflow: hidden;
+}
+
+#list .listError {
+ margin: 0 0 3px;
+ padding: 1em 0;
+ text-align: center;
+ color: black;
+}
+
+#list h3 {
+ margin: 0;
+ padding: 0 6px;
+ height: 23px;
+ line-height: 21px;
+ font-size: 12px;
+ font-weight: normal;
+ color: #221d12;
+ background: #8c784c;
+}
+
+#list h3 a {
+ font-weight: bold;
+}
+
+#list .postDetails {
+ float: left;
+}
+
+#list .postDate {
+ float: right;
+ font-weight: bold;
+ color: #cac29c;
+}
+
+#list .listPost .postTitle {
+ color: #ded9bf;
+}
+
+#list .listPost .postAuthor {
+ color: #cac29c;
+}
+
+#list .postImage {
+ float: right;
+ margin: 7px 0 0 20px;
+ padding: 5px;
+ width: 113px;
+ height: 79px;
+ background: url(../img/devblog/post_image_bg.png);
+}
+
+#list .postImage img {
+ width: 113px;
+ height: 79px;
+}
+
+#list p {
+ margin: 6px 0 0 0;
+}
+
+#list .listPost a {
+ color: #b04530;/*#8c784c;*/
+}
+
+#list .postProject {
+ position: absolute;
+ left: 5px;
+ bottom: 16px;
+ width: 370px;
+}
+
+#list .postMeta {
+ position: absolute;
+ left: 5px;
+ bottom: 4px;
+ width: 370px;
+ text-align: left;
+}
+
+/* xPost list */
+
+
+/* RSS feed link */
+
+#feed {
+ margin-left: 1px;
+ float: left;
+}
+
+#feed a,
+#feed a:hover span {
+ text-decoration: none;
+ vertical-align: top;
+}
+
+#feed a span {
+ text-decoration: underline;
+}
+
+#feed img {
+ vertical-align: middle;
+}
+
+#feed sup {
+ font-size: smaller;
+}
+
+/* xRSS feed link */
+
+
+/* Filtering */
+
+#filter {
+ padding: 3px 0;
+}
+
+#filter h3 {
+ margin: 0 0 12px;
+ text-align: center;
+ font-size: 12px;
+}
+
+#filterAuthor {
+ float: left;
+}
+
+#filterProject {
+ float: right;
+}
+
+#filterTag {
+ text-align: center;
+}
+
+#filter select {
+ width: 104px;
+ height: 18px;
+ font-size: 11px;
+}
+
+#filterButton, #filterButton button, #filterButton img {
+ width: 209px;
+ height: 33px;
+ margin: 0;
+ padding: 0;
+ border: 0;
+ cursor: pointer;
+ background: none;
+}
+
+#filterButton {
+ margin: 12px auto 0;
+ position: relative;
+ background: url(../img/devblog/filter_hover.png);
+}
+
+#filterButton img {
+ position: absolute;
+ left: 0;
+ top: 0;
+}
+
+#filterButton:hover img {
+ visibility: hidden;
+}
+
+/* xFiltering */
+
+
+/* Post */
+
+#post .devblogFoot {
+ padding: 35px 76px 124px 78px;
+ color: #402706;
+ background: url(../img/devblog/post/foot_bg.jpg) center bottom no-repeat;
+}
+
+.devblog a {
+ color: #5c2f18;
+}
+
+#archives {
+ margin: 0 auto 37px;
+ width: 480px;
+ font-weight: bold;
+}
+
+.devblogFoot h2 {
+ margin: 0 0 22px;
+ height: 110px;
+ text-align: center;
+ font-size: 22px;
+ font-weight: bold;
+ font-family: Palatino Linotype, Book Antiqua, Palatino, Times New Roman, Times, serif;
+ letter-spacing: 2px;
+ color: #553327;
+}
+
+.devblogFoot h2 a:hover {
+ text-decoration: none;
+}
+
+#post .devblog h3 {
+ font-size: 14px;
+ font-weight: bold
+}
+
+#post .devblog .hr {
+ clear: both;
+ background: url(../img/devblog/post/hr.png) center center no-repeat;
+}
+
+#post .devblog h3,
+#post .devblog p {
+ margin: 0;
+ padding: 0 0 1em;
+}
+
+.devblogFoot object {
+ outline: 0
+}
+
+.devblogimagecentre {
+ width: 50%;
+ overflow: visible;
+}
+
+.devblogimagecentre .imgcentre {
+ float: left;
+ position: relative;
+ left: 100%;
+}
+
+.devblogimagecentre .centrecontainer {
+ position: relative;
+ left: -50%;
+}
+
+.devblog .hr {
+ margin: 0 auto 6px;
+ background: url(../img/devblog/hr.jpg) center center no-repeat;
+}
+
+#meta {
+ font-weight: bold;
+}
+
+/* xPost */
+
+/* kbase overrides (basically to remove fancy border */
+.topshadow{
+ background: url(../img/devblog/sidebart.png) repeat-x left top;
+}
+.bottombordershad{
+ background: url(../img/devblog/articlebottom.png) transparent repeat-x left bottom;
+}
+.leftshadow {
+ background: url(../img/devblog/sidebarl.png) transparent repeat-y left center;
+}
+.rightshadow {
+ background:url(../img/devblog/sidebar.png) transparent repeat-y right center;
+}
+.leftcorner {
+ background: url(../img/devblog/artroundtl.png) transparent no-repeat left top;
+}
+
+.rightcorner {
+ background: url(../img/devblog/artroundtr.png) transparent no-repeat right top;
+}
+
+.bottomleftshad{
+ background: url(../img/devblog/articlebottomshad.png) transparent no-repeat left bottom;
+}
+
+.bottomrightshad{
+ background: url(../img/devblog/artbottomshadr.png) transparent no-repeat right bottom;
+}
+/* x kbase overrides (basically to remove fancy border */
