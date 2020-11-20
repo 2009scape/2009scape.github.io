@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<?xml-stylesheet type="text/css" media="screen" href="http://feeds.rssboard.org/~d/styles/itemcontent.css"?>
+<rss xmlns:dc="http://purl.org/dc/elements/1.1" version="2.0">
+	<channel>
+		<language>en</language>
+		<title>RuneScape Recent News</title>
+		<description>The latest news for RuneScape, the massively-multiplayer online game developed and published by Jagex.</description>
+		<link>http://site</link>
+		<docs>http://www.rssboard.org/rss-specification</docs>
+		<generator>JagexRssFeedGenerator</generator>
+		<ttl>30</ttl>
+		<lastBuildDate>Fri, 16 Jul 2010 16:26:18 GMT</lastBuildDate>
+		<image>
+				<url>http://site/img/news/RSS/rss_logo.png</url>
+		</image>
+
+		<item>
+			<title>Love Story</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services/m=news/img/Large/love_story.jpg&quot; /&gt;&#10;				A shadow is emerging from the Wise Old Man&#8217;s murky past. New Construction and Magic abilities could be yours if you can handle combat, puzzles, sarcasm, a love-sick old man and a damsel in distress who just won&#8217;t stop crying.
+			</description>
+			<category>Game Update News</category>
+			<link>http://services/m=news/love-story</link>
+			<pubDate>Mon, 05 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/love-story</guid>
+		</item>
+
+		<item>
+			<title>Lookey-Likey Costume Competition Winners</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				The weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we&#8217;ve decided on our winners... 
+			</description>
+			<category>Customer Support News</category>
+			<link>http://services/m=news/lookey-likey-costume-competition-winners</link>
+			<pubDate>Wed, 07 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/lookey-likey-costume-competition-winners</guid>
+		</item>
+
+		<item>
+			<title>Price Promotion: PayBySMS with Paymo in Australia</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/loot.jpg&quot; /&gt;&#10;				We are excited to announce the ability to pay for your RuneScape membership via Paymo in Australia - with a fantastic 9% discount on SMS!
+			</description>
+			<category>Customer Support News</category>
+			<link>http://services/m=news/price-promotion-paybysms-with-paymo-in-australia</link>
+			<pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/price-promotion-paybysms-with-paymo-in-australia</guid>
+		</item>
+
+		<item>
+			<title>Players&apos; Gallery</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/gallery.jpg&quot; /&gt;&#10;				Yes, it was just one month ago that we brought the Players&apos; Gallery back in full force, and we&#8217;ve been overwhelmed by the sheer volume and positivity of your response. So, as promised, we&#8217;re back this month with another selection of RuneScape-inspired masterpieces for you to enjoy.
+			</description>
+			<category>Website News</category>
+			<link>http://services/m=news/players-gallery-16</link>
+			<pubDate>Tue, 06 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/players-gallery-16</guid>
+		</item>
+
+		<item>
+			<title>RuneScape Summer Festival</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/photo_booth.jpg&quot; /&gt;&#10;				This weekend there&#8217;s a big holiday over in the USA in the form of the Fourth of July (Independence Day). To Community Management, that sounds like a good a reason as any for a weekend of community events! Read on for a competition, parade, PvP challenge and more.
+			</description>
+			<category>Customer Support News</category>
+			<link>http://services/m=news/runescape-summer-festival</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/runescape-summer-festival</guid>
+		</item>
+
+		<item>
+			<title>Behind the Scenes &#8211; July</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services/m=news/img/Large/behind-the-scenes-July_EN.jpg&quot; /&gt;&#10;				Love stories, expansive Dungeoneering rewards, class rings and elite treasure trail rewards await in this month&#8217;s updates! Sound good? 
+			</description>
+			<category>Behind the Scenes News</category>
+			<link>http://services/m=news/behind-the-scenes--july</link>
+			<pubDate>Thu, 01 Jul 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/behind-the-scenes--july</guid>
+		</item>
+
+		<item>
+			<title>Big Ticket Prize Draw &#8211; June (Winner!)</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services/m=news/img/Large/big_ticket_en.jpg&quot; /&gt;&#10;				June&#8217;s Big Ticket prize draw has been held; next month, it&#8217;s time for the final Big Ticket prize draw...
+			</description>
+			<category>Customer Support News</category>
+			<link>http://services/m=news/big-ticket-prize-draw--june-winner</link>
+			<pubDate>Wed, 30 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/big-ticket-prize-draw--june-winner</guid>
+		</item>
+
+		<item>
+			<title>Guaranteed Content Poll: Halloween 2010 Result</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/statistics.jpg&quot; /&gt;&#10;				Two weeks ago, we released a Guaranteed Content Poll regarding this year&#8217;s Halloween reward. The poll has now been closed, the results have been counted and we can now reveal that the winning option is...
+			</description>
+			<category>Website News</category>
+			<link>http://services/m=news/guaranteed-content-poll-halloween-2010-result</link>
+			<pubDate>Tue, 29 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/guaranteed-content-poll-halloween-2010-result</guid>
+		</item>
+
+		<item>
+			<title>Big Ticket Prize Draw &#8211; June (Reminder)</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services/m=news/img/Large/big_ticket_en.jpg&quot; /&gt;&#10;				The next Big Ticket prize draw is just around the corner &#8211; be sure to enter if you&#8217;d like to win an all-expenses-paid trip to the UK!
+			</description>
+			<category>Customer Support News</category>
+			<link>http://services/m=news/big-ticket-prize-draw--june-reminder</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/big-ticket-prize-draw--june-reminder</guid>
+		</item>
+
+		<item>
+			<title>Miner Disturbance for iPhone, iPod and iPad</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services/m=news/img/Large/miner_disturbance.png&quot; /&gt;&#10;				We&apos;ve just updated one of our old classics, Miner Disturbance, for the Apple iPhone - and it&apos;s the #5 overall paid app in the UK!
+			</description>
+			<category>Game Update News</category>
+			<link>http://services/m=news/miner-disturbance-for-iphone-ipod-and-ipad</link>
+			<pubDate>Fri, 25 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/miner-disturbance-for-iphone-ipod-and-ipad</guid>
+		</item>
+
+		<item>
+			<title>Quiet Before the Swarm</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services/m=news/img/Large/vkq1.jpg&quot; /&gt;&#10;				Could one of the creatures from Pest Control have slipped past the Void Knights&#8217; onto the mainland? Put your investigative, puzzle-solving and pest controlling skills to the test to find out the truth in this low-level quest, the first in a new quest series. Check the news for a video!
+			</description>
+			<category>Game Update News</category>
+			<link>http://services/m=news/quiet-before-the-swarm</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/quiet-before-the-swarm</guid>
+		</item>
+
+		<item>
+			<title>Free-to-play Quest Changes</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/novice_quests.jpg&quot; /&gt;&#10;				The Swept Away and Myths of the White Lands quests have been made permanently free-to-play! Any free-players who missed out on the opportunity to play these low-level, yet fun and puzzling, quests before can now do so at their leisure.
+			</description>
+			<category>Game Update News</category>
+			<link>http://services/m=news/free-to-play-quest-changes</link>
+			<pubDate>Thu, 24 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/free-to-play-quest-changes</guid>
+		</item>
+
+		<item>
+			<title>RuneScape Cards Now More Widely Available in the US</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://services/m=news/img/Large/runescapevouchersnews.jpg&quot; /&gt;&#10;				RuneScape Cards are now available from your nearest 7Eleven, Casey&#8217;s and Speedway stores throughout the US, which gives more choice to our players and access to more places from which to buy RuneScape credit. We are continuing to expand where these cards are available.
+			</description>
+			<category>Customer Support News</category>
+			<link>http://services/m=news/runescape-cards-now-more-widely-available-in-the-us</link>
+			<pubDate>Mon, 21 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/runescape-cards-now-more-widely-available-in-the-us</guid>
+		</item>
+
+		<item>
+			<title>Jagex Clan Cup 2010 Launched!</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/chalice.jpg&quot; /&gt;&#10;				It&apos;s normally a time of holidays, sunshine and ice cream but not this summer, not with the launch of Jagex Clan Cup 2010! It&apos;s been a long wait but it is finally here and improved from last year&#8217;s competition.
+			</description>
+			<category>Customer Support News</category>
+			<link>http://services/m=news/jagex-clan-cup-2010-launched</link>
+			<pubDate>Fri, 18 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/jagex-clan-cup-2010-launched</guid>
+		</item>
+
+		<item>
+			<title>International Fight Knights Wallpaper</title>
+			<description>
+&#9;&#9;&#9;&#9;&lt;img align=&quot;right&quot; src=&quot;http://site/img/news/icons/clanwars.jpg&quot; /&gt;&#10;				Over 7,000 players from 12 international communities took part in this first Fight Knights tournament, with the Polish team triumphing in the end. We&#8217;ve created a wallpaper to commemorate their victory.&#13;&#10;
+			</description>
+			<category>Website News</category>
+			<link>http://services/m=news/international-fight-knights-wallpaper</link>
+			<pubDate>Thu, 17 Jun 2010 00:00:00 GMT</pubDate>
+			<guid isPermaLink="true">http://services/m=news/international-fight-knights-wallpaper</guid>
+		</item>
+	</channel>
+</rss>
