@@ -5,6 +5,6 @@ let replaceMenubox = ``
 
 files.forEach(function (file) {
     var contents = fs.readFileSync(__dirname + '/guid/' + file, 'utf8');
-    const regex = /<div class="brown_box"><div class="inner_brown_box">[\s\S]*?<\/div><\/div>/i;
+    const regex = /<div id="lang">[\s\S]*?<\/div>/i;
     fs.writeFileSync(__dirname + "/guid/" + file, contents.replace(regex, replaceMenubox));
 })
