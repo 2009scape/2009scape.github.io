@@ -12,24 +12,12 @@ let fs = require('fs');
 const dir = __dirname + '/m=news/'
 files = fs.readdirSync(dir);
 
-let replaceMenubox = `<div id="langAndLogin">
-
-<div id="lang">
-<a href="../../index.html"><img alt="English" title="English" src="../../site/img/main/layout/en.gif" /></a>
-<a href="../../site/l%3d1/title.html"><img alt="Deutsch" title="Deutsch" src="../../site/img/main/layout/de.gif" /></a>
-<a href="../../site/l%3d2/title.html"><img alt="Fran&ccedil;ais" title="Fran&ccedil;ais" src="../../site/img/main/layout/fr.gif" /></a>
-<a href="../../site/l%3d3/title.html"><img alt="Portugu&ecirc;s (BR)" title="Portugu&ecirc;s (BR)" src="../../site/img/main/layout/br.gif" /></a>
-</div>
-
-
-</div>
-
-<div class="navigation">`
+let replaceMenubox = `<div id="langAndLogin">`
 
 files.forEach(function (fileName) {
     if (fs.lstatSync(dir + fileName).isFile()) {
         let contents = fs.readFileSync(dir + fileName, 'utf8');
-        const regex = /<div id="langAndLogin">[\s\S]*<div class="navigation">/i;
-        fs.writeFileSync(dir + fileName, contents.replace("../../site/title.html", "../../index.html"));    
+        const regex = /<div id="langAndLogin">[\s\S]*?<\/div>/i;
+        fs.writeFileSync(dir + fileName, contents.replace(regex, replaceMenubox));    
     }
 })
