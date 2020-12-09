@@ -107,3 +107,19 @@ hiscores.setHeadSkillIcon = (icon) => {
 hiscores.setHeadSkillText = (text) => {
     document.getElementById("scores_head_skill").innerText = text;
 }
+
+hiscores.getIronIcon = (ironStatus) => {
+    switch (ironStatus) {
+        case "1":
+        case 1:
+            return `<img src="../../site/img/osrsimg/ironman.png" style="height: 11px"> `;
+        case "2":
+        case 2:
+            return `<img src="../../site/img/osrsimg/hcim.png" style="height: 11px"> `;
+        case "3":
+        case 3:
+            return `<img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px"> `;
+        default:
+            return "";
+    }
+}

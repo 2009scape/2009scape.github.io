@@ -1,5 +1,4 @@
 var hiscores = hiscores || {};
-const ironmanIcon = `<img src="../../site/img/osrsimg/ironman.png" style="height: 11px"> `
 
 hiscores.loadDefaultHSTable = () => {
     fetch(`${hiscores.apiURL}/highscores/playersByTotal`)
@@ -23,7 +22,7 @@ hiscores.populateDefaultHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `${playerData && playerData.iron_mode === "1" ? ironmanIcon : ""}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
+        row.childNodes[3].innerHTML = `${hiscores.getIronIcon(playerData.iron_mode)}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);
@@ -107,7 +106,7 @@ hiscores.populateSkillHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `${playerData && playerData.iron_mode === "1" ? ironmanIcon : ""}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
+        row.childNodes[3].innerHTML = `${hiscores.getIronIcon(playerData.iron_mode)}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);
