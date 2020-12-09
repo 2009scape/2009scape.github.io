@@ -1,7 +1,7 @@
 var hiscores = hiscores || {};
 
 hiscores.loadDefaultHSTable = () => {
-    fetch(`${hiscores.apiURL}/highscores/getPlayersByTotal`)
+    fetch(`${hiscores.apiURL}/highscores/playersByTotal`)
         .then(response => response.json())
         .then(result => {
             console.log(result[0]);
