@@ -4,23 +4,25 @@ const apiURL = "http://localhost:3000";
 
 let tableData = [];
 
-fetch(`${apiURL}/highscores/getPlayersByTotal`)
-    .then(response => response.json())
-    .then(result => {
-        console.log(result[0]);
-        tableData = result;
-        populateDefaultHSTable();
-    })
-    .catch(error => console.log('error', error));
+function loadDefaultHSTable() {
+    fetch(`${apiURL}/highscores/getPlayersByTotal`)
+        .then(response => response.json())
+        .then(result => {
+            console.log(result[0]);
+            tableData = result;
+            populateDefaultHSTable();
+        })
+        .catch(error => console.log('error', error));
+}
 
 function populateDefaultHSTable() {
-    for (let i = 1; i <= 22; i++) {
+    for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
-        const playerData = tableData[i + 22 * page - 1];
+        const playerData = tableData[i + 24 * page - 1];
 
         row.childNodes[1].replaceWith(document.createElement("td"));
         row.childNodes[1].className = "rankCol";
-        row.childNodes[1].innerHTML = i + 22 * page;
+        row.childNodes[1].innerHTML = i + 24 * page;
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
@@ -41,35 +43,66 @@ function populateDefaultHSTable() {
 }
 
 function loadUserTable(username) {
-    fetch(`${apiURL}/highscores/playerSkills/${username}`)
+    fetch(`${apiURL}/highscores/playerSkills/${username.toLowerCase()}`)
         .then(response => response.json())
         .then(result => {
+            document.getElementById('search_name').style.color = 'black';
             console.log(result[0]);
             tableData = result;
             populatePlayerHSTable();
         })
-        .catch(error => console.log('error', error));
+        .catch(error => {
+            document.getElementById('search_name').style.color = 'red';
+            console.log('error', error)
+        });
 }
 
+sName = [
+    "Attack",
+    "Defence",
+    "Strength",
+    "Constitution",
+    "Ranged",
+    "Prayer",
+    "Magic",
+    "Cooking",
+    "Woodcutting",
+    "Fletching",
+    "Fishing",
+    "Firemaking",
+    "Crafting",
+    "Smithing",
+    "Mining",
+    "Herblore",
+    "Agility",
+    "Thieving",
+    "Slayer",
+    "Farming",
+    "Runecrafting",
+    "Hunter",
+    "Construction",
+    "Summoning"
+]
+
 function populatePlayerHSTable() {
-    for (let i = 1; i <= 22; i++) {
+    for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
 
         row.childNodes[1].replaceWith(document.createElement("td"));
         row.childNodes[1].className = "rankCol";
-        row.childNodes[1].innerHTML = 0; //`sName[${i + 22 * page}]`;
+        row.childNodes[1].innerHTML = "0";
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `rankCompared`;
+        row.childNodes[3].innerHTML = sName[i + 24 * page - 1];
 
         row.childNodes[5].replaceWith(document.createElement("td"));
         row.childNodes[5].className = "alL";
-        row.childNodes[5].innerHTML = tableData[i].static;
+        row.childNodes[5].innerHTML = tableData[i - 1].static;
 
         row.childNodes[7].replaceWith(document.createElement("td"));
         row.childNodes[7].className = "alL";
-        row.childNodes[7].innerHTML = Math.floor(tableData[i].experience).toLocaleString();
+        row.childNodes[7].innerHTML = Math.floor(tableData[i - 1].experience).toLocaleString();
     }
 }
 
@@ -88,4 +121,15 @@ document.getElementById("button-down").addEventListener("click", function (e) {
     populateDefaultHSTable();
 });
 
-populateDefaultHSTable();
+// Handle text field buttons
+document.getElementById("search_button").addEventListener("click", function (e) {
+    e.preventDefault();
+    if (document.getElementById('search_name').value) {
+        loadUserTable(document.getElementById('search_name').value)
+    }
+    else {
+        loadDefaultHSTable();
+    }
+});
+
+loadDefaultHSTable();
