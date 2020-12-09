@@ -96,8 +96,12 @@ hiscores.formatName = (name, aposS = false) => {
     return name;
 }
 
-hiscores.setHeadSkillIcon = (skillName) => {
-    document.getElementById("scores_head_icon").src = `../../site/img/hiscores/skill_icon_${skillName.toLowerCase()}1eccb.gif`;
+hiscores.setHeadSkillIcon = (icon) => {
+    if (icon.includes(".")) {
+        document.getElementById("scores_head_icon").src = icon;
+    } else {
+        document.getElementById("scores_head_icon").src = `../../site/img/hiscores/skill_icon_${icon.toLowerCase()}1eccb.gif`;
+    }
 }
 
 hiscores.setHeadSkillText = (text) => {

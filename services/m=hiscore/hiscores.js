@@ -1,4 +1,5 @@
 var hiscores = hiscores || {};
+const ironmanIcon = `<img src="../../site/img/osrsimg/ironman.png" style="height: 11px"> `
 
 hiscores.loadDefaultHSTable = () => {
     fetch(`${hiscores.apiURL}/highscores/playersByTotal`)
@@ -22,7 +23,7 @@ hiscores.populateDefaultHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
+        row.childNodes[3].innerHTML = `${playerData && playerData.iron_mode === "1" ? ironmanIcon : ""}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);
@@ -44,6 +45,7 @@ hiscores.loadUserTable = (username) => {
         .then(result => {
             document.getElementById('search_name').style.color = 'black';
             hiscores.tableData = result.skills;
+            hiscores.tableInfo = result.info;
             hiscores.populatePlayerHSTable();
             hiscores.setHeadSkillText(hiscores.formatName(username, true));
         })
@@ -54,7 +56,7 @@ hiscores.loadUserTable = (username) => {
 }
 
 hiscores.populatePlayerHSTable = () => {
-    hiscores.setHeadSkillIcon("Constitution");
+    hiscores.setHeadSkillIcon(hiscores.tableInfo.iron_mode === "0" ? "Constitution" : "../../site/img/osrsimg/ironman.png");
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
 
@@ -105,7 +107,7 @@ hiscores.populateSkillHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
+        row.childNodes[3].innerHTML = `${playerData && playerData.iron_mode === "1" ? ironmanIcon : ""}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);
