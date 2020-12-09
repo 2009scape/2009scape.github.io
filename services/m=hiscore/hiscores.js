@@ -1,35 +1,12 @@
+var REQUIRE = REQUIRE || {};
+
 let page = 0;
 let currentSkillId = "";
 
 const apiURL = "http://localhost:3000";
-const sName = [
-    "Attack",
-    "Defence",
-    "Strength",
-    "Constitution",
-    "Ranged",
-    "Prayer",
-    "Magic",
-    "Cooking",
-    "Woodcutting",
-    "Fletching",
-    "Fishing",
-    "Firemaking",
-    "Crafting",
-    "Smithing",
-    "Mining",
-    "Herblore",
-    "Agility",
-    "Thieving",
-    "Slayer",
-    "Farming",
-    "Runecrafting",
-    "Hunter",
-    "Construction",
-    "Summoning"
-]
 
 let tableData = [];
+let defaultTableData = [];
 
 function loadDefaultHSTable() {
     fetch(`${apiURL}/highscores/getPlayersByTotal`)
@@ -37,6 +14,7 @@ function loadDefaultHSTable() {
         .then(result => {
             console.log(result[0]);
             tableData = result;
+            defaultTableData = result;
             populateDefaultHSTable();
         })
         .catch(error => console.log('error', error));
@@ -77,6 +55,7 @@ function loadUserTable(username) {
             console.log(result[0]);
             tableData = result;
             populatePlayerHSTable();
+            document.getElementById("scores_head_skill").innerText = username + "'s ";
         })
         .catch(error => {
             document.getElementById('search_name').style.color = 'red';
@@ -94,7 +73,7 @@ function populatePlayerHSTable() {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${sName[i - 1]}</a>`;
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${REQUIRE.sName[i - 1]}</a>`;
         row.childNodes[3].addEventListener("click", e => {
             e.preventDefault();
             loadSkillTable(i - 1);
@@ -123,8 +102,8 @@ function loadSkillTable(skillId) {
 }
 
 function populateSkillHSTable() {
-    document.getElementById("scores_head_skill").innerText = sName[currentSkillId];
-    document.getElementById("scores_head_icon").src = `../../site/img/hiscores/skill_icon_${sName[currentSkillId].toLowerCase()}1eccb.gif`;
+    document.getElementById("scores_head_skill").innerText = REQUIRE.sName[currentSkillId];
+    document.getElementById("scores_head_icon").src = `../../site/img/hiscores/skill_icon_${REQUIRE.sName[currentSkillId].toLowerCase()}1eccb.gif`;
 
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
@@ -177,14 +156,20 @@ document.getElementById("search_button").addEventListener("click", function (e) 
     }
 });
 
-// Handle Skill Names
-sName.forEach((skill, index) => {
-    row = document.getElementsByClassName(`   ${skill}    ico`)[0].addEventListener("click", function (e) {
-        e.preventDefault();
-        console.log(skill, index);
-        loadSkillTable(index);
-    });
+document.getElementById("search_rank_submit").addEventListener("click", function (e) {
+    e.preventDefault();
+    if (document.getElementById('search_rank').value) {
+        loadUserTable(defaultTableData[document.getElementById('search_rank').value - 1].username)
+        document.getElementById("scores_head_skill").innerText = defaultTableData[document.getElementById('search_rank').value - 1].username + "'s ";
+    }
+    else {
+        loadDefaultHSTable();
+    }
 });
+
+
+// Handle Skill Names
+REQUIRE.linkLeftTabSkillNames();
 
 
 loadDefaultHSTable();

@@ -223,6 +223,12 @@
  .row22 {
   background-color: #423419;
  }
+ .row23 {
+  background-color: #534221;
+ }
+ .row24 {
+  background-color: #423419;
+ }
 
 
 
@@ -396,10 +402,10 @@
     height: 27px;
    }
    #button-up {
-    top: 165px;
+    top: 180px;
    }
    #button-down {
-    top: 170px;
+    top: 185px;
    }
    #button-up span.lev1_arrow {
     background-image: url('../img/hiscores/arrow_upeccb.gif?3');
@@ -486,7 +492,7 @@
   #playerList_back {
    float: left;
    width: 371px;
-   height: 466px;
+   height: 505px;
    margin-right: 5px;
   }
   #table_friend {
@@ -536,7 +542,7 @@
   .arrow_back {
    width: 25px;
    background-color: #3B2B0F;
-   height: 419px;
+   height: 457px;
    float: right;
   }
   #arrow_up {
@@ -583,7 +589,7 @@
   #search_back {
    float: left;
    width: 156px;
-   height: 466px;
+   height: 505px;
   }
   .search_small, .search_large {
    margin-bottom: 2px;
