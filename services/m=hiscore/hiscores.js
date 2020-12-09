@@ -43,7 +43,7 @@ hiscores.loadUserTable = (username) => {
         .then(response => response.json())
         .then(result => {
             document.getElementById('search_name').style.color = 'black';
-            hiscores.tableData = result;
+            hiscores.tableData = result.skills;
             hiscores.populatePlayerHSTable();
             hiscores.setHeadSkillText(hiscores.formatName(username, true));
         })
