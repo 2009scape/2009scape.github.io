@@ -73,8 +73,8 @@ hiscores.initalizeRightsideButtons = () => {
     document.getElementById("search_rank_submit").addEventListener("click", function (e) {
         e.preventDefault();
         if (document.getElementById('search_rank').value) {
-            hiscores.loadUserTable(defaultTableData[document.getElementById('search_rank').value - 1].username)
-            hiscores.setHeadSkillText(defaultTableData[document.getElementById('search_rank').value - 1].username + "'s ");
+            hiscores.loadUserTable(hiscores.defaultTableData[document.getElementById('search_rank').value - 1].username)
+            hiscores.setHeadSkillText(hiscores.defaultTableData[document.getElementById('search_rank').value - 1].username + "'s ");
         }
         else {
             hiscores.loadDefaultHSTable();
@@ -82,7 +82,7 @@ hiscores.initalizeRightsideButtons = () => {
     });
 }
 
-hiscores.formatName = (name, aposS = false) => {
+hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
     name = name.replaceAll("_", " ");
     name = name.replace(/(^\w|\s\w)/g, match => match.toUpperCase()); // Capitalize first letter of each word
     if (aposS) {
@@ -93,7 +93,15 @@ hiscores.formatName = (name, aposS = false) => {
         }
     }
 
-    return name;
+    name = hiscores.getIronIcon(ironStatus) + name;
+    switch (Number(xpRate)) {
+        case 5:
+            return `<i>${name}</i>`
+        case 10:
+            return `${name}`
+        default:
+            return name + ` <span style="color: rgba(0, 0, 0, 0.4);">${xpRate > 10 ? Math.round(xpRate) : xpRate}x</span>` ;
+    }
 }
 
 hiscores.setHeadSkillIcon = (icon) => {
@@ -105,7 +113,7 @@ hiscores.setHeadSkillIcon = (icon) => {
 }
 
 hiscores.setHeadSkillText = (text) => {
-    document.getElementById("scores_head_skill").innerText = text;
+    document.getElementById("scores_head_skill").innerHTML = text;
 }
 
 hiscores.getIronIcon = (ironStatus) => {

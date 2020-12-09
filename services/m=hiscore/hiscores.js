@@ -22,7 +22,7 @@ hiscores.populateDefaultHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `${hiscores.getIronIcon(playerData.iron_mode)}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);
@@ -46,7 +46,7 @@ hiscores.loadUserTable = (username) => {
             hiscores.tableData = result.skills;
             hiscores.tableInfo = result.info;
             hiscores.populatePlayerHSTable();
-            hiscores.setHeadSkillText(hiscores.formatName(username, true));
+            hiscores.setHeadSkillText(hiscores.formatName(username, 0, result.info.exp_multiplier, true));
         })
         .catch(error => {
             document.getElementById('search_name').style.color = 'red';
@@ -55,7 +55,20 @@ hiscores.loadUserTable = (username) => {
 }
 
 hiscores.populatePlayerHSTable = () => {
-    hiscores.setHeadSkillIcon(hiscores.tableInfo.iron_mode === "0" ? "Constitution" : "../../site/img/osrsimg/ironman.png");
+    switch (Number(hiscores.tableInfo.iron_mode)) {
+        case 1:
+            hiscores.setHeadSkillIcon("../../site/img/osrsimg/ironman.png");
+            break;
+        case 2:
+            hiscores.setHeadSkillIcon("../../site/img/osrsimg/hcim.png");
+            break;
+        case 3:
+            hiscores.setHeadSkillIcon("../../site/img/osrsimg/ultimateironman.png");
+            break;
+        default:
+            hiscores.setHeadSkillIcon("Constitution");
+    }
+
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
 
@@ -106,7 +119,7 @@ hiscores.populateSkillHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `${hiscores.getIronIcon(playerData.iron_mode)}<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);

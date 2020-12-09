@@ -591,7 +591,7 @@
    width: 156px;
    height: 505px;
   }
-  .search_small, .search_large {
+  .search_small, .search_large, .search_custom_large {
    margin-bottom: 2px;
    width: 156px;
    text-align: center;
@@ -601,10 +601,14 @@
    background: transparent url(../img/hiscores/search_smalleccb.png?3) repeat-x;
   }
   .search_large {
-   height: 98px;
-   background: transparent url(../img/hiscores/search_largeeccb.png?3) repeat-x;
+    height: 98px;
+    background: transparent url(../img/hiscores/search_largeeccb.png?3) repeat-x;
+   }
+  .search_custom_large {
+   height: 130px;
+   background: transparent url(../img/hiscores/search_custom_largeeccb.png?3) repeat-x;
   }
-  #friends_search {
+   #friends_search {
    margin-bottom: 0px;
    padding: 0px;
   }

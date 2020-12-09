@@ -155,7 +155,7 @@ English
 
         <div class="navigation">
           <div class="location">
-            <b>Location: </b> <a href="../../site/title.ws">Home</a> &gt;
+            <b>Location: </b> <a href="../../index.html">Home</a> &gt;
             Hiscores
           </div>
         </div>
@@ -614,24 +614,33 @@ English
                     <input id="search_rank_submit" type="submit" name="submit" class="buttonmedium" value="Search">
                   </form>
                 </div>
-                <div class="subsectionHeader search_title">Compare Users</div>
+                <div class="subsectionHeader search_title">Filter (Coming Soon)</div>
                 <div class="search_large">
                   <form action="http://services/m=hiscore/compare.ws" method="post" class="no_margin">
                     <input id="search_compare1" class="textinput text" maxlength="12" type="text" name="user1" value="">
                     <input id="search_compare2" class="textinput text" maxlength="12" type="text" name="user2" value="">
-                    <input type="submit" name="submit" class="buttonmedium" value="Compare">
+                    <input type="submit" name="submit" class="buttonmedium" value="Filter">
                   </form>
                 </div>
-                <div class="subsectionHeader search_title">Friends Hiscores</div>
-                <div class="search_large" id="friends_search">
-                  <div class="friendsContent">
-                    To view personal<br>
-                    hiscores and compare<br>
-                    yourself to your friends<br>
-                    <form action="http://services/m=hiscore/hiscorefriends_all.ws?category_type=0" method="POST"
-                      class="no_margin">
-                      <input id="search_friends" type="submit" name="action" class="buttonmedium" value="Log In">
-                    </form>
+                <div class="subsectionHeader search_title">Legend</div>
+                <div class="search_custom_large" id="friends_search">
+                  <div class="friendsContent" style="padding-top: 8px;">
+                    <img src="../../site/img/osrsimg/ironman.png" style="height: 11px;"> Ironman
+                    <br>
+                    <img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px"> Ultimate Ironman
+                    <br>
+                    <img src="../../site/img/osrsimg/hcim.png" style="height: 11px"> Hardcore Ironman
+                    <br>
+                    <span style="color: #4c350a;">---</span>
+                    <br>
+                    <b><i>1x exp rate</i></b>
+                    <br>
+                    <b>2.5x exp rate</b> 
+                    <br>
+                    <i>5x exp rate</i> 
+                    <br>
+                    10x exp rate
+                    <br>
                   </div>
                 </div>
               </div>
