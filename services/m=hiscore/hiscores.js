@@ -94,7 +94,11 @@ function populatePlayerHSTable() {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = sName[i + 24 * page - 1];
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${sName[i - 1]}</a>`;
+        row.childNodes[3].addEventListener("click", e => {
+            e.preventDefault();
+            loadSkillTable(i - 1);
+        })
 
         row.childNodes[5].replaceWith(document.createElement("td"));
         row.childNodes[5].className = "alL";
@@ -121,7 +125,7 @@ function loadSkillTable(skillId) {
 function populateSkillHSTable() {
     document.getElementById("scores_head_skill").innerText = sName[currentSkillId];
     document.getElementById("scores_head_icon").src = `../../site/img/hiscores/skill_icon_${sName[currentSkillId].toLowerCase()}1eccb.gif`;
-    
+
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
         const playerData = tableData[i + 24 * page - 1];
