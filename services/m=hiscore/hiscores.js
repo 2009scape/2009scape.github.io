@@ -1,20 +1,12 @@
 var hiscores = hiscores || {};
 
-hiscores.page = 0;
-let currentSkillId = "";
-
-const apiURL = "http://localhost:3000";
-
-let tableData = [];
-let defaultTableData = [];
-
 hiscores.loadDefaultHSTable = () => {
-    fetch(`${apiURL}/highscores/getPlayersByTotal`)
+    fetch(`${hiscores.apiURL}/highscores/getPlayersByTotal`)
         .then(response => response.json())
         .then(result => {
             console.log(result[0]);
-            tableData = result;
-            defaultTableData = result;
+            hiscores.tableData = result;
+            hiscores.defaultTableData = result;
             hiscores.populateDefaultHSTable();
         })
         .catch(error => console.log('error', error));
@@ -23,7 +15,7 @@ hiscores.loadDefaultHSTable = () => {
 hiscores.populateDefaultHSTable = () => {
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
-        const playerData = tableData[i + 24 * hiscores.page - 1];
+        const playerData = hiscores.tableData[i + 24 * hiscores.page - 1];
 
         row.childNodes[1].replaceWith(document.createElement("td"));
         row.childNodes[1].className = "rankCol";
@@ -31,7 +23,7 @@ hiscores.populateDefaultHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? playerData.username : ""}</a>`;
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);
@@ -48,14 +40,14 @@ hiscores.populateDefaultHSTable = () => {
 }
 
 hiscores.loadUserTable = (username) => {
-    fetch(`${apiURL}/highscores/playerSkills/${username.toLowerCase()}`)
+    fetch(`${hiscores.apiURL}/highscores/playerSkills/${username.toLowerCase()}`)
         .then(response => response.json())
         .then(result => {
             document.getElementById('search_name').style.color = 'black';
             console.log(result[0]);
-            tableData = result;
+            hiscores.tableData = result;
             hiscores.populatePlayerHSTable();
-            document.getElementById("scores_head_skill").innerText = username + "'s ";
+            hiscores.setHeadSkillText(hiscores.formatName(username, true));
         })
         .catch(error => {
             document.getElementById('search_name').style.color = 'red';
@@ -64,6 +56,7 @@ hiscores.loadUserTable = (username) => {
 }
 
 hiscores.populatePlayerHSTable = () => {
+    hiscores.setHeadSkillIcon("Constitution");
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
 
@@ -81,33 +74,33 @@ hiscores.populatePlayerHSTable = () => {
 
         row.childNodes[5].replaceWith(document.createElement("td"));
         row.childNodes[5].className = "alL";
-        row.childNodes[5].innerHTML = tableData[i - 1].static;
+        row.childNodes[5].innerHTML = hiscores.tableData[i - 1].static;
 
         row.childNodes[7].replaceWith(document.createElement("td"));
         row.childNodes[7].className = "alL";
-        row.childNodes[7].innerHTML = Math.floor(tableData[i - 1].experience).toLocaleString();
+        row.childNodes[7].innerHTML = Math.floor(hiscores.tableData[i - 1].experience).toLocaleString();
     }
 }
 
 hiscores.loadSkillTable = (skillId) => {
-    fetch(`${apiURL}/highscores/playersBySkill/${skillId}`)
+    fetch(`${hiscores.apiURL}/highscores/playersBySkill/${skillId}`)
         .then(response => response.json())
         .then(result => {
             console.log(result[0]);
-            tableData = result;
-            currentSkillId = skillId;
+            hiscores.tableData = result;
+            hiscores.currentSkillId = skillId;
             hiscores.populateSkillHSTable();
         })
         .catch(error => console.log('error', error));
 }
 
 hiscores.populateSkillHSTable = () => {
-    document.getElementById("scores_head_skill").innerText = hiscores.sName[currentSkillId];
-    document.getElementById("scores_head_icon").src = `../../site/img/hiscores/skill_icon_${hiscores.sName[currentSkillId].toLowerCase()}1eccb.gif`;
+    hiscores.setHeadSkillText(hiscores.sName[hiscores.currentSkillId]);
+    hiscores.setHeadSkillIcon(hiscores.sName[hiscores.currentSkillId]);
 
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
-        const playerData = tableData[i + 24 * hiscores.page - 1];
+        const playerData = hiscores.tableData[i + 24 * hiscores.page - 1];
 
         row.childNodes[1].replaceWith(document.createElement("td"));
         row.childNodes[1].className = "rankCol";
@@ -115,7 +108,7 @@ hiscores.populateSkillHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? playerData.username : ""}</a>`;
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username) : ""}</a>`;
         row.childNodes[3].addEventListener("click", function (e) {
             e.preventDefault();
             hiscores.loadUserTable(playerData.username);
