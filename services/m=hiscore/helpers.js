@@ -39,7 +39,6 @@ hiscores.linkLeftTabSkillNames = () => {
     hiscores.sName.forEach((skill, index) => {
         row = document.getElementsByClassName(`   ${skill}    ico`)[0].addEventListener("click", function (e) {
             e.preventDefault();
-            console.log(skill, index);
             hiscores.loadSkillTable(index);
         });
     });

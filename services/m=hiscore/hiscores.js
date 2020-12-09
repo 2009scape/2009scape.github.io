@@ -4,7 +4,6 @@ hiscores.loadDefaultHSTable = () => {
     fetch(`${hiscores.apiURL}/highscores/playersByTotal`)
         .then(response => response.json())
         .then(result => {
-            console.log(result[0]);
             hiscores.tableData = result;
             hiscores.defaultTableData = result;
             hiscores.populateDefaultHSTable();
@@ -44,7 +43,6 @@ hiscores.loadUserTable = (username) => {
         .then(response => response.json())
         .then(result => {
             document.getElementById('search_name').style.color = 'black';
-            console.log(result[0]);
             hiscores.tableData = result;
             hiscores.populatePlayerHSTable();
             hiscores.setHeadSkillText(hiscores.formatName(username, true));
@@ -86,7 +84,6 @@ hiscores.loadSkillTable = (skillId) => {
     fetch(`${hiscores.apiURL}/highscores/playersBySkill/${skillId}`)
         .then(response => response.json())
         .then(result => {
-            console.log(result[0]);
             hiscores.tableData = result;
             hiscores.currentSkillId = skillId;
             hiscores.populateSkillHSTable();
