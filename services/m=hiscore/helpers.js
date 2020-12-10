@@ -1,4 +1,7 @@
 var hiscores = hiscores || {};
+
+hiscores.apiURL = "https://18f35cfbb30b.ngrok.io";
+
 hiscores.sName = [
     "Attack",
     "Defence",
@@ -29,8 +32,6 @@ hiscores.sName = [
 
 hiscores.page = 0;
 hiscores.currentSkillId = "";
-
-hiscores.apiURL = "https://18f35cfbb30b.ngrok.io";
 
 hiscores.tableData = [];
 hiscores.defaultTableData = [];

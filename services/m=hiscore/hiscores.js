@@ -1,7 +1,7 @@
 var hiscores = hiscores || {};
 
 hiscores.loadDefaultHSTable = () => {
-    fetch(`${hiscores.apiURL}/highscores/playersByTotal`)
+    fetch(`${hiscores.apiURL}/hiscores/playersByTotal`)
         .then(response => response.json())
         .then(result => {
             result = hiscores.filter(result);
@@ -36,7 +36,7 @@ hiscores.populateDefaultHSTable = () => {
 }
 
 hiscores.loadUserTable = (username) => {
-    fetch(`${hiscores.apiURL}/highscores/playerSkills/${username.toLowerCase()}`)
+    fetch(`${hiscores.apiURL}/hiscores/playerSkills/${username.toLowerCase()}`)
         .then(response => response.json())
         .then(result => {
             document.getElementById('search_name').style.color = 'black';
@@ -47,7 +47,7 @@ hiscores.loadUserTable = (username) => {
         })
         .then(() => {
             // Now get the player ranks (done seperately)
-            fetch(`${hiscores.apiURL}/highscores/rankedMap`)
+            fetch(`${hiscores.apiURL}/hiscores/rankedMap`)
                 .then(response => response.json())
                 .then(result => {
                     hiscores.populatePlayerRanks(username, result);
@@ -108,7 +108,7 @@ hiscores.populatePlayerRanks = (username, result) => {
 }
 
 hiscores.loadSkillTable = (skillId) => {
-    fetch(`${hiscores.apiURL}/highscores/playersBySkill/${skillId}`)
+    fetch(`${hiscores.apiURL}/hiscores/playersBySkill/${skillId}`)
         .then(response => response.json())
         .then(result => {
             result = hiscores.filter(result);
