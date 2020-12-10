@@ -588,7 +588,7 @@ English
                 </div>
                 <div class="subsectionHeader search_title">Filter (Coming Soon)</div>
                 <div class="search_tiny_bit_more_large">
-                  <form action="http://services/m=hiscore/compare.ws" method="post" class="no_margin">
+                  <form action="./hiscores.html" method="post" class="no_margin">
                     <div id="remember">
                       <label for="rem">
                         <table class="center" style="margin: 0 auto; padding-top: 4px;">
@@ -619,16 +619,16 @@ English
                         <table class="center" style="margin: 0 auto; padding-top: 4px;">
                           <tr>
                             <td>
-                              <input type="range" min="1" max="25" value="10"
+                              <input id="maxXP" type="range" min="1" max="25" value="10"
                                 oninput="this.nextElementSibling.nextElementSibling.value = this.value">
                               <br>
-                              Max XP Rate: <output>10</output>
+                              Max XP Rate: <output id="maxXPoutput">10</output>
                             </td>
                           </tr>
                         </table>
                       </label>
                     </div>
-                    <input type="submit" name="submit" class="buttonmedium" value="Filter" style="margin-top: 2px;">
+                    <input id="filter_submit" type="submit" name="submit" class="buttonmedium" value="Filter" style="margin-top: 2px;">
                   </form>
                 </div>
                 <div class="subsectionHeader search_title">Legend</div>

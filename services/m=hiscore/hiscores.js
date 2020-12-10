@@ -149,3 +149,17 @@ if (getParam("skill")) {
 } else {
     hiscores.loadDefaultHSTable();
 }
+
+if (getParam("iron")) {
+    document.getElementById('check_iron').checked = getParam("iron") === "true";
+}
+if (getParam("ultiron")) {
+    document.getElementById('check_ultiron').checked = getParam("ultiron") === "true";
+}
+if (getParam("hciron")) {
+    document.getElementById('check_hciron').checked = getParam("hciron") === "true";
+}
+if (getParam("maxXP")) {
+    document.getElementById('maxXP').value = getParam("maxXP");
+    document.getElementById('maxXPoutput').innerHTML = getParam("maxXP");
+}

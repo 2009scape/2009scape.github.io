@@ -50,13 +50,13 @@ hiscores.initializePageArrows = () => {
         if (hiscores.page > 0) {
             hiscores.page--;
         }
-        let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/)[0];
+        let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/).join('');
         window.location.replace(`./hiscores.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
     });
     document.getElementById("button-down").addEventListener("click", function (e) {
         e.preventDefault();
         hiscores.page++;
-        let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/)[0];
+        let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/).join('');
         window.location.replace(`./hiscores.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
     });
 }
@@ -76,6 +76,17 @@ hiscores.initalizeRightsideButtons = () => {
         else {
             hiscores.loadDefaultHSTable();
         }
+    });
+
+    document.getElementById("filter_submit").addEventListener("click", function (e) {
+        e.preventDefault();
+        hiscores.page++;
+        let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=\d+/).join('');
+        const ironparam = `?iron=${document.getElementById('check_iron').checked}`;
+        const ultironparam = `?ultiron=${document.getElementById('check_ultiron').checked}`;
+        const hcironparam = `?hciron=${document.getElementById('check_hciron').checked}`;
+        const maxXP = `?maxXP=${document.getElementById("maxXP").value}`;
+        window.location.replace(`./hiscores.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}`);
     });
 }
 
