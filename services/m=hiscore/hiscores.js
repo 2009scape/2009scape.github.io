@@ -127,10 +127,27 @@ hiscores.initializePageArrows();
 hiscores.initalizeRightsideButtons();
 hiscores.linkLeftTabSkillNames();
 
-if (window.location.search.startsWith("?skill=")) {
-    hiscores.loadSkillTable(window.location.search.split("=")[1]);
-} else if (window.location.search.startsWith("?player=")) {
-    hiscores.loadUserTable(window.location.search.split("=")[1]);
+/**
+ * In URL ?player=guthix, passing param "player" will return "guthix"
+ * In same example, passing param "page" will return null
+ */
+function getParam(param) {
+    console.log("Looking for param " + param);
+    param = window.location.search.split("?").find(p => {
+        console.log("Returning " + p.startsWith(`?${param}`) + " for " + p);
+        return p.startsWith(`${param}`);
+    })
+    return param ? param.split("=")[1] : null;
+}
+
+if (getParam("page")) {
+    hiscores.page = Number(getParam("page"));
+}
+
+if (getParam("skill")) {
+    hiscores.loadSkillTable(getParam("skill"));
+} else if (getParam("player")) {
+    hiscores.loadUserTable(getParam("player"));
 } else {
     hiscores.loadDefaultHSTable();
 }

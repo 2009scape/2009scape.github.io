@@ -30,7 +30,7 @@ hiscores.sName = [
 hiscores.page = 0;
 hiscores.currentSkillId = "";
 
-hiscores.apiURL = "http://localhost:3000";
+hiscores.apiURL = "http://api.2009scape.org:3000";
 
 hiscores.tableData = [];
 hiscores.defaultTableData = [];
@@ -50,12 +50,14 @@ hiscores.initializePageArrows = () => {
         if (hiscores.page > 0) {
             hiscores.page--;
         }
-        hiscores.populateDefaultHSTable();
+        let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/)[0];
+        window.location.replace(`./hiscores.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
     });
     document.getElementById("button-down").addEventListener("click", function (e) {
         e.preventDefault();
         hiscores.page++;
-        hiscores.populateDefaultHSTable();
+        let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/)[0];
+        window.location.replace(`./hiscores.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
     });
 }
 
