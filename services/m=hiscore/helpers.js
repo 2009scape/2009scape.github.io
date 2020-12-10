@@ -30,7 +30,7 @@ hiscores.sName = [
 hiscores.page = 0;
 hiscores.currentSkillId = "";
 
-hiscores.apiURL = "https://cuddly-walrus-38.loca.lt";
+hiscores.apiURL = "https://18f35cfbb30b.ngrok.io";
 
 hiscores.tableData = [];
 hiscores.defaultTableData = [];
