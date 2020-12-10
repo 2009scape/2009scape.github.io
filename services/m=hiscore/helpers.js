@@ -38,9 +38,13 @@ hiscores.defaultTableData = [];
 hiscores.linkLeftTabSkillNames = () => {
     hiscores.sName.forEach((skill, index) => {
         row = document.getElementsByClassName(`   ${skill}    ico`)[0].addEventListener("click", function (e) {
-            hiscores.page = 0;
-            hiscores.loadSkillTable(index);
+            e.preventDefault();
+            window.location.replace(`./hiscores.html?skill=${index}${hiscores.getFiltersAsURLparams()}`);
         });
+    });
+    document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./hiscores.html${hiscores.getFiltersAsURLparams()}`);
     });
 }
 
@@ -64,7 +68,7 @@ hiscores.initializePageArrows = () => {
 hiscores.initalizeRightsideButtons = () => {
     document.getElementById("search_button").addEventListener("click", function (e) {
         e.preventDefault();
-        window.location.replace(`./hiscores.html?player=${document.getElementById('search_name').value}`);
+        window.location.replace(`./hiscores.html?player=${document.getElementById('search_name').value}${hiscores.getFiltersAsURLparams()}`);
     });
 
     document.getElementById("search_rank_submit").addEventListener("click", function (e) {
@@ -88,6 +92,41 @@ hiscores.initalizeRightsideButtons = () => {
         const maxXP = `?maxXP=${document.getElementById("maxXP").value}`;
         window.location.replace(`./hiscores.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}`);
     });
+}
+
+hiscores.filter = (result) => {
+    return result.filter(result => {
+        // No filters
+        if (!getParam("iron")) {
+            return true;
+        }
+
+        if (Number(result.exp_multiplier) > Number(getParam("maxXP"))) {
+            return false;
+        }
+
+        // If all ironman filters are false, show everyone (only filter by exp)
+        if (getParam("iron") === "false" && getParam("ultiron") === "false" && getParam("hciron") === "false") {
+            return true;
+        }
+
+        // If some ironman filters are true, only show those
+        if (getParam("iron") === "true" && result.iron_mode == 1) {
+            return true;
+        }
+        if (getParam("hciron") === "true" && result.iron_mode == 2) {
+            return true;
+        }
+        if (getParam("ultiron") === "true" && result.iron_mode == 3) {
+            return true;
+        }
+
+        return false;
+    });
+}
+
+hiscores.getFiltersAsURLparams = () => {
+    return `?iron=${getParam("iron")}?hciron=${getParam("hciron")}?ultiron=${getParam("ultiron")}?maxXP=${getParam("maxXP")}`;
 }
 
 hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
