@@ -126,7 +126,7 @@ hiscores.filter = (result) => {
 }
 
 hiscores.getFiltersAsURLparams = () => {
-    return `?iron=${getParam("iron")}?hciron=${getParam("hciron")}?ultiron=${getParam("ultiron")}?maxXP=${getParam("maxXP")}`;
+    return getParam("iron") ? `?iron=${getParam("iron")}?hciron=${getParam("hciron")}?ultiron=${getParam("ultiron")}?maxXP=${getParam("maxXP")}` : "";
 }
 
 hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
