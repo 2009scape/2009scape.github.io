@@ -54,7 +54,8 @@ hiscores.loadUserTable = (username) => {
                 })
         })
         .catch(error => {
-            document.getElementById('search_name').style.color = 'red';
+            document.getElementById('search_name').style.color = 'red';            
+            document.getElementById('search_name').value = 'Player not found!';
             console.log('error', error);
         });
 }
