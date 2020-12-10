@@ -30,7 +30,7 @@ hiscores.sName = [
 hiscores.page = 0;
 hiscores.currentSkillId = "";
 
-hiscores.apiURL = "https://18f35cfbb30b.ngrok.io";
+hiscores.apiURL = "http://localhost:3000";
 
 hiscores.tableData = [];
 hiscores.defaultTableData = [];
@@ -84,7 +84,6 @@ hiscores.initalizeRightsideButtons = () => {
 
     document.getElementById("filter_submit").addEventListener("click", function (e) {
         e.preventDefault();
-        hiscores.page++;
         let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=\d+/).join('');
         const ironparam = `?iron=${document.getElementById('check_iron').checked}`;
         const ultironparam = `?ultiron=${document.getElementById('check_ultiron').checked}`;
@@ -92,6 +91,16 @@ hiscores.initalizeRightsideButtons = () => {
         const maxXP = `?maxXP=${document.getElementById("maxXP").value}`;
         window.location.replace(`./hiscores.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}`);
     });
+
+    if (document.getElementById("filter_clear")) {
+        console.log("filter clear is here");
+        // Filter clear only appears when filters are present 
+        document.getElementById("filter_clear").addEventListener("click", function (e) {
+            e.preventDefault();
+            let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=\d+/).join('');
+            window.location.replace(`./hiscores.html${pageRemovedFiltersLocation}`);
+        })    
+    }
 }
 
 hiscores.filter = (result) => {

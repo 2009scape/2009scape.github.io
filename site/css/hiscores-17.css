@@ -605,11 +605,11 @@
     background: transparent url(../img/hiscores/search_largeeccb.png?3) repeat-x;
    }
   .search_tiny_bit_more_large {
-    height: 114px;
-    background: transparent url(../img/hiscores/search_tiny_bit_more_largeeccb.png?3) repeat-x;
+    height: 134px;
+    background: transparent url(../img/hiscores/search_custom_largeeccb.png?3) repeat-x;
    }
   .search_custom_large {
-   height: 122px;
+   height: 102px;
    background: transparent url(../img/hiscores/search_custom_largeeccb.png?3) repeat-x;
   }
    #friends_search {

@@ -45,6 +45,14 @@ hiscores.loadUserTable = (username) => {
             hiscores.populatePlayerHSTable();
             hiscores.setHeadSkillText(hiscores.formatName(username, 0, result.info.exp_multiplier, true));
         })
+        .then(() => {
+            // Now get the player ranks (done seperately)
+            fetch(`${hiscores.apiURL}/highscores/rankedMap`)
+                .then(response => response.json())
+                .then(result => {
+                    hiscores.populatePlayerRanks(username, result);
+                })
+        })
         .catch(error => {
             document.getElementById('search_name').style.color = 'red';
             console.log('error', error);
@@ -71,7 +79,7 @@ hiscores.populatePlayerHSTable = () => {
 
         row.childNodes[1].replaceWith(document.createElement("td"));
         row.childNodes[1].className = "rankCol";
-        row.childNodes[1].innerHTML = "0";
+        row.childNodes[1].innerHTML = "";
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
@@ -84,6 +92,18 @@ hiscores.populatePlayerHSTable = () => {
         row.childNodes[7].replaceWith(document.createElement("td"));
         row.childNodes[7].className = "alL";
         row.childNodes[7].innerHTML = Math.floor(hiscores.tableData[i - 1].experience).toLocaleString();
+    }
+}
+
+hiscores.populatePlayerRanks = (username, result) => {
+    for (let i = 1; i <= 24; i++) {
+        result[i - 1] = hiscores.filter(result[i - 1]);
+        row = document.getElementsByClassName(`row row${i}`)[0];
+
+        row.childNodes[1].replaceWith(document.createElement("td"));
+        row.childNodes[1].className = "rankCol";
+        let rank = (result[i - 1].findIndex(player => player.username === username) + 1)
+        row.childNodes[1].innerHTML = rank ? rank : i % 2 === 1 ? "N/A" : "Bad Filter";
     }
 }
 
@@ -125,9 +145,6 @@ hiscores.populateSkillHSTable = () => {
     }
 }
 
-hiscores.initializePageArrows();
-hiscores.initalizeRightsideButtons();
-hiscores.linkLeftTabSkillNames();
 
 /**
  * In URL ?player=guthix, passing param "player" will return "guthix"
@@ -153,8 +170,16 @@ if (getParam("skill")) {
 }
 
 if (getParam("iron")) {
-    document.getElementById("filter_submit").value = "Filter";
     document.getElementById('check_iron').checked = getParam("iron") === "true";
+
+    document.getElementById("filter_submit").value = "Filter";
+    document.getElementById("filter_div").style.height = "134px";
+    // Add disable button
+    document.getElementById("filter_clear_div").innerHTML = `<input id="filter_clear" type="submit" name="submit" class="buttonmedium" value="Clear" style="margin-top: 2px;">`
+} else {
+    document.getElementById("filter_clear_div").innerHTML = "";
+    // Change width to 134 minus button size
+    document.getElementById("filter_div").style.height = "110px";
 }
 if (getParam("ultiron")) {
     document.getElementById('check_ultiron').checked = getParam("ultiron") === "true";
@@ -166,3 +191,8 @@ if (getParam("maxXP")) {
     document.getElementById('maxXP').value = getParam("maxXP");
     document.getElementById('maxXPoutput').innerHTML = getParam("maxXP");
 }
+
+
+hiscores.initializePageArrows();
+hiscores.initalizeRightsideButtons();
+hiscores.linkLeftTabSkillNames();
