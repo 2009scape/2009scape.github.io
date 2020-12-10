@@ -22,11 +22,7 @@ hiscores.populateDefaultHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
-        row.childNodes[3].addEventListener("click", function (e) {
-            e.preventDefault();
-            hiscores.loadUserTable(playerData.username);
-        });
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html?player=${playerData.username}">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
 
         row.childNodes[5].replaceWith(document.createElement("td"));
         row.childNodes[5].className = "alL";
@@ -50,7 +46,7 @@ hiscores.loadUserTable = (username) => {
         })
         .catch(error => {
             document.getElementById('search_name').style.color = 'red';
-            console.log('error', error)
+            console.log('error', error);
         });
 }
 
@@ -78,11 +74,7 @@ hiscores.populatePlayerHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${hiscores.sName[i - 1]}</a>`;
-        row.childNodes[3].addEventListener("click", e => {
-            e.preventDefault();
-            hiscores.loadSkillTable(i - 1);
-        })
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html?skill=${i - 1}">${hiscores.sName[i - 1]}</a>`;
 
         row.childNodes[5].replaceWith(document.createElement("td"));
         row.childNodes[5].className = "alL";
@@ -119,11 +111,7 @@ hiscores.populateSkillHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
-        row.childNodes[3].addEventListener("click", function (e) {
-            e.preventDefault();
-            hiscores.loadUserTable(playerData.username);
-        });
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html?player=${playerData.username}">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
 
         row.childNodes[5].replaceWith(document.createElement("td"));
         row.childNodes[5].className = "alL";
@@ -139,4 +127,10 @@ hiscores.initializePageArrows();
 hiscores.initalizeRightsideButtons();
 hiscores.linkLeftTabSkillNames();
 
-hiscores.loadDefaultHSTable();
+if (window.location.search.startsWith("?skill=")) {
+    hiscores.loadSkillTable(window.location.search.split("=")[1]);
+} else if (window.location.search.startsWith("?player=")) {
+    hiscores.loadUserTable(window.location.search.split("=")[1]);
+} else {
+    hiscores.loadDefaultHSTable();
+}

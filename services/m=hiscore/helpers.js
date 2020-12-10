@@ -38,7 +38,6 @@ hiscores.defaultTableData = [];
 hiscores.linkLeftTabSkillNames = () => {
     hiscores.sName.forEach((skill, index) => {
         row = document.getElementsByClassName(`   ${skill}    ico`)[0].addEventListener("click", function (e) {
-            e.preventDefault();
             hiscores.page = 0;
             hiscores.loadSkillTable(index);
         });
@@ -63,12 +62,7 @@ hiscores.initializePageArrows = () => {
 hiscores.initalizeRightsideButtons = () => {
     document.getElementById("search_button").addEventListener("click", function (e) {
         e.preventDefault();
-        if (document.getElementById('search_name').value) {
-            hiscores.loadUserTable(document.getElementById('search_name').value)
-        }
-        else {
-            hiscores.loadDefaultHSTable();
-        }
+        window.location.replace(`./hiscores.html?player=${document.getElementById('search_name').value}`);
     });
 
     document.getElementById("search_rank_submit").addEventListener("click", function (e) {
