@@ -132,9 +132,7 @@ hiscores.linkLeftTabSkillNames();
  * In same example, passing param "page" will return null
  */
 function getParam(param) {
-    console.log("Looking for param " + param);
     param = window.location.search.split("?").find(p => {
-        console.log("Returning " + p.startsWith(`?${param}`) + " for " + p);
         return p.startsWith(`${param}`);
     })
     return param ? param.split("=")[1] : null;
