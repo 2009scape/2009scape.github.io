@@ -4,6 +4,34 @@ hiscores.loadDefaultHSTable = () => {
     fetch(`${hiscores.apiURL}/highscores/playersByTotal`)
         .then(response => response.json())
         .then(result => {
+            result = result.filter(result => {
+                // No filters
+                if (!getParam("iron")) {
+                    return true;
+                }
+
+                if (Number(result.exp_multiplier) > Number(getParam("maxXP"))) {
+                    return false;
+                }
+
+                // If all ironman filters are false, show everyone (only filter by exp)
+                if (getParam("iron") === "false" && getParam("ultiron") === "false" && getParam("hciron") === "false") {
+                    return true;
+                }
+
+                // If some ironman filters are true, only show those
+                if (getParam("iron") === "true" && result.iron_mode == 1) {
+                    return true;
+                }
+                if (getParam("hciron") === "true" && result.iron_mode == 2) {
+                    return true;
+                }
+                if (getParam("ultiron") === "true" && result.iron_mode == 3) {
+                    return true;
+                }
+
+                return false;
+            });
             hiscores.tableData = result;
             hiscores.defaultTableData = result;
             hiscores.populateDefaultHSTable();
@@ -22,7 +50,7 @@ hiscores.populateDefaultHSTable = () => {
 
         row.childNodes[3].replaceWith(document.createElement("td"));
         row.childNodes[3].className = "alL";
-        row.childNodes[3].innerHTML = `<a href="./hiscores.html?player=${playerData.username}">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
+        row.childNodes[3].innerHTML = `<a href="./hiscores.html${playerData ? "?player=" + playerData.username : ""}">${playerData ? hiscores.formatName(playerData.username, playerData.iron_mode, playerData.exp_multiplier) : ""}</a>`;
 
         row.childNodes[5].replaceWith(document.createElement("td"));
         row.childNodes[5].className = "alL";
