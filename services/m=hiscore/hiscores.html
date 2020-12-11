@@ -17,7 +17,7 @@ English
 ">
   <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
   <meta name="description"
-  content="2009scape - Bringing back the game from 2009 you love. Multiplayer and Free forever.">
+    content="2009scape - Bringing back the game from 2009 you love. Multiplayer and Free forever.">
   <meta name="title" content="2009scape - Free Forever - Hiscores">
   <title>2009scape - Free Forever - Hiscores</title>
   <style type="text/css">
@@ -591,36 +591,46 @@ English
                   <form action="./hiscores.html" method="post" class="no_margin">
                     <div id="remember">
                       <label for="rem">
-                        <table class="center" style="margin: 0 auto; padding-top: 4px;">
+                        <table class="center" style="margin: 0 auto; padding-top: 6px; padding-bottom: 8px;">
                           <tr>
-                            <td onmouseover="this.style.background='rgba(20, 20, 20, 0.3)';"
-                              onmouseout="this.style.background='rgba(0, 0, 0, 0)';"
-                              onclick="document.getElementById('check_iron').checked = !document.getElementById('check_iron').checked">
-                              <img src="../../site/img/osrsimg/ironman.png" style="height: 11px;">
-                              <input type="checkbox" name="check_iron" id="check_iron" value="1" class="checkbox"
-                                style="pointer-events: none;">
+                            <td>
+                              <span style="white-space: nowrap;">
+                                <img src="../../site/img/osrsimg/ironman.png" style="height: 11px; padding-right: 30px;">
+                                <label class="control control-checkbox">
+                                  <input type="checkbox" name="check_iron" id="check_iron" value="1" class="checkbox"
+                                    style="pointer-events: none;" />
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </span>
                             </td>
-                            <td onmouseover="this.style.background='rgba(20, 20, 20, 0.3)';"
-                              onmouseout="this.style.background='rgba(0, 0, 0, 0)';"
-                              onclick="document.getElementById('check_ultiron').checked = !document.getElementById('check_ultiron').checked">
-                              <img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px;">
-                              <input type="checkbox" name="check_ultiron" id="check_ultiron" value="1" class="checkbox"
-                                style="pointer-events: none;">
+                            <td>
+                              <span style="white-space: nowrap;">
+                                <img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px; padding-right: 25px;">
+                                <label class="control control-checkbox">
+                                  <input type="checkbox" name="check_ultiron" id="check_ultiron" value="1" class="checkbox"
+                                    style="pointer-events: none;" />
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </span>
                             </td>
-                            <td onmouseover="this.style.background='rgba(20, 20, 20, 0.3)';"
-                              onmouseout="this.style.background='rgba(0, 0, 0, 0)';"
-                              onclick="document.getElementById('check_hciron').checked = !document.getElementById('check_hciron').checked">
-                              <img src="../../site/img/osrsimg/hcim.png" style="height: 11px;">
-                              <input type="checkbox" name="check_hciron" id="check_hciron" value="1" class="checkbox"
-                                style="pointer-events: none;">
+                            <td>
+                              <span style="white-space: nowrap;">
+                                <img src="../../site/img/osrsimg/hcim.png" style="height: 11px; padding-right: 25px;">
+                                <label class="control control-checkbox">
+                                  <input type="checkbox" name="check_hciron" id="check_hciron" value="1" class="checkbox"
+                                    style="pointer-events: none;" />
+                                  <div class="control_indicator"></div>
+                                </label>
+                              </span>
                             </td>
                           </tr>
                         </table>
                         <table class="center" style="margin: 0 auto; padding-top: 4px;">
                           <tr>
                             <td>
-                              <input class="nonBlueInputSlider" id="maxXP" type="range" min="1" max="10" value="10" step="0.5"
-                            oninput="this.nextElementSibling.nextElementSibling.value = this.value % 1 != 0 ? this.value : this.value + '.0'">
+                              <input class="nonBlueInputSlider" id="maxXP" type="range" min="1" max="10" value="10"
+                                step="0.5"
+                                oninput="this.nextElementSibling.nextElementSibling.value = this.value % 1 != 0 ? this.value : this.value + '.0'">
                               <br>
                               Max XP Rate: <output id="maxXPoutput">10</output>
                             </td>
@@ -628,7 +638,8 @@ English
                         </table>
                       </label>
                     </div>
-                    <input id="filter_submit" type="submit" name="submit" class="buttonmedium" value="Filter" style="margin-top: 2px;">
+                    <input id="filter_submit" type="submit" name="submit" class="buttonmedium" value="Filter"
+                      style="margin-top: 2px;">
                     <div id="filter_clear_div">
 
                     </div>
