@@ -151,7 +151,7 @@ hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
 
     name = hiscores.getIronIcon(ironStatus) + name;
     if (xpRate != 10) {
-        return name + ` <span style="color: rgba(${Math.max(0, 50 - Math.pow(xpRate, 1.7) * 10)}, 0, 0, 0.4);">${xpRate > 10 ? Math.round(xpRate) : xpRate}x</span>`;
+        return name + ` <span style="color: rgba(${Math.max(0, 80 - Math.pow(xpRate, 1.7) * 10)}, 0, 0, 0.4);">${xpRate > 10 ? Math.round(xpRate) : xpRate}x</span>`;
     }
     return name;
 }
