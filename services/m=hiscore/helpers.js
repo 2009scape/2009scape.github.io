@@ -85,7 +85,7 @@ hiscores.initalizeRightsideButtons = () => {
 
     document.getElementById("filter_submit").addEventListener("click", function (e) {
         e.preventDefault();
-        let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=\d+/).join('');
+        let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=[\d\.]+/).join('');
         const ironparam = `?iron=${document.getElementById('check_iron').checked}`;
         const ultironparam = `?ultiron=${document.getElementById('check_ultiron').checked}`;
         const hcironparam = `?hciron=${document.getElementById('check_hciron').checked}`;
