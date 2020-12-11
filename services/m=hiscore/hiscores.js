@@ -104,7 +104,7 @@ hiscores.populatePlayerRanks = (username, result) => {
         row.childNodes[1].replaceWith(document.createElement("td"));
         row.childNodes[1].className = "rankCol";
         let rank = (result[i - 1].findIndex(player => player.username === username) + 1)
-        row.childNodes[1].innerHTML = rank ? rank : i % 2 === 1 ? "N/A" : "Bad Filter";
+        row.childNodes[1].innerHTML = rank ? rank : "Unranked";
     }
 }
 
