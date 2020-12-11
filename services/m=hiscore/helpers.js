@@ -94,11 +94,10 @@ hiscores.initalizeRightsideButtons = () => {
     });
 
     if (document.getElementById("filter_clear")) {
-        console.log("filter clear is here");
         // Filter clear only appears when filters are present 
         document.getElementById("filter_clear").addEventListener("click", function (e) {
             e.preventDefault();
-            let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=\d+/).join('');
+            let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=[\d\.]+/).join('');
             window.location.replace(`./hiscores.html${pageRemovedFiltersLocation}`);
         })    
     }
