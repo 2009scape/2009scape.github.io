@@ -1,17 +1,5 @@
 var hiscores = hiscores || {};
 
-hiscores.loadActivityTable = () => {
-    fetch(`${hiscores.apiURL}/hiscores/playersByTotal`)
-        .then(response => response.json())
-        .then(result => {
-            result = hiscores.filter(result);
-            hiscores.tableData = result;
-            hiscores.defaultTableData = result;
-            hiscores.populateActivityTable();
-        })
-        .catch(error => console.log('error', error));
-}
-
 hiscores.populateActivityTable = () => {
     row = (num) => document.getElementsByClassName(`row row${num}`)[0]; // Small wrapper that gets a row by just the row # 
 
@@ -31,10 +19,22 @@ hiscores.populateActivityTable = () => {
     }
 
     row(1).childNodes[3].innerHTML = "Total XP";
-    row(1).childNodes[5].innerHTML = "Coming soon";
+    fetch(`${hiscores.apiURL}/hiscores/getServerTotalXp`)
+    .then(response => response.json())
+    .then(result => {
+        // Todo: Make the API differentiate between ironmen types and stof
+        row(1).childNodes[5].innerHTML = result.total_xp;
+    })
+    .catch(error => console.log('error', error));
 
     row(2).childNodes[3].innerHTML = "Total Slayer Tasks Completed";
-    row(2).childNodes[5].innerHTML = "Coming soon";
+    fetch(`${hiscores.apiURL}/hiscores/getServerTotalSlayerTasks`)
+    .then(response => response.json())
+    .then(result => {
+        // Todo: Make the API differentiate between ironmen types and stof
+        row(1).childNodes[5].innerHTML = result.total_tasks;
+    })
+    .catch(error => console.log('error', error));
 }
 
 /**
@@ -78,4 +78,4 @@ if (getParam("maxXP")) {
 
 hiscores.initializePageArrows();
 hiscores.initalizeRightsideButtons();
-hiscores.loadActivityTable();
+hiscores.populateActivityTable();
