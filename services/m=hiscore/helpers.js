@@ -36,40 +36,40 @@ hiscores.currentSkillId = "";
 hiscores.tableData = [];
 hiscores.defaultTableData = [];
 
-hiscores.linkLeftTabSkillNames = () => {
+hiscores.linkLeftTabSkillNames = (loc = "hiscores") => {
     hiscores.sName.forEach((skill, index) => {
         row = document.getElementsByClassName(`   ${skill}    ico`)[0].addEventListener("click", function (e) {
             e.preventDefault();
-            window.location.replace(`./hiscores.html?skill=${index}${hiscores.getFiltersAsURLparams()}`);
+            window.location.replace(`./${loc}.html?skill=${index}${hiscores.getFiltersAsURLparams()}`);
         });
     });
     document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
         e.preventDefault();
-        window.location.replace(`./hiscores.html${hiscores.getFiltersAsURLparams()}`);
+        window.location.replace(`./${loc}.html${hiscores.getFiltersAsURLparams()}`);
     });
 }
 
-hiscores.initializePageArrows = () => {
+hiscores.initializePageArrows = (loc = "hiscores") => {
     document.getElementById("button-up").addEventListener("click", function (e) {
         e.preventDefault();
         if (hiscores.page > 0) {
             hiscores.page--;
         }
         let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/).join('');
-        window.location.replace(`./hiscores.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
+        window.location.replace(`./${loc}.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
     });
     document.getElementById("button-down").addEventListener("click", function (e) {
         e.preventDefault();
         hiscores.page++;
         let pageRemovedWindowLocation = window.location.search.split(/\?page=\d*/).join('');
-        window.location.replace(`./hiscores.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
+        window.location.replace(`./${loc}.html${pageRemovedWindowLocation}?page=${hiscores.page}`);
     });
 }
 
-hiscores.initalizeRightsideButtons = () => {
+hiscores.initalizeRightsideButtons = (loc = "hiscores") => {
     document.getElementById("search_button").addEventListener("click", function (e) {
         e.preventDefault();
-        window.location.replace(`./hiscores.html?player=${document.getElementById('search_name').value}${hiscores.getFiltersAsURLparams()}`);
+        window.location.replace(`./${loc}.html?player=${document.getElementById('search_name').value}${hiscores.getFiltersAsURLparams()}`);
     });
 
     document.getElementById("search_rank_submit").addEventListener("click", function (e) {
@@ -90,7 +90,7 @@ hiscores.initalizeRightsideButtons = () => {
         const ultironparam = `?ultiron=${document.getElementById('check_ultiron').checked}`;
         const hcironparam = `?hciron=${document.getElementById('check_hciron').checked}`;
         const maxXP = `?maxXP=${document.getElementById("maxXP").value}`;
-        window.location.replace(`./hiscores.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}`);
+        window.location.replace(`./${loc}.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}`);
     });
 
     if (document.getElementById("filter_clear")) {
@@ -98,7 +98,7 @@ hiscores.initalizeRightsideButtons = () => {
         document.getElementById("filter_clear").addEventListener("click", function (e) {
             e.preventDefault();
             let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=[\d\.]+/).join('');
-            window.location.replace(`./hiscores.html${pageRemovedFiltersLocation}`);
+            window.location.replace(`./${loc}.html${pageRemovedFiltersLocation}`);
         })    
     }
 }

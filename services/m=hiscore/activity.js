@@ -4,10 +4,10 @@ hiscores.populateActivityTable = () => {
     row = (num) => document.getElementsByClassName(`row row${num}`)[0]; // Small wrapper that gets a row by just the row # 
 
     // Clear it
-    for (let i = 1; i <= 24; i++) { 
+    for (let i = 1; i <= 24; i++) {
         row(i).childNodes[1].replaceWith(document.createElement("td"));
         row(i).childNodes[1].className = "rankCol";
-        row(i).childNodes[1].innerHTML = i;    
+        row(i).childNodes[1].innerHTML = i;
 
         row(i).childNodes[3].replaceWith(document.createElement("td"));
         row(i).childNodes[3].className = "alL";
@@ -19,22 +19,22 @@ hiscores.populateActivityTable = () => {
     }
 
     row(1).childNodes[3].innerHTML = "Total XP";
-    fetch(`${hiscores.apiURL}/hiscores/getServerTotalXp`)
+    row(1).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
+    fetch(`${hiscores.apiURL}/hiscores/getServerTotalXp/${restrictions}`)
     .then(response => response.json())
-    .then(result => {
-        // Todo: Make the API differentiate between ironmen types and stof
-        row(1).childNodes[5].innerHTML = result.total_xp;
-    })
-    .catch(error => console.log('error', error));
+        .then(result => {
+            row(1).childNodes[5].innerHTML = Math.floor(result.total_xp).toLocaleString();
+        })
+        .catch(error => console.log('error', error));
 
     row(2).childNodes[3].innerHTML = "Total Slayer Tasks Completed";
-    fetch(`${hiscores.apiURL}/hiscores/getServerTotalSlayerTasks`)
-    .then(response => response.json())
-    .then(result => {
-        // Todo: Make the API differentiate between ironmen types and stof
-        row(1).childNodes[5].innerHTML = result.total_tasks;
-    })
-    .catch(error => console.log('error', error));
+    row(2).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
+    fetch(`${hiscores.apiURL}/hiscores/getServerTotalSlayerTasks/${restrictions}`)
+        .then(response => response.json())
+        .then(result => {
+            row(2).childNodes[5].innerHTML = Math.floor(result.total_tasks).toLocaleString();
+        })
+        .catch(error => console.log('error', error));
 }
 
 /**
@@ -48,12 +48,15 @@ function getParam(param) {
     return param ? param.split("=")[1] : null;
 }
 
+let restrictions = { ironManMode: [], exp_multiplier: 10 };
+
 if (getParam("page")) {
     hiscores.page = Number(getParam("page"));
 }
 
 if (getParam("iron")) {
     document.getElementById('check_iron').checked = getParam("iron") === "true";
+    restrictions.ironManMode.push(getParam("iron") === "true" ? "1" : "0");
 
     document.getElementById("filter_submit").value = "Filter";
     document.getElementById("filter_div").style.height = "134px";
@@ -65,17 +68,22 @@ if (getParam("iron")) {
     document.getElementById("filter_div").style.height = "110px";
 }
 if (getParam("ultiron")) {
+    restrictions.ironManMode.push(getParam("ultiron") === "true" ? "3" : "0");
     document.getElementById('check_ultiron').checked = getParam("ultiron") === "true";
 }
 if (getParam("hciron")) {
+    restrictions.ironManMode.push(getParam("hciron") === "true" ? "2" : "0");
     document.getElementById('check_hciron').checked = getParam("hciron") === "true";
 }
 if (getParam("maxXP")) {
+    restrictions.exp_multiplier = Number(getParam("maxXP"));
+
     document.getElementById('maxXP').value = getParam("maxXP");
     document.getElementById('maxXPoutput').innerHTML = getParam("maxXP");
 }
 
+restrictions = JSON.stringify(restrictions);
 
-hiscores.initializePageArrows();
-hiscores.initalizeRightsideButtons();
-hiscores.populateActivityTable();
+hiscores.initializePageArrows("activity");
+hiscores.initalizeRightsideButtons("activity");
+hiscores.populateActivityTable("activity");
