@@ -1,6 +1,6 @@
 var hiscores = hiscores || {};
 
-hiscores.apiURL = "https://2800a66204e1.ngrok.io";
+hiscores.apiURL = "http://localhost:3000";
 
 hiscores.sName = [
     "Attack",
@@ -42,6 +42,21 @@ hiscores.linkLeftTabSkillNames = (loc = "hiscores") => {
             e.preventDefault();
             window.location.replace(`./${loc}.html?skill=${index}${hiscores.getFiltersAsURLparams()}`);
         });
+    });
+    document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./${loc}.html${hiscores.getFiltersAsURLparams()}`);
+    });
+}
+
+hiscores.linkLeftTabActivityNames = (loc = "activities") => {
+    document.getElementsByClassName(`   Slayer    ico`)[0].addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./${loc}.html?filter=combat${hiscores.getFiltersAsURLparams()}`);
+    });
+    document.getElementsByClassName(`   Summoning    ico`)[0].addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./${loc}.html?filter=miscellaneous${hiscores.getFiltersAsURLparams()}`);
     });
     document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
         e.preventDefault();
@@ -99,7 +114,7 @@ hiscores.initalizeRightsideButtons = (loc = "hiscores") => {
             e.preventDefault();
             let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=[\d\.]+/).join('');
             window.location.replace(`./${loc}.html${pageRemovedFiltersLocation}`);
-        })    
+        })
     }
 }
 
