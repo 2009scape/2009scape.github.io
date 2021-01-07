@@ -18,33 +18,24 @@ hiscores.populateActivityTable = () => {
         row(i).childNodes[5].innerHTML = "";
     }
 
-    row(1).childNodes[3].innerHTML = "Total XP";
-    row(1).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
-    fetch(`${hiscores.apiURL}/hiscores/getServerTotalXp/${restrictions}`)
-        .then(response => response.json())
-        .then(result => {
-            row(1).childNodes[5].innerHTML = Math.floor(result.total_xp).toLocaleString();
-        })
-        .catch(error => console.log('error', error));
-
-    row(2).childNodes[3].innerHTML = "Total Slayer Tasks Completed";
-    row(2).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
-    fetch(`${hiscores.apiURL}/hiscores/getServerTotalSlayerTasks/${restrictions}`)
-        .then(response => response.json())
-        .then(result => {
-            row(2).childNodes[5].innerHTML = Math.floor(result.total_tasks).toLocaleString();
-        })
-        .catch(error => console.log('error', error));
-
-    row(3).childNodes[3].innerHTML = "Total Deaths";
-    row(3).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
-    fetch(`${hiscores.apiURL}/hiscores/getServerTotalAttribute/deaths/${restrictions}`)
-        .then(response => response.json())
-        .then(result => {
-            row(3).childNodes[5].innerHTML = Math.floor(result.sum).toLocaleString();
-        })
-        .catch(error => console.log('error', error));
-
+    [["Total XP", "getServerTotalXp", "total_xp"],
+    ["Total Slayer Tasks Completed", "getServerTotalSlayerTasks", "total_tasks"],
+    ["Total Logs Chopped", "getServerTotalAttribute/logs_chopped", "sum"],
+    ["Total Fish Caught", "getServerTotalAttribute/fish_caught", "sum"],
+    ["Total Rocks Mined", "getServerTotalAttribute/rocks_mined", "sum"],
+    ["Total Al Kharid Gate Tax", "getServerTotalAttribute/alkharid_gate", "sum"],
+    ["Total Enemies Killed", "getServerTotalAttribute/enemies_killed", "sum"],
+    ["Total Deaths", "getServerTotalAttribute/deaths", "sum"],
+    ].forEach(([title, endpoint, resultAttr], index) => {
+        row(index + 1).childNodes[3].innerHTML = title;
+        row(index + 1).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
+        fetch(`${hiscores.apiURL}/hiscores/${endpoint}/${restrictions}`)
+            .then(response => response.json())
+            .then(result => {
+                row(index + 1).childNodes[5].innerHTML = Math.floor(result[`${resultAttr}`]).toLocaleString();
+            })
+            .catch(error => console.log('error', error));
+    });
 }
 
 /**
