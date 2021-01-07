@@ -21,7 +21,7 @@ hiscores.populateActivityTable = () => {
     row(1).childNodes[3].innerHTML = "Total XP";
     row(1).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
     fetch(`${hiscores.apiURL}/hiscores/getServerTotalXp/${restrictions}`)
-    .then(response => response.json())
+        .then(response => response.json())
         .then(result => {
             row(1).childNodes[5].innerHTML = Math.floor(result.total_xp).toLocaleString();
         })
@@ -35,6 +35,16 @@ hiscores.populateActivityTable = () => {
             row(2).childNodes[5].innerHTML = Math.floor(result.total_tasks).toLocaleString();
         })
         .catch(error => console.log('error', error));
+
+    row(3).childNodes[3].innerHTML = "Total Deaths";
+    row(3).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
+    fetch(`${hiscores.apiURL}/hiscores/getServerTotalAttribute/deaths/${restrictions}`)
+        .then(response => response.json())
+        .then(result => {
+            row(3).childNodes[5].innerHTML = Math.floor(result.sum).toLocaleString();
+        })
+        .catch(error => console.log('error', error));
+
 }
 
 /**
