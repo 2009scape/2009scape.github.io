@@ -88,11 +88,13 @@ if (getParam("maxXP")) {
 }
 switch (getParam("filter")) {
     case "combat":
+        document.getElementById("scores_head_skill").innerText = "Combat";
         activityInfo.push(["Total Slayer Tasks Completed", "getServerTotalSlayerTasks", "total_tasks"]);
         activityInfo.push(["Total Enemies Killed", "getServerTotalAttribute/enemies_killed", "sum"]);
         activityInfo.push(["Total Deaths", "getServerTotalAttribute/deaths", "sum"]);
         break;
     case "miscellaneous":
+        document.getElementById("scores_head_skill").innerText = "Miscellaneous";
         activityInfo.push(["Total Al Kharid Gate Tax", "getServerTotalAttribute/alkharid_gate", "sum"]);
         break;
     default: // Skilling
