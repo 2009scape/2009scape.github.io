@@ -20,13 +20,29 @@ hiscores.populateActivityTable = () => {
         row(i).childNodes[5].innerHTML = "";
     }
 
+    // (Used to make all the amounts update at once)
+    let leftToLoad = activityInfo.length;
+    let toAppear = [];
+    function syncAppear(element, value) {
+        leftToLoad --;
+        toAppear.push([element, value]);
+        console.log(leftToLoad);
+        if (leftToLoad === 0) {
+            toAppear.forEach(([e, value]) => {
+                e.innerHTML = value;
+            });
+        }
+    }
+
+    // For everything on this page (see the filter? in URL)
     activityInfo.forEach(([title, endpoint, resultAttr], index) => {
         row(index + 1).childNodes[3].innerHTML = title;
         row(index + 1).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
+        // Fetch it, then put it in our synchronous appearance function
         fetch(`${hiscores.apiURL}/hiscores/${endpoint}/${restrictions}`)
             .then(response => response.json())
-            .then(result => {
-                row(index + 1).childNodes[5].innerHTML = Math.floor(result[`${resultAttr}`]).toLocaleString();
+            .then(result => { 
+                syncAppear(row(index + 1).childNodes[5], Math.floor(result[`${resultAttr}`]).toLocaleString());
             })
             .catch(error => console.log('error', error));
     });
