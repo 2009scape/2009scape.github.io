@@ -43,7 +43,7 @@ body {
 }
 
 .bodyBackground {
- background: #000 url(../img/main/skins/default/bg_headc20a.jpg) no-repeat scroll center top;
+ background: #000 url(../img/main/skins/default/bg_headc20a.jpg) repeat-y scroll center top;
 }
 
 .bodyBackgroundHead {
