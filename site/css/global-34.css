@@ -43,20 +43,20 @@ body {
 }
 
 .bodyBackground {
- background: #000 url(../img/main/skins/default/bg_headc20a.jpg) repeat-y scroll center top;
+ background: #000 url(../img/main/skins/default/bgc20a.jpg?12) repeat-y scroll center 355px;
 }
 
 .bodyBackgroundHead {
- background: url(../img/main/skins/default/bg_headc20a.jpg) no-repeat scroll center top;
+ background: url(../img/main/skins/default/bg_headc20a.jpg?12) no-repeat scroll center top;
  padding-top: 0.1px; 
-
 }
 
 .bodyBackgroundHeadAdvert {
- background: url(../img/main/skins/default/bg_headc20a.jpg) repeat-y scroll center top;
+ background: url(../img/main/skins/default/bg_head_advertc20a.jpg?12) no-repeat scroll center top;
  padding-top: 0.1px; 
-
 }
+
+
 
 
 
