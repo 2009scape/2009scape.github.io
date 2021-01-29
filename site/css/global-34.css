@@ -53,7 +53,7 @@ body {
 }
 
 .bodyBackgroundHeadAdvert {
- background: url(../img/main/skins/default/bg_headc20a.jpg) no-repeat scroll center top;
+ background: url(../img/main/skins/default/bg_headc20a.jpg) repeat-y scroll center top;
  padding-top: 0.1px; 
 
 }
