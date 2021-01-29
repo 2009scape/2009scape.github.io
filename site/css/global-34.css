@@ -29,7 +29,11 @@ input, textarea, select {
 
 
 
+/* Before I break the entire website trying to change this wonky background. I am going to revert the changes by doing this PR. 
+   This is the file that controls the main layout of the website. the 2009 picture is background: url(../img/2009img/main/skins/default/bg.jpg);
+   Lets wait until I figure everything out perfectly.
 
+*/
 
 body {
  padding: 0;
@@ -39,19 +43,21 @@ body {
 }
 
 .bodyBackground {
- background: #000 url(../img/2009img/main/skins/default/bg.jpg) repeat-y scroll center top;
+ background: #000 url(../img/main/skins/default/bg_headc20a.jpg) no-repeat scroll center top;
 }
 
 .bodyBackgroundHead {
- background: url(../img/main/skins/default/bg_headc20a.jpg?12) no-repeat scroll center top;
+ background: url(../img/main/skins/default/bg_headc20a.jpg) repeat-y scroll center top;
  padding-top: 0.1px; 
+
 }
 
 .bodyBackgroundHeadAdvert {
- background: url(../img/2009img/main/skins/default/bg.jpg) repeat-y scroll center top;
- padding-top: 0.1px;
+ background: url(../img/main/skins/default/bg_headc20a.jpg) no-repeat scroll center top;
+ padding-top: 0.1px; 
 
 }
+
 
 
 
