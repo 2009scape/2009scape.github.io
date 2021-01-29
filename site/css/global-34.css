@@ -49,7 +49,8 @@ body {
 
 .bodyBackgroundHeadAdvert {
  background: url(../img/2009img/main/skins/default/bg.jpg) repeat-y scroll center top;
- padding-top: 0.1px; 
+ padding-top: 0.1px;
+  padding-bottom: 100%;
 }
 
 
