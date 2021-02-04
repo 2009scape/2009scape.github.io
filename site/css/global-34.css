@@ -29,7 +29,11 @@ input, textarea, select {
 
 
 
+/* Before I break the entire website trying to change this wonky background. I am going to revert the changes by doing this PR. 
+   This is the file that controls the main layout of the website. the 2009 picture is background: url(../img/2009img/main/skins/default/bg.jpg);
+   Lets wait until I figure everything out perfectly.
 
+*/
 
 body {
  padding: 0;
@@ -51,6 +55,9 @@ body {
  background: url(../img/main/skins/default/bg_head_advertc20a.jpg?12) no-repeat scroll center top;
  padding-top: 0.1px; 
 }
+
+
+
 
 
 
