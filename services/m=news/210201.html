@@ -14,9 +14,9 @@
 English
 " />
   <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima" />
-  <meta name="description" content="Quick Chat & More Batch!" />
-  <meta name="title" content="RuneScape - News - Quick Chat & More!" />
-  <title>RuneScape - News - Quick Chat & More!</title>
+  <meta name="description" content="February Update Batch!" />
+  <meta name="title" content="RuneScape - News - Introducing a new layer of bots" />
+  <title>RuneScape - News - Introducing a new layer of bots</title>
   <style type="text/css">
     /*\*/
     @import url(../../site/css/global-34.css);
@@ -194,7 +194,7 @@ English
           <div class="navigation">
             <div class="location">
               <b>Location: </b> <a href="../../index.html">Home</a> &gt;
-              <a href="list.html">News List</a> > Quick Chat & More!
+              <a href="list.html">News List</a> > Introducing a new layer of bots
             </div>
           </div>
         </div>
@@ -220,8 +220,7 @@ English
                             <div class="bottomrightshad">
                               <div class="pagepad">
                                 <div class="centre" id="newsitemMenu">
-                                  <span class="newsNavcat"><img src="../../site/img/news/mini_all_categories.gif"
-                                      alt="" />&nbsp;<a
+                                  <span class="newsNavcat"><img src="../../site/img/news/mini_all_categories.gif" alt="" />&nbsp;<a
                                       href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar"
                                       class="white">Download Game</a></span>
                                   <span class="newsNavcat"><img src="../../site/img/news/mini_game_updates.gif"
@@ -233,120 +232,111 @@ English
                                   <hr />
                                 </div>
                                 <div id="newsTitle">
-                                  <a href="210118.html"><img class="imiddle" border="0" width="30" height="15"
-                                      hspace="0" vspace="0" alt="Previous" title="Previous"
+                                  <a href="list.html"><img class="imiddle" border="0" width="30" height="15" hspace="0"
+                                      vspace="0" alt="Previous" title="Previous"
                                       src="../../site/img/news/arrow_back.gif" /></a>
                                   &nbsp;
-                                  <b>13-Jan-2021 - Quick Chat & More!</b>
+                                  <b>01-Feb-2021 - Introducing a new layer of bots</b>
                                   &nbsp;
-                                  <a href="merrychristmas.html">
+                                  <a href="210128.html">
                                     <img class="imiddle" border="0" width="30" height="15" hspace="0" vspace="0"
                                       alt="Next" title="Next" src="../../site/img/news/arrow_forward.gif" />
                                   </a>
                                 </div>
                                 <div class="newsJustify">
-                                  <p>What's a remake without focus on unique features that build the game?</p>
+                                  <p>Runescape's economy was always based on bots.</p>
+
+                                  <p>Since Runescape Classic, bots have been a part of the game (heck, they're even the
+                                    reason Runescape Classic was played for so long!). With the recent addition of bot
+                                    worlds over at OpenRSC (another great Runescape project), we've decided to take the
+                                    same step forwards.</p>
 
                                   <p>
-                                    Quick chat is here! </p>
+                                    We've always had bots in the game populating the GE, keeping the game feeling alive,
+                                    so much so that when we removed them players rioted in Falador. But instead of
+                                    playing a cat and mouse game (with some of our own developers, even), we decided to
+                                    unlock them for all; going forwards, <b>everyone can bot</b>.
+                                  </p>
+
+                                  <p>
+                                    <i><b>But I worked so hard!!</b></i>
+                                  </p>
+
+                                  <p>
+                                    Fear not! Players who bot, even once will be permanently removed from the default
+                                      hiscores, and we're looking at other ways of tagging them too. Authentic accounts
+                                      will forever be respected and honored, just as they were before. Think twice
+                                      before enabling this on your main!
+                                  </p>
+
+                                  <p>
+                                    <b><u>Enabling bots:</u></b>
+                                  </p>
 
                                   <div style="text-align: center">
-                                    <video width="100%" controls>
-                                      <source src="https://i.imgur.com/K3j4AvU.mp4" type="video/mp4">
-                                    </video>
+                                    <img width="100%" src="https://i.imgur.com/8ZvBX4l.png" />
                                   </div>
-
-                                  <p>
-                                    <i>Interested in the technical implementation? Look <a
-                                        href="https://github.com/2009scape/2009Scape/blob/development/Server/src/main/java/Server/core/game/interaction/QCRepository.kt">here</a>!
-                                      Note; all
-                                      2009scape code is under AGPL license. Only other open source projects can use it
-                                      too!</i>
-                                  </p>
 
                                   <br />
 
-                                  But that's not all..
+                                  <p>To start botting, type
+                                  <pre>::scripts</pre> in-game to see a list of scripts. Have a script you'd like to
+                                  see?
+                                  Fork the project, write it up and submit a PR! Also, please note more scripts are
+                                  planned to be added in the future, this is mostly just the groundwork. </p>
 
                                   <p>
-                                    <b><u>New Content:</u></b>
+                                    <b><u>Other updates</u></b>
                                   </p>
+
+                                  <p>
+                                    Since we just had an update a few days ago, we've just got a few patch notes for ya
+                                    :)
+                                  </p>
+
+                                  Core Changes:
                                   <ul>
                                     <li>
-                                      Fishing Trawler is here!
+                                      Server now has better start/stop functionality
                                       <ul>
-                                        <li>
-                                          Implemented the fishing trawler minigame in its entirety
+                                        <li>::update will actually completely end the server process now so updating
+                                          will be
+                                          easier and smoother than ever
                                         </li>
-                                        <li>
-                                          Added bank chest near fishing trawler
-                                        </li>
-                                        <li>
-                                          Guide for fishing trawler can be found <a
-                                            href="https://github.com/2009scape/2009Scape/blob/5b316712e39711ad16d63f5cec084b618b247bdd/FishingTrawlerSoloGuide.md#fishing-trawler-solo-player-guide">here</a>
-                                        </li>
+                                        <li>There is also no longer a possibility for players
+                                          to log in "too early" as the networking doesn't get started until the server
+                                          is
+                                          completely up and running!</li>
                                       </ul>
                                     </li>
-                                    <li>
-                                      Quick Chat is here!
-                                    </li>
-                                    <li>
-                                      Rapid Restore and Rapid Heal now function
-                                    </li>
-                                    <li>
-                                      You can now light logs on the ground by using a tinderbox on them.
-                                    </li>
-                                    <li>
-                                      Ironman icons are here! Show off your account to others :)
-                                    </li>
-                                    <li>
-                                      Added infinite stock to some shops
-                                    </li>
-                                    <li>
-                                      The rotten potato has been revamped
-                                    </li>
+                                    <li>The server now makes use of RSA encryption</li>
+                                    <li>Server has an all-new system for the grand exchange that attempts to address
+                                      several major issues</li>
                                   </ul>
 
-                                  <br />
+                                  <br class="clear" />
 
-                                  <p>
-                                    <b><u>Bug Fixes:</u></b>
+                                  Bug Fixes:
                                   <ul>
-                                    <li>Fixed al-kharid warrior behavior</li>
-                                    <li>Chaos Elemental can no longer kill your familiar after death</li>
-                                    <li>Fixed some of the lag caused by bots after long server runtimes</li>
-                                    <li>Fixed ducks not moving on water</li>
-                                    <li>Interacting with ground items (i.e. Light Logs) now works</li>
+                                    <li>Stats now drain/restore properly once again</li>
+                                    <li>Super Energy potions now restore the correct amount of run energy</li>
+                                    <li>Brine Sabre now has the proper animations and a handled special attack</li>
+                                    <li>Arrows and bolts are no longer allowed on Entrana</li>
+                                    <li>Warrior woman spawns added to varrock castle</li>
+                                    <li>Fixed the hard leather crafting interface</li>
+                                    <li>Fixed a bug with lost tribe that prevented advancing past Reldo</li>
+                                    <li>Fixed a bug where Sigmund could reset Lost Tribe progress</li>
                                   </ul>
 
-                                  </p>
-
-                                  <div style="text-align: center; padding-bottom: 20px;">
-                                    <img src="https://i.imgur.com/v20Xfhp.png" />
-                                  </div>
-
-                                  <br class="clear" />
-
-                                  <br />
-
-                                  The site has also had some updates this month. We're working on a brand new Activities
-                                  hiscores page! Be sure to check it out and share any suggestions you have in the <a
-                                    href="https://discord.gg/43YPGND">Discord</a>.
-                                  <br />
-                                  <br />
-
-                                  See the Activity Hiscores <a href="./../../services/m=hiscore/activity.html">here!</a>
-
                                   <br class="clear" />
 
                                   <br />
                                   <p>
-                                    This update will go live very shortly! Enjoy everyone
-                                    &#10084;&#65039;
+                                    Hope you enjoyed this update, and we'll see you at the next step! &#10084;&#65039;
                                   </p>
 
                                   <p>
-                                     <b>Red Bracket - Site Maintainer<br/>Ceikry - Content Developer</b>
+                                    <b>Red Bracket - Site Maintainer<br />Ceikry - Content Developer</b>
                                   </p>
                                   <div id="feed">
                                     <a href="latest_news.rss">
@@ -395,7 +385,7 @@ English
               //<![CDATA[
 
               var siteurl = "newsitembc1f.html?id=3203";
-              var sitetitle = "Quick Chat & More!";
+              var sitetitle = "Introducing a new layer of bots";
               var sitenotes =
                 "The weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we�ve decided on our winners...";
               var sitetags = "news";
@@ -437,14 +427,14 @@ English
             </style>
             <script type="text/javascript" src="../../s7.addthis.com/js/200/addthis_widget.js"></script>
 
-            <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url=http://services/m=news/newsitem.ws?id=3203&amp;title=Quick Chat & More!&amp;notes=The weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we�ve decided on our winners...&amp;tag=news"
+            <a href="http://delicious.com/save?v=5&amp;noui&amp;jump=close&amp;url=http://services/m=news/newsitem.ws?id=3203&amp;title=Introducing a new layer of bots&amp;notes=The weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we�ve decided on our winners...&amp;tag=news"
               target="_blank" title="Add this page to Delicious"
               onclick="try{pageTracker._trackPageview('/outgoing/bookmarking/delicious/http://services/m=news/newsitem.ws?id=3203')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/bookmarking/delicious/http://services/m=news/newsitem.ws?id=3203')}catch(x){}"><img
                 src="../../www.jagex.com/img/crossservice/social/bookmark_delicious.png"
                 style="width: 16px; height: 16px; border: none" alt="Delicious" /><span
                 class="SB_label">&nbsp;Delicious</span></a>
 
-            <a href="http://digg.com/submit?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Quick Chat & More!&amp;bodytext=The weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we�ve decided on our winners...&amp;topic=gaming_news"
+            <a href="http://digg.com/submit?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Introducing a new layer of bots&amp;bodytext=The weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we�ve decided on our winners...&amp;topic=gaming_news"
               title="Digg this" target="_blank"
               onclick="try{pageTracker._trackPageview('/outgoing/bookmarking/digg/http://services/m=news/newsitem.ws?id=3203')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/bookmarking/digg/http://services/m=news/newsitem.ws?id=3203')}catch(x){}">
               <img src="../../www.jagex.com/img/crossservice/social/bookmark_digg.png"
@@ -458,28 +448,28 @@ English
                 style="width: 16px; height: 16px; border: none" alt="Facebook" /><span
                 class="SB_label">&nbsp;Facebook</span></a>
 
-            <a href="http://bulletins.myspace.com/index.cfm?fuseaction=postto&amp;u=http://services/m=news/newsitem.ws?id=3203&amp;t=Quick Chat & More!&amp;l=5&amp;c=%3cimg+src='http://site/img/main/social/logo.jpg' style='float: left; margin-right: 8px;'/%3e%3cp%3eThe weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we�ve decided on our winners...%3c/p%3e"
+            <a href="http://bulletins.myspace.com/index.cfm?fuseaction=postto&amp;u=http://services/m=news/newsitem.ws?id=3203&amp;t=Introducing a new layer of bots&amp;l=5&amp;c=%3cimg+src='http://site/img/main/social/logo.jpg' style='float: left; margin-right: 8px;'/%3e%3cp%3eThe weekend is over and so ends the July 2010 Lookey-Likey Costume Competition! After much deliberation we�ve decided on our winners...%3c/p%3e"
               target="_blank" title="Add this page to Myspace"
               onclick="try{pageTracker._trackPageview('/outgoing/bookmarking/myspace/http://services/m=news/newsitem.ws?id=3203')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/bookmarking/myspace/http://services/m=news/newsitem.ws?id=3203')}catch(x){}"><img
                 src="../../www.jagex.com/img/crossservice/social/bookmark_myspace.png"
                 style="width: 16px; height: 16px; border: none" alt="Myspace" /><span
                 class="SB_label">&nbsp;Myspace</span></a>
 
-            <a href="http://www.reddit.com/submit?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Quick Chat & More!"
+            <a href="http://www.reddit.com/submit?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Introducing a new layer of bots"
               target="_blank" title="Add this page to Reddit"
               onclick="try{pageTracker._trackPageview('/outgoing/bookmarking/reddit/http://services/m=news/newsitem.ws?id=3203')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/bookmarking/reddit/http://services/m=news/newsitem.ws?id=3203')}catch(x){}"><img
                 src="../../www.jagex.com/img/crossservice/social/bookmark_reddit.png"
                 style="width: 16px; height: 16px; border: none" alt="Reddit" /><span
                 class="SB_label">&nbsp;Reddit</span></a>
 
-            <a href="http://www.stumbleupon.com/submit?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Quick Chat & More!"
+            <a href="http://www.stumbleupon.com/submit?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Introducing a new layer of bots"
               target="_blank" title="Add this page to Stumbleupon"
               onclick="try{pageTracker._trackPageview('/outgoing/bookmarking/stumbleupon/http://services/m=news/newsitem.ws?id=3203')}catch(x){}; try{_pageTracker._trackPageview('/outgoing/bookmarking/stumbleupon/http://services/m=news/newsitem.ws?id=3203')}catch(x){}"><img
                 src="../../www.jagex.com/img/crossservice/social/bookmark_stumbleupon.png"
                 style="width: 16px; height: 16px; border: none" alt="Stumbleupon" /><span
                 class="SB_label">&nbsp;Stumbleupon</span></a>
 
-            <a href="http://www.addthis.com/bookmark.php?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Quick Chat & More!"
+            <a href="http://www.addthis.com/bookmark.php?url=http://services/m=news/newsitem.ws?id=3203&amp;title=Introducing a new layer of bots"
               onclick="return addthis_click(this);" target="_blank" title="Add This..."><img
                 src="../../www.jagex.com/img/crossservice/social/bookmark_addthis.png"
                 style="width: 16px; height: 16px; border: none" alt="AddThis" /><span
