@@ -39,7 +39,7 @@ hiscores.populateActivityTable = () => {
         row(index + 1).childNodes[3].innerHTML = title;
         row(index + 1).childNodes[5].innerHTML = `<span style="color: rgba(186, 128, 63, 0.4);">Loading..</span>`;
         // Fetch it, then put it in our synchronous appearance function
-        fetch(`${hiscores.apiURL}/hiscores/${endpoint}/${restrictions}`)
+        fetch(`${hiscores.apiURL}/hiscores/${hiscores.world}/${endpoint}/${restrictions}`)
             .then(response => response.json())
             .then(result => { 
                 syncAppear(row(index + 1).childNodes[5], Math.floor(result[`${resultAttr}`]).toLocaleString());
@@ -49,7 +49,7 @@ hiscores.populateActivityTable = () => {
 }
 
 hiscores.enterTotalXp = () => {
-    fetch(`${hiscores.apiURL}/hiscores/getServerTotalXp/${restrictions}`)
+    fetch(`${hiscores.apiURL}/hiscores/getWorldTotalXp/${hiscores.world}/${restrictions}`)
         .then(response => response.json())
         .then(result => {
             document.getElementById("total_xp").innerText = "Server Total XP: " + Math.round(result.total_xp).toLocaleString();
@@ -108,18 +108,18 @@ if (getParam("maxXP")) {
 switch (getParam("filter")) {
     case "combat":
         document.getElementById("scores_head_skill").innerText = "Combat";
-        activityInfo.push(["Total Slayer Tasks Completed", "getServerTotalSlayerTasks", "total_tasks"]);
-        activityInfo.push(["Total Enemies Killed", "getServerTotalAttribute/enemies_killed", "sum"]);
-        activityInfo.push(["Total Deaths", "getServerTotalAttribute/deaths", "sum"]);
+        activityInfo.push(["Total Slayer Tasks Completed", "getWorldTotalSlayerTasks", "total_tasks"]);
+        activityInfo.push(["Total Enemies Killed", "getWorldTotalAttribute/enemies_killed", "sum"]);
+        activityInfo.push(["Total Deaths", "getWorldTotalAttribute/deaths", "sum"]);
         break;
     case "miscellaneous":
         document.getElementById("scores_head_skill").innerText = "Miscellaneous";
-        activityInfo.push(["Total Al Kharid Gate Tax", "getServerTotalAttribute/alkharid_gate", "sum"]);
+        activityInfo.push(["Total Al Kharid Gate Tax", "getWorldTotalAttribute/alkharid_gate", "sum"]);
         break;
     default: // Skilling
-        activityInfo.push(["Total Logs Chopped", "getServerTotalAttribute/logs_chopped", "sum"]);
-        activityInfo.push(["Total Fish Caught", "getServerTotalAttribute/fish_caught", "sum"]);
-        activityInfo.push(["Total Rocks Mined", "getServerTotalAttribute/rocks_mined", "sum"]);
+        activityInfo.push(["Total Logs Chopped", "getWorldTotalAttribute/logs_chopped", "sum"]);
+        activityInfo.push(["Total Fish Caught", "getWorldTotalAttribute/fish_caught", "sum"]);
+        activityInfo.push(["Total Rocks Mined", "getWorldTotalAttribute/rocks_mined", "sum"]);
         break;
 }
 
