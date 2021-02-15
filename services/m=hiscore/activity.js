@@ -71,6 +71,9 @@ function getParam(param) {
 
 let restrictions = { ironManMode: [], exp_multiplier: 10 };
 
+if (getParam("world")) {
+    hiscores.world = Number(getParam("world"));
+}
 if (getParam("page")) {
     hiscores.page = Number(getParam("page"));
 }
