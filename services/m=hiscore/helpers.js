@@ -31,6 +31,7 @@ hiscores.sName = [
 
 
 hiscores.page = 0;
+hiscores.world = 1;
 hiscores.currentSkillId = "";
 
 hiscores.tableData = [];
