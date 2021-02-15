@@ -419,8 +419,14 @@ en, English
             </div>
           </div>
           <div id="headOrangeTop"></div>
-          <img src="../../site/img/2009img/main/skins/default/head_image.jpg" alt="RuneScape" />
+          <img id="banner" src="" alt="RuneScape">
+
+          <script type="text/javascript">
+            document.getElementById("banner").src = `./../..//site/img/2009img/main/skins/default/banners/${new Date().getMonth()}.jpg`;
+          </script>
+  
           <div id="headImage"><a href="" id="logo_select"></a>
+  
             <div id="player_no">Want to play with others? Join our <a href="https://discord.gg/43YPGND"
                 style="color: #bf8aba">Discord</a>!</div>
           </div>
