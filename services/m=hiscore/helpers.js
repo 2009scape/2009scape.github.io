@@ -106,7 +106,7 @@ hiscores.initalizeRightsideButtons = (loc = "hiscores") => {
         const ultironparam = `?ultiron=${document.getElementById('check_ultiron').checked}`;
         const hcironparam = `?hciron=${document.getElementById('check_hciron').checked}`;
         const maxXP = `?maxXP=${document.getElementById("maxXP").value}`;
-        window.location.replace(`./${loc}.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}`);
+        window.location.replace(`./${loc}.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}?world=${hiscores.world}`);
     });
 
     if (document.getElementById("filter_clear")) {
@@ -117,6 +117,21 @@ hiscores.initalizeRightsideButtons = (loc = "hiscores") => {
             window.location.replace(`./${loc}.html${pageRemovedFiltersLocation}`);
         })
     }
+}
+
+hiscores.changePlaqueWorld = () => {
+    document.getElementById("worldplaqueid").innerText = `World ${hiscores.world} Hiscores`;
+}
+
+hiscores.addSkillsAndActivityFilters = () => {
+    document.getElementById("button-left").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./hiscores.html${hiscores.getFiltersAsURLparams()}`);
+    });
+    document.getElementById("button-right").addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./activity.html${hiscores.getFiltersAsURLparams()}`);
+    });
 }
 
 hiscores.filter = (result) => {
@@ -151,7 +166,9 @@ hiscores.filter = (result) => {
 }
 
 hiscores.getFiltersAsURLparams = () => {
-    return getParam("iron") ? `?iron=${getParam("iron")}?hciron=${getParam("hciron")}?ultiron=${getParam("ultiron")}?maxXP=${getParam("maxXP")}` : "";
+    let params = getParam("iron") ? `?iron=${getParam("iron")}?hciron=${getParam("hciron")}?ultiron=${getParam("ultiron")}?maxXP=${getParam("maxXP")}` : "";
+    params += getParam("world") ? `?world=${getParam("world")}` : "";
+    return params;
 }
 
 hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {

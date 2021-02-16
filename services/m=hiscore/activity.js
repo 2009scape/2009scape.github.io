@@ -131,3 +131,5 @@ hiscores.initializePageArrows("activity");
 hiscores.initalizeRightsideButtons("activity");
 hiscores.populateActivityTable("activity");
 hiscores.enterTotalXp();
+hiscores.changePlaqueWorld();
+hiscores.addSkillsAndActivityFilters();

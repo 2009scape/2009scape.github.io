@@ -200,3 +200,5 @@ if (getParam("maxXP")) {
 hiscores.initializePageArrows();
 hiscores.initalizeRightsideButtons();
 hiscores.linkLeftTabSkillNames();
+hiscores.changePlaqueWorld();
+hiscores.addSkillsAndActivityFilters();
