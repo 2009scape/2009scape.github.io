@@ -49,7 +49,7 @@ hiscores.populateActivityTable = () => {
 }
 
 hiscores.enterTotalXp = () => {
-    fetch(`${hiscores.apiURL}/hiscores/getWorldTotalXp/${restrictions}`)
+    fetch(`${hiscores.apiURL}/hiscores/getWorldTotalXp/${hiscores.world}/${restrictions}`)
         .then(response => response.json())
         .then(result => {
             document.getElementById("total_xp").innerText = "Server Total XP: " + Math.round(result.total_xp).toLocaleString();
