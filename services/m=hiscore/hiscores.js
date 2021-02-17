@@ -1,7 +1,7 @@
 var hiscores = hiscores || {};
 
 hiscores.loadDefaultHSTable = () => {
-    fetch(`${hiscores.apiURL}/hiscores/playersByTotal`)
+    fetch(`${hiscores.apiURL}/hiscores/playersByTotal/${hiscores.world}`)
         .then(response => response.json())
         .then(result => {
             result = hiscores.filter(result);
@@ -36,7 +36,7 @@ hiscores.populateDefaultHSTable = () => {
 }
 
 hiscores.loadUserTable = (username) => {
-    fetch(`${hiscores.apiURL}/hiscores/playerSkills/${username.toLowerCase()}`)
+    fetch(`${hiscores.apiURL}/hiscores/playerSkills/${hiscores.world}/${username.toLowerCase()}`)
         .then(response => response.json())
         .then(result => {
             document.getElementById('search_name').style.color = 'black';
@@ -47,7 +47,7 @@ hiscores.loadUserTable = (username) => {
         })
         .then(() => {
             // Now get the player ranks (done seperately)
-            fetch(`${hiscores.apiURL}/hiscores/rankedMap`)
+            fetch(`${hiscores.apiURL}/hiscores/rankedMap/${hiscores.world}`)
                 .then(response => response.json())
                 .then(result => {
                     hiscores.populatePlayerRanks(username, result);
@@ -109,7 +109,7 @@ hiscores.populatePlayerRanks = (username, result) => {
 }
 
 hiscores.loadSkillTable = (skillId) => {
-    fetch(`${hiscores.apiURL}/hiscores/playersBySkill/${skillId}`)
+    fetch(`${hiscores.apiURL}/hiscores/playersBySkill/${hiscores.world}/${skillId}`)
         .then(response => response.json())
         .then(result => {
             result = hiscores.filter(result);
@@ -158,6 +158,9 @@ function getParam(param) {
     return param ? param.split("=")[1] : null;
 }
 
+if (getParam("world")) {
+    hiscores.world = Number(getParam("world"));
+}
 if (getParam("page")) {
     hiscores.page = Number(getParam("page"));
 }
@@ -197,3 +200,5 @@ if (getParam("maxXP")) {
 hiscores.initializePageArrows();
 hiscores.initalizeRightsideButtons();
 hiscores.linkLeftTabSkillNames();
+hiscores.changePlaqueWorld();
+hiscores.addSkillsAndActivityFilters();

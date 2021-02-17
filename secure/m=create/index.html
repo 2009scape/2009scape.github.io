@@ -419,8 +419,14 @@ en, English
             </div>
           </div>
           <div id="headOrangeTop"></div>
-          <img src="../../site/img/2009img/main/skins/default/head_image.jpg" alt="RuneScape" />
+          <img id="banner" src="" alt="RuneScape">
+
+          <script type="text/javascript">
+            document.getElementById("banner").src = `./../..//site/img/2009img/main/skins/default/banners/${new Date().getMonth()}.jpg`;
+          </script>
+  
           <div id="headImage"><a href="" id="logo_select"></a>
+  
             <div id="player_no">Want to play with others? Join our <a href="https://discord.gg/43YPGND"
                 style="color: #bf8aba">Discord</a>!</div>
           </div>
@@ -478,22 +484,15 @@ en, English
             </ul>
           </li>
 
-          <li class="top"><a id="community" class="tl" href="./../../404.html"><span
-                class="ts">Community</span></a>
-            <ul>
-              <li><a href="./../../404.html" class="fly"><span>Forums</span></a></li>
-              <li><a href="./../../services/m=hiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
-              <li><a href="./../../404.html" class="fly"><span>Player Submissions</span></a>
-              </li>
-              <li><a href="./../../404.html" class="fly"><span>Adventurer's Log</span></a></li>
+                      <li class="top"><a id="community" class="tl" href="./../../404.html"><span class="ts">Community</span></a>
+              <ul>
+                <li><a href="./../../services/m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
+                <li><a href="./../../services/m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
+                <li><a href="./../../404.html" class="fly"><span>Contributors</span></a></li>
+              </ul>
+            </li>
 
-              <li><a href="./../../404.html" class="fly"><span>Polls</span></a></li>
-              <li><a href="./../../404.html" class="fly"><span>Downloads &
-                    Wallpapers</span></a></li>
-            </ul>
-          </li>
-
-          <li class="top"><a id="help" class="tl" href="./../../404.html"><span
+            <li class="top"><a id="help" class="tl" href="./../../404.html"><span
                 class="ts">Help</span></a>
             <ul>
               <li><a href="./../../404.html" class="fly"><span>Customer Support</span></a></li>

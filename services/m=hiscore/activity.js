@@ -49,7 +49,7 @@ hiscores.populateActivityTable = () => {
 }
 
 hiscores.enterTotalXp = () => {
-    fetch(`${hiscores.apiURL}/hiscores/getServerTotalXp/${restrictions}`)
+    fetch(`${hiscores.apiURL}/hiscores/getWorldTotalXp/${hiscores.world}/${restrictions}`)
         .then(response => response.json())
         .then(result => {
             document.getElementById("total_xp").innerText = "Server Total XP: " + Math.round(result.total_xp).toLocaleString();
@@ -71,6 +71,9 @@ function getParam(param) {
 
 let restrictions = { ironManMode: [], exp_multiplier: 10 };
 
+if (getParam("world")) {
+    hiscores.world = Number(getParam("world"));
+}
 if (getParam("page")) {
     hiscores.page = Number(getParam("page"));
 }
@@ -105,18 +108,18 @@ if (getParam("maxXP")) {
 switch (getParam("filter")) {
     case "combat":
         document.getElementById("scores_head_skill").innerText = "Combat";
-        activityInfo.push(["Total Slayer Tasks Completed", "getServerTotalSlayerTasks", "total_tasks"]);
-        activityInfo.push(["Total Enemies Killed", "getServerTotalAttribute/enemies_killed", "sum"]);
-        activityInfo.push(["Total Deaths", "getServerTotalAttribute/deaths", "sum"]);
+        activityInfo.push(["Total Slayer Tasks Completed", `getWorldTotalSlayerTasks/${hiscores.world}`, "total_tasks"]);
+        activityInfo.push(["Total Enemies Killed", `getWorldTotalAttribute/${hiscores.world}/enemies_killed`, "sum"]);
+        activityInfo.push(["Total Deaths", `getWorldTotalAttribute/${hiscores.world}/deaths`, "sum"]);
         break;
     case "miscellaneous":
         document.getElementById("scores_head_skill").innerText = "Miscellaneous";
-        activityInfo.push(["Total Al Kharid Gate Tax", "getServerTotalAttribute/alkharid_gate", "sum"]);
+        activityInfo.push(["Total Al Kharid Gate Tax", `getWorldTotalAttribute/${hiscores.world}/alkharid_gate`, "sum"]);
         break;
     default: // Skilling
-        activityInfo.push(["Total Logs Chopped", "getServerTotalAttribute/logs_chopped", "sum"]);
-        activityInfo.push(["Total Fish Caught", "getServerTotalAttribute/fish_caught", "sum"]);
-        activityInfo.push(["Total Rocks Mined", "getServerTotalAttribute/rocks_mined", "sum"]);
+        activityInfo.push(["Total Logs Chopped", `getWorldTotalAttribute/${hiscores.world}/logs_chopped`, "sum"]);
+        activityInfo.push(["Total Fish Caught", `getWorldTotalAttribute/${hiscores.world}/fish_caught`, "sum"]);
+        activityInfo.push(["Total Rocks Mined", `getWorldTotalAttribute/${hiscores.world}/rocks_mined`, "sum"]);
         break;
 }
 
@@ -128,3 +131,5 @@ hiscores.initializePageArrows("activity");
 hiscores.initalizeRightsideButtons("activity");
 hiscores.populateActivityTable("activity");
 hiscores.enterTotalXp();
+hiscores.changePlaqueWorld();
+hiscores.addSkillsAndActivityFilters();

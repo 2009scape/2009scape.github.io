@@ -1,0 +1,13 @@
+Find:
+<li class="top">[/&"=.0-9'A-z<>\s\n]*<a id="community" class="tl" href="(./(../)*)404.html">[/&"=.0-9'A-z<>\s\n]*<li class="top">[/&"=.0-9'A-z<>\s\n]*<a id="help"
+
+Replace:
+            <li class="top"><a id="community" class="tl" href="$1404.html"><span class="ts">Community</span></a>
+              <ul>
+                <li><a href="$1services/m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
+                <li><a href="$1services/m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
+                <li><a href="$1404.html" class="fly"><span>Contributors</span></a></li>
+              </ul>
+            </li>
+
+            <li class="top"><a id="help"
