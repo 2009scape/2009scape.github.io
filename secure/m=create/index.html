@@ -17,9 +17,9 @@ en, English
   <meta name="keywords"
     content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
   <meta name="description"
-    content="Play RuneScape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
-  <meta name="title" content="RuneScape - MMORPG - The No.1 Free Online Multiplayer Game">
-  <title>RuneScape - MMORPG - The No.1 Free Online Multiplayer Game</title>
+    content="Play 2009scape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
+  <meta name="title" content="2009scape - MMORPG - The No.1 Free Online Multiplayer Game">
+  <title>2009scape - MMORPG - The No.1 Free Online Multiplayer Game</title>
   <style type="text/css">
     /*\*/
     @import url(../../site/css/default/global-30.css);
@@ -419,14 +419,8 @@ en, English
             </div>
           </div>
           <div id="headOrangeTop"></div>
-          <img id="banner" src="" alt="RuneScape">
-
-          <script type="text/javascript">
-            document.getElementById("banner").src = `./../..//site/img/2009img/main/skins/default/banners/${new Date().getMonth()}.jpg`;
-          </script>
-  
+          <img src="../../site/img/2009img/main/skins/default/head_image.jpg" alt="2009scape" />
           <div id="headImage"><a href="" id="logo_select"></a>
-  
             <div id="player_no">Want to play with others? Join our <a href="https://discord.gg/43YPGND"
                 style="color: #bf8aba">Discord</a>!</div>
           </div>
@@ -479,20 +473,27 @@ en, English
               <li><a href="./../../404.html" class="fly"><span>Grand Exchange</span></a></li>
               <li><a href="./../../404.html" class="fly"><span>Rules</span></a></li>
               <li><a href="./../../404.html" class="fly"><span>Lores</span></a></li>
-              <li><a href="./../../404.html" class="fly"><span>What is RuneScape?</span></a>
+              <li><a href="./../../404.html" class="fly"><span>What is 2009scape?</span></a>
               </li>
             </ul>
           </li>
 
-                      <li class="top"><a id="community" class="tl" href="./../../404.html"><span class="ts">Community</span></a>
-              <ul>
-                <li><a href="./../../services/m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
-                <li><a href="./../../services/m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
-                <li><a href="./../../404.html" class="fly"><span>Contributors</span></a></li>
-              </ul>
-            </li>
+          <li class="top"><a id="community" class="tl" href="./../../404.html"><span
+                class="ts">Community</span></a>
+            <ul>
+              <li><a href="./../../404.html" class="fly"><span>Forums</span></a></li>
+              <li><a href="./../../services/m=hiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
+              <li><a href="./../../404.html" class="fly"><span>Player Submissions</span></a>
+              </li>
+              <li><a href="./../../404.html" class="fly"><span>Adventurer's Log</span></a></li>
 
-            <li class="top"><a id="help" class="tl" href="./../../404.html"><span
+              <li><a href="./../../404.html" class="fly"><span>Polls</span></a></li>
+              <li><a href="./../../404.html" class="fly"><span>Downloads &
+                    Wallpapers</span></a></li>
+            </ul>
+          </li>
+
+          <li class="top"><a id="help" class="tl" href="./../../404.html"><span
                 class="ts">Help</span></a>
             <ul>
               <li><a href="./../../404.html" class="fly"><span>Customer Support</span></a></li>
@@ -547,7 +548,41 @@ en, English
                     </div>
                   </div>
                   <br class="clear" />
+                  <script>
 
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+} 
+
+
+
+
+                  </script>
 
                   <div class="width756">
                     <div id="errorlog" style="position: absolute; top: 5px; right: 5px; float: right; padding: 5px;">
@@ -560,7 +595,9 @@ en, English
                         the game.
                       </div>
                       <div id="formBoxes" class="inner_brown_box brown_box_stack brown_box_padded">
-                        <img src="https://i.imgur.com/qFyQLa4.png" style="width: 100%">
+                        <video width="100%" controls>
+                          <source src="./createaccount.mp4" type="video/mp4">
+                        </video>
                         <br><br>
                       </div>
                       <a href="https://github.com/2009scape/2009Scape/releases">
