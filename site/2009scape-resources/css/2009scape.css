@@ -1,0 +1,32 @@
+/*Game guide link CSS from 2010 site rip*/
+.articlesMore {
+ height: 23px;
+ padding-right: 8px;
+ line-height: 20px;
+ text-align: right;
+ background: url(../../img/main/home/articles_more_bgcfcd.png) no-repeat;
+}
+
+
+/*2009Scape brand color (used mainly for text color in banner message*/
+.brandingColor {
+	color: #ffd800;
+}
+
+
+/* Homepage Updates Table (News) 
+	Custom line-height of 24px aligns left & right page colums */
+table.Updates{
+ width: 460px;
+ color: #DFC89D;
+ line-height: 24px;
+}
+table.Updates td.UpdatesCategory{
+ width: 105px;
+ text-align: center;
+}
+table.Updates td.UpdatesDate{
+ width: 92px;
+ text-align: right;
+}
+/* x More News / Devblog panel */
