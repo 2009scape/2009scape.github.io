@@ -36,6 +36,7 @@ hiscores.populateDefaultHSTable = () => {
 }
 
 hiscores.loadUserTable = (username) => {
+    username = username.split("%20").join(" ");
     fetch(`${hiscores.apiURL}/hiscores/playerSkills/${hiscores.world}/${username.toLowerCase()}`)
         .then(response => response.json())
         .then(result => {
@@ -97,6 +98,7 @@ hiscores.populatePlayerHSTable = () => {
 }
 
 hiscores.populatePlayerRanks = (username, result) => {
+    username = username.split(" ").join("_");
     for (let i = 1; i <= 24; i++) {
         result[i - 1] = hiscores.filter(result[i - 1]);
         row = document.getElementsByClassName(`row row${i}`)[0];
