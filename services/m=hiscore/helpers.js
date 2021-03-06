@@ -105,7 +105,7 @@ hiscores.initalizeRightsideButtons = (loc = "hiscores") => {
         const ultironparam = `?ultiron=${document.getElementById('check_ultiron').checked}`;
         const hcironparam = `?hciron=${document.getElementById('check_hciron').checked}`;
         const maxXP = `?maxXP=${document.getElementById("maxXP").value}`;
-        const world = `?world=${window.location.search.split("?").find(p => p.startsWith("world")).split("=")[1]}`;
+        const world = `?world=${getParam("world")}`;
         window.location.replace(`./${loc}.html${ironparam}${ultironparam}${hcironparam}${maxXP}${world}`);
     });
 
@@ -171,7 +171,7 @@ hiscores.getFiltersAsURLparams = () => {
     return params;
 }
 
-hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
+hiscores.formatName = (name, ironStatus = 0, xpRate, aposS = false,) => {
     name = name.replaceAll("_", " ");
     name = name.replace(/(^\w|\s\w)/g, match => match.toUpperCase()); // Capitalize first letter of each word
     if (aposS) {
@@ -183,7 +183,7 @@ hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
     }
 
     name = hiscores.getIronIcon(ironStatus) + name;
-    if (xpRate != 10) {
+    if ((getParam("world") === "1" && xpRate != 1) || (getParam("world") === "2" && xpRate != 5)) {
         return name + ` <span style="color: rgba(${Math.max(0, 80 - Math.pow(xpRate, 1.7) * 10)}, 0, 0, 0.4);">${xpRate > 10 ? Math.round(xpRate) : xpRate}x</span>`;
     }
     return name;
