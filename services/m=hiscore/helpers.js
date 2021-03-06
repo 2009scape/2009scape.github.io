@@ -123,6 +123,10 @@ hiscores.changePlaqueWorld = () => {
     document.getElementById("worldplaqueid").innerText = `World ${hiscores.world} Hiscores`;
 }
 
+hiscores.updateLegendText = () => {
+    document.getElementById("worldxprate").innerText = `World ${hiscores.world} default XP rate: ${hiscores.world === 1 ? 1 : 5}x`;
+}
+
 hiscores.addSkillsAndActivityFilters = () => {
     document.getElementById("button-left").addEventListener("click", function (e) {
         e.preventDefault();
@@ -184,7 +188,7 @@ hiscores.formatName = (name, ironStatus = 0, xpRate, aposS = false,) => {
 
     name = hiscores.getIronIcon(ironStatus) + name;
     if ((getParam("world") === "1" && xpRate != 1) || (getParam("world") === "2" && xpRate != 5)) {
-        return name + ` <span style="color: rgba(${Math.max(0, 80 - Math.pow(xpRate, 1.7) * 10)}, 0, 0, 0.4);">${xpRate > 10 ? Math.round(xpRate) : xpRate}x</span>`;
+        return name + ` <span style="color: rgba(${Math.max(0, 80 - Math.pow(xpRate, 1.7) * 10)}, 0, 0, 0.4);">${xpRate >= 10 ? Math.round(xpRate) : xpRate}x</span>`;
     }
     return name;
 }
