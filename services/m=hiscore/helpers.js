@@ -51,6 +51,10 @@ hiscores.linkLeftTabSkillNames = (loc = "hiscores") => {
 }
 
 hiscores.linkLeftTabActivityNames = (loc = "activities") => {
+    document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./${loc}.html${hiscores.getFiltersAsURLparams()}`);
+    });
     document.getElementsByClassName(`   Slayer    ico`)[0].addEventListener("click", function (e) {
         e.preventDefault();
         window.location.replace(`./${loc}.html?filter=combat${hiscores.getFiltersAsURLparams()}`);
@@ -58,10 +62,6 @@ hiscores.linkLeftTabActivityNames = (loc = "activities") => {
     document.getElementsByClassName(`   Summoning    ico`)[0].addEventListener("click", function (e) {
         e.preventDefault();
         window.location.replace(`./${loc}.html?filter=miscellaneous${hiscores.getFiltersAsURLparams()}`);
-    });
-    document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
-        e.preventDefault();
-        window.location.replace(`./${loc}.html${hiscores.getFiltersAsURLparams()}`);
     });
 }
 
