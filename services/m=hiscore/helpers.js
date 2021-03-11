@@ -51,6 +51,10 @@ hiscores.linkLeftTabSkillNames = (loc = "hiscores") => {
 }
 
 hiscores.linkLeftTabActivityNames = (loc = "activities") => {
+    document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
+        e.preventDefault();
+        window.location.replace(`./${loc}.html${hiscores.getFiltersAsURLparams()}`);
+    });
     document.getElementsByClassName(`   Slayer    ico`)[0].addEventListener("click", function (e) {
         e.preventDefault();
         window.location.replace(`./${loc}.html?filter=combat${hiscores.getFiltersAsURLparams()}`);
@@ -58,10 +62,6 @@ hiscores.linkLeftTabActivityNames = (loc = "activities") => {
     document.getElementsByClassName(`   Summoning    ico`)[0].addEventListener("click", function (e) {
         e.preventDefault();
         window.location.replace(`./${loc}.html?filter=miscellaneous${hiscores.getFiltersAsURLparams()}`);
-    });
-    document.getElementsByClassName(`   Overall    ico`)[0].addEventListener("click", function (e) {
-        e.preventDefault();
-        window.location.replace(`./${loc}.html${hiscores.getFiltersAsURLparams()}`);
     });
 }
 
@@ -101,12 +101,12 @@ hiscores.initalizeRightsideButtons = (loc = "hiscores") => {
 
     document.getElementById("filter_submit").addEventListener("click", function (e) {
         e.preventDefault();
-        let pageRemovedFiltersLocation = window.location.search.split(/\?iron=[A-z]+|\?ultiron=[A-z]+|\?hciron=[A-z]+|\?maxXP=[\d\.]+/).join('');
         const ironparam = `?iron=${document.getElementById('check_iron').checked}`;
         const ultironparam = `?ultiron=${document.getElementById('check_ultiron').checked}`;
         const hcironparam = `?hciron=${document.getElementById('check_hciron').checked}`;
         const maxXP = `?maxXP=${document.getElementById("maxXP").value}`;
-        window.location.replace(`./${loc}.html${pageRemovedFiltersLocation}${ironparam}${ultironparam}${hcironparam}${maxXP}?world=${hiscores.world}`);
+        const world = `?world=${getParam("world")}`;
+        window.location.replace(`./${loc}.html${ironparam}${ultironparam}${hcironparam}${maxXP}${world}`);
     });
 
     if (document.getElementById("filter_clear")) {
@@ -121,6 +121,10 @@ hiscores.initalizeRightsideButtons = (loc = "hiscores") => {
 
 hiscores.changePlaqueWorld = () => {
     document.getElementById("worldplaqueid").innerText = `World ${hiscores.world} Hiscores`;
+}
+
+hiscores.updateLegendText = () => {
+    document.getElementById("worldxprate").innerText = `World ${hiscores.world} default XP rate: ${hiscores.world === 1 ? 1 : 5}x`;
 }
 
 hiscores.addSkillsAndActivityFilters = () => {
@@ -171,7 +175,7 @@ hiscores.getFiltersAsURLparams = () => {
     return params;
 }
 
-hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
+hiscores.formatName = (name, ironStatus = 0, xpRate, aposS = false,) => {
     name = name.replaceAll("_", " ");
     name = name.replace(/(^\w|\s\w)/g, match => match.toUpperCase()); // Capitalize first letter of each word
     if (aposS) {
@@ -183,8 +187,8 @@ hiscores.formatName = (name, ironStatus = 0, xpRate = 10, aposS = false,) => {
     }
 
     name = hiscores.getIronIcon(ironStatus) + name;
-    if (xpRate != 10) {
-        return name + ` <span style="color: rgba(${Math.max(0, 80 - Math.pow(xpRate, 1.7) * 10)}, 0, 0, 0.4);">${xpRate > 10 ? Math.round(xpRate) : xpRate}x</span>`;
+    if ((getParam("world") === "1" && xpRate != 1) || (getParam("world") === "2" && xpRate != 5)) {
+        return name + ` <span style="color: rgba(${Math.max(0, 80 - Math.pow(xpRate, 1.7) * 10)}, 0, 0, 0.4);">${xpRate >= 10 ? Math.round(xpRate) : xpRate}x</span>`;
     }
     return name;
 }

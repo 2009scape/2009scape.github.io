@@ -203,4 +203,5 @@ hiscores.initializePageArrows();
 hiscores.initalizeRightsideButtons();
 hiscores.linkLeftTabSkillNames();
 hiscores.changePlaqueWorld();
+hiscores.updateLegendText();
 hiscores.addSkillsAndActivityFilters();
