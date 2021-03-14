@@ -1,7 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
-
+ 
 <head>
   <link rel="icon" type="image/vnd.microsoft.icon" href="favicon.ico">
   <link rel="SHORTCUT ICON" href="favicon.ico">
@@ -11,21 +11,24 @@
   <meta http-equiv="Content-Language" content="en,English">
   <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
   <meta name="description"
-    content="2009scape - Bringing back the game from 2009 you love. Multiplayer and Free forever.">
-  <meta name="title" content="2009scape - Free Forever">
-  <title>2009scape - Free Forever </title>
+    content="2009Scape - Bringing back the game from 2009 you love. Multiplayer and free forever.">
+  <meta name="title" content="2009Scape - a free & open-source remake of 2009 era RuneScape">
+  <title>2009Scape - a free & open-source remake of 2009 era RuneScape</title>
+  <!--2010 GLOBAL CSS-->
   <style type="text/css">
     /*\*/
     @import url(./site/css/default/global-30.css);
     /**/
   </style>
-
+  <!--2009SCAPE CUSTOM CSS-->
+  <link rel="stylesheet" href="./site/2009scape-resources/css/2009scape.css">
+  <!--SCRIPT: BUTTON JS EFFECTS-->
   <script type="text/javascript">
     function h(o) { o.getElementsByTagName('span')[0].className = 'shimHover'; }
     function u(o) { o.getElementsByTagName('span')[0].className = 'shim'; }
     document.domain = '';
   </script>
-  <link rel="alternate" type="application/rss+xml" title="RuneScape - Latest news" href="http://0.0.0.0:4000/rss.php">
+  <link rel="alternate" type="application/rss+xml" title="2009Scape - Recent Updates" href="http://0.0.0.0:4000/rss.php">
 </head>
 
 <body id="navhome" class="bodyBackground">
@@ -36,14 +39,14 @@
       <div id="headBg">
         <div id="headOrangeTop"></div>
         <img id="banner" src="" alt="RuneScape">
-
+        
+        <!--SCRIPT: MONTHLY BANNER-->
         <script type="text/javascript">
           document.getElementById("banner").src = `./site/img/2009img/main/skins/default/banners/${new Date().getMonth()}.jpg`;
         </script>
 
         <div id="headImage"><a href="" id="logo_select"></a>
-          <div id="player_no">Want to play with others? Join our <a href="https://discord.gg/43YPGND"
-              style="color: #bf8aba">Discord</a>!</div>
+          <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
         </div>
         <div id="headOrangeBottom"></div>
         <div id="menubox">
@@ -82,17 +85,11 @@
               </ul>
             </li>
 
-            <li class="top"><a id="community" class="tl" href="./404.html"><span class="ts">Community</span></a>
+                        <li class="top"><a id="community" class="tl" href="./404.html"><span class="ts">Community</span></a>
               <ul>
-                <li><a href="forums.html" class="fly"><span>Forums</span></a></li>
-                <li><a href="./services/m=hiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
-                <li><a href="./404.html" class="fly"><span>Contributers</span></a>
-                </li>
-                <li><a href="./404.html" class="fly"><span>Adventurer's Log</span></a></li>
-
-                <li><a href="./404.html" class="fly"><span>Polls</span></a></li>
-                <li><a href="./404.html" class="fly"><span>Downloads &
-                      Wallpapers</span></a></li>
+                <li><a href="./services/m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
+                <li><a href="./services/m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
+                <li><a href="./404.html" class="fly"><span>Contributors</span></a></li>
               </ul>
             </li>
 
@@ -116,59 +113,60 @@
           <br class="clear" />
         </div>
       </div>
-
+      
+	  <!--2009 HOMEPAGE CSS
+		  (Does this need to be here, or can it be moved to <head> with the other CSS pages?)-->
       <style type="text/css">
         /*\*/
         @import url(./site/css/default/home-28.css);
         /**/
       </style>
+      
       <div id="content">
         <div id="left">
-          <a href="./secure/m=create/index.html" class="createbutton" onmouseover="h(this)" onmouseout="u(this)">
-            <img src="./site/img/2009img/main/skins/default/create.jpg"
-              alt="Create a Free Account - Start your adventure today!" />
+	      <!--MAIN BUTTON: LEFT (DISCORD)-->
+          <a href="https://discord.gg/43YPGND" class="createbutton" onmouseover="h(this)" onmouseout="u(this)">
+            <img src="./site/2009scape-resources/img/buttons/btn-discord.png"
+              alt="Join us on Discord" />
             <span class="shim"></span>
           </a>
+          
+          <!--WEBSITE FEATURES-->
           <div id="features">
-            <div class="narrowHeader"><img src="./site/img/2009img/main/titles/websitefeatures.png"
+            <div class="narrowHeader"><img src="./site/2009scape-resources/img/titles/title-websitefeatures.png"
                 alt="Website Features" />
             </div>
             <div class="section">
-              <div class="feature">
-                <img src="./site/img/2009img/main/home/feature_kbsearch_icon.jpg" alt="" />
-                <div class="featureTitle">Community</div>
-                <div class="featureDesc">Join us on <A href="https://discord.gg/43YPGND">Discord</A>, <a
-                    href="https://www.reddit.com/r/2009scape/">Reddit</a>, or in game!</div>
+              <div class="feature" style="background-image: url(./site/img/2009img/main/home/featured_feature_bg.png)">
+                <a href="./site/kbase/guid/how_do_i_get_started.html"><img src="./site/img/2009img/main/home/feature_kbsearch_icon.jpg" alt="Getting Started" /></a>
+                <div class="featureTitle">Getting Started</div>
+                <div class="featureDesc">If you're new to 2009Scape, check out our <a href="./site/kbase/guid/how_do_i_get_started.html">Getting Started Guide</a>!</div>
               </div>
 
               <div class="feature">
-                <img src="./site/img/2009img/main/home/feature_poll_icon.jpg" alt="" />
-                <div class="featureTitle">Hiscores</div>
-                <div class="featureDesc">Looking for who's on top? <a href="./services/m=hiscore/hiscores.html">Right
-                    here!</a></div>
+                <a href="./services/m=hiscore/hiscores.html"><img src="./site/img/2009img/main/home/feature_poll_icon.jpg" alt="Hiscores" /></a>
+                <div class="featureTitle">Community Hiscores</div>
+                <div class="featureDesc">See who's on top &amp; check your skill levels! View the <a href="./services/m=hiscore/hiscores.html">Hiscores</a>.</div>
               </div>
 
+
+			  <div class="feature">
+                <a href="./services/m=bugtracker_v4/index.html"><img src="./site/2009scape-resources/img/icons/feature-bugreport.jpg" alt="Report a Bug" /></a>
+                <div class="featureTitle">Report a Bug</div>
+                <div class="featureDesc">Found a bug in game? Let us know through the <a href="./services/m=bugtracker_v4/index.html">Bug Report Form</a>.</div>
+              </div>
+              
               <div class="feature">
-                <img src="./site/img/2009img/main/home/feature_upgrade_icon.jpg" alt="Upgrade Your Account" />
-                <div class="featureTitle">Contribute to 2009scape</div>
-                <div class="featureDesc">Are you a developer? Join us! <A href="https://github.com/2009scape">GitHub</A>
+                <a href="https://github.com/2009scape"><img src="./site/2009scape-resources/img/icons/feature-github.jpg" alt="Contribute" /></a>
+                <div class="featureTitle">Contribute to 2009Scape</div>
+                <div class="featureDesc">Are you a developer? Join us &amp; get the source code on <a href="https://github.com/2009scape">GitHub</a>!
                 </DIV>
               </div>
 
-
-
-              <div class="feature" style="background-image: url(./site/img/2009img/main/home/featured_feature_bg.png)">
-                <img src="./site/img/custombugreport.jpg" alt="Bug repot icon" />
-                <div class="featureTitle">Report a Bug</div>
-                <div class="featureDesc">Found a bug? Let us know! <A href="./services/m=bugtracker_v4/index.html">Click
-                    here... </A></div>
-              </div>
-
               <div class="feature">
-                <img src="./site/img/2009img/main/home/feature_rsc.jpg" alt="Open RuneScape Classic" />
-                <div class="featureTitle">Open RuneScape Classic</div>
-                <div class="featureDesc">Experience RSC in its original glory. <a
-                    href="https://runescapeclassic.dev/">Click here to play...</a></div>
+                <a href="https://runescapeclassic.dev/"><img src="./site/2009scape-resources/img/icons/feature-openrsc.jpg" alt="Open RuneScape Classic" /></a>
+                <div class="featureTitle">OpenRSC</div>
+                <div class="featureDesc">Experience RuneScape Classic in its original glory: <a href="https://runescapeclassic.dev/">OpenRSC</a>!</div>
               </div>
 
 
@@ -178,14 +176,16 @@
           </div>
 
 
+		  <!--GAME GUIDE-->
           <DIV id=articles>
-            <DIV class=narrowHeader><IMG alt="RuneScape Articles"
-                src="./site/img/2009img/main/titles/runescapearticles.png">
+            <DIV class=narrowHeader><IMG alt="Game Guide"
+                src="./site/2009scape-resources/img/titles/title-gameguide.png">
             </DIV>
             <DIV class=section>
               <DIV class=articlesBody>
-                <DIV class=articlesTitle><IMG alt="Article of the Week"
-                    src="./site/img/2009img/main/home/aow_title.png">
+                <DIV class=articlesTitle>
+	                <!--When weekly article script is implemented, switch image to 'title-article-weekly.png'-->
+	                <img alt="Featured Article" src="./site/2009scape-resources/img/titles/title-article-featured.png">
                 </DIV>
 
                 <DIV class=aowBody>
@@ -199,6 +199,8 @@
                     </P>
                   </DIV>
                 </DIV>
+
+                <div class="articlesMore"><a href="./site/kbase/guid/manual.html">Browse the Game Guide</a></div>
               </DIV>
               <DIV class=articlesFooter></DIV>
             </DIV>
@@ -211,84 +213,149 @@
 
 
         <div id="right">
+	      <!--MAIN BUTTON: PLAY/CLIENT DOWNLOAD-->
           <a href="https://github.com/2009scape/2009Scape/releases" id="playbutton" onmouseover="h(this)"
             onmouseout="u(this)" onclick="if(!this.j){this.href+='?j=1';this.j=true;}">
-            <img src="./site/img/2009img/main/skins/default/play.jpg" alt="Play RuneScape - Continue Your Adventure" />
+            <img src="./site/2009scape-resources/img/buttons/btn-play.png" alt="Play 2009Scape - Download the game client" />
             <span class="shim"></span>
           </a>
           <div id="recentnews">
+	          
+	        <!--TITLE: LATEST UPDATES-->
             <div class="sectionHeader">
               <div class="left">
                 <div class="right">
                   <div class="plaque">
-                    <img src="./site/img/2009img/main/titles/recentnews.png" alt="Recent News" />
+                    <img src="./site/2009scape-resources/img/titles/title-latestupdates.png" alt="Latest Updates" />
                   </div>
                 </div>
               </div>
             </div>
             <div class="section">
-
+	            
+			  <!--LATEST UPDATE-->
               <div class='sectionBody'>
                 <div class='sectionHeight'>
-
-
-
-                  <div class='recentNews'>
+				  <div class='recentNews'>
                     <div class='newsTitle'>
-                      <h3>The collide of two worlds!</h3>
-                      <span>01-Mar-2021</span>
+                      <h3>The Farming Patch</h3>
+                      <span>13-Mar-2021</span>
                     </div>
-                    <A class=newsImage href='viewnews/id/0.html'>
-                      <img alt='' src="./site/img/news/icons/large/functionality-update.jpg"></A>
-                    <p>With Authenticity at stake we had to make a decision! Do we keep the custom QoL in our beautiful remake or 
-                      do we add them to a seperate world! That's not all get ready for our greatest dopamine hit yet...
-                       <a href="./services/m=news/2021February16.html">Read more..</a>
+                    <a class=newsImage href='./services/m=news/march132021.html'>
+	                  <!--UPDATE TEASER IMAGES
+		                  Monthly Game Update Images: update-monthly-##.png (Month number, 01-12)
+		                  Standard Game Update Image: update-generic.png-->
+                      <img alt='' src="./site/2009scape-resources/img/updates/update-monthly-03.png">
+                    </a>
+                    <p>Rakes out all the old weeds of Farming and added in new. Get ready for a brand new farming rewrite with a bunch of other small additions and fixes!
+					  <a href="./services/m=news/2021February16.html">Read more...</a>
                     </p>
                   </div>
                 </div>
               </div>
+                 <!--RECNT UPDATE ITEM-->
+                 <div class="sectionBody">
+                  <div class="recentNews">
+                    <div class="newsTitle">
+                      <h3>A Collide of 2 Worlds</h3>
+                      <span>22-Feb-2021</span>
+                    </div>
+                    <img src="./site/img/news/icons/signpost.jpg" /img>
+                    <p>What's a remake without focus on unique features that build the game? The battle of the worlds! A new whole world was added with the whole new highscores to match it! World 2 being the custom/QoL verison of 2009scape and World 1 becoming the authentic 2009scape. <a
+                        href="./services/m=news/210118.html">Read more...</a>
+                    </p>
+                  </div>
+                </div>             
+            <!--RECNT UPDATE ITEM-->
+            <div class="sectionBody">
+                <div class="recentNews">
+                  <div class="newsTitle">
+                    <h3>Introducing a New Layer of Bots!</h3>
+                    <span>01-Feb-2021</span>
+                  </div>
+                  <img src="./site/img/news/icons/workinprogress.jpg" /img>
+                  <p>In authentic 2009, bots were two things in RuneScape: 1- in existence, and 2- unbanned. We've
+                      added much life to the 2009Scape world by adding adventurer bots, and bots that participate in
+                      various skilling activities (which also populates the Grand Exchange!), but today we're ready to
+                      take it a step further.
+                      <a href="./services/m=news/210201.html">Read more...</a>
+                  </p>
+                </div>
+              </div>
+              
+              </div>
+            
+            <!--TITLE: MORE UPDATES-->
+            <div class="sectionHeader">
+              <div class="left">
+                <div class="right">
+                  <div class="plaque">
+                    <img src="./site/2009scape-resources/img/titles/title-moreupdates.png" alt="More Updates" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="section">
 
-                
-
-              <div class="sectionBody">
-                <div class="recentNews">
-                  <div class="newsTitle">
-                    <h3>Introducing a new layer of bots!</h3>
-                    <span>28-Jan-2021</span>
-                  </div>
-                  <img src="./site/img/news/icons/axepick.jpg" /img>
-                  <p>In authentic 2009, bots were two things in Runescape; 1- in existance, and 2- unbanned. We've
-                    added much life to the 2009scape world by adding adventurer bots, and bots that participate in
-                    various skilling activities (which also populates the Grand Exchange!), but today we're ready to
-                    take it a step further.. <a href="./services/m=news/2021january13.html">Read more..</a>
-                  </p>
-                </div>
-              </div>
-              <div class="sectionBody">
-                <div class="recentNews">
-                  <div class="newsTitle">
-                    <h3>February Update</h3>
-                    <span>28-Jan-2021</span>
-                  </div>
-                  <img src="./site/img/news/icons/axepick.jpg" /img>
-                  <p>Our February update is here with a brand new quest! This update brings the Lost Tribe Quest, and a little bit extra. <a
-                      href="./services/m=news/2021feb.html">Read more..</a>
-                  </p>
-                </div>
-              </div>
-              <div class="sectionBody">
-                <div class="recentNews">
-                  <div class="newsTitle">
-                    <h3>January Update</h3>
-                    <span>18-Jan-2021</span>
-                  </div>
-                  <img src="./site/img/news/icons/axepick.jpg" /img>
-                  <p>Our January Update is here! This update brings the All Fired Up quest, and a little bit extra. <a
-                      href="./services/m=news/210118.html">Read more..</a>
-                  </p>
-                </div>
-              </div>
-              <div class="moreArchive"><a href="./services/m=news/list.html">Browse our news archive</a>
+              
+			  <!--RECENT UPDATES TABLE-->
+			  <div class="sectionBody">
+			  	<table class="Updates" >
+            <!--TABLE ITEM-->
+            <tr>
+              <td>
+                <strong><a href="./services/m=news/hiscoresreleased.html">January Update</a></strong>
+              </td>
+              <td class="UpdatesCategory">
+                Game Updates
+              </td>
+              <td class="UpdatesDate">
+                18-Jan-2021
+              </td>
+            </tr>
+			  		<!--TABLE ITEM-->
+					<tr>
+						<td>
+							<strong><a href="./services/m=news/2021january13.html">Quick Chat &amp; More!</a></strong>
+						</td>
+						<td class="UpdatesCategory">
+							Game Updates
+						</td>
+						<td class="UpdatesDate">
+							13-Jan-2021
+						</td>
+					</tr>
+					<!--TABLE ITEM-->
+			  		<tr>
+			  			<td>
+			  				<strong><a href="./services/m=news/merrychristmas.html">Merry Christmas!</a></strong>
+						</td>
+						<td class="UpdatesCategory">
+							Community
+						</td>
+						<td class="UpdatesDate">
+							25-Dec-2020
+						</td>
+					</tr>
+					
+				</table>
+			  </div>
+              
+              
+              
+              
+              
+              
+              <!--LEFT LINK: DISCORD ANNOUNCEMENTS-->
+              <div id="feed">
+			  	<a href="https://discord.gg/43YPGND">
+			  		<img title="Discord" alt="" height="16px" width="16px" src="./site/2009scape-resources/img/icons/brand-discord.svg"/>
+			  		<span>View Announcements on Discord</span>
+				</a>
+			  </div>
+			  <!--RIGHT LINK: ARCHIVE-->
+              <div class="moreArchive"><a href="./services/m=news/list.html">Browse the Updates Archive</a>
               </div>
             </div>
           </div>
@@ -299,12 +366,12 @@
       <div id="footer">
         <div class="contain">
           <div class="footerdesc">
-            This website and its contents are under the CC BY-NC-SA 4.0 license<br />
+            Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
             Use of this website is subject to our <a href="./site/terms/terms.html">Terms &amp;
               Conditions</a> and <a href="./site/privacy/privacy.html">Privacy Policy</a>.<br />
           </div>
-          <a class="" href="" target="_blank">
-            <img src="./site/img/main/home/title.png" width="150" height="40" style="margin-top:-11%; margin-left: 80%;" alt="2009scape" />
+          <a class="jagexlink" href="" target="_blank">
+            <img src="./site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
           </a>
 
         </div>
