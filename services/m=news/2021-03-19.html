@@ -14,9 +14,9 @@
 English
 " />
   <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima" />
-  <meta name="description" content="A bunch of bug fixes that help improve the overall game" />
-  <meta name="title" content="2009scape - News - Bugfixes!" />
-  <title>2009scape - Buggy Madness</title>
+  <meta name="description" content="A bunch of additions including a new Random event system!" />
+  <meta name="title" content="2009scape - News - Random Events" />
+  <title>2009scape - Random Events!</title>
   <style type="text/css">
     /*\*/
     @import url(../../site/css/global-34.css);
@@ -63,11 +63,9 @@ English
     }
   </style>
   <style>
-
-
     .newsJustify
     {
-      font-size: 14px;
+      font-size: 13px;
     }
 
 
@@ -163,7 +161,7 @@ English
             <li>
               <a href="./../../services/m=bugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a>
             </li>
-            <li>
+            <li>tomorrow
               <a href="./../../404.html" class="fly"><span>Parents' Guide</span></a>
             </li>
           </ul>
@@ -186,7 +184,7 @@ English
           <div class="navigation">
             <div class="location">
               <b>Location: </b> <a href="../../index.html">Home</a> &gt;
-              <a href="list.html">News List</a> > Buggy Madness
+              <a href="list.html">News List</a> > Random Events!
             </div>
           </div>
         </div>
@@ -225,56 +223,72 @@ English
                                   <hr />
                                 </div>
                                 <div id="newsTitle">
-                                  <a href="./march132021.html"><img class="imiddle" border="0" width="30" height="15"
+                                  <a href="./2021-03-15.html"><img class="imiddle" border="0" width="30" height="15"
                                       hspace="0" vspace="0" alt="Previous" title="Previous"
                                       src="../../site/img/news/arrow_back.gif" /></a>
                                   &nbsp;
-                                  <b> 15-March-2021 - Buggy Madness! </b>
+                                  <b> 18-March-2021 - Random Events! </b>
                                   &nbsp;
-                                  <a href="./2021-03-19.html"><img class="imiddle" border="0" width="30" height="15"
-                                    hspace="0" vspace="0" alt="Previous" title="Previous"
-                                    src="../../site/img/news/arrow_forward.gif" /></a>
-                                &nbsp;
 
 
                                 </div>
                                 <div class="newsJustify">
-                                  <p> Hi guys! There's a cute update once again this week for all of you to explore. We know with fixing the
-                                    some of the old Arios code there was going to be some problems. However, <b style="color:darkred;">Ceikry</b>
-                                    has been on the case and has fixed some of the bugs! He spends a bunch of time on this project to make sure each
-                                    day new things can be added or fixed for a better overall experience for everyone. Okay, enough of my rambling
-                                    time to bring on the real goods. </p>
+                                  <p> Yet another amazing update that is coming our <b style="color:darkred"> Lead Developer </b>. 
+                                In this week's addition of content creation and patch notes we have a special surprise that many did not know
+                                they wanted but for sure need! This week we are taking a look at a new random event system, a better thieving system and
+                                other patches that make our game one step closer to our dream goal of a remake. 
 
+                                <img src="" >
+                            
+                                </p>
+
+                                    <br>
+                                    <b><u> Content Additions </u></b>
+                                        <ul>
+                                            <li> Reworked random event system: 
+                                                <ul>
+                                                    <li>Hostile random events no longer exist.</li>
+                                                    <li>Corrected Sandwich Lady event (Rewards various foods) & are able to talk to her.</li>
+                                                    <li>Added Certer event (Can reward gems, key halves, spinach rolls, kebabs, etc)</li>
+                                                    <li>Added drill demon event (Rewards camo set and then 500 gp once player completes the camo set.)</li>
+                                                    <li>Added Surprise Exam! event (Rewards Book of Knowledge, which grants (15 * level) experience in a skill of your choice, experience rate settings *do apply*)</li>
+                                                    <img src="img/exam.png" width="400" height="200">
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    <br>
                                     <br>
 
                                     <b><u>Bug Fixes:</u></b>
-                                    <ul>
-                                      <li>Fixed a bug with ava's accumulator that would prevent you from re-equipping it after removing it </li>
-                                      <li>Fixed a bug that would cause talking to certain NPCs to crash the server</li>
-                                      <li>Fixed a bug where you could water patches with nothing planted in them</li>
-                                      <li>Old compost bins from pre-rewrite should now clear properly on login</li>
-                                      <li>Fixed a bug where Dramen Tree Spirit wouldn't spawn</li>
-                                      <li>The ::ge command now displays results alphabetically</li>
-                                      <li>Fertile soil spell has now been re-implemented.</li>
-                                      <li>Farming cape perk has been re-implemented.</li>
-                                      <li>Compost Mound special move re-implemented.</li>
-                                      <li>Cure plant spell has been re-implemented.</li>
-                                      <li>Fixed a bug where farming produce could be put into the wrong kind of container (basket vs sack) </li>
-                                      <li>Hat/hair clipping has been corrected. Please report as bugs any hats where the hair pokes through/still shows</li>
-                                      <li>Farmer dialogue has been made more human-friendly when requesting patch protection</li>
-                                      <li>Fixed raking not playing an animation for stage 1 weeds</li>
-                                      <li>Fixed a bug where planting a seed in a plant pot could take a whole stack of seeds</li>
-                                      <li>Corrected the level requirement for white lillies</li>
-                                      <li>Fixed a bug with depositing 5 items in the leprechaun tool interface</li>
-                                      <li>Fixed a bug that prevented you from speaking with the Maze Guardian during MTA.</li>
-                                      <li>Disabled afaroutdude's borked implementation of A Soul's Bane until it can be properly implemented</li>
-                                      <li>Readded Sir Gawain's dialogue (fixes Merlin's Crystal)</li>
-                                      <li>Removed various bits of debug text</li>
-                                      <li>Readded farmer dialogue/shop</li>
-                                      <li>Patches should now correctly grow while offline</li>
-                                      <li>Canoe system has been completely redone</li>
+                                        <ul>
+                                        <li>Added nearly-perfect pickpocketing with perfect success rates.</li>
+                                        <li>Woodcutting rates have all been corrected to perfect authentic rates.</li>
+                                        <li>Corrected cooking burn rates</li>
+                                        <li>Fixed a small bug with Duke Horacio's dialogue</li>
+                                        <li>Crossbows now use crossbow string rather than sinew to fletch.</li>
+                                        <li>Lady of the Lake dialogue should no longer hang.</li>
+                                        <li> You are now able to talk to the kid in waterfall quest to continue the quest.</li>
+                                        <li>Fixed a bug with the hat flag on female player models</li>
+                                        <li>Hat flags now take into account whether or not the player is normally bald.</li>
+                                        <li>Fixed world events (shooting stars/ penguins)</li>
+                                        <li>Fixed superheat spell</li>
+                                        <li>Fixed a bug with skulling players and entering the abyss.</li>
+                                        <li>Players can now plant fruit tree seeds in plant pots</li>
+                                        <li>Revenants now have a better path system and more were added into the game!</li>
+                                    
                                       <br>
                                       <br>
+                                    <b><u>Website/Discord Updates:</u></b>
+                                    <br>
+                                    <br>
+                                        <ul>
+                                            <li>Our Player, S , is the first x20 regular player to achieve 99 fletching!</li> 
+                                            <li>Every page now has the 2009 Runescape Theme. </li>
+                                            <li> Our vote streak goes for March 8th - March 14th goes to: Daniella, Death, Pebol, Ryannathans, S, & Slow. </li>
+                                            <li> Added a new quest guide for <a href="./../../site/kbase/guid/wolf_whistle_members.html">Wolf Whistle</a>.</li>
+                                        </ul>
+                                    <br>
+                                    <br>
                                   
                                     <br class="clear" />
 
