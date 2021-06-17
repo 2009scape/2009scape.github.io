@@ -2,7 +2,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 
-<!-- Mirrored from services/m=forum/sl=0/forums.ws?13,14 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:51:28 GMT -->
+<!-- Mirrored from services/m=forum/sl=0/forums.ws?13,14,815,61234799 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 12:17:26 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
 <head>
 <link rel="icon" type="image/vnd.microsoft.icon" href="../../../site/favicon.ico">
@@ -15,10 +15,10 @@ en,
 English
 ">
 <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
-<meta name="description" content="Play RuneScape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
-<meta name="title" content="RuneScape - MMORPG - The No.1 Free Online Multiplayer Game">
-<title>2009scape - 2.009 news' list</title>
-<style type="text/css">/*\*/@import url(../../site/css/global-34.css);/**/</style>
+<meta name="description" content="Our decision on the worlds">
+<meta name="title" content="2009scape - Archived Post - Website Creation">
+<title>2009scape - Our decision on the worlds</title>
+<style type="text/css">/*\*/@import url(./../../site/css/global-34.css);/**/</style>
 <script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
 <script type="text/javascript">
 $(function(){
@@ -30,125 +30,12 @@ $("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1";
 
 
 <link href="./../../site/css/forum3-7.css" rel="stylesheet" type="text/css" media="all"/>
-<script type="text/javascript">//<![CDATA[
- 
 
-
-
-
-
-function save_state_change(group,hidden) {
- 
- var groups = get_groups();
- 
- var gstring = "";
- 
- if (groups!=null) {
-  for (var i=0;i<groups.length;i++) {
-   if (group!=groups[i] && groups[i]!=-1) {
-    if (gstring.length>0) gstring += ",";
-    gstring += groups[i];
-   }
-  }
- }
- if (hidden) {
-  if (gstring.length>0) gstring += ",";
-  gstring += group;
- }
- 
- if (gstring=="") gstring = "-1";
- var expires=new Date();
- expires.setDate(expires.getDate()+5000);
- document.cookie = "g="+gstring+";expires="+expires.toGMTString();
-}
-
-
-function get_groups() {
- var cookie=document.cookie;
- if (document.cookie!=null) {
-  
-  var crumbs=cookie.split(";");
-  if (crumbs!=null) {
-   for (var i=0;i<crumbs.length;i++) {
-    pair = crumbs[i].split("=");
-    if (pair!=null && pair.length==2 && (pair[0]=="g" || pair[0]==" g")) {
-     
-     var gstring = pair[1];
-     return gstring.split(",");
-    }
-   }
-  }
- }
- return null;
-}
-
-var groups_to_hide = get_groups();
-
-function describe(what) {
- a="";
- for(part in what) a+=part + "=" + what[part] + "\n";
- return a;
-}
-
-function replace_classname(node,oldclass,replacement) {
- $(node).removeClass(oldclass).addClass(replacement);
-}
-
-var show_group = function() {}
-var hide_group = function() {}
-
-
-
-function showhide(show,group) {
- var $table = $("#group"+group+" tr:not(:first), #group"+group+" tr:first td:not(:first)");
- var $controls = $("#showhide"+group).unbind("click");
- if(show){
-  $table.show();
-  $controls
-  .html("<span class='hidefgroup' title='Click to hide this forum group'></span>")
-  .click(function(){ return hide_group(group); });
- }
- else{
-  $table.hide();
-  $controls
-  .html("<span class='showfgroup' title='Click to show this forum group'></span>")
-  .click(function(){ return show_group(group); });
- }
- if($table.length + $controls.length > 3) return true; 
- return false;
-}
-show_group = function(group) {
- var success = showhide(true,group);
- if (success) {
-  save_state_change(group,false);
- }
- return false;
-}
-hide_group = function(group) {
- var success = showhide(false,group);
- if (success) {
-  save_state_change(group,true);
- }
- return false;
-}
-function is_group_hidden(group) {
- if (groups_to_hide!=null) {
-  for (var i=0;i<groups_to_hide.length;i++) {
-   if (groups_to_hide[i]==group) {
-    return true;
-   }
-  }
- }
- return false;
-}
-
-//]]></script>
 
 
 </head>
 <body id="navcommunity" class="bodyBackground">
 <a name="top"></a>
-
 <div id="scroll">
   <div id="head">
     <div id="headBg">
@@ -221,134 +108,184 @@ function is_group_hidden(group) {
         <br class="clear" />
       </div>
 
-
-
-
 <div class="navigation">
 <div class="location">
-<b>Location: </b> <a href="../../index.html">Home</a> &gt;
-<span>News List for 2009scape</span></a>
+<b>Location: </b> <a href="./../../index.html">Home</a> &gt;
+<a href="./list.html"><span>News List</span></a> 
+<span class="divider">&gt;</span>
+&gt; <span> Website Fixer Uppers
+</span>
 </div>
 </div>
-</div></div>
+
 <div id="content">
 <div id="article">
 <div class="sectionHeader">
 <div class="left">
 <div class="right">
 <h1 class="plaque">
-<b>Updates</b>
+17-June-2021
 </h1>
 </div>
 </div>
 </div>
 <div class="section">
 <div class="brown_background">
+
+</div>
 <div id="contrast_panel">
 <div id="infopane">
-  <!-- The New's & Update banner -->
-<span class="title"><img src="../../site/2009scape-resources/img/game_guide/banners/newsandupdates.png" alt=""/></span>
+<div class="title thrd">Website Fixer Uppers</div>
+<div class="about">
 
-<ul class="flat">
-
-<li><br/>
-</li>
-</ul>
 </div>
 </div>
 <div id="nocontrols" class="phold"></div>
-
-</div>
-<div id="content_forum" class="border">
-<div class="bk"></div>
-<div class="cont">
-<table >
+<div class="actions" id="top">
+<table>
 <tr>
-<td class="title1 first-child">&nbsp;</td>
-<td id="header_posts" class="center title">Category</td>
-<td id="header_lastpost" class="title1">
-Post Date
-</td>
-</tr>
-<!-- When adding pages always add up not down.-->
-<tr class="thdnrml">
-  <td class="threadtitle">
-  <a class="sticky1" href="./2021-06-17.html">Site is under construction</a><br/>
-  <span class="nt">created by <span class="username"><img src="../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
-  </td>
-  <!-- Category the posts are in -->
-  <td class="n posts">
-  Website Updates
-  </td>
-  <!-- When the page was created -->
-  <td class="updated">
-  <b>June 17, 2021</b>
-  <br/>2:18 a.m
-  </ul>
-  </td>
-  </tr>
-<tr class="thdnrml">
-<td class="threadtitle">
-<a class="sticky1" href="./2021-06-11.html">Our Decisions with the Worlds</a><br/>
-<span class="nt">created by <span class="username"><img src="../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
-</td>
-<!-- Category the posts are in -->
-<td class="n posts">
-Website Updates
-</td>
-<!-- When the page was created -->
-<td class="updated">
-<b>June 11, 2021</b>
-<br/>2:49 a.m
+<td class="commands center">
+<ul class="flat first-child">
+  <li><a href="./list.html"><img src="../../site/img/forum/cmdicons/backtoforum.gif" alt=""/> Up to News &amp; Announcements</a></li>
+  <li>
+  <a href="./2021-06-17.html"><img src="../../site/img/forum/cmdicons/refresh.gif" alt=""/> Refresh</a>
+  </li>
 </ul>
 </td>
 </tr>
+<tr>
 
+</tr>
 </table>
+</div>
+<div id="contentmsg" class="">
+<a class="msgplace" name="0"></a>
+<table class="message jmod" CELLSPACING="0">
+<tr>
+<td class="leftpanel J-Mod">
+<div class="msgcreator uname" >
+
+<img src="../../site/img/forum/crown_gold.gif" alt=""/>&nbsp;
+Summer
+</div>
+<img src="./../m=avatar-rs/avatar3efb.gif"  class="avatar" alt=""/>
+
+<div class="modtype">Website Developer</div>
+
+<div class="msgcommands">
+<br/>
+</div>
+</td>
+<td class="rightpanel">
+<div class="msgtime">
+17-Jun-2021 02:38:00
+<br/>
+</div>
+<div class="msgcontents">
+<!-- Post goes right in here -->
+
+<p> 
+    Most of the time we are having back to back game update and it is fantastic! However, we are working on some updates for our website as well and I would love 
+    to share the progress with all of you. 
+
+    <br>
+    <br>
+
+    So we have changed the layout of the website's nav-bar like the sneak preview last time. We have added all your basic needs to the drop down
+    <br>
+    <br>
+
+    <b> The First section is Game Guide</b>
+    <br>
+    <ul>
+        <li> Game Guide : The Game Guide is where you are going to find guides of ingame content and is the main hub of this section. </li>
+        <li> The Credit System : Since credits are such a big part of 2009scape. I thought that it would be nice to have it as a drop down option. </li>
+        <li> Our Rules : A new rule page to pair with the new Discord #rules section. This will help players who do not use discord to know the rules to avoid getting banned. </li>
+        <li> About 2009scape: A new about page with a little bit of history on us with our goals in mind. </li>
+        
+    </ul>
+    <br>
+    <b> The next section is the Community Garden ( You can click on the tab itself to go to the garden. )</b>
+    <br>
+    <ul>
+        <li>Discord Server : A link to our discord if you could not find the giant one on the home page. </li>
+        <li>Matrix Server : A link to our matrix community which was hidden before. </li>
+        <li> The Highscore pages still where they have been and will not be changed. </li>
+        <li> The Hall of Fame: For now it links to the legacy HoF but it will be updated to link to a hub. </li>
+        <li> Meet the Staff : Now you can know who is who within the staff. </li>
+        <li>To the Tributes : A page dedicated to our contributors who aren't staff as a thank you. </li>
+        <li> Play Classic : The og Rs 2009 site actually had a Classic page and this one links to a classic page that showcases Open RSC ( Open source Runescape Classic )</li>
+
+    </ul>
+    <br>
+    <b> The last section is the Help Center and much ike the Community Garden just click the tab to go to the hub.  </b>
+    <ul>
+        <li> Frequently Asked Questions: This is a new page based off of the discord's FAQ but also has a few that are not on Discord. Make sure to read this. </li>
+        <li> Bug report section : Make sure to do <b> Super</b> detailed bug reports with all sorts of information, coords, rs wiki link for check, etc. More information will be over there.</li>
 
 
+    </ul>
+    <br>
+     The update page was also updated to look more like a forums and the home page is currently underconstruction.
+
+     <br>
+     <br>
+     More pages are on their way but this is what we currently have ready!
+
+
+
+</p>
+
+</div>
+</td>
+</tr></table>
+</div>
 <div class="actions" id="bottom">
 <table>
 <tr>
 <td class="commands center">
 <ul class="flat first-child">
-<li class="first-child">
-<a href="./list.html"><img src="../../site/2009scape-resources/img/icons/mini_game_updates.gif" alt=""/>Browse Archived Legacy Updates ( Coming Soon )</a>
+<li><a href="./list.html"><img src="../../site/img/forum/cmdicons/backtoforum.gif" alt=""/> Up to News &amp; Announcements</a></li>
+<li>
+<a href="./2021-06-17.html"><img src="../../site/img/forum/cmdicons/refresh.gif" alt=""/> Refresh</a>
 </li>
-<li><a href="./list.html"><img src="../../site/2009scape-resources/img/icons/refresh.gif" alt=""/>Refresh Page</a></li>
 </ul>
 </td>
+</tr>
+<tr>
 </tr>
 </table>
 </div>
 </div>
+</div>
+</div>
+</div>
 <br class="clear"/>
 </div>
-  <div class="navigation">
+<div class="navigation">
     <div class="location">
-    <b>Location: </b> <a href="../../index.html">Home</a> &gt;
+    <b>Location: </b> <a href="./../../index.html">Home</a> &gt;
+    <a href="./list.html"><span>News List</span></a> 
     <span class="divider">&gt;</span>
-    <span>News List for 2009scape</span>
+    &gt; <span> Website Fixer Uppers
+    </span>
     </div>
     </div>
-    </div>
-</div>
-</div>
-<div id="footer">
-  <div class="contain">
-    <div class="footerdesc">
-      Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
-      Use of our Game's source code is subject to our <a href="./site/terms/terms.html">Terms &amp;
-        Conditions</a> and <a href="./site/privacy/privacy.html">Privacy Policy</a>.<br />
-    </div>
-    <a class="jagexlink" href="" target="_blank">
-      <img src="./../../site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
-    </a>
-
-  </div>
-  
-</div>
-</div>
+    <div id="footer">
+        <div class="contain">
+          <div class="footerdesc">
+            Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
+            Use of our Game's source code is subject to our <a href="../../site/terms/terms.html">Terms &amp;
+              Conditions</a> and <a href="../../site/privacy/privacy.html">Privacy Policy</a>.<br />
+          </div>
+          <a class="jagexlink" href="" target="_blank">
+            <img src="./../../site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
+          </a>
+      
+        </div>
+        
+      </div>
+      </div>
 
 
 <script type="text/javascript">
@@ -378,6 +315,6 @@ pageTracker._trackPageview();
 
 </body>
 
-<!-- Mirrored from services/m=forum/sl=0/forums.ws?13,14 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:51:42 GMT -->
+<!-- Mirrored from services/m=forum/sl=0/forums.ws?13,14,815,61234799 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 12:17:29 GMT -->
 <!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
 </html>

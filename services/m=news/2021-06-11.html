@@ -37,75 +37,76 @@ $("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1";
 <body id="navcommunity" class="bodyBackground">
 <a name="top"></a>
 <div id="scroll">
-    <div id="head">
-      <div id="headBg">
-        <div id="headOrangeTop"></div>
-        <img id="banner" src="" alt="RuneScape">
-  
-        <!--SCRIPT: MONTHLY BANNER-->
-        <script type="text/javascript">
-          document.getElementById("banner").src = `./../../site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
-        </script>
-  
-        <div id="headImage"><a href="" id="logo_select"></a>
-          <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
-        </div>
-        <div id="headOrangeBottom"></div>
-  
-        <!-- End of Banner -->
-  <div id="menubox">
-    <ul id="menus">
-      <li class="top"><a href="./../../index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
-  
-      <li class="top"><a id="play" class="tl"
-          href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar"
-          onclick="if(!this.j){this.href+='?j=1';this.j=true;}"><span class="ts">Play Now</span></a>
-      </li>
-  
-      <li class="top"><a id="play" class="tl" href="./../../services/m=news/list.html"><span class="ts">Updates</span></a>
-       
-      </li>
-  
-      <li class="top"><a id="community" class="tl" href="./../../site/kbase/guid/manual.html"><span class="ts">Game
-            Guide</span></a>
-        <ul>
-          <li><a href="./../../site/kbase/guid/manual.html" class="fly"><span>Browse the Game Guide</span></a></li>
-          <li><a href="./../../site/kbase/guid/2009exclusive/credits.html" class="fly"><span>The Credit System</span></a>
-          <li><a href="./../../site/rules/rules.html" class="fly"><span>Our Rules</span></a></li>
-          <li><a href="./../../404.html" class="fly"><span>About 2009scape</span></a></li>
-        </ul>
-      </li>
-      <li class="top"><a id="guide" class="tl" href="././../../404.html"><span class="ts">Community</span></a>
-        <ul>
-          <li><a href="https://discord.com/invite/43YPGND" class="fly"><span>Discord Server</span> </a></li>
-          <li><a href="./../../services/m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
-          <li><a href="./../../services/m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
-          <li><a href="./../../site/kbase/guid/2009exclusive/hall_of_fame.html" class="fly"><span>The Hall Of Fame</span></a>
-            <li><a href="./../../site/kbase/guid/2009exclusive/staff.html" class="fly"><span>Meet the Staff</span></a>
-          <li><a href="./../../404.html" class="fly"><span>To the Tributes!</span></a></li>
-          <li><a href="./../../404.html" class="fly"><span>Play Classic</span></a>
-        </ul>
-      </li>
-  
-      <li class="top"><a id="help" class="tl" href="./../../404.html"><span class="ts">Help</span></a>
-        <ul>
-          <li><a href="./../../404.html" class="fly"><span>Frequently Asked Questions</span></a>
-          
-          <li><a href="./../../services/m=bugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a>
+  <div id="head">
+    <div id="headBg">
+      <div id="headOrangeTop"></div>
+      <img id="banner" src="" alt="RuneScape">
+
+      <!--SCRIPT: MONTHLY BANNER-->
+      <script type="text/javascript">
+        document.getElementById("banner").src = `../../site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
+      </script>
+
+      <div id="headImage"><a href="" id="logo_select"></a>
+        <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
+      </div>
+      <div id="headOrangeBottom"></div>
+
+      <!-- End of Banner -->
+      <div id="menubox">
+        <ul id="menus">
+          <li class="top"><a href="./../../index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+      
+          <li class="top"><a id="play" class="tl"
+              href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar"
+              onclick="if(!this.j){this.href+='?j=1';this.j=true;}"><span class="ts">Play Now</span></a>
           </li>
-         
+      
+          <li class="top"><a id="community" class="tl" href="./list.html"><span class="ts">Updates</span></a>
+           
+          </li>
+      
+          <li class="top"><a id="guide" class="tl" href="../../site/game_guide/manual.html"><span class="ts">Game
+                Guide</span></a>
+            <ul>
+              <li><a href="../../site/game_guide/manual.html" class="fly"><span>Browse the Game Guide</span></a></li>
+              <li><a href="../../site/game_guide/credits.html" class="fly"><span>The Credit System</span></a>
+              <li><a href="../../site/rules/rules.html" class="fly"><span>Our Rules</span></a></li>
+              <li><a href="../../site/game_guide/about2009scape.html" class="fly"><span>About 2009scape</span></a></li>
+            </ul>
+          </li>
+          <li class="top"><a id="help" class="tl" href="../../site/community/community.html"><span class="ts">Community</span></a>
+            <ul>
+              <li><a href="https://discord.com/invite/43YPGND" class="fly"><span>Discord Server</span> </a></li>
+              <li><a href="https://matrix.to/#/+2009scape:matrix.org" class="fly"><span>Matrix Server</span> </a></li>
+              <li><a href="../m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
+              <li><a href="../m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
+              <li><a href="../../site/community/hall_of_fame.html" class="fly"><span>The Hall Of Fame</span></a>
+                <li><a href="../../site/community/staff.html" class="fly"><span>Meet the Staff</span></a>
+              <li><a href="../../site/community/contributors.html" class="fly"><span>To the Tributes!</span></a></li>
+              <li><a href="../../site/classicapplet/playclassic.html" class="fly"><span>Play Classic</span></a>
+            </ul>
+          </li>
+      
+          <li class="top"><a id="help" class="tl" href="../../site/help_hub.html"><span class="ts">Help</span></a>
+            <ul>
+              <li><a href="../../site/faq.html" class="fly"><span>Frequently Asked Questions</span></a>
+              
+              <li><a href="../m=bugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a>
+              </li>
+             
+            </ul>
+          </li>
+      
+          <li class="top"><a id="login" class="tl" href="https://github.com/2009scape" rel="noopener noreferrer" target="_blank"><span class="ts">Source Code</span></a>
+            <ul>
+              <li><li><a href="https://github.com/2009scape/2009Scape-Legacy" rel="noopener noreferrer" target="_blank" class="fly"><span>Game Source Code</span></a></li>
+              <li><a href="https://github.com/2009scape/2009Scape.github.io" rel="noopener noreferrer" target="_blank" class="fly"><span>Website Source Code</span></a>
+            </ul>
+        </li>
         </ul>
-      </li>
-  
-      <li class="top"><a id="login" class="tl" href="https://github.com/2009scape" rel="noopener noreferrer" target="_blank"><span class="ts">Source Code</span></a>
-        <ul>
-          <li><li><a href="https://github.com/2009scape/2009Scape-Legacy" rel="noopener noreferrer" target="_blank" class="fly"><span>Game Source Code</span></a></li>
-          <li><a href="https://github.com/2009scape/2009Scape.github.io" rel="noopener noreferrer" target="_blank" class="fly"><span>Website Source Code</span></a>
-        </ul>
-    </li>
-    </ul>
-    <br class="clear" />
-  </div>
+        <br class="clear" />
+      </div>
 
 <div class="navigation">
 <div class="location">
