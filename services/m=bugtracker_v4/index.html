@@ -17,7 +17,7 @@ English
 ">
     <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
     <meta name="description"
-        content="Play 2009scape for free, and join a global community of millions as you complete quests and win enormous treasures in a 3D world full of magic and monsters.">
+        content="Help keep the magic alive by reporting a bug!">
     <meta name="title" content="2009Scape - Report a Bug">
     <title>2009Scape - Report a Bug</title>
     <style type="text/css">
@@ -39,111 +39,84 @@ English
         /*\*/
         @import url(../../site/css/bugtracker-0.css);
         /**/
-        .bodyBackgroundHeadAdvert{
-            
-            background-image: url("../../site/img/2009img/main/skins/default/bg.jpg");
-            background-repeat: repeat-y;
-         
-            
-    
-        }
-    .bodyBackground{
-        background-image: url("../../site/img/2009img/main/skins/default/bg.jpg");
-            background-repeat: repeat-y;
-    }
-    
-    .bodyBackgroundHead{
-        background-image: url("../../site/img/2009img/main/skins/default/bg.jpg");
-            background-repeat: repeat-y;
-
-    }
+   
     
     </style>
 </head>
 
 <body id="navhelp" class="bodyBackground">
     <a name="top"></a>
-
-
-
-    <div class="bodyBackgroundHead">
-        <div id="menubox">
-            <ul id="menus">
+    <div id="scroll">
+        <div id="head">
+          <div id="headBg">
+            <div id="headOrangeTop"></div>
+            <img id="banner" src="" alt="RuneScape">
+      
+            <!--SCRIPT: MONTHLY BANNER-->
+            <script type="text/javascript">
+              document.getElementById("banner").src = `../../site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
+            </script>
+      
+            <div id="headImage"><a href="" id="logo_select"></a>
+              <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
+            </div>
+            <div id="headOrangeBottom"></div>
+      
+            <!-- End of Banner -->
+            <div id="menubox">
+              <ul id="menus">
                 <li class="top"><a href="./../../index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
-
-                <li class="top"><a id="play" class="tl" href="https://github.com/2009scape/2009Scape/releases"
-                        onclick="if(!this.j){this.href+='?j=1';this.j=true;}"><span class="ts">Play Now</span></a>
-                    <ul>
-                        <li><a href="./../../secure/m=create/index.html" class="fly"><span>New
-                                    Users</span></a></li>
-                        <li><a href="https://github.com/2009scape/2009Scape/releases"
-                                onclick="if(!this.j){this.href+='?j=1';this.j=true;}" class="fly"><span>Existing
-                                    Users</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="top"><a id="account" class="tl" href="./../../404.html"><span class="ts">Account</span></a>
-                    <ul>
-                        <li><a href="./../../secure/m=create/index.html" class="fly"><span>Create New
-                                    Account</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Account Management</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="top"><a id="guide" class="tl" href="./../../site/kbase/guid/manual.html"><span
-                            class="ts">Game
-                            Guide</span></a>
-                    <ul>
-                        <li><a href="./../../site/kbase/guid/manual.html" class="fly"><span>Manual</span></a></li>
-                        <li><a href="./../../site/kbase/guid/quests0.html" class="fly"><span>QuestHelp</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Grand Exchange</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Rules</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Lores</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>What is 2009scape?</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="top"><a id="community" class="tl" href="./../../404.html"><span
-                            class="ts">Community</span></a>
-                    <ul>
-                        <li><a href="./../../404.html" class="fly"><span>Forums</span></a></li>
-                        <li><a href="./../../services/m=hiscore/hiscores.html" class="fly"><span>Hiscores</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Contributors</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Adventurer's Log</span></a></li>
-
-                        <li><a href="./../../404.html" class="fly"><span>Polls</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Downloads &
-                                    Wallpapers</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="top"><a id="help" class="tl" href="./../../404.html"><span class="ts">Help</span></a>
-                    <ul>
-                        <li><a href="./../../404.html" class="fly"><span>Customer Support</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Password Recovery</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Locked Account Recovery</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Appeal Bans & Mutes</span></a></li>
-                        <li><a href="./../../services/m=bugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a></li>
-                        <li><a href="./../../404.html" class="fly"><span>Parents' Guide</span></a></li>
-                    </ul>
-                </li>
-
-                <li class="top"><a href="https://github.com/2009scape/" id="login" class="tl"><span class="ts">Source
-                            Code</span></a></li>
-            </ul>
-            <br class="clear" />
-        </div>
-
-        <div id="bannerNoad">
             
-        </div>
-        <div id="scroll">
-            <div id="head">
-                <div id="headBg">
-                    <div id="langAndLogin">
-
-                    </div>
-
+                <li class="top"><a id="play" class="tl"
+                    href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar"
+                    onclick="if(!this.j){this.href+='?j=1';this.j=true;}"><span class="ts">Play Now</span></a>
+                </li>
+            
+                <li class="top"><a id="community" class="tl" href="./list.html"><span class="ts">Updates</span></a>
+                 
+                </li>
+            
+                <li class="top"><a id="guide" class="tl" href="../../site/game_guide/manual.html"><span class="ts">Game
+                      Guide</span></a>
+                  <ul>
+                    <li><a href="../../site/game_guide/manual.html" class="fly"><span>Browse the Game Guide</span></a></li>
+                    <li><a href="../../site/game_guide/credits.html" class="fly"><span>The Credit System</span></a>
+                    <li><a href="../../site/rules/rules.html" class="fly"><span>Our Rules</span></a></li>
+                    <li><a href="../../site/game_guide/about2009scape.html" class="fly"><span>About 2009scape</span></a></li>
+                  </ul>
+                </li>
+                <li class="top"><a id="community" class="tl" href="../../site/community/community.html"><span class="ts">Community</span></a>
+                  <ul>
+                    <li><a href="https://discord.com/invite/43YPGND" class="fly"><span>Discord Server</span> </a></li>
+                    <li><a href="https://matrix.to/#/+2009scape:matrix.org" class="fly"><span>Matrix Server</span> </a></li>
+                    <li><a href="../m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
+                    <li><a href="../m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
+                    <li><a href="../../site/community/hall_of_fame.html" class="fly"><span>The Hall Of Fame</span></a>
+                      <li><a href="../../site/community/staff.html" class="fly"><span>Meet the Staff</span></a>
+                    <li><a href="../../site/community/contributors.html" class="fly"><span>To the Tributes!</span></a></li>
+                    <li><a href="../../site/classicapplet/playclassic.html" class="fly"><span>Play Classic</span></a>
+                  </ul>
+                </li>
+            
+                <li class="top"><a id="help" class="tl" href="../../site/help/help_hub.html"><span class="ts">Help</span></a>
+                  <ul>
+                    <li><a href="../../site/help/faq.html" class="fly"><span>Frequently Asked Questions</span></a>
+                    
+                    <li><a href="../m=bugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a>
+                    </li>
+                   
+                  </ul>
+                </li>
+            
+                <li class="top"><a id="login" class="tl" href="https://github.com/2009scape" rel="noopener noreferrer" target="_blank"><span class="ts">Source Code</span></a>
+                  <ul>
+                    <li><li><a href="https://github.com/2009scape/2009Scape-Legacy" rel="noopener noreferrer" target="_blank" class="fly"><span>Game Source Code</span></a></li>
+                    <li><a href="https://github.com/2009scape/2009Scape.github.io" rel="noopener noreferrer" target="_blank" class="fly"><span>Website Source Code</span></a>
+                  </ul>
+              </li>
+              </ul>
+              <br class="clear" />
+            </div>
                     <div class="navigation">
                         <div class="location">
                             <b>Location: </b> <a href="../../index.html">Home</a> &gt;
@@ -175,26 +148,50 @@ English
                                     Welcome to the report a bug page. We work hard to make sure the game is as bug free
                                     as possible and rely on user reports to keep
                                     it that way. Please fill out the form below and provide as much detail as you can.
-                                    The more detail, the better!
                                     <br>
                                     <br>
-                                    The types of things we consider to be bugs are:
-                                    <ul>
-                                        <li>Points in a quest where you can't continue due to a quest becoming
-                                            impossible to complete</li>
-                                        <li>Map areas where you can get stuck or that don't look quite right</li>
-                                        <li>Graphical glitches such as animations not playing properly</li>
-                                        <li>Spelling and grammatical errors (submit these under the "Wording" category)
-                                        </li>
-                                        <li>Content that should exist but doesn't (We are revision 530, January 28,
-                                            2009)</li>
-                                        <li>Things in the game world blatantly being nonfunctional when they should be
-                                            (within reason) Unstarted minigames, etc excluded.</li>
-                                        <li>And so on. Please note again that bugs should only be reported for things
-                                            we've clearly already tried to implement.</li>
-                                    </ul>
+                                    I will be going over how to properly report a bug. <b>Do note that bug reports that are not well written out will be thrown out.</b>
+                                    It just wastes the Developers time having to work out all the other bits and pieces making the report useless. If a bug report is 
+                                    thrown out, it will not count as a report. <b>Exploiting the bug is a bannable offence.</b>
                                     <br>
                                     <br>
+                                    <ol>
+                                        <li> <b>Describe the bug : </b> We need to know exactly what is going on by telling us where the bug occured. <br>
+                                        <b>Example: </b> " During the What Lies Below quest, after the player tells Surok Magis, "Surok, your plans have been uncovered!" 
+                                        The player is taken to an instance with an intro cut scene and a missing outro cut scene. The outro cut scene should be one of Zaff confronting and 
+                                        preventing the escape of Surok Magis. Instead Zaff only gives his opening dialogue informing the player, "The king's mind has been restored to him and he has 
+                                        been teleported away to safety."</li>
+                                        <br>
+                                        <li> <b>Expected behavior: </b> In this section you will tell us what is supposed to happen instead of what did or did not. <br>
+                                        <b>Example: </b> After Zaff informs the player character that, "The king's mind has been restored to him and he has been teleported away to safety". 
+                                        This is followed up by Surok Magis Exclaiming, "No! All is lost! I must escape!". wherein Surok Magis attempts to flee using a teleport spell yet is stopped by Zaff, 
+                                        corrupting his teleport spell. </li>
+                                        <br>
+                                        <li> <b>Sources: </b> In this section you will provide sources to prove that the bug is an actual bug and the "expected behavior" is valid. You <b>must</b> provide links.<br>
+                                        <b>Example: </b> One video uploaded Mar. 21st, 2008 citing the intended quest game play and cut scenes,
+                                        https://youtu.be/33oi3gugkPo?t=378 Skipped to King Roald encounter for convenience.
+                                        <br>
+                                        <br>
+                                        See, my video displaying the potentially unintended quest game play and cut scenes. <br>
+                                        https://youtu.be/iNmTC0LK9U8
+                                        <br>
+                                        <br>
+                                        See also two quest guides: <br>
+                                        One last updated, July 25th, 2012 http://www.runeslayer.com/quests/what_lies_below/index.php <br>
+                                        Another last updated Feb. 21st 2012 https://web.archive.org/web/20120221232916/https://www.runehq.com/quest/what-lies-below </li>
+                                        <br>
+                                        <li> <b>Additional context: </b> In this last section you will list the npcs or items involved. You can use the bug-commands section on discord or you can turn on the debug in-game by using the command 
+                                            on this page : <a href="../../site/game_guide/the_commands.html">here</a> <br>
+                                        <b>Example: </b> 
+                                        <br>
+                                        King Roald (Npc ID, 5838)
+                                        <br>
+                                        Surok Magis (Npc ID, 5835)
+                                        <br>
+                                        Zaff (Npc ID, 5836)
+                                        <br>
+                                        Beacon Ring (Item ID, 11014) </li> 
+                                    </ol>
                                     <br>
                                     <br>
                                     <iframe
@@ -205,26 +202,26 @@ English
                                 </form>
                             </div>
                         </div>
+                        </div>
 </body>
 </div>
 <br class="clear" />
 </div>
 <div id="footer">
     <div class="contain">
-        <div class="footerdesc">
-            This website and its contents are copyright � under AGPL<br />
-            Use of this website is subject to our <a href="../../site/terms/terms.html">Terms &amp; Conditions</a> and
-            <a href="../../site/privacy/privacy.html">Privacy Policy</a>.
-        </div>
-        <a class="jagexlink" href="../../www.jagex.com/index.html" target="_blank">
-            <img src="../../site/img/main/layout/jagexc20a.png?12" alt="Jagex" />
-        </a>
-        <br class="clear" />
+      <div class="footerdesc">
+        Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
+        Use of our Game's source code is subject to our <a href="../../site/terms/terms.html">Terms &amp;
+          Conditions</a> and <a href="../../site/privacy/privacy.html">Privacy Policy</a>.<br />
+      </div>
+      <a class="jagexlink" href="" target="_blank">
+        <img src="./../../site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
+      </a>
+  
     </div>
-    <br class="clear" />
-</div>
-</div>
-</div>
+    
+  </div>
+  </div>
 
 
 <script type="text/javascript">
