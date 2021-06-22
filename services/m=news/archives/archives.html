@@ -1,0 +1,751 @@
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<!-- Mirrored from services/m=forum/sl=0/forums.ws?13,14 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:51:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<head>
+<link rel="icon" type="image/vnd.microsoft.icon" href="../../../site/favicon.ico">
+<link rel="SHORTCUT ICON" href="../../../site/favicon.ico">
+<link rel="apple-touch-icon" href="../../../site/img/mobile.png">
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Language" content="
+en, 
+English
+">
+<meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
+<meta name="description" content="A List of archives of old posts.">
+<meta name="title" content="2009scape - Archived News list">
+<title>2009scape - Archived News List</title>
+<style type="text/css">/*\*/@import url(../../../site/css/global-34.css);/**/</style>
+<script type="text/javascript" src="../../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
+<script type="text/javascript">
+$(function(){
+
+
+$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
+})
+</script>
+
+
+<link href="./../../../site/css/forum3-7.css" rel="stylesheet" type="text/css" media="all"/>
+<script type="text/javascript">//<![CDATA[
+ 
+
+
+
+
+
+function save_state_change(group,hidden) {
+ 
+ var groups = get_groups();
+ 
+ var gstring = "";
+ 
+ if (groups!=null) {
+  for (var i=0;i<groups.length;i++) {
+   if (group!=groups[i] && groups[i]!=-1) {
+    if (gstring.length>0) gstring += ",";
+    gstring += groups[i];
+   }
+  }
+ }
+ if (hidden) {
+  if (gstring.length>0) gstring += ",";
+  gstring += group;
+ }
+ 
+ if (gstring=="") gstring = "-1";
+ var expires=new Date();
+ expires.setDate(expires.getDate()+5000);
+ document.cookie = "g="+gstring+";expires="+expires.toGMTString();
+}
+
+
+function get_groups() {
+ var cookie=document.cookie;
+ if (document.cookie!=null) {
+  
+  var crumbs=cookie.split(";");
+  if (crumbs!=null) {
+   for (var i=0;i<crumbs.length;i++) {
+    pair = crumbs[i].split("=");
+    if (pair!=null && pair.length==2 && (pair[0]=="g" || pair[0]==" g")) {
+     
+     var gstring = pair[1];
+     return gstring.split(",");
+    }
+   }
+  }
+ }
+ return null;
+}
+
+var groups_to_hide = get_groups();
+
+function describe(what) {
+ a="";
+ for(part in what) a+=part + "=" + what[part] + "\n";
+ return a;
+}
+
+function replace_classname(node,oldclass,replacement) {
+ $(node).removeClass(oldclass).addClass(replacement);
+}
+
+var show_group = function() {}
+var hide_group = function() {}
+
+
+
+function showhide(show,group) {
+ var $table = $("#group"+group+" tr:not(:first), #group"+group+" tr:first td:not(:first)");
+ var $controls = $("#showhide"+group).unbind("click");
+ if(show){
+  $table.show();
+  $controls
+  .html("<span class='hidefgroup' title='Click to hide this forum group'></span>")
+  .click(function(){ return hide_group(group); });
+ }
+ else{
+  $table.hide();
+  $controls
+  .html("<span class='showfgroup' title='Click to show this forum group'></span>")
+  .click(function(){ return show_group(group); });
+ }
+ if($table.length + $controls.length > 3) return true; 
+ return false;
+}
+show_group = function(group) {
+ var success = showhide(true,group);
+ if (success) {
+  save_state_change(group,false);
+ }
+ return false;
+}
+hide_group = function(group) {
+ var success = showhide(false,group);
+ if (success) {
+  save_state_change(group,true);
+ }
+ return false;
+}
+function is_group_hidden(group) {
+ if (groups_to_hide!=null) {
+  for (var i=0;i<groups_to_hide.length;i++) {
+   if (groups_to_hide[i]==group) {
+    return true;
+   }
+  }
+ }
+ return false;
+}
+
+//]]></script>
+
+
+</head>
+<body id="navcommunity" class="bodyBackground">
+<a name="top"></a>
+
+<div id="scroll">
+  <div id="head">
+    <div id="headBg">
+      <div id="headOrangeTop"></div>
+      <img id="banner" src="" alt="RuneScape">
+
+      <!--SCRIPT: MONTHLY BANNER-->
+      <script type="text/javascript">
+        document.getElementById("banner").src = `../../../site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
+      </script>
+
+      <div id="headImage"><a href="" id="logo_select"></a>
+        <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
+      </div>
+      <div id="headOrangeBottom"></div>
+
+      <!-- End of Banner -->
+      <div id="menubox">
+        <ul id="menus">
+          <li class="top"><a href="./../../../index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
+      
+          <li class="top"><a id="play" class="tl"
+              href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar"
+              onclick="if(!this.j){this.href+='?j=1';this.j=true;}"><span class="ts">Play Now</span></a>
+          </li>
+      
+          <li class="top"><a id="community" class="tl" href="./../list.html"><span class="ts">Updates</span></a>
+           
+          </li>
+      
+          <li class="top"><a id="guide" class="tl" href="../../../site/game_guide/manual.html"><span class="ts">Game
+                Guide</span></a>
+            <ul>
+              <li><a href="../../../site/game_guide/manual.html" class="fly"><span>Browse the Game Guide</span></a></li>
+              <li><a href="../../../site/game_guide/credits.html" class="fly"><span>The Credit System</span></a>
+              <li><a href="../../../site/rules/rules.html" class="fly"><span>Our Rules</span></a></li>
+              <li><a href="../../../site/game_guide/about2009scape.html" class="fly"><span>About 2009scape</span></a></li>
+            </ul>
+          </li>
+          <li class="top"><a id="help" class="tl" href="../../../site/community/community.html"><span class="ts">Community</span></a>
+            <ul>
+              <li><a href="https://discord.com/invite/43YPGND" class="fly"><span>Discord Server</span> </a></li>
+              <li><a href="https://matrix.to/#/+2009scape:matrix.org" class="fly"><span>Matrix Server</span> </a></li>
+              <li><a href="../../m=hiscore/hiscores.html" class="fly"><span>World 1 Hiscores</span></a></li>
+              <li><a href="../../m=hiscore/hiscores.html?world=2" class="fly"><span>World 2 Hiscores</span></a></li>
+              <li><a href="../../../site/community/hall_of_fame.html" class="fly"><span>The Hall Of Fame</span></a>
+                <li><a href="../../../site/community/staff.html" class="fly"><span>Meet the Staff</span></a>
+              <li><a href="../../../site/community/contributors.html" class="fly"><span>To the Tributes!</span></a></li>
+              <li><a href="../../../site/classicapplet/playclassic.html" class="fly"><span>Play Classic</span></a>
+            </ul>
+          </li>
+      
+          <li class="top"><a id="help" class="tl" href="../../../site/help_hub.html"><span class="ts">Help</span></a>
+            <ul>
+              <li><a href="../../../site/faq.html" class="fly"><span>Frequently Asked Questions</span></a>
+              
+              <li><a href="../../m=bugtracker_v4/index.html" class="fly"><span>Submit a Bug Report</span></a>
+              </li>
+             
+            </ul>
+          </li>
+      
+          <li class="top"><a id="login" class="tl" href="https://github.com/2009scape" rel="noopener noreferrer" target="_blank"><span class="ts">Source Code</span></a>
+            <ul>
+              <li><li><a href="https://gitlab.com/2009scape/2009scape" rel="noopener noreferrer" target="_blank" class="fly"><span>Game Source Code</span></a></li>
+              <li><a href="https://github.com/2009scape/2009Scape.github.io" rel="noopener noreferrer" target="_blank" class="fly"><span>Website Source Code</span></a>
+            </ul>
+        </li>
+        </ul>
+        <br class="clear" />
+      </div>
+
+
+
+
+<div class="navigation">
+<div class="location">
+<b>Location: </b> <a href="../../index.html">Home</a>
+<span>Archives for 2009scape Legacy</span></a>
+</div>
+</div>
+</div></div>
+<div id="content">
+<div id="article">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque">
+<b>Updates</b>
+</h1>
+</div>
+</div>
+</div>
+<div class="section">
+<div class="brown_background">
+<div id="contrast_panel">
+<div id="infopane">
+  <!-- The New's & Update banner -->
+<span class="title"><img src="../../../site/2009scape-resources/img/game_guide/banners/archives.png" alt=""/></span>
+
+<ul class="flat">
+
+<li><br/>
+</li>
+</ul>
+</div>
+</div>
+<div id="nocontrols" class="phold"></div>
+
+</div>
+<div id="content_forum" class="border">
+<div class="bk"></div>
+<div class="cont">
+<table >
+<tr>
+<td class="title1 first-child">&nbsp;</td>
+<td id="header_posts" class="center title">Category</td>
+<td id="header_lastpost" class="title1">
+Post Date
+</td>
+</tr>
+<!-- When adding pages always add up not down.-->
+<tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./archived-polls.html"><b style="color:seashell">Old Discord Polls</b></a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Discord Polls
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>20-Jun-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+<tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-05-05.html">The Halt on Updates</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>05-May-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-04-08.html">April 8th Updates</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>08-Apr-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-04-04-2.html">A Magical Sweep!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>04-Apr-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-04-04.html">Happy Easter!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Community Post
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>04-Apr-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-03-23.html">Our First Official Community Events!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>23-Mar-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-03-21.html">Rolling the Credits</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>21-Mar-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-03-19.html">Random Events Rework</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>19-Mar-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-03-15.html">Buggy Madness</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>15-Mar-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-03-13.html">A Brand New way of Farming!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>11-Mar-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-02-22.html">A Collide of Two Worlds</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>22-Feb-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-02-02.html">Introducing a New layer of Bots</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Ceikry</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>01-Feb-2021</b>
+    <br/>Not Recorded
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-01-28.html">Part of the Lost Tribe</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Ceikry</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>28-Jan-2021</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-01-18.html">All Fired Up </a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Ceikry</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>18-Jan-2021</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2021-01-13.html">Quick Chat & More!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>13-Jan-2021</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-12-25.html">Merry Christmas!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Community Post
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>25-Dec-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-12-12.html">Hiscores Released</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Website Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>12-Dec-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="">December Update</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>11-Dec-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-12-02.html">Early December Update!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>02-Dec-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-11-29.html">Candybox</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Website Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>29-Nov-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-11-26.html">Happy Thanksgiving!</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Community Post
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>26-Nov-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-11-24.html">Barrows</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>24-Nov-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-11-22.html">Keldagrim</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Summer</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>22-Nov-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+    <td class="threadtitle">
+    <a class="sticky1" href="./2020-11-19-2.html">November Update Batch</a><br/>
+    <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+    </td>
+    <!-- Category the posts are in -->
+    <td class="n posts">
+    Game Updates
+    </td>
+    <!-- When the page was created -->
+    <td class="updated">
+    <b>19-Nov-2020</b>
+    <br/>Unknown
+    </ul>
+    </td>
+    </tr>
+    <tr class="thdnrml">
+        <td class="threadtitle">
+        <a class="sticky1" href="./2020-11-19.html">Website Created</a><br/>
+        <span class="nt">created by <span class="username"><img src="../../../site/img/forum/crown_gold.gif" height="8" width="10">Bracket</span></span>
+        </td>
+        <!-- Category the posts are in -->
+        <td class="n posts">
+        Website Updates
+        </td>
+        <!-- When the page was created -->
+        <td class="updated">
+        <b>19-Nov-2020</b>
+        <br/>Unknown
+        </ul>
+        </td>
+        </tr>
+
+</table>
+
+
+<div class="actions" id="bottom">
+<table>
+<tr>
+<td class="commands center">
+<ul class="flat first-child">
+<li class="first-child">
+<a href="../list.html"><img src="../../../site/2009scape-resources/img/icons/mini_game_updates.gif" alt=""/>Back to Current News List</a>
+</li>
+<li><a href="./archives.html"><img src="../../../site/2009scape-resources/img/icons/refresh.gif" alt=""/>Refresh Page</a></li>
+</ul>
+</td>
+</tr>
+</table>
+</div>
+</div>
+<br class="clear"/>
+</div>
+  <div class="navigation">
+    <div class="location">
+    <b>Location: </b> <a href="../../../index.html">Home</a>
+    <span class="divider">&gt;</span>
+    <span>Archives for 2009scape Legacy</span>
+    </div>
+    </div>
+    </div>
+</div>
+</div>
+<div id="footer">
+  <div class="contain">
+    <div class="footerdesc">
+      Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
+      Use of our Game's source code is subject to our <a href="./../../../site/terms/terms.html">Terms &amp;
+        Conditions</a> and <a href="./../../../site/privacy/privacy.html">Privacy Policy</a>.<br />
+    </div>
+    <a class="jagexlink" href="" target="_blank">
+      <img src="./../../../site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
+    </a>
+
+  </div>
+  
+</div>
+</div>
+
+
+<script type="text/javascript">
+  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
+  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+ </script>
+
+<script type="text/javascript">
+try {
+var _pageTracker=_gat._getTracker("UA-2058817-15");
+_pageTracker._setDomainName(".runescape.com");
+
+
+_pageTracker._trackPageview();
+}catch(x){}
+</script>
+<script type="text/javascript">
+try {
+var pageTracker=_gat._getTracker("UA-2058817-2");
+pageTracker._setDomainName(".runescape.com");
+
+
+pageTracker._trackPageview();
+}catch(x){}
+</script>
+
+
+</body>
+
+<!-- Mirrored from services/m=forum/sl=0/forums.ws?13,14 by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 09:51:42 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+</html>
