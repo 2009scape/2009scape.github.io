@@ -1,0 +1,230 @@
+HTTrack3.43-9+htsswf+htsjava launched on Sun, 18 Jul 2010 01:57:43 at http://site/title.ws +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv
+
+(winhttrack -qYC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2010], %s -->" -%l "en, en, *" -Y http://site/title.ws -O1 "C:\Documents and Settings\Administrator\Desktop\Runescape Website\Runescape Website FULL" +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar +*.gif +*.jpg +*.png +*.tif +*.bmp +*.zip +*.tar +*.tgz +*.gz +*.rar +*.z +*.exe +*.mov +*.mpg +*.mpeg +*.avi +*.asf +*.mp3 +*.mp2 +*.rm +*.wav +*.vob +*.qt +*.vid +*.ac3 +*.wma +*.wmv )
+
+
+
+Information, Warnings and Errors reported for this mirror:
+
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+
+	such as username/password authentication for websites mirrored in this project
+/secure/
+	do not share these files/folders if you want these information to remain private
+
+
+
+01:57:44	Info: 	engine: warning: entry cleaned up,/secure/ https://site/favicon.ico (C:/Documents and Settings/A/secure/unescape Website/Runescape Website FULL/site/favicon.ico)
+/secure//secure/
+01:58:26	Warning: 	File seems complete (same size)/secure/e read error: https://site/favic/secure/
+/secure//secure/
+01:58:29	Warning: 	File has moved from services/ro/secure/e/secure/
+
+01:58:29	Warning: 	File has moved from https://secure/robots.txt to http://site
+
+01:59:40	Warning: 	Link services/m=hiscore/hiscores.ws not scanned (follow robots meta tag)
+
+02:02:08	Warning: 	File has moved from www.jagexstore.com/ to /sunriseidcart/pc/home.asp
+
+02:02:08	Error: 	"Not found" (404) at link site/outgoing/www.jagexstore.com/ (from site/title.ws)
+
+02:02:08	Error: 	"Not found" (404) at link site/outgoing/www.jagexshop.com/ (from site/title.ws)
+
+02:02:29	Error: 	"Not found" (404) at link https://secure/bers/members.ws/version_B/ (from https://secure/m=webl/secure/s)
+
+02:03:24	Error: 	"Not found" (404) at link https://secure/.png (from https://secure/m=webl/secure/questhelp&ssl=0&expired=0&dest=index.ws)
+
+02:03:24	Error: 	"Not found" (404) at link https://secure/.png (from https://secure/m=webl/secure/questhelp&ssl=0&expired=0&dest=index.ws)
+
+02:03:24	Error: 	"Not found" (404) at link https://secure/ari.png?1 (from https://secure/m=webl/secure/questhelp&ssl=0&expired=0&dest=index.ws)
+
+02:03:24	Error: 	"Not found" (404) at link https://secure/png (from https://secure/m=webl/secure/questhelp&ssl=0&expired=0&dest=index.ws)
+
+02:08:07	Error: 	"Not found" (404) at link site/splash.ws/full_site/ (from site/splash.ws)
+
+02:08:07	Error: 	"Not found" (404) at link site/splash.ws/no_splash/ (from site/splash.ws)
+
+02:08:07	Error: 	"Not found" (404) at link site/splash.ws/play_game/splash/ (from site/splash.ws)
+
+02:08:07	Error: 	"Not found" (404) at link site/splash.ws/download_rs/ (from site/splash.ws)
+
+02:08:10	Error: 	"Not found" (404) at link site/img/main/splash/screen/ (from site/splash.ws)
+
+02:08:10	Error: 	"Not found" (404) at link site/splash.ws/show_download_rs/ (from site/splash.ws)
+/secure//secure/
+02:10:24	Error: 	"Not found" (404) at link https://secure/napplet.class (from https://site/log/secure/s?mod=accountappeal&dest=passwordchoice.ws)
+/secure//secure/
+02:11:15	Warning: 	Link services/m=hiscore/l=1/his/secure/follow robots meta tag)/secure/
+/secure//secure/
+02:13:00	Warning: 	Link services/m=hiscore/l=2/hiscores.ws not scanned (follow robots meta tag)
+
+02:14:42	Warning: 	Link services/m=hiscore/l=3/hiscores.ws not scanned (follow robots meta tag)
+/secure//secure/
+02:22:00	Error: 	"Not found" (404) at link site/img/kbase/article.gif (from site/kbase/guid/runescape_minigames)
+/secure//secure/
+02:47:04	Error: 	"Not found" (404) at link site/im/secure/ng (from services/m=itemdb_rs/top100/secure/
+/secure//secure/
+02:51:22	Error: 	"Not found" (404) at link site/l=/secure/ (from site/l=1/splash.ws)/secure/
+
+02:51:22	Error: 	"Not found" (404) at link site/l=/secure/ (from site/l=1/splash.ws)/secure/
+
+02:51:22	Error: 	"Not found" (404) at link site/l=/secure/splash/ (from site/l=1/splash.ws)/secure/
+/secure//secure/
+02:51:22	Error: 	"Not found" (404) at link site/l=/secure/s/ (from site/l=1/splash.ws)/secure/
+/secure//secure/
+02:51:23	Error: 	"Not found" (404) at link site/l=1/img/main/splash/screen/ (from site/l=1/splash.ws)
+
+02:51:24	Error: 	"Not found" (404) at link site/l=1/splash.ws/show_download_rs/ (from site/l=1/splash.ws)
+
+02:51:24	Error: 	"Not found" (404) at link site/l=2/splash.ws/full_site/ (from site/l=2/splash.ws)
+
+02:51:24	Error: 	"Not found" (404) at link site/l=2/splash.ws/no_splash/ (from site/l=2/splash.ws)
+
+02:51:24	Error: 	"Not found" (404) at link site/l=2/splash.ws/play_game/splash/ (from site/l=2/splash.ws)
+
+02:51:25	Error: 	"Not found" (404) at link site/l=2/splash.ws/download_rs/ (from site/l=2/splash.ws)
+
+02:51:26	Error: 	"Not found" (404) at link site/l=2/img/main/splash/screen/ (from site/l=2/splash.ws)
+
+02:51:26	Error: 	"Not found" (404) at link site/l=2/splash.ws/show_download_rs/ (from site/l=2/splash.ws)
+
+02:51:26	Error: 	"Not found" (404) at link site/l=3/splash.ws/full_site/ (from site/l=3/splash.ws)
+
+02:51:26	Error: 	"Not found" (404) at link site/l=3/splash.ws/no_splash/ (from site/l=3/splash.ws)
+
+02:51:27	Error: 	"Not found" (404) at link site/l=3/splash.ws/play_game/splash/ (from site/l=3/splash.ws)
+
+02:51:27	Error: 	"Not found" (404) at link site/l=3/splash.ws/download_rs/ (from site/l=3/splash.ws)
+
+02:51:28	Error: 	"Not found" (404) at link site/l=3/img/main/splash/screen/ (from site/l=3/splash.ws)
+
+02:51:28	Error: 	"Not found" (404) at link site/l=3/splash.ws/show_download_rs/ (from site/l=3/splash.ws)
+
+03:21:24	Error: 	"Not found" (404) at link www.jagex.com/corporate/Parents_Guide/favicon.ico (from www.jagex.com/corporate/Parents_Guide/parents_guide.ws)
+
+03:21:52	Error: 	"Not found" (404) at link www.jagex.com/corporate/Commercial_Alliances/advertisers.ws (from www.jagex.com/corporate/Parents_Guide/parents_guide.ws)
+
+03:22:38	Error: 	"Not found" (404) at link https://secure//members/members.ws/version_B/ (from https://secure/m=webl/secure/rs.ws)
+
+03:23:46	Error: 	"Not found" (404) at link https://secure//ie7.png (from https://secure/m=webl/secure/mod=questhelp&ssl=0&expired=0&dest=index.ws)
+
+03:23:46	Error: 	"Not found" (404) at link https://secure//ie8.png (from https://secure/m=webl/secure/mod=questhelp&ssl=0&expired=0&dest=index.ws)
+
+03:23:46	Error: 	"Not found" (404) at link https://secure//safari.png?1 (from https://secure/m=webl/secure/mod=questhelp&ssl=0&expired=0&dest=index.ws)
+
+03:23:46	Error: 	"Not found" (404) at link https://secure//ff.png (from https://secure/m=webl/secure/mod=questhelp&ssl=0&expired=0&dest=index.ws)
+
+03:31:03	Error: 	"Not found" (404) at link https://site/l=1/loginapplet/loginapplet.class (from https://site/l=1/loginapplet/loginapplet.ws?mod=accountappeal&dest=passwordchoice.ws)
+
+03:31:39	Warning: 	File has moved from services/m=devblog/l=1/ to http://services/m=devblog/
+
+03:31:55	Error: 	"Not found" (404) at link site/outgoing/www.jagexstore.com/l=1/ (from site/l=1/shop_de.ws)
+
+03:32:43	Error: 	"Not found" (404) at link https://secure//members/members.ws/version_B/ (from https://secure/m=webl/secure/rs.ws)
+
+03:37:38	Error: 	"Not found" (404) at link https://site/l=2/loginapplet/loginapplet.class (from https://site/l=2/loginapplet/loginapplet.ws?mod=accountappeal&dest=passwordchoice.ws)
+
+03:37:38	Error: 	"Not found" (404) at link https://secure//ie7.png (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:37:38	Error: 	"Not found" (404) at link https://secure//ie8.png (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:37:38	Error: 	"Not found" (404) at link https://secure//safari.png?1 (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:37:38	Error: 	"Not found" (404) at link https://secure//ff.png (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:38:10	Warning: 	File has moved from services/m=devblog/l=2/ to http://services/m=devblog/
+
+03:39:38	Error: 	"Not found" (404) at link https://secure//members/members.ws/version_B/ (from https://secure/m=webl/secure/rs.ws)
+
+03:46:16	Error: 	"Not found" (404) at link https://site/l=3/loginapplet/loginapplet.class (from https://site/l=3/loginapplet/loginapplet.ws?mod=accountappeal&dest=passwordchoice.ws)
+
+03:46:16	Error: 	"Not found" (404) at link https://secure//ie7.png (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:46:16	Error: 	"Not found" (404) at link https://secure//ie8.png (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:46:16	Error: 	"Not found" (404) at link https://secure//safari.png?1 (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:46:16	Error: 	"Not found" (404) at link https://secure//ff.png (from https://secure/m=webl/secure/mod=offence-appeal&ssl=1&expired=0&dest=index.ws)
+
+03:46:40	Warning: 	File has moved from services/m=devblog/l=3/ to http://services/m=devblog/
+
+03:49:33	Error: 	"Not found" (404) at link services/m=news/www.addthis.com/ (from s7.addthis.com/js/200/addthis_widget.js)
+
+03:49:33	Error: 	"Not found" (404) at link services/m=news/static/r07/sh20.html (from s7.addthis.com/js/200/addthis_widget.js)
+
+03:49:33	Error: 	"Not found" (404) at link services/m=news/static/r05/feed00.gif (from s7.addthis.com/js/200/addthis_widget.js)
+
+03:49:33	Error: 	"Not found" (404) at link services/m=news/static/r07/menu57.js (from s7.addthis.com/js/200/addthis_widget.js)
+
+03:53:02	Error: 	"Not found" (404) at link www.funorb.com/css/multi_level-files/privacy_0.gif (from www.funorb.com/css/global-40.css)
+
+03:53:41	Error: 	"Not found" (404) at link https://www.funorb.com/loginapplet/loginapplet.class (from https://www.funorb.com/loginapplet/loginapplet.ws?mod=accountappeal&dest=lockchoice.ws)
+
+03:54:49	Error: 	"Not found" (404) at link www.jagex.com/l=0/corporate/Parents_Guide/favicon.ico (from www.jagex.com/l=0/corporate/Parents_Guide/parents_guide.ws)
+
+03:54:51	Error: 	"Not found" (404) at link www.jagex.com/img/jgs/global/barShade_ie6.png?0 (from www.jagex.com/css/jgs/global-8.css)
+
+03:54:51	Error: 	"Not found" (404) at link www.jagex.com/css/jgs/article-0.css (from www.jagex.com/kbase/guid/Customer_Support)
+
+03:55:00	Error: 	"Not found" (404) at link www.jagex.com/loginapplet/loginapplet.class (from www.jagex.com/loginapplet/loginapplet.ws?mod=accountappeal&dest=passwordchoice.ws)
+
+03:55:05	Error: 	"Not found" (404) at link www.jagex.com/info.ws (from www.jagex.com/?list=2&page=1&news=0)
+
+03:55:05	Error: 	"Not found" (404) at link www.jagex.com/games/.jpg?2 (from www.jagex.com/?list=2&page=1&news=0)
+
+03:55:05	Error: 	"Not found" (404) at link www.jagex.com/play.ws (from www.jagex.com/?list=2&page=1&news=0)
+
+03:55:20	Error: 	"Not found" (404) at link www.jagex.com/corporate/favicon.ico (from www.jagex.com/corporate/)
+
+03:55:27	Error: 	"Not found" (404) at link site/img/main/kbase/menu_icons/inventory_control1.gif (from site/kbase/guid/controls_the_basics)
+
+03:55:38	Error: 	"Not found" (404) at link site/img/main/kbase/weapons/melee/godwars/saradomin_sword.gif (from site/kbase/guid/controls_the_grand_exchange)
+
+03:57:37	Error: 	"Not found" (404) at link site/img/main/kbase/article.gif (from site/kbase/guid/dungeoneering)
+
+03:59:29	Error: 	"Not found" (404) at link site/img/main/kbase/menu_icons/friend_list_control.gif (from site/kbase/guid/the_fishing_trawler)
+
+09:35:51	Error: 	"Not found" (404) at link site/img/questhelp/smallscroll_spacer.gif (from site/kbase/guid/postbag_29)
+
+09:35:51	Error: 	"Not found" (404) at link site/img/newsletter/postbag/25/board1.jpg (from site/kbase/guid/postbag_25)
+
+09:35:51	Error: 	"Not found" (404) at link site/img/main/kbase/postbag/22/24_2.gif (from site/kbase/guid/postbag22)
+
+09:35:51	Error: 	"Not found" (404) at link site/img/kbase/scroll_spacer.gif (from site/kbase/guid/postbag16)
+
+09:35:51	Error: 	"Not found" (404) at link site/img/kbase/menu_icons/friend_list_control_2.gif (from site/kbase/guid/postbag9)
+
+09:35:51	Error: 	"Not found" (404) at link site/img/kbase/menu_icons/ignore_list_control_2.gif (from site/kbase/guid/postbag9)
+
+09:37:01	Error: 	"Not found" (404) at link site/worldmap/worldmap.ws (from site/kbase/guid/letters14)
+
+09:40:33	Error: 	"Not found" (404) at link www.jagex.com/corporate/About/favicon.ico (from www.jagex.com/corporate/About/today.ws)
+
+09:40:33	Error: 	"Not found" (404) at link www.jagex.com/corporate/Press/favicon.ico (from www.jagex.com/corporate/Press/imageAssets.ws)
+
+09:40:34	Error: 	"Not found" (404) at link www.jagex.com/corporate/Advertisers/favicon.ico (from www.jagex.com/corporate/Advertisers/general.ws)
+
+09:40:34	Error: 	"Not found" (404) at link www.jagex.com/corporate/Contact/favicon.ico (from www.jagex.com/corporate/Contact/contact.ws)
+
+09:40:35	Error: 	"Not found" (404) at link www.jagex.com/corporate/Giving_Back/favicon.ico (from www.jagex.com/corporate/Giving_Back/environment.ws)
+
+09:40:35	Error: 	"Not found" (404) at link www.jagex.com/l=1/corporate/Parents_Guide/favicon.ico (from www.jagex.com/l=1/corporate/Parents_Guide/parents_guide.ws)
+
+09:40:40	Error: 	"Not found" (404) at link www.jagex.com/l=2/corporate/Parents_Guide/favicon.ico (from www.jagex.com/l=2/corporate/Parents_Guide/parents_guide.ws)
+
+09:40:45	Error: 	"Not found" (404) at link www.jagex.com/l=3/corporate/Parents_Guide/favicon.ico (from www.jagex.com/l=3/corporate/Parents_Guide/parents_guide.ws)
+
+09:40:56	Error: 	"Not found" (404) at link www.jagex.com/www.jagex.com/outgoing/www.iwf.org.uk/ (from www.jagex.com/corporate/Parents_Guide/iwf_info.ws)
+
+09:40:56	Error: 	"Not found" (404) at link https://site/l=1/img/create/check_highlight.png (from https://site/l=1/css/create3-16.css)
+
+09:42:40	Error: 	"Not found" (404) at link site/l=1/img/kbase/article.gif (from site/l=1/kbase/guid/runescape_minigames)
+
+10:11:53	Error: 	"Not found" (404) at link site/l=1/img/itemdb/button_back.png (from services/m=itemdb_rs/l=1/top100.ws?list=2&scale=0)
+
+
+
+Too many URLs, giving up..(>100000)
+
+To avoid that: use #L option for more links (example: -#L1000000)
+
