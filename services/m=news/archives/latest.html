@@ -1,12 +1,15 @@
 ---
+layout: newspost
+title: Lastest
 ---
-<!-- Redirect to latest news post -->
+<!-- Mirror latest news post -->
 {% assign sorted = site.pages | orderby: 'date' %}
+{% assign flag = true %}
 {% for page in sorted %}
   {% for tag in page.tags %}
-    {% if tag == "news" %}
-        <meta http-equiv="refresh" content="0; URL={{ page.url | prepend: site.baseurl }}" />
-        {% break %}
+    {% if tag == "news" and flag %}
+        {{page.content}}
+        {% assign flag = false %}
     {% endif %}
   {% endfor %}
 {% endfor %}
