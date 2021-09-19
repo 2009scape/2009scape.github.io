@@ -1,34 +1,7 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-<!-- Mirrored from site/classicapplet/playclassic.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:59:48 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
-<head>
-<link rel="icon" type="image/vnd.microsoft.icon" href="../favicon.ico">
-<link rel="SHORTCUT ICON" href="../favicon.ico">
-<link rel="apple-touch-icon" href="../img/mobile.png">
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta http-equiv="Content-Language" content="
-en, 
-English
-">
-<meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool  2009scape, Classic, zezima">
-<meta name="description" content="Check out our sister project : Runescape Classic">
-<meta name="title" content="OpenRSC - Open Source Runescape Classic">
-<title>OpenRSC - Open Source Runescape Classic</title>
-<style type="text/css">/*\*/@import url(../css/global-34.css);/**/</style>
-<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
-<script type="text/javascript">
-$(function(){
-
-
-$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
-})
-</script>
-
-
+---
+title: OpenRSC - Open Source Runescape Classic
+layout: default
+---
 <style type="text/css">
   .buttons_play {
    width: 500px;
@@ -168,212 +141,53 @@ $("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1";
   }
 
  </style>
-<script type="text/javascript">
-$(function(){
-
-
-  $(".play").each(function(){
-   this.href += "&j=1";
-  });
-
-  var $screens = $(".screen");
-  var $target = $("#bigScreen");
-  var img = function(i, thumb){ return "http://site/img/main/classicapplet/screen" + i + (thumb?"_thumb":"") + ".jpg"; }
-
-  var current = 0;
-  var numScreenShots = $screens.length;
-
-  $screens.each(function(i){
-
-   if(i != current){
-    var preload = new Image();
-    preload.src = img(i);
-   }
-
-   $screens.slice(current,current+1).addClass("selected");
-
-   $(this).click(function(){
-    if(i > numScreenShots - 1 || i < 0){
-     return false;
-    }
-    $screens.removeClass("selected").slice(i,i+1).addClass("selected");
-    $target.attr("src", img(i,false));
-    current = i;
-    return false;
-   });
-
-  });
-
- })
-</script>
-
-</head>
-<body id="navcommunity" class="bodyBackground">
-  <a name="top"></a>
-  
-  <div id="scroll">
-    <div id="head">
-      <div id="headBg">
-        <div id="headOrangeTop"></div>
-        <img id="banner" src="" alt="RuneScape">
-  
-        <!--SCRIPT: MONTHLY BANNER-->
-        <script type="text/javascript">
-          document.getElementById("banner").src = `./../../site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
-        </script>
-  
-        <div id="headImage"><a href="" id="logo_select"></a>
-          <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
-        </div>
-        <div id="headOrangeBottom"></div>
-  
-        <!-- End of Banner -->
-  <div id="menubox">
-    <ul id="menus">
-      <li class="top"><a href="./../../index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
-  
-      <li class="top"><a id="play" class="tl"
-        href="http://play.2009scape.org/wiki/doku.php?id=start"><span class="ts">Wiki</span></a>
-    </li>
-  
-      <li class="top"><a id="play" class="tl" href="../../services/m=news/archives/archives.html"><span class="ts">Updates</span></a>
-        <ul>
-        <li><a href="../../services/m=news/archives/archive.html" class="fly"><span>Legacy Updates</span></a></li>
-        <li><a href="../../services/m=news/list.html" class="fly"><span>2.009 Updates</span></a></li>
-      </ul>
-      </li>
-  
-      <li class="top"><a id="guide" class="tl" href="./../game-guide/gettingstarted/mainhub.html"><span class="ts">Game
-            Guide</span></a>
-        <ul>
-          <li><a href="./../game-guide/gettingstarted/mainhub.html" class="fly"><span>Browse the Game Guide</span></a></li>
-          <li><a href="#" class="fly"><span>The Credit System</span></a>
-          <li><a href="./../../site/rules/rules.html" class="fly"><span>Our Rules</span></a></li>
-          <li><a href="./../../404.html" class="fly"><span>About 2009scape</span></a></li>
-        </ul>
-      </li>
-      <li class="top"><a id="community" class="tl" href="././../../404.html"><span class="ts">Community</span></a>
-        <ul>
-          <li><a href="https://discord.com/invite/43YPGND" class="fly"><span>Discord Server</span> </a></li>
-          <li><a href="./services/m=hiscore/hiscores.html?world=2" class="fly"><span>Legacy Hiscores</span></a></li>
-          
-          <li><a href="#" class="fly"><span>The Hall Of Fame</span></a>
-            <li><a href="./../community/staff.html" class="fly"><span>Meet the Staff</span></a>
-          <li><a href="./../../404.html" class="fly"><span>To the Tributes!</span></a></li>
-          <li><a href="./playclassic.html" class="fly"><span>Play Classic</span></a>
-        </ul>
-      </li>
-  
-      <li class="top"><a id="help" class="tl" href="./../../404.html"><span class="ts">Help</span></a>
-        <ul>
-          <li><a href="#" class="fly"><span>Frequently Asked Questions</span></a>
-          
-        </ul>
-      </li>
-  
-      <li class="top"><a id="login" class="tl"
-        href="https://github.com/2009scape/2009Scape/releases/latest/download/2009Scape.jar"
-        onclick="if(!this.j){this.href+='?j=1';this.j=true;}"><span class="ts">Play Now</span></a>
-    </li>
-    </ul>
-    <br class="clear" />
-  </div>
 <div id="content">
-<div id="article">
-<div class="sectionHeader">
-<div class="left">
-<div class="right">
-<h1 class="plaque">
-Open RuneScape Classic
-</h1>
-</div>
-</div>
-</div>
-<div class="section">
-<div class="brown_background">
-<div id="intro">
-<ul>
-<li>Take advantage of the forever free version of Runescape Classic.</li>
-<li>Ever heard your clan mates talk about the "old days" and wonder what they were really like? Find out!</li>
-<li>Be part of the nostalgia - try glorious three hit combat!</li>
-<li>See what the old "Wildy" was really like.</li>
-<li>Defeat Elvarg all over again... OLDSKOOL!</li>
-</ul>
-<div id="screens">
-<img id="bigScreen" src="../2009scape-resources/img/classic/alphatest.png" width="300" height="200" alt="" />
-<a href="../img/main/classicapplet/screen0.jpg" target="_blank" id="screen0" class="screen"><img src="../img/main/classicapplet/screen0_thumb.jpg" alt="" /></a>
-<a href="../img/main/classicapplet/screen1.jpg" target="_blank" id="screen1" class="screen"><img src="../img/main/classicapplet/screen1_thumb.jpg" alt="" /></a>
-<a href="../img/main/classicapplet/screen2.jpg" target="_blank" id="screen2" class="screen"><img src="../img/main/classicapplet/screen2_thumb.jpg" alt="" /></a>
-</div>
-<a href="https://runescapeclassic.dev/download" id="playBig" class="play HoverImg">
-<img src="../img/main/classicapplet/playBig.png" alt="Play Now" />
-</a>
-<p id="members">Please note: We our not the developers of OpenRsc, 
-<br> please make sure you read and follow their 
-<a href="https://runescapeclassic.dev/faq" target="_blank" rel="noopener noreferrer">rules</a> before going over there.</p>
-</div>
-<div class="inner_brown_background">
-<div style="margin-bottom:0px;" class="brown_box">
-<div class="subsectionHeader">Play RuneScape Classic</div>
-<div style="text-align:center" class="inner_brown_box">
-<b>Extra links and Images of Open RSC below</b>
-<ul>
-  
- <li>Check out their really cool full of QoL feature Client <a href="https://rsc.plus/" target="_blank" rel="noopener noreferrer">RSC+</a></td></li>
- <li>Click the icon to enter their discord :  <a href="https://discord.com/invite/mTBXvu2"><img src="./../2009scape-resources/img/icons/brand-discord.svg" width="20" height="20"></a></td></li>
-</ul>
-<br>
-</td>
-</tr></table><br>
-</div>
-</div> </div> </div> </div> </div>
-</div>
-<br class="clear"/>
-</div>
-<div id="footer">
-  <div class="contain">
-    <div class="footerdesc">
-      Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
-      Use of this website is subject to our <a href="./site/terms/terms.html">Terms &amp;
-        Conditions</a> and <a href="./site/privacy/privacy.html">Privacy Policy</a>.<br />
-    </div>
-    <a class="jagexlink" href="" target="_blank">
-      <img src="./../../site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
-    </a>
-
+  <div id="article">
+  <div class="sectionHeader">
+  <div class="left">
+  <div class="right">
+  <h1 class="plaque">
+  Open RuneScape Classic
+  </h1>
   </div>
+  </div>
+  </div>
+  <div class="section">
+  <div class="brown_background">
+  <div id="intro">
+  <ul>
+  <li>Take advantage of the forever free version of Runescape Classic.</li>
+  <li>Ever heard your clan mates talk about the "old days" and wonder what they were really like? Find out!</li>
+  <li>Be part of the nostalgia - try glorious three hit combat!</li>
+  <li>See what the old "Wildy" was really like.</li>
+  <li>Defeat Elvarg all over again... OLDSKOOL!</li>
+  </ul>
+  <div id="screens">
+  <img id="bigScreen" src="../2009scape-resources/img/classic/alphatest.png" width="300" height="200" alt="">
+  <a href="../img/main/classicapplet/screen0.jpg" target="_blank" id="screen0" class="screen"><img src="../img/main/classicapplet/screen0_thumb.jpg" alt=""></a>
+  <a href="../img/main/classicapplet/screen1.jpg" target="_blank" id="screen1" class="screen"><img src="../img/main/classicapplet/screen1_thumb.jpg" alt=""></a>
+  <a href="../img/main/classicapplet/screen2.jpg" target="_blank" id="screen2" class="screen"><img src="../img/main/classicapplet/screen2_thumb.jpg" alt=""></a>
+  </div>
+  <a href="https://runescapeclassic.dev/download" id="playBig" class="play HoverImg">
+  <img src="../img/main/classicapplet/playBig.png" alt="Play Now">
+  </a>
+  <p id="members">Please note: We our not the developers of OpenRsc, 
+  <br> please make sure you read and follow their 
+  <a href="https://runescapeclassic.dev/faq" target="_blank" rel="noopener noreferrer">rules</a> before going over there.</p>
+  </div>
+  <div class="inner_brown_background">
+  <div style="margin-bottom:0px;" class="brown_box">
+  <div class="subsectionHeader">Play RuneScape Classic</div>
+  <div style="text-align:center" class="inner_brown_box">
+  <b>Extra links and Images of Open RSC below</b>
+  <ul>
+    
+   <li>Check out their really cool full of QoL feature Client <a href="https://rsc.plus/" target="_blank" rel="noopener noreferrer">RSC+</a></li>
+   <li>Click the icon to enter their discord :  <a href="https://discord.com/invite/mTBXvu2"><img src="./../2009scape-resources/img/icons/brand-discord.svg" width="20" height="20"></a></li>
+  </ul>
+  <br>
   
-</div>
-</div>
-
-
-<script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
-  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
- </script>
-
-<script type="text/javascript">
-try {
-var _pageTracker=_gat._getTracker("UA-2058817-15");
-_pageTracker._setDomainName(".runescape.com");
-
-
-_pageTracker._trackPageview();
-}catch(x){}
-</script>
-<script type="text/javascript">
-try {
-var pageTracker=_gat._getTracker("UA-2058817-2");
-pageTracker._setDomainName(".runescape.com");
-
-
-pageTracker._trackPageview();
-}catch(x){}
-</script>
-
-
-</body>
-
-<!-- Mirrored from site/classicapplet/playclassic.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 10:59:49 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
-</html>
+  <br>
+  </div>
+  </div> </div> </div> </div> </div>
+  </div>
