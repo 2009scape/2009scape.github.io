@@ -1,382 +1,122 @@
-
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-<!-- Mirrored from services/m=forum/forums.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 08:59:07 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
-<head>
-<link rel="icon" type="image/vnd.microsoft.icon" href="../../site/favicon.ico">
-<link rel="SHORTCUT ICON" href="../../site/favicon.ico">
-<link rel="apple-touch-icon" href="../../site/img/mobile.png">
-
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-<meta http-equiv="Content-Language" content="
-en, 
-English
-">
-<meta name="keywords" content="RSPS, Open Source, 2009scape, rs2, Runescape 2, Runescape, zezima">
-<meta name="description" content="A Forums Like Archive and information center">
-<meta name="title" content="2009scape - Information Hub">
-<title>2009scape - Information Hub</title>
-<style type="text/css">/*\*/@import url(../../site/css/global-34.css);/**/</style>
-<script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_4_2.js"></script>
-<script type="text/javascript">
-$(function(){
-
-
-$("#play, #playExisting, #playBannerNoad").each(function(){ this.href += "?j=1"; })
-})
-</script>
-
-
-<link href="../../site/css/forum3-7.css" rel="stylesheet" type="text/css" media="all"/>
-<script type="text/javascript">//<![CDATA[
- 
-
-
-
-
-
-function save_state_change(group,hidden) {
- 
- var groups = get_groups();
- 
- var gstring = "";
- 
- if (groups!=null) {
-  for (var i=0;i<groups.length;i++) {
-   if (group!=groups[i] && groups[i]!=-1) {
-    if (gstring.length>0) gstring += ",";
-    gstring += groups[i];
-   }
-  }
- }
- if (hidden) {
-  if (gstring.length>0) gstring += ",";
-  gstring += group;
- }
- 
- if (gstring=="") gstring = "-1";
- var expires=new Date();
- expires.setDate(expires.getDate()+5000);
- document.cookie = "g="+gstring+";expires="+expires.toGMTString();
-}
-
-
-function get_groups() {
- var cookie=document.cookie;
- if (document.cookie!=null) {
-  
-  var crumbs=cookie.split(";");
-  if (crumbs!=null) {
-   for (var i=0;i<crumbs.length;i++) {
-    pair = crumbs[i].split("=");
-    if (pair!=null && pair.length==2 && (pair[0]=="g" || pair[0]==" g")) {
-     
-     var gstring = pair[1];
-     return gstring.split(",");
-    }
-   }
-  }
- }
- return null;
-}
-
-var groups_to_hide = get_groups();
-
-function describe(what) {
- a="";
- for(part in what) a+=part + "=" + what[part] + "\n";
- return a;
-}
-
-function replace_classname(node,oldclass,replacement) {
- $(node).removeClass(oldclass).addClass(replacement);
-}
-
-var show_group = function() {}
-var hide_group = function() {}
-
-
-
-function showhide(show,group) {
- var $table = $("#group"+group+" tr:not(:first), #group"+group+" tr:first td:not(:first)");
- var $controls = $("#showhide"+group).unbind("click");
- if(show){
-  $table.show();
-  $controls
-  .html("<span class='hidefgroup' title='Click to hide this forum group'></span>")
-  .click(function(){ return hide_group(group); });
- }
- else{
-  $table.hide();
-  $controls
-  .html("<span class='showfgroup' title='Click to show this forum group'></span>")
-  .click(function(){ return show_group(group); });
- }
- if($table.length + $controls.length > 3) return true; 
- return false;
-}
-show_group = function(group) {
- var success = showhide(true,group);
- if (success) {
-  save_state_change(group,false);
- }
- return false;
-}
-hide_group = function(group) {
- var success = showhide(false,group);
- if (success) {
-  save_state_change(group,true);
- }
- return false;
-}
-function is_group_hidden(group) {
- if (groups_to_hide!=null) {
-  for (var i=0;i<groups_to_hide.length;i++) {
-   if (groups_to_hide[i]==group) {
-    return true;
-   }
-  }
- }
- return false;
-}
-
-//]]></script>
-
-
-</head>
-<body id="navcommunity" class="bodyBackground">
-<a name="top"></a>
-
-
-
-<div id="scroll">
-  <div id="head">
-    <div id="headBg">
-      <div id="headOrangeTop"></div>
-      <img id="banner" src="" alt="RuneScape">
-
-      <!--SCRIPT: MONTHLY BANNER-->
-      <script type="text/javascript">
-        document.getElementById("banner").src = `../../site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
-      </script>
-
-      <div id="headImage"><a href="" id="logo_select"></a>
-        <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
-      </div>
-      <div id="headOrangeBottom"></div>
-
-      <!-- End of Banner -->
-      <div id="menubox">
-        <ul id="menus">
-          <li class="top"><a href="./../../index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
-      
-          <li class="top"><a id="play" class="tl"
-            href="../../site/wiki/wiki_hub.html"><span class="ts">Wiki</span></a>
-        </li>
-      
-          <li class="top"><a id="guide" class="tl" href="./archives/archives.html"><span class="ts">Updates</span></a>
-            <ul>
-              <li><a href="../m=news/archives/archives.html" class="fly"><span>Legacy Updates</span></a></li>
-              <li><a href="../m=news/list.html" class="fly"><span>Preservation Updates</span></a></li>
-             </ul>
-          </li>
-      
-          <li class="top"><a id="guide" class="tl" href="../../site/game_guide/manual.html"><span class="ts">Game
-                Guide</span></a>
-            <ul>
-              <li><a href="../../site/game_guide/manual.html" class="fly"><span>Browse the Game Guide</span></a></li>
-              <li><a href="../../site/game_guide/credits.html" class="fly"><span>The Credit System</span></a>
-              <li><a href="../../site/rules/rules.html" class="fly"><span>Our Rules</span></a></li>
-              <li><a href="../../site/game_guide/about2009scape.html" class="fly"><span>About 2009scape</span></a></li>
-            </ul>
-          </li>
-          <li class="top"><a id="help" class="tl" href="../../site/community/community.html"><span class="ts">Community</span></a>
-            <ul>
-              <li><a href="https://discord.com/invite/43YPGND" class="fly"><span>Discord Server</span> </a></li>
-              <li><a href="https://matrix.to/#/#09scape-general:matrix.org" class="fly"><span>Matrix Server</span> </a></li>
-              <li><a href="../m=hiscore/hiscores.html?world=2" class="fly"><span>Legacy Hiscores</span></a></li>
-              <li><a href="../../site/community/hall_of_fame.html" class="fly"><span>The Hall Of Fame</span></a>
-                <li><a href="../../site/community/staff.html" class="fly"><span>Meet the Staff</span></a>
-              <li><a href="../../site/community/contributors.html" class="fly"><span>To the Tributes!</span></a></li>
-              <li><a href="../../site/classicapplet/playclassic.html" class="fly"><span>Play Classic</span></a>
-            </ul>
-          </li>
-      
-          <li class="top"><a id="community" class="tl" href="../../site/help_hub.html"><span class="ts">Help</span></a>
-            <ul>
-              <li><a href="./forums.html" class="fly"><span>Information Center</span></a>
-              <li><a href="../../site/faq.html" class="fly"><span>Frequently Asked Questions</span></a>
-              
-              
-             
-            </ul>
-          </li>
-      
-          <li class="top"><a id="login" class="tl" href="https://github.com/2009scape" rel="noopener noreferrer" target="_blank"><span class="ts">Source Code</span></a>
-            <ul>
-              <li><li><a href="https://gitlab.com/2009scape/2009scape" rel="noopener noreferrer" target="_blank" class="fly"><span>Game Source Code</span></a></li>
-              <li><a href="https://github.com/2009scape/2009Scape.github.io" rel="noopener noreferrer" target="_blank" class="fly"><span>Website Source Code</span></a>
-            </ul>
-        </li>
-        </ul>
-        <br class="clear" />
-      </div>
-
-
-<div class="navigation">
-<div class="location">
-<b>Location: </b> <a href="../../site/title.html">Home</a> &gt;
-<span><span>2009scape Information Center</span></span>
-
-</div>
-</div>
-</div></div>
+---
+title: Information Hub
+tags: archive
+layout: newspost
+---
 <div id="content">
-<div id="article">
-<div class="sectionHeader">
-<div class="left">
-<div class="right">
-<h1 class="plaque">
-2009scape Information Center
-</h1>
+   <div id="article">
+      <div class="sectionHeader">
+         <div class="left">
+            <div class="right">
+               <h1 class="plaque">
+                  2009scape Information Center
+               </h1>
+            </div>
+         </div>
+      </div>
+      <div class="section">
+         <div class="brown_background">
+            <div id="contrast_panel" class="noborder">
+               <div id="infopane" class="non_sd_only">
+                  <span class="title">2009scape Information Center</span>
+                  <div class="about">
+                     <ul class="flat">
+                        <li><img src="../../site/img/forum/cmdicons/code_of_conduct.gif" alt=""> <a href="../../site/rules/rules.html">Code of Conduct</a></li>
+                        <li><br>
+                           <span class="count">
+                           </span>
+                        </li>
+                     </ul>
+                  </div>
+               </div>
+               <div id="nocontrols" class="phold"></div>
+               <div id="contentfrm">
+                  <div class="brown_box_forum brown_box_stack">
+                     <table id="group3" class="group ">
+                        <tbody>
+                           <tr>
+                              <td class="groupname" colspan="2">
+                                 <div id="showhide3" class="showhide">&nbsp;</div>
+                                 <div class="groupname">Official - Official announcements from 2009scape Squad </div>
+                              </td>
+                              <td class="threads title n">Threads</td>
+                              <td class="posts title n">Posts</td>
+                              <td class="lastpost title">Last Post</td>
+                           </tr>
+                           <tr class="s">
+                              <td></td>
+                           </tr>
+                           <tr class="f">
+                            <td class="i"><a href="/site/help/faq.html"><img src="../../site/img/forum/icons/web_feedback_2.gif" alt=""></a></td>
+                            <td class="h"><span class="t"><a href="/site/help/faq.html">Frequently Asked Questions</td>
+                            <td class="n">1</td>
+                            <td class="n">1</td>
+                            <td class="r u">Not Recorded</td>
+                         </tr>
+                         <tr class="s">
+                            <td></td>
+                         </tr>
+                           <tr class="f">
+                              <td class="i"><a href="../m=news/archives/archives.html"><img src="../../site/img/forum/icons/news_announcements_2.gif" alt=""></a></td>
+                              <td class="h"><span class="t"><a href="../m=news/archives/archives.html">News &amp; Announcements</a></span><br>Read the latest news &amp; announcements.</td>
+                              <td class="n">
+                                {% assign counter = 0 %}
+                                {% for page in site.pages %}
+                                  {% for tag in page.tags %}
+                                    {% if tag == "news" %}
+                                      {% assign counter = counter | plus:1 %}
+                                    {% endif %}
+                                  {% endfor %}
+                                {% endfor %}
+                                {{counter}}
+                              </td>
+                              <td class="n">{{counter}}</td>
+                              <td class="r u">Not Recorded</td>
+                           </tr>
+                           <tr class="s">
+                              <td></td>
+                           </tr>
+                           <tr class="f">
+                              <td class="i"><a href="../m=news/launcher.html"><img src="../../site/img/forum/icons/tech_support_2.gif" alt=""></a></td>
+                              <td class="h"><span class="t"><a href="../m=news/launcher.html">Launcher Updates</a></span><br>The place for all our Launcher's Updates</td>
+                              <td class="n"></td>
+                              <td class="n"></td>
+                              <td class="r u">Not Recorded</td>
+                           </tr>
+                           <tr class="s">
+                              <td></td>
+                           </tr>
+                           <tr class="f">
+                              <td class="i"><a href="/site/community/hall_of_fame.html"><img src="../../site/img/forum/icons/Character.jpg" alt=""></a></td>
+                              <td class="h"><span class="t"><a href="/site/community/hall_of_fame.html">Archived 2009Scape Hiscores</a></td>
+                              <td class="n">1</td>
+                              <td class="n">1</td>
+                              <td class="r u">Not Recorded</td>
+                           </tr>
+                           <tr class="s">
+                            <td></td>
+                           </tr>
+                           <tr class="f">
+                            <td class="i"><a href="./directory.html"><img src="../../site/img/forum/icons/summoning.gif" alt=""></a></td>
+                            <td class="h"><span class="t"><a href="./directory.html">Archived Web Pages</a></span><br>A list of different web pages that were archived.</td>
+                            <td class="n"></td>
+                            <td class="n"></td>
+                            <td class="r u">Not Recorded</td>
+                         </tr>
+                        </tbody>
+                     </table>
+                  </div>
+                  <div class="brown_box" style="margin-bottom: 5px;"><div class="inner_brown_box">
+                    <div class="helptext">
+                    <div class="helptitle"><b>Important Information</b></div>
+                    This entire website is getting a massive overhaul and this page will change. If you need any help at all ask a staff member either on our 
+                    <a href="https://discord.gg/43YPGND">Discord</a> or if you do not prefer discord check out our <a href="https://matrix.to/#/#09scape-general:matrix.org">Matrix</a>!
+                    </div>
+                    </div></div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+   <br class="clear">
 </div>
-</div>
-</div>
-<div class="section">
-<div class="brown_background">
-<div id="picker">
-
-</div>
-<div id="contrast_panel" class="noborder">
-<div id="infopane" class="non_sd_only">
-<span class="title">2009scape Information Center</span>
-<div class="about">
-<ul class="flat">
-<li><img src="../../site/img/forum/cmdicons/code_of_conduct.gif" alt=""/> <a href="../../site/rules/rules.html">Code of Conduct</a></li>
-
-<li><br/>
-<span class="count">
-
-
-</span>
-</li>
-</ul>
-</div>
-</div>
-<div id="nocontrols" class="phold"></div>
-
-
-<div id="contentfrm">
-
-
-<div class="brown_box_forum brown_box_stack"><table id="group3" class="group "><tr><td class="groupname" colspan="2"><div id="showhide3" class="showhide">&nbsp;</div><div class="groupname">Official - Official announcements from 2009scape Squad </div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="../m=news/archives/archives.html"><img src="../../site/img/forum/icons/news_announcements_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="../m=news/archives/archives.html">News &amp; Announcements</a></span><br/>Read the latest news &amp; announcements.</td><td class="n">29</td><td class="n">29</td><td class="r u">26-Jul-2021 18:49:41</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="../m=news/archives/archives.html"><img src="../../site/img/forum/icons/off_topic_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="../m=news/archives/archives.html">Website Updates</a></span><br/>Read the Website Updates.</td><td class="n">29</td><td class="n">29</td><td class="r u">26-Jul-2021 18:49:41</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="../m=news/launcher.html"><img src="../../site/img/forum/icons/Jl_icon.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="../m=news/launcher.html">Launcher Updates</a></span><br/>The place for all our Launcher's Updates</td><td class="n">7</td><td class="n">3,302</td><td class="r u">26-Jul-2021 09:18:38</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="../../site/archives/archived.html"><img src="../../site/img/forum/icons/Jl_icon.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="../../site/archives/archived.html">Archived Web Pages</a></span><br/>A list of different web pages that were archived.</td><td class="n">1</td><td class="n">3,302</td><td class="r u">15-Sept-2021 00:18:38</td></tr></table></div>
-<script type="text/javascript">
-   showhide(!is_group_hidden(3),3);
-  </script>
-<!--<div class="brown_box_forum brown_box_stack"><table id="group19" class="group "><tr><td class="groupname" colspan="2"><div id="showhide19" class="showhide">&nbsp;</div><div class="groupname">Help from Jagex or your fellow players</div></td><td class="threads title n">Threads</td><td class="posts title n">Posts</td><td class="lastpost title">Last Post</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?103,104"><img src="../../site/img/forum/icons/contact_us.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?103,104">Contact Us</a></span><br/>How to contact Jagex or get help with a problem</td><td class="n">21</td><td class="n">58,882</td><td class="r u">18-Jul-2010 09:56:51</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?25,26"><img src="../../site/img/forum/icons/tech_support_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?25,26">Tech Support</a></span><br/>Ask other players for technical help</td><td class="n">200,256</td><td class="n">1,320,408</td><td class="r u">18-Jul-2010 09:57:00</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?250,251"><img src="../../site/img/forum/icons/green_cross.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?250,251">Account Help</a></span><br/>Get account advice from other players</td><td class="n">2,955</td><td class="n">21,560</td><td class="r u">18-Jul-2010 09:28:05</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?20,21"><img src="../../site/img/forum/icons/quest.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?20,21">Quests</a></span><br/>Discuss quests and swap hints here - No spoilers though!</td><td class="n">927,208</td><td class="n">5,499,563</td><td class="r u">18-Jul-2010 09:45:57</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?21,22"><img src="../../site/img/forum/icons/clue_scrolls_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?21,22">Clue Scrolls</a></span><br/>Get help with your clue scroll here</td><td class="n">451,534</td><td class="n">2,430,976</td><td class="r u">18-Jul-2010 09:16:59</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?154,155"><img src="../../site/img/forum/icons/skills_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?154,155">Skills</a></span><br/>For help with particular skills</td><td class="n">13,903</td><td class="n">110,446</td><td class="r u">18-Jul-2010 09:53:32</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?17,18"><img src="../../site/img/forum/icons/item_discussion_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?17,18">Items</a></span><br/>Discuss items and prices - No trading here!</td><td class="n">1,148,498</td><td class="n">6,738,388</td><td class="r u">18-Jul-2010 09:56:08</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?19,20"><img src="../../site/img/forum/icons/monsters_2.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?19,20">Monsters</a></span><br/>Talk about Monsters, NPCs and Random Events</td><td class="n">330,093</td><td class="n">3,236,503</td><td class="r u">18-Jul-2010 09:54:31</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?71,72"><img src="../../site/img/forum/icons/ach_diary.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?71,72">Achievement Diaries</a></span><br/>Discuss diary tasks here!</td><td class="n">5,891</td><td class="n">30,546</td><td class="r u">18-Jul-2010 01:39:14</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?75,76"><img src="../../site/img/forum/icons/diversions.gif" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?75,76">Distractions and Diversions</a></span><br/>Discuss these rewarding regular events here</td><td class="n">8,869</td><td class="n">233,013</td><td class="r u">18-Jul-2010 09:54:33</td></tr>
-<tr class="s"><td></td></tr><tr class="f"><td class="i"><a href="sl%3d6/forums.html?98,99"><img src="../../site/img/forum/icons/Guides.jpg" alt=""/></a></td><td class="h"><span class="t"><a href="sl%3d6/forums.html?98,99">Guides</a></span><br/>The place for all player written game related guides </td><td class="n">8,399</td><td class="n">241,394</td><td class="r u">18-Jul-2010 09:31:05</td></tr></table></div>
-<script type="text/javascript">
-   showhide(!is_group_hidden(19),19);
-  </script>-->
-
-
-<!--[if IE]>
-<style type="text/css">#communitySelectionBar select{border:none !important;background:#F8F1E7 !important;padding:0;margin-top:3px;color:black;}.threeColumnLayout #column1{width:210px;}.threeColumnLayout #communitySelectDropDown{width:292px;}.threeColumnLayout #activeCommunityMessage{width:200px;}</style>
-<![endif]-->
-<script type="text/javascript">
-
-function commSelect(){var opt = $("#communitySelectionDropDown").val();var $selected = $("#community"+opt);var c = [2,3,5];if ($selected.length > 0) {for(var i in c){$("#community"+c[i]).addClass("invisibleCmSection");$("#cmMessage"+c[i]).addClass("cmMessage hideCommunityMessage");}$selected.attr({className:"visibleCmSection"});$("#cmMessage"+opt).attr({className:"cmMessage showCommunityMessage"});}}
-
-
-</script>
-
-</div>
-</div>
-</div>
-</div>
-</div>
-<br class="clear"/>
-</div>
-<div class="navigation">
-<div class="location">
-<b>Location: </b> <a href="../../site/title.html">Home</a> &gt;
-<span><span>2009scape Information Center</span></span>
-
-</div>
-</div>
-<script type="text/javascript">
-
-
-
- 
- 
-var m=(document.cookie+"").match(/cid=([0-9+])/);if(m&&m.length==2){$("#communitySelectionDropDown option[value="+m[1]+"]").attr("selected",true);commSelect();}
-
-commSelect=(function(){var f=commSelect;return function(){f();
-var id = $("#communitySelectionDropDown").val();var d=new Date();d.setTime(d.getTime()+4838400000);document.cookie="cid="+id+";expires="+d.toUTCString()+";path=/";
-}})();
-
-</script>
-<div id="footer">
-  <div class="contain">
-    <div class="footerdesc">
-      Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
-      Use of our Game's Source code is subject to our <a href="./site/terms/terms.html">Terms &amp;
-        Conditions</a> and <a href="../../../site/privacy/privacy.html">Privacy Policy</a>.<br />
-    </div>
-    <a class="jagexlink" href="" target="_blank">
-      <img src="./../../site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
-    </a>
-
-  </div>
-  
-</div>
-</div>
-
-
-<script type="text/javascript">
-  var gaJsHost = (("https:" == document.location.protocol)?"https://ssl.":"http://www.");
-  document.write(unescape("%3Cscript src='"+gaJsHost+"google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
- </script>
-
-<script type="text/javascript">
-try {
-var _pageTracker=_gat._getTracker("UA-2058817-15");
-_pageTracker._setDomainName(".runescape.com");
-
-
-_pageTracker._trackPageview();
-}catch(x){}
-</script>
-<script type="text/javascript">
-try {
-var pageTracker=_gat._getTracker("UA-2058817-2");
-pageTracker._setDomainName(".runescape.com");
-
-
-pageTracker._trackPageview();
-}catch(x){}
-</script>
-
-
-</body>
-
-<!-- Mirrored from services/m=forum/forums.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 08:59:40 GMT -->
-<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
-</html>
