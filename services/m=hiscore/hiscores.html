@@ -1,704 +1,479 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
-
-<!-- Mirrored from services/m=hiscore/hiscores.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 08:59:40 GMT -->
-<!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
-
-<head>
-  <link rel="icon" type="image/vnd.microsoft.icon" href="../../site/favicon.ico">
-  <link rel="SHORTCUT ICON" href="../../site/favicon.ico">
-  <link rel="apple-touch-icon" href="../../site/img/mobile.png">
-
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta http-equiv="Content-Language" content="
-en, 
-English
-">
-  <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
-  <meta name="description"
-    content="2009scape - Bringing back the game from 2009 you love. Multiplayer and Free forever.">
-  <meta name="title" content="2009scape - Free Forever - Hiscores">
-  <title>2009scape - Free Forever - Hiscores</title>
-  <style type="text/css">
-    /*\*/
-    @import url(../../site/css/global-34.css);
-    /**/
-  </style>
-
-  <script type="text/javascript" src="../../www.jagex.com/js/jquery/jquery_1_3_2.js"></script>
-  <script type="text/javascript">
-    $(function () {
-
-
-      $("#play, #playExisting, #playBannerNoad").each(function () { this.href += "?j=1"; })
-    })
-  </script>
-
-  <style type="text/css">
-    /*\*/
-    @import url(../../site/css/hiscores-17.css);
-    /**/
-  
-
-.bodyBackgroundHeadAdvert{
-        background-image: url("../../site/img/2009img/main/skins/default/bg.jpg");
-        background-repeat: repeat-y;
-     
-        
-
-}
- .bodyBackground{
-    background-image: url("../../site/img/2009img/main/skins/default/bg.jpg");
-        background-repeat: repeat-y;
- }
-
-
-
-
-
-    
-  </style>
-
-  <meta name="ROBOTS" content="NOFOLLOW">
-
-</head>
-
-<body id="navcommunity" class="bodyBackground">
-  <a name="top"></a>
-
-  <div id="scroll">
-    <div id="head">
-      <div id="headBg">
-        <div id="headOrangeTop"></div>
-        <img id="banner" src="" alt="RuneScape">
-  
-        <!--SCRIPT: MONTHLY BANNER-->
-        <script type="text/javascript">
-          document.getElementById("banner").src = `../../site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
-        </script>
-  
-        <div id="headImage"><a href="" id="logo_select"></a>
-          <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape</div>
-        </div>
-        <div id="headOrangeBottom"></div>
-  
-        <!-- End of Banner -->
-        <div id="menubox">
-          <ul id="menus">
-            <li class="top"><a href="./../../index.html" id="home" class="tl"><span class="ts">Home</span></a></li>
-        
-         <li class="top"><a id="play" class="tl"
-              href="../../site/wiki/wiki_hub.html"><span class="ts">Wiki</span></a>
-          </li>
-      
-         <li class="top"><a id="play" class="tl" href="../m=news/list.html"><span class="ts">Updates</span></a>
-            <ul>
-            <li><a href="../m=news/archives/archives.html" class="fly"><span>Legacy Updates</span></a></li>
-            <li><a href="../m=news/list.html" class="fly"><span>2.009 Updates</span></a></li>
-          </ul>
-          </li>
-        
-            <li class="top"><a id="guide" class="tl" href="../../site/game_guide/manual.html"><span class="ts">Game
-                  Guide</span></a>
-              <ul>
-                <li><a href="../../site/game_guide/manual.html" class="fly"><span>Browse the Game Guide</span></a></li>
-                <li><a href="../../site/game_guide/credits.html" class="fly"><span>The Credit System</span></a>
-                <li><a href="../../site/rules/rules.html" class="fly"><span>Our Rules</span></a></li>
-                <li><a href="../../site/game_guide/about2009scape.html" class="fly"><span>About 2009scape</span></a></li>
-              </ul>
-            </li>
-            <li class="top"><a id="help" class="tl" href="../../site/community/community.html"><span class="ts">Community</span></a>
-              <ul>
-                <li><a href="https://discord.com/invite/43YPGND" class="fly"><span>Discord Server</span> </a></li>
-                <li><a href="https://matrix.to/#/#09scape-general:matrix.org" class="fly"><span>Matrix Server</span> </a></li>
-                <li><a href="../m=hiscore/hiscores.html?world=2" class="fly"><span>Legacy Hiscores</span></a></li>
-                <li><a href="../../site/community/hall_of_fame.html" class="fly"><span>The Hall Of Fame</span></a>
-                  <li><a href="../../site/community/staff.html" class="fly"><span>Meet the Staff</span></a>
-                <li><a href="../../site/community/contributors.html" class="fly"><span>To the Tributes!</span></a></li>
-                <li><a href="../../site/classicapplet/playclassic.html" class="fly"><span>Play Classic</span></a>
-              </ul>
-            </li>
-        
-            <li class="top"><a id="help" class="tl" href="../../site/help_hub.html"><span class="ts">Help</span></a>
-              <ul>
-                <li><a href="../../site/faq.html" class="fly"><span>Frequently Asked Questions</span></a>
-                
-                
-               
-              </ul>
-            </li>
-        
-            <li class="top"><a id="login" class="tl" href="https://github.com/2009scape" rel="noopener noreferrer" target="_blank"><span class="ts">Source Code</span></a>
-              <ul>
-                <li><li><a href="https://gitlab.com/2009scape/2009scape" rel="noopener noreferrer" target="_blank" class="fly"><span>Game Source Code</span></a></li>
-                <li><a href="https://github.com/2009scape/2009Scape.github.io" rel="noopener noreferrer" target="_blank" class="fly"><span>Website Source Code</span></a>
-              </ul>
-          </li>
-          </ul>
-          <br class="clear" />
-        </div>
-  
-
-        <div class="navigation">
-          <div class="location">
-            <b>Location: </b> <a href="../../index.html">Home</a> &gt;
-            Hiscores
-          </div>
-        </div>
-      </div>
-    </div>
-    <div id="content">
-      <div id="article">
-        <div class="sectionHeader">
-          <div class="left">
-            <div class="right">
+---
+title: Hiscores
+tag: highscores
+layout: hiscore
+---
+<div id="content">
+  <div id="article">
+     <div class="sectionHeader">
+        <div class="left">
+           <div class="right">
               <h1 class="plaque">
-                <span id="worldplaqueid"></span>
+                 <span id="worldplaqueid"></span>
               </h1>
-            </div>
-          </div>
+           </div>
         </div>
-        <div class="section">
-          <!--[if lt IE 6]>
-<style type="text/css">
- #skillsList_back {
-  width: 173px;
- }
- #skillsList ul li a:hover {
-  height: 19px;
- }
- #skillsList ul li a {
-  height: 19px;
- }
- #playerList_back {
-  width: 381px;
- }
- .table_back tr {
-  color: #f9deb3;
- }
- .table_back th {
-  color: white;
- }
- .table_back {
-  text-align: center;
- }
- #PlayerSkill_back {
-  width: 363px;
- }
- #mini_player, #skill_player {
-  width: 353px;
- }
- #scores_head {
-  padding-top: 5px;
- }
- #compare_header {
-  padding-top: 6px;
- }
-</style>
-<![endif]-->
-          <div class="brown_background">
-            <div id="hiscores_background" class="inner_brown_background">
+     </div>
+     <div class="section">
+        <div class="brown_background">
+           <div id="hiscores_background" class="inner_brown_background">
               <div id="skillsList_back" class="brown_box">
-                <div class="subsectionHeader">Skills</div>
-                <div id="skillsList">
-                  <ul>
-                    <li style="background-color:#4c350a">
-                      <a href="./hiscores.html" class="   Overall    ico">
-                        Overall
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=0" class="   Attack    ico">
-
-                        Attack
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=1" class="   Defence    ico">
-
-                        Defence
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=2" class="   Strength    ico">
-
-                        Strength
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=3" class="   Constitution    ico">
-
-                        Constitution
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=4" class="   Ranged    ico">
-
-                        Ranged
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=5" class="   Prayer    ico">
-
-                        Prayer
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=6" class="   Magic    ico">
-
-                        Magic
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=7" class="   Cooking    ico">
-
-                        Cooking
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=8" class="   Woodcutting    ico">
-
-                        Woodcutting
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=9" class="   Fletching    ico">
-
-                        Fletching
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=10" class="   Fishing    ico">
-
-                        Fishing
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=11" class="   Firemaking    ico">
-
-                        Firemaking
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=12" class="   Crafting    ico">
-
-                        Crafting
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=13" class="   Smithing    ico">
-
-                        Smithing
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=14" class="   Mining    ico">
-
-                        Mining
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=15" class="   Herblore    ico">
-
-                        Herblore
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=16" class="   Agility    ico">
-
-                        Agility
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=17" class="   Thieving    ico">
-
-                        Thieving
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=18" class="   Slayer    ico">
-
-                        Slayer
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=19" class="   Farming    ico">
-
-                        Farming
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=20" class="   Runecrafting    ico">
-
-                        Runecrafting
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=21" class="   Hunter    ico">
-
-                        Hunter
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=22" class="   Construction    ico">
-
-                        Construction
-                      </a>
-                    </li>
-                    <li>
-                      <a href="./hiscores.html?skill=23" class="   Summoning    ico">
-
-                        Summoning
-                      </a>
-                    </li>
-                  </ul>
-                </div>
+                 <div class="subsectionHeader">Skills</div>
+                 <div id="skillsList">
+                    <ul>
+                       <li style="background-color:#4c350a">
+                          <a href="./hiscores.html" class="   Overall    ico">
+                          Overall
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=0" class="   Attack    ico">
+                          Attack
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=1" class="   Defence    ico">
+                          Defence
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=2" class="   Strength    ico">
+                          Strength
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=3" class="   Constitution    ico">
+                          Constitution
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=4" class="   Ranged    ico">
+                          Ranged
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=5" class="   Prayer    ico">
+                          Prayer
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=6" class="   Magic    ico">
+                          Magic
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=7" class="   Cooking    ico">
+                          Cooking
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=8" class="   Woodcutting    ico">
+                          Woodcutting
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=9" class="   Fletching    ico">
+                          Fletching
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=10" class="   Fishing    ico">
+                          Fishing
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=11" class="   Firemaking    ico">
+                          Firemaking
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=12" class="   Crafting    ico">
+                          Crafting
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=13" class="   Smithing    ico">
+                          Smithing
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=14" class="   Mining    ico">
+                          Mining
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=15" class="   Herblore    ico">
+                          Herblore
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=16" class="   Agility    ico">
+                          Agility
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=17" class="   Thieving    ico">
+                          Thieving
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=18" class="   Slayer    ico">
+                          Slayer
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=19" class="   Farming    ico">
+                          Farming
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=20" class="   Runecrafting    ico">
+                          Runecrafting
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=21" class="   Hunter    ico">
+                          Hunter
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=22" class="   Construction    ico">
+                          Construction
+                          </a>
+                       </li>
+                       <li>
+                          <a href="./hiscores.html?skill=23" class="   Summoning    ico">
+                          Summoning
+                          </a>
+                       </li>
+                    </ul>
+                 </div>
               </div>
               <div id="modeSelect_back" class="brown_box">
-                <div class="buttons">
-                  <a id="button-left" href="./hiscores.html">
+                 <div class="buttons">
+                    <a id="button-left" href="./hiscores.html">
                     <span class="lev1a"></span>
                     Skills
-                  </a>
-                  <a id="button-right" href="./activity.html">
+                    </a>
+                    <a id="button-right" href="./activity.html">
                     <span class="lev1"></span>
                     Activities
-                  </a>
-                </div>
+                    </a>
+                 </div>
               </div>
               <div id="playerList_back" class="brown_box">
-                <div id="scores_head" class="subsectionHeader" style="padding: 0px;">
-                  <img id="scores_head_icon" style="margin-top: 3px;" class="miniimg_list" id="image_caption"
-                    src="../../site/img/hiscores/skill_icon_overall1eccb.gif" alt="Skill Icon">
-                  <span id="scores_head_skill">Overall</span>
-                  Hiscores
-                </div>
-                <table class="table_back">
-                  <tbody id="hiscores_table">
+                 <div id="scores_head" class="subsectionHeader" style="padding: 0px;">
+                    <img id="scores_head_icon" style="margin-top: 3px;" class="miniimg_list" id="image_caption"
+                       src="../../site/img/hiscores/skill_icon_overall1eccb.gif" alt="Skill Icon">
+                    <span id="scores_head_skill">Overall</span>
+                    Hiscores
+                 </div>
+                 <table class="table_back">
+                    <tbody id="hiscores_table">
                     <thead>
-                      <tr class="table_header">
-                        <th class="rankHead">Rank</th>
-                        <th class="nameHead">Name</th>
-                        <th class="levelHead">Level</th>
-                        <th class="xpHead">XP</th>
-                      </tr>
+                       <tr class="table_header">
+                          <th class="rankHead">Rank</th>
+                          <th class="nameHead">Name</th>
+                          <th class="levelHead">Level</th>
+                          <th class="xpHead">XP</th>
+                       </tr>
                     </thead>
                     <tr class="row row1">
-                      <td class="rankCol">1</td>
-                      <td class="alL"><a href="./hiscores.html"></a>Loading..</td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">1</td>
+                       <td class="alL"><a href="./hiscores.html"></a>Loading..</td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row2">
-                      <td class="rankCol">2</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">2</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row3">
-                      <td class="rankCol">3</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">3</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row4">
-                      <td class="rankCol">4</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">4</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row5">
-                      <td class="rankCol">5</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">5</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row6">
-                      <td class="rankCol">6</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">6</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row7">
-                      <td class="rankCol">7</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">7</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row8">
-                      <td class="rankCol">8</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">8</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row9">
-                      <td class="rankCol">9</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">9</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row10">
-                      <td class="rankCol">10</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">10</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row11">
-                      <td class="rankCol">11</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">11</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row12">
-                      <td class="rankCol">12</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">12</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row13">
-                      <td class="rankCol">13</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">13</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row14">
-                      <td class="rankCol">14</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">14</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row15">
-                      <td class="rankCol">15</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">15</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row16">
-                      <td class="rankCol">16</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">16</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row17">
-                      <td class="rankCol">17</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">17</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row18">
-                      <td class="rankCol">18</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">18</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row19">
-                      <td class="rankCol">19</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">19</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row20">
-                      <td class="rankCol">20</td>
-                      <td class="alL"><a href="./hiscores.html"></a>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">20</td>
+                       <td class="alL"><a href="./hiscores.html"></a>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row21">
-                      <td class="rankCol">21</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">21</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row22">
-                      <td class="rankCol">22</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">22</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row23">
-                      <td class="rankCol">22</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">22</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
                     <tr class="row row24" id="lastRow">
-                      <td class="rankCol">22</td>
-                      <td class="alL"><a href="./hiscores.html"></a></td>
-                      </td>
-                      <td class="alL">0</td>
-                      <td class="alL">0</td>
+                       <td class="rankCol">22</td>
+                       <td class="alL"><a href="./hiscores.html"></a></td>
+                       </td>
+                       <td class="alL">0</td>
+                       <td class="alL">0</td>
                     </tr>
-                  </tbody>
-                </table>
-                <div class="arrow_header"></div>
-                <div class="arrow_back">
-                  <div class="buttons_arrows">
-                    <a id="button-up" href="./hiscores.html">
-                      <span class="lev1_arrow"></span>
-                      U
-                    </a>
-                    <a id="button-down" href="./hiscores.html">
-                      <span class="lev1_arrow"></span>
-                      D
-                    </a>
-                  </div>
-                </div>
+                    </tbody>
+                 </table>
+                 <div class="arrow_header"></div>
+                 <div class="arrow_back">
+                    <div class="buttons_arrows">
+                       <a id="button-up" href="./hiscores.html">
+                       <span class="lev1_arrow"></span>
+                       U
+                       </a>
+                       <a id="button-down" href="./hiscores.html">
+                       <span class="lev1_arrow"></span>
+                       D
+                       </a>
+                    </div>
+                 </div>
               </div>
               <div id="search_back" class="brown_box">
-                <div class="subsectionHeader search_title">Search by Name</div>
-                <div class="search_small">
-                  <form action="./hiscores.html" method="post" class="no_margin">
-                    <input id="search_name" class="textinput text" maxlength="12" type="text" name="user1" value="">
-                    <input id="search_button" type="submit" name="submit" class="buttonmedium" value="Search">
-                  </form>
-                </div>
-                <div class="subsectionHeader search_title">Search by rank</div>
-                <div class="search_small">
-                  <form action="./hiscores.html" method="post" class="no_margin">
-                    <input id="search_rank" class="textinput text" maxlength="12" type="text" name="rank" value="">
-                    <input type="hidden" name="table" value="0">
-                    <input type="hidden" name="category_type" value="0">
-                    <input id="search_rank_submit" type="submit" name="submit" class="buttonmedium" value="Search">
-                  </form>
-                </div>
-                <div class="subsectionHeader search_title">Filter</div>
-                <div id="filter_div" class="search_tiny_bit_more_large" style="height: 110px;">
-                  <form action="./hiscores.html" method="post" class="no_margin">
-                    <div id="remember">
-                      <label for="rem">
-                        <table class="center" style="margin: 0 auto; padding-top: 6px; padding-bottom: 12px;">
-                          <tr>
-                            <td>
-                              <span style="white-space: nowrap;">
-                                <img src="../../site/img/osrsimg/ironman.png" style="height: 11px; padding-right: 30px;">
-                                <label class="control control-checkbox">
-                                  <input type="checkbox" name="check_iron" id="check_iron" value="1" class="checkbox"
-                                    style="pointer-events: none;" />
-                                  <div class="control_indicator"></div>
-                                </label>
-                              </span>
-                            </td>
-                            <td>
-                              <span style="white-space: nowrap;">
-                                <img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px; padding-right: 25px;">
-                                <label class="control control-checkbox">
-                                  <input type="checkbox" name="check_ultiron" id="check_ultiron" value="1" class="checkbox"
-                                    style="pointer-events: none;" />
-                                  <div class="control_indicator"></div>
-                                </label>
-                              </span>
-                            </td>
-                            <td>
-                              <span style="white-space: nowrap;">
-                                <img src="../../site/img/osrsimg/hcim.png" style="height: 11px; padding-right: 25px;">
-                                <label class="control control-checkbox">
-                                  <input type="checkbox" name="check_hciron" id="check_hciron" value="1" class="checkbox"
-                                    style="pointer-events: none;" />
-                                  <div class="control_indicator"></div>
-                                </label>
-                              </span>
-                            </td>
+                 <div class="subsectionHeader search_title">Search by Name</div>
+                 <div class="search_small">
+                    <form action="./hiscores.html" method="post" class="no_margin">
+                       <input id="search_name" class="textinput text" maxlength="12" type="text" name="user1" value="">
+                       <input id="search_button" type="submit" name="submit" class="buttonmedium" value="Search">
+                    </form>
+                 </div>
+                 <div class="subsectionHeader search_title">Search by rank</div>
+                 <div class="search_small">
+                    <form action="./hiscores.html" method="post" class="no_margin">
+                       <input id="search_rank" class="textinput text" maxlength="12" type="text" name="rank" value="">
+                       <input type="hidden" name="table" value="0">
+                       <input type="hidden" name="category_type" value="0">
+                       <input id="search_rank_submit" type="submit" name="submit" class="buttonmedium" value="Search">
+                    </form>
+                 </div>
+                 <div class="subsectionHeader search_title">Filter</div>
+                 <div id="filter_div" class="search_tiny_bit_more_large" style="height: 110px;">
+                    <form action="./hiscores.html" method="post" class="no_margin">
+                       <div id="remember">
+                          <label for="rem">
+                             <table class="center" style="margin: 0 auto; padding-top: 6px; padding-bottom: 12px;">
+                                <tr>
+                                   <td>
+                                      <span style="white-space: nowrap;">
+                                         <img src="../../site/img/osrsimg/ironman.png" style="height: 11px; padding-right: 30px;">
+                          <label class="control control-checkbox">
+                          <input type="checkbox" name="check_iron" id="check_iron" value="1" class="checkbox"
+                             style="pointer-events: none;" />
+                          <div class="control_indicator"></div>
+                          </label>
+                          </span>
+                          </td>
+                          <td>
+                          <span style="white-space: nowrap;">
+                          <img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px; padding-right: 25px;">
+                          <label class="control control-checkbox">
+                          <input type="checkbox" name="check_ultiron" id="check_ultiron" value="1" class="checkbox"
+                             style="pointer-events: none;" />
+                          <div class="control_indicator"></div>
+                          </label>
+                          </span>
+                          </td>
+                          <td>
+                          <span style="white-space: nowrap;">
+                          <img src="../../site/img/osrsimg/hcim.png" style="height: 11px; padding-right: 25px;">
+                          <label class="control control-checkbox">
+                          <input type="checkbox" name="check_hciron" id="check_hciron" value="1" class="checkbox"
+                             style="pointer-events: none;" />
+                          <div class="control_indicator"></div>
+                          </label>
+                          </span>
+                          </td>
                           </tr>
-                        </table>
-                        <table class="center" style="margin: 0 auto;">
-                          <tr>
-                            <td>
-                              <input class="nonBlueInputSlider" id="maxXP" type="range" min="1" max="20" value="20"
-                                step="0.5"
-                                oninput="this.nextElementSibling.nextElementSibling.value = this.value % 1 != 0 ? this.value : this.value + '.0'">
-                              <br>
-                              Max XP Rate: <output id="maxXPoutput">20</output>
-                            </td>
-                          </tr>
-                        </table>
-                      </label>
+                          </table>
+                          <table class="center" style="margin: 0 auto;">
+                             <tr>
+                                <td>
+                                   <input class="nonBlueInputSlider" id="maxXP" type="range" min="1" max="20" value="20"
+                                      step="0.5"
+                                      oninput="this.nextElementSibling.nextElementSibling.value = this.value % 1 != 0 ? this.value : this.value + '.0'">
+                                   <br>
+                                   Max XP Rate: <output id="maxXPoutput">20</output>
+                                </td>
+                             </tr>
+                          </table>
+                          </label>
+                       </div>
+                       <input id="filter_submit" type="submit" name="submit" class="buttonmedium" value="Filter"
+                          style="margin-top: 2px;">
+                       <div id="filter_clear_div">
+                       </div>
+                    </form>
+                 </div>
+                 <div class="subsectionHeader search_title">Legend</div>
+                 <div class="search_custom_large" id="friends_search">
+                    <div class="friendsContent" style="padding-top: 8px;">
+                       <img src="../../site/img/osrsimg/ironman.png" style="height: 11px;"> Ironman
+                       <br>
+                       <img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px"> Ultimate Ironman
+                       <br>
+                       <img src="../../site/img/osrsimg/hcim.png" style="height: 11px"> Hardcore Ironman
+                       <br>
+                       <span style="color: #4c350a;">---</span>
+                       <br>
+                       <span style="color: rgba(0, 0, 0, 0.6);"><b>5.0x = XP Rate</b></span>
+                       <br>
                     </div>
-                    <input id="filter_submit" type="submit" name="submit" class="buttonmedium" value="Filter"
-                      style="margin-top: 2px;">
-                    <div id="filter_clear_div">
-
-                    </div>
-                  </form>
-                </div>
-                <div class="subsectionHeader search_title">Legend</div>
-                <div class="search_custom_large" id="friends_search">
-                  <div class="friendsContent" style="padding-top: 8px;">
-                    <img src="../../site/img/osrsimg/ironman.png" style="height: 11px;"> Ironman
-                    <br>
-                    <img src="../../site/img/osrsimg/ultimateironman.png" style="height: 11px"> Ultimate Ironman
-                    <br>
-                    <img src="../../site/img/osrsimg/hcim.png" style="height: 11px"> Hardcore Ironman
-                    <br>
-                    <span style="color: #4c350a;">---</span>
-                    <br>
-                    <span style="color: rgba(0, 0, 0, 0.6);"><b>5.0x = XP Rate</b></span>
-                    <br>
-                  </div>
-                </div>
+                 </div>
               </div>
               <br style="clear:both" />
-            </div>
-          </div>
+           </div>
         </div>
-      </div>
-      <br class="clear" />
-    </div>
-    <div id="footer">
-      <div class="contain">
-        <div class="footerdesc">
-          Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex Ltd.</strong><br />
-          Use of our Game's source code is subject to our <a href="./site/terms/terms.html">Terms &amp;
-            Conditions</a> and <a href="./site/privacy/privacy.html">Privacy Policy</a>.<br />
-        </div>
-        <a class="jagexlink" href="" target="_blank">
-          <img src="./../../site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
-        </a>
-    
-      </div>
-      
-    </div>
-    </div>
-
-  <script type="text/javascript">
-    try {
-      var _pageTracker = _gat._getTracker("UA-2058817-15");
-      _pageTracker._setDomainName(".2009scape.org");
-
-
-      _pageTracker._trackPageview();
-    } catch (x) { }
-  </script>
-  <script type="text/javascript">
-    try {
-      var pageTracker = _gat._getTracker("UA-2058817-2");
-      pageTracker._setDomainName(".2009scape.org");
-
-
-      pageTracker._trackPageview();
-    } catch (x) { }
-  </script>
-</body>
-
+     </div>
+  </div>
+  <br class="clear" />
+</div>
 <!-- Mirrored from services/m=hiscore/hiscores.ws by HTTrack Website Copier/3.x [XR&CO'2010], Sun, 18 Jul 2010 08:59:40 GMT -->
 <!-- Added by HTTrack -->
-<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1"><!-- /Added by HTTrack -->
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+<!-- /Added by HTTrack -->
+<script type="text/javascript">
+  try {
+    var _pageTracker = _gat._getTracker("UA-2058817-15");
+    _pageTracker._setDomainName(".2009scape.org");
+  
+  
+    _pageTracker._trackPageview();
+  } catch (x) { }
+</script>
+<script type="text/javascript">
+  try {
+    var pageTracker = _gat._getTracker("UA-2058817-2");
+    pageTracker._setDomainName(".2009scape.org");
+  
+  
+    pageTracker._trackPageview();
+  } catch (x) { }
+</script>
 <script type="text/javascript" src="./helpers.js"></script>
 <script type="text/javascript" src="./hiscores.js"></script>
-
-</html>
+<script type="text/javascript" src="./jquery-1.3.2.min.js"></script>

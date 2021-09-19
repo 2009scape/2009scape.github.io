@@ -124,7 +124,7 @@ hiscores.changePlaqueWorld = () => {
 }
 
 hiscores.updateLegendText = () => {
-    document.getElementById("worldxprate").innerText = `World ${hiscores.world} default XP rate: ${hiscores.world === 1 ? 1 : 5}x`;
+    //document.getElementById("worldxprate").innerText = `World ${hiscores.world} default XP rate: ${hiscores.world === 1 ? 1 : 5}x`;
 }
 
 hiscores.addSkillsAndActivityFilters = () => {
