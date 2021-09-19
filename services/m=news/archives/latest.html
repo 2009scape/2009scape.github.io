@@ -3,9 +3,8 @@ layout: newspost
 title: Lastest
 ---
 <!-- Mirror latest news post -->
-{% assign sorted = site.pages | orderby: 'date' %}
 {% assign flag = true %}
-{% for page in sorted %}
+{% for page in site.pages reversed %}
   {% for tag in page.tags %}
     {% if tag == "news" and flag %}
         {{page.content}}
