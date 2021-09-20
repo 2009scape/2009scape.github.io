@@ -1,0 +1,17 @@
+{% assign crumbs = page.url | remove:'/index.html' | split: '/' %}
+{% if crumbs.size < 2 %}
+    {% if include.content == "home" %}
+        <span class="ts">
+    {% endif %}
+<!-- Liquid logic is read from right to left -->
+{% elsif include.content == "news" and crumbs[2] == "m=news"%}
+    <span class="ts">
+{% elsif include.content == "guide" and crumbs[2] == "game_guide" or crumbs[2] == "rules" %}
+    <span class="ts">
+{% elsif include.content == "community" and crumbs[2] == "community" or crumbs[2] == "m=hiscore" %}
+    <span class="ts">
+{% elsif include.content == "help" and crumbs[2] == "help" %}
+    <span class="ts">
+{% else %}
+    <span class="tl">
+{% endif %}
