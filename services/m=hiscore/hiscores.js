@@ -840,11 +840,11 @@ hiscores.populateDefaultHSTable = () => {
 
 hiscores.loadUserTable = (username) => {
     username = username.split("%20").join(" ");
-    if (usersToSquash.indexOf(username) != -1){
+    if(hiscores.world == 2){
         fetch(`${hiscores.apiURL}/hiscores/playerSkills/${hiscores.world}/${username.toLowerCase()}`)
         .then(response => response.json())
         .then(result => {
-            if (result.info.exp_multiplier != "5.0"){
+            if (usersToSquash.indexOf(username) != -1 && result.info.exp_multiplier != "5.0"){
                 fetch('https://downthecrop.github.io/hiscore-proxy/proxies/players/'+username+'.json')
                 .then(response => response.json())
                 .then(result => {
@@ -876,7 +876,33 @@ hiscores.loadUserTable = (username) => {
                     console.log('error', error);
                 });
             }
-            })
+            else{
+                document.getElementById('search_name').style.color = 'black';
+                hiscores.tableData = result.skills;
+                hiscores.tableInfo = result.info;
+                hiscores.populatePlayerHSTable();
+                hiscores.setHeadSkillText(hiscores.formatName(username, 0, result.info.exp_multiplier, true));
+                for(let i = 0; i < 24; i+= 1){
+                    //It's slow, but it works!
+                    fetch(`${hiscores.apiURL}/hiscores/playersBySkill/${hiscores.world}/${i}`)
+                    .then(response => response.json())
+                    .then(liveData => {
+                        fetch('https://downthecrop.github.io/hiscore-proxy/proxies/skills/'+i+'.json')
+                        .then(response => response.json())
+                        .then(proxyData => {
+                            liveData = proxyUnsquashedExp(proxyData,liveData)
+                            console.log("I can find: this user at: "+Number(liveData.findIndex(player => player.username.toLowerCase() === username.toLowerCase())+1))
+                            hiscores.populatePlayerRankByIndex(username, liveData, i+1);
+                        })
+                        .catch(error => {
+                            document.getElementById('search_name').style.color = 'red';            
+                            document.getElementById('search_name').value = 'Player not found!';
+                            console.log('error', error);
+                        });
+                    })
+                }
+            }
+        })
     }
     else{
         fetch(`${hiscores.apiURL}/hiscores/playerSkills/${hiscores.world}/${username.toLowerCase()}`)
