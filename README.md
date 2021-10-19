@@ -33,7 +33,7 @@ to `_config.yml`,  and substitute `jekyll serve --incremental`
 # News Posts
 Located in `services/m=news/archives/`
 Use the latest as an example. They are indexed automatically based on their file name.
-> <pre> ---
+> <pre>---
 > title: Title
 > tags: news
 > layout: newspost
