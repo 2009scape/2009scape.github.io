@@ -14,12 +14,11 @@ View the website live here: https://2009scape.github.io/
 This website utilizes Jekyll to generate static pages. 
 
 1. Install Jekyll
-	- https://jekyllrb.com/docs/installation/
-2. Build the site (Inside project root)
-	- Windows: jekyll serve
-	- Unix: bundle exec jekyll serve
-3. Run a temporary  web server in `_site/`
-	- `python -m http.server`
+	* https://jekyllrb.com/docs/installation/
+2. Build and serve the site
+    * Inside project root run `jekyll serve` or alternatively:
+      	- Windows: `serve.bat`
+      	- Unix: `./serve.sh`
 
 For faster builds locally (from about 80 seconds to about 6 seconds) add:
 <pre>
