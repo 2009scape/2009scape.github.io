@@ -1,0 +1,164 @@
+[
+    {
+       "id": "995",
+       "minAmt": "3000",
+       "maxAmt": "3000",
+       "weight": "12"
+    },
+    {
+       "id": "1452",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "1462",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "886",
+       "minAmt": "150",
+       "maxAmt": "150",
+       "weight": "10"
+    },
+    {
+       "id": "443",
+       "minAmt": "100",
+       "maxAmt": "100",
+       "weight": "7"
+    },
+    {
+       "id": "2363",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "1623",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "12"
+    },
+    {
+       "id": "1621",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "10"
+    },
+    {
+       "id": "1619",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "8"
+    },
+    {
+       "id": "1617",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "1615",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "5"
+    },
+    {
+       "id": "560",
+       "minAmt": "45",
+       "maxAmt": "45",
+       "weight": "6"
+    },
+    {
+       "id": "563",
+       "minAmt": "45",
+       "maxAmt": "45",
+       "weight": "6"
+    },
+    {
+       "id": "561",
+       "minAmt": "67",
+       "maxAmt": "67",
+       "weight": "6"
+    },
+    {
+       "id": "892",
+       "minAmt": "42",
+       "maxAmt": "42",
+       "weight": "6"
+    },
+    {
+       "id": "1319",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "1373",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "1185",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "829",
+       "minAmt": "20",
+       "maxAmt": "20",
+       "weight": "6"
+    },
+    {
+       "id": "830",
+       "minAmt": "5",
+       "maxAmt": "5",
+       "weight": "4"
+    },
+    {
+       "id": "987",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "985",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "7"
+    },
+    {
+       "id": "1149",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "3"
+    },
+    {
+       "id": "1201",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "4"
+    },
+    {
+       "id": "1247",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "1"
+    },
+    {
+       "id": "2366",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "1"
+    },
+    {
+       "id": "1249",
+       "minAmt": "1",
+       "maxAmt": "1",
+       "weight": "1"
+    }
+ ]
