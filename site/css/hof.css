@@ -1,0 +1,16 @@
+.tableForFame 
+    {
+            font-family: arial, sans-serif;
+            border-collapse: collapse;
+            width: 100%;
+    }
+    .tdForFame, .thForFame 
+    {
+            border: 1px solid seashell;
+            text-align: left;
+            padding: 8px;
+    }
+    .trForFame:nth-child(even) 
+    {
+        background-color:seashell;
+    }
