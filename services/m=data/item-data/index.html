@@ -1,0 +1,75 @@
+---
+title: Item Data
+layout: guide
+---
+<script src=".././js/jquery-3.6.0.min.js"></script>
+<script src=".././js/common.js"></script>
+<script src=".././js/itemdata.js"></script>
+<link rel="stylesheet" href=".././css/style.css">
+<style>
+    #navhome{
+        margin-top: 0px !important;
+    }
+</style>
+<div id="content">
+<div id="rule">
+<div class="sectionHeader">
+<div class="left">
+<div class="right">
+<h1 class="plaque_medium">
+    {{ page.title }}
+</h1>
+</div>
+</div>
+<div class="section">
+<div class="article_theme_1">
+<div class="article">
+<div class="topshadow">
+<div class="bottomborder">
+<div class="leftshadow">
+<div class="rightshadow">
+<div class="leftcorner">
+<div class="rightcorner">
+<div class="bottombordershad">
+<div class="bottomleftshad">
+<div class="bottomrightshad">
+    <!-- CONTENT HERE -->
+    <div class="links"><a href="../drop-table/">Drop Tables</a> | <a href="../item-source/">Item Sources</a> | <a href="../item-data/">Item Data</a></div>
+    <div id="wrapper" style="padding-bottom: 40px;">
+    <center>
+        <div class="headings">
+            <span class="headertitleleft"><span class="headertitleright" id="search">Item Data</span></span>
+            </div>
+        <input style="width:50%;"class="form-control input-lg" placeholder="Item Name"
+        onkeyup="search(this);"></input>
+        <p>
+            <input type="checkbox" id="debug-toggle" name="debug">
+            <lable>Show ALL Attributes</lable>
+        </p>
+    </center>
+    <div class="loading" style="display: none;">
+        <div class="stage">
+            <h1>Loading JSON</h1>
+        </div>
+        <div class="stage">
+            <div class="dot-pulse"></div>
+        </div>
+    </div>
+    <div id="dcontent" style="margin:auto;width: 80%;"></div>
+    </div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<br class="clear">
+</div>
+</div>
