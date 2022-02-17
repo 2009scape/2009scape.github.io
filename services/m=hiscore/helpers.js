@@ -1,6 +1,6 @@
 var hiscores = hiscores || {};
 
-hiscores.apiURL = "https://a7b4-2600-1700-9a91-ee10-00-49.ngrok.io";
+hiscores.apiURL = "https://60e7-2600-1700-9a91-ee10-00-49.ngrok.io/";
 
 hiscores.sName = [
     "Attack",
