@@ -11,6 +11,12 @@ class npcObject {
     }
 }
 
+// our json data is out of sync.
+function itemErrorMessage(npc,item){
+    console.log("Error with npc",npc," drop id: ",item)
+    console.log("update this tools json/item_config.json")
+}
+
 function newDisplayItem(name, id, min, max, weight, totalWeight) {
     let row = $("<tr>")
     let icon = $("<img>").attr('src', iconURL(id))
@@ -46,6 +52,12 @@ function mapNPCItem(drops) {
 
         // Add default drops
         npc['default'].forEach(drop => {
+            
+            if(getItemName(drop.id) == undefined){
+                itemErrorMessage(npc,drop.id)
+                return
+            }
+
             let name = spaceToUnder(getItemName(drop.id))
             if (items[name])
                 items[name] += ("," + npc['ids'])
@@ -59,6 +71,12 @@ function mapNPCItem(drops) {
 
         // Normal drops
         npc['main'].forEach(drop => {
+
+            if(getItemName(drop.id) == undefined){
+                itemErrorMessage(npc,drop.id)
+                return
+            }
+            
             let name = spaceToUnder(getItemName(drop.id))
             npcObj.totalWeight += parseFloat(drop.weight)
             if (items[name])
