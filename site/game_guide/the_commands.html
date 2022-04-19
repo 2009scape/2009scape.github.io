@@ -43,15 +43,12 @@ layout: guide
 <li> ::stats - shows cool stats!</li>
 <li> ::quests - display currently implemented quests.</li>
 <li> ::playsong - Plays a specific song</li>
-<li> ::players - shows what players are online </li>
 <li> ::shop - Opens the credit shop </li>
 <li> ::ge buying - Opens up the section of what players are buying on the ge.</li>
 <li> ::ge selling - Opens up the section of what players are selling on the ge.</li>
 <li> ::ge search - Allows you to search for an item that possibly could be being sold or bought on the ge.</li>
 <li> ::reply - similar to tab where you can respond right away to someone. </li>
 <li> ::loc - prints the player's location </li>
-<li> ::scripts - gives a list of botting scripts you can use on world 2.</li>
-<li> ::stopscript - stops the script you are running on world 2.</li>
 <li>::togglexp - toggles the xp drop interface on or off.</li>
 <li>::xpconfig - used for configuring the xp drop interface
     <ul>
@@ -67,59 +64,104 @@ layout: guide
 <b>Can use Player Commands too</b>
 <ul>
 <li> ::pnpc - Transforms player in an npc </li>
-<li>::makeover - Opens up the new player creation
-                                                                        interface </li>
-<li> ::jail - Jails a player in Varrock's Jail cell.
+<li> ::jail - Jails a player in Varrock's Jail cell.</li>
+<li> ::players - Shows what players are online
                                                                     </li>
 </ul>
 <h3> Admins </h3>
 <b>Can use Moderator &amp; Player Commands too</b>
 <ul>
-<li> ::anim - Forces the player to play an
-                                                                        animation. </li>
-<li> ::loopanim - Forces the player to loop an
-                                                                        animation. ::loopanim i.d amount </li>
-<li> ::ranim - Forces the player to render an
-                                                                        animation </li>
-<li> ::ranimreset - Resets player's render animation
-                                                                        to default. </li>
-<li> ::npcareaanim - Forces animation + messages on
-                                                                        all npcs in a radius of 10. </li>
-<li> ::bank - Opens bank </li>
-<li> ::1hit - toggles 1-hit kills </li>
-<li> ::invis - makes player invisible </li>
-<li> ::god - god mode </li>
-<li> ::mrboneswildride - plays a funny animation of
-                                                                        you in a minecart repeating " I want to get off
-                                                                        Mr. Bones Wild Ride" over and over. </li>
-<li> ::empty - empties a player's inventory </li>
-<li> ::announce - creates an announcement in chat
-                                                                    </li>
-<li> ::allmusic - unlocks all music </li>
-<li> ::allquest - Unlocks all quests. </li>
-<li> ::finishtask - Finishes a player's slayer task
-                                                                    </li>
-<li> ::setslayerpoints - Set Slayer points </li>
-<li> ::npc - Spawns an npc with given i.d </li>
-<li> ::item - spawns an item with given i.d </li>
-<li> ::object - spawns object with given i.d at
-                                                                        player's location. </li>
-<li> ::update - Starts the update countdown </li>
-<li> ::cancelupdate - Cancels the update countdown
-                                                                    </li>
-<li> ::to - teleports you to a specific place. EX:
-                                                                        ::to varrock </li>
-<li> ::tele - teleports you to a location. EX ::tele
-                                                                        x y z </li>
-<li> ::teleto - teleports you to a player </li>
-<li> ::teletome - teleports a player to you </li>
-<li> ::home - teleports you to lumbridge </li>
-<li> ::max - maxes your account </li>
-<li> ::setlevel - sets a skill to a specific level.</li>
-<li> ::rolltrawlerloot - gets random fishing trawler loot sent to your bank </li>
-<li> ::emptybank - removes everything from your bank</li>
-<li> ::getobjectvarp - gets the varp id for an object.</li>
+
+<b>Animation Commands </b>
+<br>
+<br>
+<ul>
+<li> ::anim - Forces the player to play an animation. </li>
+<li> ::loopanim - Forces the player to loop an animation. ::loopanim i.d amount </li>
+<li> ::ranim - Forces the player to render an animation </li>
+<li> ::ranimreset - Resets player's render animation to default. </li>
+<li> ::npcareaanim - Forces animation + messages on all npcs in a radius of 10. </li>
 </ul>
+<br>
+<br>
+<b>Spawn Commands</b>
+<br>
+<br>
+<ul>
+    <li> ::npc - Spawns an npc with given i.d </li>
+    <li> ::item - spawns an item with given i.d </li>
+    <li> ::object - spawns object with given i.d at player's location. </li>
+</ul>
+<br>
+<br>
+
+<b>Teleport Commands </b>
+<br>
+<br>
+<ul>
+    <li> ::to - teleports you to a specific place. EX: ::to varrock </li>
+    <li> ::tele - teleports you to a location. EX ::tele x y z </li>
+    <li> ::teleto - teleports you to a player </li>
+    <li> ::teletome - teleports a player to you </li>
+    <li> ::home - teleports you to lumbridge </li>
+    <li> ::tostar - teleports you to shooting star </li>
+</ul>
+<br>
+<br>
+<b>Developer Commands</b>
+<br>
+<br>
+<ul>
+    <li> ::farmkit - gives the items you'll need for farming.</li>
+    <li> ::spellbook - swaps your spellbook between normal, ancient and lunar.</li>
+    <li> ::killme - kills your player</li>
+    <li> ::1hit - Kills any monsters with 1 hit.</li>
+    <li> ::god - gives you overly boosted stats.</li>
+    <li> ::max - gives max stats.</li>
+    <li> ::bank - opens your bank</li>
+    <li> ::finishtask - Finishe's a player's slayer task.</li>
+    <li> ::rolltrawlerloot - gets random fishing trawler loot sent to your bank.</li>
+    <li> ::allmusic - Unlocks all music.</li>
+    <li> ::allquest - Unlocks all quests.</li>
+    <li> ::setslayerpoints : Sets the player's slayer points.</li>
+    <li> ::submit - Creates a new shooting star</li>
+    <li> ::resetsprite - Resets the timer in which the sprite stays waiting.</li>
+    <li> ::setlevel - sets a skill to a specific level</li>
+    <li> ::update - updates the server </li>
+    <li> ::cancelupdate - cancels the update before the timner counts all the way down.</li>
+    <li> ::announce - creates an announcement in chat </li>
+
+</ul>
+
+<br>
+<br>
+
+<b>Moderation Commands for Admins</b>
+<br>
+<br>
+<ul>
+    <li>::empty - empties a player's inventory</li>
+    <li>::emptybank - removes everything from your bank </li>
+    <li>::setpasswordother - sets another player's password for them.</li>
+    <li>::removeitem - removes an item from a player's inventory. ::removeitem user_name item_id item_amount</li>
+</ul>
+<br>
+<br>
+<b>Fun Commands</b>
+<ul>
+    <li>::mrboneswildride - Plays a funny animation off a player in a minecart repeating "I want to get off Mr. Bones Wild Ride" over and over again.</li>
+    <li>::invis - makes you invisible to other players.</li>
+    <li>::potato - gives a rotten potato</li>
+</ul>
+</ul>
+<br>
+<br>
+<h3>Singleplayer Exclusive Commands</h3>
+(<b style="font-size: 12px;">Scripts must be set to true in your default.config</b>)
+<ul>
+    <li> ::scripts - gives a list of botting scripts you can use.</li>
+    <li> ::stopscript - stops the script you are running.</li>
+</ul> 
 </div>
 <tr>
 <td colspan="2">
