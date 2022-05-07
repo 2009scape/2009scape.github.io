@@ -1,0 +1,131 @@
+---
+title: More Changes in Gielinor
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2022-05-07 00:00:00 +0000
+authors: ryannathans
+excerpt: "There have been some more changes in Gielinor..."
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+                                        <p>Greetings Explorers</p>
+                                        <p>There have been some more changes in Gielinor:</p><ul>
+<li>adjusted price calculation formula used when selling items to shops</li>
+<li>fixed bug preventing awards for Witch's House and Roving Elves quests</li>
+<li>New dynamic region abstraction, consumed in construction</li>
+<li>Fixed an exception thrown when buying from player stock<br />
+Fix issue where malformed stock could shift following shop items</li>
+<li>Make ::setvarbit take the first and second args instead of first and third</li>
+<li>Better unit test output</li>
+<li>Fixed woman in Lumbridge house spawning inside of chair (Moved her spawn location a tile so she spawns freely)<br />
+Fixed #389 by adding missing items to Horvik's armour store in Falador</li>
+<li>adjusted shop prices in tzhaar city</li>
+<li>Add more unit tests for shops and quest related architecture<br />
+Fixed bug where quests could be repeatedly finished<br />
+Fixed bug where ironman status wasn't checked when buying overstocked items<br />
+Fixed bug where selling multiple items at a time that weren't listed in a shop would not succeed<br />
+Fixed bug where shop restocking would sometimes interrupt if a shop stock item was in a null slot</li>
+<li>Add symlink for unit test cache access</li>
+<li>Added unit tests for the GE<br />
+GE should now favor the buy offer if it's newer than the paired sell offer (buyer gets GP back)<br />
+GE should now favor the sell offer if it's newer than the paired buy offer (buyer does NOT get gp back)<br />
+GE should now always award bot offers to the highest bidder</li>
+<li>Added unit tests for regions (now requires cache at Server/src/resources/cache)<br />
+Reverted some really old changes (2019) to house loading code (Might fix construction? Probably not.)</li>
+<li>Add unit tests for slayer<br />
+Kill server networking as soon as shutdown process starts</li>
+<li>Added packet for sending credit updates</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
