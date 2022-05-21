@@ -1,0 +1,141 @@
+---
+title: Dynamic Market Prices and More
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2022-05-21 00:00:00 +0000
+authors: ryannathans
+excerpt: "A more dynamic grand exchange, alchemy values corrected and more... Pay attention, there have been some important changes."
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+                                        <p>Greetings Explorers</p>
+                                        <p><b>Pay attention, there have been some changes to the Grand Exchange.</b> The grand exchange market prices are now dynamic, and adjust to trades with a volume weighted formula. Given that bots always charge 10% more than the market average. Now that the market average is no longer static if all trades for an item are from bots, prices will increase until players intervene and undercut the bots.</p>
+                                        <p>Full list of changes in Gielinor:</p><ul>
+<li>Added the authentic Bronze Pickaxe spawn to the top of Lumbridge gate</li>
+<li>Added animations to blurite crossbow<br />
+Marked mith crossbow as tradable, added weight and description</li>
+<li>Removed all alchemy values from config (inauthentic values, seem to have been copied from RS3) - we will probably need to add new overrides as they are discovered, none known at time of writing<br />
+Defined low alchemy value as item value * 0.4 unless override exists in config (authentic)<br />
+Defined high alchemy value as item value * 0.6 unless override exists in config (authentic)</li>
+<li>Improved the GE database access to use a basic reference counter for the connection that automatically closes the connection when no one is using it anymore<br />
+Grand Exchange now uses the GE sqlite database's price index table to track price changes<br />
+Removed the old price index (confusingly called GrandExchangeDatabase.java)<br />
+Grand Exchange prices are now dynamic and influenced by trades (weighted stepping average price)<br />
+Fixed GE interfaces not loading on login</li>
+<li>simplified ring of the star sprite teleport dialogue, now tells you if star has been mined</li>
+<li>Addendum to login/auth improvements to make sure communication info gets parsed<br />
+Only update db fields if they have changed</li>
+<li>Make sure we don't call exitProcess() if the system is already terminating</li>
+<li>No longer running ticks in a coroutine, should address apparent lag after server has been running a while</li>
+<li>Random Events should now spawn correctly<br />
+Fixed an issue that was causing tick event hooks to not fire</li>
+<li>Refactored equipment.add, fixes bug #420 (blaze it)</li>
+<li>Introduced modular components for authentication, including the storage backend<br />
+Servers in dev mode now have a no-auth equivalent that allows any user/pass combo without registration<br />
+Added a ban command<br />
+Added a mute command<br />
+Hooked up the mute functionality of the report screen (for pmods+)<br />
+Cleaned up all the now-unused classes for player SQL stuff<br />
+Player SQL stuff now uses entirely prepared statements<br />
+No longer storing PC name, MAC address, serial number as these are inauthentic components of the protocol Packet to be corrected in the future to allow closer compatibility with authentic clients<br />
+Used less threading for the SQL queries/updates as these were causing issues both with the old system and the new<br />
+Updated ::resetpassword and ::setpasswordother commands to use the new server authentication pipeline (to ensure things are always correctly set)<br />
+Refactored the login read event, now handles more exceptions and edge cases</li>
+<li>man (ID 3224) is now pickpocket-able</li>
+<li>Fixed the load order of configs with plugins - many configs are now loaded after plugins so that npc/item/object handlers in the old plugin system are set properly</li>
+<li>Class scanning now distinguishes side effectful plugins from our pure content interfaces<br />
+Server store is now loaded and parsed ***before*** side effectful plugins</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
