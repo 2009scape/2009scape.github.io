@@ -1,0 +1,135 @@
+---
+title: Toad Inflation
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2022-07-17 00:00:00 +0000
+authors: ryannathans
+excerpt: "Big Chompy Bird Hunting is now available, plus a handful of bug fixes."
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+                                        <p>Greetings Explorers</p>
+                                        <p><b>A new quest is available - Big Chompy Bird Hunting</b></p>
+                                        <p>Full list of changes in Gielinor:</p><ul>
+<li>Refactored pulse running logic, made it easier to follow and debug<br />
+Made the pulse runner use thread-safe collections instead of synchronizing on a thread-unsafe list</li>
+<li>More bank reworks<br />
+<br />
+Updated dialogues for non-standard banker NPCs<br />
+Sirsal Bankers now have their own dialogue plugin that prepares us for possible Lunar Diplomacy quest implementation<br />
+Thrown out the legacy Java dialogue plugin for standard banker NPCs<br />
+Added a dialogue for the Bounty Hunter roving banker<br />
+Fixed broken bank option on some bankers<br />
+Fixed Eniola not charging players 20 runes of one type for each banking session<br />
+Limited secondary bank capabilities to stationary bankers, i.e. those who have either a desk, a table or a booth available nearby<br />
+Added ContentAPI calls related to bank interfaces and Ironman mode checks & restrictions<br />
+Streamlined dialogue creation by limiting the amount of boilerplate required<br />
+Changed the plugin loading logic so that it informs the dev why a dialogue plugin might've failed to load in addition to not preventing other plugins being loaded when one fails to do so</li>
+<li>Fixed issue in Millie Miller's dialogue where Millie would say the player's dialogue</li>
+<li>Rewrote README.md</li>
+<li>Implemented the Big Chompy Bird Hunting quest<br />
+Implemented the toad inflation Distraction & Diversion</li>
+<li>Fixed Vinesweeper bunnies so that you can't spam click them for hunter XP</li>
+<li>Updated the farming patch inspect option so that it no longer tells players that water is needed in dead, diseased, fully grown, or empty patches</li>
+<li>Added item config for keys used in the waterfall quest</li>
+<li>Added Bonemeal examine texts</li>
+<li>Fixed SpellCastEvents not being dispatched properly<br />
+<br />
+Fixes achievement diary tasks that trigger on spell cast</li>
+<li>Fixed incorrect slayer tracker icons</li>
+<li>Fixed Millie Miller dialogue not progressing</li>
+<li>Rewrote String Jewellery lunar spell</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
