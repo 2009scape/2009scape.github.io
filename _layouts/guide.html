@@ -30,9 +30,9 @@
   <!-- Formatting to wrap -->
   <style type="text/css">
     .section {
-        padding: 0px !important;
+      padding: 0px !important;
     }
-</style>
+  </style>
   <!--2009SCAPE CUSTOM CSS-->
   <link rel="stylesheet" href="/site/css/kbase-6.css">
   <title>2009Scape - {{ page.title }}</title>
@@ -72,19 +72,7 @@
 
     {{content}}
 
-    <div id="footer">
-      <div class="contain">
-        <div class="footerdesc">
-          Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex
-            Ltd.</strong><br />
-          Use of our Game's source code is subject to our <a href="/site/terms/terms.html">Terms &amp;
-            Conditions</a> and <a href="/site/privacy/privacy.html">Privacy Policy</a>.<br />
-        </div>
-        <a class="jagexlink" href="" target="_blank">
-          <img src="/site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
-        </a>
-      </div>
-    </div>
+    {% include footer.html %}
   </div>
 </body>
 <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
