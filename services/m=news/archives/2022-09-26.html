@@ -1,0 +1,192 @@
+---
+title: More Changes in Gielinor
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2022-09-26 00:00:00 +0000
+authors: ryannathans
+excerpt: "There have been some more changes in Gielinor..."
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+                                        <p>Greetings Explorers</p>
+                                        <p>There have been some more changes in Gielinor:</p><ul>
+<li>Added Roving Elves quest requirement to crystal gear equip</li>
+<li>Crystal Equipment Changes<br />
+<br />
+Buying a new bow or shield from Islwyn will be "new" and tradable<br />
+Recharging a crystal seed into either will be "full" and not tradable</li>
+<li>Fixed bug where player could get unlimited glarial's pebbles</li>
+<li>Reset the varpmanager on HCIM death</li>
+<li>Fixed bug preventing completion of restless ghost quest</li>
+<li>Added new content api method for stating a quest requirement<br />
+Made Miscellania accessible with completion of Fremennik Trials via the fairy ring<br />
+Locked Morytania locations behind Priest in Peril (both fairy ring and charter ship methods)</li>
+<li>Corp Bugfixes<br />
+<br />
+Corp now correctly only destroys summons that have entered the boss room<br />
+Corp destroys summons after exactly 10 seconds (source is cited on the line of code)<br />
+Corp now repeatedly fullheals if there's no players active in the room (meaning you cannot just cannon it to death)<br />
+You no longer get a grave if you die in the corp boss room</li>
+<li>Added ::rules command so players can check the rules</li>
+<li>Fixed a bug that prevented claiming the diary reward ring from Ned</li>
+<li>Fixed clan quickchat</li>
+<li>Made interaction listener typed interaction type more backwards compatible</li>
+<li>Inferno adze now correctly deducts resource when burn effect triggers</li>
+<li>Added half redberry pie spawn to pirate hideout</li>
+<li>Fixed pathing to closest tile occupied by target scenery</li>
+<li>Updated Clue Scroll Drop Rates<br />
+<br />
+Set Hellhound Hard Clue DR to 1/64 (Was 1/8)<br />
+Set Saradomin Priest Hard Clue DR to 1/128<br />
+Set Blue Dragon Hard Clue DR to 1/128 (Was 1/200)<br />
+Set Red Dragon Hard Clue DR to 1/128 (Was 1/46)<br />
+Set Black Dragon Hard Clue DR to 1/128 (Was 1/200)<br />
+Set Bork Hard Clue DR to 1/128<br />
+Set Goblin Easy Clue DR to 1/128 (Was 1/55)<br />
+Set Al-Kharid Warrior Easy Clue DR to 1/128 (Was 1/37)<br />
+Set Zogre Easy Clue DR to 1/128 (Was 1/28)<br />
+Set Donny the Lad Easy Clue DR to 1/128 (Was 1/37)<br />
+Set Rusty Easy Clue DR to 1/128 (Was 1/27)<br />
+Set Vampire Medium Clue DR to 1/128 (Was 1/35)<br />
+Set Leech Medium Clue DR to 1/128 (Was 1/21)<br />
+Set Ork Legion Medium Clue DR to 1/128<br />
+Set Green Dragon Medium Clue DR to 1/128 (Was 1/200)<br />
+Added Corporeal Beast RDT to Loot Drop Pool</li>
+<li>Improved superglass make behavior (bushtail)</li>
+<li>Removed lots of dead code</li>
+<li>Graves Rewrite<br />
+<br />
+Rewrote graves from scratch using new systems and abundant unit testing<br />
+Fixed a race condition bug that would prevent classes implementing PersistWorld from properly... persisting<br />
+Fixed a bug where graves were (still) too generous<br />
+Fixed a bug where graves would not persist across server reboots<br />
+Fixed a bug where graves would not recognize a relogged player<br />
+Fixed numerous other bugs with graves, see the unit tests for complete coverage<br />
+Grave system now supports quest requirements</li>
+<li>Replaced coal truck mine scorpions with giant bats</li>
+<li>Updated Wolf (lv 11) to have 10 hp<br />
+Updated Wolf (lv 14) to have 15 hp</li>
+<li>Bloated toads no longer bankable<br />
+Implemented releasing bloated toads<br />
+Updated ContentAPI slightly so that removeAll has more similarity to removeItem function and can be called in the same way</li>
+<li>Elemental Workshop I Bug Fixes<br />
+<br />
+Corrected Elemental rock npc out of combat ai<br />
+Players can no longer attempt to re-complete the quest<br />
+Fixed listeners from user comments<br />
+Added the elemental smithing animation and sound<br />
+Added more special interactions<br />
+Added author tags</li>
+<li>Added cosmic rune spawn and water rune spawn in Frozen Waste Plateau</li>
+<li>Fixed mining gem random reward logic to actually drop the gem if player inventory is full</li>
+<li>Implemented The Golem quest<br />
+Added new DialogueBuilder system<br />
+Fixed bug where examinable scenery with no left-click options were null from RegionManager's perspective</li>
+<li>Fixed issue where all 6 barrows brothers spawned at the chest</li>
+<li>Greatly improved examine text handling and authenticity for various coin quantities on ground, in bank and in inventory<br />
+Fixed clue scroll examine text crashing the client in some situations</li>
+<li>Lost City Update<br />
+<br />
+Convert Lost City quest from Java to Kotlin<br />
+Fixed certain weapons not being properly locked behind Lost City quest<br />
+Fixed bugs in quest level requirements<br />
+Zanaris entry fairy ring now returns players to the shed when they use it<br />
+Warrior dialogue missing lines and facial expressions added in<br />
+Fixed warrior dialogue issue, you can now start the lost city quest<br />
+Fairy rings are now enabled when the lost city quest is complete and you are wielding a dramen staff or lunar staff</li>
+<li>Removed obsolete "schedule" method causing undesirable death side effects</li>
+<li>Added exemption for staff accounts in regards to daily account limit</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
