@@ -25,91 +25,95 @@ layout: guide
   <div class="rightcorner">
   <div class="bottomleft">
   <div class="bottomright">
-  <div class="links"><a href="#Introduction">Introduction</a> | <a href="#tutorial_island">Tutorial Island</a> | <a href="#starter_items">Starter Items</a> | <a href="#money_making">Money Making</a> | <a href="#fast_travel">Fast Traveling</a> | <a href="#extra">Extra</a></div>
+  <div class="links"><a href="#Introduction">Introduction</a> | <a href="#download">Download</a> | <a href="#tutorial_island">Tutorial Island</a> | <a href="#starter_items">Starter Items</a> | <a href="#money_making">Money Making</a> | <a href="#fast_travel">Fast Traveling</a> | <a href="#extra">Extra</a></div>
   <br/>
   <a name="Introduction"></a><br class="clear"/>
   <div class="headings">
   <span class="headertitleleft"><span class="headertitleright" id="Introduction">Introduction</span></span>
   </div>
   <br/>
-  <br/>
-  <p>Welcome to 2009scape, where your memories of childhood Runescape come to life. Unlike Oldschool Runescape, we keep true to the Gower brothers' vision of the game.</p>
+  <p>Welcome to 2009scape, where your memories of Runescape come to life. Unlike Oldschool Runescape, we keep true to the Gower brothers' vision of the game.</p>
   <p>
-  We are a constant work in progress. The goal is firstly content completion up until January 2009 (revision 530), and then an expansion to December 2009 (revision 578) is planned.
+  We are a constant work in progress. The goal is content completion up until January 2009 (revision 530), with an expansion to December 2009 (revision 578) planned.
   We encourage you to discuss any suspected bugs you find on the <a src="https://forum.2009scape.org/">forum.</a>
-  This project is working towards 100% completion, you can read more in our <a href="./about2009scape.html">about page.</a>
-  Whilst we strive for authenticity we have a few quality-of-life changes (QoL) . You can find where all our controls are on the 
-  controls page <a href="controls.html">here</a>.
+  This project is working towards 100% completion and is currently a work in progress, you can read more on our <a href="./about2009scape.html">about page.</a>
+  Whilst we strive for authenticity, we have made a few quality-of-life (QoL) improvements along the way. We do not accept donations, or any form of financial contribution.
+  If you wish to contribute you can help maintain the wiki, <a href="https://forum.2009scape.org/viewtopic.php?t=35-2009scape-test-process" target="_blank">become a tester</a>, <a href="https://gitlab.com/2009scape/2009scape/-/issues" target="_blank">fix issues</a>, write new content or help us maintain our drop tables, item config, etc.
   </p>
-  <br/>
-      After you have read the above please check out the rest of this guide as it has information on what is different inside of 2009scape currently 
-    versus the real games. If you have any questions that are not answered here please ask away in discord if they're not already 
-    on the website or in the <a href="../help/faq.html">FAQ</a>.
-  <a name="tutorial_island"></a>
-  <br class="clear"/>
-  </p><div class="headings">
+  <p>2009scape consists of three main components:</p>
+  <ul>
+    <li><a href="https://gitlab.com/2009scape/2009scape" target="_blank">Server</a> - where the game runs, hosted by volunteers</li>
+    <li><a href="https://github.com/Pazaz/RT4-Client" target="_blank">Client</a> - where the game is displayed and interacted with</li>
+    <li><a href="https://gitlab.com/2009scape/Saradomin-Launcher" target="_blank">Launcher</a> - updates, configures and runs the game client</li>
+  </ul>
+  <p><b>You may request your live server save file at any time.</b></p>
+  <p>If you have any questions that are not answered here please ask on the forums.</p>
+  <div class="headings">
+    <span class="headertitleleft"><span class="headertitleright" id="download">Download</span></span>
+  </div>
+  <p>To get started, all you need to do is:</p>
+  <ol>
+    <li><a href="https://adoptium.net/temurin/releases/?version=11" target="_blank"><b>Install Java 11 x64</b></a> for your operating system. Please ensure you install version 11, other versions will cause obscure problems. Linux users should download Java 11 via their distro's package manager.</li>
+    <li>Download Saradomin Launcher:
+      <br>
+      <a href="https://gitlab.com/2009scape/Saradomin-Launcher/-/jobs/artifacts/master/raw/Saradomin/2009scape-launcher-sc.exe?job=pack_windows_sc"><b>Windows</b></a>
+      <br>
+      <a href="https://gitlab.com/2009scape/Saradomin-Launcher/-/jobs/artifacts/master/raw/Saradomin/2009scape-launcher-sc?job=pack_linux_sc"><b>Linux</b></a>
+      <br>
+      <a href="https://gitlab.com/2009scape/09launcher/-/jobs/artifacts/master/raw/build/libs/2009scape.jar?job=build"><b>Mac</b></a>  (Legacy launcher only, we need a mac dev to help out with Saradomin for Mac!)</li>
+    <li>Run the launcher</li>
+    <li>If you are using Saradomin, open the settings tab and make sure your java executable location is correct and pointing to your java 11 installation. Tune the settings as you please, but make sure you don't change the server profile. It should be set to stable server.</li>
+    <li>Click play! The client will be update/downloaded as necessary.</li>
+    <li>Once the client has loaded, create an account from the main menu. If you get stuck on a "please wait" message, restart the client and try again - this happens sometimes if you have a fast connection.</li>
+    <li>Log in and play!</li>
+  </ol>
+  <div class="headings">
   <span class="headertitleleft"><span class="headertitleright">Tutorial Island</span></span>
   </div>
   <br/>
-  <b>An easy way to get to Lumbridge court yard is the home teleport, but don't worry we do not have a cool down timer.</b> we are keeping this ingame for debugging. 
-  Since we are still in active development having a way for players to get unstuck is crucial. 
-  <br/>
-  <br/>
   <p>As of April 2022, the famous tutorial island has been added to 2009scape. Once you have created your account, you will spawn at the start of tutorial island.
-     You can skip the tutorial by talking to Skippie. I know many of you have completed tutorial island so many times that you can't fathom the thought of doing it again. 
-     But, I promise that you will not regret experiencing the island with those beautiful HD graphics! Do keep in mind that the default experience is x5, so if you're a skiller you will 
+     You can skip the tutorial by talking to Skippie. I know many of you have completed tutorial island so many times that you can't fathom the thought of doing it again.
+     But, I promise that you will not regret experiencing the island with those beautiful HD graphics! Do keep in mind that the default experience is x5, so if you're a skiller you will
      want to skip the tutorial.
   </p>
   <br>
   <br>
-  <b> You can only change your xp rate once and you are able to only change it before reaching a total level of 50. </b>
+  <b>You will be given the option to set your XP rate and game mode at the end of the tutorial by speaking to the wizard.</b>
   <br/><br/>
   <p><b> Changing xp rates </b></p>
-  <b>You will have the option of changing your experience rate by speaking with the wizard at the end of the tutorial.</b>
-  <br>
-  <p> In 2009scape, we have a base rate xp as x5xp. This rate obviously can be changed using this option. </p><p>
-  </p><ul>
-  <li> x1xp Rate ( The Authentic RS rate that many desire who plan on making this their home )</li>
-  <li> x2.5xp Rate ( For those players who want the grind with some ease ) </li>
-  <li> x5xp Rate ( Stated before as being the base xp rate ) </li>
-  <li> x10xp Rate ( As of the New Year the new Hardcore Permadeath mode with a special xp rate choice of x10. )</li>
-  </ul>
-  <br/>
-  <br/>
-  <p><b> Changing Ironman Modes </b></p>
-  <b>You will have the option of changing your Iron status by speaking with the wizard at the end of the tutorial.</b>
-  <br>
-  <p> There are a select few who have come from Reddit and have not played the actual game in over a decade. So, I will go into detail with each mode. </p>
   <ul>
-  <li> Ironman/IronWoman Mode </li>
-  <p> This account mode is the basic of the three account types. Ironmen/IronWomen are unable to trade any other player so they are completely self-sufficient. They also can not use lootshare
+  <li> 1x Rate (authentic)</li>
+  <li> 2.5x Rate</li>
+  <li> 5x Rate (the default)</li>
+  <li> 10x Rate (exclusively for permadeath ironmen)</li>
+  <br>
+  </ul>
+  <p><b> Changing Ironman Modes </b></p>
+  <p>As some of us have not played in over a decade. I will go into detail on each mode. </p>
+  <ul>
+  <li>Ironman Mode</li>
+  <p> This account mode is the basic of the three account types. Ironmen are unable to trade any other player so they are completely self-sufficient. They also can not use lootshare
   whatsoever which means they are still stuck collecting everything on their own. </p>
-  <li> Hardcore (Permadeath) Ironman/IronWoman Mode </li>
-  <p> Following the restrictions of regular Ironman/IronWoman mode, the Permadeath Ironmen/Ironwomen are locked to one life and the account will be 'reset' upon deletion.  </p>
-  <li> Ultimate Ironman/IronWoman </li>
-  <p> Like regular Ironman/IronWoman mode, the only other difference is ultimate Ironmen/IronWomen can not bank items. However, they can note items on bank booths and unnote the items. </p>
+  <li>Hardcore/Permadeath Ironman</li>
+  <p>Follows the restrictions of regular ironman mode, but the account will be reset upon death.</p>
+  <li>Ultimate Ironman</li>
+  <p>Like regular ironman mode, the only other difference is ultimate ironmen can not bank items. They can, however, note and unnote items by using them on bank booths.</p>
   </ul>
   <br/>
   <div class="headings">
     <span class="headertitleleft"><span class="headertitleright" id="starter_items">Starter Items</span></span>
     </div>
-    <br/>
-    Due to the amount of people who would get stuck in this "loop" in the beginning of account creation we decided that to best combat this issue 
-    we removed the starter items. This leaves a lot of players confused where to get these starter items since they've always had them in the beginning 
-    on their Runescape adventures. 
     <br>
-    <br>
-    <b>Bronze Axe</b> - The bronze axe can be found in the chicken coup across the bridge of Lumbridge across from the cows. It is 
+    <b>Bronze Axe</b> - The bronze axe can be found in the chicken coup across the bridge of Lumbridge across from the cows. It is
     sticking in a tree stump for you to grab. <br>
-    <b>Bronze Pickaxe</b> - The bronze pickaxe can be found by going up the ladder in the gate house in Lumbridge castle. It is located on the 
+    <b>Bronze Pickaxe</b> - The bronze pickaxe can be found by going up the ladder in the gate house in Lumbridge castle. It is located on the
     third floor. <br>
-    <b>Tinderbox</b> - The tinderbox can be found in the Draynor Manor on the third floor near the professor you speak to during the 
+    <b>Tinderbox</b> - The tinderbox can be found in the Draynor Manor on the third floor near the professor you speak to during the
     Ernest the chicken quest. ( can also be bought from the general store for a few coins ) <br>
     <b>Fish Net</b> - The fish net can be found near the fishing tutor in Lumbridge swamp all over the ground. <br>
-    <b>Knife</b> - A knife can be found on top of the crate in the Lumbridge Castle kitchen basement or behind Bob's Axe Shop. <br> 
+    <b>Knife</b> - A knife can be found on top of the crate in the Lumbridge Castle kitchen basement or behind Bob's Axe Shop. <br>
     <b>Iron Dagger</b> - While the bronze dagger is usually the staple of the tutorial island weapons, an iron one is even better. You can find an iron dagger in the Goblin house
     across the bridge in Lumbridge.
-  
     <br>
     <br>
     <br>
@@ -135,7 +139,7 @@ layout: guide
   </div>
   </div>
   </div>
-  
+
   <p> In Runescape there were plenty of different ways to make money and I know it's a tad difficult hopping into the time machine and coming back to this era forgetting how in the worlds people made money.
       Not to worry we have you covered with some basic money making methods that may later have full guides but for now a little glimpse into what 2009scape has to offer.
       <br>
@@ -147,16 +151,16 @@ layout: guide
   <ul>
   <p><b> Jobs </b> </p>
   <img align="right" alt="" height="100" src="../img/main/kbase/getting_started/workfor.png" style="margin-left: 1%;" width="190"/>
-  <p align="left"> In the year of 2009, Runescape had a job system to help newer players get used to the skill system. You came right out the tutorial Learning the ropes, just to realize that you had 25gp to your name 
+  <p align="left"> In the year of 2009, Runescape had a job system to help newer players get used to the skill system. You came right out the tutorial Learning the ropes, just to realize that you had 25gp to your name
       with just a few starter tools to get you started. Most of the tutors inside of Lumbridge are trying to get you to work for them but I know right away that can be intimidating.
-      If I were you, I would head straight to the woodcutting tutors and get your first job. While you are level one woodcutting you will most likely have to cut 
-      around 20 regular logs and give you around 5-6k. 
+      If I were you, I would head straight to the woodcutting tutors and get your first job. While you are level one woodcutting you will most likely have to cut
+      around 20 regular logs and give you around 5-6k.
   </p>
   <br/>
   <p> <b> Pyramid Plunder </b></p>
   <p> This sneaky thieving mini game can end up getting you a pretty penny when first starting. As it only requires 30 thieving to get started!
   There are plenty of rewards to get form the mini game one being pharaoh's sceptre.
-  
+
   </p><table style="text-align: center;">
   <tbody>
   <tr class="row_a">
@@ -249,15 +253,15 @@ layout: guide
   <br/>
   <br/>
   <p> <b> Agility Pyramid </b></p>
-  <p> You will need a way to make sure you don't die of the desert heat and a minimum of 30 agility to get started. 
-      The pyramid is straight-forward and when you bring Simon the pyramid top he will give you 10k each. 
+  <p> You will need a way to make sure you don't die of the desert heat and a minimum of 30 agility to get started.
+      The pyramid is straight-forward and when you bring Simon the pyramid top he will give you 10k each.
       <br/>
   <br/>
   <b> Make sure you bring waterskins</b>
   <br/>
   </p><p> <b> Stronghold of Security </b></p>
-  <p> Make your way over to the stronghold of security underneath the Barbarian village. Make your way through the mazes answering the player safety questions 
-  Once you have made it through the maze there is a free 10k and some colorful/fighting boots with your name on it </p>
+  <p> Make your way over to the stronghold of security underneath the Barbarian village. Make your way through the mazes answering the player safety questions.
+  Once you have made it through the maze there is a free 10k and some colorful/fighting boots.</p>
   <br/>
   <a name="fast_travel"></a><br class="clear"/>
   <div class="headings">
@@ -266,9 +270,9 @@ layout: guide
   <br/>
   <p><b> Gnome Gliders </b></p>
   <p> One of the biggest obstacles of Runescape in 2009, was attempting to go over the white wolf mountain or you could
-  walk all the way to edgeville pull the wilderness lever, pull it again and end up in Ardy. Tree gnome stronghold is not 
-  implemented in the game yet so we consider the glider free game for those who want to use it. You have several locations 
-  you can teleport to right away. 
+  walk all the way to edgeville pull the wilderness lever, pull it again and end up in Ardy. Tree gnome stronghold is not
+  implemented in the game yet so we consider the glider free game for those who want to use it. You have several locations
+  you can teleport to right away.
   <br/>
   <br/>
   <img alt="" height="150" src="../img/main/kbase/getting_started/gnomeGlider.PNG" width="330"/>
@@ -276,7 +280,7 @@ layout: guide
   <b>Note: This will be removed once the quest is implemented</b> </p>
   <br/>
   <p><b> Spirit Trees </b></p>
-  <p> Just like the Gnome Gliders, the Spirit Trees are unlocked as of right now because Tree gnome village quest is not 
+  <p> Just like the Gnome Gliders, the Spirit Trees are unlocked as of right now because Tree gnome village quest is not
   implemented yet! </p>
   <img alt="" height="150" src="../img/main/kbase/getting_started/treegnome.PNG" width="350"/>
   <p><b> Note: This will be removed once the quest is implemented </b></p>
@@ -297,11 +301,11 @@ layout: guide
   <span class="headertitleleft"><span class="headertitleright">Extra</span></span>
   </div>
   <p><b> Quests </b> </p>
-  <p> One major thing that most people on the server forget when starting the server is that quests exist in the game. 
+  <p> One major thing that most people on the server forget when starting the server is that quests exist in the game.
       While most rsps do not really have quests this is a remake of the year 2009 so the plan is to add all the quests eventually
-      in the game. As pointed out earlier on this page is that when a quest is not implemented you can use some of the travel methods 
-      without needing to complete the quest. You can find all the quests inside the website under quest help. 
-      The quest cape works as well. Once a new quest is added you will no longer be able to wear the cape until that quest is completed. 
+      in the game. As pointed out earlier on this page is that when a quest is not implemented you can use some of the travel methods
+      without needing to complete the quest. You can find all the quests inside the website under quest help.
+      The quest cape works as well. Once a new quest is added you will no longer be able to wear the cape until that quest is completed.
   </p>
   <br/>
   <p> <b> Diaries </b></p>
@@ -311,18 +315,18 @@ layout: guide
   green star in your quests tab to check them out! </p>
   <br/>
   <p> <b> Dailies </b></p>
-  <p> With a new system for Dailies being added the dailyscape grind has come to 09. Do not worry, this will not consume your entire gameplay experience 
-    since there is plenty of stuff to do inside of the game. Just to name a few dailies there are shooting stars, penguin hide n seek, and 
+  <p> With a new system for Dailies being added the dailyscape grind has come to 09. Do not worry, this will not consume your entire gameplay experience
+    since there is plenty of stuff to do inside of the game. Just to name a few dailies there are shooting stars, penguin hide n seek, and
     things like battlestaves being in stock. There will be guides soon on our local <a href="https://cdn.2009scape.org/wiki/doku.php?id=start">Wiki</a>. </p>
   <br/>
   <p> <b> Slayer Rerolls </b></p>
-  <p> Being a Community we are always voting in Quality of life updates that help players releive a partial bit of the tedious unnecessary grind of their 
-    game play experience. In 2009scape, we have allowed as long as you are within the dialogue to reroll the slayer task. If you click out 
+  <p> Being a Community we are always voting in Quality of life updates that help players releive a partial bit of the tedious unnecessary grind of their
+    game play experience. In 2009scape, we have allowed as long as you are within the dialogue to reroll the slayer task. If you click out
     the game has noted that you had accepted the slayer task.
   </p>
   <br/>
   <br/>
-  <p> Let us know on discord/matrix if anything should be added to the getting started guide or if any other pages should be linked from this page. </p>
+  <p>Let us know on the forums if you have any suggestions for this guide and make sure you check out our wiki for quest guides and more.</p>
   <br/>
   <div class="backtotop"><a href="#top">Back to the top</a></div>
   <br/>
