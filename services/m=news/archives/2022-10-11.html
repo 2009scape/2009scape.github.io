@@ -1,0 +1,214 @@
+---
+title: Authentic Alchemy and More
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2022-10-11 00:00:00 +0000
+authors: ryannathans
+excerpt: "Numerous fixes, improvements and authentic alchemy at last!"
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+                                        <p>Greetings Explorers</p>
+                                        <p>There have been some more changes in Gielinor:</p><ul>
+<li>Added agility grappling shortcut from Catherby to Taverley (one way)<br />
+Updated ContentAPI to have a method for checking if any item from a given set of items is equipped by the player</li>
+<li>Unstuck green dragon bots<br />
+<br />
+Converted Edgeville <-> GE Shortcut to use Listener<br />
+Made Green Dragon bots use that listener so they don't all get stuck outside the GE tunnel<br />
+::botinfo no longer requires moderator privileges<br />
+Added option to ForceMovement that lets the entity stay locked</li>
+<li>Implemented imp teleporting<br />
+<br />
+Added behavior to little red imps to allow them to teleport around<br />
+Imps have a 1/10 chance on each hit of teleporting away<br />
+Imps have a 1/75 chance on each tick of teleporting away</li>
+<li>Update README to point to more up to date guides provided by the Wiki</li>
+<li>Alchemy value now derived from item value (from cache)<br />
+Removed all alchemy value overrides from item config json<br />
+All items should now have authentic alchemy values</li>
+<li>Fixed value parsing from item definitions</li>
+<li>Kalphite Drop Table Updates<br />
+<br />
+Updated Kalphite Queen DT<br />
+Set Dragon Chainbody to 1/256<br />
+Set Dragon 2h Sword to 1/256<br />
+Set Clue Scroll to 1/128<br />
+Updated Kalphite Guardian DT<br />
+Removed noted potato cactus drop<br />
+Corrected rune armor drops</li>
+<li>Adventure bots no longer get stuck at Falador wall, Draynor bank or east of Catherby<br />
+Added moderator+ command ::botinfo that lets you see what a bot is up to</li>
+<li>Fixed Earth Elementals dropping unusable coins</li>
+<li>Removed some inappropriate and non-era-accurate bot names</li>
+<li>Adjusted DTs for Dagannoth Rex, Prime, and Supreme<br />
+<br />
+Set Warrior's Ring to 1/128<br />
+Set Berserker's Ring to 1/128<br />
+Set Archer's Ring to 1/128<br />
+Set Seer's Ring to 1/128<br />
+Set Dragon Axe to 1/128<br />
+Set Mud Battlestaff to 1/128<br />
+Set Seercull to 1/128</li>
+<li>Fixed ItemActionPacket which broke useWith in some situations<br />
+<br />
+Fixes Dwarf Cannon Quest<br />
+Fixes Witch's House Quest<br />
+Fixes Demon Slayer Quest</li>
+<li>God Wars Dungeon DT Updates<br />
+<br />
+Adjusted General Graardor DT<br />
+Set Bandos Chestplate, Tassets, and Boots to 1/270<br />
+Set Bandos Hilt to 1/380<br />
+Set Godsword Shards to 1/540<br />
+Rewrote Sergeant Strongstack, Sergeant Steelwill, and Sergeant Grimspike DTs<br />
+Set Bandos Chestplate, Tassets, and Boots to 1/4500<br />
+Set Godsword Shards to 1/1500<br />
+Adjusted Kree'arra DT<br />
+Set Armadyl Helmet, Chestplate, and Plateskirt to 1/270<br />
+Set Armadyl Hilt to 1/380<br />
+Set Godsword Shards to 1/540<br />
+Rewrote Wingman Skree, Flockleader Geerin, and Flight Kilisa DTs<br />
+Set Armadyl Helmet, Chestplate, and Plateskirt to 1/4500<br />
+Set Godsword Shards to 1/1500<br />
+Adjusted Zilyana DT<br />
+Set Saradomin Sword to 1/90<br />
+Set Saradomin Hilt to 1/380<br />
+Set Godsword Shards to 1/540<br />
+Rewrote Starlight, Growler, and Bree DTs<br />
+Set Saradomin Sword to 1/1500<br />
+Set Godsword Shards to 1/1500<br />
+Adjusted K'ril Tsutsaroth DT<br />
+Set Zamorakian Spear to 1/90<br />
+Set Zamorak Hilt to 1/380<br />
+Set Godsword Shards to 1/540<br />
+Rewrote Balfrug Kreeyath, Zakl'n Gritch, and Tstanon Karlak DTs<br />
+Set Zamorakian Spear to 1/1500<br />
+Set Godsword Shards to 1/1500</li>
+<li>Fixed dialogue where player speaks instead of Kolodion</li>
+<li>Lunar spell Fertile Soil translated to Kotlin</li>
+<li>Fixed unneeded comma in item_config.json</li>
+<li>Fixed over 500 items tradability, alch values, weights & examine texts<br />
+<br />
+All Canifis shop clothes<br />
+All Kelgadrim shop clothes<br />
+All Tree gnome shop clothes<br />
+Infinity boots, rock-shell plate, couple of misc clothes, HAM, Fremmenik etc<br />
+All (g) and (t) d'hides<br />
+Every flatpack furniture & bagged plants + other misc items related to construction</li>
+<li>Separated round and pointy shelled snail NPCs & gave each their respective shell drops, thus fixing the remaining uncompletable clue scrolls</li>
+<li>Updated Dust devils drop table<br />
+<br />
+Removed ashes from 100% drops, supposed to only be bones<br />
+Removed some items that are RDT only<br />
+Removed duplicate steel axe<br />
+Removed single Law rune drop<br />
+Added extra entries for Fire runes & coins<br />
+Some other small tweaks for authenticity<br />
+Changed Dragon Chainbody to 1/32768</li>
+<li>Fixed issues in Hetty's dialogue repeating in Witch's Potion Quest</li>
+<li>Fixed bug with barbarian strength mix consumption, now decrements doses correctly</li>
+<li>Fixed issue where gourmet impling was not moving</li>
+<li>TzHaar Drop Table Changes<br />
+<br />
+Added Obsidian Charms to the 4 TzHaar units (Ket, Xil, Hur, and Mej) and their proper charm drop table<br />
+Removed Obsidian Charms from the 4 TzHaar unit's main drop tables<br />
+Filled in the empty space with increased Tokkul and Nothing drops<br />
+Reset all Obsidian Items to 1/512<br />
+Reset TzHaar-Mej-Tal to 1/4096</li>
+<li>Implemented the authentic interaction with Abador Crank if you manage to enter morytania without Priest in Peril<br />
+Corrected the teleother spell to play the correct graphics on the target</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
