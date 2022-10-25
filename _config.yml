@@ -1,2 +1,2 @@
 encoding: UTF-8
-exclude: [serve.bat, serve.sh, parse.py, README.md, services/m=poll/*, services/m=forum/sl=*, services/m=itemdb_rs/*]
+exclude: [serve.bat, serve.sh, parse.py, README.md]
