@@ -1,0 +1,194 @@
+---
+title: Happy Halloween!
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2022-10-30 00:00:00 +0000
+authors: ryannathans
+excerpt: "We will not have an event update this year. Instead, enjoy another fresh batch of bug fixes and code modernisation..."
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+                                        <p>Happy Halloween everyone!</p>
+                                        <p>We will not have an event update this year. Instead, enjoy another fresh batch of bug fixes and code modernisation:</p><ul>
+<li>Added secondary drop tables<br />
+<br />
+Uncommon seed drop table added<br />
+Gem drop table added<br />
+Herb drop table added<br />
+Reworked Green Dragon drop table<br />
+Reworked Moss Giant drop table</li>
+<li>Fixed adventure bots not pickpocketing properly</li>
+<li>Updated SapCollect plugin to listener<br />
+Corrected sap collection interaction to require a knife instead of a bucket</li>
+<li>Updated SpiritShieldBless plugin to listener<br />
+Updated ContentAPI to include a couple of new methods for handling dialogue options and actions</li>
+<li>Updated CrystalKeyCreate plugin to listener</li>
+<li>Removed unused CapeDyeing plugin (handled by CapeDyer)<br />
+Fixed bug preventing use of orange dye on capes</li>
+<li>Updated HairdresserCheese plugin to listener</li>
+<li>Updated SandSource plugin to listener</li>
+<li>Fixed The Restless Ghost skull interaction (again)</li>
+<li>Fixed odd bug preventing check of non-combat level requirements when equipping items</li>
+<li>Fixed bug preventing deposit of noted items already present in bank when bank is full</li>
+<li>Updated PriestInPerilUse plugin to listener</li>
+<li>Removed unused BurnMeat plugin (handled by CookingDialogue)</li>
+<li>Updated KaramjaBananaCrate plugin to listener<br />
+Moved "search" and "fill" interactions out of KaramjaOptionPlugin into new KaramjaBananaCrateListener</li>
+<li>Updated EctophialFill plugin to listener</li>
+<li>Updated ChestKey plugin to listener (applies to Pirate Treasure chest key being used on chest in Blue Moon Inn)</li>
+<li>Removed unused WaterSkinHandler plugin (handled by WaterSourceListener)</li>
+<li>Updated SwampHoleRope plugin to listener (applies to Lumbridge swamp hole)</li>
+<li>Fixed adventure bots getting stuck south west of GE</li>
+<li>Removed unused LadiKeliRope plugin (handled by RopeOnLadyKeli)</li>
+<li>Updated TutorialFurnace plugin to listener</li>
+<li>Updated PoisonFountain plugin to listener</li>
+<li>Updated GWDEntranceRopeUsage plugin to listener (Note: this handles only the case where a rope is used directly on the hole; using the tie-rope option is handled by a separate plugin)</li>
+<li>Updated CauldronOfThunder plugin to listener</li>
+<li>Added Fenkenstrain experiment spawns, stats, examines, and animations</li>
+<li>Converted the Corporeal Beast drop table to the 512 weight method<br />
+<br />
+Arcane Sigil 1/1280 -> 1/2560<br />
+2000 Cannonballs 1/35 -> 1/30<br />
+175 Onyx Bolts 1/35 -> 1/25<br />
+Removed Blood Runes<br />
+Removed 'Nothing' Drop</li>
+<li>Added 4 plank spawns north of barbarian agility course</li>
+<li>Fixed item config for another 200+ items<br />
+<br />
+Butterfly in jar (from hunter) made all tradeable<br />
+Yak-hide armour & Fremennik round shield made tradeable, added examine text & weights<br />
+All karambwan poison spear & hastas made untradeable<br />
+Both Dragon chain armour kits made tradeable<br />
+All FoG items with 0 charges are tradeable, the rest are not<br />
+All Pirate items made tradeable, added examine text & weights<br />
+All Stealing Creation items now tradeable</li>
+<li>Fixed mithril grapples to only take 1 bolt instead of entire stack</li>
+<li>Updated Giant Mole Drop Table<br />
+<br />
+Corrected Mole Skin drops from 1-6 -> 1-3<br />
+Set Hard Clue Scroll to 1/128<br />
+Removed RDT items and increased RDT chance<br />
+Added Mithril 2h Sword<br />
+Rebalanced Weights</li>
+<li>Updated Chaos Elemental Drop Table<br />
+<br />
+Set Dragon 2h Sword to 1/127<br />
+Removed Dragon Dagger<br />
+Adjusted rune quantities<br />
+Added Iron Arrows<br />
+Removed Herb drops<br />
+Swapped Anchovy Pizza with Plain Pizza<br />
+Swapped 4-dose Super Potions with 1-dose Normal Potions<br />
+Swapped Medium Clues with Hard Clues</li>
+<li>Updated Cave Horror DT<br />
+<br />
+Set Black Mask to exactly 1/512 (Was 1/549)<br />
+Readjusted weights<br />
+Removed RDT items and increased RDT chance<br />
+Replaced Medium Clues with Hard Clues</li>
+<li>Barrows Brothers Stat Corrections<br />
+<br />
+Set Ahrim's Attack Speed to 5 ticks<br />
+Set Ahrim's Max Damage to 20<br />
+Set Verac's Max Damage to 24<br />
+Set Karil's Max Damage to 21</li>
+<li>Added ::poison <username> <damage> debug command for testing<br />
+Converted Cure Me to kotlin<br />
+Converted Cure Other to kotlin<br />
+Converted Translated Cure Group to kotlin</li>
+<li>Hotfix players getting stuck after obstacles</li>
+<li>Converted ChampionsGuildDoor to Kotlin + InteractionListener</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
