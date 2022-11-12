@@ -454,7 +454,7 @@
 .newsImage {
  float: right;
  margin-left: 6px;
- background: url(../img/main/home/news_frame.png) bottom no-repeat;
+ background: url(../img/main/home/news_frame.webp) bottom no-repeat;
  font-size: 0;
 }
 

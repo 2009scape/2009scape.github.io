@@ -68,11 +68,11 @@ export default {
           <div class="stat-data">Attack bonuses</div>
           <tbody>
             <tr></tr>
-            <td><img src=".././img/items/1207.png"></td>
-            <td><img src=".././img/items/1325.png"></td>
-            <td><img src=".././img/items/1339.png"></td>
-            <td><img src=".././img/alt/magic.png"></td>
-            <td><img src=".././img/alt/ranged.png"></td>
+            <td><img src=".././img/items/1207.webp"></td>
+            <td><img src=".././img/items/1325.webp"></td>
+            <td><img src=".././img/items/1339.webp"></td>
+            <td><img src=".././img/alt/magic.webp"></td>
+            <td><img src=".././img/alt/ranged.webp"></td>
             <tr>
               <td>{{bonus.aStab}}</td>
               <td>{{bonus.aSlash}}</td>
@@ -84,12 +84,12 @@ export default {
           <div class="stat-data">Defense bonuses</div>
           <tbody>
             <tr></tr>
-            <td><img src=".././img/items/1207.png"></td>
-            <td><img src=".././img/items/1325.png"></td>
-            <td><img src=".././img/items/1339.png"></td>
-            <td><img src=".././img/alt/magic.png"></td>
-            <td><img src=".././img/alt/ranged.png"></td>
-            <td><img src=".././img/alt/summoning.png"></td>
+            <td><img src=".././img/items/1207.webp"></td>
+            <td><img src=".././img/items/1325.webp"></td>
+            <td><img src=".././img/items/1339.webp"></td>
+            <td><img src=".././img/alt/magic.webp"></td>
+            <td><img src=".././img/alt/ranged.webp"></td>
+            <td><img src=".././img/alt/summoning.webp"></td>
             <tr>
               <td>{{bonus.dStab}}</td>
               <td>{{bonus.dSlash}}</td>
@@ -102,10 +102,10 @@ export default {
           <div class="stat-data">Other bonuses</div>
           <tbody>
             <tr></tr>
-            <td><img src=".././img/alt/Strength_icon.png"></td>
-            <td><img src=".././img/alt/RangedStrength.png"></td>
-            <td><img src=".././img/alt/MagicStrength.png"></td>
-            <td><img src=".././img/alt/Prayer_icon.png"></td>
+            <td><img src=".././img/alt/Strength_icon.webp"></td>
+            <td><img src=".././img/alt/RangedStrength.webp"></td>
+            <td><img src=".././img/alt/MagicStrength.webp"></td>
+            <td><img src=".././img/alt/Prayer_icon.webp"></td>
             <tr>
               <td>{{bonus.strength}}</td>
               <td>{{bonus.rangedStr}}</td>
@@ -172,11 +172,11 @@ export default {
     },
     iconURL(id) {
       switch (id) {
-        case 0: return "../img/items/nothing.png";
-        case 1: return "../img/items/2677.png"; //Clue Scroll (easy)
-        case 5733: return "../img/items/2801.png"; //Clue Scroll (medium)
-        case 12070: return "../img/items/2722.png"; //Clue Scroll (hard)
-        default: return "../img/items/" + id + ".png"
+        case 0: return "../img/items/nothing.webp";
+        case 1: return "../img/items/2677.webp"; //Clue Scroll (easy)
+        case 5733: return "../img/items/2801.webp"; //Clue Scroll (medium)
+        case 12070: return "../img/items/2722.webp"; //Clue Scroll (hard)
+        default: return "../img/items/" + id + ".webp"
       }
     },
     sortFractional(d) {

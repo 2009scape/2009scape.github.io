@@ -100,27 +100,27 @@ span.large {
 }
 
 .topbord, .bottombord {
- background-image: url(../img/devblog/frame_horizontal.png);
+ background-image: url(../img/devblog/frame_horizontal.webp);
 }
 
 .leftbord, .rightbord {
- background-image: url(../img/devblog/frame_vertical.png);
+ background-image: url(../img/devblog/frame_vertical.webp);
 }
 
 .toplcorn {
- background-image: url(../img/devblog/frame_topleft.png);
+ background-image: url(../img/devblog/frame_topleft.webp);
 }
 
 .toprcorn {
- background-image: url(../img/devblog/frame_topright.png);
+ background-image: url(../img/devblog/frame_topright.webp);
 }
 
 .bottomlcorn {
- background-image: url(../img/devblog/frame_bottomleft.png);
+ background-image: url(../img/devblog/frame_bottomleft.webp);
 }
 
 .bottomrcorn {
- background-image: url(../img/devblog/frame_bottomright.png);
+ background-image: url(../img/devblog/frame_bottomright.webp);
 }
 
 /* xKB overrides */
@@ -175,35 +175,35 @@ span.large {
 }
 
 .navArrows .first {
- background: url(../img/devblog/first_hover.png);
+ background: url(../img/devblog/first_hover.webp);
 }
 
 .navArrows .previous {
- background: url(../img/devblog/previous_hover.png);
+ background: url(../img/devblog/previous_hover.webp);
 }
 
 .navArrows .next {
- background: url(../img/devblog/next_hover.png);
+ background: url(../img/devblog/next_hover.webp);
 }
 
 .navArrows .last {
- background: url(../img/devblog/last_hover.png);
+ background: url(../img/devblog/last_hover.webp);
 }
 
 #post .navArrows .first {
- background: url(../img/devblog/post/first_hover.png);
+ background: url(../img/devblog/post/first_hover.webp);
 }
 
 #post .navArrows .previous {
- background: url(../img/devblog/post/previous_hover.png);
+ background: url(../img/devblog/post/previous_hover.webp);
 }
 
 #post .navArrows .next {
- background: url(../img/devblog/post/next_hover.png);
+ background: url(../img/devblog/post/next_hover.webp);
 }
 
 #post .navArrows .last {
- background: url(../img/devblog/post/last_hover.png);
+ background: url(../img/devblog/post/last_hover.webp);
 }
 
 .navArrows .previous,
@@ -308,7 +308,7 @@ span.large {
  padding: 5px;
  width: 113px;
  height: 79px;
- background: url(../img/devblog/post_image_bg.png);
+ background: url(../img/devblog/post_image_bg.webp);
 }
 
 #list .postImage img {
@@ -413,7 +413,7 @@ span.large {
 #filterButton {
  margin: 12px auto 0;
  position: relative;
- background: url(../img/devblog/filter_hover.png);
+ background: url(../img/devblog/filter_hover.webp);
 }
 
 #filterButton img {
@@ -469,7 +469,7 @@ span.large {
 
 #post .devblog .hr {
  clear: both;
- background: url(../img/devblog/post/hr.png) center center no-repeat;
+ background: url(../img/devblog/post/hr.webp) center center no-repeat;
 }
 
 #post .devblog h3,
@@ -511,30 +511,30 @@ span.large {
 
 /* kbase overrides (basically to remove fancy border */
 .topshadow{
- background: url(../img/devblog/sidebart.png) repeat-x left top;
+ background: url(../img/devblog/sidebart.webp) repeat-x left top;
 }
 .bottombordershad{
- background: url(../img/devblog/articlebottom.png) transparent repeat-x left bottom;
+ background: url(../img/devblog/articlebottom.webp) transparent repeat-x left bottom;
 }
 .leftshadow {
- background: url(../img/devblog/sidebarl.png) transparent repeat-y left center;
+ background: url(../img/devblog/sidebarl.webp) transparent repeat-y left center;
 }
 .rightshadow {
- background:url(../img/devblog/sidebar.png) transparent repeat-y right center;
+ background:url(../img/devblog/sidebar.webp) transparent repeat-y right center;
 }
 .leftcorner {
- background: url(../img/devblog/artroundtl.png) transparent no-repeat left top;
+ background: url(../img/devblog/artroundtl.webp) transparent no-repeat left top;
 }
 
 .rightcorner {
- background: url(../img/devblog/artroundtr.png) transparent no-repeat right top;
+ background: url(../img/devblog/artroundtr.webp) transparent no-repeat right top;
 }
 
 .bottomleftshad{
- background: url(../img/devblog/articlebottomshad.png) transparent no-repeat left bottom;
+ background: url(../img/devblog/articlebottomshad.webp) transparent no-repeat left bottom;
 }
 
 .bottomrightshad{
- background: url(../img/devblog/artbottomshadr.png) transparent no-repeat right bottom;
+ background: url(../img/devblog/artbottomshadr.webp) transparent no-repeat right bottom;
 }
 /* x kbase overrides (basically to remove fancy border */
