@@ -88,7 +88,7 @@
  position: relative;
  width: 310px;
  height: 278px;
- background: #4e412d url(../img/main/home/advert_bgcfcd.png?0) no-repeat;
+ background: #4e412d url(../img/main/home/advert_bgcfcd.webp) no-repeat;
 }
 
 #advert span {
@@ -172,7 +172,7 @@
  position: relative;
  height: 59px;
  overflow: hidden;
- background: url(../img/main/home/feature_bgcfcd.png?0) no-repeat;
+ background: url(../img/main/home/feature_bgcfcd.webp) no-repeat;
  text-align: left;
 }
 
@@ -215,13 +215,13 @@
 
 #articles .section {
  padding: 0;
- background: #4e412d url(../img/main/home/articles_bgcfcd.png?0) repeat-y;
+ background: #4e412d url(../img/main/home/articles_bgcfcd.webp) repeat-y;
 }
 
 .articlesTitle {
  height: 26px;
  line-height: 26px;
- background: url(../img/main/home/articles_title_bgcfcd.png?0) no-repeat;
+ background: url(../img/main/home/articles_title_bgcfcd.webp) no-repeat;
  text-align: center;
  font-weight: bold;
  color: white;
@@ -240,13 +240,13 @@
  padding-right: 8px;
  line-height: 20px;
  text-align: right;
- background: url(../img/main/home/articles_more_bgcfcd.png?0) no-repeat;
+ background: url(../img/main/home/articles_more_bgcfcd.webp) no-repeat;
 }
 
 .articlesFooter {
  height: 5px;
  font-size: 0px;
- background: url(../img/main/home/articles_footercfcd.png?0) no-repeat;
+ background: url(../img/main/home/articles_footercfcd.webp) no-repeat;
 }
 
 .aowBody {
@@ -302,7 +302,7 @@
 
 .searchbar {
  width: 196px;
- background: white url(../img/main/home/searchbarcfcd.png?0) no-repeat scroll 0% 50%;
+ background: white url(../img/main/home/searchbarcfcd.webp) no-repeat scroll 0% 50%;
  height: 30px;
 }
 
@@ -391,7 +391,7 @@
 
 #playbutton .shim,
 #playbutton .shimHover {
- background: transparent url(../img/main/skins/default/playshimda4f.png0) no-repeat left -99px;
+ background: transparent url(../img/main/skins/default/playshimda4f.webp) no-repeat left -99px;
  width: 274px;
  height: 41px;
  cursor: pointer;
@@ -433,7 +433,7 @@
 
 .newsTitle {
  height: 20px;
- background: url(../img/main/home/news_title_bgcfcd.png?0) left repeat-y;
+ background: url(../img/main/home/news_title_bgcfcd.webp) left repeat-y;
  font-weight: bold;
  color: #f0cd87;
 }

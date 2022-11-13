@@ -321,7 +321,7 @@
 
  #submit_button a{
   cursor: pointer;
-  background: transparent url('../img/weblogin/loginc4ca.png?1') no-repeat top left;
+  background: transparent url('../img/weblogin/loginc4ca.webp') no-repeat top left;
   width: 264px;
   height: 49px;
   display: block;
@@ -336,10 +336,10 @@
   font-size: 0px;
   text-indent: -9999px;
   cursor: pointer;
-  background: transparent url('../img/weblogin/loginc4ca.png?1') no-repeat top left;
+  background: transparent url('../img/weblogin/loginc4ca.webp') no-repeat top left;
  }
  #submit_button button:hover{
-  background: transparent url('../img/weblogin/loginc4ca.png?1') no-repeat bottom left;
+  background: transparent url('../img/weblogin/loginc4ca.webp') no-repeat bottom left;
   visibility: visible;
   z-index: 10;
  }

@@ -74,7 +74,7 @@ body {
 #head {
  font-size: 0;
  
- background: transparent url(../img/main/layout/bg_headerc4ca.png?1) no-repeat center top;
+ background: transparent url(../img/main/layout/bg_headerc4ca.webp) no-repeat center top;
 }
 
 #headBg {
@@ -430,15 +430,15 @@ way to fit your requirements.
 
 
 .sectionHeader {
- background: #bd9c5a url(../img/main/skins/default/section_header_bgc20a.png) top repeat-x;
+ background: #bd9c5a url(../img/main/skins/default/section_header_bgc20a.webp) top repeat-x;
 }
 
 .sectionHeader .left {
- background: url(../img/main/skins/default/section_header_leftc20a.png) left no-repeat;
+ background: url(../img/main/skins/default/section_header_leftc20a.webp) left no-repeat;
 }
 
 .sectionHeader .right {
- background: url(../img/main/skins/default/section_header_rightc20a.png) right no-repeat;
+ background: url(../img/main/skins/default/section_header_rightc20a.webp) right no-repeat;
 }
 
 .sectionHeader .plaque, .sectionHeader .plaque_medium, .sectionHeader .plaque_large {
@@ -454,15 +454,15 @@ way to fit your requirements.
 }
 
 .sectionHeader .plaque_medium {
- background: url(../img/main/skins/default/section_header_plaque_mediumc20a.png) center top no-repeat;
+ background: url(../img/main/skins/default/section_header_plaque_mediumc20a.webp) center top no-repeat;
 }
 
 .sectionHeader .plaque_large {
- background: url(../img/main/skins/default/section_header_plaque_largec20a.png) center top no-repeat;
+ background: url(../img/main/skins/default/section_header_plaque_largec20a.webp) center top no-repeat;
 }
 
 .sectionHeader .plaque {
- background: url(../img/main/skins/default/section_header_plaquec20a.png) center top no-repeat;
+ background: url(../img/main/skins/default/section_header_plaquec20a.webp) center top no-repeat;
 }
 
 .sectionHeader img {
@@ -524,7 +524,7 @@ a {
  margin: 0 auto;
  padding-top: 5px;
  text-align: center;
- background: transparent url(../img/main/layout/bg_footerc20a.png) center bottom no-repeat;
+ background: transparent url(../img/main/layout/bg_footerc20a.webp) center bottom no-repeat;
  position: relative;
  height: 73px;
 }
@@ -535,7 +535,7 @@ a {
  margin-left: auto;
  margin-right: auto;
  position: relative;
- background: transparent url(../img/main/layout/bg_footerc20a.png) center bottom no-repeat;
+ background: transparent url(../img/main/layout/bg_footerc20a.webp) center bottom no-repeat;
  top: 2px;
  left: 0;
 }
