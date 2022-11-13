@@ -24,7 +24,7 @@
  color: #675f39;
  margin: 2px;
  font-weight: bold;
- background: url(../img/main/layout/subarticle_header_bg.png) repeat-x;
+ background: url(../img/main/layout/subarticle_header_bg.webp) repeat-x;
 }
 
 .subarticleHeaderleft {
@@ -38,7 +38,7 @@
  min-height: 15px;
  text-align: left;
  color: #675f39;
- background: url(../img/main/layout/subarticle_header_bg.png) repeat-x;
+ background: url(../img/main/layout/subarticle_header_bg.webp) repeat-x;
  padding: 6px 10px;
  font-weight: normal;
 }
@@ -173,7 +173,7 @@ button:hover #poll_submit, button:hover #poll_reset {
 }
 
 #poll_submit {
- background: transparent url('../img/poll/pollsubmit_highlight.png') no-repeat -999px -999px;
+ background: transparent url('../img/poll/pollsubmit_highlight.webp') no-repeat -999px -999px;
  position: relative;
  height: 33px;
  width: 180px;
@@ -193,7 +193,7 @@ button:hover #poll_submit, button:hover #poll_reset {
 }
 
 #poll_reset {
- background: transparent url('../img/poll/pollreset_highlight.png') no-repeat -999px -999px;
+ background: transparent url('../img/poll/pollreset_highlight.webp') no-repeat -999px -999px;
  position: relative;
  height: 33px;
  width: 180px;

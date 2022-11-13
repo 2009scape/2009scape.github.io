@@ -86,7 +86,7 @@
  left: 0;
  width: 229px;
  height: 24px;
- background: transparent url(../img/create/check_highlight.png) no-repeat -999px -999px;
+ background: transparent url(../img/create/check_highlight.webp) no-repeat -999px -999px;
 }
 
 #check:hover #check_submit {
@@ -101,7 +101,7 @@
 
 .brown_box input.fail {
  border: 2px solid #b40a0a;
- background: #F8F1E7 url(../img/create/cross.png) no-repeat right 50%;
+ background: #F8F1E7 url(../img/create/cross.webp) no-repeat right 50%;
 }
 
 .brown_box input.loading {
@@ -111,7 +111,7 @@
 
 .brown_box input.success {
  border: 2px solid #629428;
- background: #F8F1E7 url(../img/create/tick.png) no-repeat right 50%;
+ background: #F8F1E7 url(../img/create/tick.webp) no-repeat right 50%;
 }
 
 .formSection div, #country {
@@ -182,18 +182,18 @@
  top: 19px;
  width: 276px;
  overflow: hidden;
- background: transparent url(../img/create/bubble_bg.png) no-repeat 13px top;
+ background: transparent url(../img/create/bubble_bg.webp) no-repeat 13px top;
  z-index: 2;
 }
 #jmesgBg.u13 {
- background: transparent url(../img/create/bubble_short_bg.png) no-repeat 13px top;
+ background: transparent url(../img/create/bubble_short_bg.webp) no-repeat 13px top;
 }
 
 #jmesg {
  height: 241px;
  padding: 5px 8px 8px 20px;
  line-height: 14px;
- background: transparent url(../img/create/arrow.png) no-repeat left 14px; /* guestimate where the arrow starts */
+ background: transparent url(../img/create/arrow.webp) no-repeat left 14px; /* guestimate where the arrow starts */
 }
 #jmesg.u13 {
  height: 144px;
@@ -277,7 +277,7 @@
  left: 0;
  width: 323px;
  height: 32px;
- background: transparent url(../img/create/create_highlight.png) no-repeat -999px -999px;
+ background: transparent url(../img/create/create_highlight.webp) no-repeat -999px -999px;
 }
 
 #submitbutton:hover #create_submit {
@@ -323,7 +323,7 @@
 }
 
 #button-right span.lev1 {
- background-image: url('../img/create/play.png');
+ background-image: url('../img/create/play.webp');
 }
 
 span.lev1 {
@@ -548,7 +548,7 @@ div#logos div#logo2 {
   
   height: 40px;
   border: none;
-  background: transparent url(../img/create/playnow_highlight.png) no-repeat;
+  background: transparent url(../img/create/playnow_highlight.webp) no-repeat;
  }
  #playnow a img{}
  #playnow a:hover img{

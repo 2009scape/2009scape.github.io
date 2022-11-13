@@ -121,7 +121,7 @@
 .plog_button {
  height: 23px;
  line-height: 23px;
- background-image: url('../img/playerlog/buttons/rounded_buttonc81e.png?2');
+ background-image: url('../img/playerlog/buttons/rounded_buttonc81e.webp');
  float:left;
  background-repeat: no-repeat;
  background-color: transparent;
@@ -761,16 +761,16 @@ input.go:active{
  left: 0;
 }
 .PageControls a.First {
- background:    url('../img/playerlog/buttons/jump_first_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_first_hoverc81e.webp') no-repeat;
 }
 .PageControls a.Previous {
- background:    url('../img/playerlog/buttons/jump_previous_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_previous_hoverc81e.webp') no-repeat;
 }
 .PageControls a.Next {
- background:    url('../img/playerlog/buttons/jump_next_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_next_hoverc81e.webp') no-repeat;
 }
 .PageControls a.Last {
- background:    url('../img/playerlog/buttons/jump_last_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_last_hoverc81e.webp') no-repeat;
 }
 .PageControls a:hover {
     font-weight: normal;
