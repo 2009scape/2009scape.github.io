@@ -2,3 +2,4 @@ _site/
 .jekyll-cache/
 _config.yml
 .jekyll-metadata
+.idea/
