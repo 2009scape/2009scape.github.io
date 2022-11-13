@@ -16,7 +16,7 @@
 
 
  #login_background{
-  background: url('../img/weblogin/loginarea_bg_nowarn.jpg') center top;
+  background: url('../img/weblogin/loginarea_bg_nowarn.webp') center top;
   width: 740px;
   /* No recaptcha, no warning */
   height: 308px;

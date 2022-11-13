@@ -421,7 +421,7 @@ div#logos div#logo2 {
 
  #statusbar .statusbutton.firstoffspring{
   padding-left:      10px;
-  background-image:    url('../img/create/status_left.jpg');
+  background-image:    url('../img/create/status_left.webp');
   background-repeat:   no-repeat;
   background-position:  top left;
  }
@@ -429,7 +429,7 @@ div#logos div#logo2 {
  }
  #statusbar .statusbutton.lastoffspring{
   padding-right:      10px;
-  background-image:    url('../img/create/status_right.jpg');
+  background-image:    url('../img/create/status_right.webp');
   background-repeat:   no-repeat;
   background-position:  top right;
  }

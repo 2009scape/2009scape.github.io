@@ -43,11 +43,11 @@ body {
 }
 
 .bodyBackground {
- background: #000 url(./../img/2009img/main/skins/default/bg.jpg2) repeat-y scroll center 355px;
+ background: #000 url(./../img/2009img/main/skins/default/bg.webp) repeat-y scroll center 355px;
 }
 
 .bodyBackgroundHead {
- background: url(./../img/2009img/main/skins/default/bg.jpg2) no-repeat scroll center top;
+ background: url(./../img/2009img/main/skins/default/bg.webp) no-repeat scroll center top;
  padding-top: 0.1px; 
 }
 
