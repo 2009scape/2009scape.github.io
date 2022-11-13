@@ -30,7 +30,7 @@ input, textarea, select {
 
 
 /* Before I break the entire website trying to change this wonky background. I am going to revert the changes by doing this PR. 
-   This is the file that controls the main layout of the website. the 2009 picture is background: url(../img/2009img/main/skins/default/bg.jpg);
+   This is the file that controls the main layout of the website. the 2009 picture is background: url(../img/2009img/main/skins/default/bg.webp);
    Lets wait until I figure everything out perfectly.
 
 */
@@ -43,16 +43,16 @@ body {
 }
 
 .bodyBackground {
- background: #000 url(./../img/2009img/main/skins/default/bg.jpg?12) repeat-y scroll center 355px;
+ background: #000 url(./../img/2009img/main/skins/default/bg.webp) repeat-y scroll center 355px;
 }
 
 .bodyBackgroundHead {
- background: url(./../img/2009img/main/skins/default/bg.jpg?12) no-repeat scroll center top;
+ background: url(./../img/2009img/main/skins/default/bg.webp) no-repeat scroll center top;
  padding-top: 0.1px; 
 }
 
 .bodyBackgroundHeadAdvert {
- background: url(./../img/2009img/main/skins/default/bg.jpg) no-repeat scroll center top;
+ background: url(./../img/2009img/main/skins/default/bg.webp) no-repeat scroll center top;
  padding-top: 0.1px; 
 }
 
@@ -68,7 +68,7 @@ body {
 #scroll {
  height: 1%;
  
- background: transparent url(../img/main/layout/bg_scrollc4ca.jpg?1) repeat-y center 83px;
+ background: transparent url(../img/main/layout/bg_scrollc4ca.webp) repeat-y center 83px;
 }
 
 #head {
@@ -82,7 +82,7 @@ body {
  padding-bottom: 83px;
  margin-bottom: -83px;
  
- background: transparent url(../img/main/layout/bg_header.jpg) no-repeat center top;
+ background: transparent url(../img/main/layout/bg_header.webp) no-repeat center top;
 }
 
 #headBoard,#headOrangeTop,#headOrangeBottom,#headImage,#headAdvert,#menubox,.navigation,.navigation2,.navigation3, #headShort,#bannerNoad {
@@ -105,7 +105,7 @@ body {
 }
 
 #headShort {
- background: #c69e56 url(../img/main/layout/header_short.jpg);
+ background: #c69e56 url(../img/main/layout/header_short.webp);
  height: 19px;
  position: relative;
 }

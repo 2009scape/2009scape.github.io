@@ -39,7 +39,7 @@ body {
 }
 
 .bodyBackground {
- background: #000 url(../../2009scape-resources/img/website_layout/backgrounds/Jan-2009-bg.jpg) repeat-y scroll center top;
+ background: #000 url(../../2009scape-resources/img/website_layout/backgrounds/Jan-2009-bg.webp) repeat-y scroll center top;
 }
 
 
@@ -50,7 +50,7 @@ body {
 #scroll {
  height: 1%;
  
- background: transparent url(../../img/2009img/main/layout/bg_scroll.jpg) repeat-y center 83px;
+ background: transparent url(../../img/2009img/main/layout/bg_scroll.webp) repeat-y center 83px;
 }
 
 #head {
@@ -62,7 +62,7 @@ body {
 #headBg {
  padding-top: 12px;
  
- background: transparent url(../../img/2009img/main/layout/bg_header.jpg) no-repeat center top;
+ background: transparent url(../../img/2009img/main/layout/bg_header.webp) no-repeat center top;
 }
 
 #headBoard,#headOrangeTop,#headOrangeBottom,#headImage,#headAdvert,#menubox,.navigation,.navigation2,.navigation3, #headShort {
@@ -85,7 +85,7 @@ body {
 }
 
 #headShort {
- background: #c69e56 url(../../img/2009img/main/layout/header_short.jpg);
+ background: #c69e56 url(../../img/2009img/main/layout/header_short.webp);
  height: 19px;
  position: relative;
 }
