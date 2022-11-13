@@ -293,7 +293,7 @@ color:#319631;
 /* Button style------------------------------------ */
 #button_1 {
  position: absolute;
- background: url(../../img/itemdb/button_1_highlight.png) -999px -999px no-repeat;
+ background: url(../../img/itemdb/button_1_highlight.webp) -999px -999px no-repeat;
  height: 31px;
  width: 133px;
  display: block;
@@ -302,7 +302,7 @@ color:#319631;
 }
 #button_7 {
  position: absolute;
- background: url(../../img/itemdb/button_7_highlight.png) -999px -999px no-repeat;
+ background: url(../../img/itemdb/button_7_highlight.webp) -999px -999px no-repeat;
  height: 31px;
  width: 133px;
  display: block;
@@ -311,7 +311,7 @@ color:#319631;
 }
 #button_30 {
  position: absolute;
- background: url(../../img/itemdb/button_30_highlight.png) -999px -999px no-repeat;
+ background: url(../../img/itemdb/button_30_highlight.webp) -999px -999px no-repeat;
  height: 31px;
  width: 133px;
  display: block;
@@ -320,7 +320,7 @@ color:#319631;
 }
 #button_90 {
  position: absolute;
- background: url(../../img/itemdb/button_90_highlight.png) -999px -999px no-repeat;
+ background: url(../../img/itemdb/button_90_highlight.webp) -999px -999px no-repeat;
  height: 31px;
  width: 133px;
  display: block;
@@ -329,7 +329,7 @@ color:#319631;
 }
 #button_180 {
  position: absolute;
- background: url(../../img/itemdb/button_180_highlight.png) -999px -999px no-repeat;
+ background: url(../../img/itemdb/button_180_highlight.webp) -999px -999px no-repeat;
  height: 31px;
  width: 133px;
  display: block;
@@ -338,7 +338,7 @@ color:#319631;
 }
 #button_365 {
  position: absolute;
- background: url(../../img/itemdb/button_365_highlight.png) -999px -999px no-repeat;
+ background: url(../../img/itemdb/button_365_highlight.webp) -999px -999px no-repeat;
  height: 31px;
  width: 133px;
  display: block;

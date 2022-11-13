@@ -136,7 +136,7 @@
 
 .createbutton .shim,
 .createbutton .shimHover {
- background: transparent url(../img/main/skins/default/createshimda4f.png?120) no-repeat left -99px;
+ background: transparent url(../img/main/skins/default/createshimda4f.png0) no-repeat left -99px;
  width: 226px;
  height: 24px;
  cursor: pointer;
@@ -391,7 +391,7 @@
 
 #playbutton .shim,
 #playbutton .shimHover {
- background: transparent url(../img/main/skins/default/playshimda4f.png?120) no-repeat left -99px;
+ background: transparent url(../img/main/skins/default/playshimda4f.png0) no-repeat left -99px;
  width: 274px;
  height: 41px;
  cursor: pointer;
@@ -454,7 +454,7 @@
 .newsImage {
  float: right;
  margin-left: 6px;
- background: url(../img/main/home/news_frame.png) bottom no-repeat;
+ background: url(../img/main/home/news_frame.webp) bottom no-repeat;
  font-size: 0;
 }
 

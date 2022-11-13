@@ -96,7 +96,7 @@ body {
 }
 
 #headOrangeTop {
- background: url(../img/main/layout/head_orange_top.png);
+ background: url(../img/main/layout/head_orange_top.webp);
 }
 
 #headImage {
@@ -111,12 +111,12 @@ body {
 }
 
 #headOrangeBottom {
- background: url(../img/main/layout/head_orange_bottom.png);
+ background: url(../img/main/layout/head_orange_bottom.webp);
 }
 
 #headAdvert {
  margin-top: 4px;
- background: url(../img/advert/advert.png) top left no-repeat;
+ background: url(../img/advert/advert.webp) top left no-repeat;
 }
 
 #sessionText {
@@ -244,7 +244,7 @@ body {
 
 #menubox {
  margin-top: 4px;
- background: #898989 url(../img/main/layout/menu_bg.png) no-repeat left top;
+ background: #898989 url(../img/main/layout/menu_bg.webp) no-repeat left top;
  font-size: 12px;
  font-weight: bold;
  height: 27px;
@@ -315,7 +315,7 @@ way to fit your requirements.
  text-align: center;
  font-weight: bold;
  margin-bottom: 4px;
- background: url(../img/main/layout/menu_buttons_bg.png) left top;
+ background: url(../img/main/layout/menu_buttons_bg.webp) left top;
 }
 
 #menus a.tl#login, #menu a.tl#login:visited {
@@ -348,7 +348,7 @@ way to fit your requirements.
 #navlogout #menus #logout .ts {
  display: block;
  color: black;
- background: url(../img/main/layout/menu_buttons_bg.png) left -24px;
+ background: url(../img/main/layout/menu_buttons_bg.webp) left -24px;
 }
 
 
@@ -359,7 +359,7 @@ way to fit your requirements.
  top: 27px;
  padding: 0 0 1px 0;
  font-size: 12px;
- background: url(../img/main/layout/menu_buttons_bg.png) left bottom;
+ background: url(../img/main/layout/menu_buttons_bg.webp) left bottom;
 }
 
 #menus li:hover ul,
@@ -381,7 +381,7 @@ way to fit your requirements.
  color: white;
  text-decoration: none;
  text-align: left;
- background: transparent url(../img/main/layout/menu_buttons_bg.png) no-repeat 999px top;
+ background: transparent url(../img/main/layout/menu_buttons_bg.webp) no-repeat 999px top;
 }
 
 #menus a.fly span {
@@ -430,15 +430,15 @@ way to fit your requirements.
 
 
 .sectionHeader {
- background: #bd9c5a url(../img/main/skins/default/section_header_bgc20a.png?12) top repeat-x;
+ background: #bd9c5a url(../img/main/skins/default/section_header_bgc20a.png) top repeat-x;
 }
 
 .sectionHeader .left {
- background: url(../img/main/skins/default/section_header_leftc20a.png?12) left no-repeat;
+ background: url(../img/main/skins/default/section_header_leftc20a.png) left no-repeat;
 }
 
 .sectionHeader .right {
- background: url(../img/main/skins/default/section_header_rightc20a.png?12) right no-repeat;
+ background: url(../img/main/skins/default/section_header_rightc20a.png) right no-repeat;
 }
 
 .sectionHeader .plaque, .sectionHeader .plaque_medium, .sectionHeader .plaque_large {
@@ -454,15 +454,15 @@ way to fit your requirements.
 }
 
 .sectionHeader .plaque_medium {
- background: url(../img/main/skins/default/section_header_plaque_mediumc20a.png?12) center top no-repeat;
+ background: url(../img/main/skins/default/section_header_plaque_mediumc20a.png) center top no-repeat;
 }
 
 .sectionHeader .plaque_large {
- background: url(../img/main/skins/default/section_header_plaque_largec20a.png?12) center top no-repeat;
+ background: url(../img/main/skins/default/section_header_plaque_largec20a.png) center top no-repeat;
 }
 
 .sectionHeader .plaque {
- background: url(../img/main/skins/default/section_header_plaquec20a.png?12) center top no-repeat;
+ background: url(../img/main/skins/default/section_header_plaquec20a.png) center top no-repeat;
 }
 
 .sectionHeader img {
@@ -503,7 +503,7 @@ a {
  text-align: center;
  font-weight: bold;
  color: #f3c334;
- background: url(../img/main/layout/subsection_header_bg.png) repeat-x;
+ background: url(../img/main/layout/subsection_header_bg.webp) repeat-x;
 }
 
 .subheader {
@@ -512,7 +512,7 @@ a {
  text-align: center;
  font-weight: bold;
  color: #ffffff;
- background: url(../img/main/layout/subsection_subheader_bg.png) repeat-x;
+ background: url(../img/main/layout/subsection_subheader_bg.webp) repeat-x;
 }
 
 
@@ -524,7 +524,7 @@ a {
  margin: 0 auto;
  padding-top: 5px;
  text-align: center;
- background: transparent url(../img/main/layout/bg_footerc20a.png?12) center bottom no-repeat;
+ background: transparent url(../img/main/layout/bg_footerc20a.png) center bottom no-repeat;
  position: relative;
  height: 73px;
 }
@@ -535,7 +535,7 @@ a {
  margin-left: auto;
  margin-right: auto;
  position: relative;
- background: transparent url(../img/main/layout/bg_footerc20a.png?12) center bottom no-repeat;
+ background: transparent url(../img/main/layout/bg_footerc20a.png) center bottom no-repeat;
  top: 2px;
  left: 0;
 }
@@ -600,17 +600,17 @@ a {
 }
 
 .navigation {
- background: transparent url('../img/main/kbase/trail1.png') no-repeat left top;
+ background: transparent url('../img/main/kbase/trail1.webp') no-repeat left top;
  height: 24px;
 }
 
 .navigation2 {
- background: transparent url('../img/main/kbase/trail2.png') no-repeat left top;
+ background: transparent url('../img/main/kbase/trail2.webp') no-repeat left top;
  height: 36px;
 }
 
 .navigation3 {
- background: transparent url('../img/main/kbase/trail3.png') no-repeat left top;
+ background: transparent url('../img/main/kbase/trail3.webp') no-repeat left top;
  height: 50px;
 }
 
@@ -688,35 +688,35 @@ a {
 }
 
 .topshadow {
- background: url(../img/main/kbase/sidebart.png) repeat-x scroll left top;
+ background: url(../img/main/kbase/sidebart.webp) repeat-x scroll left top;
 }
 
 .bottombordershad {
- background: transparent url(../img/main/kbase/articlebottom.png) repeat-x scroll left bottom;
+ background: transparent url(../img/main/kbase/articlebottom.webp) repeat-x scroll left bottom;
 }
 
 .leftshadow {
- background: url(../img/main/kbase/sidebarl.png) repeat-y scroll left center;
+ background: url(../img/main/kbase/sidebarl.webp) repeat-y scroll left center;
 }
 
 .rightshadow {
- background: url(../img/main/kbase/sidebar.png) repeat-y scroll right center;
+ background: url(../img/main/kbase/sidebar.webp) repeat-y scroll right center;
 }
 
 .leftcorner {
- background: transparent url(../img/main/kbase/artroundtl.png) no-repeat scroll left top;
+ background: transparent url(../img/main/kbase/artroundtl.webp) no-repeat scroll left top;
 }
 
 .rightcorner {
- background: transparent url(../img/main/kbase/artroundtr.png) no-repeat scroll right top;
+ background: transparent url(../img/main/kbase/artroundtr.webp) no-repeat scroll right top;
 }
 
 .bottomleftshad{
- background: transparent url(../img/main/kbase/articlebottomshad.png) no-repeat scroll left bottom;
+ background: transparent url(../img/main/kbase/articlebottomshad.webp) no-repeat scroll left bottom;
 }
 
 .bottomrightshad{
- background: transparent url(../img/main/kbase/artbottomshadr.png) no-repeat scroll right bottom;
+ background: transparent url(../img/main/kbase/artbottomshadr.webp) no-repeat scroll right bottom;
  height: 1%;
 }
 
@@ -728,7 +728,7 @@ a {
 
 .article_theme_1 ul li {
  padding: 0 0 1px 38px;
- background: transparent url(../img/main/kbase/sunburst_bullet.png) no-repeat 12px 3px;
+ background: transparent url(../img/main/kbase/sunburst_bullet.webp) no-repeat 12px 3px;
 }
 
 .article_theme_1 ol li {
@@ -745,13 +745,13 @@ a {
 }
 
 .headertitleleft{
- background: transparent url(../img/main/kbase/headertitleleft.png) no-repeat scroll left center;
+ background: transparent url(../img/main/kbase/headertitleleft.webp) no-repeat scroll left center;
  padding-left: 43px;
 }
 
 .subarticleHeader {
  height: 22px;
- background: url(../img/main/layout/subarticle_header_bg.png) repeat-x;
+ background: url(../img/main/layout/subarticle_header_bg.webp) repeat-x;
  line-height: 18px;
  text-align: left;
  padding: 4px 4px 0px;
@@ -760,7 +760,7 @@ a {
 }
 
 .headertitleright{
- background: transparent url(../img/main/kbase/headertitleright.png) no-repeat scroll right center;
+ background: transparent url(../img/main/kbase/headertitleright.webp) no-repeat scroll right center;
  padding-right: 42px;
 }
 
@@ -772,7 +772,7 @@ a {
 }
 
 .hr {
- background: transparent url(../img/main/kbase/hr.png) repeat-x scroll center;
+ background: transparent url(../img/main/kbase/hr.webp) repeat-x scroll center;
  border: medium none;
  font-size: 1px;
  height: 36px;
@@ -801,63 +801,63 @@ a {
 }
 
 .brown_background .buttonmedium {
- background: transparent url(../img/main/layout/text_button_med.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_med.webp) no-repeat scroll left top;
  height: 25px;
  width: 112px;
 }
 
 .brown_background .buttonsmall {
- background: transparent url(../img/main/layout/text_button_short.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_short.webp) no-repeat scroll left top;
  height: 25px;
  width: 35px;
  font-size: 10px;
 }
 
 .brown_background .buttonlong {
- background: transparent url(../img/main/layout/text_button_long.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_long.webp) no-repeat scroll left top;
  height: 25px;
  width: 140px;
 }
 
 .brown_background .buttonverylong {
- background: transparent url(../img/main/layout/text_button_verylong.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_verylong.webp) no-repeat scroll left top;
  height: 25px;
  width: 170px;
 }
 
 .brown_background .buttonextreme {
- background: transparent url(../img/main/layout/text_button_extreme.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_extreme.webp) no-repeat scroll left top;
  height: 25px;
  width: 310px;
 }
 
 .leftshadow .buttonlong {
- background: transparent url(../img/main/layout/text_button_long_sun.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_long_sun.webp) no-repeat scroll left top;
  height: 25px;
  width: 140px;
 }
 
 .leftshadow .buttonmedium {
- background: transparent url(../img/main/layout/text_button_med_sun.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_med_sun.webp) no-repeat scroll left top;
  height: 25px;
  width: 112px;
 }
 
 .leftshadow .buttonsmall {
- background: transparent url(../img/main/layout/text_button_short_sun.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_short_sun.webp) no-repeat scroll left top;
  height: 25px;
  width: 37px;
  font-size: 10px;
 }
 
 .leftshadow .buttonverylong {
- background: transparent url(../img/main/layout/text_button_verylong_sun.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_verylong_sun.webp) no-repeat scroll left top;
  height: 25px;
  width: 170px;
 }
 
 .leftshadow .buttonextreme {
- background: transparent url(../img/main/layout/text_button_extreme_sun.png) no-repeat scroll left top;
+ background: transparent url(../img/main/layout/text_button_extreme_sun.webp) no-repeat scroll left top;
  height: 25px;
  width: 310px;
 }

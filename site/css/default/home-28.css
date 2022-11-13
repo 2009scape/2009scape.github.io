@@ -71,7 +71,7 @@
 
 .createbutton .shim,
 .createbutton .shimHover {
- background: transparent url(../../img/2009img/main/skins/default/createshim.png) no-repeat left -99px;
+ background: transparent url(../../img/2009img/main/skins/default/createshim.webp) no-repeat left -99px;
  width: 226px;
  height: 24px;
  cursor: pointer;
@@ -102,7 +102,7 @@
  width: 258px;
  height: 59px;
  overflow: hidden;
- background: url(../../img/2009img/main/home/feature_bg.png) no-repeat;
+ background: url(../../img/2009img/main/home/feature_bg.webp) no-repeat;
  text-align: left;
 }
 
@@ -145,13 +145,13 @@
 
 #articles .section {
  padding: 0;
- background: #4e412d url(../../img/2009img/main/home/articles_bg.png) repeat-y;
+ background: #4e412d url(../../img/2009img/main/home/articles_bg.webp) repeat-y;
 }
 
 .articlesTitle {
  height: 26px;
  line-height: 26px;
- background: url(../../img/2009img/main/home/articles_title_bg.png) no-repeat;
+ background: url(../../img/2009img/main/home/articles_title_bg.webp) no-repeat;
  text-align: center;
  font-weight: bold;
  color: white;
@@ -168,7 +168,7 @@
 .articlesFooter {
  height: 5px;
  font-size: 0px;
- background: url(../../img/2009img/main/home/articles_footer.png) no-repeat;
+ background: url(../../img/2009img/main/home/articles_footer.webp) no-repeat;
 }
 
 .aowBody {
@@ -220,7 +220,7 @@
 
 .searchbar {
  width: 196px;
- background: white url(../../img/2009img/main/home/searchbar.png) no-repeat scroll 0% 50%;
+ background: white url(../../img/2009img/main/home/searchbar.webp) no-repeat scroll 0% 50%;
  height: 30px;
 }
 
@@ -290,7 +290,7 @@
 
 #playbutton .shim,
 #playbutton .shimHover {
- background: transparent url(../../img/2009img/main/skins/default/playshim.png) no-repeat left -99px;
+ background: transparent url(../../img/2009img/main/skins/default/playshim.webp) no-repeat left -99px;
  width: 274px;
  height: 41px;
  cursor: pointer;
@@ -332,7 +332,7 @@
 
 .newsTitle {
  height: 20px;
- background: url(../../img/2009img/main/home/news_title_bg.png) left repeat-y;
+ background: url(../../img/2009img/main/home/news_title_bg.webp) left repeat-y;
  font-weight: bold;
  color: #f0cd87;
 }
@@ -353,7 +353,7 @@
 .newsImage {
  float: right;
  margin-left: 6px;
- background: url(../../img/2009img/main/home/news_frame.png) bottom no-repeat;
+ background: url(../../img/2009img/main/home/news_frame.webp) bottom no-repeat;
  font-size: 0;
 }
 
