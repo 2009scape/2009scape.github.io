@@ -1,0 +1,216 @@
+---
+title: Giftmas Event Update
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2022-12-18 00:00:00 +0000
+authors: ryannathans
+excerpt: "It's the season for giving, happy giftmas 2009scape!"
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+                                        <p>Merry Giftmas everyone! For the next month or so, extending well into January, you'll be able to obtain up to 20 giftmas presents per day.</p>
+                                        <ul>
+                                        <li>Presents are awarded randomly, with a 1/15th probability of receiving a present every time you earn at least 25 XP</li>
+                                        <li>A maximum of 5 presents are obtainable daily from combat related experience</li>
+                                        <li>A maximum of 15 presents are obtainable daily from skilling related experience</li>
+                                        <li>Giftmas presents can only be opened during the event</li>
+                                        <li>Possible giftmas presents include (but are not limited to) toys, crafting materials, gems, seeds, coins and maybe an abyssal whip or santa hat if you're really lucky!</li>
+                                        </ul>
+                                        <p>And as usual, new changes in Gielinor:</p><ul>
+<li>Reworked Paladin drop table</li>
+<li>Reworked tormented demon drop table</li>
+<li>Halved the chance of zombie's nothing drop from 8/128 to 4/128<br />
+Added a Bronze axe drop to zombie drop table with a 1/32 (4/128) chance</li>
+<li>Fixed packet decoder issue where bytes were read out of sequence</li>
+<li>Implemented Christmas event giftmas<br />
+Fixed a minor bug with the incoming packet processor</li>
+<li>Replaced some discord references with forums</li>
+<li>Sharks can now be caught with barb-tail harpoon<br />
+Fixed incorrect animation when fishing with a barb-tail harpoon</li>
+<li>Added decoding for player preferences (unused)</li>
+<li>Added void knight mace animations</li>
+<li>Added an Allotment Seed drop table<br />
+Reworked Farmer drop table</li>
+<li>Fixed a bunch of minor exceptions</li>
+<li>Magic butterfly net is now one handed<br />
+Magic butterfly net level requirement adjusted to 17 hunter</li>
+<li>Removed duplicate message for quest completion for Sheep Shearer<br />
+Removed duplicate message for quest completion for The Restless Ghost</li>
+<li>Fixed wielding level requirement for dragon axe, no longer requires a woodcutting level to wield</li>
+<li>Fixed flipped level requirements on Guthix bracers</li>
+<li>Improved facial expressions in bank dialogue</li>
+<li>Corrected flipped level requirement data for butterfly net and butterfly jar</li>
+<li>Removed charms from rock slug drop table<br />
+Fixed rock slugs dropping wrong type of mystic gloves</li>
+<li>Fixed goblins dropping unusable coins</li>
+<li>Implemented Doubling Money scammer bots at GE<br />
+Converted some classes to Kotlin<br />
+Fixed a trading bug when you removed an item, the modified slot would flash on the wrong side</li>
+<li>Refactored the processing of incoming packets to do so synchronously on the start of the tick cycle (rather than being processed as soon as the packet is received)<br />
+Decoupled decoding of packets from processing of packets, so that both 530 and 578 packets can be decoded into the same data structures and processed the same way<br />
+De-spaghettied many things, e.g. farming and the poster in stronghold of player safety</li>
+<li>Reverted last commit and fixed the root cause of package info issue</li>
+<li>Fixed build warning by always generating package info for exec mojo</li>
+<li>Removed additional inauthentic/inappropriate bot usernames</li>
+<li>Reworked Kurask drop table</li>
+<li>Reworked Rogue drop table</li>
+<li>Reworked Thug drop table</li>
+<li>Reworked Pirate drop table</li>
+<li>Reworked Mugger drop table</li>
+<li>Reworked Dark Wizard drop table</li>
+<li>Reworked Gnome Guard drop table</li>
+<li>Reworked Shadow Warrior drop table</li>
+<li>Reworked Otherworldly Being drop table</li>
+<li>Reworked Ice Warrior drop table</li>
+<li>Reworked Earth Warrior drop table</li>
+<li>Reworked Chaos Dwarf drop table</li>
+<li>Reworked Dwarf drop table</li>
+<li>Reworked Ice Giant drop table</li>
+<li>Reworked Fire Giant drop table</li>
+<li>Reworked Goblin drop table</li>
+<li>Reworked Skeleton drop table</li>
+<li>Reworked Lesser Demon drop table<br />
+Reworked Greater Demon drop table<br />
+Reworked Black Demon drop table</li>
+<li>Now validating JSON files in Gitlab pipeline</li>
+<li>Reworked Zombie drop table</li>
+<li>Reworked Abyssal Demon drop table</li>
+<li>Reworked Jogre drop table</li>
+<li>Reworked Bloodveld drop table</li>
+<li>Reworked Ork drop table</li>
+<li>Reworked Gorak drop table</li>
+<li>Reworked Jungle Spider drop table</li>
+<li>Reworked Giant Spider drop table</li>
+<li>Reworked Chicken drop table<br />
+Reworked Knight of Ardougne drop table<br />
+Reworked Hellhound drop table</li>
+<li>Reworked Hero drop table</li>
+<li>Reworked Man drop table<br />
+Reworked Woman drop table<br />
+Reworked Drunken Man drop table<br />
+Reworked Jeff drop table<br />
+Reworked Rusty drop table<br />
+Reworked Narf drop table<br />
+Reworked Cuffs drop table</li>
+<li>Reworked Wizard drop table</li>
+<li>Moved drop tables into dedicated folder (data/config/shared_tables)<br />
+Added Rare Seed Drop Table<br />
+Reworked Aberrant Spectre drops</li>
+<li>Corrected Sumona teleport on slayer ring<br />
+Improved authenticity of slayer ring teleport locations</li>
+<li>Added skill requirements for skillcapes and hoods</li>
+<li>Fixed Draynor bot theiving<br />
+Fixed Draynor willow bots getting stuck</li>
+<li>Dragon drop table rebalance<br />
+<br />
+Blue Dragon<br />
+Red Dragon<br />
+Black Dragon<br />
+Bronze Dragon<br />
+Iron Dragon<br />
+Steel Dragon</li>
+<li>Aviansies drop table rebalance</li>
+<li>Chaos Druids drop table rebalance</li>
+<li>Waterfiends drop table rebalance</li>
+<li>Trolls drop table rebalance<br />
+<br />
+Mountain Trolls<br />
+Thrower Trolls<br />
+Troll Generals</li>
+<li>Al-Kharid warrior drop table rebalance</li>
+<li>Barbarian drop table rebalance</li>
+<li>Fixed exception caused by using floating point numbers in secondary gem drop table</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
