@@ -20,100 +20,71 @@ layout: guide
             <div
               class="brown_box"
               style="margin-bottom: 5px; padding-bottom: 1px"
+              id="games"
             >
-              <div class="itemborder" style="margin-right: 4px">
-                <div class="headingpic">
-                  <a href="./ageofwar.html"
-                    ><img
-                      alt=""
-                      src="../img/ageofwar.avif"
-                      style="width: 70px; height: 70px"
-                  /></a>
-                </div>
-                <!--ageofwar-->
-                <div class="cattext">
-                  <div class="text">
-                    <div class="title1">
-                      <a href="./ageofwar.html"
-                        >Age of War</a
-                      >
-                    </div>
-                    Battle of the ages!
-                    <br/>
-                    <br/>
-                    Added by Red Bracket
-                  </div>
-                </div>
-              </div>
-              <!--bloonstd1-->
-              <div class="itemborder">
-                <div class="headingpic">
-                  <a href="./bloonstd1.html"
-                    ><img
-                      alt=""
-                      src="../img/bloonstd1.avif"
-                      style="width: 70px; height: 70px"
-                  /></a>
-                </div>
-                <div class="cattext">
-                  <div class="text">
-                    <div class="title1">
-                      <a href="./bloonstd1.html"
-                        >Bloons Tower Defense 1</a>
-                    </div>
-                    Use Monkeys to stop the bloons from escaping!
-                    <br/>
-                    <br/>
-                    Added by Red Bracket
-                  </div>
-                </div>
-              </div>
-              <!--flashsonic-->
-              <div class="itemborder" style="margin-right: 4px">
-                <div class="headingpic">
-                  <a href="./flashsonic.html"
-                    ><img
-                      alt=""
-                      src="../img/flashsonic.avif"
-                      style="width: 70px; height: 70px"
-                  /></a>
-                </div>
-                <div class="cattext">
-                  <div class="text">
-                    <div class="title1">
-                      <a href="./flashsonic.html"
-                        >Flash Sonic</a>
-                    </div>
-                    Run through the levels as Sonic!
-                    <br/>
-                    <br/>
-                    Added by Red Bracket
-                  </div>
-                </div>
-              </div>
-              <!--worldshardestgame-->
-              <div class="itemborder">
-                <div class="headingpic">
-                  <a href="./worldshardestgame.html"
-                    ><img
-                      alt=""
-                      src="../img/worldshardestgame.avif"
-                      style="width: 70px; height: 70px"
-                  /></a>
-                </div>
-                <div class="cattext">
-                  <div class="text">
-                    <div class="title1">
-                      <a href="./worldshardestgame.html"
-                        >World's Hardest Game</a>
-                    </div>
-                    You can't beat this game
-                    <br />
-                    <br />
-                    Added by Red Bracket
-                  </div>
-                </div>
-              </div>
+              <script>
+                let odd = true;
+                function addGame(gameId, gameName, gameDesc, author) {
+                  const game = document.createElement("div");
+                  game.className = "itemborder";
+                  if (odd) game.style.marginRight = "4px";
+                  odd = !odd;
+                  const headingPic = document.createElement("div");
+                  headingPic.className = "headingpic";
+                  headingPic.style.backgroundImage = "url(../img/" + gameId + ".avif)";
+                  const gameLink = document.createElement("a");
+                  gameLink.href = "./" + gameId + ".html";
+                  const gameImg = document.createElement("img");
+                  gameImg.alt = `${gameName} icon`;
+                  gameImg.src = "../img/" + gameId + ".avif";
+                  gameImg.style.width = "70px";
+                  gameImg.style.height = "70px";
+                  gameLink.appendChild(gameImg);
+                  const gameDiv = document.createElement("div");
+                  gameDiv.className = "cattext";
+                  const gameText = document.createElement("div");
+                  gameText.className = "text";
+                  const gameTitle = document.createElement("div");
+                  gameTitle.className = "title1";
+                  const gameTitleLink = document.createElement("a");
+                  gameTitleLink.href = "./" + gameId + ".html";
+                  gameTitleLink.innerHTML = gameName;
+                  gameTitle.appendChild(gameTitleLink);
+                  gameText.appendChild(gameTitle);
+                  gameText.innerHTML += gameDesc;
+                  gameText.innerHTML += "<br />Added by " + author;
+                  gameDiv.appendChild(gameText);
+                  headingPic.appendChild(gameLink);
+                  game.appendChild(headingPic);
+                  game.appendChild(gameDiv);
+                  document.getElementById("games").appendChild(game);
+                }
+
+                addGame(
+                  "ageofwar",
+                  "Age of War",
+                  "Battle of the ages!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "bloonstd1",
+                  "Bloons Tower Defense 1",
+                  "Use Monkeys to stop the bloons from escaping!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "flashsonic",
+                  "Flash Sonic",
+                  "Run through the levels as Sonic!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "worldshardestgame",
+                  "World's Hardest Game",
+                  "A game that's actually hard<br/>",
+                  "Red Bracket"
+                );
+              </script>
             </div>
             <div class="container" style="clear: both"></div>
           </div>
