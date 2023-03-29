@@ -2,15 +2,7 @@
 title: Drop Tables
 layout: guide
 ---
-<script src=".././js/jquery-3.6.0.min.js"></script>
-<script src=".././js/common.js"></script>
-<script src=".././js/bynpc.js"></script>
-<link rel="stylesheet" href=".././css/style.css">
-<style>
-    #navhome{
-        margin-top: 0px !important;
-    }
-</style>
+<link rel="stylesheet" href="../css/style.css">
 <div id="content">
 <div id="rule">
 <div class="sectionHeader">
@@ -34,28 +26,12 @@ layout: guide
 <div class="bottomleftshad">
 <div class="bottomrightshad">
     <!-- CONTENT HERE -->
-    <div class="links"><a href=".././drop-table/">Drop Tables</a> | <a href=".././item-source/">Item Sources</a> | <a href=".././item-data/">Item Data</a></div>
-    <div id="wrapper" style="padding-bottom: 40px;">
-    <center>
-        <div class="headings">
-            <span class="headertitleleft"><span class="headertitleright" id="search">Drop Tables</span></span>
-            </div>
-        <input style="width:50%;"class="form-control input-lg" placeholder="NPC/Monster Name"
-        onkeyup="search(this);"></input>
-        <center>
-            <p>Notes: RDT Slot = Rare Drop Table <a href=".././rdt.html">(link)</a>, Summoning Charms are rolled separately <input type="checkbox" id="debug-toggle" name="debug"><lable>Show ID's</lable></p>
-            </center>
-    </center>
-    <div class="loading" style="display: none;">
-        <div class="stage">
-            <h1>Loading JSON</h1>
-        </div>
-        <div class="stage">
-            <div class="dot-pulse"></div>
-        </div>
-    </div>
-    <div id="dcontent" style="margin:auto;width: 80%;"></div>
-    </div>
+    <div id="app"></div>
+  <script type="module">
+    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js'
+    import MyComponent from '../searchtool.js' 
+    createApp(MyComponent).mount('#app')
+  </script>
 </div>
 </div>
 </div>

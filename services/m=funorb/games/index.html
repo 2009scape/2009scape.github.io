@@ -1,0 +1,114 @@
+---
+title: Games
+tags: funorb
+layout: guide
+---
+
+<div id="content">
+  <div id="article">
+    <div class="sectionHeader">
+      <div class="left">
+        <div class="right">
+          <h1 class="plaque">FunOrb</h1>
+        </div>
+      </div>
+    </div>
+    <div class="section">
+      <div class="article_theme_2">
+        <div class="firstborder">
+          <div class="brown_box">
+            <div
+              class="brown_box"
+              style="margin-bottom: 5px; padding-bottom: 1px"
+              id="games"
+            >
+              <script>
+                let odd = true;
+                function addGame(gameId, gameName, gameDesc, author) {
+                  const game = document.createElement("div");
+                  game.className = "itemborder";
+                  if (odd) game.style.marginRight = "4px";
+                  odd = !odd;
+                  const headingPic = document.createElement("div");
+                  headingPic.className = "headingpic";
+                  headingPic.style.backgroundImage = "url(../img/" + gameId + ".avif)";
+                  const gameLink = document.createElement("a");
+                  gameLink.href = "./" + gameId + ".html";
+                  const gameImg = document.createElement("img");
+                  gameImg.alt = `${gameName} icon`;
+                  gameImg.src = "../img/" + gameId + ".avif";
+                  gameImg.style.width = "70px";
+                  gameImg.style.height = "70px";
+                  gameLink.appendChild(gameImg);
+                  const gameDiv = document.createElement("div");
+                  gameDiv.className = "cattext";
+                  const gameText = document.createElement("div");
+                  gameText.className = "text";
+                  const gameTitle = document.createElement("div");
+                  gameTitle.className = "title1";
+                  const gameTitleLink = document.createElement("a");
+                  gameTitleLink.href = "./" + gameId + ".html";
+                  gameTitleLink.innerHTML = gameName;
+                  gameTitle.appendChild(gameTitleLink);
+                  gameText.appendChild(gameTitle);
+                  gameText.innerHTML += gameDesc;
+                  gameText.innerHTML += "<br />Added by " + author;
+                  gameDiv.appendChild(gameText);
+                  headingPic.appendChild(gameLink);
+                  game.appendChild(headingPic);
+                  game.appendChild(gameDiv);
+                  document.getElementById("games").appendChild(game);
+                }
+
+                addGame(
+                  "ageofwar",
+                  "Age of War",
+                  "Battle of the ages!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "bloonstd1",
+                  "Bloons Tower Defense 1",
+                  "Use Monkeys to stop the bloons from escaping!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "bloonstd2",
+                  "Bloons Tower Defense 2",
+                  "Use Monkeys to stop the bloons from escaping!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "bloonstd3",
+                  "Bloons Tower Defense 3",
+                  "Use Monkeys to stop the bloons from escaping, v3!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "flashsonic",
+                  "Flash Sonic",
+                  "Run through the levels as Sonic!<br/>",
+                  "Red Bracket"
+                );
+                addGame(
+                  "learntofly2",
+                  "Learn to Fly 2",
+                  "Help a poor Penguin fly...<br/>",
+                  "Red Bracket"
+                )
+                addGame(
+                  "worldshardestgame",
+                  "World's Hardest Game",
+                  "A game that's actually hard<br/>",
+                  "Red Bracket"
+                );
+              </script>
+            </div>
+            <div class="container" style="clear: both"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <br class="clear" />
+  </div>
+</div>

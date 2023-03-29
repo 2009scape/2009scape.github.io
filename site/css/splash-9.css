@@ -19,12 +19,12 @@ body {
  font-family: Arial, Helvetica, FreeSans, sans-serif;
  font-size: 11px;
  color: white;
- background: black url(../img/main/splash/bg.jpg) center 30px no-repeat;
+ background: black url(../img/main/splash/bg.webp) center 30px no-repeat;
 }
 
 
 #aff_border {
- background: black url(../img/main/splash/bg.jpg) center 30px no-repeat;
+ background: black url(../img/main/splash/bg.webp) center 30px no-repeat;
  height: 721px;
 }
 
@@ -138,7 +138,7 @@ object {
 
 #tablet1 {
  top: 237px;
- background: url(../img/main/splash/tablet1_bg.jpg);
+ background: url(../img/main/splash/tablet1_bg.webp);
 }
 
 #welcome {
@@ -173,7 +173,7 @@ object {
 }
 #tablet2 {
  top: 479px;
- background: url(../img/main/splash/tablet2_bg.jpg);
+ background: url(../img/main/splash/tablet2_bg.webp);
 }
 
 #trailerTitle {
@@ -221,7 +221,7 @@ object {
  top: 225px;
  width: 605px;
  height: 413px;
- background: url(../img/main/splash/media_bg.jpg) no-repeat;
+ background: url(../img/main/splash/media_bg.webp) no-repeat;
 }
 
 #trailerMedia,

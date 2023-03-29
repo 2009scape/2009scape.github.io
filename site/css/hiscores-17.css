@@ -472,10 +472,10 @@
     top: 10px;
    }
    #button-right span.lev1 {
-    background-image: url('../img/hiscores/minigameseccb.png?3');
+    background-image: url('../img/hiscores/minigameseccb.webp');
    }
    #button-right span.lev1a {
-    background-image: url('../img/hiscores/minigamesaeccb.png?3');
+    background-image: url('../img/hiscores/minigamesaeccb.webp');
    }
    a:hover span.lev1, a:hover span.lev1a, a:hover span.lev1_arrow {
     background-position: left bottom;
@@ -526,7 +526,7 @@
    height: 20px;
   }
   .table_header, .arrow_header {
-   background: transparent url(../img/main/layout/subsection_subheader_bgeccb.png?3) repeat-x;
+   background: transparent url(../img/main/layout/subsection_subheader_bgeccb.webp) repeat-x;
   }
   .table_header {
    height: 23px;
@@ -598,19 +598,19 @@
   }
   .search_small {
    height: 82px;
-   background: transparent url(../img/hiscores/search_smalleccb.png?3) repeat-x;
+   background: transparent url(../img/hiscores/search_smalleccb.webp) repeat-x;
   }
   .search_large {
     height: 98px;
-    background: transparent url(../img/hiscores/search_largeeccb.png?3) repeat-x;
+    background: transparent url(../img/hiscores/search_largeeccb.webp) repeat-x;
    }
   .search_tiny_bit_more_large {
     height: 134px;
-    background: transparent url(../img/hiscores/search_custom_largeeccb.png?3) repeat-x;
+    background: transparent url(../img/hiscores/search_custom_largeeccb.webp) repeat-x;
    }
   .search_custom_large {
    height: 102px;
-   background: transparent url(../img/hiscores/search_custom_largeeccb.png?3) repeat-x;
+   background: transparent url(../img/hiscores/search_custom_largeeccb.webp) repeat-x;
   }
    #friends_search {
    margin-bottom: 0px;
@@ -658,7 +658,7 @@
  }
  .header_back {
   height: 24px;
-  background: transparent url(../img/hiscores/header_backeccb.png?3) repeat-x;
+  background: transparent url(../img/hiscores/header_backeccb.webp) repeat-x;
   width: 100%;
   margin-bottom: 2px;
  }

@@ -10,14 +10,14 @@
  text-align: center;
  height: 35px;
  
-  background: url('../img/playerlog/log_header_widec81e.jpg?2') no-repeat;
+  background: url('../img/playerlog/log_header_widec81e.webp') no-repeat;
  
 }
 #logHeader_buttonless{
  text-align: center;
  height: 35px;
  
-  background: url('../img/playerlog/log_header_wide_buttonlessc81e.jpg?2') no-repeat;
+  background: url('../img/playerlog/log_header_wide_buttonlessc81e.webp') no-repeat;
  
 }
 #greyBack{
@@ -51,7 +51,7 @@
  color: #4c3209;
 }
 .panel_189 {
- background: url('../img/playerlog/panel_189c81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/panel_189c81e.webp') transparent no-repeat;
  width: 728px;
  height: 189px;
  margin: 8px auto;
@@ -59,7 +59,7 @@
  position: relative;
 }
 #homepanel.panel_189 {
- background: url('../img/playerlog/panel_189_homec81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/panel_189_homec81e.webp') transparent no-repeat;
 }
 #home_login {
  height: 34px;
@@ -73,7 +73,7 @@
  font-size: 18px;
  font-family: Palatino Linotype,Book Antiqua,Palatino,Times New Roman,Times,serif;
  font-variant: small-caps;
- background: url('../img/playerlog/buttons/home_loginc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/home_loginc81e.webp') transparent no-repeat;
 }
 #home_login:hover {
  color: #C0B679;
@@ -121,7 +121,7 @@
 .plog_button {
  height: 23px;
  line-height: 23px;
- background-image: url('../img/playerlog/buttons/rounded_buttonc81e.png?2');
+ background-image: url('../img/playerlog/buttons/rounded_buttonc81e.webp');
  float:left;
  background-repeat: no-repeat;
  background-color: transparent;
@@ -166,7 +166,7 @@
  background-position: right -184px;
 }
 .panel_189 .header {
- background: url('../img/playerlog/panel_headerc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/panel_headerc81e.webp') transparent no-repeat;
  width: 721px;
  height: 27px;
  margin: 0px auto;
@@ -220,10 +220,10 @@ input.go{
 }
 input.go:hover{
  color: #c0b679;
- background: url('../img/playerlog/buttons/go_hoverc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/go_hoverc81e.webp') transparent no-repeat;
 }
 input.go:active{
- background: url('../img/playerlog/buttons/go_pressc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/go_pressc81e.webp') transparent no-repeat;
 }
 #searchBox {
  background: white;
@@ -247,19 +247,19 @@ input.go:active{
 }
 /* A V A T A R   P A N E L */
 #plog_self #avatar{
- background: url('../img/playerlog/avatar_back_otherc81e.jpg?2');
+ background: url('../img/playerlog/avatar_back_otherc81e.webp');
  margin-left: 9px;
  float: left;
  display: inline;
 }
 #plog_other #avatar {
- background: url('../img/playerlog/avatar_back_otherc81e.jpg?2');
+ background: url('../img/playerlog/avatar_back_otherc81e.webp');
  margin-left: 9px;
  float: left;
  display: inline;
 }
 #plog_other #avatar.private {
- background: url('../img/playerlog/avatar_back_other_privatec81e.jpg?2');
+ background: url('../img/playerlog/avatar_back_other_privatec81e.webp');
  margin-left: 9px;
  float: left;
  display: inline;
@@ -319,7 +319,7 @@ input.go:active{
 #scores{
  margin-right: 9px;
  float: right;
- background: url('../img/playerlog/score_backc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/score_backc81e.webp') transparent no-repeat;
  display: inline;
 }
 #scores .details,
@@ -351,7 +351,7 @@ input.go:active{
 .parchment{
  width: 367px;
  height: 372px;
- background: url('../img/playerlog/parchment_leftc81e.jpg?2') no-repeat;
+ background: url('../img/playerlog/parchment_leftc81e.webp') no-repeat;
  margin-top: 0px;
 }
 #myAchievements.parchment{
@@ -360,7 +360,7 @@ input.go:active{
  display: inline;
 }
 #friendsAchievements.parchment{
- background: url('../img/playerlog/parchment_rightc81e.jpg?2') no-repeat;
+ background: url('../img/playerlog/parchment_rightc81e.webp') no-repeat;
  margin-right: 6px;
  float: right;
  display: inline;
@@ -469,7 +469,7 @@ input.go:active{
  display: inline;
 }
 #avatar a.privacy{
- background: url('../img/playerlog/buttons/privacyc81e.jpg?2') transparent no-repeat left top;
+ background: url('../img/playerlog/buttons/privacyc81e.webp') transparent no-repeat left top;
  margin-left: 4px;
  margin-top: 5px;
  width: 171px;
@@ -477,7 +477,7 @@ input.go:active{
  line-height: 25px;
 }
 #scores .buttonContainer a.compare{
- background: url('../img/playerlog/buttons/compare_with_friendsc81e.jpg?2') transparent no-repeat left top;
+ background: url('../img/playerlog/buttons/compare_with_friendsc81e.webp') transparent no-repeat left top;
  float: left;
  font-size: 15px;
  height: 25px;
@@ -502,7 +502,7 @@ input.go:active{
  font-family: arial;
  color: #a9a9a9;
  cursor: pointer;
- background: url('../img/playerlog/buttons/score_buttonc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/score_buttonc81e.webp') transparent no-repeat;
  text-align: center;
  display: inline;
 }
@@ -516,18 +516,18 @@ input.go:active{
  margin-right: 1px;
 }
 #scores .buttonContainer a#skill0 {
- background: url('../img/playerlog/buttons/score_button_totalc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/score_button_totalc81e.webp') transparent no-repeat;
  text-align: center;
  height: 14px;
  padding-top: 11px;
  vertical-align: bottom;
 }
 #scores .buttonContainer a#skill0.selected{
- background: url('../img/playerlog/buttons/score_button_total_pressc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/score_button_total_pressc81e.webp') transparent no-repeat;
 }
 #scores .buttonContainer a.scoreButton.selected{
  color: #C0B679;
- background: url('../img/playerlog/buttons/score_button_pressc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/score_button_pressc81e.webp') transparent no-repeat;
  width: 43px;
 }
 /* H O V E R   S T A T E S (must come after visited & link) */
@@ -547,7 +547,7 @@ input.go:active{
 }
 #logHeader a.profile:hover,
 #logHeader_buttonless a.profile:hover {
- background: url('../img/playerlog/buttons/profile_hoverc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/profile_hoverc81e.webp') transparent no-repeat;
 }
 /* A C T I V E   S T A T E S (must come after hover)*/
 #logHeader a.profile:active,
@@ -558,23 +558,23 @@ input.go:active{
 }
 #logHeader a.profile:active,
 #logHeader_buttonless a.profile:active {
- background: url('../img/playerlog/buttons/profile_pressc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/profile_pressc81e.webp') transparent no-repeat;
 }
 #avatar a.privacy:active,
 #scores .buttonContainer a.compare:active {
  background-position: left bottom;
 }
 #scores .buttonContainer a.scoreButton.total:active{
- background: url('../img/playerlog/buttons/score_button_total_pressc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/score_button_total_pressc81e.webp') transparent no-repeat;
  width: 43px;
 }
 #scores .buttonContainer a.scoreButton:active{
- background: url('../img/playerlog/buttons/score_button_pressc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/buttons/score_button_pressc81e.webp') transparent no-repeat;
  width: 43px;
  color: #C0B679;
 }
 #plog_self #quests{
- background: url('../img/playerlog/quests_backc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/quests_backc81e.webp') transparent no-repeat;
  width: 361px;
  height: 237px;
  margin-left: 9px;
@@ -584,7 +584,7 @@ input.go:active{
  display: inline;
 }
 #plog_other #quests{
- background: url('../img/playerlog/quests_back_largec81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/quests_back_largec81e.webp') transparent no-repeat;
  margin:  8px 0 7px 3px;
  float: left;
  height: 361px;
@@ -592,7 +592,7 @@ input.go:active{
  display: inline;
 }
 #friends{
- background: url('../img/playerlog/friends_backc81e.jpg?2') transparent no-repeat;
+ background: url('../img/playerlog/friends_backc81e.webp') transparent no-repeat;
  width: 361px;
  height: 237px;
  margin-right: 9px;
@@ -664,17 +664,17 @@ input.go:active{
 #quests a#completed:active,
 #quests a#completed.selected {
  width:      112px;
- background:    url('../img/playerlog/buttons/quests_pressc81e.jpg?2') transparent no-repeat;
+ background:    url('../img/playerlog/buttons/quests_pressc81e.webp') transparent no-repeat;
 }
 #quests a#started:active,
 #quests a#started.selected {
  width:      97px;
- background:    url('../img/playerlog/buttons/quests_pressc81e.jpg?2') transparent no-repeat;
+ background:    url('../img/playerlog/buttons/quests_pressc81e.webp') transparent no-repeat;
 }
 #quests a#uninitiated:active,
 #quests a#uninitiated.selected {
  width:      119px;
- background:    url('../img/playerlog/buttons/quests_pressc81e.jpg?2') transparent no-repeat;
+ background:    url('../img/playerlog/buttons/quests_pressc81e.webp') transparent no-repeat;
 }
 #friends .two_col,
 #plog_self #quests .two_col,
@@ -761,16 +761,16 @@ input.go:active{
  left: 0;
 }
 .PageControls a.First {
- background:    url('../img/playerlog/buttons/jump_first_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_first_hoverc81e.webp') no-repeat;
 }
 .PageControls a.Previous {
- background:    url('../img/playerlog/buttons/jump_previous_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_previous_hoverc81e.webp') no-repeat;
 }
 .PageControls a.Next {
- background:    url('../img/playerlog/buttons/jump_next_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_next_hoverc81e.webp') no-repeat;
 }
 .PageControls a.Last {
- background:    url('../img/playerlog/buttons/jump_last_hoverc81e.png?2') no-repeat;
+ background:    url('../img/playerlog/buttons/jump_last_hoverc81e.webp') no-repeat;
 }
 .PageControls a:hover {
     font-weight: normal;

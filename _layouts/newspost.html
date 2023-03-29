@@ -1,6 +1,7 @@
 <!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
 <html>
 <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+<meta name="viewport" content="width=1024, initial-scale=1.0">
 
 <head>
   <link rel="icon" type="image/x-icon" href="/favicon.ico" />
@@ -31,14 +32,14 @@
     <div id="head">
       <div id="headBg">
         <div id="headOrangeTop"></div>
-        <img id="banner" src="" alt="RuneScape">
+        <img id="banner" src="" alt="RuneScape" width="766" height="143">
 
         <!--SCRIPT: MONTHLY BANNER-->
         <script type="text/javascript">
-          document.getElementById("banner").src = `/site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.png`;
+          document.getElementById("banner").src = `/site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.webp`;
         </script>
 
-        <div id="headImage"><a href="" id="logo_select"></a>
+        <div id="headImage"><a href="/" id="logo_select"></a>
           <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era
             RuneScape</div>
         </div>
@@ -66,19 +67,7 @@
       </div>
     </div>
 
-    <div id="footer">
-      <div class="contain">
-        <div class="footerdesc">
-          Copyright &copy; 2021 under AGPL. <strong>2009Scape is not affiliated with RuneScape or Jagex
-            Ltd.</strong><br />
-          Use of our Game's source code is subject to our <a href="/site/terms/terms.html">Terms &amp;
-            Conditions</a> and <a href="/site/privacy/privacy.html">Privacy Policy</a>.<br />
-        </div>
-        <a class="jagexlink" href="" target="_blank">
-          <img src="/site/2009scape-resources/img/branding/logo-footer-dark.png" alt="2009Scape" />
-        </a>
-      </div>
-    </div>
+    {% include footer.html %}
   </div>
 </body>
 <meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">

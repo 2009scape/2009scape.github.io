@@ -933,13 +933,13 @@ hiscores.loadUserTable = (username) => {
 hiscores.populatePlayerHSTable = () => {
     switch (Number(hiscores.tableInfo.iron_mode)) {
         case 1:
-            hiscores.setHeadSkillIcon("../../site/img/osrsimg/ironman.png");
+            hiscores.setHeadSkillIcon("../../site/img/osrsimg/ironman.webp");
             break;
         case 2:
-            hiscores.setHeadSkillIcon("../../site/img/osrsimg/hcim.png");
+            hiscores.setHeadSkillIcon("../../site/img/osrsimg/hcim.webp");
             break;
         case 3:
-            hiscores.setHeadSkillIcon("../../site/img/osrsimg/ultimateironman.png");
+            hiscores.setHeadSkillIcon("../../site/img/osrsimg/ultimateironman.webp");
             break;
         default:
             hiscores.setHeadSkillIcon("Constitution");

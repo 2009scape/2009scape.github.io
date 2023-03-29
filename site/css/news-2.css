@@ -42,7 +42,7 @@
 }
 
 .row_a {
- background: url(../img/main/layout/subarticle_header_bg.png) repeat-x;
+ background: url(../img/main/layout/subarticle_header_bg.webp) repeat-x;
  color: #645c43;
 }
 
@@ -108,7 +108,7 @@
 }
 
 .adframe {
- background-image:url(../img/advert/advert_news.png);
+ background-image:url(../img/advert/advert_news.webp);
  background-position:center;
  background-repeat:no-repeat;
  float:right;

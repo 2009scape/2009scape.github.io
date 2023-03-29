@@ -1,6 +1,7 @@
-body{
+body {
     margin: 10px !important;
 }
+
 .stage {
     display: flex;
     justify-content: center;
@@ -9,124 +10,81 @@ body{
     padding: 2rem 0;
     margin: 0 -5%;
     overflow: hidden;
-  }
+}
 
-.stat-data{
+.stat-data {
     background-color: #605443;
     color: white;
     text-align: center;
 }
 
-.dot-pulse {
-    position: relative;
-    left: -9999px;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
-    box-shadow: 9999px 0 0 -5px #9880ff;
-    animation: dotPulse 1.5s infinite linear;
-    animation-delay: .25s;
-}
-.dot-pulse::before, .dot-pulse::after {
-    content: '';
-    display: inline-block;
-    position: absolute;
-    top: 0;
-    width: 10px;
-    height: 10px;
-    border-radius: 5px;
-    background-color: #9880ff;
-    color: #9880ff;
-}
-.dot-pulse::before {
-    box-shadow: 9984px 0 0 -5px #9880ff;
-    animation: dotPulseBefore 1.5s infinite linear;
-    animation-delay: 0s;
-}
-.dot-pulse::after {
-    box-shadow: 10014px 0 0 -5px #9880ff;
-    animation: dotPulseAfter 1.5s infinite linear;
-    animation-delay: .5s;
-}
-@keyframes dotPulseBefore {
-    0% {
-        box-shadow: 9984px 0 0 -5px #9880ff;
-   }
-    30% {
-        box-shadow: 9984px 0 0 2px #9880ff;
-   }
-    60%, 100% {
-        box-shadow: 9984px 0 0 -5px #9880ff;
-   }
-}
-@keyframes dotPulse {
-    0% {
-        box-shadow: 9999px 0 0 -5px #9880ff;
-   }
-    30% {
-        box-shadow: 9999px 0 0 2px #9880ff;
-   }
-    60%, 100% {
-        box-shadow: 9999px 0 0 -5px #9880ff;
-   }
-}
-@keyframes dotPulseAfter {
-    0% {
-        box-shadow: 10014px 0 0 -5px #9880ff;
-   }
-    30% {
-        box-shadow: 10014px 0 0 2px #9880ff;
-   }
-    60%, 100% {
-        box-shadow: 10014px 0 0 -5px #9880ff;
-   }
-}
-td{
+td {
     border: 1px solid #94866d;
     background-color: #e2dbc8;
     padding: 10px !important;
     text-align: center;
 }
+
 table {
     border-collapse: collapse;
 }
-tbody{
+
+tbody {
     margin: auto;
     width: 100%;
     display: table;
 }
-.debug-hide{
+
+.debug-hide {
     display: none;
 }
-.debug-show{
+
+.debug-show {
     display: block;
 }
-.debug-show p{
+
+.debug-show p {
     display: block;
     max-width: 75%;
     overflow-x: auto;
 }
 
-.always{
+.always {
     background-color: #AFEEEE;
 }
-.common{
+
+.common {
     background-color: #56E156;
 }
-.uncommon{
+
+.uncommon {
     background-color: #FFED4C;
 }
-.rare{
+
+.rare {
     background-color: #FF863C;
 }
-.veryrare{
+
+.veryrare {
     background-color: #FF6262;
 }
-.hover-link img{
+
+.hover-link img {
     margin-top: 0px !important;
     padding-left: 10px;
     display: "inline";
 }
 
+#app {
+    padding: 40px;
+}
+
+.npcIds {
+    display: block;
+    max-width: 75%;
+    overflow-x: auto;
+}
+
+.centered {
+    text-align: center;
+}

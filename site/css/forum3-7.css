@@ -123,7 +123,7 @@ TABLE {
 .group td.threads,
 .group td.posts,
 .group td.lastpost {
- background: transparent url(../img/forum/headerbg.png) repeat-x scroll 0% 50%;
+ background: transparent url(../img/forum/headerbg.webp) repeat-x scroll 0% 50%;
 }
 
 .groupname .groupname { float:left; padding-top: 1px; font-size: 14px; }
@@ -221,7 +221,7 @@ TABLE {
 
 .title1, #header_posts, #header_lastpost {
  height: 24px;
- background: transparent url(../img/forum/headerbg.png) repeat-x scroll 0% 50%;
+ background: transparent url(../img/forum/headerbg.webp) repeat-x scroll 0% 50%;
  font-weight: bold;
  text-align: center;
  vertical-align: middle;
@@ -957,7 +957,7 @@ a.buttonmedium{
  text-decoration: underline;
 }
 #communitySelectionBar {
- background: #3e3220 url(../img/forum/communities/headerbg.png) repeat-x scroll 0% 0%;
+ background: #3e3220 url(../img/forum/communities/headerbg.webp) repeat-x scroll 0% 0%;
  height: 28px;
 }
 #forumViewCommunities {

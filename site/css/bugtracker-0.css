@@ -6,7 +6,7 @@ p{
 }
 
 .progressbar{
- background-image: url(../img/main/progressbar.png);
+ background-image: url(../img/main/progressbar.webp);
  background-repeat: none;
  height: 28px;
 }
@@ -27,7 +27,7 @@ p{
 }
 
 .progtext {
- background: transparent url(../img/main/bordersplit.png) no-repeat;
+ background: transparent url(../img/main/bordersplit.webp) no-repeat;
  padding-left: 1px;
 }
 
