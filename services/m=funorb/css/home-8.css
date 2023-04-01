@@ -1,0 +1,406 @@
+
+/* ############# */
+/* Home PAGE CSS */
+/* ############# */
+/* Content Container Boxes */
+/* Latest Releases */
+#latestReleases {
+ float:left;
+}
+#latestReleases b {
+ font-size:17px;
+}
+
+#release {
+ float:left;
+ width:432px;
+ height:167px;
+ background-color: black;
+}
+
+#release .releasePlayMe {
+ display: block;
+ position: absolute;
+ width: 62px;
+ height: 62px;
+ left: 11px;
+ top: 30px;
+ background: url(#); /* IE 7 & Opera fix (they refuse to render elements over flash unless they have either content or a background) */
+ cursor: pointer;
+}
+
+#release .links {
+ position:absolute;
+ left:333px;
+ top:158px;
+}
+
+#release .text {
+ position: absolute;
+ top: 160px;
+ left:10px;
+}
+
+#release .title {
+ float:left;
+ font-weight:bold;
+ font-size:14px;
+}
+
+#release .genre {
+ float:left;
+ position:relative;
+ padding: 4px 0 0 12px;
+}
+
+/* xLatest Releases */
+
+/* Top 10 Games */
+
+#top {
+ position: relative;
+ width: 308px;
+ height: 167px;
+ float: right;
+ background: url(../img/images/layout/top_bg.png) left top no-repeat;
+}
+
+#topThumb, #topLoader {
+ position: absolute;
+ left: 6px;
+ top: 24px;
+ width: 151px;
+ height: 111px;
+}
+
+#topLoader {
+ display: none;
+ background: black url(../img/images/layout/loading.gif) 60px 40px no-repeat;
+}
+
+#topTitle {
+ float: left; 
+ padding: 3px 0 0 24px;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#topButtons {
+ position: absolute;
+ left: 34px;
+ bottom: 7px;
+}
+
+#topList {
+ position: absolute;
+ left: 164px;
+ top: 0;
+ width: 142px;
+}
+
+
+
+#topList div {
+ position: relative;
+ height: 17px;
+ overflow: hidden;
+}
+
+#topList a {
+ position: absolute;
+ top: -1px;
+ left: -1px;
+ display: block;
+ width: 144px;
+ height: 19px;
+ line-height: 18px;
+ text-decoration: none;
+ color: white;
+}
+
+#topList #top1,
+#topList #top10 {
+ height: 16px;
+ line-height: 15px;
+}
+
+#topList #top1 a,
+#topList #top10 a {
+ height: 18px;
+}
+
+#topList a.selected,
+#topList a:hover {
+ color: #ffc000;
+ font-weight: bold;
+ background: url(../img/images/layout/topList_bg.png) 1px 1px;
+}
+
+#topList #top1 a.selected,
+#topList #top1 a:hover {
+ background: url(../img/images/layout/topList_bg_top.png) 1px 1px;
+}
+
+#topList #top10 a.selected,
+#topList #top10 a:hover {
+ background: url(../img/images/layout/topList_bg_bottom.png) 1px 1px;
+}
+
+#topList span {
+ float: left;
+ width: 21px;
+ margin-right: 3px;
+ text-align: center;
+ cursor: pointer;
+}
+
+/* xTop 10 Games */
+
+/* News, Single and Multi Player Shared */
+
+.gamesList .sectionHeader,
+.gamesList .sectionHeaderRight,
+#news .sectionHeader,
+#news .sectionHeaderRight {
+ height: 28px;
+}
+
+/* xFeatured, Single and Multi Player Shared */
+
+
+
+/* Latest News */
+
+#news {
+ float: left;
+ width:437px;
+}
+
+#news .sectionBackground,
+#news .sectionContent,
+#news .sectionFooter,
+#news .sectionFooter div {
+ background: none;
+}
+
+#news .sectionFooter {
+ display: none;
+}
+
+#news .sectionBorder {
+ background: black url(../img/images/layout/section_bg_featured.gif) no-repeat;
+ padding-top: 4px;
+}
+
+#newsContainer {
+ padding: 5px 9px 10px;
+}
+
+#newsBackground {
+ position: relative;
+ width: 417px;
+ height: 135px;
+ overflow: hidden;
+ background-color: #0b2540;
+}
+
+#newsContent {
+ padding: 5px 5px 0;
+}
+
+
+
+#newsTitle {
+ float: left;
+ margin: 0 0 1px;
+ width: 320px;
+ height: 17px;
+ overflow: hidden;
+ font-size: 14px;
+ font-weight: bold;
+ color: white;
+}
+
+#newsDate {
+ float: right;
+ padding-top: 1px;
+ color: white;
+}
+
+#newsRule {
+ margin: 0 0 4px;
+ clear: both;
+ font-size: 0px;
+ border-top: 1px solid #001a3b;
+ border-bottom: 1px solid #25476b;
+}
+
+#newsIcon {
+ float: right;
+}
+
+#newsSummary {
+ margin: 0;
+ padding: 0;
+ height: 48px;
+ overflow: hidden;
+ font-size: 11px;
+ color: #dad6d5;
+}
+
+
+
+.newsRule {
+ margin: 4px auto;
+ clear: both;
+ font-size: 0px;
+ border-top: 1px solid #001a3b;
+ border-bottom: 1px solid #25476b;
+}
+
+.newsSmall {
+ height: 14px;
+ font-size: 11px;
+ color: white;
+}
+
+.newsTitle {
+ float: left;
+ font-size: 11px;
+ font-weight: normal;
+}
+
+.newsDate {
+ float: right;
+}
+
+/* xLatest News */
+
+
+
+/* Advert */
+#advert {
+ background:transparent url(../img/images/layout/advert_bg.gif) no-repeat;
+ float:left;
+ width:316px;
+ height:281px;
+ margin-left:8px;
+}
+
+#advert iframe {
+  width:300px;
+  height:273px;
+  margin:8px 8px 0;
+}
+
+#advert img {
+ margin: 8px 0 0 8px;
+}
+
+/* xAdvert */
+
+/* Single and Multi Player Shared */
+
+#ourGames {
+ width: 437px;
+ float: left;
+ margin:8px 0 0;
+}
+
+.gamesList .sectionTitle a {
+ font-weight: normal;
+ text-decoration: underline;
+}
+
+.gamesList .sectionTitle a:hover {
+ text-decoration: none;
+}
+
+.gamesList .sectionBackground {
+ background-image: url(../img/images/layout/section_bg_games.gif);
+}
+
+.gamesList ul {
+ margin: 0;
+ padding: 0 0 0 6px;
+}
+
+#ourMulti ul {
+ padding-left: 2px;
+}
+
+.gamesList li {
+ list-style:none;
+ float:left;
+ width:106px;
+ text-align:center;
+ overflow:visible;
+}
+
+#ourMulti li {
+ width: 103px;
+}
+
+a.genre,
+a.genre:hover,
+.genre a,
+.genre a:hover {
+ text-decoration:none;
+ color:#FFD200;
+}
+
+.gamesList .name {
+ height:26px;
+ line-height:11px;
+ vertical-align:middle;
+ text-align: center;
+ font-weight:bold;
+}
+
+.gamesList table {
+ width:100%;
+ border-collapse: collapse;
+}
+
+.gamesList td {
+ padding: 0px;
+}
+
+.gamesList .thumbLink {
+ display: block;
+ margin-bottom: 1px;
+}
+
+.gamesList .genre {
+ height: 15px;
+ margin: 0;
+ font-size: 10px;
+}
+
+.gamesList .buttonInfo {
+ margin-left: 5px;
+ display: inline-block; /* IE fix */
+}
+
+.gamesList .hr {
+ height: 11px;
+ background-position: center bottom;
+}
+
+/* xSingle and Multi Player Shared */
+
+/* Right Column */
+
+#gameAdvert, #topGames, #ourMulti  {
+ float: left;
+ width: 316px;
+ margin-left: 8px;
+ margin-top:8px;
+}
+
+/* xRight Column */
+
+/* Content Container Boxes */
+/* ############# */
+/* Home PAGE CSS */
+/* ############# */

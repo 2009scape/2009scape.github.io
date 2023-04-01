@@ -1,0 +1,227 @@
+
+
+
+.sectionTrail {
+ float: left;
+}
+
+.sectionServerlist {
+ float: right;
+ margin-right: 10px;
+}
+
+.intro {
+ height: 173px;
+ margin-bottom: 5px;
+ background: black -4px 0px no-repeat;
+}
+
+.introDescription {
+ float: left;
+ width: 567px;
+ height: 173px;
+}
+
+.introDescription div {
+ padding: 123px 8px 0 8px;
+ color: white;
+}
+
+.introDescription a {
+ color: #FFD200;
+ text-decoration: none;
+}
+
+#navGames .buttonWide {
+ float: right;
+ margin-bottom: 5px;
+}
+
+.buttonPlayBig {
+ height: 70px;
+ float: right;
+ display: block;
+ width: 169px;
+ background: top url(../img/images/info/button_play.gif);
+}
+
+.buttonPlayBig:hover {
+ background-position: bottom;
+}
+
+.screenshotsFrame {
+ float:left;
+ width: 351px;
+ height: 263px;
+ margin-top: 4px;
+}
+
+.screenshotsImage {
+ float: left;
+ margin-top: 4px;
+ width: 351px;
+ height: 263px;
+}
+
+#screenshotsThumbs {
+ float: right;
+ width: 83px;
+ margin-top: 4px;
+}
+
+.screenshotsThumb {
+ display: block;
+ margin-bottom: 5px;
+ text-decoration: none;
+}
+
+.screenshotsThumb div {
+ height: 62px;
+ background: transparent url(../img/images/layout/loading.gif) no-repeat -83px -62px;
+ cursor: pointer;
+}
+
+.benefitsPadding {
+ height: 4px;
+ font-size: 1px;
+}
+
+.benefitsContent {
+ margin: auto;
+ width: 281px;
+ height: 263px;
+ background: #051C37;
+}
+
+.benefitsList {
+ height: 208px;
+}
+
+.benefitsList ul {
+ margin: 0;
+ padding: 4px 8px 8px 8px;
+ text-align: left;
+ font-size: 14px;
+ color: white;
+ line-height: 2em;
+}
+
+.benefitsList li {
+ list-style: none;
+ padding-left: 17px;
+ background: url(../img/images/info/benefits_bullet.gif) no-repeat 4px 10px;
+
+}
+
+#fullscreen {
+ text-decoration: none;
+}
+
+.buttonSubscribe {
+ display: block;
+ margin: auto;
+ width: 270px;
+ height: 49px;
+ background-position: top;
+}
+
+.buttonSubscribe:hover {
+ background-position: bottom;
+}
+
+.faqsList {
+ margin: 0 5px 5px;
+ background: black;
+}
+
+.faqsList ol {
+ margin: 0;
+ padding: 8px 8px 11px 34px;
+ line-height: 2em;
+ color: #FFD200;
+}
+
+.faqsAnswer {
+ margin-top: 0;
+ clear: both;
+ padding: 8px;
+}
+
+.faqsAnswer h3 {
+ margin: 6px 0 12px 0;
+ font-size: 12px;
+ font-weight: normal;
+ color: #FFD200;
+}
+
+.faqsBack {
+ text-align: right;
+}
+
+.descriptionFix {
+ height: 1px;
+ font-size: 5px;
+}
+
+/* Overrides of default components */
+
+.subsection#screenshots {
+ float: left;
+ width: 447px;
+}
+
+.subsection#screenshots .subsectionContent {
+ padding: 0 4px;
+ height: 271px;
+ background: #202020;
+}
+
+.subsection#benefits {
+ float: right;
+ width: 289px;
+}
+
+.subsection#benefits .subsectionContent {
+ height: 271px;
+ background: #0B2540;
+ text-align: center;
+ margin-bottom: 5px;
+}
+
+.subsection#description, .subsection#faqs, .subsection#furtherBenefits {
+ margin-bottom: 5px;
+}
+
+.subsection#description .subsectionContent,
+.subsection#furtherBenefits .subsectionContent {
+ background: #0B2540;
+}
+
+.subsection#description .subsectionContent div,
+.subsection#furtherBenefits .subsectionContent div {
+ padding: 0 8px;
+}
+
+.subsection#credits .subsectionContent div {
+ position: relative;
+ padding: 0 8px 8px;
+}
+
+.subsection#credits p {
+ line-height: 2em;
+}
+
+.subsection#credits .articleBacktotop {
+ position: absolute;
+ bottom: 8px;
+ right: 8px;
+}
+
+.subsection#faqs .subsectionContent, .subsection#credits .subsectionContent {
+ background: #0B2540;
+ padding-top: 5px;
+}
+
+#faqs .subsectionContent {
+ height: 1%;
+}

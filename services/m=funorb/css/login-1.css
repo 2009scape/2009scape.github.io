@@ -1,0 +1,67 @@
+
+#navSignIn .lc1 {
+ text-align:center;
+ background:#000;
+ margin:0 5px;
+ padding:5px;
+}
+
+#navSignIn .lc1 .lc2 {
+ padding:30px 0;
+ background:#0b2540;
+}
+
+#navSignIn #lc3 {
+ width:441px;
+}
+
+#navSignIn #lc3 .subsectionContent {
+ padding-top: 6px;
+ text-align: center;
+}
+
+#navSignIn .lc4 {
+ background: transparent url(../img/images/layout/applet_div_bg.gif) no-repeat left bottom;
+ width:431px;
+ height:270px;
+ margin: 0 auto;
+ overflow: hidden;
+ text-align: left;
+}
+
+#navSignIn .buttonWide {
+ float: left;
+}
+
+#navSignIn .left {
+  display: inline; 
+ margin-left: 48px;
+}
+
+#navSignIn .right {
+ margin-left: 6px;
+}
+
+#navSignIn .buttons {
+ height: 1%;
+ margin-top:8px;
+ padding-bottom: 8px;
+}
+
+#navSignIn .subsectionContent {
+ background:#082e5b;
+}
+
+#navSignIn .loginformlink {
+ font-size:8pt;
+ margin-top:5px;
+ text-align:center;
+}
+
+#navSignIn .manualRedir {
+ font-size:9pt;
+ width:400px;
+ margin:7px auto;
+ height:20px;
+ text-align:center;
+}

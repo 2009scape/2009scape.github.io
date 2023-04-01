@@ -1,0 +1,60 @@
+
+
+
+
+
+/* Hides from IE5-mac and Mozilla \*/
+* html #contentmsg .message { height: 1%; }
+* html #contentmsg .rightpanel { width:570px; }
+/* End hide from IE5-mac and Mozilla */
+/* Hide from (old versions of?) IE: > operator not supported */
+div > table.message { border-collapse: separate; }
+#contentmsg { padding: 4px 6px; }
+#contentmsg .message {
+ text-align: left;
+ border: 2px solid #002085;
+ margin-bottom: 4px;
+ margin-top: 4px;
+ background-color: #000B1D;
+ border-color: #002085;
+}
+#contentmsg .leftpanel { border: 3px solid #06234D; vertical-align: top; width: 20%; padding: 0px 0px 10px 0px; background-color: #021126; }
+#contentmsg .rightpanel { margin-right: 10px; background-color: #000C1D; padding-left: 9px; word-wrap: break-word; overflow:hidden; }
+*:first-child+html #contentmsg .msgcontents { display: block; width: 580px; } /* IE7 only */
+#contentmsg .msgcontents { 
+ padding: 10px 10px 2em 1px; 
+ word-wrap: break-word; 
+ overflow:hidden; 
+ color: #CCCCCC; 
+ font-size: 12px; 
+ width:           560px;
+}
+#contentmsg .msgtime { color: #888; text-align: right; margin-right: 5px; }
+#contentmsg .hiddenmsg { color: #888; }
+#contentmsg .msgcommands { text-align: center; margin-top: 5px; }
+#contentmsg .msgcommands .button{
+ background-color:    transparent;
+ border:         none;
+ color:         #FFD200;
+ font-size:       1.0em;
+ margin:         0px;
+}
+#contentmsg .modtype, #content .msgcommands { font-size: 8pt; }
+#content .msgcommands { text-align: center; }
+#contentmsg .modtype { padding: 0px 0px 3px 23px; }
+#contentmsg .msgcreator { background-color: #06234D; padding: 3px; font-size: 12px; }
+#contentmsg .jmod .msgcreator, #contentmsg .jmod .modtype { background-color: #4C4205; }
+#contentmsg .mod { border-color: #04741E; }
+#contentmsg .mod .leftpanel { background-color: #032606; border-color: #064C0E; }
+#contentmsg .mod .msgcreator, #contentmsg .mod .modtype { background-color: #064C0E; }
+#contentmsg .moved { background-color: #050525; border-color: #16164a; }
+#contentmsg .moved .leftpanel { background-color: #050530; }
+#contentmsg .jmod .leftpanel { background-color: #262103; border-color: #4C4205; }
+#contentmsg .jmod { border-color: #66661C; }
+#contentmsg .hid .leftpanel, #contentmsg .hid .leftpanel div {
+ background-color: #270909; border-color: #270909;
+}
+#contentmsg .hid { background-color: #200909; border-color: #472929; }
+#contentmsg .msghighlight { border: 2px solid yellow; color: white; }
+
+div.msgrate { margin: 12px auto 7px auto; }

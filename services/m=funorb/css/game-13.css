@@ -1,0 +1,277 @@
+
+
+/* ############# */
+/* GAME PAGE CSS */
+/* ############# */
+/* Navigation */
+#gameContainer #navigation {
+ background:url(../img/images/layout/nav_game.gif) repeat-x 136px;
+ margin:auto;
+ height:136px;
+ width:758px;
+ position:relative;
+ top:0px;
+ left:0px;
+ z-index:1;
+}
+
+#gameContainer #navigation .lft {
+ background:url(../img/images/layout/nav_game.gif) no-repeat;
+ position:absolute;
+ left:-9px;
+ height:136px;
+ width:10px;
+}
+
+#gameContainer #navigation .rght {
+ background:url(../img/images/layout/nav_game.gif) no-repeat right -272px;
+ position:absolute;
+ right:-9px;
+ height:136px;
+ width:10px;
+}
+/* xNavigation */
+
+#gameContainer {
+ margin:0px auto;
+ width:100%;
+ background: none;
+}
+
+#gameContainer .menu {
+ position:absolute;
+ left:0px;
+ bottom:0px;
+ width:758px;
+}
+
+
+#gameContainer li.p2 {
+ width:105px;
+}
+
+
+
+#gameContainer li.p3 {
+ width:105px;
+}
+
+
+#gameContainer li.p11 {
+ width:368px;
+}
+
+
+
+#gameContainer li.p11 span {
+ background:url(../img/images/layout/menu.gif) no-repeat right 0px;
+ margin-left:3px;
+ display:block;
+ color:#04fa2d;
+ width:183px;
+ margin-left:285px;
+}
+
+
+
+
+#affgame {
+ line-height: 25px;
+ padding: 2px 0 0 94px;
+ background:url(../img/images/layout/affiliate_gameheader.gif) no-repeat left 1px;
+}
+
+#affgame li.p11 span {
+ margin-left: 108px;
+}
+
+#affgame li.p11 {
+ width:200px;
+}
+
+#affgame #affgamelogo {
+ position: absolute;
+ right: 0;
+ bottom: -3px;
+ height: 38px;
+ background: url(../img/images/layout/affiliate_gameheader.gif) no-repeat left 2px;
+ padding: 4px 14px 0 69px;
+ font-size: 34px; 
+}
+
+#affgame #affgamelogo img {
+ width: 88px;
+ height: 31px;
+}
+
+
+
+.menu li a#gamelist,
+.menu li a#serverlist {
+ background:url(../img/images/layout/menu.gif) no-repeat 0px -76px;
+}
+
+.menu li a#gamelist span,
+.menu li a#serverlist span {
+ margin-left:3px;
+ background:url(../img/images/layout/menu.gif) no-repeat right -76px;
+ display:block;
+}
+
+.menu li a#gamelist:hover span,
+.menu li a#serverlist:hover span {
+ background:url(../img/images/layout/menu.gif) no-repeat right -114px;
+}
+
+.menu li a#gamelist:hover,
+.menu li a#serverlist:hover {
+ background:url(../img/images/layout/menu.gif) no-repeat 0px -114px;
+}
+
+.menu li a#gamelist {width:105px;}
+
+
+ .menu li a#serverlist {
+  width:105px;
+ }
+
+
+
+.menu li.top:hover a#gamelist,
+.menu li.top:hover a#serverlist {
+  background:url(../img/images/layout/menu.gif) no-repeat 0px -114px;
+}
+
+.menu li.top:hover a#gamelist span,
+.menu li.top:hover a#serverlist span {
+ background:url(../img/images/layout/menu.gif) no-repeat right -114px;
+}
+
+#returnToGames {
+ cursor:pointer;
+}
+
+#banner {
+ background:#000;
+ border:solid 1px #000;
+ width:728px;
+ height:90px;
+ margin: 0px auto;
+ position:relative;
+ top:5px;
+}
+
+#affbanner {
+ width:728px;
+ height:90px;
+ margin: 0px auto;
+ position:relative;
+ top:5px;
+}
+
+#bookmark {
+ background:url("../img/images/social/bookmark_bg.png") repeat scroll 0 0 transparent;
+ height:34px;
+ line-height:32px;
+}
+
+#bookmark .bmtg {
+ position: relative;
+ top: 1px;
+ font-size: 12px;
+ font-weight: bold;
+}
+
+#bookmark,
+#copyRight,
+#theGameScreen {
+ width: 776px;
+ margin: auto
+}
+
+#theGameScreen {
+ background: black;
+ padding: 15px 0;
+}
+
+#ResizableContent {
+ position: absolute;
+ width: 100%;
+ height: auto;
+ left: 0;
+ text-align: center;
+}
+
+/*body#game #footer #copyRight {
+ background:none !important;
+ padding-top:25px;
+}
+
+body#game #footer {
+ background:url(../img/images/layout/gameFooter.jpg) repeat-x -101px;
+ margin:0px 9px;
+ height:101px;
+ width:758px !important;
+ position:relative;
+}
+
+body#game #footer .lft {
+ background:url(../img/images/layout/gameFooter.jpg) no-repeat;
+ position:absolute;
+ left:-9px;
+ height:101px;
+ width:16px;
+}
+
+body#game #footer .rght {
+ background:url(../img/images/layout/gameFooter.jpg) no-repeat right -202px;
+ position:absolute;
+ right:-9px;
+ height:101px;
+ width:16px;
+}*/
+
+
+
+.GameResize .bodyTheme,
+body.GameResize,
+.GameResize #wrapper {
+ background: black !important;
+}
+
+body.GameResize,
+.GameResize applet,
+.GameResize #theGameScreen {
+ height: 100%;
+}
+
+.GameResize #theGameScreen,
+.GameResize applet {
+ width: 100%;
+}
+
+.GameResize #theGameScreen {
+ margin: 0;
+}
+
+.GameResize #ResizableContent {
+ bottom: 0;
+ top: 150px;
+}
+
+.GameResize #theGameScreen {
+ padding: 0;
+}
+
+.GameResize #theGameScreen p,
+.GameResize #bookmark,
+.GameResize #copyRight {
+ display: none;
+}
+
+
+
+
+/* ############# */
+/* xGAME PAGE CSS */
+/* ############# */

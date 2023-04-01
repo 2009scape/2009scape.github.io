@@ -1,0 +1,602 @@
+
+
+
+
+#createForm {
+ margin: 0;
+ padding: 0;
+}
+
+#cIntro {
+ font-weight: bold;
+ padding: 8px;
+}
+
+.brown_box_padded {
+ position: relative;
+ padding-top: 2em;
+ padding-bottom: 1em;
+}
+
+#formBoxes {
+ padding-bottom: 2em;
+}
+
+.inner_brown_box { 
+ background: #0B2540 none repeat scroll 0 0;
+ height: 1%;
+}
+
+.brown_box_stack {
+ margin-bottom: 5px;
+}
+
+
+.formGroup {
+ float: left;
+ clear: left;
+ width: 425px;
+}
+
+.formDesc {
+ display: none;
+ clear: both;
+}
+
+.formDesc p {
+ margin: 0;
+ padding: 1em 0 0;
+ font-weight: bold;
+}
+
+.formSection {
+ float: left;
+ padding: 5px 0;
+ width: 425px;
+}
+
+
+
+.formError {
+ clear: left;
+ float: left;
+ width: 425px;
+ text-align: right;
+}
+
+#check {
+ position: relative;
+ width: 229px;
+ height: 24px;
+ float: right;
+ margin: 0 auto;
+ padding: 0;
+ border: none;
+ cursor: pointer;
+ background: none;
+}
+
+#alts span {
+ cursor: pointer;
+ text-decoration: underline;
+}
+
+#check_submit {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 229px;
+ height: 24px;
+ background: transparent url(../img/create/check_highlight.png) no-repeat -999px -999px;
+}
+
+
+#check:hover #check_submit {
+ background-position: top left;
+}
+
+
+
+
+
+
+.brown_box input, .brown_box select {
+ border: 2px solid #204266;
+ font-size: 12px;
+ background-color: #E7EBF8 !important;
+ color: black !important;
+}
+
+.brown_box input.fail{
+ border: 2px solid #b40a0a;
+ background: #F8F1E7 url(../img/create/cross.png) no-repeat right 50%;
+}
+
+.brown_box input.loading{
+ border: 2px solid #C0C0C0;
+ background: #F8F1E7 url(../img/create/loading.gif) no-repeat right 50%;
+}
+
+.brown_box input.success{
+ border: 2px solid #629428;
+ background: #F8F1E7 url(../img/create/tick.png) no-repeat right 50%;
+}
+
+.formSection label {
+ float: left;
+ width: 180px;
+ height: 22px;
+ line-height: 22px;
+ text-align: right;
+ font-weight: bold;
+ cursor: pointer;
+}
+
+#username, #password1, #password2, #year, #address1, #address2,
+.formSection select {
+ line-height: 16px; /* Non IE is handled in input_select (18px last time I looked) */
+ float: right;
+ width: 225px;
+ height: 18px;
+}
+
+.formSection div, #country {
+ float: right;
+ width: 229px;
+}
+
+.formSection select, #country {
+ height: 24px;
+}
+
+#day, #month, #year {
+ float: left;
+}
+
+
+#month, #year {
+ margin-left: 2px;
+}
+
+#day {
+ width: 57px;
+}
+
+#month {
+ width: 108px;
+}
+
+#year {
+ width: 55px;
+ float: right;
+ margin: 0;
+}
+
+
+
+.formMessage {
+ float: right;
+ width: 275px;
+}
+
+.error {
+ color: red;
+}
+
+
+/* Right box */
+
+#jmesgBg {
+ position: absolute;
+ right: 8px;
+ top: 19px;
+ width: 292px;
+ overflow: hidden;
+ background: transparent url(../img/create/bubble_bg.png) no-repeat 13px top;
+ z-index: 2;
+}
+#jmesgBg.u13 {
+ background: transparent url(../img/create/bubble_short_bg.png) no-repeat 13px top;
+}
+
+#jmesg {
+ height: 233px;
+ padding: 5px 8px 8px 20px;
+ line-height: 14px;
+ background: transparent url(../img/create/arrow.png) no-repeat left 14px; /* guestimate where the arrow starts */
+}
+#jmesg.u13 {
+ height: 144px;
+}
+
+#jmesg p {
+ margin: 0 0 0.7em 0;
+ padding: 0;
+}
+
+/* Bottom box */
+
+.half {
+ float: left;
+ width: 49%;
+ text-align: center;
+}
+
+
+.halfright {
+ float: right;
+}
+
+.half label {
+ cursor: pointer;
+}
+
+#agree_privacy, #agree_terms, #email_thirdparties,#email_jagexgeneral,#email_thisservice{
+ background-color: #0b2540 !important;
+ border: 0;
+ vertical-align: middle;
+}
+
+#errorTerms {
+ line-height: 20px;
+ clear: both;
+ text-align: center;
+}
+
+
+#submitbutton, #playnow {
+ position: relative;
+ 
+  width: 315px;
+ 
+ height: 34px;
+ display: block;
+ margin: 0 auto 1em;
+ padding: 0;
+ border: none;
+ cursor: pointer;
+ background: none;
+ color: white;
+}
+
+#create img, #playnow img {
+ position: absolute;
+ left: 0;
+ top: 0;
+}
+
+#create_submit, #create_playnow {
+ position: absolute;
+ top: 0;
+ left: 0;
+ 
+  width: 315px;
+ 
+ height: 34px;
+ background: transparent url(../img/create/create_highlight.png) no-repeat -999px -999px;
+}
+
+
+#create_playnow {
+ background: transparent url(../img/create/playnow_highlight.png) no-repeat -999px -999px;
+}
+
+#submitbutton:hover #create_submit, #playnow:hover #create_playnow {
+ background-position:    left top;
+}
+
+#submitbutton{
+ background-image:     url(../img/create/continue.jpg);
+ background-repeat:     no-repeat;
+ background-position:    center top;
+ width: 112px;
+ height: 32px;
+}
+#submitbutton.createaccount{
+ background-image:     none;
+ width:          167px;
+ height:          34px;
+}
+#submitbutton.createaccount div{
+ background-image:     url(../img/create/create_account_mo.png);
+ background-repeat:     no-repeat;
+ width:          164px;
+ height:          32px;
+}
+#submitbutton.createaccount:hover img{
+ display: none;
+}
+#submitbutton:hover{
+ background-position: center bottom;
+}
+
+
+/* Account Created Page */
+
+/*.u13, */.usernamecreate {
+ color: #61E774;
+ font-weight:bold;
+}
+
+.usefullinks {
+ margin-top: 0;
+ margin-bottom: 2em;
+}
+
+.buttons {
+ width: 312px;
+ height: 32px;
+ position: relative;
+ text-align: center;
+ margin-left: auto;
+ margin-right: auto;
+
+}
+
+
+.buttons a{
+ background:#808080 none repeat scroll 0%;
+ border:5px outset #909090;
+ color:white;
+ display:block;
+ font-weight:bold;
+ height:22px;
+ left:0pt;
+ margin:5px;
+ position:absolute;
+ text-align:center;
+ /*width: 312px;*//*215px*/
+ margin-left: auto;
+ margin-right: auto;
+ line-height: 22px;
+}
+
+.buttons a:hover {
+ background: #A0A0A0;
+ border-color: #ffffff;
+}
+
+#button-right span.lev1 {
+ background-image: url('../img/create/playnow.png');
+}
+#button-right span.lev1:hover {
+ background-position: left bottom;
+}
+
+
+span.lev1 {
+ display: block;
+ cursor: pointer;
+ position: absolute;
+ height:      32px/*40px*/;
+ /*left:-10px;*/
+ top:-5px;
+ width:      312px;/*234px;*/
+}
+
+a:hover span.lev1 {
+ background-position: left bottom;
+}
+
+div#logos {
+  margin: 0px auto;
+  text-align: center;
+  font-weight: bold;
+  width: 650px;
+}
+
+div#logos div {
+  padding: 0px;
+  margin: 15px 0px;
+ display: block;
+ width: 315px;
+}
+
+
+img.logo {
+ border: 1px solid gray;
+ background: black;
+}
+
+img#RS_logo {
+ padding: 5px 1em;
+}
+
+img#FO_logo {
+ padding: 6px 1em;
+}
+
+div#logos div#logo1 {
+ float: left;
+}
+
+div#logos div#logo2 {
+ float: right;
+}
+
+.underage {
+ color: #61E774;
+ font-weight: bold;
+}
+
+
+.hr {
+ height: 1px;
+ font-size: 1px;
+ line-height: 1px;
+ border-bottom: 2px solid #32415c;
+ background: none;
+ margin: 12px auto;
+}
+
+/* xAccount Created Page */
+
+
+/* Status Bar */
+
+ #statusbar{
+  /*border: 1px solid blue;*/
+  text-align: left;
+  margin-left:    auto;
+  margin-right:    auto;
+  width:       741px;
+  margin-bottom:    5px;
+ }
+ .statusbarwrap{
+ }
+ #statusbar .statusbutton{
+  height:       29px;
+  background-repeat: no-repeat;
+  float:        left;
+  text-align:     left;
+  margin-left:    0px;
+  margin-right:    0px;
+  color:       #666666;
+  border-left:    2px solid black;
+  padding: 0px;
+ }
+ #statusbar .statusbutton .firstoffspring{
+  margin-left:     0px;
+  border-left:     none;
+ }
+ #statusbar .statusbutton div.left,
+ #statusbar .statusbutton div.right,
+ #statusbar .statusbutton div.middle{
+  width:        233px;
+  padding-top:     8px;
+  padding-left:    10px;
+  background-image:  url(../img/create/bar_bg_inactive.gif);
+  background-repeat: repeat-x;
+  height:       21px;
+ }
+ #statusbar .statusbutton div.left{
+ }
+ #statusbar .statusbutton div.right{
+  width: 218px;
+ }
+ #statusbar .statusbutton div.middle{
+ }
+
+ #statusbar .statusbutton div.left{
+  padding-left:    0px;
+ }
+ #statusbar .statusbutton.firstoffspring{
+  padding-left:    15px;
+  background-image:  url(../img/create/bar_left_inactive.gif);
+  background-repeat: no-repeat;
+  background-position: left 0px;
+ }
+ #statusbar .statusbutton.middleoffspring{
+ }
+ #statusbar .statusbutton.lastoffspring{
+  padding-right:    15px;
+  background-image:  url(../img/create/bar_right_inactive.gif);
+  background-repeat: no-repeat;
+  background-position: right 0px;
+ }
+
+ #statusbar .statusbutton .left{
+  background-repeat: no-repeat;
+  background-position: left 0px;
+  width:       100%;
+  border:       none;
+  margin: 0px;
+  height: 29px;
+ }
+ #statusbar .statusbutton .right{
+  background-repeat: no-repeat;
+  background-position: right 0px;
+  width:       100%;
+  border:       none;
+  padding-left:    10px;
+  margin: 0px;
+  height: 29px;
+ }
+ #statusbar .firstActive,
+ #statusbar .lastActive,
+ #statusbar .middleActive {
+  color: white;
+  font-weight:    bold;
+ }
+ #statusbar .statusbutton.lastActive{
+  background-image:  url(../img/create/bar_right_active.gif);
+ }
+ #statusbar .statusbutton.firstActive{
+  background-image:  url(../img/create/bar_left_active.gif);
+ }
+ #statusbar .statusbutton.firstActive div.subButton,
+ #statusbar .statusbutton.middleActive div.subButton,
+ #statusbar .statusbutton.lastActive div.subButton{
+  background-image:  url(../img/create/bar_bg_active.gif);
+ }
+
+
+
+ label.cb{
+  float:          none;
+  width:          300px;
+  text-align:        left;
+  padding-left:       0px;
+ }
+ .formSection input.cb{
+  float:          left;
+  margin-left:       18px;
+  margin-right:       8px;
+  /*width:          10px;*/
+  /*border-width:       0px;*/
+  cursor:          pointer;
+  margin-bottom:      25px;
+ }
+ #email_thirdparties{
+  
+  margin-bottom:      29px;
+ }
+ #t_and_c .formSection .cb{
+  margin-bottom:      0px;
+ }
+
+ .formSuperGroup.triple_line .formSection{
+  margin-top:         6px;
+ }
+ .formSuperGroup.triple_line .formSection:first-child{
+  margin-top:         13px;
+ }
+/* Status Bar */
+
+
+ #t_and_c{
+  width:          auto;
+ }
+ #t_and_c .formSection{
+  width:          350px;
+  /*padding-left:       15px;*/
+
+ }
+ #t_and_c.u13{
+  width:     400px;
+ }
+ #t_and_c label.cb{
+
+ }
+ /*#formBoxes .inner_brown_box:first-child{
+  padding-bottom:      2em;
+ }*/
+
+
+/* #playnow{
+  width:          352px;
+  height:          32px;
+ }*/
+ #playnow a{
+ 
+  width: 312px;
+ 
+  height:          32px;
+  background:        none;
+  border:          none;
+  background-image:     url(../img/create/playnow_highlight.png);
+ }
+ #playnow a img{}
+ #playnow a:hover img{
+  visibility:        hidden;
+ }

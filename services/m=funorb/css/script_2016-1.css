@@ -1,0 +1,50 @@
+document.domain = 'funorb.com';
+var FUNORB = {};
+FUNORB.login = {
+    init: function(){
+        'use strict';
+        $('#login-form').on('submit', function(ev) {
+            var recaptcha = $('#google-recaptcha'), recaptchaError = $('#google-recaptcha-error');
+            if (recaptcha.length && typeof grecaptcha != 'undefined') {
+                if (grecaptcha.getResponse() == '') {
+                    ev.preventDefault();
+                    recaptchaError.addClass('c-google-recaptcha-error--show');
+                    if ($('#login-username').val() != "" && $('#login-password').val() != "") {
+                        $('.login-error').remove();
+                    }
+                    else {
+                        recaptchaError.removeClass('c-google-recaptcha-error--show');
+                    }
+                }
+            }
+        });
+    }
+};
+FUNORB.logout = {
+    redirect: function(){
+        'use strict';
+        //homeRedirect is defined on logout.ftl
+        if(typeof(homeRedirect)  !== 'undefined'){
+            location.href = homeRedirect;
+        }
+    },
+    init: function(){
+        'use strict';
+        setTimeout('FUNORB.logout.redirect()',15000);
+    }
+};
+FUNORB.onLoad = {
+    init: function(){
+        'use strict';
+        var id = document.getElementsByTagName('body')[0].id;
+        switch (id){
+            case "login-page":
+                FUNORB.login.init();
+                break;
+            case "logout-page":
+                FUNORB.logout.init();
+                break;
+        }
+    }
+};
+$(document).ready(FUNORB.onLoad.init());

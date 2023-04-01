@@ -1,0 +1,327 @@
+/*
+*/
+body{
+    background: url(../img/images/layout/bg_body_voidhunters.jpg) no-repeat center 0, url(../img/images/layout/bg_body_voidhunters_repeat.jpg) repeat-y center 0 black;
+    border: none;
+    color: #fff;
+    font-family: Arial,Helvetica,FreeSans,sans-serif;
+    font-size: 11px;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    text-align: center;
+}
+.l-vista{
+    background: url(../img/weblogin/loginarea_bg_nowarn.png?2) center top;
+    border-bottom: 4px solid black;
+    border-top: 4px solid black;
+    display: block;
+    margin: 0 auto -4px;
+    min-height: 388px;
+    position: relative;
+    text-align: left;
+    width: 775px;
+
+}
+.l-vista:before,
+.l-vista:after{
+    background: #00307A;
+    border-left: 8px solid black;
+    border-right: 4px solid black;
+    content: '';
+    height: calc(100% + 4px);
+    left: -3px;
+    position: absolute;
+    top: -4px;
+    width: 8px;
+}
+.l-vista:after{
+    border-left: 4px solid black;
+    border-right: 8px solid black;
+    left: auto;
+    right: -2px;
+}
+.l-vista--logout,
+.l-vista--login-error{
+    background: #0B253F;
+    min-height: 0;
+    text-align: center;
+}
+header{
+    background: url(../img/images/layout/nav.gif) repeat-x 116px;
+    border-radius: 10px;
+    display: block;
+    height: 116px;
+    margin: auto;
+    position: relative;
+    width: 776px;
+}
+header:after{
+    clear: both;
+    content: '';
+    display: table;
+}
+header .logo{
+    float: left;
+}
+header .shell{
+    background: url(../img/images/layout/nav_headerbg.gif) repeat-x 0px -80px;
+    border-radius: 16px;
+    float: right;
+    font-size: 10px;
+    height: 64px;
+    letter-spacing: 1px;
+    margin-right: 4px;
+    overflow: hidden;
+    padding: 14px 0 0 10px;
+    position: relative;
+    text-align: left;
+    width: 540px;
+}
+.welcome-text{
+    color: #32acfc;
+    font-size: 11px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+}
+.teletext-inner .hilight{
+    font-weight: bold;
+}
+.page-header{
+    background: url(../img/images/layout/section_header.gif);
+    border-radius: 0;
+    display: block;
+    height: 32px;
+    text-align: left;
+    width: 764px;
+}
+.page-header__content{
+    color: white;
+    display: inline-block;
+    font-weight: bold;
+    padding: 6px 0 0 32px;
+    text-align: left;
+}
+.login-logo{
+    display: none;
+}
+.login-form{
+    background: url(../img/weblogin/login_box_repeat.png?2) repeat-y 0 32px;
+    min-height: 184px;
+    margin: 53px 154px 20px;
+    padding: 30px 18px;
+    position: relative;
+}
+.m-callout{
+    background: #560000;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: white;
+    display: block;
+    line-height: 150%;
+    padding: 0 8px;
+}
+.login-form:before,
+.login-form:after{
+    background: url(../img/weblogin/login_box_top.png?2) no-repeat 0 0;
+    content: '';
+    height: 7px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+.login-form:after{
+    bottom: 0;
+    top: auto;
+}
+.login-form__label{
+    background: url(../img/weblogin/input_bg.png?2) no-repeat center top;
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    height: 49px;
+    line-height: 49px;
+    margin-bottom: 5px;
+    overflow: hidden;
+    padding-left: 9px;
+    position: relative;
+}
+.login-form__text{
+    background: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: inset 0 0 6px 3px #A4A4A4;
+    float: right;
+    font-weight: bold;
+    height: 21px;
+    line-height: 20px;
+    margin: 11px 20px;
+    padding: 2px 6px;
+    width: 238px;
+}
+.a-button{
+    background: transparent url(../img/weblogin/login.png?2) no-repeat top left;
+    color: transparent;
+    cursor: pointer;
+    display: block;
+    height: 51px;
+    margin: 30px auto 0;
+    width: 268px;
+}
+.a-button:hover{
+    -webkit-filter: brightness(1.3);
+    -moz-filter: brightness(1.3);
+    -ms-filter: brightness(1.3);
+    -o-filter: brightness(1.3);
+    filter: brightness(1.3);
+}
+.l-vista--logout .a-button,
+.l-vista--login-error .a-button{
+    background: #1F5FBF;
+    background: linear-gradient(#1F5FBF,#1F5FBF,#1F5FBF,#0048B6,#0048B6,#0048B6);
+    border: 2px solid #4e80c7;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    height: auto;
+    line-height: 30px;
+    margin: 0 auto 25px;
+    min-width: 200px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    width: auto;
+}
+.login-additional{
+    margin: 0 auto 20px;
+    width: 456px;
+
+}
+.l-vista__copy{
+    text-align: center;
+}
+.l-vista__copy-link{
+    color: #FFD200;
+    font-weight: bold;
+}
+.l-vista__back{
+    background: #1F5FBF;
+    background: linear-gradient(#1F5FBF,#1F5FBF,#1F5FBF,#0048B6,#0048B6,#0048B6);
+    border: 2px solid #4e80c7;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 16px;
+    line-height: 30px;
+    margin: 0 auto 25px;
+    min-width: 200px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+}
+.l-vista__back:hover{
+    -webkit-filter: brightness(1.3);
+    -moz-filter: brightness(1.3);
+    -ms-filter: brightness(1.3);
+    -o-filter: brightness(1.3);
+    filter: brightness(1.3);
+}
+.recoveraccount{
+    background: transparent url(../img/weblogin/recover.png) no-repeat 0 0;
+    color: transparent;
+    display: block;
+    height: 32px;
+    margin: auto;
+    width: 205px;
+}
+.recoveraccount:hover{
+    -webkit-filter: brightness(1.3);
+    -moz-filter: brightness(1.3);
+    -ms-filter: brightness(1.3);
+    -o-filter: brightness(1.3);
+    filter: brightness(1.3);
+}
+.global-footer{
+    background: transparent url(../img/images/layout/footer_bg.png) no-repeat center 5px;
+    margin: auto;
+    padding-bottom: 6px;
+    position: relative;
+    width: 778px;
+}
+.global-footer:before{
+    background: black;
+    border-bottom: 4px solid #00307A;
+    content: '';
+    display: block;
+    height: 4px;
+    left: 15px;
+    position: absolute;
+    top: -8px;
+    width: 748px;
+}
+.footer__language{
+    display: block;
+    padding-top: 24px;
+    position: relative;
+    text-align: center;
+}
+.footer__language h3{
+    display: inline-block;
+    font-size: 9px;
+    font-weight: normal;
+    margin: 0;
+    vertical-align: top;
+}
+.footer__language a{
+    color: #FFD200;
+    display: inline-block;
+    margin: 0 3px;
+    outline: none;
+    text-decoration: none;
+    vertical-align: top;
+}
+.footer__language img{
+    margin-right: 3px;
+}
+.global-footer .cr{
+    font-size: 9px;
+    font-weight: bold;
+    padding-top: 4px;
+    text-align: center;
+}
+.global-footer cr p{
+    margin: auto;
+    width: 460px;
+}
+.global-footer .cr a{
+    color: #FFD200;
+    font-size: 11px;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.global-footer .jagex-logo{
+    bottom: 11px;
+    position: absolute;
+    right: 5px;
+}
+.form-error{/*Hide these for FO as we do not want them*/
+    display: none;
+}
+.cgoogle-recaptcha-error{
+    background: #560000;
+    border: 1px solid red;
+    border-radius: 5px;
+    color: white;
+    display: none;
+    line-height: 150%;
+    padding: 0 8px;
+}
+.c-google-recaptcha-error--show{
+    display: block;
+}

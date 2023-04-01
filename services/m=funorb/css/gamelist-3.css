@@ -1,0 +1,94 @@
+
+
+#gamelistAdvert {
+ margin:0 5px 8px 7px;
+}
+
+#gamelist .subsectionContent {
+ padding-top: 6px;
+}
+
+#filterform {
+ padding:4px;
+ margin:0px 6px 6px 5px;
+ background:#0b2540;
+}
+
+#multigenre {
+ margin-left:5px;
+}
+
+.gamelistentry {
+ width:240px;
+ float:left;
+ text-decoration:none;
+ background:#0b2540;
+ margin:0 0 6px 5px;
+ font-size:11px;
+ display:inline;
+}
+
+.gametitle a,
+.gametitle a:hover,
+.genre a,
+.genre a:hover {
+ text-decoration:none;
+ color:#FFD200;
+ padding-left:1px;
+}
+
+.gameimage {
+ float:left;
+ padding:4px 0 4px 4px;
+ font-size:0px;
+}
+
+.gameimage a,
+.gameimage img {
+ display: block;
+ width: 95px;
+ height: 70px;
+}
+
+.gametext {
+ float:left;
+ width:135px;
+ margin-left:3px;
+ overflow:hidden;
+}
+
+.gametitle {
+ color:#ffc000;
+ height:1.3em;
+ overflow:hidden;
+ margin-top:2px;
+ font-weight:bold;
+}
+
+.gamedesc {
+ height:3.8em;
+ overflow:hidden;
+ font-size:10px;
+ padding-left:2px;
+}
+
+.genre {
+ position:relative;
+ bottom:0px;
+ float:left;
+ margin-top:3px;
+ width:57px;
+ overflow:hidden;
+}
+
+#gameInfoInt {
+ background:#000;
+ height:100%;
+ margin: 0px 3px 0px 3px;
+ position:relative;
+}
+
+#gameInfoInt .links {
+ float: right;
+ margin-right:3px;
+}

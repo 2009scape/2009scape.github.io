@@ -1,0 +1,93 @@
+
+
+/*Background override not used anymore as plasma bg replaced with lovely blue gradient */
+/*Background must be a jpg and not png. ms alpha hack not advised*/
+/*body { background:#000 url(../img/images/layout/bg_ie.jpg) repeat-y center top; }*/
+/* remove png background */
+#wrapper { background:none; }
+
+/*change transparent png subnav menu to solid gif, cannot position elements with ms alpha hack*/
+
+
+
+.menu a iframe { position: absolute; left: -9999px; top: -9999px; margin-left: 0; filter: mask(); }
+.menu a:hover iframe { left: 0px; top: 32px; width: 153px; }
+.menu a#games:hover iframe { height: 91px; }
+.menu a#forums:hover iframe { height: 112px; }
+.menu a#help:hover iframe { height: 133px; }
+
+
+
+
+.menu :hover ul.sub,
+.menu :hover ul#lang.sub,
+.menu li.top,
+.menu li.top:hover a,
+.menu li.top:hover a span,
+body#navHome .menu li a#home,
+body#navAccount .menu li a#account,
+body#navGames .menu li a#games,
+body#navHelp .menu li a#help,
+body#navForums .menu li a#forums,
+body#navRegister .menu li a#register,
+body#navSignOut .menu li a#signOut,
+body#navSignIn .menu li a#signIn,
+body#navHome .menu li a#home span,
+body#navAccount .menu li a#account span,
+body#navGames .menu li a#games span,
+body#navHelp .menu li a#help span,
+body#navForums .menu li a#forums span,
+body#navRegister .menu li a#register span,
+body#navSignIn .menu li a#signIn span,
+body#navSignOut .menu li a#signOut span,
+.menu li a#home,
+.menu li a#signIn,
+.menu li a#signOut,
+.menu li a#account,
+.menu li a#games,
+.menu li a#help,
+.menu li a#forums,
+.menu li a#register,
+.menu li a#countrydrop,
+.menu li a#home span,
+.menu li a#account span,
+.menu li a#games span,
+.menu li a#help span,
+.menu li a#forums span,
+.menu li a#register span,
+.menu li a#countrydrop span,
+.menu li a#home:hover span,
+.menu li a#account:hover span,
+.menu li a#games:hover span,
+.menu li a#help:hover span,
+.menu li a#forums:hover span,
+.menu li a#register:hover span,
+.menu li a#home:hover,
+.menu li a#signIn:hover,
+.menu li a#signOut:hover,
+.menu li a#account:hover,
+.menu li a#games:hover,
+.menu li a#help:hover,
+.menu li a#forums:hover,
+.menu li a#register:hover,
+.menu li a#countrydrop:hover,
+.menu li a#countrydrop:hover span,
+.menu li a#signOut span,
+.menu li a#signOut:hover span,
+.menu li a#signIn span,
+.menu li a#signIn:hover span,
+#lang_div,
+.menu :hover ul.sub,
+.menu :hover ul#lang.sub {
+ background-image: url(../img/images/layout/menu.gif?1);
+}
+
+.menu li #lang_div a:hover {
+ background: none;
+}
+
+/* Minor Bug fix for pointer to show active hover state */
+button,
+#returnToGames {
+ cursor:hand;
+}
