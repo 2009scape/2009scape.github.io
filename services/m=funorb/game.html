@@ -104,28 +104,22 @@ en">
             </ul>
             <br class="clear">
           </div>
-          <div id="ResizableContent">
+          <div>
 
-            <div id="theGameScreen">
-              <applet name="Bouncedown" id="app" cabbase="loader.cab?crc=1140426005" code="loader.class" width="640"
-                height="480" mayscript="">
-                <param name="width" value="640">
-                <param name="height" value="480">
-                <param name="archive" value="loader_1159313234.jar">
-                <param name="java_arguments" value="-Xmx256M -Dsun.java2d.noddraw=true">
-                <param name="servernum" value="8005">
-                <param name="gamecrc" value="-141807969">
-                <param name="gameport1" value="43594">
-                <param name="gameport2" value="443">
-                <param name="instanceid" value="7972405225631101098">
-                <param name="member" value="no">
-                <param name="overxgames" value="45">
-                <param name="overxachievements" value="1000">
-                <param name="currency" value="2">
-                <param name="cookieprefix" value="">
-                <param name="cookiehost" value=".funorb.com">
-                <param name="settings" value="vMY2S5tgLBP0xa-t7zCjUPTFr*3vMKNQUsW9ecnpMVQ">
-              </applet>
+            <div id="theGameScreen" style="height: max-content;">
+              <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
+              <div style="text-align: center; padding-top: 1.5rem; padding-bottom: 1.5rem;">
+                <object>
+                    <param name="play" value="./swfs/bloonstd1.swf">
+                    <embed src="./swfs/bloonstd1.swf">
+                    </embed>
+                </object>
+              </div>
+
+              <span class="headertitleleft"><span class="headertitleright">
+                <a href="https://forum.2009scape.org/viewtopic.php?t=384-bloons-tower-defense-1">Talk about it on the Forums!</a>
+              </span></span>
+
               <p>If the keyboard stops working, try clicking on the game.</p>
               <p>If the game doesn't appear, try minimising and un-minimising your browser.</p>
               <p>If the game still doesn't appear, <a name="options" target="_top" href="options.ws"
