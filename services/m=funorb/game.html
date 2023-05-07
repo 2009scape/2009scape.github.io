@@ -39,22 +39,6 @@ en">
 
 <a name="top"></a>
 
-<script type="text/javascript">
-
-  // Makes any link that doesn't open in new tab give a popup warning that you'll lose progress
-  $(function () {
-
-    $("a").click(function () {
-      if (this.target != "_blank") {
-        return cm();
-      }
-    });
-    function cm() {
-      return confirm("Clicking this link will leave the page. You will lose any game you are in the middle of.\nTo keep your progress, highscores and achievements, return to the game's main menu before leaving the page.\n\nClick OK if you would like to leave the page.");
-    };
-  })
-
-</script>
 <table id="wrapper">
   <tbody>
     <tr>
@@ -106,18 +90,24 @@ en">
           </div>
           <div>
 
+            <span style="color: red;" id="warning"></span>
+            <div id="notFound" style="display: none">
+              <br />
+              Return to <a href="./gamelist.html">the game list</a> and try again.
+            </div>
+
             <div id="theGameScreen" style="height: max-content;">
               <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
               <div style="text-align: center; padding-top: 1.5rem; padding-bottom: 1.5rem;">
                 <object>
-                    <param name="play" value="./swfs/bloonstd1.swf">
-                    <embed src="./swfs/bloonstd1.swf">
+                    <param name="play" id="swfParam">
+                    <embed id="swfEmbed">
                     </embed>
                 </object>
               </div>
 
               <span class="headertitleleft"><span class="headertitleright">
-                <a href="https://forum.2009scape.org/viewtopic.php?t=384-bloons-tower-defense-1">Talk about it on the Forums!</a>
+                <a href="SetInJS" id="talkInForms">Talk about it on the Forums!</a>
               </span></span>
 
               <p>If the keyboard stops working, try clicking on the game.</p>
@@ -129,7 +119,7 @@ en">
             <div id="bookmark">
               <span class="bmtg">More about this game:</span>
 
-              <a href="https://forum.2009scape.org/viewtopic.php?t=437-learn-to-fly-2"
+              <a href="SetInJS" id="talkInForms2"
                 target="_blank" title="Talk about this game on the Forums"
               ><img
                   src="../../site/img/forum/icons/off_topic_2.gif"
@@ -173,6 +163,32 @@ en">
     </tr>
   </tbody>
 </table>
+
+<script>
+  const data = {
+    "ageofwar": {
+      "name": "Age of War",
+      "image": "./img/ageofwar.avif",
+      "swf": "./swfs/ageofwar.swf",
+      "forumPost": "https://forum.2009scape.org/viewtopic.php?t=383-age-of-war"
+    }
+  }
+  // Get the current game parameter from URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const game = urlParams.get('game');
+  // Get the game data from the JSON file
+  const gameData = data[game];
+
+  if (!gameData) {
+    document.getElementById('warning').innerHTML = `Game '${game}' Not Found!`;
+    document.getElementById('notFound').style.display = '';
+  } 
+
+  document.getElementById('swfParam').setAttribute('value', gameData?.swf);
+  document.getElementById('swfEmbed').setAttribute('src', gameData?.swf);
+  document.getElementById('talkInForms').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
+  document.getElementById('talkInForms2').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
+</script>
 
 </body>
 
