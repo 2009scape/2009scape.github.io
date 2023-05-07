@@ -90,7 +90,7 @@ en">
           </div>
           <div>
 
-            <span style="color: red;" id="warning"></span>
+            <div style="color: red; margin-top: 1rem;" id="warning"></div>
             <div id="notFound" style="display: none">
               <br />
               Return to <a href="./gamelist.html">the game list</a> and try again.
@@ -98,7 +98,7 @@ en">
 
             <div id="theGameScreen" style="height: max-content;">
               <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
-              <div style="text-align: center; padding-top: 1.5rem; padding-bottom: 1.5rem;">
+              <div style="text-align: center; padding-top: 0.5rem; padding-bottom: 1.5rem;">
                 <div id="swfgamecontainer">
                 </div>
               </div>
@@ -164,9 +164,9 @@ en">
 <script>
   fetch("data.json")
     .then(async response => {
-      console.log(response)
+      // console.log(response)
       const data = await response.json();
-      console.log(data);
+      // console.log(data);
       // Get the current game parameter from URL
       const urlParams = new URLSearchParams(window.location.search);
       const game = urlParams.get('game');
@@ -179,18 +179,21 @@ en">
         document.getElementById('notFound').style.display = '';
       } 
 
-      window.RufflePlayer = window.RufflePlayer || {};
-      window.addEventListener("load", (event) => {
-          const ruffle = window.RufflePlayer.newest();
-          const player = ruffle.createPlayer();
-          const container = document.getElementById("swfgamecontainer");
-          container.appendChild(player);
-          player.load(gameData.swf);
-          player.style.width = "680px";
-          player.style.height = "480px";
-      });
       document.getElementById('talkInForums').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
       document.getElementById('talkInForums2').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
+
+      if (gameData.warn) document.getElementById('warning').innerHTML = gameData.warn;
+
+      window.RufflePlayer = window.RufflePlayer || {};
+      console.log("Loading Ruffle...");
+      const ruffle = window.RufflePlayer.newest();
+      const player = ruffle.createPlayer();
+      const container = document.getElementById("swfgamecontainer");
+      container.appendChild(player);
+      player.load(gameData.swf);
+      player.style.width = "680px";
+      player.style.height = "480px";
+      console.log(player);
   });
 </script>
 

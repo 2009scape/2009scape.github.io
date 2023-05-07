@@ -3,7 +3,8 @@
     "name": "Age of War",
     "image": "./img/ageofwar.avif",
     "swf": "./swfs/ageofwar.swf",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=383-age-of-war"
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=383-age-of-war",
+    "warn": "Warning: This game is very LOUD"
   },
   "bloonstd1": {
     "name": "Bloons TD 1",
