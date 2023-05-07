@@ -6,7 +6,9 @@
     "forum": "https://forum.2009scape.org/viewtopic.php?t=383-age-of-war",
     "description": "Battle of the ages!",
     "warn": "Warning: This game is very LOUD",
-    "id": "ageofwar"
+    "id": "ageofwar",
+    "genres": ["sport", "strategy"],
+    "multiplayer": false
   },
   "bloonstd1": {
     "name": "Bloons TD 1",
@@ -14,7 +16,9 @@
     "swf": "./swfs/bloonstd1.swf",
     "description": "Use monkeys to stop the balloons from escaping!",
     "forum": "https://forum.2009scape.org/viewtopic.php?t=384-bloons-tower-defense-1",
-    "id": "bloonstd1"
+    "id": "bloonstd1",
+    "genres": ["puzzle", "strategy"],
+    "multiplayer": false
   },
   "bloonstd2": {
     "name": "Bloons TD 2",
@@ -22,7 +26,9 @@
     "swf": "./swfs/bloonstd2.swf",
     "description": "Use monkeys to stop the balloons from escaping, version 2!",
     "forum": "https://forum.2009scape.org/viewtopic.php?t=391-bloons-tower-defense-2",
-    "id": "bloonstd2"
+    "id": "bloonstd2",
+    "genres": ["puzzle", "strategy"],
+    "multiplayer": false
   },
   "bloonstd3": {
     "name": "Bloons TD 3",
@@ -30,7 +36,9 @@
     "swf": "./swfs/bloonstd3.swf",
     "description": "Use monkeys to stop the balloons from escaping, version 3!",
     "forum": "https://forum.2009scape.org/viewtopic.php?t=436-bloons-tower-defense-3",
-    "id": "bloonstd3"
+    "id": "bloonstd3",
+    "genres": ["puzzle", "strategy"],
+    "multiplayer": false
   },
   "flashsonic": {
     "name": "Flash Sonic",
@@ -38,7 +46,9 @@
     "swf": "./swfs/flashsonic.swf",
     "description": "Run through the levels as Sonic the Hedgehog!",
     "forum": "https://forum.2009scape.org/viewtopic.php?t=385-flash-sonic",
-    "id": "flashsonic"
+    "id": "flashsonic",
+    "genres": ["action"],
+    "multiplayer": false
   },
   "learntofly2": {
     "name": "Learn to Fly 2",
@@ -46,7 +56,9 @@
     "swf": "./swfs/learntofly2.swf",
     "description": "Help a poor penguin learn to fly!",
     "forum": "https://forum.2009scape.org/viewtopic.php?t=437-learn-to-fly-2",
-    "id": "learntofly2"
+    "id": "learntofly2",
+    "genres": ["sport"],
+    "multiplayer": false
   },
   "worldshardestgame": {
     "name": "World's Hardest Game",
@@ -54,6 +66,8 @@
     "swf": "./swfs/worldshardestgame.swf",
     "description": "A game that's actually hard!",
     "forum": "https://forum.2009scape.org/viewtopic.php?t=386-world-s-hardest-game",
-    "id": "worldshardestgame"
+    "id": "worldshardestgame",
+    "genres": ["puzzle"],
+    "multiplayer": false
   }
 }

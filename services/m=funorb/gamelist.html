@@ -106,144 +106,36 @@
   <script type="text/javascript">
     var current_game;
 
-    function genre(id_in, next_sibling_id_in) {
-      this.id = id_in;
-      this.next_sibling_id = next_sibling_id_in;
-    }
-
-    // Build these arrays on load. (NB: The loops are ws loops)
-
-    multi = [
-      0, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0, 1, 0, 0, 0, 1, 0, 1, 0, 0, 0, 0, 1, 1,
-      1, 0, 0, 1, 0, 0, 0, 1, 0, 0, 1, 0, 0, 0, 1, 1, 1, 0, 0, 1,
-    ];
-    single = [
-      1, 0, 1, 0, 1, 1, 0, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1,
-      1, 1, 1, 0, 1, 1, 1, 0, 1, 1, 1, 1, 1, 1, 1, 1, 0, 1, 1, 0,
-    ];
-    genres = [
-      [new genre(1, 2)],
-      [new genre(5, 6)],
-      [new genre(5, 6)],
-      [new genre(5, 6)],
-      [new genre(1, 2)],
-      [new genre(1, 2)],
-      [new genre(5, 6)],
-      [new genre(3, 4)],
-      [new genre(2, 3)],
-      [new genre(2, 3)],
-      [new genre(3, 4)],
-      [new genre(5, 6)],
-      [new genre(1, 2)],
-      [new genre(2, 3)],
-      [new genre(2, 3)],
-      [new genre(4, 5)],
-      [new genre(3, 4)],
-      [new genre(4, 5)],
-      [new genre(2, 3)],
-      [new genre(1, 2)],
-      [new genre(2, 3)],
-      [new genre(5, 6)],
-      [new genre(2, 3)],
-      [new genre(4, 5)],
-      [new genre(5, 6)],
-      [new genre(3, 4)],
-      [new genre(3, 4)],
-      [new genre(5, 6)],
-      [new genre(3, 4)],
-      [new genre(1, 2)],
-      [new genre(5, 6)],
-      [new genre(5, 6)],
-      [new genre(2, 3)],
-      [new genre(2, 3)],
-      [new genre(1, 2)],
-      [new genre(1, 2)],
-      [new genre(1, 2)],
-      [new genre(2, 3)],
-      [new genre(1, 2)],
-      [new genre(5, 6)],
-      [new genre(1, 2)],
-      [new genre(1, 2)],
-      [new genre(5, 6)],
-      [new genre(5, 6)],
-    ];
-
-    // Genre name -> ID lookup table to convert the values of the drop downs when JS is on
-
-    var genre_table = {
-      action: 1,
-
-      puzzle: 2,
-
-      shooter: 3,
-
-      sport: 4,
-
-      strategy: 5,
-
-      mmo: 6,
-
-      other: 7,
-
-      0: 0,
-    };
-
-    //Filter values: (id, next_sibling_id) pair for the filter genre and an array of pairs for all other genres (indexed by id):
-    var filter_genre = new genre(0, 8);
-
-    var all_genres = new Array(7 * 2);
-
-    all_genres[1] = new genre(1, 2);
-
-    all_genres[2] = new genre(2, 3);
-
-    all_genres[3] = new genre(3, 4);
-
-    all_genres[4] = new genre(4, 5);
-
-    all_genres[5] = new genre(5, 6);
-
-    all_genres[6] = new genre(6, 7);
-
-    all_genres[7] = new genre(7, 8);
-
-    /* massively limited - only works for elements with a single class */
     function getElementsByClass(tagName, tagClass) {
-      var allelems = document.getElementsByTagName(tagName);
-      var elems = new Array(0);
-      for (i = 0; i < allelems.length; i++) {
-        if (allelems[i].className == tagClass) {
-          elems.push(allelems[i]);
+      // get all elements of type tagName with class tagClass
+      var elements = document.getElementsByTagName(tagName);
+      var returnElements = [];
+      for (var i = 0; i < elements.length; i++) {
+        if (elements[i].classList.contains(tagClass)) {
+          returnElements.push(elements[i]);
         }
       }
-      return elems;
+      return returnElements;
     }
 
     function updateFilters() {
       var gameboxes = getElementsByClass("div", "gamelistentry");
       var playerMode = document.getElementById("playerBox").value;
-      var genreMode = genre_table[document.getElementById("genreBox").value];
+      var genreMode = document.getElementById("genreBox").value;
       var nogames = true;
       for (i = 0; i < gameboxes.length; i++) {
         if (
-          (playerMode == 1 && !single[i]) ||
-          (playerMode == 2 && !multi[i])
+          (playerMode == 1 && !gameboxes[i].classList.contains("singleplayer")) ||
+          (playerMode == 2 && !gameboxes[i].classList.contains("multiplayer"))
         ) {
           gameboxes[i].style.display = "none";
-        } else if (genreMode == 0) {
+        } else if (genreMode == 0) { 
+          // no genre selected
           gameboxes[i].style.display = "inline";
           nogames = false;
         } else {
-          var display = false;
-          for (j = 0; j < genres[i].length; j++) {
-            if (
-              genres[i][j].id >= all_genres[genreMode].id &&
-              genres[i][j].id < all_genres[genreMode].next_sibling_id
-            ) {
-              display = true;
-            }
-          }
-          if (display) {
+          // check if gameboxes[i].classList.contains(genreMode)
+          if (gameboxes[i].classList.contains(genreMode)) {
             gameboxes[i].style.display = "inline";
             nogames = false;
           } else {
@@ -450,6 +342,20 @@
                                         gameListEntry.classList.add(
                                           "gamelistentry"
                                         );
+                                        for (genre in gameData.genres) {
+                                          gameListEntry.classList.add(
+                                            gameData.genres[genre]
+                                          );
+                                        }
+                                        if (gameData.multiplayer) {
+                                          gameListEntry.classList.add(
+                                            "multiplayer"
+                                          );
+                                        } else {
+                                          gameListEntry.classList.add(
+                                            "singleplayer"
+                                          );
+                                        }
                                         const gameImage = document.createElement(
                                           "div"
                                         );
