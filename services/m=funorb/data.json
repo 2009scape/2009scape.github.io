@@ -1,0 +1,44 @@
+{
+  "ageofwar": {
+    "name": "Age of War",
+    "image": "./img/ageofwar.avif",
+    "swf": "./swfs/ageofwar.swf",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=383-age-of-war"
+  },
+  "bloonstd1": {
+    "name": "Bloons TD 1",
+    "image": "./img/bloonstd1.avif",
+    "swf": "./swfs/bloonstd1.swf",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=384-bloons-tower-defense-1"
+  },
+  "bloonstd2": {
+    "name": "Bloons TD 2",
+    "image": "./img/bloonstd2.avif",
+    "swf": "./swfs/bloonstd2.swf",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=391-bloons-tower-defense-2"
+  },
+  "bloonstd3": {
+    "name": "Bloons TD 3",
+    "image": "./img/bloonstd3.avif",
+    "swf": "./swfs/bloonstd3.swf",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=436-bloons-tower-defense-3"
+  },
+  "flashsonic": {
+    "name": "Flash Sonic",
+    "image": "./img/flashsonic.avif",
+    "swf": "./swfs/flashsonic.swf",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=385-flash-sonic"
+  },
+  "learntofly2": {
+    "name": "Learn to Fly 2",
+    "image": "./img/learntofly2.avif",
+    "swf": "./swfs/learntofly2.swf",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=437-learn-to-fly-2"
+  },
+  "worldshardestgame": {
+    "name": "World's Hardest Game",
+    "image": "./img/worldshardestgame.avif",
+    "swf": "./swfs/worldshardestgame.swf",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=386-world-s-hardest-game"
+  }
+}

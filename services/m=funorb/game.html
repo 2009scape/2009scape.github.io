@@ -99,15 +99,12 @@ en">
             <div id="theGameScreen" style="height: max-content;">
               <script src="https://unpkg.com/@ruffle-rs/ruffle"></script>
               <div style="text-align: center; padding-top: 1.5rem; padding-bottom: 1.5rem;">
-                <object>
-                    <param name="play" id="swfParam">
-                    <embed id="swfEmbed">
-                    </embed>
-                </object>
+                <div id="swfgamecontainer">
+                </div>
               </div>
 
               <span class="headertitleleft"><span class="headertitleright">
-                <a href="SetInJS" id="talkInForms">Talk about it on the Forums!</a>
+                <a href="SetInJS" id="talkInForums">Talk about it on the Forums!</a>
               </span></span>
 
               <p>If the keyboard stops working, try clicking on the game.</p>
@@ -119,7 +116,7 @@ en">
             <div id="bookmark">
               <span class="bmtg">More about this game:</span>
 
-              <a href="SetInJS" id="talkInForms2"
+              <a href="SetInJS" id="talkInForums2"
                 target="_blank" title="Talk about this game on the Forums"
               ><img
                   src="../../site/img/forum/icons/off_topic_2.gif"
@@ -165,29 +162,36 @@ en">
 </table>
 
 <script>
-  const data = {
-    "ageofwar": {
-      "name": "Age of War",
-      "image": "./img/ageofwar.avif",
-      "swf": "./swfs/ageofwar.swf",
-      "forumPost": "https://forum.2009scape.org/viewtopic.php?t=383-age-of-war"
-    }
-  }
-  // Get the current game parameter from URL
-  const urlParams = new URLSearchParams(window.location.search);
-  const game = urlParams.get('game');
-  // Get the game data from the JSON file
-  const gameData = data[game];
+  fetch("data.json")
+    .then(async response => {
+      console.log(response)
+      const data = await response.json();
+      console.log(data);
+      // Get the current game parameter from URL
+      const urlParams = new URLSearchParams(window.location.search);
+      const game = urlParams.get('game');
+      // Get the game data from the JSON file
+      const gameData = data[game];
+      console.log(gameData);
 
-  if (!gameData) {
-    document.getElementById('warning').innerHTML = `Game '${game}' Not Found!`;
-    document.getElementById('notFound').style.display = '';
-  } 
+      if (!gameData) {
+        document.getElementById('warning').innerHTML = `Game '${game}' Not Found!`;
+        document.getElementById('notFound').style.display = '';
+      } 
 
-  document.getElementById('swfParam').setAttribute('value', gameData?.swf);
-  document.getElementById('swfEmbed').setAttribute('src', gameData?.swf);
-  document.getElementById('talkInForms').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
-  document.getElementById('talkInForms2').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
+      window.RufflePlayer = window.RufflePlayer || {};
+      window.addEventListener("load", (event) => {
+          const ruffle = window.RufflePlayer.newest();
+          const player = ruffle.createPlayer();
+          const container = document.getElementById("swfgamecontainer");
+          container.appendChild(player);
+          player.load(gameData.swf);
+          player.style.width = "680px";
+          player.style.height = "480px";
+      });
+      document.getElementById('talkInForums').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
+      document.getElementById('talkInForums2').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
+  });
 </script>
 
 </body>
