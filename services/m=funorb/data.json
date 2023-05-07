@@ -5,48 +5,55 @@
     "swf": "./swfs/ageofwar.swf",
     "forum": "https://forum.2009scape.org/viewtopic.php?t=383-age-of-war",
     "description": "Battle of the ages!",
-    "warn": "Warning: This game is very LOUD"
+    "warn": "Warning: This game is very LOUD",
+    "id": "ageofwar"
   },
   "bloonstd1": {
     "name": "Bloons TD 1",
     "image": "./img/bloonstd1.avif",
     "swf": "./swfs/bloonstd1.swf",
     "description": "Use monkeys to stop the balloons from escaping!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=384-bloons-tower-defense-1"
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=384-bloons-tower-defense-1",
+    "id": "bloonstd1"
   },
   "bloonstd2": {
     "name": "Bloons TD 2",
     "image": "./img/bloonstd2.avif",
     "swf": "./swfs/bloonstd2.swf",
     "description": "Use monkeys to stop the balloons from escaping, version 2!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=391-bloons-tower-defense-2"
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=391-bloons-tower-defense-2",
+    "id": "bloonstd2"
   },
   "bloonstd3": {
     "name": "Bloons TD 3",
     "image": "./img/bloonstd3.avif",
     "swf": "./swfs/bloonstd3.swf",
     "description": "Use monkeys to stop the balloons from escaping, version 3!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=436-bloons-tower-defense-3"
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=436-bloons-tower-defense-3",
+    "id": "bloonstd3"
   },
   "flashsonic": {
     "name": "Flash Sonic",
     "image": "./img/flashsonic.avif",
     "swf": "./swfs/flashsonic.swf",
     "description": "Run through the levels as Sonic the Hedgehog!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=385-flash-sonic"
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=385-flash-sonic",
+    "id": "flashsonic"
   },
   "learntofly2": {
     "name": "Learn to Fly 2",
     "image": "./img/learntofly2.avif",
     "swf": "./swfs/learntofly2.swf",
     "description": "Help a poor penguin learn to fly!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=437-learn-to-fly-2"
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=437-learn-to-fly-2",
+    "id": "learntofly2"
   },
   "worldshardestgame": {
     "name": "World's Hardest Game",
     "image": "./img/worldshardestgame.avif",
     "swf": "./swfs/worldshardestgame.swf",
     "description": "A game that's actually hard!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=386-world-s-hardest-game"
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=386-world-s-hardest-game",
+    "id": "worldshardestgame"
   }
 }
