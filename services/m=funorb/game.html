@@ -10,8 +10,8 @@ en">
   <meta http-equiv="CACHE-CONTROL" content="NO-CACHE">
   <meta name="keywords"
     content="Action, Play Free Online Games, puzzle games, platform games, arcade games, shooter games, action games, java games, casual games, racing games, word games, retro games, classic games, browser games, strategy games, multiplayer games, arcanists, Jagex">
-  <meta name="description" content="How long can you last in this platform-filled fun fest?">
-  <meta name="title" content="Bouncedown">
+  <meta name="description" content="Play Flash Games!">
+  <meta name="title" content="Funorb - Game Loading..">
   <meta name="Author" content="2009scape.org">
   <meta name="Copyright" content="Copyright 2009scape">
   <meta name="ROBOTS" content="INDEX, FOLLOW">
@@ -22,7 +22,7 @@ en">
   <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="SHORTCUT ICON" href="/favicon.ico">
   <link rel="image_src" href="img/images/game/bouncedown/small.jpg">
-  <title>Bouncedown</title>
+  <title>Funorb - Game Loading..</title>
   <style type="text/css" media="screen">
     /*\*/
     @import url(css/global-44.css);
@@ -183,6 +183,11 @@ en">
       document.getElementById('talkInForums2').setAttribute('href', gameData?.forum || "https://forum.2009scape.org/viewforum.php?f=26-website-games");
 
       if (gameData.warn) document.getElementById('warning').innerHTML = gameData.warn;
+
+      // Update meta tags
+      document.title = `${gameData.name} - 2009Scape Funorb`;
+      document.head.querySelector('meta[name="title"]').content = `${gameData.name} - 2009Scape Funorb`;
+      document.head.querySelector('meta[name="description"]').content = gameData.description;
 
       window.RufflePlayer = window.RufflePlayer || {};
       console.log("Loading Ruffle...");
