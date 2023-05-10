@@ -408,8 +408,10 @@
                                           "a"
                                         );
                                         gameGenreLink.href = "gamelist.html";
+                                        gameGenreLink.style.textTransform =
+                                          "capitalize";
                                         gameGenreLink.innerText =
-                                          gameData.genre;
+                                          gameData.genres[0];
                                         gameGenreDiv.appendChild(
                                           gameGenreLink
                                         );

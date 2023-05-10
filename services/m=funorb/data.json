@@ -7,7 +7,7 @@
     "description": "Battle of the ages!",
     "warn": "Warning: This game is very LOUD",
     "id": "ageofwar",
-    "genres": ["sport", "strategy"],
+    "genres": ["strategy"],
     "multiplayer": false
   },
   "bloonstd1": {
