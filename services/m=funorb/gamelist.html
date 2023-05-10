@@ -501,7 +501,7 @@
                                           gameImage.classList.add("gameimage");
                                           const gameImageLink =
                                             document.createElement("a");
-                                          gameImageLink.href = `./game.html?game=${gameData.id}`;
+                                          gameImageLink.href = `./games/${gameData.id}`;
                                           const gameImageImg =
                                             document.createElement("img");
                                           gameImageImg.src = gameData.image;
@@ -519,7 +519,7 @@
                                           gameTitle.classList.add("gametitle");
                                           const gameTitleLink =
                                             document.createElement("a");
-                                          gameTitleLink.href = `./game.html?game=${gameData.id}`;
+                                          gameTitleLink.href = `./games/${gameData.id}`;
                                           gameTitleLink.innerText =
                                             gameData.name;
                                           gameTitle.appendChild(gameTitleLink);
@@ -560,7 +560,7 @@
                                           gamePlay.classList.add(
                                             "buttonPlaySmall"
                                           );
-                                          gamePlay.href = `./game.html?game=${gameData.id}`;
+                                          gamePlay.href = `./games/${gameData.id}`;
                                           gamePlay.innerText = "Play";
                                           gameLinks.appendChild(gamePlay);
                                           gameText.appendChild(gameLinks);
