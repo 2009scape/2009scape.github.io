@@ -69,5 +69,15 @@
     "id": "worldshardestgame",
     "genres": ["puzzle"],
     "multiplayer": false
+  },
+  "sinjidshadowofthewarrior": {
+    "name": "Sinjid: Shadow of The Warrior",
+    "image": "./img/sinjidshadowofthewarrior.avif",
+    "swf": "./swfs/sinjidshadowofthewarrior.swf",
+    "description": "Combat Adventure & Role Playing Game",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=474-sinjid-shadow-of-the-warrior",
+    "id": "sinjidshadowofthewarrior",
+    "genres": ["adventure", "rpg"],
+    "multiplayer": false
   }
 }
