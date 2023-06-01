@@ -45,7 +45,7 @@
     "image": "./img/bloonstd4.avif",
     "swf": "./swfs/bloonstd4.swf",
     "description": "Use monkeys to stop the balloons from escaping, version 4!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=436-bloons-tower-defense-4",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=489-bloons-td-4",
     "id": "bloonstd4",
     "genres": ["puzzle", "strategy"],
     "multiplayer": false
@@ -85,7 +85,7 @@
     "image": "./img/kingdomrush.avif",
     "swf": "./swfs/kingdomrush.swf",
     "description": "Defend your kingdom from the evil forces of darkness!",
-    "forum": "https://forum.2009scape.org/viewtopic.php?t=387-kingdom-rush",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=490-kingdom-rush",
     "id": "kingdomrush",
     "genres": ["strategy"],
     "multiplayer": false
