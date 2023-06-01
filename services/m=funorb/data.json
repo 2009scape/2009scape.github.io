@@ -70,6 +70,16 @@
     "genres": ["puzzle"],
     "multiplayer": false
   },
+  "kingdomrush": {
+    "name": "Kingdom Rush",
+    "image": "./img/kingdomrush.avif",
+    "swf": "./swfs/kingdomrush.swf",
+    "description": "Defend your kingdom from the evil forces of darkness!",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=387-kingdom-rush",
+    "id": "kingdomrush",
+    "genres": ["strategy"],
+    "multiplayer": false
+  },
   "sinjidshadowofthewarrior": {
     "name": "Sinjid: Shadow of The Warrior",
     "image": "./img/sinjidshadowofthewarrior.avif",
