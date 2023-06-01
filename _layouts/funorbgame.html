@@ -22,7 +22,7 @@ en">
   <link rel="icon" type="image/vnd.microsoft.icon" href="/favicon.ico">
   <link rel="SHORTCUT ICON" href="/favicon.ico">
   <link rel="image_src" href="img/images/game/bouncedown/small.jpg">
-  <title>{{ page.title }} - Play Classic Flash Games on Modern Browsers on 2009scape's Funorb!</title>
+  <title>{{ page.title }} - Play Classic Flash Games on Modern Browsers on 2009scape Funorb!</title>
   <style type="text/css" media="screen">
     /*\*/
     @import url(/services/m=funorb/css/global-44.css);
@@ -188,7 +188,10 @@ en">
       const player = ruffle.createPlayer();
       const container = document.getElementById("swfgamecontainer");
       container.appendChild(player);
-      player.load('/services/m=funorb/' + gameData.swf);
+      player.load({
+        url: '/services/m=funorb/' + gameData.swf,
+        warnOnUnsupportedContent: false,
+      });
       player.style.width = "680px";
       player.style.height = "480px";
       console.log(player);
