@@ -40,6 +40,16 @@
     "genres": ["puzzle", "strategy"],
     "multiplayer": false
   },
+  "bloonstd4": {
+    "name": "Bloons TD 4",
+    "image": "./img/bloonstd4.avif",
+    "swf": "./swfs/bloonstd4.swf",
+    "description": "Use monkeys to stop the balloons from escaping, version 4!",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=436-bloons-tower-defense-4",
+    "id": "bloonstd4",
+    "genres": ["puzzle", "strategy"],
+    "multiplayer": false
+  },
   "flashsonic": {
     "name": "Flash Sonic",
     "image": "./img/flashsonic.avif",
