@@ -231,6 +231,10 @@ export default {
         }
         getExpectedQuantity() {
           let t = 0;
+          if(this.minAmount > this.maxAmount ) {
+            console.error("ERROR WITH DROP ID", this.id, "- MinValue > MaxValue")
+            return(0)
+          }
           const range = Array(this.maxAmount - this.minAmount + 1).fill(1).map((x, y) => this.minAmount + y);
           return ((range.reduce((a, b) => a + b, t) / range.length * (this.rarity / 100))).toFixed(2)
         }
