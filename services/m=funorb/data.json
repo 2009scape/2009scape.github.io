@@ -99,5 +99,15 @@
     "id": "sinjidshadowofthewarrior",
     "genres": ["adventure", "rpg"],
     "multiplayer": false
+  },
+  "swordsandsandals2": {
+    "name": "Swords and Sandals 2",
+    "image": "./img/swordsandsandals2.avif",
+    "swf": "./swfs/swordsandsandals2.swf",
+    "description": "Gladiator Combat Game",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=491-swords-and-sandals-2",
+    "id": "swordsandsandals2",
+    "genres": ["strategy"],
+    "multiplayer": false
   }
 }
