@@ -109,5 +109,15 @@
     "id": "swordsandsandals2",
     "genres": ["strategy"],
     "multiplayer": false
+  },
+  "flashtrek": {
+    "name": "Flash Trek: Broken Mirror",
+    "image": "./img/flashtrek.avif",
+    "swf": "./swfs/flashtrek.swf",
+    "description": "Colonize planets and create an empire",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=492-flashtrek",
+    "id": "flashtrek",
+    "genres": ["strategy"],
+    "multiplayer": false
   }
 }
