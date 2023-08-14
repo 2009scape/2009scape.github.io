@@ -69,81 +69,151 @@ excerpt: "Clock Tower quest, combat sounds and deep wilderness balancing..."
                                         {{ page.date | date: '%d-%B-%Y' }}
                                         <br>
                                     </div>
-                                    <div class="msgcontents">
-                                        <p>Greetings Explorers</p>
-                                        <p>This update brings the <b>Clock Tower quest</b> and more:</p><ul>
-<li>Implemented Clock Tower quest</li>
-<li>Combat sounds overhaul<br />
-<br />
-Sound effects for every ancient spell have been corrected<br />
-Every special attack weapon currently accessible has had sound added or implementation modified:<br />
-Dragon Battleaxe<br />
-Excalibur & Enhanced Excalibur<br />
-Dragon Halberd<br />
-Dragon 2h<br />
-Rune Thrownaxe<br />
-Vesta's Spear<br />
-Ancient Mace<br />
-Bandos Godsword<br />
-Bone Dagger<br />
-Darklight<br />
-Dorgeshuun Crossbow<br />
-Dragon Scimitar<br />
-Statius's Warhammer<br />
-Seercull<br />
-Armadyl Godsword<br />
-Dragon Longsword<br />
-Dragon Mace<br />
-Magic Longbow<br />
-Magic Comp Bow<br />
-Rune Claws<br />
-Vesta's Longsword<br />
-Dark Bow<br />
-Dragon Claws<br />
-Dragon Dagger<br />
-Granite Maul<br />
-Magic Shortbow<br />
-Saradomin Sword<br />
-Dragon Spear<br />
-Zamorakian Spear<br />
-Zamorak Godsword<br />
-Dragonfire Shield</li>
+ <div class="msgcontents">
+     <p>Hiya! This is Summer and I'm hijacking Ryan's original post. I wanted to clean this post up and add a section about Crop's mobile client.
+        
+     </p>
+
+<b><u>Mobile Client Update</u></b>
+<br>
+<br>    
+<p>Crop has been working extra hard with sweat, tears, and streams to provide you a brand new and improved <a href="https://github.com/2009scape/2009Scape-mobile/releases/tag/hd2.0">Client</a>. I won't go into super detail because he 
+    has an entire forums' post on it. I hope you take the chance to look it over and happy scaping!
+    <br>
+    <br>
+    
+</p>
+
+<br>
+<br>
+
+<b><u>The Clock Tower</u></b>
+<br>
+<br>
+<p>It's that time again, when you lose your Quest capes to newly implented quest. The Clock Tower quest have been added and it is your turn to find the cogs! Speak with </p>
+<br>
+<br>
+
+<b><u>Other Content Additions</u></b>
+<br>
+<br>
+
+<ul>
+
+<li>Made it possible to get multiple Silverlights after completing Demon Slayer</li>
+<li>Made it possible to craft Darklight with black ink after completing The Golem quest</li>
+</ul>
+<br>
+<br>
+
+<b><u>The Wilderness Touch Ups</u></b> 
+<br>
+<br>
+<b>Added a threat system to the deep wilderness that increases as a player kills NPCs to add balance to lucrative drop rates of PvP items in the deep wilderness.</b>
+<br>
+<br>
+<ul>
+<li>Killing the hostile event now removes all built up threat.</li>
+<li>Hostile event can now follow the player up/down stairs, through cave entrances, etc.</li>
+<li>Hostile event now applies disease status for 25 hits when killed.</li>
+<li>Reduced the threat gained by killing NPCs by 5x</li>
+<li>Increased the threat gained by brawlers drops by 3.75x</li>
+<li>PvP gear drops now award maximum threat (30 minutes to return to zero)</li>
+<li>Threat decreases with time.</li>
+<li>Threat only increases in the deep wilderness.</li>
+<li>As threat increases, the risk of encountering hostile wilderness events increases.</li>
+<li>Hostile wilderness events may spawn anywhere in the wilderness</li>
+<li>Improved the safety checks on items dropped in PvP</li>
+<li>Untradeable items dropped in PvP will now yield an amount of coins proportional to the item's high alchemy value, and delete the item. This amount is halved if the killer doesn't have the level for high alchemy. An additional 250 gp is deducted (after halving, if applicable) from all items to account for the hypothetical cost of a nature rune.</li>
+<li>Added admin command to view threat level ::dwthreat.</li>
+</ul>
+
+<br>
+<br>
+
+<b><u><li>Combat sounds overhaul</u></b>
+<br>
+<br>
+<ul>
+<li>Sound effects for every ancient spell have been corrected.</li>
+<li>Every special attack weapon currently accessible has had sound added or implementation modified:
+    <ul>
+        <li>Dragon Battleaxe</li>
+        <li>Excalibur & Enhanced Excalibur</li>
+        <li>Dragon Halberd</li>
+        <li>Dragon 2h</li>
+        <li>Rune Thrownaxe</li>
+        <li>Vesta's Spear</li>
+        <li>Ancient Mace</li>
+        <li>Bandos Godsword</li>
+        <li>Bone Dagger</li>
+        <li>Darklight</li>
+        <li>Dorgeshuun Crossbow</li>
+        <li>Dragon Scimitar</li>
+        <li>Statius's Warhammer</li>
+        <li>Seercull</li>
+        <li>Armadyl Godsword</li>
+        <li>Dragon Longsword</li>
+        <li>Dragon Mace</li>
+        <li>Magic Longbow</li>
+        <li>Magic Comp Bow</li>
+        <li>Rune Claws</li>
+        <li>Vesta's Longsword</li>
+        <li>Dark Bow</li>
+        <li>Dragon Claws</li>
+        <li>Dragon Dagge</li>
+        <li>Granite Maul</li>
+        <li>Magic Shortbow</li>
+        <li>Saradomin Sword</li>
+        <li>Dragon Spear</li>
+        <li>Zamorakian Spear</li>
+        <li>Zamorak Godsword</li>
+        <li>Dragonfire Shield</li>
+        
+
+    </ul>
+</li>
+</ul>
+
+<br>
+<br>
+
+<b><u>Bug Squashin</u></b>
+<br>
+<br>
+<ul>
 <li>Fixed bug where players couldn't log in after logging out after being frozen</li>
 <li>Fixed an issue causing erroneous persistence of graves</li>
 <li>Fixed regression causing GE to eat noted items</li>
 <li>Fixed item dupe in GE</li>
 <li>Fixed combat movement regression that occurred when fighting large NPCs</li>
-<li>Deep wilderness threat balancing<br />
-<br />
-Killing the hostile event now removes all built up threat<br />
-Hostile event can now follow the player up/down stairs, through cave entrances, etc.<br />
-Hostile event now applies disease status for 25 hits when killed<br />
-Reduced the threat gained by killing NPCs by 5x<br />
-Increased the threat gained by brawlers drops by 3.75x<br />
-PvP gear drops now award maximum threat (30 minutes to return to zero)<br />
-In summary, the hostile event will trigger less often but will be more dangerous</li>
-<li>Added droptrick check to Sir Pyrsin dialogue for silverlight</li>
-<li>Deep wilderness balancing<br />
-<br />
-Added a threat system to the deep wilderness that increases as a player kills NPCs to add balance to lucrative drop rates of PvP items in the deep wilderness<br />
-Threat decreases with time<br />
-Threat only increases in the deep wilderness<br />
-As threat increases, the risk of encountering hostile wilderness events increases<br />
-Hostile wilderness events may spawn anywhere in the wilderness<br />
-Improved the safety checks on items dropped in PvP<br />
-Untradeable items dropped in PvP will now yield an amount of coins proportional to the item's high alchemy value, and delete the item. This amount is halved if the killer doesn't have the level for high alchemy. An additional 250 gp is deducted (after halving, if applicable) from all items to account for the hypothetical cost of a nature rune<br />
-Added admin command to view threat level ::dwthreat</li>
-<li>Batched grafana writes into 30 second intervals</li>
-<li>Made it possible to get multiple Silverlights after completing Demon Slayer<br />
-Made it possible to craft Darklight with black ink after completing The Golem quest</li>
-<li>Converted goblin village population sign into listener</li>
-<li>Fixed regression - wilderness levers and obelisk teleports</li>
-<li>Fixed regression - the restless ghost is now able to be completed by adding the skull to the coffin<br />
-Fixed regression - house teleport and teletabs not working due to being teleblocked by the cast<br />
-Fixed regression - WildernessGateHandler now only prompts the player and applies the skull when interacting with the gates in the wilderness and not other gates</li>
 <li>Fixed unreachable grand exchange NPC exchange option</li>
+<li>Added droptrick check to Sir Pyrsin dialogue for silverlight.</li>
+<li>Fixed regression - wilderness levers and obelisk teleports.</li>
+<li>Fixed regression - the restless ghost is now able to be completed by adding the skull to the coffin</li>
+<li>Fixed regression - house teleport and teletabs not working due to being teleblocked by the cast.</li>
+<li>Fixed regression - WildernessGateHandler now only prompts the player and applies the skull when interacting with the gates in the wilderness and not other gates.</li>
 </ul>
-                                    </div>
+<br>
+<br>
+
+
+
+<br>
+<br>
+
+<b><u>Back of the House updates</u></b>
+<br>
+<br>
+<ul>
+    <li>Batched grafana writes into 30 second intervals</li>
+    <li>Converted goblin village population sign into listener</li>
+</ul>
+
+
+
+</ul>
+ </div>
                                 </td>
                             </tr>
                         </tbody>
