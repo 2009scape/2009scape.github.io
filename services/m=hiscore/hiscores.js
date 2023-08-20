@@ -991,6 +991,8 @@ hiscores.populatePlayerRankByIndex = (username, result, i) => {
 }
 
 hiscores.loadSkillTable = (skillId) => {
+    hiscores.setHeadSkillText(hiscores.sName[skillId]);
+    hiscores.setHeadSkillIcon(hiscores.sName[skillId]);
     fetch(`${hiscores.apiURL}/hiscores/playersBySkill/${hiscores.world}/${skillId}`)
         .then(response => response.json())
         .then(result => {
@@ -1016,9 +1018,6 @@ hiscores.loadSkillTable = (skillId) => {
 }
 
 hiscores.populateSkillHSTable = () => {
-    hiscores.setHeadSkillText(hiscores.sName[hiscores.currentSkillId]);
-    hiscores.setHeadSkillIcon(hiscores.sName[hiscores.currentSkillId]);
-
     for (let i = 1; i <= 24; i++) {
         row = document.getElementsByClassName(`row row${i}`)[0];
         const playerData = hiscores.tableData[i + 24 * hiscores.page - 1];
