@@ -6,7 +6,7 @@ hiscores.sName = [
     "Attack",
     "Defence",
     "Strength",
-    "Constitution",
+    "Hitpoints",
     "Ranged",
     "Prayer",
     "Magic",
