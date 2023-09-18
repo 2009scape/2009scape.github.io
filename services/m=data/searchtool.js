@@ -26,17 +26,35 @@ export default {
             <td @click="sortAmount(npc)">
               {{item.amount}} 
               <br>
-              <p style="font-size:12px">
+              <p style="font-size:12px;margin: 0;">
                 {{item.expectedQuantity}}
               </p>
             </td>
             <td :class=item.rarityStyle @click="sortFractional(npc)">{{item.fractional}}</td>  
           </tr>
+          <!-- Adding a spacer row -->
+          <tr v-if="npc.charms.length">
+            <td colspan="4" style="height:10px; text-align:center;border: none;">
+            </td>
+          </tr>
+          <tr v-for="item in npc.charms">
+          <td><img :src=iconURL(item.id)></td>
+          <td>{{item.name}}  <br> id: {{item.id}}</td>
+          <td @click="sortAmount(npc)">
+            {{item.amount}} 
+            <br>
+            <p style="font-size:12px;margin: 0;">
+              {{item.expectedQuantity}}
+            </p>
+          </td>
+          <td :class=item.rarityStyle @click="sortFractional(npc)">{{item.fractional}}</td>  
+        </tr>
           </tbody>
         </div>
       </div>
+
+      <!-- Item Sources (byitem) -->
       <div v-if="pick == 'Item Sources'">
-        <!-- Item Sources (byitem) -->
         <div v-for="item in searchResults">
           <h1>{{ item.name }}</h1>
           <p class="npcIds">NPC ids: {{ item.ids }}</p>
@@ -48,7 +66,7 @@ export default {
             <td @click="sortAmount(item)">
               {{npc.amount}}
               <br>
-              <p style="font-size:12px">
+              <p style="font-size:12px;margin: 0;">
                 {{npc.expectedQuantity}}
               </p>
             </td>
@@ -57,8 +75,10 @@ export default {
           </tbody>
         </div>
       </div>
-      <div v-if="pick == 'Item Data'">
+
+
       <!-- Item Data (itemstats) -->
+      <div v-if="pick == 'Item Data'">
       <div v-for="item in searchResults">
         <h1>{{ item.name }}</h1>
         <p class="npcIds">Item id: {{ item.id }}</p>
@@ -192,6 +212,10 @@ export default {
     spaceToUnder(str) {
       return str.replaceAll(' ', '_').toLowerCase()
     },
+    isNormalCharm(id) {
+      const charms = ["12163","12160","12159","12158"]
+      return charms.includes(id)
+    },
     search(input) {
       this.searchResults = []
 
@@ -199,6 +223,7 @@ export default {
         constructor(name, ids) {
           this.name = name;
           this.ids = ids;
+          this.charms = [];
           this.items = [];
         }
       }
@@ -260,7 +285,7 @@ export default {
                     try {
                       for (const item of this.npcObjects[npcName][itemName]) {
                         if (result.name == null) result.name = item.name
-                        result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, this.npcObjects[npcName].totalWeight))
+                          result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, !this.isNormalCharm(item.id) ? this.npcObjects[npcName].totalWeight : this.npcObjects[npcName].totalCharmWeight))
                       }
                     } catch (e) {
                       console.log("error in" + e)
@@ -277,14 +302,22 @@ export default {
             if (this.spaceToUnder(npcName).includes(searchTerm)) {
               console.log(searchTerm + " is like npc: " + npcName)
               const result = new Result(npcName, this.npcObjects[npcName].ids)
+              
               // Guaranteed / 'default' drops
               for (const drop of this.npcObjects[npcName].default) {
                 result.items.push(new DisplayItem(drop.id, drop.name, drop.minAmount, drop.maxAmount, -1, -1))
               }
+
               // Normal / 'main' drops
               for (const drop of this.npcObjects[npcName].main) {
                 result.items.push(new DisplayItem(drop.id, drop.name, drop.minAmount, drop.maxAmount, drop.weight, this.npcObjects[npcName].totalWeight))
               }
+
+              // Charms / 'charm' drops
+              for (const drop of this.npcObjects[npcName].charm) {
+                result.charms.push(new DisplayItem(drop.id, drop.name, drop.minAmount, drop.maxAmount, drop.weight, this.npcObjects[npcName].totalCharmWeight))
+              }
+
               this.searchResults.push(result)
             }
           })
@@ -307,26 +340,34 @@ export default {
   created() {
     // Proxy is used because GitLAB has CORS restrictions while GitHUB doesn't.
     // this is refreshed every 15 minutes. If it's out of sync ping @downthecrop
-    const PROXY = "https://downthecrop.github.io/2009scape-mirror/Server/data/configs/"
-    fetch(PROXY + "npc_configs.json").then(r => r.json()).then(npc_configs => {
-      for (const npc of npc_configs) {
-        this.npcIdToName[npc.id] = npc.name;
-      }
-    });
-    fetch(PROXY + "drop_tables.json").then(r => r.json()).then(drop_tables => this.dropTables = drop_tables);
-    fetch(PROXY + "item_configs.json").then(r => r.json()).then(item_configs => {
-      // Create a dictionary of item ids to item names
-      for (const item of item_configs) {
-        this.itemIdToName[item.id] = item.name
-      }
-      // Edge cases where an itemId is being used outside of its original name.
-      // eg 5733 is "Rotten potato" but is instead a medium clue.
-      this.itemIdToName["0"] = "Nothing"
-      this.itemIdToName["12070"] = "Clue Scroll (hard)"
-      this.itemIdToName["5733"] = "Clue Scroll (medium)"
-      this.itemIdToName["1"] = "Clue Scroll (easy)"
-      this.itemConfigs = item_configs;
-    })
+    const PROXY = "https://downthecrop.github.io/2009scape-mirror/Server/data/configs/";
+
+    const fetchData = async (url) => {
+      const response = await fetch(PROXY + url);
+      return await response.json();
+    };
+    
+    const initConfigs = async () => {
+      const [npcConfigs, dropTables, itemConfigs] = await Promise.all([
+        fetchData("npc_configs.json"),
+        fetchData("drop_tables.json"),
+        fetchData("item_configs.json")
+      ]);
+    
+      this.npcIdToName = Object.fromEntries(npcConfigs.map(npc => [npc.id, npc.name]));
+      this.itemIdToName = Object.fromEntries(itemConfigs.map(item => [item.id, item.name]));
+      this.dropTables = dropTables;
+      this.itemConfigs = itemConfigs;
+    
+      // Edge cases
+      this.itemIdToName["0"] = "Nothing";
+      this.itemIdToName["12070"] = "Clue Scroll (hard)";
+      this.itemIdToName["5733"] = "Clue Scroll (medium)";
+      this.itemIdToName["1"] = "Clue Scroll (easy)";
+    };
+    
+    initConfigs();
+    
     let checkInterval = setInterval(() => {
       if (this.itemConfigs && this.dropTables) {
         clearInterval(checkInterval);
@@ -337,8 +378,10 @@ export default {
             this.ids = ids;
             this.name = name;
             this.totalWeight = 0
+            this.totalCharmWeight = 0
             this.default = []
             this.main = []
+            this.charm = []
           }
         }
 
@@ -392,6 +435,29 @@ export default {
               npcObj[itemName] = [drop]
             }
           })
+
+
+          // Add Charms / charm
+          npc['charm'].forEach(drop => {
+            let itemName = this.spaceToUnder(this.itemIdToName[drop.id])
+            if (this.itemSourceNPCIds[itemName]) {
+              // Add the ids of the current NPC to item sourcelist of this drop
+              this.itemSourceNPCIds[itemName] += `,${npc['ids']}`
+            } else {
+              // This is the first NPC dropping this item.
+              this.itemSourceNPCIds[itemName] = npc['ids']
+            }
+            npcObj.totalCharmWeight += parseFloat(drop.weight)
+            drop.name = this.itemIdToName[drop.id]
+            npcObj.charm.push(drop)
+            console.log("pushing charm", npcObj.name)
+            if (npcObj[itemName]) {
+              npcObj[itemName].push(drop)
+            } else {
+              npcObj[itemName] = [drop]
+            }
+          })
+
           this.npcObjects[npcName] = npcObj
         }
       }
