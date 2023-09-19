@@ -25,13 +25,9 @@ layout: guide
 <div class="bottombordershad">
 <div class="bottomleftshad">
 <div class="bottomrightshad">
-    <!-- CONTENT HERE -->
     <div id="app"></div>
-  <script type="module">
-    import { createApp } from 'https://unpkg.com/vue@3/dist/vue.esm-browser.prod.js'
-    import MyComponent from '../searchtool.js' 
-    createApp(MyComponent).mount('#app')
-  </script>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.prod.js"></script>
+    <script type="module" src="../js/searchtool.js"></script>
 </div>
 </div>
 </div>

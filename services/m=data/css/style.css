@@ -12,6 +12,17 @@ body {
     overflow: hidden;
 }
 
+.quantity {
+    font-size:12px;
+    margin: 0;
+}
+
+.charm-spacer {
+    height:10px;
+    text-align:center;
+    border: none;
+}
+
 .stat-data {
     background-color: #605443;
     color: white;
