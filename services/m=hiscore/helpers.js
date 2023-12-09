@@ -1,6 +1,6 @@
 var hiscores = hiscores || {};
 
-hiscores.apiURL = "https://dginovker-cors-anywhere.herokuapp.com/api.2009scape.org:3000";
+hiscores.apiURL = "https://api.codetabs.com/v1/proxy?quest=http://api.2009scape.org:3000";
 
 hiscores.sName = [
     "Attack",
