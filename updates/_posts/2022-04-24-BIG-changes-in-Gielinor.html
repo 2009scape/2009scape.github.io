@@ -1,0 +1,158 @@
+---
+title: BIG changes in Gielinor
+tags: news
+layout: newspost
+date: 2022-04-24 00:00:00 +0000
+authors: ryannathans
+excerpt: "There have been some BIG changes in Gielinor. Tutorial Island, a new GE, pyramid plunder rewrite and much much more..."
+modtype: "Lead Developer"
+avatar: avatar8fa9.gif
+---
+<p>Greetings Explorers</p>
+<p>There have been some BIG changes in Gielinor. Please pay careful attention.</p>
+<p>The grand exchange has received a massive upgrade. The Grand Exchangers have found some lost offers under the desk. Any offers you have made in the past that the Grand Exchangers lost will start showing up. When you login with empty offer slots, any previously lost offers will start showing up in these slots.</p>
+<p>Some other highlights include an authentic Tutorial Island, a personalised and dynamically adjusted shop system, pyramid plunder minigame rewrite plus a new quest (Tribal Totem). Full changes as follows:</p>
+<ul>
+  <li>Show standard offer text when reopening already-made offers<br />
+  Fixed grand exchange offers disappearing on login<br />
+  Don't show withdraw items with amount 0</li>
+  <li>Fixes for 'perfect gold' smelting, mining and a prospecting bug for depleted rocks</li>
+  <li>Updated Java 8 to Java 11 in README.md, updated links</li>
+  <li>fixed memleak in ge sqlite connection</li>
+  <li>Add npc configs entry for ignoring tolerance</li>
+  <li>NPCs can no longer teleport you out of bounds</li>
+  <li>NPCs should no longer be able to kill you with a projectile fired shortly before or during death</li>
+  <li>Locked some cells in port sarim jail, can no longer just walk into wormbrain's cell</li>
+  <li>Implemented charter cost reduction for karamja gloves</li>
+  <li>thieving: Pickpocket sound, hit sounds, fixed stun</li>
+  <li>Pets now run off when starving</li>
+  <li>MapAreas can now reference their associated zones to dynamically add/remove borders<br />
+  Random Events can no longer spawn in fishing trawler<br />
+  Players can no longer have multiple random events spawned in/active at a time</li>
+  <li>Plugin interactions can now dispatch interaction events, fixes varrock easy diary tasks not counting</li>
+  <li>Convert skillcape perk activation to an interaction listener, fixes HP cape giving perm boost</li>
+  <li>Fixed agility interruptible obstacles and repeating low walls</li>
+  <li>Implemented the varrock teleport destination swap reward for easy diary completion<br />
+  Fixed the bug with accessing ned's achievement dialogue while one of his quests was in progress</li>
+  <li>Added unit testing framework</li>
+  <li>Added info on synth names and quest prefixes</li>
+  <li>swapped to java 11</li>
+  <li>fixed erroneous pyramid plunder locks</li>
+  <li>Completely rewrote the shop system.<br />
+  Shop restocking now works properly, with per-item-in-shop granularity as well. (Thanos tool update released that allows defining this)<br />
+  Shops properly restrict ironmen from buying from player stock/overstocked items<br />
+  Fully functioning individualized player stock support (need to set a server config variable to enable, disabled by default. Specifically, set personalized_shops = true in the world section of the config.)<br />
+  The shop pricing formula now scales up/down with the authentic ratios based on stock quantity.<br />
+  Buying or selling, for example, 1000 of an item, now does the proper calculation for each individual item in the purchase/sale rather than exchanging the full 1000 for the initial price at the time. (For example, in the old shops, feather price at full stock was, say, 6gp. You could buy 1000 feathers at once for 6000gp. Authentically, the pricing for each feather should scale as the stock goes down. Now 1000 feathers at once costs a bit over 7k gp, despite the initial price remaining 6gp.)<br />
+  General store player stock is now shared between all general stores</li>
+  <li>Fix Tribal Totem bug where you could repeatedly claim quest rewards</li>
+  <li>Add five (5) bot dialogue lines, handful of RS scam lines</li>
+  <li>Better cache parsing, reading more data from cache instead of code/config defined values</li>
+  <li>Fixed a bug with Gertrude's Cat where it would give you the wrong bucket back when feeding the cat</li>
+  <li>fixed penguin spying errors</li>
+  <li>Fix weird integer casting bug with pyramid plunder affecting drop rates</li>
+  <li>Added region specific teleport commands for admins</li>
+  <li>Rewrote Pyramid Plunder Minigame, features improved authenticity amongst other improvements</li>
+  <li>Converted some content to the new event hooks and listeners systems in order to clean up code a bit<br />
+  Added interfaces for standardizing the saving/loading process for data, and allowing it to be declared independently of an entry in PlayerSaver/PlayerSaveParser</li>
+  <li>Fixed bot dialogue regression referencing player name</li>
+  <li>Fixed getting stuck in GE item set interface</li>
+  <li>Reimplemented the Culinomancer chest</li>
+  <li>Add LogoutListener interface - allows a class to call some code on player logout - improved version of logout listeners.<br />
+  Add StartupListener interface - allows a class to call some code on server startup without adding messy code elsewhere<br />
+  Add ShutdownListener interface - allows a class to call some code on server shutdown without adding messy code elsewhere<br />
+  Add TickListener interface - allows a class to call some code on each tick without adding messy code elsewhere<br />
+  Converted all applicable content over to using these new interfaces</li>
+  <li>Corrected XP rate options<br />
+  Fixed some minor tutorial island bugs</li>
+  <li>Added a practice mode on Jad, so that Noobs can practice Jad without being in the cave for an hour. Costs 8000 TokKul + supplies. (Currently bugged and non-working, sorry!) 8000 TokKul is given back if the Noob is successful at defeating Jad. Video of dialogue/functionality: https://www.youtube.com/watch?v=ZESnT0278gI</li>
+  <li>Fixed a bug with random events where untradeables in inventory would be deleted</li>
+  <li>fixed cooking make-x UI issues introduced by !464</li>
+  <li>Added ingame rules confirmation screen</li>
+  <li>Removed the unnecessary and annoying player lock when cooking an item<br />
+  Moved all the achievement diary checks out into the achievement event receiver<br />
+  Refactored `ResourceGatheredEvent` -> `ResourceProducedEvent` and added a new optional field, `original` for item processing</li>
+  <li>In the Prince Ali Rescue quest players can now use a Jug of Water (in addition to bucket of water) to make skin paste</li>
+  <li>Implement hasty cooking skillcape perk (1 tick faster but 5 cooking levels lower for burn rate)<br />
+  Add Nardah's "Clay Oven" to the list of cooking spots<br />
+  Fix small burn inaccuracy with cooking gauntlets</li>
+  <li>Implemented a brand new cutscene system<br />
+  Converted Lost Tribe's cutscene to the new system</li>
+  <li>Replaced instances of "Hatchet" with "Axe" (except for stealing creation hatchet & others that were introduced as "Hatchet")</li>
+  <li>Corrected tree felling mechanics (now 1 in 8 chance for a tree to fall per log)<br />
+  Moved the diary check in woodcutting out to the diary events hook<br />
+  Corrected the woodcutting animation to not reset/interrupt itself</li>
+  <li>Tribal totem quest log now shows quest as complete after finishing quest</li>
+  <li>Fixed Elsie dialogue logic and formatting</li>
+  <li>Renamed Readbeard to Redbeard in code<br />
+  Fixed Pirate Treasure dialogue, Redbeard conversation would end before he could tell the player what the key is for</li>
+  <li>Renamed Misgog to Mizgog in WizardTowerPlugin.java</li>
+  <li>Added config parameter for the offerer of adventure bot GE announcements</li>
+  <li>fixed typo in prince ali dialogue</li>
+  <li>Fixed Barbarian fishing spot issue preventing it from acquiring a new location</li>
+  <li>fixed issue rubbing lamps rapidly</li>
+  <li>Fix Tribal Totem Quest Index ID</li>
+  <li>Crafting guild no longer gives "welcome" messages on leave<br />
+  Refactored crafting guild</li>
+  <li>rewrote the CadavaBerriesPlugin (misnomer) to CadavaPotionListener</li>
+  <li>Added missing watering can ID<br />
+  Improved autofilling, is now the default</li>
+  <li>Add interaction/city/lumbridge Listeners, move LumbridgeListeners to package</li>
+  <li>No longer take thirst damage while doing the tutorial<br />
+  Survival Expert can now correctly return your axe if you somehow manage to lose it<br />
+  Fixed a hint arrow location in tutorial</li>
+  <li>Can now make sinew from both beef and bear<br />
+  Sinew no longer hangs</li>
+  <li>authenticity fix for text on shield of arrav certificate</li>
+  <li>Rewrote how Entrana item restrictions work, fixes various issues</li>
+  <li>Fixed another RW drop regression where server would not start on headless environments</li>
+  <li>fixed drops providing clue scrolls that can't be used</li>
+  <li>fix death plateau error on server start</li>
+  <li>GE rewrite (adds sqlite dependency for servers)<br />
+  new Event Hook system that is now used to handle Jobs, Slayer tasks and Achievement Diary systems<br />
+  Added sfx for slashing webs<br />
+  Music Track ID 454 "Home Sweet Home" now correctly unlocks and plays inside PoH<br />
+  Fixed Dragon axe special attack<br />
+  Add back deleted Seercull special attack (got caught in cleanups somewhere and erroneously deleted?)<br />
+  Added Darklight special attack (its boosted bonus against Demons not added)<br />
+  Positional audio support for Jewellery/Mounted Jewellery teleports<br />
+  New administrative command to test drops, ::rolldrops<br />
+  fixed bot dialogue to use correct playername checking post-JSON changes<br />
+  Added new commands ::ge bots and ::ge botsearch<br />
+  Improved ::ge buying and ::ge selling<br />
+  Fixed Vinesweeper (by fixing a general bug in NPC pathfinding that affects all NPCs)<br />
+  Fixed NPC safespotting (by fixing a separate general bug in NPC pathfinding)<br />
+  player can now deposit items with peer the seer after completing the Fremennik Easy, Medium, or Hard diary<br />
+  added fishing trawler to ::to teleport locations for admins<br />
+  Fixed NPE in RangeSwingHandler<br />
+  Added mystic lava staff so you can alch with it as well<br />
+  Changed deposit listener so it's not specifically for peer the seer, any npc can be added<br />
+  Fixed fur trader dialogue/shop now that fremmy trials works<br />
+  More Relekka Dialogues, added Fisherman's dialogues before/after Fremennik Trials is done<br />
+  locked thieving Rellekka stalls behind fremmy trials quest<br />
+  added fur stall thieving in rellekka<br />
+  fixed chieftan brundt stuck dialogue<br />
+  improved checking quest requirements on equipment before equipping<br />
+  fixes and additions to other rellekkan NPC dialogues<br />
+  Equip listeners which accept int arrays<br />
+  Fixed bug in Brundt's dialogue<br />
+  Can no longer spawn multiple Koscheis by spamclicking the ladder<br />
+  Can no longer repeat Peer the Seer's task infinitely<br />
+  Implemented Tutorial Island<br />
+  Hans EXP Rate and Ironman Mode setting functionality has been moved inside Tutorial Island (at the end with the Wizard Tutor, he will ask to set your rate and mode instead)<br />
+  Added more Kurask NPC IDs to Kurask Slayer Tasks<br />
+  Added more Ogre and Ogress NPC IDs to Ogre Slayer Tasks<br />
+  Implemented Tribal Totem Quest<br />
+  Fixed memory leaks</li>
+  <li>Ceikry: Fix a little oops in SlayerKillHook</li>
+  <li>Redwings Drop III.5: Tutorial Island, Tribal Totem</li>
+  <li>Redwings Drop III: Ceikry GE, Job, Slayer, Achievement Diary rewrites</li>
+  <li>Added Hobgoblins (lvl 42) spawns to the Rock Crab area north of Rellekka<br />
+  <br />
+  Added Nature Runes and Cut Sapphire ground item spawns to the Rock Crab area north of Rellekka<br />
+  <br />
+  Removed Rock Crabs negative bonuses allowing them to deal damage as intended</li>
+  <li>more specific debugging for login hang</li>
+  <li>fixed several bugs in barlak bone exchange</li>
+  <li>Fix bug mixing up fremennick trails and fishing contest</li>
+</ul>

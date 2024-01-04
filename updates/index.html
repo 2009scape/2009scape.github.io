@@ -1,0 +1,173 @@
+---
+title: Updates
+tags: archive
+layout: null
+collection: Game Updates
+---
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+<meta name="viewport" content="width=1024, initial-scale=1.0">
+
+<head>
+  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+  <meta http-equiv="Content-Language" content="en,English">
+  <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
+  <meta name="description"
+    content="2009Scape - Play Runescape from 2009. Multiplayer and free forever.">
+  <!--2010 GLOBAL CSS-->
+  <style type="text/css">
+    /*\*/
+    @import url(/site/css/default/global-30.css);
+    /**/
+  </style>
+  <style type="text/css">
+    /*\*/
+    @import url(/site/css/default/home-28.css);
+    /**/
+  </style>
+  <!--2009SCAPE CUSTOM CSS-->
+  <link rel="stylesheet" href="/site/2009scape-resources/css/2009scape.css">
+  <title>2009Scape - {{ page.title }}</title>
+</head>
+
+<body id="navhome" class="bodyBackground">
+  <a name="top"></a>
+  <div id="scroll">
+    <div id="head">
+      <div id="headBg">
+        <div id="headOrangeTop"></div>
+        <img id="banner" src="" alt="RuneScape" width="766" height="143">
+
+        <!--SCRIPT: MONTHLY BANNER-->
+        <script type="text/javascript">
+          document.getElementById("banner").src = `/site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.webp`;
+        </script>
+
+        <div id="headImage"><a href="/" id="logo_select"></a>
+          <div id="player_no">
+            <span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape
+          </div>
+        </div>
+        <div id="headOrangeBottom"></div>
+
+        <!-- End of Banner -->
+        <div id="menubox">
+          {% include menu.html %}
+        </div>
+      </div>
+    </div>
+
+    <link rel="stylesheet" href="/site/css/forum3-7.css">
+    <div class="navigation">
+      <div class="location">
+        {% include breadcrumbs.html %}
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="article">
+        <div class="sectionHeader">
+          <div class="left">
+            <div class="right">
+              <h1 class="plaque">Updates</h1>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          <div class="brown_background">
+            <div id="contrast_panel">
+              <div id="infopane">
+                <span class="title">
+                  <img src="/site/2009scape-resources/img/game_guide/banners/archives.webp" alt="">
+                </span>
+                <ul class="flat">
+                  <li><br></li>
+                </ul>
+              </div>
+            </div>
+            <div class="phold" id="nocontrols"></div>
+          </div>
+          <div id="content_forum" class="border">
+            <div class="bk"></div>
+              <div class="cont">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="title1 first-child">&nbsp;</td>
+                    <td id="header_posts" class="center title">Category</td>
+                    <td id="header_lastpost" class="title1">
+                      Post Date
+                    </td>
+                  </tr>
+                  <!-- You can pin a post here-->
+                  {% assign sorted = site.categories.updates | orderby: 'date'  %}
+                  {% for page in sorted %}
+                    <tr class="thdnrml">
+                      <td class="threadtitle">
+                        <a class="sticky1" href="{{ page.url | prepend: site.baseurl }}">
+                          <b>{{ page.title | replace: "2009Scape - ", "" }}</b>
+                        </a>
+                        <br>
+                        <span class="nt">created by <span class="username"><img src="/site/img/forum/crown_gold.gif" height="8" width="10">{{ page.authors }}</span></span>
+                      </td>
+                      <!-- Category the posts are in -->
+                      <td class="n posts">
+                        Game Updates
+                      </td>
+                      <!-- When the page was created -->
+                      <td class="updated">
+                        <b>{{ page.date | date: "%-d %B %Y"}}</b>
+                        <br>Not Recorded
+                      </td>
+                    </tr>
+                  {% endfor %}
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <br class="clear">
+          <div class="actions" id="bottom">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="commands center">
+                    <ul class="flat first-child">
+                      <li>
+                        <a href="/services/m=news/archives/">
+                          <img alt="" src="/site/img/forum/cmdicons/backtoforum.gif">
+                          Up to Legacy Update List
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img alt="" src="/site/img/forum/cmdicons/refresh.gif">
+                          Refresh
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="navigation">
+      <div class="location">
+        {% include breadcrumbs.html %}
+      </div>
+    </div>
+
+      {% include footer.html %}
+    </div>
+  </div>
+</body>
+<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
+
+</html>

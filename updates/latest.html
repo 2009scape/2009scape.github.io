@@ -1,0 +1,7 @@
+---
+layout: null
+---
+
+{% assign latest_post = site.categories.updates | orderby: 'data' | first %}
+
+<meta http-equiv="refresh" content="0; URL={{ latest_post.url }}" />

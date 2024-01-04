@@ -1,0 +1,142 @@
+---
+title: Introducing Global Chat
+tags: news
+layout: newspost
+date: 2023-03-03 00:00:00 +0000
+authors: ryannathans
+excerpt: "This update introduces the global chat system..."
+modtype: "Lead Developer"
+avatar: avatar8fa9.gif
+---
+<p>Greetings Explorers</p>
+<p>This update introduces the global chat system. To use global chat, prefix a message with two forward slashes. Global chat also supports colour coded messages. For example //hello, or //%0000ffhello for white. Feel free to make your own clans now instead of relying on the 2009scape clan chat for global chat. Use ::muteglobal to toggle visibility of global chat.</p>
+<p>Full list of changes:</p>
+  <ul>
+  <li>Fixed a null reference exception due to misuse of combat callbacks to update interfaces</li>
+  <li>Fixed random variation on tablet teleport to house<br />
+  Corrected drop table for hero<br />
+  Rewrote tablet teleports in kotlin as listener<br />
+  Added new ::runekit admin command, which gives 1k of each Rune type to make testing easier</li>
+  <li>Improved accuracy of player wealth calculation</li>
+  <li>Converted Seamen plugin to listener</li>
+  <li>Disconnecting while dying no longer results in improper death handling in safe zones (e.g. fight caves)</li>
+  <li>Made pipelines even faster with slim version of maven docker image</li>
+  <li>Another round of dialogue fixes<br />
+  <br />
+  Fixed grammatical errors with: Duke of Lumbridge, Falador Squire, poison salesman, slayer masters, Varrock East bartender, mage of Zamorack, Sedridor, trader Stan, Varrock information clerk<br />
+  Fixed animation for Varrock East bartender<br />
+  Fixed some stuck dialogues</li>
+  <li>Moved jq installation to run on json verification gitlab pipeline only</li>
+  <li>Black Knights' Fortress Bug Fixes<br />
+  <br />
+  Fixed facial expressions for Sir Amik, listen scene characters, fortress guard<br />
+  Fixed door needing uniform from inside to leave<br />
+  Big door now opens from the inside</li>
+  <li>Implemented drop table for Entrana zombies, thus now finally giving them the correct bronze axe drop rate</li>
+  <li>Added support to fire off a discord alert to a webhook (set in server config as server.openrsc_integration_webhook) when Wormbrain's map piece is collected so that rsc plate pures are possible</li>
+  <li>Fight Arena Bug Fixes<br />
+  <br />
+  Fixed HD related issues during hengrad cutscene<br />
+  Fixed dialogue after entering the hengrad cell<br />
+  Fixed doors that were not visually open when opened by the bouncer in the cutscene<br />
+  Refactored guard dialogue<br />
+  Fixed some exceptions</li>
+  <li>Fixed sequence rune pouches are dropped in</li>
+  <li>Implemented support for overriding daily account limits via new config file Server/data/configs/account_limit_exceptions.conf (this file is hot reloaded automatically upon modification)</li>
+  <li>Even more NPC dialogue fixes<br />
+  <br />
+  Dialogue animations fixed for Doric's Quest Omglewip in Wizards' Tower<br />
+  Sawmill operator options handler is now kotlin listener, fixes unreachable bug<br />
+  Mining guild entrance dwarf grammar fixed<br />
+  Farsight seer expression and grammar fixed<br />
+  Zeke of Al Kharid grammar fixed<br />
+  Chompy bird grammar fixed<br />
+  Prince Ali grammar fixed<br />
+  Minecart driver grammar fixed<br />
+  Reldo from Lost Tribe now ends dialogue correctly when talking about the book</li>
+  <li>Corrected facial expressions and dialogue for many NPCs<br />
+  <br />
+  Lumbridge: Explorer Jack grammar errors, fishing tutor expressions, prayer tutor expressions<br />
+  Falador: Makeover mage expressions, castle squire dialogue error, Rising Sun bartenders expressions<br />
+  Varrock: Thessalia expressions, head chef expressions<br />
+  Taverly: Kaquemeex and Sanfew expressions<br />
+  Port Sarim: Thaki The Dwarf dialogue was sending a bad player expression causing it to break animation, bartender expressions, Klarence expressions<br />
+  Rimmington: Hetty expressions<br />
+  Karmaja: Luthas expressions and dialogue added, fixed Man character speaking the player's dialogue<br />
+  Brimhaven: Bartender expressions, Davon the amulet seller expressions</li>
+  <li>Rewrote hunter kit spell in kotlin</li>
+  <li>Fixed crafting level requirements and xp reward for studded body</li>
+  <li>Can now speak to Wormbrain through the jail cell<br />
+  Fixed some Wormbrain typos</li>
+  <li>Added support for varying log levels configurable in the server config (see log_level in default.conf)<br />
+  Error logs now properly print to stderr when possible<br />
+  Colour-coded logs<br />
+  Addressed a scenario in which outgoing packet writes could get hung up<br />
+  Fixed interface incorrect definition message on server startup</li>
+  <li>God spells now properly drain stats<br />
+  Charge spell no longer null-dereferences when attempting to refresh it<br />
+  Manually casting spells no longer changes attack style</li>
+  <li>Wrapped oomlie now have the correct burn chance and experience reward</li>
+  <li>Fixed master crafter's dialogue not opening</li>
+  <li>Implemented ContentInterface-based NPC Scripting<br />
+  <br />
+  Obsoleted AbstractNPC<br />
+  Implemented desert bandits<br />
+  Rewrote a handful of existing NPCs into NPCBehaviors (e.g. rock slugs, nechryaels, water fiend and more)</li>
+  <li>Added the HAM robe set and monk's robes to the allowed items for Entrana</li>
+  <li>Fixed incorrect xp calculation that would occur in some circumstances when training magic</li>
+  <li>Added missing sounds to agility pyramid</li>
+  <li>Implemented crocodile drop tables</li>
+  <li>Varrock Museum Curator Haig Hele no longer gets stuck in endless "please waiting"<br />
+  Achievement diary no longer gets completed on every repeated interaction with the Varrock Museum Curator<br />
+  Grammar fixes for shield of arrav quest</li>
+  <li>Leela in Prince Ali Rescue no longer provides duplicate keys<br />
+  Misc. dialogue fixes for Prince Ali Rescue</li>
+  <li>Fixed bug where feathers could be used to fletch wood</li>
+  <li>Implemented Global Chat<br />
+  <br />
+  Added global chat feature, so players can still maintain global communication while being in their own clan chat<br />
+  An individual player can opt out of global chat by using the ::muteglobal command<br />
+  Implemented automatic message splitting for clan and global chat<br />
+  Implemented colour selection for global chat (prefix your message with hex colour code, e.g. //%690420 before the message)</li>
+  <li>Implement Authentic Interaction Subsystem<br />
+  <br />
+  Implemented authentic script/interaction queues<br />
+  This does now mean we have a total of 3 interaction systems, but this additional system is necessary to fix certain categories of bug and implement some authentic features<br />
+  Converted mining to new system<br />
+  Converted fishing to new system<br />
+  Converted woodcutting to new system<br />
+  Provided an example of soft-queued scripts with GrandTreePodListener<br />
+  Implemented tick-eating (it is now possible to eat a shark, drink a potion, and eat a karambwan all on the same tick)<br />
+  Can now eat and drop items while stunned</li>
+  <li>Improved handling of chat message packets<br />
+  More improvements and fixes relating to dynamic regions and constructions</li>
+  <li>Rewrote PrayerEffect into kotlin<br />
+  Corrected calculation used for prayer restoring effects</li>
+  <li>Fixed the dragonfire shield recharge animation to only play when it needs charging</li>
+  <li>Elvarg improvements<br />
+  <br />
+  Elvarg fight is now authentic<br />
+  Max hit up to 60 w/o shield, with anti-dragonfire shield up to 12, and max combat damage based on defense level<br />
+  Separated potion and shield effects to not stack<br />
+  Fixed quest log typo<br />
+  Fixed dragon-fire message to show correct text based on the player's protection</li>
+  <li>Implemented blast furnace sink fill-bucket option</li>
+  <li>Cooking on a fire that burns out will now stop any active cooking actions</li>
+  <li>Bump compiler to Kotlin 1.8.20-Beta to fix incremental build</li>
+  <li>Reimplemented Bogrog summoning shop</li>
+  <li>Cleaned up summoning scroll code<br />
+  Fixed thieving fingers scroll level requirements (level 167 -> 47)</li>
+  <li>Implemented Oomlie drop table</li>
+  <li>Removed inauthentic vial smash after completing bar crawl miniquest (this is an osrs-only feature)</li>
+  <li>Fixed a bug causing runecrafting animations to play twice</li>
+  <li>Converted plugin for making gem tipped bolt tips and bolts to listener</li>
+  <li>Converted abyssal titan to kotlin<br />
+  Abyssal titan is now a beast of burden<br />
+  Fixed issue with abyssal titan that could result in lost essence when bank is full</li>
+  <li>Updated kotlin to 1.8.0<br />
+  Updated kotlin target to java 11<br />
+  Fixed build errors when targeting 1.8.0</li>
+  <li>Fixed blast furnace crashing the entire server when using "take all"<br />
+  Fixed blast furnace bar duplication when using "take all"</li>
+</ul>
