@@ -105,68 +105,68 @@ title: A free & open-source remake of 2009 era RuneScape
               <!--LATEST UPDATE ITEMS SECTION-->
               <div class="section">
                 {% assign added = 0 %}
-                {% assign sorted = site.categories.updates | orderby: 'date' | slice: 0, 3 %}
+                {% assign sorted = site.pages | orderby: 'date' | reverse %}
                 {% for page in sorted %}
-                  {% if added == 0 %}
-                    {% assign added = added | plus:1 %}
-                    <!--LATEST UPDATE ITEM-->
-                    <div class='sectionBody'>
-                      <div class='sectionHeight'>
-                        <div class='recentNews'>
-                          <!--UPDATE TITLE & DATE-->
-                          <div class='newsTitle'>
-                            <h3>{{ page.title | replace: "2009Scape - ", "" }}</h3>
-                            <span>{{ page.date | date: '%d-%B-%Y' }}</span>
+                  {% for tag in page.tags %}
+                    {% if tag == "news" and added < 3%}
+                      {% if added == 0 %}
+                        {% assign added = added | plus:1 %}
+                          <!--LATEST UPDATE ITEM-->
+                          <div class='sectionBody'>
+                            <div class='sectionHeight'>
+                              <div class='recentNews'>
+                                <!--UPDATE TITLE & DATE-->
+                                <div class='newsTitle'>
+                                  <h3>{{ page.title | replace: "2009Scape - ", "" }}</h3>
+                                  <span>{{ page.date | date: '%d-%B-%Y' }}</span>
+                                </div>
+                                <!--UPDATE IMAGE-->
+                                {% if page.promo_image and page.promo_image != "" and page.promo_image != nil %}
+                                  {% assign promoImage = page.promo_image %}
+                                {% else %}
+                                  {% assign promoImage = "./site/2009scape-resources/img/updates/update-monthly-" | append: page.date | date: './site/2009scape-resources/img/updates/update-monthly-%m.webp' %}
+                                {% endif %}
+                                <a class="newsImage" href="{{ page.url | prepend: site.baseurl }}"><img alt="Latest update image"
+                                  src="{{promoImage}}" width="215" height="137"></a>
+                              <!--UPDATE CONTENT TEASER-->
+                              <p>  {{ page.excerpt | truncate: 350 }}
+                                <!--READ MORE LINK-->
+                                <br><a href="{{ page.url | prepend: site.baseurl }}">Read more...</a>
+                              </p>
+                            </div>
                           </div>
-                          <!--UPDATE IMAGE-->
-                          {% if page.promo_image and page.promo_image != "" and page.promo_image != nil %}
-                            {% assign promoImage = page.promo_image %}
-                          {% else %}
-                            {% assign promoImage = "./site/2009scape-resources/img/updates/update-monthly-" | append: page.date | date: './site/2009scape-resources/img/updates/update-monthly-%m.webp' %}
-                          {% endif %}
-                          <a class="newsImage" href="{{ page.url | prepend: site.baseurl }}">
-                            <img alt="Latest update image" src="{{promoImage}}" width="215" height="137">
-                          </a>
-                          <!--UPDATE CONTENT TEASER-->
-                          <p>
-                            {{ page.excerpt | truncate: 350 }}
-                            <br>
-                            <!--READ MORE LINK-->
-                            <a href="{{ page.url | prepend: site.baseurl }}">Read more...</a>
-                          </p>
                         </div>
-                      </div>
-                    </div>
-                    <!--END LATEST UPDATE ITEM-->
-                  {% else %}
-                    {% assign added = added | plus:1 %}
-                    <!--RECENT UPDATE ITEM-->
-                    <div class="sectionBody">
-                      <div class="recentNews">
-                        <!--UPDATE TITLE & DATE-->
-                        <div class="newsTitle">
-                          <h3>{{ page.title | replace: "2009Scape - ", "" }}</h3>
-                          <span>{{ page.date | date: '%d-%B-%Y' }}</span>
-                        </div>
-                        <!--UPDATE ICON (Use most relevant to this post!)
-                        --
-                        GENERIC // generic1.webp, generic2.webp, generic3.webp
-                        SETTINGS & TWEAKS // settings1.webp, settings2.webp, settings3.webp
-                        OTHER // account.webp, award.webp, bugfix.webp, combat.webp, hiscores.webp, money,webp, random.webp, website.webp -->
-                        <img src="./site/2009scape-resources/img/updates/icons/generic1.webp" width="65" height="70" alt="Generic feature icon"/>
+                        <!--END LATEST UPDATE ITEM-->
+                      {% else %}
+                        {% assign added = added | plus:1 %}
+                        <!--RECENT UPDATE ITEM-->
+                        <div class="sectionBody">
+                          <div class="recentNews">
+                            <!--UPDATE TITLE & DATE-->
+                            <div class="newsTitle">
+                              <h3>{{ page.title | replace: "2009Scape - ", "" }}</h3>
+                              <span>{{ page.date | date: '%d-%B-%Y' }}</span>
+                            </div>
+                            <!--UPDATE ICON (Use most relevant to this post!)
+                            --
+                            GENERIC // generic1.webp, generic2.webp, generic3.webp
+                            SETTINGS & TWEAKS // settings1.webp, settings2.webp, settings3.webp
+                            OTHER // account.webp, award.webp, bugfix.webp, combat.webp, hiscores.webp, money,webp, random.webp, website.webp -->
+                            <img src="./site/2009scape-resources/img/updates/icons/generic1.webp" width="65" height="70" alt="Generic feature icon"/>
 
-                        <!--UPDATE CONTENT TEASER-->
-                        <p>
-                          {{page.excerpt | truncate: 280 }}
-                          <br>
-                          <!--READ MORE LINK-->
-                          <a href="{{ page.url | prepend: site.baseurl }}">Read more..</a>
-                        </p>
-                      </div>
-                    </div>
-                  {% endif %}
+                              <!--UPDATE CONTENT TEASER-->
+                              <p>{{page.excerpt | truncate: 280 }}
+                                <!--READ MORE LINK-->
+                                <br><a href="{{ page.url | prepend: site.baseurl }}">Read more..</a>
+                              </p>
+                            </div>
+                          </div>
+                        {% endif %}
+                    {% endif %}
+                  {% endfor %}
                 {% endfor %}
               </div>
+
 
               <!--TITLE: MORE UPDATES-->
               <div class="sectionHeader" style="text-align: center;">
@@ -182,21 +182,33 @@ title: A free & open-source remake of 2009 era RuneScape
                 <!--MORE UPDATES TABLE-->
                 <div class="sectionBody">
                   <table class="Updates">
-                    {% assign sorted = site.categories.updates | orderby: 'date' | slice: 3, 3 %}
+                    {% assign counter = 0 %}
+                    {% assign added = 0 %}
+                    {% assign sorted = site.pages | orderby: 'date' | reverse %}
                     {% for page in sorted %}
-                      <!--TABLE ITEM-->
-                      <tr>
-                        <td>
-                          <strong><a href="{{ page.url | prepend: site.baseurl }}">
-                            {{ page.title | replace: "2009scape - ", "" }}</a></strong>
-                        </td>
-                        <td class="UpdatesCategory">
-                          Game Updates
-                        </td>
-                        <td class="UpdatesDate">
-                          {{ page.date | date: '%d-%b-%Y' }}
-                        </td>
-                      </tr>
+                      {% for tag in page.tags %}
+                        {% if tag == "news" %}
+                          {% if counter < 3 %}
+                            {% assign counter = counter | plus:1 %}
+                          {% elsif added < 3 %}
+                            {% assign added = added | plus:1 %}
+                            <!--TABLE ITEM-->
+                            <tr>
+                              <td>
+                                <strong><a href="{{ page.url | prepend: site.baseurl }}">
+                                  {{ page.title | replace: "2009scape - ", "" }}</a></strong>
+                              </td>
+                              <td class="UpdatesCategory">
+                                Game Updates
+                              </td>
+                              <td class="UpdatesDate">
+                                {{ page.date | date: '%d-%b-%Y' }}
+                              </td>
+                            </tr>
+                            {% endif %}
+                        {% endif %}
+                      {% endfor %}
+                      
                     {% endfor %}
                   </table>
                 </div>
