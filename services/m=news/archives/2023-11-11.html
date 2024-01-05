@@ -1,0 +1,266 @@
+---
+title: Two Many Quests
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2023-11-11 00:00:00 +0000
+authors: ryannathans
+excerpt: "Creature of Fenkenstrain, Rag and Bone Man, new random events and much more!"
+---
+<div id="content">
+    <div id="article">
+        <div class="sectionHeader">
+            <div class="left">
+                <div class="right">
+                    <h1 class="plaque">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                    </h1>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="brown_background">
+            </div>
+            <div id="contrast_panel">
+                <div id="infopane">
+                    <div class="title thrd">{{ page.title }}
+                    </div>
+                </div>
+                <div class="phold" id="nocontrols"></div>
+                <div class="actions" id="top">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="" id="contentmsg">
+                    <a class="msgplace" name="0"></a>
+                    <table cellspacing="0" class="message jmod">
+                        <tbody>
+                            <tr>
+                                <td class="leftpanel J-Mod">
+                                    <div class="msgcreator uname">
+                                        {{ page.authors }}
+                                    </div>
+                                    <img alt="" class="avatar" src="../../m=avatar-rs/avatar8fa9.gif">
+                                    <div class="modtype">???</div>
+                                    <div class="msgcommands">
+
+                                        <br>
+                                    </div>
+                                </td>
+                                <td class="rightpanel">
+                                    <div class="msgtime">
+                                        {{ page.date | date: '%d-%B-%Y' }}
+                                        <br>
+                                    </div>
+                                    <div class="msgcontents">
+<p>Greetings Explorers</p>
+<p><b>Creature of Fenkenstrain</b> and <b>Rag and Bone Man</b> are now available!</p>
+<p>Full list of changes:</p><ul>
+<li>Fixed rapid heal bug<br />
+Improved reliability of runecrafting unit tests</li>
+<li>Implemented Rag and Bone Man quest (part 1)</li>
+<li>Fixed male/female dialogue in Druidic Ritual</li>
+<li>Implemented 7 Christmas Holiday randoms:<br />
+<br />
+Snowman<br />
+Snowman Fight<br />
+Santa<br />
+Jack Frost<br />
+Choir<br />
+Snowstorm<br />
+Cook</li>
+<li>Fixed numerous interfaces, including Puro puro, Destroy item, Equipment, kept on death, Cooking (single prompts i.e. raw fish -> range), Fletching (make set i.e. fletching arrows, bow)<br />
+Rewrote herb cleaning to listener<br />
+Fixed studded leather crafting level requirement and xp<br />
+Fixed bow stringing stealing strings<br />
+::quest <player> can now be used to look up a player's completed quests</li>
+<li>Fixed Creature of Fenkenstrain quest point reward</li>
+<li>Rewrote MysteriousRuinPlugin to a listener<br />
+Fixed Varrock earth tiara easy diary task</li>
+<li>Fixed amulet of glory wilderness teleport level</li>
+<li>Fencing ring now requires 8 oak planks rather than 8 steel kiteshields</li>
+<li>Fixed gender specific dialogue for Hadley</li>
+<li>Improved accuracy of barrows rewards</li>
+<li>POH slayer trophy now obtainable, added all heads as tertiary drops</li>
+<li>Added optional player argument to ::setlevel</li>
+<li>Fixed bug involving kitten/cat deletion</li>
+<li>Fixed typo in Chaos Tunnels portal<br />
+Fixed typo in gnome glider to digsite<br />
+Fixed a few typos in the random phrases uttered by the Bork minions<br />
+Added missing Bork minion phrase</li>
+<li>Fixed failed sheep shearing movement</li>
+<li>Implemented Strange Plant Random Event</li>
+<li>Implemented Creature of Fenkenstrain quest</li>
+<li>Added tool leprechaun dialogue (excluding goth)</li>
+<li>Fixed drill sergeant completion reward drop bug</li>
+<li>Implemented Tolna Rift<br />
+Improved ::npcanim admin command</li>
+<li>Fixed examine text, slayer tip and drops of vampires</li>
+<li>Corrected typos in Denulth's Troll Stronghold dialogues<br />
+Corrected typo in Drezel's Nature Spirit dialogue<br />
+Corrected typos in Blaze Sharpeye's All Fired Up dialogues<br />
+Corrected typo in Dragon Slayer chest dialogue</li>
+<li>Implemented swarm random event</li>
+<li>Backported probabilistic runes. Can now toggle between revision 581, 573 and 570 behavior via runecrafting_formula_revision in server config</li>
+<li>Big bass, shark, and swordfish are now obtainable from fishing<br />
+The message for catching shark now ends with an authentic exclamation mark<br />
+The fishing skill cape perk now logs catching a second fish in player stats</li>
+<li>Added the correct animation/graphics for emptying the ectophial<br />
+Rewrote ectophial</li>
+<li>Death's message for the holiday random event now uses the correct type of player name</li>
+<li>Sheep now face player when sheared</li>
+<li>Corrected linked construction hotspots for shelves, thrones and statues</li>
+<li>Refactored some dialogues in the Ardougne area<br />
+Remapped Kortan's shop<br />
+Fixed stock of Aemad's shop</li>
+<li>Leaving the fight caves now also clears poison, disease and restores run energy (QoL fix)</li>
+<li>Added examine texts to bob shirts (obtained from easy clues)</li>
+<li>Several additions and changes to Zanaris<br />
+<br />
+Added fairy queen dialogue<br />
+Added movement to the cows<br />
+Added a spawnpoint for Blaec<br />
+Added examine texts</li>
+<li>Fixed incorrect adamant shield (h#) in medium clue reward pool</li>
+<li>Fixed rune consumption when teleblocked</li>
+<li>Fixed wilderness zoning near KBD lever</li>
+<li>Updated README.md with working link to Thanos tool + java 11 reminder</li>
+<li>Deleted obsolete GE tool</li>
+<li>Charlie now says 2009Scape in The Grand Tree</li>
+<li>Corrected moss giant drop table</li>
+<li>Corrected fire giant drop table</li>
+<li>Fixed fishing trawler teleport and random event issues</li>
+<li>Fixed construction requirement for combat rings</li>
+<li>Made firemaking skillcape a valid light source for the giant mole</li>
+<li>Implemented Rick Turpentine and Drunken Dwarf random events</li>
+<li>Corrected Skeletal Wyvern drop table</li>
+<li>Added the two NPCs above the furnace in Falador</li>
+<li>Rewrote Stat Spy<br />
+Refactored lunar spell handlers</li>
+<li>Corrected Waterbirth Island Dagannoth drop tables</li>
+<li>Fixed incorrect index for statuette rotation attribute used in the Golem quest</li>
+<li>Fixed empty item regression breaking rune pouches and ectophial</li>
+<li>Corrected Cockatrice drop table</li>
+<li>Corrected Ice Giant drop table</li>
+<li>Corrected Ogre drop table<br />
+Corrected Ogress drop table<br />
+Corrected Ogress Warrior drop table<br />
+Corrected Ogress Champion drop table</li>
+<li>Corrected Dark Beast drop table</li>
+<li>Huge wilderness data audit and correction, including the following areas<br />
+<br />
+Frozen Waste Plateau (Within members gate)<br />
+Agility Course<br />
+Pirate Cove<br />
+Mage Arena Area<br />
+Mage Arena<br />
+Inside Mage Arena<br />
+Deserted Keep<br />
+Magic Axe Hut<br />
+Near Deserted Keep below Magic Axe Hut<br />
+Scorpion Pit<br />
+Chaos Elemental<br />
+Rogues' Castle<br />
+Top Right Volcano<br />
+Lava Maze<br />
+Red dragon Isle<br />
+Mining Hobgoblin Area<br />
+Canoe area<br />
+Wilderness Volcano<br />
+Forgotten Cemetery<br />
+West of Stealing Creation<br />
+Stealing Creation<br />
+Ruins right side<br />
+Front of Ruins<br />
+Demonic Ruins<br />
+Near Corp Cave<br />
+Ruins left side<br />
+Graveyard of Shadows<br />
+Bandit Camp<br />
+Spider Mound near Sapphire Gems<br />
+Dark Warrior Fortress<br />
+Clan Wars<br />
+Ruins south of clan wars<br />
+Chaos Altar<br />
+Bottom East</li>
+<li>Corrected Dagannoth Prime drop table</li>
+<li>Corrected Dagannoth Supreme drop table</li>
+<li>Corrected Dagannoth Rex drop table</li>
+<li>Corrected Gargoyle drop table</li>
+<li>Corrected TzHaar-Xil drop table</li>
+<li>Implemented eating of frog spawn</li>
+<li>The name of the location where the shooting star has dropped is now no longer lowercased</li>
+<li>Corrected TzHaar-Mej drop table</li>
+<li>Corrected TzHaar-Hur drop table</li>
+<li>Barbarian potion refactor<br />
+<br />
+Fixed barbarian potions that can take either a roe or caviar from consuming both<br />
+Corrected level requirement and product potion id for hunter and antifire mixes<br />
+Corrected input potion id for fishing mix<br />
+Implemented antidote+ mix<br />
+Fixed level requirement for super energy mix<br />
+Fixed duration of antipoison mix (now 90 seconds)</li>
+<li>Rewrote Captain Barnaby and Shilo Cart interactions</li>
+<li>Refactored canoe handling<br />
+<br />
+Canoe station should now have the full animation suite<br />
+Canoe making now scales with axe and level of woodcutting<br />
+Interfaces are now fully updated with proper hide/show/animation<br />
+Canoes now sink at the end of the journey<br />
+Added a black screen backdrop overlay seen only in HD</li>
+<li>Corrected Vesta's longsword damage</li>
+<li>Rewrote pet management<br />
+<br />
+Fixed being unable to remove pets<br />
+Removed redundant pet messaging</li>
+<li>Corrected TzHaar-Ket drop table</li>
+<li>Added support for tertiary drop tables</li>
+</ul>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="actions" id="bottom">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td class="commands center">
+                                    <ul class="flat first-child">
+                                        <li><a href="./archives.html"><img alt=""
+                                                    src="../../../site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                                                Update List</a></li>
+                                        <li>
+                                            <a href=""><img alt="" src="../../../site/img/forum/cmdicons/refresh.gif">
+                                                Refresh</a>
+                                        </li>
+                                    </ul>
+                                </td>
+                            </tr>
+                            <tr>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
