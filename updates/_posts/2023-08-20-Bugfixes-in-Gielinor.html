@@ -1,0 +1,109 @@
+---
+title: Bugfixes in Gielinor
+tags: news
+layout: newspost
+collection: Game Updates
+date: 2023-08-20 00:00:00 +0000
+authors: ryannathans
+excerpt: "Some bugs have been squashed in Gielinor..."
+modtype: "Lead Developer"
+avatar: avatar8fa9.gif
+---
+<p>Greetings Explorers</p>
+<p>There have been some more changes in Gielinor:</p>
+<ul>
+  <li>Audio Refactor<br />
+  <br />
+  1st of many audio refactors, the end goal is removing AudioManager.java and using contentAPI functions for all sound<br />
+  Refactored playAudio<br />
+  Refactored playGlobalAudio<br />
+  Fixed lunar teleport sounds to not play if teleblocked<br />
+  Refactored the following sounds:<br />
+  All the special attack and DFS sounds defaulting to new API radius of 8 instead of 5<br />
+  Dropping coins, item, and destroying object sounds fixed<br />
+  Ectophial refill sound<br />
+  Agility pyramid sounds<br />
+  Emptying a fishbowl<br />
+  Enchanted jewellery teleport sound<br />
+  Enchanted jewellery enchant tab sound<br />
+  All the sounds for Elemental Workshop 1 listeners<br />
+  The sound when getting experience from a lamp<br />
+  Blessing and repairing a grave<br />
+  Hunter pitfall sounds<br />
+  Hunter sound when catching a kebbit with a noose<br />
+  Lunar cure me and cure group spell sound<br />
+  High and low alchemy spells<br />
+  Silver crafting at a furnace<br />
+  Spinning at a spinning wheel<br />
+  Drinking from a waterskin in the desert<br />
+  Sound when being blessed by drezel in nature's spirit quest<br />
+  Sound when poison immunity has 30 seconds left and when your immunity expires<br />
+  Shearing regular sheep and the penguin sheep at lumbridge<br />
+  Sound when regular spell book charge spell expires<br />
+  GE sounds: making 0 coin offer when buying, not having enough money, placing a buy offer, not enough room in inventory<br />
+  Sound when filling vessels from a water source<br />
+  Regular and ancient combat spells</li>
+  <li>Fixed incorrect message when trying to use teleport levers while teleblocked</li>
+  <li>Players now can't attack deep wilderness threats focused on other players</li>
+  <li>Improved teleblock condition checking</li>
+  <li>Added new camera API methods (including shake and reset)<br />
+  Added new admin commands for testing camera movements (::poscam, ::movcam, ::rotcam, ::shakecam, ::resetcam)</li>
+  <li>Code cleanup<br />
+  <br />
+  Reorganised imports<br />
+  Removed redundant qualifiers</li>
+  <li>Spiritual warriors and spiritual rangers now correctly drop hard clue scrolls</li>
+  <li>Fix edge case save parsing issue for poison</li>
+  <li>Obelisk improvements<br />
+  <br />
+  Made the wilderness teleport obelisks roll the destination obelisk fairly<br />
+  Improved obelisk teleport positioning logic<br />
+  Made the obelisk teleport capture a 3-by-3 bounding box of players, in accordance with the teleport animation</li>
+  <li>Fixed regression causing random events to trigger for bots</li>
+  <li>More sounds + audio refactoring<br />
+  <br />
+  Modified default audio radius default parameter to be safer, 8 tiles instead of 15<br />
+  Improved location/direction based sounds<br />
+  Fixed the way sounds are handled for magic spells (All modern and ancient combat spells. All lunar teleport spells.)<br />
+  Magic spells now correctly fade in volume the further away you are from a target/player casting or being hit by a spell. The sound starts to fade after a few tiles until it cant be heard anymore<br />
+  Refactored lunar teleport sounds to use playGlobalAudio<br />
+  Humidfy now can be heard globally by other players<br />
+  Fixed Lunar fertile soil spell graphics and animation to be authentic<br />
+  Weapon attack sounds now start to fade after a few tiles until it cant be heard anymore<br />
+  NPC attack sound now fades with distance<br />
+  NPC hurt sound now fades with distance<br />
+  NPC death sound now fades with distance<br />
+  Fixed combat punching sound when no weapon is equipped so it can be heard globally<br />
+  Fixed a issue where you would hear a punching sound when casting any combat spell<br />
+  Fixed male player hurt sounds when in combat<br />
+  Implemented female player hurt sounds when in combat<br />
+  Failing agility obstacles will now play the correct hurt sound based on gender<br />
+  Fixed low wall agility pyramid sound<br />
+  Fixed taking damage from dying of thirst in the desert to use correct sounds<br />
+  Fixed the sound of drinking from a waterskin in the desert<br />
+  Implemented sound when attaching godsword blades to a hilt<br />
+  Fixed rune essence mine teleport sound so it no longer loops 10 times and plays authentically<br />
+  Implemented undead tree attack sound at Draynor manor<br />
+  Implemented all ectofunctus bone grinder sounds and the sound when offering to the ectofunctus<br />
+  Implemented mort myre ghast attack and player hurt sounds<br />
+  Fixed thieving pickpocket fail sounds<br />
+  Implemented falador guards combat sounds<br />
+  Implemented varrock guards combat sounds<br />
+  Implemented draynor market guard combat sounds<br />
+  Implemented cyclops combat sounds (warriors guild cyclops)<br />
+  Implemented animated armor combat sounds (all warriors guild animated armors)<br />
+  Implemented white wolf/big wolf/wolf combat sounds (wolves on white wolf mountain)</li>
+  <li>Added Dockerfile</li>
+  <li>Fixed typo in "the poison has worn off" message</li>
+  <li>Fixed issue where unequip listeners did not fire on death</li>
+  <li>Timers can be flagged for removal on death (fixes deep wilderness threats attacking for brief period after respawn)<br />
+  Fixed an issue with the skill restore timer that caused overheals to be reset to normal hp</li>
+  <li>Random event manager rewrite<br />
+  <br />
+  Time until next random event now persists across logins<br />
+  Events will no longer spawn while the player has an interface like the bank open<br />
+  Replaced the slurry of random event commands with a singular ::revent admin command<br />
+  Random events now support being associated with multiple skills<br />
+  Random event selection is now more robust<br />
+  Players will no longer get skill-based random events if more than 2.5 minutes have passed since training the skill</li>
+</ul>
