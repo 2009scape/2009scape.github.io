@@ -1,7 +1,10 @@
 ---
-layout: null
+layout: newspost
 ---
 
 {% assign latest_post = site.categories.updates | orderby: 'data' | first %}
 
-<meta http-equiv="refresh" content="0; URL={{ latest_post.url }}" />
+{% comment %}
+Preferably we'd redirect to the actual latest post page, but currently the Saradomin launcher can't handle the redirect and crashes
+{% endcomment %}
+{{ latest_post.content }}
