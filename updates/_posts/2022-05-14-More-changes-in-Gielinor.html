@@ -1,0 +1,40 @@
+---
+title: More changes in Gielinor
+tags: news
+layout: newspost
+date: 2022-05-14 00:00:00 +0000
+authors: ryannathans
+excerpt: "There have been some more changes in Gielinor..."
+modtype: "Lead Developer"
+avatar: avatar8fa9.gif
+---
+<p>Greetings Explorers</p>
+<p>There have been some more changes in Gielinor:</p>
+<ul>
+  <li>selling items for tokkul now returns the correct amount of tokkul (10x less)</li>
+  <li>fixed Family Crest bug where Dimintheis would not replace gauntlets if you lost them (fixes #312)<br />
+  fixed Family Crest bug where Dimintheis would give you infinite gauntlets (fixes #257)<br />
+  fixed Family Crest bug where Dimintheis didn't check equipped gloves or second bank<br />
+  fixed Family Crest bug where Dimintheis didn't remember which gauntlets you had<br />
+  changing gauntlet enchantment now authentically costs 25k GP (and free the first time)<br />
+  added content API function for checking if a player possesses any particular items anywhere<br />
+  added content API functions for starting and finishing quests</li>
+  <li>implemented seaweed nets at fishing colony, but also locked it behind the appropriate quest (which isn't implemented yet, so no real change for players yet)<br />
+  fixed NPE in quest getStage code when getting stage of quests that haven't been implemented yet</li>
+  <li>Item sets now appear and can be unpacked at the GE<br />
+  Added a proper mock session that gets used for mock players in unit tests. Allows verifying that certain packets made it to the IoSession (the stage right before sending it to the client)</li>
+  <li>moved the decimal place on the "nothing" drop for Rockslugs from 5600 to 5.6, thus correcting rates for the whole drop table</li>
+  <li>fixed a bug that allowed purchasing 0-stock items (you would only lose gold without getting an item)</li>
+  <li>fixed malformed shop stock</li>
+  <li>adjusted shop stock quantities for shops previously containing infinite items<br />
+  vials are now purchasable from Jatix<br />
+  fishing trawler is now playable with supplies from Port Khazard General Store<br />
+  removed unauthentic bucket of slime from Trader Stan's shop<br />
+  deleted inaccessible and obsolete "donator store" from pre-2009scape era</li>
+  <li>Improved handling of buying Dragon Scimitars from Daga in dialogue and declining the Fremennik Trials quest from Brundt</li>
+  <li>Implemented turning kebabs into super kebabs with red hot sauce</li>
+  <li>Beer item ID Council Workman interaction changed from normal beer to the beer from Fremennik longhall<br />
+  Koschei boss fight sessions are now World Pulses instead of player pulses<br />
+  Refactor TFTInteractionListener to use ContentAPI<br />
+  Allow Neitiznot items to be equiped after Frem trials</li>
+</ul>

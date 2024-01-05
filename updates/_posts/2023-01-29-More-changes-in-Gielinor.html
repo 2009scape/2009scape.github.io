@@ -1,0 +1,72 @@
+---
+title: More changes in Gielinor
+tags: news
+layout: newspost
+date: 2023-01-29 00:00:00 +0000
+authors: ryannathans
+excerpt: "There have been some more changes in Gielinor..."
+modtype: "Lead Developer"
+avatar: avatar8fa9.gif
+---
+<p>Greetings Explorers</p>
+<p>There have been some more changes in Gielinor:</p>
+  <ul>
+  <li>Players can no longer walk where there is no map data<br />
+  Fixed an issue that prevented teleblock from being used in PvP<br />
+  Removed redundant code that prevented PvP looting in some instances<br />
+  Improved strictness of grave generation rules in regards to PvP<br />
+  Added nothing drop to the RDT (50% chance)<br />
+  Implemented ring of wealth effect on rare drops (removes nothing drop)<br />
+  Improved handling of nothing drops, preventing dwarf remains being awarded instead of nothing in some instances<br />
+  Added impling IDs to the ImplingNPC definition so all implings behave like implings<br />
+  Crystal shield and crystal bow now degrade<br />
+  Made cyclops room kickout on disconnect more reliable<br />
+  Fixed MTA Enchantment Zone items not adhering to the zone's rules</li>
+  <li>Repository reorganisation<br />
+  <br />
+  Unified kotlin and java into just src/main<br />
+  Unified the rs09 and core packages<br />
+  Took all content out of the core package, and placed it into the new content package<br />
+  Reorganised all source code relating to content to be easier to find and explore</li>
+  <li>Added handling for emptying cornflour pot</li>
+  <li>Fixed incorrect dialogue path in vinesweeper when buying flags</li>
+  <li>Implemented diary task for pickpocketing a Falador guard</li>
+  <li>Implemented salamander weapons</li>
+  <li>Added drop table for highwayman<br />
+  Added drop table for shantay guard<br />
+  Made highwayman diary trigger more specific</li>
+  <li>Added Snowy knights and Sapphire glacialis to Rellekka hunter area</li>
+  <li>Corrected enchanted top requirements and bonuses<br />
+  Removed soft clay from impling drop table<br />
+  Removed duplicated Eadburg and Servant NPCs from Burthorpe<br />
+  Corrected the position of Eadburg and Servant<br />
+  Corrected the position of the Burthorpe guards<br />
+  Corrected Burthorpe guard NPC ID<br />
+  Reoriented exterior Burthorpe archers to face each other<br />
+  Added animations and combat sound effects to Servant, Eadburg and Burthorpe guards<br />
+  Relocated 1st floor archers in Burthorpe Castle</li>
+  <li>Implemented ::xface command allowing the client to close any opened interfaces/dialogue</li>
+  <li>Fixed issue preventing pickup of dwarf remains in Dwarf Cannon<br />
+  Added more sophisticated debug varp printing<br />
+  Fixed issue preventing surprise exam rewards if player moves before reward is granted<br />
+  Voluntarily leaving a clan should now persist<br />
+  Fixed bug that would result in keeping the previous wand when purchasing MTA upgrade<br />
+  Fixed issue preventing proper teleport jewellery usage<br />
+  Fixed a bug that prevented manual casting of Ancient spells<br />
+  Added many sanity checks to death code and fixed a bug with delayed impacts<br />
+  Added dragon slayer requirements to Green (g) and Green (t) bodies<br />
+  Rewrote the "catchup" logic used for growing farming patches during missed playtime<br />
+  Fixed bug preventing fruit trees and berries from growing while logged out<br />
+  Summoning potion now correctly restores 25% of summoning special energy</li>
+  <li>Fixed last login time</li>
+  <li>Corrected magic xp gain in Enchanting Chamber to 75%, from 25%</li>
+  <li>Rewrote milling plugin as listener</li>
+  <li>Fixed a bug where opening a casket could remove the wrong one from the inventory</li>
+  <li>Fixed a bug that could cause item loss when depositing to a near-maxed bank stack</li>
+  <li>Moved the spawn point of the abyssal guardian 1 tile so that it is now reachable</li>
+  <li>Players can no longer get stuck between stairs and door used in Shield of Arrav</li>
+  <li>Fixed removing full stack of seeds when planting them</li>
+  <li>Removed giant rat from void</li>
+  <li>Added correct animations for alchemy if the player has a staff equipped</li>
+  <li>Corrected url typo in readme</li>
+</ul>

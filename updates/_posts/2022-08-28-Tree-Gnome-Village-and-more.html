@@ -1,0 +1,74 @@
+---
+title: Tree Gnome Village & More
+tags: news
+layout: newspost
+date: 2022-08-28 00:00:00 +0000
+authors: ryannathans
+excerpt: "A new quest (Tree Gnome Village), bug fixes, improvements and a daily account limit."
+modtype: "Lead Developer"
+avatar: avatar8fa9.gif
+---
+<p>Greetings Explorers</p>
+<p>This update features numerous fixes, improvements and a new quest - Tree Gnome Village.</p>
+<p>Please note the new daily account limit, you may only log into a maximum of three different accounts per day. This limit may be adjusted as required without notice.</p>
+<p>Full list of changes in Gielinor this month:</p>
+  <ul>
+  <li>Fixed pest control spinner NPCs returning to spawn and becoming unattackable (pest control now playable again)</li>
+  <li>Corrected high alch delay from 3 ticks to 5 ticks<br />
+  Made high alch correctly interrupt any actions other than movement</li>
+  <li>Fixed some light formatting issues with the new README</li>
+  <li>Removed duplicate messages when achieving level 99 in a skill</li>
+  <li>Improved readme<br />
+  Removed broken windows intellij server runner config</li>
+  <li>Implemented carved evil turnip</li>
+  <li>Fixed incorrect wilderness level calculation</li>
+  <li>Fixed a bug with usewith listeners where the ids could be flipped in inappropriate contexts</li>
+  <li>Implemented configurable daily account limit per world, defaults to 3 (daily_accounts_per_ip in worldprops)</li>
+  <li>Rune essence mine teleport graphics/sequence now authentic</li>
+  <li>Implemented Tree Gnome Village Quest<br />
+  Added Tree Gnome Village Quest requirement to Spirit Tree Network<br />
+  Rewrote GnomeSpiritTree Plugin (converted to listener)<br />
+  Added authentic "Local Gnome" NPC spawns</li>
+  <li>Implemented basic pet rock on pressure plate interaction</li>
+  <li>Rewrote Ava's device handling<br />
+  <br />
+  Rewrote the handling for both the accumulator and the attractor in new systems<br />
+  Fixed a bug that would cause the devices to attract unwanted items at inappropriate times<br />
+  Fixed a bug that prevented equip listeners from firing on login</li>
+  <li>Fixed server crash caused by HCIM death<br />
+  Fixed NPEs thrown by packet write queue<br />
+  Fixed rare concurrency issue with packet write queue</li>
+  <li>Corrected combat level calculation for mage and ranged base</li>
+  <li>Fixed disappearing treasure trails caskets<br />
+  Re-enabled and fixed treasure trails wizard spawning</li>
+  <li>Rewrote splitLines using Test-Driven Development, words should no longer get lost</li>
+  <li>Fixed Zamorak GWD slayer task classifications<br />
+  <br />
+  K'ril Tsutsaroth and Zakl'n Gritch are Lesser demons<br />
+  Balfrug Kreeyath is a Black demon<br />
+  Tstanon Karlak is a Greater demon</li>
+  <li>Removed GildedAltarPlugin (actual gilded altars are handled by BoneOfferPlugin)</li>
+  <li>Included missing attack speed in item configs for mithril crossbow and phoenix crossbow</li>
+  <li>Added some static analysis tools to the build, fix a few bugs found</li>
+  <li>Skill requirements no longer ignored for Fremennik Trials and Lost City</li>
+  <li>Updated the ingame rules screen to specify that bypassing AFK is an unfair advantage</li>
+  <li>Fossegrimen now recharges all out-of-charge lyres</li>
+  <li>Fixed Ectophial emptying when used while teleblocked</li>
+  <li>Setting i_want_to_cheat to true now allows cheaters to use all commands</li>
+  <li>Corrected stock/config for shops supplying vials</li>
+  <li>Fixed an issue where falconry pulse could be interrupted, causing falcon to go missing</li>
+  <li>Changed staff of fire animations to match those of other element staves</li>
+  <li>Fixed PVP equipment not fully disintegrating<br />
+  Fixed tool leprechaun ignoring teleblock<br />
+  Fixed invalid cast in fight caves NPCs<br />
+  Fixed skulled deaths being treated as normal deaths outside the wildy<br />
+  Fixed NPC talk option interrupting combat<br />
+  Removed Elemental Shield from Zaff's shop<br />
+  Quest-locked Elemental Shield<br />
+  Made sure HCIM can't deiron</li>
+  <li>Fixed dramen tree despawning</li>
+  <li>Implemented CI/CD pipeline for automatic MR builds (but not tests yet)<br />
+  Bumped version of build plugins to latest<br />
+  Increased maven build heap size to 1024m as builds were starting to run out of memory<br />
+  Added missing version number to build plugin, fixes build warning</li>
+</ul>

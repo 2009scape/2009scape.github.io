@@ -1,0 +1,194 @@
+---
+title: The Grand Update
+tags: news
+layout: newspost
+date: 2023-04-25 00:00:00 +0000
+authors: ryannathans
+excerpt: "The Grand Tree quest, crop circles, improved diaries and much much more!"
+modtype: "Lead Developer"
+avatar: avatar8fa9.gif
+---
+<p>Greetings Explorers</p>
+<p>The Grand Tree quest is now available! Full list of changes as follows:</p>
+  <ul>
+  <li>Demoted logging of long pathfinding attempts to "fine"<br />
+  Actually abort pathfinding excessively long paths</li>
+  <li>Moved to release version of kotlin 1.8.20</li>
+  <li>Added missing dialogue and facial expressions to Gertrude's Cat quest</li>
+  <li>Improved Al Kharid dialogues<br />
+  AliTheFarmer now spawns<br />
+  AliTheGuard now spawns<br />
+  Improved chicken farm spawns</li>
+  <li>Implemented Varrock diary task for GE shortcut<br />
+  Implemented Varrock diary task for pickpocketing a guard<br />
+  Implemented Varrock diary task for browsing Oziach's store</li>
+  <li>Implemented a generic book interface<br />
+  Converted all books to new book interface<br />
+  Converted stats command to use the new book interface</li>
+  <li>Refactored components of the ScriptAPI to more efficiently utilize pathfinding<br />
+  Implemented a global limit on pathfinding distance (server.max_pathfind_dist)<br />
+  Pathfinding limit is enforced at the packet level as well as elsewhere (ContentAPI, etc)</li>
+  <li>Can no longer sell to full general store</li>
+  <li>Implemented many medium and hard Fremennik diary tasks<br />
+  Added catch messages for pitfall trap<br />
+  Added Fremmenik milk bucket spawn<br />
+  Implemented sea boots effect when recharging lyre</li>
+  <li>Reworked skill-based random event logic</li>
+  <li>Improved pathfinding to stationary targets to not unnecessarily recalculate the path<br />
+  Fixed an issue where end-of-movement was not being considered properly<br />
+  Added admin command for drawing chunk boundaries ::drawchunks<br />
+  Added admin command for drawing region boundaries ::drawregions<br />
+  Added admin command for drawing the current route ::drawroute<br />
+  Fixed impling IndexOutOfBoundsException</li>
+  <li>Improved authenticity of dialogue on tutorial island</li>
+  <li>Rewrote impling system<br />
+  Fixed static impling spawns<br />
+  Fixed impling spawn ratio<br />
+  Reworked Puro-Puro, much more authentic<br />
+  Imp defenders now work properly<br />
+  Crop circles now appear<br />
+  Added admin command ::implings to list active implings (excludes implings from Puro-Puro)<br />
+  Fixed bug where you could add to a finished compost bin</li>
+  <li>Authenticity improvement for cooking burn rates</li>
+  <li>Fixed The Grand Tree quest black demon boss respawning</li>
+  <li>Fixed Inferno Adze not awarding xp</li>
+  <li>Added back the missing success message when fishing</li>
+  <li>Fixed Karamja diary task for mining red topaz</li>
+  <li>Unified dragonfire protection logic<br />
+  Fixed KBD's attack range resulting in only certain spots allowing him to melee</li>
+  <li>Replaced the lock interface for Tribal Totem quest with the correct/authentic one</li>
+  <li>Implemented all Fist of Guthix glove effects<br />
+  Fixed inaccurate salve amulets boost, bonus for enchanted version now implemented<br />
+  Fixed inaccurate black/slayer mask + slayer cape interaction, now always gives the highest bonus when wearing mask + cape</li>
+  <li>Fixed excessive tick delay for drinks</li>
+  <li>Fixed bouncer cutscene getting stuck in Fight Arena</li>
+  <li>Implemented The Grand Tree quest</li>
+  <li>Started implementing Castle Wars (not ready to enable yet)</li>
+  <li>Fixed hardleather crafting typo</li>
+  <li>Added ge_announcement_limit configuration for setting minimum high alchemy value required for bot GE items to be announced</li>
+  <li>Implemented interaction for magic secateurs on trees</li>
+  <li>Fixed live console spam caused by ResetInterface not being listed as a valid outgoing packet</li>
+  <li>Refactored some fishing code<br />
+  Converted some fishing code to kotlin<br />
+  Implemented crayfish fishing</li>
+  <li>Rewrote and unified potion decanting, fixes decanting bugs<br />
+  Replaced Zahur's and Bob Barter's methods of decanting</li>
+  <li>Merge the only two toys in DiangoItems into toy listeners<br />
+  Fixed spinning plate animation</li>
+  <li>Fixed bug relating to tracking current slayer task</li>
+  <li>Improved Miscellania and Etceteria tree handling</li>
+  <li>Converted bat bone drop handler to a listener, fixes Merlin's Crystal</li>
+  <li>Fixed incorrect teleporting to house portal on logout<br />
+  House now kicks guests when owner leaves<br />
+  More aggressively unload old house regions (experiment)<br />
+  Added DEBUG log type (currently unused, but shows up in cyan when used and the world is in development mode)</li>
+  <li>Stroking/petting kittens is now fully animated</li>
+  <li>Addressed some exploitable hunter and herblore issues<br />
+  Temporarily disabled puro puro, grenwalls pending fixes</li>
+  <li>Converted CasketPlugin to CasketListener</li>
+  <li>Implemented unit testing in gitlab CI/CD pipeline<br />
+  <br />
+  Contributors: If you run unit tests locally, you will need to import Server/db_exports/testuser.sql to set up the unit test user in your local database server (or change the credentials used for unit testing in Server/src/test/resources/test.conf)</li>
+  <li>Added animations to Falador guards</li>
+  <li>Implemented A* pathfinding for SmartPathfinder</li>
+  <li>Implemented a loot message for the reward from Fishing trawler<br />
+  Optimised junk item removal from Fishing trawler loot</li>
+  <li>Added admin command to change appearance</li>
+  <li>Fixed retrieving last fruit/produce from basket/sack</li>
+  <li>Added tablet functionality for lv6 enchanting (onyx)<br />
+  Fixed enchant tablets consuming the whole stack each use</li>
+  <li>Fixod Zaff selling no battlestaffs when having no Varrock dairies done</li>
+  <li>Lumbridge immersion update<br />
+  <br />
+  Added sound to shearing sheep<br />
+  Added sound to failing to shear the penguin sheep<br />
+  Added sound to picking up field items (wheat, potato, etc.)<br />
+  Added 3 missing chicken(1017) spawns to farmer freds farm<br />
+  Removed 1 incorrect chicken(41) spawn from farmer freds farm<br />
+  Added 1 missing sheep(43) spawns at farmer freds farm<br />
+  Added 2 missing sheep(1765) spawns at farmer freds farm<br />
+  Added 2 missing sheep(5156) spawns at farmer freds farm<br />
+  Added 2 missing sheep(5157) spawns at farmer freds farm<br />
+  Added 2 missing sheep(5160) spawns at farmer freds farm<br />
+  Added 1 missing ram(3673) spawn at farmer freds farm<br />
+  Added all combat sounds to ram(5168,3673)<br />
+  Added 1 missing mugger(175) spawn behind lumbridge by logs<br />
+  Added all combat sounds to mugger(175)<br />
+  Added 2 missing sheep(42) spawns behind lumbridge by logs<br />
+  Removed 6 incorrect giant rat(86) spawns at southwest corner of lumbridge castle<br />
+  Added 2 giant rat (86) spawns at southwest corner of lumbridge castle<br />
+  Added 1 giant rat (4942) spawn at southwest corner of lumbridge castle<br />
+  Added 10 missing rat(47) spawn at southwest corner of lumbridge castle<br />
+  Removed 24 incorrect goblin spawn(all 3267,3264) between lumbridge and draynor<br />
+  Added 3 goblin(2278) spawn between lumbridge and draynor to east section<br />
+  Added 1 goblin(1772) spawn between lumbridge and draynor to east section<br />
+  Added 1 goblin(1770) spawn between lumbridge and draynor to east section<br />
+  Added 2 goblin(1771) spawn between lumbridge and draynor to east section<br />
+  Added 3 goblin(2279) spawn between lumbridge and draynor to east section<br />
+  Added 2 goblin(2281) spawn between lumbridge and draynor to east section<br />
+  Added 1 goblin(2278) spawn between lumbridge and draynor to west section<br />
+  Added 1 goblin(1772) spawn between lumbridge and draynor to west section<br />
+  Added 1 goblin(1770) spawn between lumbridge and draynor to west section<br />
+  Added 1 goblin(1771) spawn between lumbridge and draynor to west section<br />
+  Added 1 goblin(2279) spawn between lumbridge and draynor to west section<br />
+  Added 1 goblin(2280) spawn between lumbridge and draynor to west section<br />
+  Added 2 goblin(2279) spawn between lumbridge and draynor to north section<br />
+  Added 1 goblin(1770) spawn between lumbridge and draynor to north section<br />
+  Added 1 goblin(1771) spawn between lumbridge and draynor to north section<br />
+  Added 1 goblin(2278) spawn between lumbridge and draynor to north section<br />
+  Removed 2 incorrect giant spider(59) spawns at ham trapdoor<br />
+  Added 5 giant spider(59) spawn at ham trapdoor<br />
+  Removed 3 incorrect giant spider(59) spawns around well<br />
+  Added 3 giant spider(59) spawn at well<br />
+  Removed 1 incorrect spider(59) at giant rats spawn near lumbridge by logs<br />
+  Added 1 missing giant spider(59)spawn next to tree patch</li>
+  <li>Fixed standard spell book sounds<br />
+  <br />
+  Fixed spell hit and miss sounds not working<br />
+  Changed several existing spell sounds to use constlib<br />
+  Corrected confuse cast sound and added hit sound<br />
+  Corrected weaken cast sound and added hit sound<br />
+  Corrected curse cast sound and added hit sound<br />
+  Corrected vulnerability cast sound and added hit sound<br />
+  Corrected enfeeble cast sound and added hit sound<br />
+  Corrected stun cast sound and added hit sound<br />
+  Corrected crumble undead hit sound<br />
+  Added bind hit sound<br />
+  Corrected snare cast sound and added hit sound<br />
+  Corrected entangle cast sound and added hit sound<br />
+  Added sound for enchanting crossbow bolts<br />
+  Added saradomin strike hit and miss sounds<br />
+  Added claws of guthix hit and miss sounds<br />
+  Added flames of zamorak hit and miss sounds<br />
+  Fixed teleother sound<br />
+  Added ibans blast cast and hit sound<br />
+  Corrected superheat ore sound</li>
+  <li>Fixed animation for harvesting willow branches</li>
+  <li>Fixed some error spam about a nullref in animateWoodcutting<br />
+  Fixed a general script processing oversight that could cause error-throwing scripts to continue executing<br />
+  Scripts being processed now automatically cancel if the interaction-target-node is no longer active (fixes object could not be replaced spam)<br />
+  Fixed the stopExecuting() spam<br />
+  Fixed a CME in the disconnection queue (only affected server shutdown)<br />
+  Future-proofed the ground spawn parser to work with the format Zaros now outputs<br />
+  Added in proper SKILLING global clock for use with the script system - addresses some quirks and brings us closer to authenticity</li>
+  <li>Improved Varrock sword shop NPC movement</li>
+  <li>Added handling for full inventory on silverware stage of Lost Tribe quest</li>
+  <li>Added gitlab rule for running pipelines in MRs</li>
+  <li>Fixed regression causing Highwayman to drop unusable coins</li>
+  <li>Fixed bug blocking entry to Black Knights' Fortress</li>
+  <li>Fixed a bug that prevented progression in tutorial island<br />
+  Fixed a bug that caused woodcutting to take slightly longer<br />
+  Fixed a bug that caused the woodcutting axe message to print more often than it should<br />
+  Fixed a bug that caused fishing to not print its fishing attempt message<br />
+  Fixed a bug that caused fishing to take slightly longer<br />
+  Fixed a bug that would cause nechryaels to lose interest in the player when their minions attacked<br />
+  Made sure the grand exchange tests always clean up the GEDB</li>
+  <li>Fixed some NPCs dropping unstackable broad arrows</li>
+  <li>Significant Stronghold of Security immersion improvements<br />
+  Added the command ::jingle to play music jingles by id</li>
+  <li>Fixed a bug that was causing players to get stuck logged in<br />
+  Fixed a bug that would cause players to get stuck in a client crash loop when logging out inside of a POH<br />
+  Fixed a bug that let players reach objects that shouldn't be reachable<br />
+  General disconnection reliability improvements<br />
+  Adjusted the color of global chat for HD mode, the new color is #f1b04c</li>
+</ul>
