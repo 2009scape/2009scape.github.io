@@ -1,3 +1,6 @@
+title: 2009scape
 encoding: UTF-8
 exclude: [serve.bat, serve.sh, parse.py, README.md]
 include: [".well-known"]
+
+permalink: /:categories/:year-:month-:day-:title:output_ext

@@ -23,7 +23,8 @@
   </style>
   <!--2009SCAPE CUSTOM CSS-->
   <link rel="stylesheet" href="/site/2009scape-resources/css/2009scape.css">
-  <title>2009Scape - {{ page.title }}</title>
+  <title>{{ site.title }} - {{ page.title }}</title>
+  <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
 </head>
 
 <body id="navhome" class="bodyBackground">
@@ -59,13 +60,113 @@
       </div>
     </div>
 
-    {{content}}
-
-    <div class="navigation">
-      <div class="location">
-        {% include breadcrumbs.html %}
+	<div id="content">
+    <div id="article">
+      <div class="sectionHeader">
+        <div class="left">
+          <div class="right">
+            <h1 class="plaque">{{ page.date | date: '%d-%B-%Y' }}</h1>
+          </div>
+        </div>
+      </div>
+      <div class="section">
+        <div class="brown_background">
+        </div>
+        <div id="contrast_panel">
+          <div id="infopane">
+              <div class="title thrd">{{ page.title }}
+              </div>
+          </div>
+          <div class="phold" id="nocontrols"></div>
+          <div class="actions" id="top">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="commands center">
+                    <ul class="flat first-child">
+                      <li>
+                        <a href="/services/m=news/archives/">
+                          <img alt="" src="/site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy Update List
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img alt="" src="/site/img/forum/cmdicons/refresh.gif">
+                          Refresh
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="" id="contentmsg">
+            <a class="msgplace" name="0"></a>
+            <table cellspacing="0" class="message jmod">
+              <tbody>
+                <tr>
+                  <td class="leftpanel J-Mod">
+                    <div class="msgcreator uname">
+                      {{ page.authors }}
+                    </div>
+                    <img alt="" class="avatar" src="/services/m=avatar-rs/{{ page.avatar }}">
+                    <div class="modtype">{{ page.modtype }}</div>
+                    <div class="msgcommands">
+                      <br>
+                    </div>
+                  </td>
+                  <td class="rightpanel">
+                    <div class="msgtime">
+                        {{ page.date | date: '%d-%B-%Y' }}
+                        <br>
+                    </div>
+                    <div class="msgcontents">
+                      {{ content }}
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="actions" id="bottom">
+            <table>
+              <tbody>
+                <tr>
+                  <td class="commands center">
+                    <ul class="flat first-child">
+                      <li>
+                        <a href="/services/m=news/archives/">
+                          <img alt="" src="/site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                          Update List
+                        </a>
+                      </li>
+                      <li>
+                        <a href="">
+                          <img alt="" src="/site/img/forum/cmdicons/refresh.gif">
+                          Refresh
+                        </a>
+                      </li>
+                    </ul>
+                  </td>
+                </tr>
+                <tr>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
       </div>
     </div>
+	</div>
+
+  <div class="navigation">
+    <div class="location">
+      {% include breadcrumbs.html %}
+    </div>
+  </div>
 
     {% include footer.html %}
   </div>
