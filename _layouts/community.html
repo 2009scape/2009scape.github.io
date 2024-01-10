@@ -1,9 +1,21 @@
 <!DOCTYPE html>
 <html>
 {% include head.html %}
+<style>
+  .section {
+    padding: 0px !important;
+  }
+</style>
+
 <body id="navhome" class="bodyBackground">
   <div id="scroll">
     {% include header.html %}
+
+    <div class="navigation">
+      <div class="location">
+        {% include breadcrumbs.html %}
+      </div>
+    </div>
 
     <div id="content">
       <div id="article">
