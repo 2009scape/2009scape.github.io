@@ -1,193 +1,162 @@
 ---
-title: OpenRSC - Open Source Runescape Classic
+title: Open RuneScape Classic
 layout: default
 ---
 <style type="text/css">
   .buttons_play {
-   width: 500px;
-   margin: auto;
+    width: 500px;
+    margin: auto;
   }
   .drop_play {
-   width: 354px;
-   margin: auto;
+    width: 354px;
+    margin: auto;
   }
   a.buttonlong {
-   text-decoration: none;
-   text-align: center;
-   line-height: 24px;
-   display: block;
-   color: black;
-  }
-  #playnow {
-   margin: 0 auto 1em;
-   display: block;
-   position: relative;
-   width: 500px;
-   height: 33px;
-   overflow: hidden;
-  }
-  #playnow:hover {
-   font-weight: bold;
-  }
-  #playnow img {
-   position: absolute;
-   left: 0;
-   top: 0;
-   width: 100%;
-   height: 200%;
-  }
-  #playnow:hover img {
-   top: -100%;
+    text-decoration: none;
+    text-align: center;
+    line-height: 24px;
+    display: block;
+    color: black;
   }
 
   /* Intro */
 
   #intro {
-   margin: 0 0 -6px 0;
-   position: relative;
-   top: -6px;
-   left: -6px;
-   width: 754px;
-   height: 362px;
-   background: #d0b16d url(../img/main/classicapplet/intro_bg.webp) left top no-repeat;
+    margin: 0 0 -6px 0;
+    position: relative;
+    top: -6px;
+    left: -6px;
+    width: 754px;
+    height: 362px;
+    background: #d0b16d url(../img/main/classicapplet/intro_bg.webp) left top no-repeat;
   }
 
   /* Bullets */
 
   #intro ul {
-   position: absolute;
-   left: 41px;
-   top: 122px;
-   width: 295px;
-   margin: 0;
-   padding: 0 0 0 20px;
-   text-align: left;
-   font-size: 12px;
-   color: #492c21;
+    position: absolute;
+    left: 41px;
+    top: 122px;
+    width: 295px;
+    margin: 0;
+    padding: 0 0 0 20px;
+    text-align: left;
+    font-size: 12px;
+    color: #492c21;
   }
 
   #intro ul li {
-   margin: 0 0 6px;
+    margin: 0 0 6px;
   }
 
   /* Screens */
 
   #screens {
-   position: absolute;
-   left: 365px;
-   top: 46px;
-   width: 312px;
-   height: 257px;
+    position: absolute;
+    left: 365px;
+    top: 46px;
+    width: 312px;
+    height: 257px;
   }
 
   #screens a {
-   position: absolute;
-   left: 0;
-   top: 196px;
+    position: absolute;
+    left: 0;
+    top: 196px;
   }
 
   #screens a img {
-   width: 101px;
-   height: 62px;
+    width: 101px;
+    height: 62px;
   }
 
   #screens #bigScreen {
-   top: 0;
+    top: 0;
   }
 
   #screens #bigScreen img {
-   width: 312px;
-   height: 192px;
+    width: 312px;
+    height: 192px;
   }
 
   #screens #screen1 {
-   left: 105px;
+    left: 105px;
   }
 
   #screens #screen2 {
-   left: 211px;
+    left: 211px;
   }
 
   #screens .selected img {
-   margin: -1px;
-   border: 1px solid #feedb8;
+    margin: -1px;
+    border: 1px solid #feedb8;
   }
 
   #members {
-   position: absolute;
-   left: 50%;
-   top: 314px;
-   width: 666px;
-   margin: 0 0 0 -333px;
-   color: #392c14;
-   font-weight: bold;
-   font-size: 11px;
-   text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 314px;
+    width: 666px;
+    margin: 0 0 0 -333px;
+    color: #392c14;
+    font-weight: bold;
+    font-size: 11px;
+    text-align: center;
   }
 
   #members a {
-   color: #634310;
+    color: #634310;
   }
 
 
   /* Play Big */
 
   #playBig {
-   position: absolute;
-   left: 77px;
-   top: 258px;
-   width: 251px;
-   height: 50px;
+    position: absolute;
+    left: 77px;
+    top: 258px;
+    width: 251px;
+    height: 50px;
   }
+</style>
 
- </style>
-<div id="content">
-  <div id="article">
-  <div class="sectionHeader">
-  <div class="left">
-  <div class="right">
-  <h1 class="plaque">
-  Open RuneScape Classic
-  </h1>
-  </div>
-  </div>
-  </div>
-  <div class="section">
-  <div class="brown_background">
+<div class="brown_background">
   <div id="intro">
-  <ul>
-  <li>Take advantage of the forever free version of Runescape Classic.</li>
-  <li>Ever heard your clan mates talk about the "old days" and wonder what they were really like? Find out!</li>
-  <li>Be part of the nostalgia - try glorious three hit combat!</li>
-  <li>See what the old "Wildy" was really like.</li>
-  <li>Defeat Elvarg all over again... OLDSKOOL!</li>
-  </ul>
-  <div id="screens">
-  <img id="bigScreen" src="../2009scape-resources/img/classic/alphatest.webp" width="300" height="200" alt="">
-  <a href="../img/main/classicapplet/screen0.webp" target="_blank" id="screen0" class="screen"><img src="../img/main/classicapplet/screen0_thumb.webp" alt=""></a>
-  <a href="../img/main/classicapplet/screen1.webp" target="_blank" id="screen1" class="screen"><img src="../img/main/classicapplet/screen1_thumb.webp" alt=""></a>
-  <a href="../img/main/classicapplet/screen2.webp" target="_blank" id="screen2" class="screen"><img src="../img/main/classicapplet/screen2_thumb.webp" alt=""></a>
-  </div>
-  <a href="https://rsc.vet/playnow" id="playBig" class="play HoverImg">
-  <img src="../img/main/classicapplet/playBig.webp" alt="Play Now">
-  </a>
-  <p id="members">Please note: We our not the developers of OpenRsc, 
-  <br> please make sure you read and follow their 
-  <a href="https://rsc.vet/faq" target="_blank" rel="noopener noreferrer">rules</a> before going over there.</p>
+    <ul>
+      <li>Take advantage of the forever free version of Runescape Classic.</li>
+      <li>Ever heard your clan mates talk about the "old days" and wonder what they were really like? Find out!</li>
+      <li>Be part of the nostalgia - try glorious three hit combat!</li>
+      <li>See what the old "Wildy" was really like.</li>
+      <li>Defeat Elvarg all over again... OLDSKOOL!</li>
+    </ul>
+    <div id="screens">
+      <img id="bigScreen" src="/site/2009scape-resources/img/classic/alphatest.webp" width="300" height="200" alt="">
+      <a href="/site/img/main/classicapplet/screen0.webp" target="_blank" id="screen0" class="screen"><img src="/site/img/main/classicapplet/screen0_thumb.webp" alt=""></a>
+      <a href="/site/img/main/classicapplet/screen1.webp" target="_blank" id="screen1" class="screen"><img src="/site/img/main/classicapplet/screen1_thumb.webp" alt=""></a>
+      <a href="/site/img/main/classicapplet/screen2.webp" target="_blank" id="screen2" class="screen"><img src="/site/img/main/classicapplet/screen2_thumb.webp" alt=""></a>
+    </div>
+    <a href="https://rsc.vet/playnow" id="playBig" class="play HoverImg">
+      <img src="/site/img/main/classicapplet/playBig.webp" alt="Play Now">
+    </a>
+    <p id="members">
+      Please note: We our not the developers of OpenRSC, 
+      <br>
+      please make sure you read and follow their 
+      <a href="https://rsc.vet/faq" target="_blank" rel="noopener noreferrer">rules</a> before going over there.
+    </p>
   </div>
   <div class="inner_brown_background">
-  <div style="margin-bottom:0px;" class="brown_box">
-  <div class="subsectionHeader">Play RuneScape Classic</div>
-  <div style="text-align:center" class="inner_brown_box">
-  <b>Extra links and Images of Open RSC below</b>
-  <ul>
-    
-   <li>Check out their really cool full of QoL feature Client <a href="https://rsc.plus/" target="_blank" rel="noopener noreferrer">RSC+</a></li>
-   <li>Click the icon to enter their discord :  <a href="https://discord.com/invite/mTBXvu2"><img src="./../2009scape-resources/img/icons/brand-discord.svg" width="20" height="20"></a></li>
-  </ul>
-  <br>
-  
-  <br>
+    <div style="margin-bottom:0px;" class="brown_box">
+      <div class="subsectionHeader">Play RuneScape Classic</div>
+      <div class="inner_brown_box">
+        <p>
+          Check out their really cool full of QoL feature Client <a href="https://rsc.plus/" target="_blank" rel="noopener noreferrer">RSC+</a>
+          <br />
+          Click the icon to enter their Discord: <a href="https://discord.com/invite/mTBXvu2"><img src="/site/2009scape-resources/img/icons/brand-discord.svg" width="20" height="20"></a>
+        </p>
+        <br>
+        <br>
+      </div>
+    </div>
   </div>
-  </div> </div> </div> </div> </div>
-  </div>
+</div>

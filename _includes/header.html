@@ -1,0 +1,23 @@
+<div id="head">
+  <div id="headBg">
+    <div id="headOrangeTop"></div>
+    <img id="banner" src="" alt="RuneScape" width="766" height="143">
+
+    <!--SCRIPT: MONTHLY BANNER-->
+    <script type="text/javascript">
+      document.getElementById("banner").src = `/site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.webp`;
+    </script>
+
+    <div id="headImage"><a href="/" id="logo_select"></a>
+      <div id="player_no">
+        <span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era RuneScape
+      </div>
+    </div>
+    <div id="headOrangeBottom"></div>
+
+    <!-- End of Banner -->
+    <div id="menubox">
+      {% include menu.html %}
+    </div>
+  </div>
+</div>

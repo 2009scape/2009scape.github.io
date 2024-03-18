@@ -1,6 +1,3 @@
-
-
-
 /* Trail */
 
 .lbold {
@@ -13,19 +10,19 @@
 /* Article */
 
 .bottomborder {
- background: transparent url(../img/main/kbase/artbottom.webp) repeat-x scroll left bottom;
+ background: transparent url(/site/img/main/kbase/artbottom.webp) repeat-x scroll left bottom;
 }
 
 .bottomright{
  height: 1%;
  overflow: visible; 
- background: transparent url(../img/main/kbase/artroundbr.webp) no-repeat scroll right bottom;
+ background: transparent url(/site/img/main/kbase/artroundbr.webp) no-repeat scroll right bottom;
  padding: 0pt 40px 10px 40px;
  text-align: left;
 }
 
 .bottomleft{
- background: transparent url(../img/main/kbase/artroundbl.webp) no-repeat scroll left bottom;
+ background: transparent url(/site/img/main/kbase/artroundbl.webp) no-repeat scroll left bottom;
 }
 
 .listtext{
@@ -55,10 +52,8 @@
  width: 100%;
 }
 
-
-
 .article_theme_2 .searchbutton{
- background:transparent url(../img/main/kbase/search_button_brown.webp) no-repeat scroll left top;
+ background:transparent url(/site/img/main/kbase/search_button_brown.webp) no-repeat scroll left top;
  border:medium none;
  cursor:pointer;
  height:31px;
@@ -67,7 +62,7 @@
 }
 
 .article_theme_1 .searchbutton{
- background:transparent url(../img/main/kbase/search_button_sun.webp) no-repeat scroll left top;
+ background:transparent url(/site/img/main/kbase/search_button_sun.webp) no-repeat scroll left top;
  border:medium none;
  cursor:pointer;
  height:31px;
@@ -82,11 +77,11 @@
 
 .searchtop {
  height: 1%;
- background: url(../img/main/kbase/searchtop.webp) repeat-x scroll left top;
+ background: url(/site/img/main/kbase/searchtop.webp) repeat-x scroll left top;
 }
 
 .ctbot {
- background: transparent url(../img/main/kbase/artroundbottom.webp) repeat-x scroll left bottom;
+ background: transparent url(/site/img/main/kbase/artroundbottom.webp) repeat-x scroll left bottom;
  height: 5px;
 }
 
@@ -110,11 +105,11 @@ table.bottomsearch {
 }
 
 .topleft{
- background: transparent url(../img/main/kbase/searchtopleft.webp) no-repeat scroll left top;
+ background: transparent url(/site/img/main/kbase/searchtopleft.webp) no-repeat scroll left top;
 }
 
 .topright{
- background: transparent url(../img/main/kbase/searchtopright.webp) no-repeat scroll right top;
+ background: transparent url(/site/img/main/kbase/searchtopright.webp) no-repeat scroll right top;
 }
 
 /* xSearch Bar */
@@ -183,43 +178,43 @@ table.bottomsearch {
 }
 
 .topbord {
- background: url(../img/main/kbase/imgtopbord.webp) repeat-x scroll left top;
+ background: url(/site/img/main/kbase/imgtopbord.webp) repeat-x scroll left top;
  height: auto;
  font-size: 0;
 }
 
 .bottombord {
- background: transparent url(../img/main/kbase/imgbottombord.webp) repeat-x scroll left bottom;
+ background: transparent url(/site/img/main/kbase/imgbottombord.webp) repeat-x scroll left bottom;
  height: auto;
 }
 
 .leftbord {
- background: url(../img/main/kbase/imgleftbord.webp) repeat-y scroll left center;
+ background: url(/site/img/main/kbase/imgleftbord.webp) repeat-y scroll left center;
  height: auto;
 }
 
 .rightbord {
- background: url(../img/main/kbase/imgrightbord.webp) repeat-y scroll right center;
+ background: url(/site/img/main/kbase/imgrightbord.webp) repeat-y scroll right center;
  height: auto;
 }
 
 .toplcorn {
- background: transparent url(../img/main/kbase/imgtoplcorn.webp) no-repeat scroll left top;
+ background: transparent url(/site/img/main/kbase/imgtoplcorn.webp) no-repeat scroll left top;
  height: auto;
 }
 
 .toprcorn {
- background: transparent url(../img/main/kbase/imgtoprcorn.webp) no-repeat scroll right top;
+ background: transparent url(/site/img/main/kbase/imgtoprcorn.webp) no-repeat scroll right top;
  height: auto;
 }
 
 .bottomlcorn{
- background: transparent url(../img/main/kbase/imgbottomlcorn.webp) no-repeat scroll left bottom;
+ background: transparent url(/site/img/main/kbase/imgbottomlcorn.webp) no-repeat scroll left bottom;
  height: auto;
 }
 
 .bottomrcorn{
- background: transparent url(../img/main/kbase/imgbottomrcorn.webp) no-repeat scroll right bottom;
+ background: transparent url(/site/img/main/kbase/imgbottomrcorn.webp) no-repeat scroll right bottom;
  padding: 0px;
 }
 
@@ -265,7 +260,7 @@ table.bottomlinks {
 }
 
 .cattext {
- background-image: url(../img/main/kbase/categorybackground.webp);
+ background-image: url(/site/img/main/kbase/categorybackground.webp);
  height: 70px;
  width: 277px;
  vertical-align:top;
@@ -368,7 +363,7 @@ table.bottomlinks {
 }
 
 .subcattext {
- background-image: url(../img/main/kbase/subcatbackground.webp);
+ background-image: url(/site/img/main/kbase/subcatbackground.webp);
  height: 57px;
  width: 192px;;
  vertical-align:top;

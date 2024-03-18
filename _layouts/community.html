@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+<style>
+  .section {
+    padding: 0px !important;
+  }
+</style>
+
+<body id="navhome" class="bodyBackground">
+  <div id="scroll">
+    {% include header.html %}
+
+    <div class="navigation">
+      <div class="location">
+        {% include breadcrumbs.html %}
+      </div>
+    </div>
+
+    <div id="content">
+      <div id="article">
+        <div class="sectionHeader">
+          <div class="left">
+            <div class="right">
+              <h1 class="plaque">{{ page.title }}</h1>
+            </div>
+          </div>
+        </div>
+        <div class="section">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    {% include footer.html %}
+  </div>
+</body>
+</html>

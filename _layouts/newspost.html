@@ -1,176 +1,127 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html>
 <html>
-<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
-<meta name="viewport" content="width=1024, initial-scale=1.0">
 
-<head>
-  <link rel="icon" type="image/x-icon" href="/favicon.ico" />
-  <meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
-  <meta http-equiv="Content-Language" content="en,English">
-  <meta name="keywords" content="RSPS, Open Source, 2009scape, Osrs, Oldschool Runescape, Runescape, zezima">
-  <meta name="description"
-    content="2009Scape - Play Runescape from 2009. Multiplayer and free forever.">
-  <!--2010 GLOBAL CSS-->
-  <style type="text/css">
-    /*\*/
-    @import url(/site/css/default/global-30.css);
-    /**/
-  </style>
-  <style type="text/css">
-    /*\*/
-    @import url(/site/css/default/home-28.css);
-    /**/
-  </style>
-  <!--2009SCAPE CUSTOM CSS-->
-  <link rel="stylesheet" href="/site/2009scape-resources/css/2009scape.css">
-  <title>{{ site.title }} - {{ page.title }}</title>
-  <link rel="alternate" type="application/rss+xml" href="{{ site.url }}/feed.xml" />
-</head>
+{% include head.html %}
+<link rel="stylesheet" href="/site/css/forum3-7.css">
 
 <body id="navhome" class="bodyBackground">
-  <a name="top"></a>
   <div id="scroll">
-    <div id="head">
-      <div id="headBg">
-        <div id="headOrangeTop"></div>
-        <img id="banner" src="" alt="RuneScape" width="766" height="143">
+    {% include header.html %}
 
-        <!--SCRIPT: MONTHLY BANNER-->
-        <script type="text/javascript">
-          document.getElementById("banner").src = `/site/2009scape-resources/img/banners/${new Date().getMonth() + 1}.webp`;
-        </script>
-
-        <div id="headImage"><a href="/" id="logo_select"></a>
-          <div id="player_no"><span class="brandingColor">2009Scape</span>: a free &amp; open-source remake of 2009 era
-            RuneScape</div>
-        </div>
-        <div id="headOrangeBottom"></div>
-
-        <!-- End of Banner -->
-        <div id="menubox">
-          {% include menu.html %}
-        </div>
-      </div>
-    </div>
-
-    <link rel="stylesheet" href="/site/css/forum3-7.css">
     <div class="navigation">
       <div class="location">
         {% include breadcrumbs.html %}
       </div>
     </div>
 
-	<div id="content">
-    <div id="article">
-      <div class="sectionHeader">
-        <div class="left">
-          <div class="right">
-            <h1 class="plaque">{{ page.date | date: '%d-%B-%Y' }}</h1>
+    <div id="content">
+      <div id="article">
+        <div class="sectionHeader">
+          <div class="left">
+            <div class="right">
+              <h1 class="plaque">{{ page.date | date: '%d-%B-%Y' }}</h1>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="section">
-        <div class="brown_background">
-        </div>
-        <div id="contrast_panel">
-          <div id="infopane">
-              <div class="title thrd">{{ page.title }}
-              </div>
+        <div class="section">
+          <div class="brown_background">
           </div>
-          <div class="phold" id="nocontrols"></div>
-          <div class="actions" id="top">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="commands center">
-                    <ul class="flat first-child">
-                      <li>
-                        <a href="/services/m=news/archives/">
-                          <img alt="" src="/site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy Update List
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <img alt="" src="/site/img/forum/cmdicons/refresh.gif">
-                          Refresh
-                        </a>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="" id="contentmsg">
-            <a class="msgplace" name="0"></a>
-            <table cellspacing="0" class="message jmod">
-              <tbody>
-                <tr>
-                  <td class="leftpanel J-Mod">
-                    <div class="msgcreator uname">
-                      {{ page.authors }}
-                    </div>
-                    <img alt="" class="avatar" src="/services/m=avatar-rs/{{ page.avatar }}">
-                    <div class="modtype">{{ page.modtype }}</div>
-                    <div class="msgcommands">
-                      <br>
-                    </div>
-                  </td>
-                  <td class="rightpanel">
-                    <div class="msgtime">
-                        {{ page.date | date: '%d-%B-%Y' }}
+          <div id="contrast_panel">
+            <div id="infopane">
+              <div class="title thrd">{{ page.title }}</div>
+            </div>
+            <div class="phold" id="nocontrols"></div>
+            <div class="actions" id="top">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="commands center">
+                      <ul class="flat first-child">
+                        <li>
+                          <a href="/services/m=news/archives/">
+                            <img alt="" src="/site/img/forum/cmdicons/backtoforum.gif">Up to Legacy Update List
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <img alt="" src="/site/img/forum/cmdicons/refresh.gif">Refresh
+                          </a>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="" id="contentmsg">
+              <a class="msgplace" name="0"></a>
+              <table cellspacing="0" class="message jmod">
+                <tbody>
+                  <tr>
+                    <td class="leftpanel J-Mod">
+                      <div class="msgcreator uname">
+                        {{ page.authors }}
+                      </div>
+                      <img alt="" class="avatar" src="/services/m=avatar-rs/{{ page.avatar }}">
+                      <div class="modtype">{{ page.modtype }}</div>
+                      <div class="msgcommands">
                         <br>
-                    </div>
-                    <div class="msgcontents">
-                      {{ content }}
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="actions" id="bottom">
-            <table>
-              <tbody>
-                <tr>
-                  <td class="commands center">
-                    <ul class="flat first-child">
-                      <li>
-                        <a href="/services/m=news/archives/">
-                          <img alt="" src="/site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
-                          Update List
-                        </a>
-                      </li>
-                      <li>
-                        <a href="">
-                          <img alt="" src="/site/img/forum/cmdicons/refresh.gif">
-                          Refresh
-                        </a>
-                      </li>
-                    </ul>
-                  </td>
-                </tr>
-                <tr>
-                </tr>
-              </tbody>
-            </table>
+                      </div>
+                    </td>
+                    <td class="rightpanel">
+                      <div class="msgtime">
+                          {{ page.date | date: '%d-%B-%Y' }}
+                          <br>
+                      </div>
+                      <div class="msgcontents">
+                        {{ content }}
+                      </div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="actions" id="bottom">
+              <table>
+                <tbody>
+                  <tr>
+                    <td class="commands center">
+                      <ul class="flat first-child">
+                        <li>
+                          <a href="/services/m=news/archives/">
+                            <img alt="" src="/site/img/forum/cmdicons/backtoforum.gif"> Up to Legacy
+                            Update List
+                          </a>
+                        </li>
+                        <li>
+                          <a href="">
+                            <img alt="" src="/site/img/forum/cmdicons/refresh.gif">
+                            Refresh
+                          </a>
+                        </li>
+                      </ul>
+                    </td>
+                  </tr>
+                  <tr>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
           </div>
         </div>
       </div>
     </div>
-	</div>
 
-  <div class="navigation">
-    <div class="location">
-      {% include breadcrumbs.html %}
+    <div class="navigation">
+      <div class="location">
+        {% include breadcrumbs.html %}
+      </div>
     </div>
-  </div>
 
     {% include footer.html %}
   </div>
 </body>
-<meta http-equiv="content-type" content="text/html;charset=ISO-8859-1">
 
 </html>
