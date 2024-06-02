@@ -49,7 +49,7 @@ layout: guide
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Runecrafting</td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Mute</td>
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Agility</td>

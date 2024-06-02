@@ -73,7 +73,7 @@ layout: guide
   <tr class="trForFame">
     <td class="tdForFame">Construction</td>
     <td class="tdForFame"></td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Leclerc</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>
@@ -87,7 +87,7 @@ layout: guide
   <tr class="trForFame">
     <td class="tdForFame">Agility</td>
     <td class="tdForFame">Meep</td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Leclerc</td>
     <td class="tdForFame"></td>
     <td class="tdForFame">Spirit</td>
   </tr>
@@ -108,7 +108,7 @@ layout: guide
   <tr class="trForFame">
     <td class="tdForFame">Hunter</td>
     <td class="tdForFame">Meep</td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Leclerc</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>
