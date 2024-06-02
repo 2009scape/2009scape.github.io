@@ -21,28 +21,28 @@ layout: guide
   <tr class="trForFame">
     <td class="tdForFame">Attack</td>
     <td class="tdForFame"></td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Hagane</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Strength</td>
-    <td class="tdForFame"></td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Szumaster3</td>
+    <td class="tdForFame">Hagane</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Defence</td>
     <td class="tdForFame"></td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Hagane</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">HP</td>
     <td class="tdForFame"></td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Hagane</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>

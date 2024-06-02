@@ -167,7 +167,7 @@ layout: guide
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Firemaking</td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Valpuri</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
