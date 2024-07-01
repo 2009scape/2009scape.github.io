@@ -149,7 +149,7 @@ layout: guide
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Murasame</td>
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Cooking</td>
