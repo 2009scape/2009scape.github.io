@@ -11,6 +11,8 @@ layout: guide
 Disrespecting or harassing anybody in 2009Scape or its respective discord server is not tolerated.
 You may be kicked or banned.
 
+This especially includes racist or sexist remarks, with a minimum punishment of a 2 week mute, escalating into permanent mutes and bans.
+
 ### 2. Requests for assistance must go via the Discord server.
 
 Do not message staff directly unless it is an emergency or you are reporting another user.
