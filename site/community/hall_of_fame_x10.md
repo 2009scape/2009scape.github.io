@@ -37,7 +37,7 @@ layout: guide
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Prayer</td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">No</td>
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Slayer</td>
