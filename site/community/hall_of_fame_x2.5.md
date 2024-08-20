@@ -154,7 +154,7 @@ layout: guide
   <tr class="trForFame">
     <td class="tdForFame">Cooking</td>
     <td class="tdForFame">TwoAndAHalf</td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Neat</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>
