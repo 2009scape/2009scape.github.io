@@ -128,7 +128,7 @@ layout: guide
     <td class="tdForFame">Leah</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Plank</td>
   </tr>
   <tr class="trForFame">
     <td class="tdForFame">Mining</td>
