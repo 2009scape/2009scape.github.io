@@ -1,0 +1,165 @@
+---
+title: Client Plugins
+tags: game_guide
+layout: guide
+---
+
+<div class="headings">
+  <span class="headertitleleft"><span class="headertitleright">Introduction</span></span>
+</div>
+
+In 2023, 2009scape adapted to the Experimental Client as the main client. This client can be accessed by either cloning it from GitHub or directly through the Saradomin Launcher. Unlike the client before it, this client is an authentic client. In order to gain access to things that were originally part of the old client, you will need to install plugins. We went with a plugin system, since they allow us to make inauthentic changes to the client and keep those inauthentic changes optional.
+
+<div class="headings">
+  <span class="headertitleleft"><span class="headertitleright">Plugins</span></span>
+</div>
+
+<div id="app">
+    {% raw %}
+    <div v-if="folders.length > 0">
+        <div v-for="folder in folders" :key="folder.id" class="plugin">
+            <strong>⚔️ {{ folder.path }} <span v-if="folder.pluginProperties && folder.pluginProperties.version">v{{ folder.pluginProperties.version }}</span></strong>
+            <div v-if="folder.pluginProperties">
+                <p v-if="folder.pluginProperties.author"><strong>Author:</strong> {{ folder.pluginProperties.author }}</p>
+                <p v-if="folder.pluginProperties.description"><strong>Description:</strong> {{ folder.pluginProperties.description }}</p>
+            </div>
+            <div v-if="folder.pluginError" style="color: #a07f3b"><p>{{ folder.pluginError }}</p></div>
+        </div>
+    </div>
+    <div v-else>
+        <p style="color: #a07f3b; text-align: center;">Loading plugins from repo...</p>
+    </div>
+    {% endraw %}
+
+    <div v-if="error">{{ error }}</div>
+</div>
+
+<div class="headings">
+  <span class="headertitleleft"><span class="headertitleright">Live Server Installation</span></span>
+</div>
+
+<p>Step 1: Launch your Saradomin launcher. You will see a menu that looks like this:</p>
+
+<img src="/site/2009scape-resources/img/game_guide/client-configs/plugins.png" alt="Plugins Menu" width="300" height="300">
+
+<p>It shows the plugins you have installed and the ones available to install. Once you have a few plugins installed, your screen should look like this:</p>
+
+<img src="/site/2009scape-resources/img/game_guide/client-configs/installedPlugins.png" alt="Installed Plugins" width="300" height="300">
+
+<script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const { createApp } = Vue;
+
+        createApp({
+            data() {
+                return {
+                    accessToken: 'glpat-dE2Cs2e4b32-H7c9oGuS',
+                    projectId: '38297322',
+                    branch: 'master',
+                    folders: [],
+                    error: ''
+                };
+            },
+            mounted() {
+                this.listFolders();
+            },
+            methods: {
+                async listFolders() {
+                    this.folders = [];
+                    this.error = '';
+
+                    const GITLAB_API_URL = `https://gitlab.com/api/v4/projects/${encodeURIComponent(this.projectId)}/repository/tree`;
+                    const url = `${GITLAB_API_URL}?ref=${encodeURIComponent(this.branch)}`;
+
+                    try {
+                        const response = await fetch(url, {
+                            headers: {
+                                'PRIVATE-TOKEN': this.accessToken
+                            }
+                        });
+
+                        if (!response.ok) {
+                            throw new Error(`Error: ${response.statusText}`);
+                        }
+
+                        const data = await response.json();
+                        console.log(`Fetched ${data.length} folders`);
+
+                        const folderPromises = data
+                            .filter(item => item.type === 'tree')
+                            .map(async folder => {
+                                const folderData = {
+                                    id: folder.id,
+                                    path: folder.path,
+                                    pluginProperties: null,
+                                    pluginError: null
+                                };
+
+                                try {
+                                    await this.fetchPluginProperties(folderData);
+                                } catch (e) {
+                                    console.error(`Error processing folder ${folder.path}`, e);
+                                }
+
+                                return folderData;
+                            });
+
+                        this.folders = await Promise.all(folderPromises);
+                    } catch (error) {
+                        console.error('Error fetching data:', error);
+                        this.error = 'An error occurred while fetching the folders.';
+                    }
+                },
+                async fetchPluginProperties(folder) {
+                    try {
+                        const pluginFilePath = `${folder.path}/plugin.properties`;
+                        const pluginUrl = `https://gitlab.com/api/v4/projects/${encodeURIComponent(this.projectId)}/repository/files/${encodeURIComponent(pluginFilePath)}/raw?ref=${encodeURIComponent(this.branch)}`;
+
+                        const pluginResponse = await fetch(pluginUrl, {
+                            headers: {
+                                'PRIVATE-TOKEN': this.accessToken
+                            }
+                        });
+
+                        if (!pluginResponse.ok) {
+                            throw new Error(`Plugin file not found for folder: ${folder.path}`);
+                        }
+
+                        const rawContent = await pluginResponse.text();
+
+                        folder.pluginProperties = this.parseProperties(rawContent);
+                    } catch (e) {
+                        console.error(`Error fetching plugin.properties for folder: ${folder.path}`, e);
+                        folder.pluginError = "plugin.properties not found";
+                    }
+                },
+                parseProperties(content) {
+                    const lines = content.split('\n');
+                    const properties = {
+                        author: 'Unknown',
+                        version: 'Unknown',
+                        description: 'No description available'
+                    };
+
+                    lines.forEach(line => {
+                        const [key, value] = line.split('=');
+                        if (key && value) {
+                            const cleanedValue = value.replace(/['"]/g, '').trim();
+                            if (key.startsWith('AUTHOR')) {
+                                properties.author = cleanedValue;
+                            } else if (key.startsWith('VERSION')) {
+                                properties.version = cleanedValue;
+                            } else if (key.startsWith('DESCRIPTION')) {
+                                properties.description = cleanedValue;
+                            }
+                        }
+                    });
+
+                    return properties;
+                }
+            }
+        }).mount('#app');
+    });
+</script>
