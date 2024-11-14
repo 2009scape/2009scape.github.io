@@ -119,5 +119,15 @@
     "id": "flashtrek",
     "genres": ["strategy"],
     "multiplayer": false
+  },
+  "defendyourcastle": {
+    "name": "Defend Your Castle",
+    "image": "./img/defendyourcastle.avif",
+    "swf": "./swfs/defendyourcastle.swf",
+    "description": "The Classic: Throw enemies in the air and buy upgrades!",
+    "forum": "https://forum.2009scape.org/viewtopic.php?t=1051-defend-your-castle",
+    "id": "defendyourcastle",
+    "genres": ["action", "strategy"],
+    "multiplayer": false
   }
 }
