@@ -161,7 +161,7 @@ layout: guide
   <tr class="trForFame">
     <td class="tdForFame">Woodcutting</td>
     <td class="tdForFame">Valpuri</td>
-    <td class="tdForFame"></td>
+    <td class="tdForFame">Neat</td>
     <td class="tdForFame"></td>
     <td class="tdForFame"></td>
   </tr>
