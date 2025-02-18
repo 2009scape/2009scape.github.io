@@ -3,9 +3,9 @@ title: Easter Event
 tags: news
 layout: newspost
 date: 2024-04-01 00:00:00 +0000
-authors: ryannathans
+authors: Update Bot
 excerpt: "Some eggs have been spotted around Gielinor..."
-modtype: "Lead Developer"
+modtype: "Bot"
 avatar: avatar8fa9.gif
 ---
 Greetings Explorers

@@ -3,9 +3,9 @@ title: Deep Wilderness Changes
 tags: news
 layout: newspost
 date: 2024-08-03 00:00:00 +0000
-authors: ryannathans
+authors: Update Bot
 excerpt: "Wilderness updates, new sounds, and a ton of other improvements..."
-modtype: "Lead Developer"
+modtype: "Bot"
 avatar: avatar8fa9.gif
 ---
 Greetings Explorers

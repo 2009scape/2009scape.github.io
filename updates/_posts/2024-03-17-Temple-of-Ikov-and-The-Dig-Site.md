@@ -3,9 +3,9 @@ title: Temple of Ikov and The Dig Site (and more)
 tags: news
 layout: newspost
 date: 2024-03-17 00:00:00 +0000
-authors: ryannathans
+authors: Update Bot
 excerpt: "There have been lots of changes in Gielinor, including two new quests! Temple of Ikov and The Dig Site have been implemented..."
-modtype: "Lead Developer"
+modtype: "Bot"
 avatar: avatar8fa9.gif
 ---
 Greetings Explorers
