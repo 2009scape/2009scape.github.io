@@ -3,9 +3,9 @@ title: Recruitment Drive
 tags: news
 layout: newspost
 date: 2024-10-07 00:00:00 +0000
-authors: ryannathans
+authors: Update Bot
 excerpt: "A new quest appears! And a LOT more..."
-modtype: "Lead Developer"
+modtype: "Bot"
 avatar: avatar8fa9.gif
 ---
 Greetings Explorers

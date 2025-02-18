@@ -3,9 +3,9 @@ title: Scorpion Catcher
 tags: news
 layout: newspost
 date: 2024-05-31 00:00:00 +0000
-authors: ryannathans
+authors: Update Bot
 excerpt: "Scorpion Catcher quest has been implemented... and much more..."
-modtype: "Lead Developer"
+modtype: "Bot"
 avatar: avatar8fa9.gif
 ---
 Greetings Explorers

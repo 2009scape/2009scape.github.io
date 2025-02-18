@@ -3,9 +3,9 @@ title: Two many quests
 tags: news
 layout: newspost
 date: 2023-11-11 00:00:00 +0000
-authors: ryannathans
+authors: Update Bot
 excerpt: "Creature of Fenkenstrain, Rag and Bone Man, new random events and much more!"
-modtype: "Lead Developer"
+modtype: "Bot"
 avatar: avatar8fa9.gif
 ---
 Greetings Explorers
