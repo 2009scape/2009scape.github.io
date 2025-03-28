@@ -108,7 +108,10 @@ Vue.createApp({
                 for (const item of npcObj[itemName] || []) {
                   result.name = result.name || item.name;
                   const totalWeight = this.isNormalCharm(item.id) ? npcObj.totalCharmWeight : npcObj.totalWeight;
-                  result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, totalWeight));
+                  if(item.isTertiary)
+                    result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, npcObj.totalTertiaryWeight));
+                  else
+                    result.items.push(new DisplayItem(item.id, npcName, item.minAmount, item.maxAmount, item.weight, totalWeight));
                 }
               }
             }
@@ -123,6 +126,7 @@ Vue.createApp({
               const result = new Result(npcName, npcObj.ids);
               pushItemsToResult(npcObj.default, result, 'items', -1);
               pushItemsToResult(npcObj.main, result, 'items', npcObj.totalWeight);
+              pushItemsToResult(npcObj.tertiary, result, 'tertiary', npcObj.totalTertiaryWeight);
               pushItemsToResult(npcObj.charm, result, 'charms', npcObj.totalCharmWeight);
               this.searchResults.push(result);
             }
@@ -185,6 +189,9 @@ Vue.createApp({
             npcObj.totalWeight += parseFloat(drop.weight);
           } else if (dropType === 'charm') {
             npcObj.totalCharmWeight += parseFloat(drop.weight);
+          } else if (dropType === 'tertiary') {
+            drop.isTertiary = true;
+            npcObj.totalTertiaryWeight += parseFloat(drop.weight);
           }
 
           if (this.itemSourceNPCIds[itemName]) {
@@ -223,6 +230,13 @@ Vue.createApp({
           npc['main'].forEach(drop => {
             processDrop(drop, 'main', npcObj);
           });
+
+          // Add Tertiary / main drops
+          if (npc['tertiary']){
+            npc['tertiary'].forEach(drop => {
+              processDrop(drop, 'tertiary', npcObj);
+            });
+          }
 
           // Add Charms / charm drops
           npc['charm'].forEach(drop => {
