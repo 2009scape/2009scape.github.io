@@ -32,12 +32,10 @@ Super Easy! Get to testing!
 
 If you are wanting to contribute the smaller easy but yet super imporant stuff look no further than the JSON side.
 What can you contribute through JSON you may ask?
-There are examines, npc stats, npc drops, item drops, and even item spawns you can fill out. 
-Check out our Thanos Tool in order to get started.
+There are examines, npc stats, npc drops, item drops, and even item spawns you can fill out.
+Check out [Zaros](https://gitlab.com/2009scape/tools/rs09-thanos-tool) to get started.
 It's a fill-in-the-blank tool that does just that.
 Make sure that the Information is authentic to the 2009 era.
-
-Click on the [Thanos Tool(https://gitlab.com/2009scape/tools/rs09-thanos-tool) to be redirected to the Gitlab page.
 
 ### Quest Dialogue
 
