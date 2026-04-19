@@ -205,7 +205,7 @@ Implemented Solihib's store
 - Fixed incorrect ordering of operations when opening the bank<br />
 Somewhat improved sending of tab configurations and free space
 - Implemented the castle wars manual book
-- Add default issue template now that Gitlab has changed how things work
+- Added default issue template now that GitLab has changed how things work
 - First phase of TzHaar rewrite
 - Catching a horned graahk now finishes the appropriate Karamja task<br />
 Checking the health of a fruit tree in Brimhaven now finishes the appropriate Karamja task
