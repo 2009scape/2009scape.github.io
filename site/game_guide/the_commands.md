@@ -9,27 +9,38 @@ layout: guide
 
 ### Players
 
-- ::highscores - launches the highscores for the world you are logged into
-- ::discord - launches a link to for the invite to our discord
-- ::resetpassword - resets your password
-- ::stats - shows cool stats
--  ::quests - display currently implemented quests
-- ::playsong - Plays a specific song
-- ::shop - Opens the credit shop
-- ::ge buying - Opens up the section of what players are buying on the ge.
-- ::ge selling - Opens up the section of what players are selling on the ge.
-- ::ge search - Allows you to search for an item that possibly could be being sold or bought on the ge.
-- ::ge bots - Opens up the section of what bots are selling on the ge.
-- ::ge botsearch - Allows you to search for an item that a bot could be possibly selling on the ge.
-- ::reply - similar to tab where you can respond right away to someone.
-- ::loc - prints the player's location
-- ::togglexp - toggles the xp drop interface on or off.
-- ::xpconfig - used for configuring the xp drop interface
-    - ::xpconfig track recent/total - choose whether to track most recent or total xp
-    - ::xpconfig mode increment/instant - whether the total xp updates incrementally (when the xp drops reach it) or instantly (when the xp is gained) only applies to when total xp is being tracked
-- ::toggleslayer - While you have a task you can toggle the slayer counter!
-- ::debug - enable debug info
-- ::fpson - shows the fps overlay (overwrites the xp drop interface until client is restarted)
+- ::resetpassword - Resets your password.
+- ::stats - Opens the statistics book for you or the specified player.
+- ::quests - Opens the quests interface listing current implementations.
+- ::playsong - Plays a specific music track.
+- ::playjingle - Plays a sound effect by ID.
+- ::playid - Plays a music track by music ID.
+- ::shop - Opens the credit shop.
+- ::ge buying - Opens the list of Grand Exchange buy offers from players.
+- ::ge selling - Opens the list of Grand Exchange sell offers from players.
+- ::ge search - Searches player Grand Exchange offers for an item.
+- ::ge bots - Opens the list of items sold by GE bots.
+- ::ge botsearch - Searches GE bot offers for an item.
+- ::ge mute - Toggles Grand Exchange news announcements on or off.
+- ::reply - Opens a reply prompt to your last DM. Same as pressing tab.
+- ::loc - Prints detailed information about your current location.
+- ::pos - Prints your current position.
+- ::coords - Prints your current coordinates.
+- ::region - Prints your current region ID.
+- ::debug - Toggles debug mode.
+- ::calcaccuracy - Calculates your current chance to hit a given NPC.
+- ::calcmaxhit - Calculates your current maximum hit.
+- ::calcdefence - Calculates your current raw defence values against a given NPC.
+- ::botinfo - Prints debug information about a bot.
+- ::npcsearch - Searches for NPCs by name.
+- ::itemsearch - Searches for items by name.
+- ::commands - Lists available commands.
+- ::commandsearch - Searches available commands by keyword.
+- ::muteglobal - Toggles global chat on or off.
+- ::rules - Shows the game rules.
+- ::confirmrules - Confirms that you have read the rules.
+- ::fpson - shows the fps overlay
+- ::fpsoff - removes the fps overlay
 
 ### Moderators
 
